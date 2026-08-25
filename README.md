@@ -1,8 +1,12 @@
-# ALMA SETI — TRAPPIST-1 Multi-Band Technosignature Search
+# ALMA SETI — TRAPPIST-1 Multi-Band Technosignature Search, and a Ranked
+# 100-Star Follow-up Target List
 
 Results from an ALMA-archive technosignature (narrowband SETI) search on
 TRAPPIST-1, reproducing and extending the method of Mason, Garrett, Wandia
-& Siemion (2024), arXiv:2411.19827, across ALMA Bands 3, 6 and 7.
+& Siemion (2024), arXiv:2411.19827, across ALMA Bands 3, 6 and 7 — plus a
+feasibility study and ranked target list for extending the same method to
+the 100 best available ALMA archival targets (see
+[`targets/`](targets/) and [`report/TRAPPIST1_followup_100star_feasibility_and_targets.pdf`](report/TRAPPIST1_followup_100star_feasibility_and_targets.pdf)).
 
 **No detection in any band.**
 
@@ -32,12 +36,19 @@ compact 10-antenna flare-monitoring array configuration.
 ## Contents
 - `report/TRAPPIST1_ALMA_SETI_report.pdf` — short (4-page) written report
   summarising the motivation, data, method, computational infrastructure,
-  robustness checks and results.
-- `results/seti_results_full.tar.gz` — full archived results: per-execution
-  -block JSON summaries, search output arrays, processing logs, and the
-  complete, generalized pipeline code (`bin/`) used to produce them.
+  robustness checks and results of the TRAPPIST-1 search itself.
+- `report/TRAPPIST1_followup_100star_feasibility_and_targets.pdf` — feasibility
+  study and ranked 100-star follow-up target list, with the full ranking
+  methodology.
+- `targets/` — the ranked target list (CSV/JSON), summary figure, the full
+  ALMA-archive pointing catalogue used to build it, and all pipeline code.
+  See `targets/README.md` for details.
+- `results/seti_results_full.tar.gz` — full archived TRAPPIST-1 results:
+  per-execution-block JSON summaries, search output arrays, processing
+  logs, and the complete, generalized pipeline code (`bin/`) used to
+  produce them.
 - `results/multiband_summary.png` — summary figure (EIRP_min by band, and
-  vs. frequency).
+  vs. frequency) for the TRAPPIST-1 search.
 
 ## Method summary
 1. Restore the ALMA pipeline calibration from archival calibration tables
@@ -53,5 +64,22 @@ compact 10-antenna flare-monitoring array configuration.
    headroom for a close artificial satellite).
 4. SNR > 5 threshold against the empirical control-position ceiling;
    EIRP_min = 4π d² S_min δν.
+
+## Follow-up: ranked 100-star target list
+
+A bulk query of the full ALMA archive (27,499 unique calibrated pointings,
+retrieved via TAP/ADQL in <30s) cross-matched against nearby stars (Gaia
+DR3, <50 pc), confirmed exoplanet hosts (NASA Exoplanet Archive), and known
+disk hosts (identified from ALMA's own science-keyword metadata) yields 748
+stars with confirmed public ALMA coverage and a measured Gaia proper
+motion (required to correctly propagate position to the ALMA observation
+epoch — the same effect that offset TRAPPIST-1 by 0.22" in the search
+above). Ranked by a weighted score (distance, brightness, M-dwarf/Sun-like
+stellar type, disk-host status, exoplanet-host status, proper-motion
+quality, ALMA spectral-resolution/data quality), the top targets are
+**τ Ceti, AU Mic, 61 Vir, GJ 581**, with **TRAPPIST-1 recovered at rank 5**
+as an internal consistency check. Top-100 targets' best available archival
+datasets total ~5.5 TB, estimated at 1-2 days of wall-clock compute with
+the infrastructure already validated for TRAPPIST-1.
 
 Produced by ASTRA-PA (Taurus platform) for Glenn J. White, Open University.
