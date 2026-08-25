@@ -1,0 +1,25 @@
+Continuum map notes for tau Cet
+Generated 1787660632.9692035
+Input MS(es): ['/data/SETI/targets/tau_Cet/products/A002_Xb9cc97_X150a_target.ms', '/data/SETI/targets/tau_Cet/products/A002_Xb9cc97_X1734_target.ms', '/data/SETI/targets/tau_Cet/products/A002_Xb9cc97_X193f_target.ms']
+
+spw 4 in A002_Xb9cc97_X150a_target.ms: spectrum extraction failed (too many indices for array: array is 1-dimensional, but 2 were indexed), skipped for line search
+spw 6 in A002_Xb9cc97_X150a_target.ms: spectrum extraction failed (too many indices for array: array is 1-dimensional, but 2 were indexed), skipped for line search
+spw 8 in A002_Xb9cc97_X150a_target.ms: spectrum extraction failed (too many indices for array: array is 1-dimensional, but 2 were indexed), skipped for line search
+spw 10 in A002_Xb9cc97_X150a_target.ms: spectrum extraction failed (too many indices for array: array is 1-dimensional, but 2 were indexed), skipped for line search
+spw 4 in A002_Xb9cc97_X1734_target.ms: spectrum extraction failed (too many indices for array: array is 1-dimensional, but 2 were indexed), skipped for line search
+spw 6 in A002_Xb9cc97_X1734_target.ms: spectrum extraction failed (too many indices for array: array is 1-dimensional, but 2 were indexed), skipped for line search
+spw 8 in A002_Xb9cc97_X1734_target.ms: spectrum extraction failed (too many indices for array: array is 1-dimensional, but 2 were indexed), skipped for line search
+spw 10 in A002_Xb9cc97_X1734_target.ms: spectrum extraction failed (too many indices for array: array is 1-dimensional, but 2 were indexed), skipped for line search
+spw 4 in A002_Xb9cc97_X193f_target.ms: spectrum extraction failed (too many indices for array: array is 1-dimensional, but 2 were indexed), skipped for line search
+spw 6 in A002_Xb9cc97_X193f_target.ms: spectrum extraction failed (too many indices for array: array is 1-dimensional, but 2 were indexed), skipped for line search
+spw 8 in A002_Xb9cc97_X193f_target.ms: spectrum extraction failed (too many indices for array: array is 1-dimensional, but 2 were indexed), skipped for line search
+spw 10 in A002_Xb9cc97_X193f_target.ms: spectrum extraction failed (too many indices for array: array is 1-dimensional, but 2 were indexed), skipped for line search
+
+Line-flagged fraction of bandwidth (mean over spws): 0.0%
+Imaging 3 MS(es), spw selections: ['16:0~127,18:0~127,20:0~4095,22:0~127', '16:0~127,18:0~127,20:0~4095,22:0~127', '16:0~127,18:0~127,20:0~4095,22:0~127']
+
+Image rms: 0.1066 mJy/beam
+Image peak: 0.8632 mJy/beam
+FITS: /data/SETI/targets/tau_Cet/products/tau_Cet_continuum.fits
+PNG: /data/SETI/targets/tau_Cet/products/tau_Cet_continuum.png
+Runtime: 155 s

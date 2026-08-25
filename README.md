@@ -34,6 +34,10 @@ compact 10-antenna flare-monitoring array configuration.
   solutions come from different fields' data.
 
 ## Contents
+- `search/` — **the "SETI search": the 100-target follow-up survey, in
+  progress.** Per-target continuum maps (line-blanked, full-bandwidth) and
+  narrowband technosignature search results, one subdirectory per star,
+  added as each target completes. See `search/README.md`.
 - `report/TRAPPIST1_ALMA_SETI_report.pdf` — short (4-page) written report
   summarising the motivation, data, method, computational infrastructure,
   robustness checks and results of the TRAPPIST-1 search itself.
