@@ -30,6 +30,9 @@ compact 10-antenna flare-monitoring array configuration.
   solutions come from different fields' data.
 
 ## Contents
+- `report/TRAPPIST1_ALMA_SETI_report.pdf` — short (4-page) written report
+  summarising the motivation, data, method, computational infrastructure,
+  robustness checks and results.
 - `results/seti_results_full.tar.gz` — full archived results: per-execution
   -block JSON summaries, search output arrays, processing logs, and the
   complete, generalized pipeline code (`bin/`) used to produce them.
