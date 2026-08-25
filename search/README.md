@@ -17,7 +17,9 @@ For each completed target, the subdirectory contains:
   Line identification is a data-driven outlier search (>5σ above a
   median-filtered local baseline) on a cheap single-position spectrum —
   any exclusions made are documented, with distances to known bright
-  mm-wave transitions, in `continuum_notes.txt`.
+  mm-wave transitions, in `continuum_notes.txt`. PNG axes are labelled in
+  arcsec offset from the pointing/phase centre (standard RA-East-left
+  convention), not pixels.
 - `continuum_notes.txt` — which channels (if any) were excluded and why,
   plus the map's rms/peak flux density.
 - `drift_search_result.json` — the narrowband Doppler-drift technosignature
