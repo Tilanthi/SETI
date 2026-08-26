@@ -1,0 +1,15 @@
+Continuum map notes for PDS 70
+Generated 1787725206.6042058
+Input MS(es): ['/data/SETI/targets/PDS_70/products/A002_Xec5832_X7df0_target.ms']
+
+
+Line-flagged fraction of bandwidth (mean over spws): 0.0%
+Imaging 1 MS(es), spw selections: ['0:0~479,1:0~959,2:0~479,3:0~479,4:0~959,5:0~479,6:0~959,7:0~959,8:0~1919']
+
+Image rms: 0.6845 mJy/beam
+Image peak: 30.4059 mJy/beam (SNR=44.42)
+Peak position offset from phase centre: 0.00 arcsec
+CONTINUUM SOURCE DETECTED: True (requires peak SNR > 5.0 AND offset < 3.0 arcsec of phase centre)
+FITS: /data/SETI/targets/PDS_70/products/PDS_70_continuum.fits
+PNG: /data/SETI/targets/PDS_70/products/PDS_70_continuum.png
+Runtime: 1501 s

@@ -17,9 +17,12 @@ For each completed target, the subdirectory contains:
   Line identification is a data-driven outlier search (>5σ above a
   median-filtered local baseline) on a cheap single-position spectrum —
   any exclusions made are documented, with distances to known bright
-  mm-wave transitions, in `continuum_notes.txt`. PNG axes are labelled in
-  arcsec offset from the pointing/phase centre (standard RA-East-left
-  convention), not pixels.
+  mm-wave transitions, in `continuum_notes.txt`. **PNG axes are labelled
+  with real RA/Dec sky coordinates (J2000, WCS-projected), not pixels or
+  a plain arcsec offset** — the field-of-view size in arcsec is still
+  noted in the plot title for a quick sense of scale. (Note: tau Cet's
+  map below predates this convention and still uses an arcsec-offset
+  grid; will be regenerated to match on request.)
 - `continuum_notes.txt` — which channels (if any) were excluded and why,
   plus the map's rms/peak flux density.
 - `drift_search_result.json` — the narrowband Doppler-drift technosignature
@@ -38,6 +41,21 @@ For each completed target, the subdirectory contains:
   sensitivity used.
 - Narrowband drift search: no detection (source-region peak SNR 5.47 vs.
   off-source control peak SNR 5.75 — consistent with noise, not a
+  candidate).
+
+### PDS 70 (rank #22)
+- ALMA project 2019.1.01619.S (Band 6, ~262 GHz), 1 execution block (of
+  33 candidate datasets available for this star — one of the most
+  intensively ALMA-observed objects in the archive, famous for its
+  directly-imaged forming planets; a size-aware per-EB download budget
+  automatically skipped two oversized (~32/41 GB) execution blocks from
+  the same dataset to stay within this survey's resource limits).
+- Continuum map: rms = 0.685 mJy/beam, **peak = 30.4 mJy/beam (44.4σ),
+  exactly on the phase centre (0.0″ offset)** — the disk/star itself,
+  a strong and expected detection, **not a technosignature candidate**.
+  No molecular line channels were flagged/blanked at the sensitivity used.
+- Narrowband drift search: no detection (source-region peak SNR 5.56 vs.
+  off-source control peak SNR 6.03 — consistent with noise, not a
   candidate).
 
 ## Method notes specific to this phase
