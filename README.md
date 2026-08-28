@@ -44,6 +44,13 @@ compact 10-antenna flare-monitoring array configuration.
 - `report/TRAPPIST1_followup_100star_feasibility_and_targets.pdf` — feasibility
   study and ranked 100-star follow-up target list, with the full ranking
   methodology.
+- `report/technosignature_review_2026.pdf` (+ `.tex` source) — a short (6-page)
+  standalone review article: current technosignature surveys and their EIRP
+  limits, the sensitivity required to detect a genuine Earth-analogue
+  transmitter, and the prospects/practical obstacles for mining public
+  interferometric archives (ALMA, VLA, LOFAR, Jodrell Bank/e-MERLIN, MeerKAT
+  and others) for SETI, drawing on lessons learned from this repo's own
+  ALMA survey.
 - `targets/` — the ranked target list (CSV/JSON), summary figure, the full
   ALMA-archive pointing catalogue used to build it, and all pipeline code.
   See `targets/README.md` for details.

@@ -1,0 +1,165 @@
+\documentclass[10pt,twocolumn]{article}
+\usepackage[margin=1.9cm]{geometry}
+\usepackage{times}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{authblk}
+\usepackage{natbib}
+\usepackage[T1]{fontenc}
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+\titlespacing*{\subsection}{0pt}{6pt}{3pt}
+\setlength{\parskip}{2pt}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+\title{\vspace{-1.2em}\textbf{The Search for Extraterrestrial Technosignatures:\\
+Current Surveys, Sensitivity Limits, and Prospects for\\
+Mining Public Radio-Astronomy Archives}}
+
+\author[1]{Glenn J. White}
+\affil[1]{School of Physical Sciences, The Open University, Milton Keynes, UK}
+\date{\vspace{-1em}August 2026\vspace{-0.5em}}
+
+\begin{document}
+\twocolumn[
+\maketitle
+\begin{abstract}
+\noindent
+Radio and optical technosignature searches have expanded enormously over the past decade, driven by dedicated commensal backends (Breakthrough Listen at the Green Bank Telescope and Parkes; COSMIC at the Jansky VLA; BLUSE at MeerKAT), wide-field low-frequency arrays (LOFAR, MWA), and the first exploratory use of millimetre/sub-millimetre interferometry (ALMA). We summarise the principal surveys conducted to date and the equivalent isotropic radiated power (EIRP) limits they have achieved, ranging from $\sim10^{13}$~W for the nearest stars to $\sim10^{18}$--$10^{19}$~W for Galactic-Centre-scale samples of $10^7$--$10^8$ stars. We compare these limits against the EIRP of Earth's own most powerful transmitters -- planetary radar ($\sim2\times10^{13}$~W), deep-space communication links ($\sim10^6$--$10^9$~W), and incidental civilisational ``leakage'' ($\lesssim10^9$~W) -- to establish what sensitivity is required to detect a true Earth-analogue civilisation, and show that this is achievable today only for the nearest few tens of parsecs. We then assess the prospects for mining existing public interferometric archives -- ALMA, the VLA, LOFAR, Jodrell Bank/e-MERLIN, MeerKAT, and several others -- for technosignatures without requiring new dedicated telescope time, drawing on our own ongoing archival ALMA narrowband survey as a practical case study of the opportunities and technical obstacles involved.
+\end{abstract}
+\vspace{0.8em}
+]
+
+\section{Introduction}
+The search for extraterrestrial intelligence (SETI) rests on the premise that a technological civilisation, whether deliberately or as a by-product of its own use of electromagnetic radiation, may produce signals distinguishable from natural astrophysical emission. Following the foundational arguments of \citet{cocconi1959} and the first observational attempt by \citet{drake1961} (Project Ozma, at 1.42~GHz), radio SETI has for six decades concentrated on narrowband signals: emission confined to a bandwidth far smaller than any known natural process can produce, making a Hz-scale (or sub-Hz) spectral line the most robust discriminant between artificial and natural origin. A signal's \emph{equivalent isotropic radiated power} (EIRP) -- the power a transmitter would need to radiate isotropically to produce the observed flux in a given direction -- has become the standard figure of merit for comparing the sensitivity of different surveys and telescopes, and forms the organising quantity for this review.
+
+The past decade has transformed the observational landscape. The Breakthrough Listen initiative (2016--present) has conducted the most systematic and best-funded SETI programme in the field's history; new commensal backends now piggyback on flagship interferometers (VLA, MeerKAT) without requiring dedicated telescope time; and exploratory work has pushed technosignature searches into entirely new regimes -- the low-frequency sky with LOFAR and MWA, and, for the first time, the millimetre/sub-millimetre sky with ALMA. In parallel, a growing recognition that public astronomical archives already contain vast quantities of unexploited data suitable for retrospective SETI analysis (the ``stellar bycatch'' approach) has opened a route to expanding sky and frequency coverage at essentially zero additional telescope cost.
+
+This review has three aims: (i) to summarise the principal technosignature surveys to date and the EIRP limits they report (\S2); (ii) to establish, from first principles, what EIRP sensitivity would be required to detect a genuinely Earth-like transmitting civilisation, and at what distance (\S3); and (iii) to assess the practical prospects -- and the real technical obstacles, illustrated from our own hands-on experience -- of mining existing public interferometric archives for technosignatures (\S4).
+
+\section{Current Surveys and Sensitivity Limits}
+
+\subsection{Early targeted searches}
+Beyond Project Ozma, the systematic era of radio SETI began with NASA's Project Phoenix (1995--2004), which targeted $\sim800$ nearby Sun-like stars with the Parkes, Green Bank and Arecibo telescopes, and the all-sky commensal META/BETA programmes at Harvard \citep{horowitz1993}, which achieved wide sky coverage at the cost of limited sensitivity and dwell time per target. These programmes established the basic narrowband-drift-search methodology -- de-drifting a dynamic spectrum across a grid of trial Doppler drift rates -- still in use today, but with EIRP limits typically no better than $10^{16}$--$10^{18}$~W owing to short integration times and comparatively small collecting area.
+
+\subsection{Breakthrough Listen}
+Breakthrough Listen (BL) has observed $>1700$ nearby stars and numerous Galactic and extragalactic fields with the L-, S-, C- and X-band receivers of the Green Bank Telescope (GBT) and the Parkes ``Murriyang'' telescope. \citet{enriquez2017} set the modern benchmark, searching 692 nearby stars at L-band and reporting no detections above the Arecibo-radar-equivalent EIRP of $\sim10^{13}$~W for the closest targets. \citet{price2020} extended this to 1327 stars across both GBT and Parkes. The BL search toward the Galactic Centre \citep{gajjar2021} pushed to unprecedented sample sizes, placing EIRP limits of $\gtrsim4\times10^{18}$~W across $\sim6\times10^7$ stars (1--4~GHz) and $\gtrsim5\times10^{17}$~W across $\sim5\times10^5$ stars (3.9--8~GHz). A dedicated survey of exoplanet-hosting and habitable-zone systems is reported by \citet{franz2022} and \citet{sheikh2020}. Notably, \citet{choza2024} identified a significant methodological correction affecting several prior TurboSETI-based analyses: a nominal signal-to-noise threshold of 10 was found to correspond to an \emph{effective} detection threshold closer to SNR~$\simeq33$, owing to the statistics of the drift-rate search grid -- a useful cautionary example for any survey (including our own, discussed in \S4) reporting EIRP limits derived from a simple SNR cut.
+
+\subsection{Wide-field and interferometric commensal surveys}
+A parallel strategy exploits interferometers with very large fields of view to search millions of stars simultaneously. The Murchison Widefield Array (MWA) has been used for a blind Galactic-Centre search of $>3\times10^6$ stars, albeit at coarse ($\sim10$~kHz) spectral resolution \citep{tingay2016,tremblay2022}. The Low-Frequency Array (LOFAR) offers fields of view of several square degrees per station; \citet{johnson2023} conducted a simultaneous dual-site LOFAR technosignature search exploiting this, noting that LOFAR's imminent sensitivity upgrades will extend low-frequency SETI down to 15~MHz. Low-frequency searches face a distinctive complication: interstellar scattering broadens narrowband signals substantially below $\sim200$~MHz, and simulations suggest this could push a sizeable fraction of otherwise-detectable Earth-like signals below current detection thresholds at the frequencies targeted by LOFAR and the planned SKA-Low.
+
+At centimetre wavelengths, the COSMIC backend at the Karl G. Jansky Very Large Array \citep{tremblay2023} and the BLUSE backend at MeerKAT \citep{czech2021,tremblay2026} now operate fully commensally, recording and searching all standard science observations without impacting the primary science programme. COSMIC's VLA Sky Survey component alone is expected to eventually cover $\sim4\times10^7$ stars \citep{cosmic2025}, and a recent coordinated COSMIC+BLUSE campaign targeted the Hycean-candidate exoplanet K2-18b across multiple epochs spanning 544~MHz to 9.8~GHz \citep{k218b2026}. These commensal systems represent the most promising current model for sustainable, high-duty-cycle SETI: sensitivity and sky coverage that scale with an interferometer's normal science programme rather than requiring dedicated observing time.
+
+\subsection{Archival ``stellar bycatch'' mining}
+A distinct and highly cost-effective strategy searches \emph{already-taken} archival data for whichever stars happen to fall within the field of view of an unrelated science observation. \citet{wlodarczyk2020} pioneered this with $\sim10^6$ Gaia-catalogued stars serendipitously present in archival GBT continuum images, and \citet{garrett2022,garrett2023} extended the method to place limits on extragalactic transmitters using archival VLA bycatch data. \citet{houston2021} formalised the comparison of heterogeneous surveys via the Continuous Waveform Transmitter Figure of Merit (CWTFM) and Transmitter Rate statistics, now widely adopted. A recent statistical treatment \citep{bycatch2025} models the expected bycatch yield as a function of EIRP threshold using both Gaia-based and Besan\c{c}on Galactic-model stellar densities, underscoring that bycatch surveys are most powerful for constraining the \emph{prevalence} of very bright ($\gtrsim10^{15}$~W) transmitters across huge samples, rather than for probing Earth-like EIRP levels at individual nearby stars.
+
+\subsection{The millimetre/sub-millimetre frontier: ALMA}
+\citet{mason2024} conducted the first technosignature search using the Atacama Large Millimeter/Submillimeter Array, applying the bycatch method to 28 Gaia-catalogued stars falling within the field of view of four ALMA phase/flux calibrators from an archival Band~3 star-forming-region programme (30.5~kHz channels, 84--116~GHz). No signals were detected above SNR~$>5$, with a best limit of EIRP$_{\rm min}=6.9\times10^{17}$~W for the closest star in the sample. Because the underlying science programme targeted a distant star-forming complex, the closest available bycatch star was itself at $\sim1$~kpc -- a useful illustration that the bycatch method's statistical power (many stars searched at zero telescope cost) trades directly against target proximity, since a bycatch sample has no control over stellar distance.
+
+We (G.J.W. and collaborators) have conducted a complementary ALMA archival study that instead deliberately \emph{selects} the highest-priority, nearest, brightest and most astrobiologically interesting stars (Sun-like, exoplanet-host and disc-host systems within $\lesssim100$~pc, ranked using Gaia DR3 astrometry with an explicit proper-motion quality gate) and locates their own archival ALMA observations, across all available frequency bands, rather than relying on serendipitous calibrator-field placement. This is still an ongoing survey (Section~4.1 below), but its preliminary results already illustrate the scientific leverage of proximity: EIRP$_{\rm min}$ values for our nearest, best-constrained targets (e.g.\ $3.8\times10^{13}$~W for $\tau$~Ceti at 3.65~pc, $1.5\times10^{14}$~W for TRAPPIST-1 at 12.4~pc) are $\sim4$--5 orders of magnitude tighter than the \citet{mason2024} bycatch limit -- a difference attributable almost entirely to the $\sim275\times$ shorter distance (EIRP$_{\rm min}\propto d^2$), not to any difference in instrumental sensitivity or search methodology. No credible technosignature candidates have been found to date in either study.
+
+\subsection{Recent targeted searches and other wavelengths}
+Targeted single-system searches continue to complement large surveys: a deep search of the TRAPPIST-1 system with the Five-hundred-metre Aperture Spherical Telescope (FAST) achieved EIRP limits low enough to be sensitive to Arecibo-class transmitters from any of its seven planets \citep{fast2025}. Beyond radio, optical/near-infrared SETI searches for nanosecond laser pulses have been conducted with the Lick Automated Planet Finder and the VERITAS Cherenkov telescope array \citep{veritas}, and the panoramic PANOSETI instrument is now conducting a dedicated all-sky optical survey. At infrared wavelengths, the G-HAT survey mined the WISE all-sky archive for the mid-infrared excess signature of a partial Dyson sphere or comparable waste-heat megastructure, finding no compelling candidates among $\sim10^5$ galaxies searched \citep{wright2014,griffith2015}. Atmospheric ``technosignature gases'' (e.g.\ NO$_2$, CFCs) detectable via transmission spectroscopy have also been proposed as a JWST-era biosignature-adjacent search channel.
+
+\subsection{Frequency selection and anthropocentric bias}
+The historical concentration of SETI effort near the 1.42--1.66~GHz ``water hole'' reflects a specific, and admittedly anthropocentric, hypothesis about where another civilisation might choose to transmit \citep{oliver1971}. The past decade's diversification -- to $\sim$10~GHz with Breakthrough Listen, to 15--240~MHz with LOFAR/MWA, and now to 35--950~GHz with ALMA -- has been motivated less by a change in this underlying assumption than by pragmatic access to new instrumentation, and each regime brings its own propagation-physics caveats. At millimetre wavelengths, interstellar scintillation is negligible but Doppler drift rates scale linearly with frequency, diluting a fixed-bandwidth narrowband search's sensitivity unless the trial drift-rate grid is correspondingly widened (\S4.1). At metre wavelengths, interstellar scattering broadens intrinsically narrow signals, with recent simulations suggesting that a substantial fraction of otherwise-detectable Earth-like transmissions would fall below detection threshold for sight-lines with high scattering measure at frequencies below a few hundred MHz \citep{cordes1991}. No single frequency regime is therefore uniformly optimal, reinforcing the case for continued multi-facility, multi-band coverage rather than concentrating archival-mining effort on any one part of the spectrum.
+
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{@{}lllll@{}}
+\toprule
+Survey / Facility & Frequency range & Sample size & Best EIRP$_{\rm min}$ (W) & Reference \\
+\midrule
+Breakthrough Listen (GBT/Parkes) & 1--12 GHz & $\sim$1700 stars & $\sim10^{13}$ (nearest) & Enriquez+17, Price+20 \\
+BL Galactic Centre & 1--8 GHz & $6\times10^7$ stars & $4\times10^{18}$ & Gajjar+21 \\
+GBT archival bycatch & continuum & $10^6$ stars & varies with $d$ & Wlodarczyk-Sroka+20 \\
+VLA archival bycatch (extragalactic) & cm & galaxies & varies with $d$ & Garrett \& Siemion 22/23 \\
+VLA/COSMIC (commensal) & 0.5--50 GHz & up to $4\times10^7$ stars & in progress & Tremblay+23,25 \\
+MeerKAT/BLUSE (commensal) & 0.5--3.5 GHz & large, ongoing & in progress & Czech+21, Tremblay+26 \\
+MWA Galactic Centre & $\sim$150 MHz & $3\times10^6$ stars & coarse ($\delta\nu\sim$10 kHz) & Tingay+16, Tremblay+22 \\
+LOFAR (dual-site) & 15--240 MHz & thousands/pointing & in progress & Johnson+23 \\
+ALMA (bycatch) & 84--116 GHz & 28 stars & $6.9\times10^{17}$ (closest, $\sim$1 kpc) & Mason+24 \\
+ALMA (proximity-selected, this work) & 35--950 GHz & $\sim$100 stars, ongoing & $\sim3.8\times10^{13}$ ($\tau$~Cet, 3.65 pc) & this work \\
+FAST (TRAPPIST-1) & L-band & 1 system, 7 planets & Arecibo-class sensitive & recent (2025) \\
+\bottomrule
+\end{tabular}
+\caption{Representative recent technosignature surveys. ``In progress'' indicates a live commensal survey without a single published aggregate EIRP limit at time of writing.}
+\end{table*}
+
+\section{Sensitivity Required for an Earth-like Transmitter}
+It is instructive to ask what EIRP sensitivity a survey needs to be capable of detecting a transmitter genuinely comparable to something humanity has already built. Earth's own radio emission spans roughly seven orders of magnitude in EIRP depending on its nature:
+\begin{itemize}\setlength\itemsep{0pt}
+\item The Arecibo S-band planetary radar, though only a 1~MW transmitter, achieved EIRP~$\approx2\times10^{13}$~W (``20~TW'') through its $305$~m dish's enormous gain -- the most powerful coherent radio signal humanity has produced, and the benchmark against which nearly every survey in \S2 quotes its best limit.
+\item NASA's Deep Space Network uplink (400~kW through a 70~m dish) reaches EIRP~$\approx10^9$~W; Voyager-class deep-space downlinks are weaker still, $\sim10^6$~W.
+\item Persistent, omnidirectional civilisational ``leakage'' -- broadcast television, radar, cellular infrastructure -- is fainter yet, of order $10^6$--$10^9$~W \citep{sheikh2025}, and is incoherent, time-variable, and not beamed toward any particular direction.
+\end{itemize}
+For reference, a notional Kardashev Type~I civilisation, harnessing power comparable to the total stellar insolation incident on its home planet, corresponds to EIRP~$\sim10^{16}$--$10^{17}$~W if fully directed -- two to four orders of magnitude above Arecibo.
+
+Since EIRP$_{\rm min}\propto d^2$ for a fixed detection threshold, the practical reach of any survey for an Earth-radar-equivalent signal is set almost entirely by target distance. Our own results (\S2.5) make this concrete: at $\tau$~Ceti's distance (3.65~pc), our archival ALMA search is already sensitive to an Arecibo-class transmitter, whereas at the $\sim1$~kpc distance typical of the \citet{mason2024} bycatch sample, only a transmitter $\sim10^4$--$10^5\times$ more powerful than Arecibo -- well into super-Kardashev-I territory -- would have been detectable. Extending Arecibo-equivalent sensitivity out to $\sim100$~pc (encompassing several thousand Sun-like stars) with current single-dish integration times is within reach for the nearest such targets but requires substantially longer dwell times, or next-generation collecting area (SKA), at the larger distances; genuinely Earth-\emph{leakage}-level sensitivity ($10^6$--$10^9$~W) is not achievable at interstellar distances with any existing instrument, and will likely remain so even with the SKA except for the very nearest handful of stars. This distinction -- deliberate beacon vs.\ incidental leakage -- should be stated explicitly whenever a null result is reported, since the two imply very different constraints on the underlying question of technological prevalence.
+
+\section{Prospects for Mining Public Archives}
+Archival mining offers technosignature searches a route to dramatically expanded sky, frequency and time-domain coverage without competing for new telescope time -- an increasingly important consideration as demand for flagship-facility time grows. We assess the major public interferometric archives in turn, drawing on our direct experience reprocessing $\sim100$ ALMA archival datasets for this purpose.
+
+\subsection{ALMA}
+The ALMA Science Archive holds over two decades of fully calibrated, science-grade visibility data across Bands 1--10 (35--950~GHz), with essentially no terrestrial RFI at these frequencies -- a major advantage over cm-wave archives. Our own pipeline downloads, recalibrates (replaying each delivery's own \texttt{casa\_commands.log}/\texttt{calapply.txt} recipe rather than trusting delivered flag-versions, which do not always restore cleanly across CASA versions), and narrowband-searches archival visibilities for our ranked target list, in parallel producing a full-bandwidth, line-excluded continuum map for each target as a valuable by-product. In practice we have encountered -- and had to design around -- several recurring obstacles that any large-scale ALMA archival SETI effort should anticipate: (i) substantial heterogeneity in calibration-delivery format across observing cycles (differently-named recipe files, calibration tables packaged as per-execution-block vs.\ per-session archives, and pre-pipeline-era projects with no machine-readable recipe at all); (ii) very large Doppler drift rates at high frequency (up to several kHz~s$^{-1}$ at Band~9/10, following $\dot\nu\propto\nu$), demanding a correspondingly finer trial-drift-rate grid than cm-wave surveys use; (iii) a small (arcsecond-scale) primary beam that makes the pure bycatch method inefficient at high frequency, favouring instead a proximity/target-selected approach like ours; and (iv) genuinely large per-target data volumes (tens of GB per execution block once converted from archive to measurement-set format), which becomes a real, practical resource-management concern when reprocessing $\gtrsim100$ targets on shared compute infrastructure. None of these are fundamental obstacles, but all required deliberate engineering effort; we believe they are broadly representative of what any archival-mining effort at any facility will encounter, and are worth stating plainly rather than glossing over.
+
+\subsection{The Karl G. Jansky VLA}
+The NRAO Science Data Archive holds several decades of VLA visibility data, including the VLA Sky Survey (VLASS) and thousands of PI-led programmes, predating the 2023-era COSMIC commensal backend. While COSMIC now captures new observations live, the pre-COSMIC archive remains almost entirely unexploited for narrowband SETI: standard VLA correlator products can still be searched retrospectively for narrowband drift signals at whatever spectral resolution was originally recorded (typically coarser than a dedicated SETI backend, but often adequate for bycatch-style bright-transmitter limits), and VLASS in particular offers wide, repeated all-sky coverage well suited to a Wlodarczyk-Sroka-style continuum bycatch analysis at cm wavelengths.
+
+\subsection{LOFAR}
+The LOFAR Long-Term Archive (LTA) is very large (multi-PB) and, owing to LOFAR's multi-degree field of view, each archival pointing already contains thousands of potential bycatch targets, as exploited by \citet{johnson2023}. Low-frequency archival mining is attractive for its huge aggregate sky coverage and its unique sensitivity to older or more scattered transmissions, but is disadvantaged, as noted in \S3, by interstellar scattering-induced broadening of narrowband signals below $\sim200$~MHz, and by a considerably more severe terrestrial and ionospheric RFI environment than ALMA or GBT.
+
+\subsection{Jodrell Bank / e-MERLIN}
+The e-MERLIN archive at Jodrell Bank Observatory, though smaller in volume than ALMA or the VLA, offers UK-accessible long-baseline (up to 217~km) high-resolution cm-wave data, together with the historical legacy of the Lovell Telescope's own decades-long single-dish archive. Both remain comparatively underexploited for SETI relative to their US and international counterparts, and represent a natural, low-cost opportunity for a UK-led archival technosignature programme, particularly given existing institutional access.
+
+\subsection{Other archives}
+Several further public archives merit consideration: the \textbf{MeerKAT} SARAO archive of PI science data taken prior to or outside BLUSE's live commensal capture; the \textbf{Effelsberg} 100~m archive; \textbf{ASKAP}'s fast-imaging CRACO system, which could plausibly be extended to a commensal technosignature mode analogous to COSMIC; the \textbf{WISE/NEOWISE} infrared archive, already productively mined for Dyson-sphere-like waste-heat signatures \citep{wright2014} and readily extensible to new candidate lists; the \textbf{Gaia} astrometric and photometric archive, proposed as a resource for detecting anomalous transit, astrometric or reflected-light signatures of artificial structures; the \textbf{TESS} and \textbf{Kepler} archives, suitable for retrospective optical-pulse and anomalous-transit searches; and the growing \textbf{JWST} archive, relevant to atmospheric technosignature-gas searches. Looking ahead, the \textbf{SKA} precursor and pathfinder archives (and eventually SKA-Low/Mid itself) and the planned \textbf{ngVLA} will each generate archives at a scale that makes automated, commensal or retrospective technosignature analysis close to mandatory if the data are to be exploited for SETI at all.
+
+\subsection{Cross-cutting challenges}
+Every archive above shares a common set of obstacles that any large-scale mining effort must budget for: heterogeneous, cycle-dependent calibration and delivery conventions that frustrate simple automation; the substantial computational cost of reprocessing raw or partially-processed visibility data at scale (particularly acute for interferometric, as opposed to single-dish filterbank, data products); the absence of any real-time follow-up capability, since a single-epoch archival non-detection cannot be re-observed to test persistence or re-acquire a marginal candidate; and the need for robust, automated radio-frequency-interference and false-positive rejection without a purpose-built SETI backend's engineering safeguards. Our own experience -- including several genuine data-quality and calibration-format edge cases only discovered through direct, large-scale reprocessing -- suggests that these obstacles are tractable with careful, iteratively-hardened automated pipelines, and that AI-assisted development and monitoring of such pipelines is likely to become an increasingly practical way to make archival technosignature mining computationally and operationally sustainable at the scale these archives demand.
+
+\section{Discussion and Conclusions}
+Six decades after Project Ozma, radio SETI has expanded from single-target, single-frequency pointings to commensal, multi-facility, multi-octave surveys of tens of millions of stars, and has now, for the first time, reached into the millimetre/sub-millimetre regime with ALMA. No credible technosignature has yet been found at any wavelength, and the best current limits -- of order $10^{13}$~W at a handful of parsecs, rising to $10^{17}$--$10^{19}$~W across galaxy-scale samples -- remain well above the EIRP of Earth's own incidental radio emission, though they are now comparable to, or better than, our most powerful deliberate transmitter (Arecibo-class radar) for the nearest few hundred stars. Two complementary strategies are converging to close this gap: dedicated, always-on commensal backends (COSMIC, BLUSE) that accumulate sensitivity as a free by-product of every normal science observation at their host facility, and deliberate archival mining -- whether via serendipitous stellar bycatch or, as we advocate and demonstrate here, targeted reprocessing of archival data toward astrobiologically prioritised nearby stars. The latter approach, applied to ALMA, already yields EIRP limits several orders of magnitude tighter than the pioneering bycatch study of \citet{mason2024}, purely as a consequence of proximity-aware target selection -- a lesson directly transferable to VLA, LOFAR, e-MERLIN and other archives discussed in \S4.
+
+Looking ahead, the SKA (Phase 1 construction ongoing at the time of writing, with SKA-Low in Western Australia and SKA-Mid in South Africa) will eventually supersede essentially every facility discussed here in raw sensitivity and field of view simultaneously, and the ngVLA feasibility study \citep{ngvla2022} already anticipates a dedicated commensal SETI mode from first light. Until those facilities mature, however, the single most cost-effective lever available to the field remains full exploitation of data \emph{already collected}: with public interferometric archives now approaching exabyte scale and growing rapidly, and with automated, iteratively-validated pipelines increasingly able to absorb the format heterogeneity and computational cost this entails, archival technosignature mining is likely to remain one of the most productive ways to expand the SETI search space over the coming decade, complementing rather than substituting for continued investment in dedicated commensal systems and the next generation of large radio interferometers. We would encourage archive operators to consider, wherever practical, exposing standardised, machine-readable calibration metadata across observing cycles -- the single greatest recurring obstacle we encountered in this work -- since doing so would benefit not only SETI but any large-scale archival reprocessing effort across the wider astronomical community.
+
+\begin{thebibliography}{99}
+\footnotesize
+\bibitem[Choza et al.(2024)]{choza2024} Choza, C. et al.\ 2024, AJ, 168, 187
+\bibitem[Cocconi \& Morrison(1959)]{cocconi1959} Cocconi, G., \& Morrison, P.\ 1959, Nature, 184, 844
+\bibitem[Cordes \& Lazio(1991)]{cordes1991} Cordes, J.\ M., \& Lazio, T.\ J.\ W.\ 1991/1993, ApJ (ISM propagation effects on SETI)
+\bibitem[COSMIC Team(2025)]{cosmic2025} COSMIC SETI Collaboration 2025, AJ, 169, submitted (arXiv:2501.17997)
+\bibitem[Czech et al.(2021)]{czech2021} Czech, D. et al.\ 2021, PASA, 38, e012
+\bibitem[Drake(1961)]{drake1961} Drake, F.\ 1961, Physics Today, 14, 40
+\bibitem[Enriquez et al.(2017)]{enriquez2017} Enriquez, J.\ E.\ et al.\ 2017, ApJ, 849, 104
+\bibitem[FAST TRAPPIST-1 Team(2025)]{fast2025} arXiv:2509.06310
+\bibitem[Franz et al.(2022)]{franz2022} Franz, N.\ et al.\ 2022, AJ, 163, 106
+\bibitem[Gajjar et al.(2021)]{gajjar2021} Gajjar, V.\ et al.\ 2021, AJ, 162, 33
+\bibitem[Garrett \& Siemion(2022)]{garrett2022} Garrett, M.\ A., \& Siemion, A.\ P.\ V.\ 2022, A\&A, 665, A17
+\bibitem[Garrett \& Siemion(2023)]{garrett2023} Garrett, M.\ A., \& Siemion, A.\ P.\ V.\ 2023, MNRAS
+\bibitem[Griffith et al.(2015)]{griffith2015} Griffith, R.\ L.\ et al.\ 2015, ApJS, 217, 25
+\bibitem[Horowitz \& Sagan(1993)]{horowitz1993} Horowitz, P., \& Sagan, C.\ 1993, ApJ, 415, 218
+\bibitem[Houston et al.(2021)]{houston2021} Houston, K.\ et al.\ 2021, AJ, 162, 61
+\bibitem[Johnson et al.(2023)]{johnson2023} Johnson, O.\ A.\ et al.\ 2023, AJ, 166, 193
+\bibitem[K2-18b Team(2026)]{k218b2026} Tremblay, C.\ D.\ et al.\ 2026, AJ, 171, 210
+\bibitem[Mason et al.(2024)]{mason2024} Mason, L.\ A., Garrett, M.\ A., Wandia, K., \& Siemion, A.\ P.\ V.\ 2025, MNRAS, 536, 2127 (arXiv:2411.19827)
+\bibitem[ngVLA SETI Study(2022)]{ngvla2022} Tusay, N.\ et al.\ 2022, AJ, 164, 116
+\bibitem[Oliver \& Billingham(1971)]{oliver1971} Oliver, B.\ M., \& Billingham, J.\ 1971, NASA Project Cyclops Report
+\bibitem[Bycatch Simulation(2025)]{bycatch2025} arXiv (MNRAS staf2112)
+\bibitem[Price et al.(2020)]{price2020} Price, D.\ C.\ et al.\ 2020, AJ, 159, 86
+\bibitem[Sheikh et al.(2020)]{sheikh2020} Sheikh, S.\ Z.\ et al.\ 2020, AJ, 160, 29
+\bibitem[Sheikh et al.(2025)]{sheikh2025} Sheikh, S.\ Z.\ et al.\ 2025, arXiv:2502.02614
+\bibitem[Tingay et al.(2016)]{tingay2016} Tingay, S.\ J.\ et al.\ 2016, ApJ, 828, L22
+\bibitem[Tremblay et al.(2022)]{tremblay2022} Tremblay, C.\ D.\ et al.\ 2022, PASA, 39, e017
+\bibitem[Tremblay et al.(2023)]{tremblay2023} Tremblay, C.\ D.\ et al.\ 2023, PASP, 135, 034501
+\bibitem[Tremblay et al.(2026)]{tremblay2026} Tremblay, C.\ D.\ et al.\ 2026, arXiv:2607.23651
+\bibitem[Abeysekara et al.(2016)]{veritas} Abeysekara, A.\ U.\ et al.\ 2016, ApJ, 818, L33
+\bibitem[Wlodarczyk-Sroka et al.(2020)]{wlodarczyk2020} Wlodarczyk-Sroka, B.\ S., Garrett, M.\ A., \& Siemion, A.\ P.\ V.\ 2020, MNRAS, 498, 5720
+\bibitem[Wright et al.(2014)]{wright2014} Wright, J.\ T.\ et al.\ 2014, ApJ, 792, 27
+\end{thebibliography}
+
+\end{document}
