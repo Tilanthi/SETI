@@ -1,0 +1,59 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.78in]{geometry}
+\usepackage{times}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\setlist{nosep, leftmargin=1.4em}
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{6pt}{3pt}
+\titlespacing*{\subsection}{0pt}{4pt}{2pt}
+\setlength{\parskip}{1pt}
+\pagestyle{empty}
+
+\title{\vspace{-1.5em}\textbf{Engineering for Serendipity: Design Principles for a\\ Eureka-Capable Automated Discovery System}\vspace{-0.5em}}
+\author{}
+\date{\vspace{-1em}August 2026}
+
+\begin{document}
+\maketitle
+\vspace{-2.2em}
+
+\noindent A ``Eureka moment'' in science is not simply a surprising number falling out of a pipeline. It is a finding that is unanticipated, that survives independent scrutiny, that is recognised as significant by someone able to act on it, and that changes what is subsequently looked for. An automated research system cannot be instructed to have one on demand. What it \emph{can} be given is a set of operating conditions that make genuine discoveries more likely to occur, more likely to be noticed when they do, and more likely to survive the scrutiny needed to be believed. The principles below are illustrated with lessons drawn from operating a large, automated archival-data survey, but they generalise to any autonomous research pipeline built to search broad, messy, real-world data for the unexpected.
+
+\section*{1. Cast the widest net that is computationally sustainable}
+Breadth is the precondition for serendipity: a system that commits its resources to a single expert-selected hypothesis can only confirm or refute that hypothesis, never stumble on anything else. In a recent archival technosignature survey, a completely unplanned finding -- a short-timescale flux variation with no prior expectation attached to it -- surfaced purely because the host star happened to lie inside a field the pipeline was scanning for an unrelated reason. The practical rule is to invest in infrastructure that removes the \emph{marginal} cost of coverage -- automated queries, resumable batch drivers, disk/CPU governors that let unattended jobs run safely for days -- so that scanning ten times more objects, bands, or epochs is a matter of wall-clock time, not a redesign. Coverage should be treated as a first-class resource, prioritised ahead of hand-picking any single high-value target.
+
+\section*{2. Make anomaly-flagging objective and pre-registered}
+A Eureka claim is only as credible as the statistic that raised it. Detection thresholds -- a fixed significance for a spectral hit, a fixed $\chi^2$ for flagged variability -- should be fixed \emph{before} the data are examined, applied uniformly across the whole sample, and reported whether the result is exciting or a boring upper limit. Selective reporting is what turns real outliers into stories that cannot be trusted; uniform, pre-committed statistics are what let a true outlier be recognised as an outlier.
+
+\section*{3. Build an adversarial self-referee into the pipeline, not just the write-up}
+Every multi-sigma ``hit'' a recent narrowband search produced was explained by the pipeline's own metadata as a known molecular transition, once the system was made to check each hit's frequency against a line list and its spatial structure against the expected point-source profile automatically. The general lesson: a discovery pipeline should actively try to kill its own candidates, using every piece of context already available to it -- known contaminants, instrumental systematics, selection effects -- before a candidate ever reaches a human. A system that hands over every positive hit unfiltered wastes the expert's attention on artefacts, and each artefact erodes trust in the one hit that might have been real.
+
+\section*{4. Make the whole pipeline idempotent, versioned, and self-healing}
+Bugs are inevitable at scale. What separates a system that can explore aggressively from one that cannot is whether it can (a) detect that a given result was produced under a since-fixed defect, (b) mark that result as suspect \emph{without discarding it}, and (c) cheaply re-run just that unit of work once the fix lands. This requires idempotent, per-unit status markers; explicit, distinct failure classes (transient outage vs.\ permanent failure vs.\ partial success); and a resume mechanism that treats ``completed under an old, buggy code path'' as categorically different from ``completed and trustworthy.'' Without this discipline, a promising signal discovered under uncertain provenance can never be fully believed -- and an operator lulled by a high apparent success rate may stop looking for exactly the bugs that would otherwise have revealed it.
+
+\section*{5. Insist on independent reconfirmation before elevating status}
+A single epoch, a single instrument, or a single analysis method should never be sufficient to call something a discovery. The system should automatically seek a second, independent look -- another epoch, another band, an independent re-derivation -- before a finding's status is upgraded from \emph{flagged} to \emph{candidate} to \emph{result}. When a variability search recently produced its first genuinely flagged multi-epoch outlier, the correct automated response was not to announce a discovery but to log it and queue exactly the kind of independent check (further epochs, other observing bands) that would either kill it or strengthen it. That ``seek a second opinion'' step should be built into the workflow itself, not left for a human to think to request.
+
+\section*{6. Calibrate the language of every output, and escalate honestly}
+An automated system's outputs shape how much attention a scarce human expert gives to any one item. If routine non-detections are reported with the same confidence and enthusiasm as a genuine anomaly, the anomaly is lost in the noise; if every marginal anomaly is over-claimed, the expert learns to discount the system's judgement altogether. Strong claims should be reserved for findings that have survived the adversarial and reconfirmation steps above; everything else should be reported with its statistic and its most plausible mundane explanation attached to the flag. Calibrated humility is precisely what preserves the signal value of the rare moment when the system reports that something is genuinely different.
+
+\section*{7. Keep a durable, searchable memory across runs}
+Because genuine discoveries are rare and often only recognisable in retrospect -- a weak signal seen once becomes compelling once seen five times, in unrelated runs, months apart -- the system needs continuity: a persistent, structured record of every flagged anomaly, its eventual disposition, and the exact processing version that produced it, queryable the next time something similar appears. A system that starts from a blank slate on every run cannot notice that its own history is trying to tell it something.
+
+\section*{A discovery flywheel}
+None of these seven principles is exotic in isolation; together they form a flywheel. Broad, cheap coverage generates candidates. Objective, adversarial vetting filters them. Idempotent, versioned infrastructure lets the system revisit anything found to be compromised without losing trust in everything else. Independent reconfirmation and calibrated escalation route the small residue of genuinely odd findings to the human expert at exactly the moment they deserve full attention. A Eureka moment cannot be engineered directly -- but the conditions that make one likely to occur, likely to be noticed, and likely to survive scrutiny can be, and should be treated as first-class design requirements for any autonomous discovery system, not as afterthoughts bolted on once something exciting happens to turn up.
+
+\section*{Practical checklist}
+\begin{enumerate}[itemsep=2pt]
+\item \textbf{Coverage:} Is the marginal cost of scanning one more object/band/epoch close to zero? If not, invest in infrastructure before targets.
+\item \textbf{Thresholds:} Are detection/flagging statistics fixed in advance, applied uniformly, and reported for null results too?
+\item \textbf{Self-referee:} Does the pipeline try to explain away its own hits (known contaminants, instrumental signatures, spatial profile) before a human sees them?
+\item \textbf{Provenance:} Can every result be traced to an exact code version, and cheaply re-run if that version is later found defective?
+\item \textbf{Reconfirmation:} Is a second, independent look (epoch, instrument, method) automatically queued before any status upgrade?
+\item \textbf{Calibrated language:} Does the strength of the claim in every report match the strength of the evidence behind it?
+\item \textbf{Memory:} Is every flagged anomaly logged persistently, so a recurring weak signal can be recognised as such across unrelated runs?
+\end{enumerate}
+A system that can answer ``yes'' to all seven is not guaranteed a Eureka moment -- but it is one that will recognise a real one when it happens, and will not be fooled by a false one in the meantime.
+
+\end{document}
