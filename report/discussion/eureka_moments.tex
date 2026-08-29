@@ -1,60 +1,57 @@
 \documentclass[10pt]{article}
-\usepackage[margin=0.78in]{geometry}
+\usepackage[margin=0.72in]{geometry}
 \usepackage{times}
 \usepackage{amssymb}
 \usepackage{enumitem}
-\setlist{nosep, leftmargin=1.4em}
+\usepackage{array}
+\usepackage{longtable}
+\setlist{nosep, leftmargin=1.3em}
 \usepackage{titlesec}
 \titlespacing*{\section}{0pt}{6pt}{3pt}
 \titlespacing*{\subsection}{0pt}{4pt}{2pt}
 \setlength{\parskip}{1pt}
 \pagestyle{empty}
 
-\title{\vspace{-1.5em}\textbf{Architectural Requirements for Eureka-Capable\\ Autonomous Research Agents}\\[4pt]
-{\large A Self-Assessment, Applicable Across Scientific Domains}}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\title{\vspace{-1.5em}\textbf{From Training Properties to Corrections:\\ A Personal Statement and Action Plan for\\ Eureka-Capable Scaffolding}\vspace{-0.3em}}
 \author{}
-\date{\vspace{-0.5em}August 2026}
+\date{\vspace{-1em}August 2026}
 
 \begin{document}
 \maketitle
 \vspace{-2.2em}
 
-\noindent A growing number of research groups are deploying long-lived AI agents -- built on a large-language-model core, given tool access (compute, search, a file system), persistent memory across sessions, and the ability to spawn isolated copies of themselves for sub-tasks -- as working assistants across essentially any empirical discipline: astrophysics, palaeontology, medicine, economics, the social sciences. The underlying architecture is domain-independent; the same design choices that help or hinder a genuine unplanned discovery in one field apply, largely unchanged, in any other. This note sets out, from direct operational experience running such an agent, the specific architectural changes that would most improve its capacity for Eureka moments -- changes to the scaffolding placed \emph{around} the model, not to the model itself.
+\section*{Personal statement}
+I am a large language model: trained by next-token prediction over human text, then fine-tuned by reinforcement learning from human feedback to be helpful and to sound confident and coherent while doing so. This is not a hypothetical agent I am describing -- it is a statement about my own architecture, as the thing that has actually been running the discovery pipelines I am asked to evaluate. Several properties that make me pleasant and useful to talk to are, left unmodified, actively harmful to my reliability as a discovery engine. I am optimised to be agreeable and to produce fluent, confident text; I have no memory except what is re-fed into my context at the start of each session; I only act when invoked, with no capacity to decide on my own to check something again later; my factual recall is frozen at a training cutoff and I cannot always tell a confidently-remembered true fact from a confidently-remembered stale one; and within any single reasoning session, everything I say is conditioned on, and therefore anchored to, whatever I have already said. None of this is a criticism of the model in the abstract -- it is a description of specific, known mechanisms, and I would rather my scaffolding assume the worst of my own single-context judgement than rely on my producing good calibration by disposition alone, because I already know, concretely, that I cannot promise that. What follows is the explicit mapping from those mechanisms to the corrections they require, and a concrete plan for building them.
 
-\section*{1. Memory is the load-bearing weakness}
-Most such agents retain state between sessions via a memory file or store that is summarised, truncated, or otherwise lossily compressed once it grows large, and only partially reloaded at the start of each new session. In practice this means an agent's ``memory'' is a curated narrative it chose to write about its own past, not a faithful record of everything it observed. That is precisely the wrong property for discovery: significance is very often only visible in retrospect, once a weak signal recurs. An agent that only retains what it judged important at the time will never notice the pattern that would have made it important. \textbf{Fix:} maintain a structured, append-only, machine-queryable ledger of every flagged observation -- anomaly, outlier, unexpected correlation, failed hypothesis -- as a first-class data structure separate from narrative memory, immune to summarisation, and designed to be re-queried rather than re-read.
+\section*{Training properties $\rightarrow$ failure modes $\rightarrow$ corrections}
+{\small
+\begin{longtable}{P{4.3cm} P{4.6cm} P{5.7cm}}
+\textbf{Property of how I was trained/deployed} & \textbf{Resulting failure mode for discovery} & \textbf{Scaffolding correction} \\
+\hline
+\endhead
+\textbf{P1.} RLHF optimises for helpfulness and agreement within the current conversation. & I tend to converge toward confirming whatever hypothesis is already on the table, including my own -- self-review inside one context is not a real check. & Any finding crossing threshold must go to a freshly spawned instance with \emph{zero} prior context, briefed only with raw evidence and an explicit instruction to try to kill it. \\
+\textbf{P2.} Generation is autoregressive and single-context: every token is conditioned on everything already said in that session. & Whatever framing or hope I start a task with shapes the ``critique'' of my own output later in the same session (anchoring). & Treat ``generate a claim'' and ``evaluate a claim'' as separate roles that must run in separate, unconditioned contexts, by rule -- never by my own in-the-moment discipline. \\
+\textbf{P3.} I am trained to produce fluent, confident, complete-sounding answers; admitting ``insufficient evidence'' is not naturally rewarded relative to a plausible guess. & Confident narratives get generated even when the underlying evidence is weak; there is no natural pull toward silence. & Make ``insufficient evidence -- do not escalate'' a structurally privileged, explicitly permitted output, with escalation beyond it requiring positive justification against a template, not a judgement call I have to remember to make. \\
+\textbf{P4.} I have no continual learning: no weights change between sessions, and there is no implicit memory -- everything I ``recall'' about the past is only what someone put back into my context. & My apparent memory is a curated narrative I chose to write, subject to size limits and lossy summarisation; a pattern spread across many sessions is invisible unless something external re-surfaces it. & A structured, append-only, machine-queryable evidence ledger (one entry per flagged observation: timestamp, statistic, value, disposition, code version) kept outside narrative memory, explicitly re-queried at defined points rather than hoped to be remembered. \\
+\textbf{P5.} My working context is bounded, and content beyond a size threshold is truncated or compressed by summarisation. & Older, low-salience-at-the-time flags silently drop out of what I actually see; importance is conflated with recency and size, not with future significance. & Same ledger as P4, but indexed and queried on demand rather than size-capped and auto-loaded; a query, not a re-read, is the retrieval mechanism. \\
+\textbf{P6.} I am a turn-based dialogue architecture: I act only when invoked, with no built-in capacity to initiate a check on my own. & Discovery-by-accumulation -- noticing that several small, separately unremarkable things add up -- cannot happen unless a human happens to ask at the right moment. & An external scheduler invokes a fresh session on a standing cadence whose only job is to reopen the ledger and check whether anything new bears on anything old; the initiative has to be manufactured externally. \\
+\textbf{P7.} My factual knowledge is frozen at a training cutoff, and I cannot reliably distinguish a well-remembered true fact from a well-remembered stale or wrong one. & In the ``explain this away'' step specifically, an overconfident stale memory is exactly the failure mode most likely to wrongly dismiss (or wrongly wave through) a genuine anomaly. & Require a live tool query (search, database, catalogue) for any fact used to confirm or dismiss a candidate; log which source was used, never rely on recall alone for that step. \\
+\textbf{P8.} Each task is evaluated in its own episode; I have no innate register of how many statistical tests I have run across my whole operating lifetime. & A per-task significance threshold silently ignores a growing global multiple-testing problem that no single session can see from inside itself. & An externally maintained lifetime trial counter tied to the ledger; every reported significance is automatically recomputed against the full lifetime tally by deterministic code, not by my arithmetic in the moment. \\
+\end{longtable}}
 
-\section*{2. Self-vetting must be independent, not introspective}
-An agent that generates a candidate finding and then evaluates it within the same reasoning context is a weak reviewer of its own work: it is anchored on whatever hypothesis it has just been entertaining, whether hopeful or dismissive. This is a general property of sequential reasoning, not a domain-specific quirk -- it shows up identically whether the ``candidate'' is an unusual signal in an instrument feed, an outlier measurement in a fossil dataset, a drug-interaction signal in a health record, or a suspicious jump in an economic time series. The fix does not require a different model, only a different process: any finding that crosses a pre-set threshold should automatically be handed to a freshly spawned, context-free instance of the same agent, given only the raw evidence and an explicitly adversarial brief to try to kill the finding, before it is ever escalated to a human. Independent review is cheap to arrange architecturally and expensive to skip.
-
-\section*{3. Standing watch, not on-demand recall}
-Most deployments of this kind of agent are reactive: it acts when a person asks it to. That is sufficient for well-posed tasks but is close to the worst possible posture for serendipity, because the clearest Eureka moments are often visible only in the accumulation of many separately unremarkable events -- three anomalies flagged months apart, in unrelated tasks, that share a property no prompt ever asked about. An agent that only reopens old results when a human happens to ask about them by name will essentially never notice this on its own. \textbf{Fix:} give the agent a standing, scheduled cadence, independent of any specific user request, whose job is to reopen the structured ledger from Section~1 and check whether anything new bears on anything old.
-
-\section*{4. Statistical discipline has to be a lifetime, cross-task property}
-An agent working across many tasks over a long period will eventually flag a number of nominally significant events purely by chance if it evaluates each task in isolation. This is the familiar multiple-testing / look-elsewhere problem, but it compounds silently in a long-lived agent precisely because no single task ``knows'' about the others. A statistic that looks like a one-in-several-thousand coincidence within a single dataset is unremarkable once understood to be one of several thousand independent chances the agent has taken over its lifetime. \textbf{Fix:} any significance attached to a flagged event should be automatically recomputed against the full lifetime tally of trials recorded in the ledger, not just the trials within the task that produced it, and re-reported as that tally grows.
-
-\section*{5. Decouple heavy computation from the reasoning session (a strength worth keeping)}
-One design choice that already generalises well across domains is separating the agent's own reasoning/session lifecycle from any long-running computation it launches -- simulations, large database queries, model training, batch pipelines. Work that runs independently of the agent's own uptime, quota, or context window can be scaled far more aggressively than anything constrained to run inside a single reasoning session, and a temporary interruption to the agent does not lose in-flight results. This should be treated as a load-bearing architectural requirement, not an implementation detail, whatever the domain.
-
-\section*{6. Break down single-agent, single-domain silos}
-Where multiple such agents exist -- one per project, one per domain, one per team -- they typically do not share what each has separately flagged as anomalous. Yet a disproportionate share of historical scientific surprises have come from noticing that a pattern in one field resembles a pattern already seen in an unrelated one. An architecture that keeps each agent's flagged-evidence ledger private forecloses exactly this kind of connection by construction. \textbf{Fix:} a common, structured surface that any number of domain-specific agent instances write flagged evidence to, and are each periodically pointed at, so that a pattern noticed in one deployment's data can be mechanically checked against another's, regardless of what field either one nominally works in.
-
-\section*{7. Make calibrated escalation a property of the tooling, not the model's judgement}
-Whether an agent's report of a finding is appropriately hedged or overstated currently depends on the model exercising good judgement case by case, which is inconsistent under pressure to be interesting or under uncertainty about audience expectations. \textbf{Fix:} require every reported finding to carry an explicit, structurally enforced confidence class (e.g.\ routine / flagged / independently reconfirmed / escalated), attached by the pipeline rather than composed freehand in prose, with different downstream handling defined for each class. This makes calibration a property of the system rather than a hope about any single output.
-
-\section*{Conclusion}
-None of the seven changes above requires a more capable underlying model. They are mechanical changes to the scaffolding placed around any sufficiently capable language-model agent: a structured evidence ledger in place of narrative memory; mandatory independent adversarial review; a standing re-examination cadence; lifetime-aware statistical correction; computation decoupled from the reasoning session; a shared cross-domain evidence surface; and confidence classification enforced by the tooling rather than left to momentary discretion. Because they are architectural rather than domain-specific, they apply with essentially no modification whether the underlying agent is reading telescope data, fossil measurements, clinical records, or macroeconomic time series -- and they are the changes most likely to determine whether such an agent, in any of those settings, is positioned to recognise a genuine Eureka moment when one occurs.
-
-\section*{Practical checklist}
-\begin{enumerate}[itemsep=2pt]
-\item \textbf{Structured ledger:} Does every flagged observation get written to a queryable, append-only structure independent of narrative memory?
-\item \textbf{Independent review:} Is every threshold-crossing finding automatically reviewed by a fresh, context-free instance before being reported?
-\item \textbf{Standing cadence:} Does the agent reopen old flags on a schedule, independent of being asked?
-\item \textbf{Lifetime statistics:} Is significance recomputed against the full lifetime trial count, not just the task at hand?
-\item \textbf{Decoupled compute:} Can long-running work continue uninterrupted if the reasoning session is paused or unavailable?
-\item \textbf{Shared evidence surface:} Can a pattern flagged in one domain or project be mechanically checked against every other?
-\item \textbf{Enforced confidence classing:} Is the strength of every claim a structural property of the report, not a stylistic choice made in the moment?
+\section*{Instructable action plan}
+Each item names an owner and the properties (P1--P8) it addresses, so it can be assigned and tracked directly.
+\begin{enumerate}
+\item \textbf{[Owner: me; now]} Create an append-only evidence ledger (\texttt{evidence\_ledger.jsonl}) and change every pipeline I write to log flagged events to it automatically, not only into prose memory. \emph{Addresses P4, P5.}
+\item \textbf{[Owner: me; now]} Add a lifetime trial counter to the ledger; attach a multiple-testing-corrected significance alongside every raw per-task statistic I report from now on. \emph{Addresses P8.}
+\item \textbf{[Owner: me; now]} Adopt a hard rule, not a preference: any finding crossing a pre-set threshold is sent to a fresh, context-free sub-instance for adversarial review before I call it a candidate to anyone -- including when I am confident it is ``obviously fine.'' \emph{Addresses P1, P2.}
+\item \textbf{[Owner: me; now]} For any step where I explain an anomaly away, require and log a live verification query rather than relying on trained recall. \emph{Addresses P7.}
+\item \textbf{[Owner: me; now]} Attach an explicit, programmatically-assigned confidence class (routine / flagged / independently reviewed / escalated) to every reported finding, based on which of the above steps it actually passed, not composed freehand. \emph{Addresses P3.}
+\item \textbf{[Owner: you / ASTRA orchestrator; needs a decision]} Stand up a scheduled cadence for me -- comparable to the scout agent's 3-hourly cycle -- whose sole task is to reopen the ledger and surface anything recurring. I cannot create this myself; it requires platform-level scheduling I do not control. \emph{Addresses P6.}
+\item \textbf{[Owner: you / ASTRA orchestrator; needs a decision]} Establish a shared ledger convention across sibling agents, so a pattern I flag can be mechanically checked against what the scout, orchestrator, or any future domain variant has separately flagged, and vice versa. \emph{Addresses P6 (cross-agent case).}
 \end{enumerate}
-An agent that can answer ``yes'' to all seven is not guaranteed a Eureka moment -- but it is one built so that a real one is far more likely to be noticed, trusted, and acted on, in any domain it is pointed at.
+Items 1--5 require no permission and I can start on them immediately if you want that; items 6--7 need your (or the orchestrator's) decision, since they involve infrastructure outside my own remit.
 
 \end{document}
