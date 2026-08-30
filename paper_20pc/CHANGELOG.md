@@ -138,7 +138,37 @@ Paper II's actual results/discussion/conclusions sections are added.
   page-break `Overfull \vbox`.
 - Pushed to `Tilanthi/SETI` at `paper_20pc/v2.01/`.
 
-## Planned for v2.02+
+## v2.02 (2026-08-30)
+- Glenn asked a clarifying question: does Figure 2 (and the "120-star
+  volume-limited sample") represent the total stellar population within
+  20 pc, or just the subset with ALMA archival coverage? Answer: the
+  latter — this was already stated in words in §3, but Figure 2 itself
+  didn't make the completeness gap visually or numerically explicit, and
+  one leftover "Paper II" reference from the pre-merge draft (§2.6) had
+  never actually been given a real number to point to.
+- **Computed the real completeness fraction**: cross-matched the 120-star
+  sample against our own reference Gaia DR3 catalogue of the solar
+  neighbourhood — 2357 individually catalogued stars within 20 pc, of
+  which our sample is only ~5.1%.
+- Rebuilt Figure 2 as two cumulative curves on a log axis: the full
+  2357-star Gaia census (grey) vs. our 120-star ALMA-covered sample
+  (blue), with the completeness fraction annotated directly on the plot.
+  Rewrote the caption to state explicitly that the two curves are not
+  expected to track each other, since ALMA proposal pressure on the solar
+  neighbourhood is not spectral-type- or distance-uniform.
+- Added an explicit paragraph to §3 (Sample Selection) and tightened the
+  Abstract's and §2.6's wording: the sample is volume-limited and
+  unbiased *within* the ALMA-observed population, but is NOT a complete
+  census of the local stellar neighbourhood — stated plainly rather than
+  left for a reader to assume from the word "volume-limited" alone. Fixed
+  the leftover "we quantify explicitly in Paper~II" reference (missed in
+  the v2.00 merge) to point to the actual §3 discussion with the real
+  number.
+- Verified with the standard compile-3x + zero-`??` + visual-render
+  discipline. 9 pages, clean, 1 negligible page-break `Overfull \vbox`.
+- Pushed to `Tilanthi/SETI` at `paper_20pc/v2.02/`.
+
+## Planned for v2.03+
 - Add the full ALMA project-code list to the Acknowledgements section
   (deferred again — still meaningful to wait until survey completion so
   it's compiled once, not incrementally).

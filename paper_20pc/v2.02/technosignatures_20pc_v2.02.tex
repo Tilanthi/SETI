@@ -1,0 +1,840 @@
+\documentclass{openjournal}
+
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{tabularx}
+
+\shorttitle{A Volume-Limited ALMA Search for Technosignatures within 20\,pc}
+\shortauthors{White \& Dey}
+
+\begin{document}
+
+\title{A Volume-Limited Search for Technosignatures within 20\,pc Using the Public ALMA Archive}
+
+\author{Glenn J. White\altaffilmark{1,2} and Robin Dey\altaffilmark{3}}
+\altaffiltext{1}{School of Physical Sciences, The Open University, Walton Hall, Milton Keynes, MK7 6AA, UK; glenn.white@open.ac.uk}
+\altaffiltext{2}{RAL Space, STFC Rutherford Appleton Laboratory, Harwell Campus, Didcot, OX11 0QX, UK}
+\altaffiltext{3}{VBRL Holdings Inc.}
+
+\begin{abstract}
+We present the motivation, design, methodology and first results of a
+volume-limited search for radio technosignatures among all stars within
+20\,pc of the Sun that have public observations in the Atacama Large
+Millimeter/submillimeter Array (ALMA) science archive. Unlike the great
+majority of technosignature surveys conducted to date, which are either
+wide, shallow all-sky surveys or targeted campaigns preferentially
+selecting exoplanet hosts, young stellar objects, or other astrophysically
+``interesting'' systems, our sample of 120 stars is every star within
+20\,pc with public ALMA archival coverage -- selected on the presence of
+ALMA data alone, irrespective of spectral type, age, multiplicity, or
+known planetary or circumstellar-disc status, rather than on any of those
+astrophysical properties. This sample is therefore unbiased with respect
+to spectral type and disc/planet-host status \emph{within} the population
+ALMA happens to have observed, though it is not, and does not claim to
+be, a complete census of the local stellar neighbourhood: it represents
+only $\sim$5\% of the $\sim$2400 individually catalogued stars within
+20\,pc (Section~\ref{sec:sample}). We mine the ALMA archive
+opportunistically: rather than requesting dedicated observing time, we
+reprocess existing calibrated (and, where necessary, recalibrated)
+visibility data to search simultaneously for narrowband Doppler-drifting
+technosignature candidates and for anomalous broad-band continuum
+emission, at frequencies ($\sim$\,90--950\,GHz) that remain almost
+entirely unexplored by the technosignature literature. We supplement the
+classical narrowband/continuum search with two further analyses that
+exploit properties unique to this survey and unavailable to any
+single-dish technosignature programme: a closure-phase point-source
+vetting test for any candidate that crosses threshold, and a
+population-level, spectral-type-normalised continuum anomaly check made
+possible by the sample's volume-limited, unbiased design. As of this
+version, 19 of the planned 120 target/bands have been searched to
+completion. No credible technosignature has been found -- one narrowband
+candidate initially flagged by the automated pipeline is identified as
+the CO(1--0) transition and is not of technosignature origin -- and we
+report EIRP upper limits in the range $1.6\times10^{13}$--$2.8\times10^{15}$\,W
+(median $2.1\times10^{14}$\,W) and five continuum detections (one an
+unresolved close binary), alongside fourteen deep non-detections
+reaching a median 5$\sigma$ continuum limit of $\sim$\,0.6\,mJy. The
+survey is ongoing; this paper will be updated as further targets are
+completed.
+\end{abstract}
+
+\keywords{extraterrestrial intelligence --- radio lines: stars --- submillimetre: stars --- surveys --- astrobiology}
+
+\section{Introduction}
+\label{sec:intro}
+
+The search for extraterrestrial intelligence (SETI) rests on the premise that a
+technological civilisation, whether deliberately signalling or simply going about
+its own affairs, may leave a detectable imprint on the electromagnetic spectrum: a
+\emph{technosignature} \citep{Sheikh2020,SETIreview2025}. Since the foundational
+proposal of \citet{CocconiMorrison1959} that microwave frequencies near the 21\,cm
+hydrogen line would be an obvious ``meeting place'' for interstellar communication,
+and Frank Drake's first observational test of the idea with Project Ozma
+\citep{Drake1960}, the radio band has remained the dominant search space for
+technosignatures, for reasons that are both historical and physically well
+motivated: radio photons are cheap to produce in enormous numbers, propagate
+through the interstellar medium and planetary atmospheres with little attenuation,
+and (for a sufficiently narrowband signal) can in principle be distinguished from
+any known natural astrophysical process by their spectral compactness and Doppler
+dynamics \citep{Sheikh2020}.
+
+Six decades on, radio technosignature searches have grown from single-target,
+single-frequency pointings into surveys of many thousands of stars across broad
+swathes of the radio spectrum. Yet, as \citet{Wright2018} demonstrated
+quantitatively with their ``Cosmic Haystack'' formalism, even the combined efforts
+of every major SETI programme to date have sampled only an infinitesimal fraction
+of the plausible multi-dimensional parameter space of transmitter frequency,
+bandwidth, power, location, and duty cycle. Persistent, non-trivial gaps remain:
+almost the entire millimetre and submillimetre regime above $\sim$\,50\,GHz is
+essentially unsearched; most surveys have targeted specific classes of star
+(nearby exoplanet hosts, young stellar objects with protoplanetary discs, stars in
+the ``Earth Transit Zone'') rather than an unbiased, complete sample of the local
+stellar population; and only a small number of studies have systematically
+reprocessed \emph{existing} interferometric archives for technosignatures, as
+opposed to requesting dedicated telescope time.
+
+This paper describes a new survey designed to address several of these gaps
+simultaneously. We construct a volume-limited sample of every star within
+20\,pc of the Sun with public ALMA archival coverage, irrespective of
+spectral type, disc-hosting status, or known planets, and mine that
+archival data for both narrowband technosignature candidates and
+anomalous continuum emission, applying corrections for stellar proper
+motion and for the range of Doppler drift rates plausible for a
+transmitter on a planet in orbit around its host star. We further
+supplement this classical search with two analyses that exploit
+properties specific to this survey and unavailable to prior
+technosignature work: interferometric closure-phase vetting of any
+candidate signal, and a population-level anomaly check enabled by the
+sample's unbiased, volume-limited design.
+Section~\ref{sec:background} reviews the relevant
+literature: the history of radio SETI (\S\ref{sec:history}), the current
+generation of large-scale technosignature surveys (\S\ref{sec:modern}), the very
+limited body of work at millimetre/submillimetre frequencies
+(\S\ref{sec:mmsubmm}), the growing use of machine learning and anomaly detection
+in this field (\S\ref{sec:ml}), the statistical frameworks used to interpret
+survey non-detections (\S\ref{sec:stats}), the case for a volume-limited,
+representative sample (\S\ref{sec:volumelimited}), and the prospects offered by
+next-generation facilities (\S\ref{sec:future}). Section~\ref{sec:sample}
+summarises our sample selection, Section~\ref{sec:method} our data-reduction and
+search methodology (including the two new analyses),
+Section~\ref{sec:results} presents our results to date, and
+Section~\ref{sec:discussion} discusses their interpretation and the survey's
+prospects. Full per-target tables are deferred to Appendix~\ref{app:table}
+so as not to interrupt the main narrative with tabular material.
+
+\section{Background}
+\label{sec:background}
+
+\subsection{Six decades of radio SETI: a brief history}
+\label{sec:history}
+
+Project Ozma \citep{Drake1960} observed two nearby Sun-like stars, $\tau$~Ceti and
+$\epsilon$~Eridani, with the 26\,m Tatel telescope at Green Bank at 1420\,MHz for
+a total of some 150 hours, and found no signal, but established both the
+methodology and the symbolic starting point for the modern field. Through the
+1960s--1980s a steady stream of targeted and sky-survey searches followed,
+including Ozma~II \citep{Drake1986}, the Ohio State ``Big Ear'' survey (source of
+the famous ``Wow!'' signal), and the META and BETA all-sky surveys conducted from
+Harvard/Smithsonian facilities. Project Phoenix \citep{Backus2002}, run by the
+SETI Institute from 1995--2004, was the most sensitive targeted survey of its era,
+observing on the order of 800 nearby Sun-like stars using the Arecibo, Parkes and
+Green Bank telescopes, and pioneered a rigorous methodology for distinguishing
+candidate signals from terrestrial radio-frequency interference (RFI) through
+simultaneous multi-site or multi-antenna verification. The Allen Telescope Array
+\citep[ATA;][]{Tarter2001}, jointly developed by the SETI Institute and UC
+Berkeley and first commissioned in 2007, was the first radio telescope
+purpose-built from the outset for commensal, wide-band SETI observing, and remains
+in active use, including in recent technosignature searches of interstellar
+objects \citep{ATAISO2025} and TRAPPIST-1 \citep{ATATRAPPIST2024}. The
+distributed-computing project SETI@home \citep{SETIhome2025} processed
+public-participant-donated CPU cycles to search Arecibo sky-survey data for
+narrowband and pulsed signals for two decades before its 2020 shutdown, and its
+final data-analysis summary was only published in 2025.
+
+Two complementary observing strategies have been used throughout this history:
+\emph{sky surveys}, covering a large fraction of the celestial sphere at modest
+sensitivity per pointing, and \emph{targeted searches}, concentrating integration
+time on a preselected list of promising stars \citep[e.g.][]{Drake1974}. Both
+strategies persist in the modern era, but -- as we discuss in
+\S\ref{sec:volumelimited} -- the majority of targeted programmes have selected
+their samples on some presumed indicator of habitability or interest (proximity,
+Sun-like spectral type, known planets, or membership of the Earth Transit Zone),
+rather than aiming for a complete, unbiased census of the local stellar
+population.
+
+\subsection{Modern large-scale radio technosignature surveys}
+\label{sec:modern}
+
+The current generation of technosignature science is dominated by the
+Breakthrough Listen initiative, launched in 2015 with a ten-year, \$100\,million
+commitment to survey the one million nearest stars, the full Galactic plane and
+centre, the 100 nearest galaxies, and a sample of exoplanet and planet-candidate
+hosts, primarily using the Robert C.\ Byrd Green Bank Telescope (GBT) and the
+CSIRO Parkes ``Murriyang'' telescope, and now increasingly via commensal
+observing on MeerKAT \citep{BLoverview}. Its first major published dataset,
+\citet{Enriquez2017}, searched 692 nearby stars over 1.1--1.9\,GHz with the GBT
+and set limits on narrowband transmitters of EIRP\,$>10^{13}$\,W; this was
+followed by \citet{Price2020} (1327 stars, 1.10--3.45\,GHz),
+\citet{Gajjar2019EarthTransitZone}-style searches of the restricted Earth Transit
+Zone at 3.95--8.00\,GHz, and, most recently, a substantial expansion of automated,
+commensal technosignature searching with MeerKAT that has processed some 1.5
+million coherent beams between 2023 and 2026 \citep{BLMeerKAT2026}. In parallel,
+\citet{Margot2023} conducted a large citizen-science-style search of 11\,680
+stars with the GBT at 1.15--1.73\,GHz, explicitly developing a statistical
+formalism for interpreting non-detections in terms of the fraction of stars that
+could host a detectable transmitter, \emph{provided the observed sample is
+representative of the underlying stellar population of the search volume} -- a
+condition that, as we discuss below, is often not satisfied by targeted,
+interest-selected samples.
+
+Beyond Breakthrough Listen, the last five years have seen international radio
+facilities extend technosignature searches to new frequency regimes and
+observational strategies: the Five-hundred-metre Aperture Spherical Telescope
+\citep[FAST;][]{Zhang2020, FAST3IATLAS2025} in China has conducted commensal
+searches with unmatched raw sensitivity at L-band, including recent narrowband
+searches of interstellar objects; LOFAR and the pathfinder NenuFAR have pushed
+technosignature searches down to 10--190\,MHz, with LOFAR alone having surveyed
+over 1.6 million stars in commensal mode and dual-site LOFAR configurations
+enabling near-real-time RFI rejection \citep{LOFARdualsite2023}; the Sardinia
+Radio Telescope has conducted one of the first dedicated high-frequency
+($>$\,18\,GHz) surveys of nearby stars and the Galactic Centre
+\citep{SRT2025}; and commensal technosignature back-ends are now operating or in
+development at the Karl G.\ Jansky Very Large Array \citep[the COSMIC
+system;][]{Tremblay2024}, MeerKAT \citep{Czech2021}, and the Murchison Widefield
+Array \citep{Morrison2023}. Occultation-based strategies -- observing a star
+during a planet-planet or planet-star occultation, when geometric alignment
+transiently favours detection of leakage or deliberate signals -- have also grown
+in popularity, exemplified by recent Breakthrough Listen searches of TESS-selected
+eclipsing systems \citep{TESSeclipsing2025}.
+
+\subsection{Millimetre and submillimetre technosignature searches}
+\label{sec:mmsubmm}
+
+In stark contrast to the radio regime below $\sim$\,10\,GHz, the millimetre and
+submillimetre bands remain almost entirely unexplored for technosignatures.
+\citet{Mason2024} conducted, to our knowledge, the first technosignature search
+ever performed with ALMA, searching archival Band\,3 data (spectral windows
+centred at 90.642 and 93.151\,GHz) for narrowband signals towards 28 Galactic
+stars selected from Gaia~DR3. Their approach used a ``stellar bycatch'' method:
+rather than targeting stars directly, they searched for serendipitous stars
+falling within the undistorted field of view of four bright ALMA phase
+calibrators, since these calibrators are observed frequently and are not
+generally themselves of astrophysical interest. For the nearest star in their
+sample they placed a limit of EIRP$_{\rm min} > 7\times10^{17}$\,W, and discussed
+in detail the specific challenges of high-frequency technosignature work:
+substantially larger Doppler drift rates at fixed line-of-sight acceleration
+(since drift rate scales linearly with observing frequency), the resulting
+sensitivity loss (``smearing'') for a fixed spectral and temporal resolution
+unless a drift-rate search is performed, and an increased incidence of spectral
+confusion from the dense molecular line forest present in protoplanetary discs
+and star-forming regions at these frequencies. \citet{ATATRAPPIST2024} extended
+technosignature work on the TRAPPIST-1 system to the Allen Telescope Array,
+underlining the continued observational interest in this particular target but
+also its status as one of very few systems that has now been searched for
+technosignatures across a wide range of frequencies. Our own earlier work (White
+\& Dey, in prep.; archived at
+\url{https://github.com/Tilanthi/SETI}) reproduced and extended the
+\citet{Mason2024} methodology directly on ALMA science-target (rather than
+calibrator-bycatch) fields for TRAPPIST-1 across Bands 3, 6 and 7, finding no
+detection and placing limits of EIRP$_{\rm min}\sim5$--$10\times10^{13}$\,W, and
+subsequently built a ranked target list and pilot survey of 100 nearby,
+ALMA-observed stars, from which the present, volume-limited survey has grown.
+Beyond these efforts, we are not aware of any other published, systematic
+technosignature search using ALMA or any comparably sensitive
+millimetre/submillimetre interferometer, representing a substantial and readily
+addressable gap in frequency coverage relative to the sub-10\,GHz literature.
+
+The near-complete absence of mm/submm technosignature work to date is
+attributable less to any fundamental unsuitability of these frequencies -- Sheikh's
+``nine axes of merit'' framework \citep{Sheikh2020} notes that higher frequencies
+suffer less from interstellar scintillation and dispersion, and offer access to
+much larger instantaneous bandwidths -- than to historical circumstance:
+sensitive mm/submm interferometers with the necessary spectral resolution and
+archival depth (chiefly ALMA) have only existed, and only accumulated a
+sufficiently large calibrated science archive, within roughly the last decade.
+This makes archival reprocessing, rather than dedicated proposal-driven
+observing, a particularly natural strategy in this regime: ALMA's archive already
+contains many thousands of hours of high-spectral-resolution observations of
+individual, nearby stars, taken for entirely unrelated astrophysical purposes
+(disc structure, molecular chemistry, stellar activity, debris-disc detection,
+calibration monitoring), each of which can in principle be re-searched for
+technosignatures at negligible additional observing cost.
+
+\subsection{Machine learning and anomaly detection in technosignature searches}
+\label{sec:ml}
+
+The scale of modern technosignature datasets -- hundreds of hours of
+high-time- and frequency-resolution data per survey, often containing many
+thousands of candidate ``hits'' dominated by anthropogenic RFI -- has made
+machine learning an increasingly central tool for both signal detection and RFI
+rejection. \citet{Ma2023} presented the first large-scale deep-learning
+technosignature search, applying a $\beta$-convolutional variational autoencoder
+to 480 hours of Breakthrough Listen GBT data on 820 nearby stars in a
+semi-unsupervised anomaly-detection mode, recovering candidate signals missed by
+the standard \textsc{turboSETI} narrowband drift-search pipeline
+\citep{Enriquez2019} and reducing the number of signals requiring human vetting by
+roughly two orders of magnitude, while returning eight signals of interest for
+re-observation. Building on this, \citet{Choza2024} identified and corrected a
+long-standing sensitivity mischaracterisation in \textsc{turboSETI}'s
+signal-to-noise calibration, prompting a retrospective correction of quoted
+sensitivities in several earlier Breakthrough Listen publications
+\citep{GBTarchiveML2025}. More recently, unsupervised clustering methods (e.g.\
+the ``GLOBULAR'' algorithm) have been developed specifically to separate genuine
+anomalies from RFI in narrowband technosignature searches without requiring
+labelled training examples \citep{GLOBULAR2025}, and further anomaly-detection
+searches have been applied to combined Parkes and GBT Breakthrough Listen archives
+\citep{AnomalyParkesGBT2025}. These efforts collectively demonstrate that
+machine-learning-based anomaly detection can recover classes of signal
+(broadband, non-linearly drifting, or otherwise morphologically unusual) that
+narrowband, linear-drift matched-filter searches such as \textsc{turboSETI} are,
+by design, insensitive to \citep{BRaTs2026}, and that a purely classical,
+threshold-based search -- of the kind we adopt for the present survey, following
+\citet{Mason2024} -- necessarily leaves some fraction of the true technosignature
+parameter space unexamined. We return to this point in \S\ref{sec:discussion} as
+a natural direction for follow-up work once the present survey's baseline dataset
+exists.
+
+\subsection{Statistical frameworks for interpreting non-detections}
+\label{sec:stats}
+
+A non-detection is not, by itself, a null result: it must be translated into a
+quantitative statement about which regions of transmitter parameter space have
+been excluded, and with what confidence. \citet{Wright2018} formalised this with
+the ``Cosmic Haystack'' framework, modelling the technosignature search space as
+an eight-dimensional volume (spanning, e.g., transmitter frequency, bandwidth,
+location, distance, and duty cycle) and showing that even the combined efforts of
+every major SETI programme conducted up to 2018 sampled a small fraction
+of any astrophysically plausible haystack volume -- a result frequently
+paraphrased as showing that humanity has searched ``the equivalent of a large
+hot tub's worth of the Earth's oceans''. \citet{Sheikh2020} subsequently proposed
+a complementary ``nine axes of merit'' rubric for comparing the relative
+scientific value of different technosignature search strategies (spanning axes
+such as detectability, transmitter cost and information content), providing a
+qualitative framework alongside Wright et al.'s quantitative one.
+\citet{Margot2023} developed an explicit formalism for converting a survey's
+non-detection rate into an upper bound on the fraction of stars in the search
+volume hosting a detectable transmitter, but noted explicitly that this
+inference is only valid if the observed sample is statistically representative
+of the underlying stellar population of the search volume -- a requirement that
+most targeted, interest-selected samples (including our own earlier 100-star
+pilot list) do not, by design, satisfy. Most recently, \citet{EarthDetectingEarth2025}
+inverted the usual question, asking at what distance Earth's own technosignatures
+would themselves be detectable by an ALMA- or SKA-like observatory, providing a
+valuable calibration point (an ``ichnoscale'' of unity) against which the
+sensitivity of any given survey, including the present one, can be benchmarked.
+
+\subsection{The case for a volume-limited, representative sample}
+\label{sec:volumelimited}
+
+The great majority of the surveys reviewed above -- including our own earlier
+100-star ALMA pilot programme -- select targets by some combination of proximity,
+Sun-like spectral type, known exoplanets, protoplanetary-disc or debris-disc
+detection, or membership of specially-constructed target lists such as the Earth
+Transit Zone. Such selections are entirely reasonable when the goal is to
+maximise the a priori probability of detecting a genuine technosignature per
+unit observing time, but they carry an unavoidable cost: they make it difficult
+to convert a survey's results into a statistically clean statement about the
+prevalence of technosignatures in the general stellar population, precisely
+because the sample is not representative of that population
+\citep{Margot2023}. A disc-hosting or exoplanet-hosting bias is particularly
+worth flagging in the ALMA context: ALMA-detectable circumstellar and
+protoplanetary discs are, almost without exception, orders of magnitude brighter
+than the present-day Solar System's own zodiacal dust cloud would appear at
+interstellar distances, so that samples selected \emph{because} they have an
+ALMA-detected disc are biased towards young, dynamically active systems that are
+not necessarily more (and could plausibly be less) likely to host a mature,
+Earth-like technological civilisation than an old, quiescent, disc-poor star of
+the same spectral type.
+
+The present survey is explicitly designed to avoid this selection effect. We
+construct our sample by identifying every star within 20\,pc of the Sun that
+happens to fall within the field of view of at least one public ALMA
+observation -- irrespective of whether that observation was proposed to study a
+disc, a stellar flare, an unrelated background source, or anything else -- and
+irrespective of the target star's own spectral type, age, multiplicity, or known
+planet-hosting status. The star need not be at the pointing centre of the
+observation, provided it lies within the usable primary-beam field of view (see
+\S\ref{sec:sample}). This is, in effect, a volume-limited ``bycatch'' census of
+the ALMA archive: rather than sampling stars selected for astrophysical interest
+in the calibrator fields as in \citet{Mason2024}, we sample every nearby star
+that ALMA happens to have observed for any purpose whatsoever, within a fixed
+physical volume. We recognise, and quantify explicitly in \S\ref{sec:sample}
+(finding that our 120-star sample represents only $\sim$5\% of the known
+stellar population within 20\,pc), that this approach is still subject to
+a residual, second-order selection effect -- ALMA archival coverage of the
+immediate solar neighbourhood is itself not spatially uniform, since some
+regions and spectral types are more likely to have been proposed for ALMA
+time than others -- but this bias operates on the presence of \emph{any}
+ALMA coverage of a star, not on the astrophysical properties that are the
+actual subject of a technosignature search, and can therefore be
+characterised and reported as a well-defined completeness function of the
+20\,pc volume, rather than an implicit and unquantified bias in the target
+selection itself.
+
+\subsection{Prospects for next-generation facilities}
+\label{sec:future}
+
+The coming decade will see a substantial expansion of technosignature search
+capability. The Square Kilometre Array \citep[SKA;][]{SKA2015,SKA2026review},
+now under construction in Australia (SKA-Low) and South Africa (SKA-Mid), will
+combine wide instantaneous bandwidth, high angular resolution, and an
+architecture well suited to commensal, multi-beam technosignature searching,
+with projected sensitivity sufficient to detect Earth-analogue-level radar and
+communication leakage from significantly greater distances than is possible
+today. The next-generation Very Large Array \citep[ngVLA;][]{ngVLASETI2022} is
+specifically being designed with technosignature science as one of its
+commensal use cases, with proposed antenna configurations optimised to allow of
+order 64 simultaneous high-spectral-resolution commensal beams. Existing
+commensal systems at MeerKAT, the VLA (COSMIC), and the Murchison Widefield
+Array are already providing a preview of the observing modes these larger
+facilities will employ at scale. None of these facilities, however, offer ALMA's
+combination of angular resolution, spectral resolution and raw collecting area
+above $\sim$\,50\,GHz in the near term, so a systematic mm/submm technosignature
+census -- of the kind begun here -- is likely to remain a uniquely ALMA-enabled
+measurement for some years yet, and represents a natural complement to the
+lower-frequency, larger-sample surveys that will be enabled by SKA and ngVLA.
+
+\section{Sample selection}
+\label{sec:sample}
+
+Our sample comprises every star within 20\,pc of the Sun (based on Gaia~DR3
+parallaxes) with at least one public ALMA observation, of any band, science
+category, or proposal type, in which the star's true (proper-motion-corrected)
+position at the epoch of observation falls within the field of view of at least
+one execution block -- not necessarily at the observation's pointing centre,
+since a substantial fraction of ALMA mosaics and wide single-pointing
+observations serendipitously cover more than one catalogued star. We deliberately
+do not weight target selection by the presence of a circumstellar disc, known
+exoplanets, spectral type, or any other astrophysical property beyond distance
+and archival data availability; disc presence and planet-hosting status are
+retained purely as descriptive metadata for the final sample, not as
+selection or ranking criteria. At the time of writing this identifies 120 unique
+target stars, spanning spectral types from early A (e.g.\ Sirius~B, $\alpha$~CMa~B)
+through to the latest, faintest M~dwarfs (e.g.\ Proxima Centauri, TRAPPIST-1,
+Barnard's Star, Teegarden's Star), ranked by increasing distance from the Sun so
+that the nearest, most sensitively-constrained systems are processed first. The
+underlying pipeline is built to extend this volume-limited approach to 30, 40 or
+50\,pc as a natural next step, at the cost of a rapidly increasing target list
+and a correspondingly reduced fraction with existing ALMA coverage, since the
+archive's areal completeness at fixed exposure declines with distance.
+
+It is important to be explicit about what ``volume-limited'' does and does
+not mean here: our 120 targets are every star within 20\,pc with public
+ALMA coverage, \emph{not} a complete census of every known star within
+20\,pc. Cross-matching against our own reference Gaia~DR3 catalogue of
+the solar neighbourhood, 2357 individual stars are catalogued within
+20\,pc, of which our 120 targets represent only $\sim$5\%
+(Figure~\ref{fig:sample}). The sample is volume-limited, and unbiased
+with respect to spectral type, disc-hosting status, and planet-host
+status, \emph{within the population that ALMA happens to have observed
+for any purpose}; it is not, and does not claim to be, an unbiased sample
+of the local stellar population as a whole, since the decision to propose
+ALMA time towards a given nearby star is itself not uniformly
+distributed across spectral type or other stellar properties. We regard
+this as a genuine, quantifiable limitation of an archival-mining
+approach, worth stating plainly rather than allowing the term
+``volume-limited'' to be read as ``complete''.
+
+\section{Data and methodology}
+\label{sec:method}
+
+For each target we mine the public ALMA science archive for all calibrated (or,
+where necessary, locally recalibrated from raw data) execution blocks covering
+the star's position, apply an efficiency-bounded download and processing budget
+per target to remain within the resource constraints of the shared compute
+facility used for this work, and search the resulting visibility data in two
+complementary ways: (i) a narrowband, Doppler-drift-corrected search for
+technosignature candidates, following the general methodology of
+\citet{Mason2024} and \citet{Enriquez2017}, converting any non-detection into an
+equivalent isotropic radiated power (EIRP) limit via
+$\mathrm{EIRP_{min}} = 4\pi d^{2} S_{\rm min} \Delta\nu$; and (ii) a
+line-excluded continuum search for anomalous broad-band emission at the star's
+position, with an accompanying epoch-to-epoch variability check wherever
+multiple execution blocks exist. Stellar positions are propagated to the epoch
+of each observation using Gaia~DR3 proper motions and parallaxes. The
+Doppler-drift search range applied to each target is set to the larger of (a) a
+generic frequency-scaled default following \citet{Mason2024}'s adoption of a
+literature fiducial with a threefold safety margin, and (b) where the target
+hosts one or more confirmed exoplanets, an explicit calculation of the maximum
+line-of-sight orbital acceleration (and hence maximum plausible transmitter
+drift rate) of the innermost known planet, so that a transmitter co-located with
+a known, short-period planet cannot be missed simply because its orbital motion
+drifts it out of an insufficiently wide search window.
+
+\subsection{Closure-phase point-source vetting}
+\label{sec:closurephase}
+
+Any narrowband signal that crosses our detection threshold at the star's
+position is subjected to a further, automated test that is, to our
+knowledge, unavailable to any single-dish or phased-array-beamformed
+technosignature survey (Breakthrough Listen, FAST, the ATA, LOFAR, and
+similar all lack it, since it requires multiple independent baselines):
+the interferometric closure phase, the phase sum
+$\arg(V_{ij}) + \arg(V_{jk}) - \arg(V_{ik})$ around a closed triangle of
+baselines $i$-$j$-$k$. This quantity is a standard radio-interferometric
+identity that is theoretically \emph{exactly zero} for an unresolved
+point source at \emph{any} sky position -- a point source's visibility
+phase is a pure linear function of $(u,v)$, which cancels identically
+around any closed baseline loop -- and is, by construction, immune to
+per-station calibration errors. A candidate signal whose closure phase is
+statistically inconsistent with zero at the drift-tracked frequency of
+the hit is therefore evidence against it behaving as a genuine celestial
+point source, favouring instead a near-field, terrestrial, or
+instrumental origin. This test is independent of, and complementary to,
+the existing spatial-coincidence test (whether the on-source position
+shows a larger peak than the control positions): closure phase does not
+depend on where the source is, so it answers a different question --
+``does this behave like a coherent point source at all'' -- than the
+spatial test's ``is it located at the star''. We validated the closure-
+phase calculation against synthetic visibility data before applying it to
+any ALMA measurement, confirming zero closure phase for a noiseless
+simulated point source, statistical consistency with zero for a noisy
+simulated point source, and a large, clearly inconsistent scatter for a
+simulated non-point-source (RFI-like) signal. Because it is only
+triggered on an actual threshold-crossing candidate, this test adds
+negligible computational cost to the survey as a whole.
+
+\subsection{Population-level, spectral-type-normalised continuum anomaly check}
+\label{sec:popanomaly}
+
+Because our sample is volume-limited and not selected on disc-hosting or
+planet-host status, it supports a comparison that is not meaningful for
+the biased target lists used in essentially every prior technosignature
+survey: whether a star's measured continuum brightness is anomalous
+relative to the physically-expected flux of its own stellar photosphere,
+and relative to other stars of similar effective temperature already
+processed within the same survey. For each target we compute the
+expected photospheric flux density from the Planck function and the
+star's own solid angle,
+$S_\nu = \Omega \times 2h\nu^3/c^2 \times \left[\exp(h\nu/k_BT_{\rm eff}) - 1\right]^{-1}$
+with $\Omega = \pi R_\star^2/d^2$, using Gaia DR3 photometric
+temperatures and, where available, Gaia GSP-Phot radii (supplemented by a
+coarse Pecaut \& Mamajek main-sequence $T_{\rm eff}$--radius relation
+where a direct Gaia radius estimate is unavailable, as is the case for
+close to half of our sample -- Gaia's astrophysical-parameter pipeline
+has known gaps for the very bright/nearby and very red/faint stars that
+a 20\,pc sample is disproportionately composed of). Any large excess of
+the measured continuum flux (or, for a non-detection, its $5\sigma$ upper
+limit) above this photospheric baseline is flagged, and is additionally
+compared against the distribution of excess ratios already measured for
+other stars in the same coarse $T_{\rm eff}$ bin, once at least five such
+comparison stars exist, using a robust (median/MAD-based) outlier
+statistic. This check requires no additional raw-data retention beyond
+what the continuum measurement itself already produces, and updates
+incrementally as the survey proceeds.
+
+\section{Results}
+\label{sec:results}
+
+As of this version of the paper, 19 of the planned 120 target/bands have
+been searched to completion (a further 2 completed their continuum
+measurement but not the narrowband search, owing to a data-quality
+failure in those specific execution blocks; both are flagged for an
+automatic, non-gating retry). The survey is strictly volume-ordered
+(nearest star first; \S\ref{sec:sample}), so the results reported here
+are weighted towards the very nearest stars in the sample, spanning
+1.3--19.6\,pc at the time of writing. Full per-target values, including
+the exact frequency range searched in each band, are given in
+Table~\ref{tab:full} in Appendix~\ref{app:table} rather than in the main
+text; this section summarises the results and highlights points of
+interest.
+
+\subsection{Technosignature search}
+
+Seventeen execution blocks yielded a narrowband search result (two
+further targets, Barnard's Star and Wolf~359, had their continuum
+measurement succeed but their narrowband search fail outright, and carry
+no EIRP limit at this time). The resulting EIRP$_{\rm min}$ limits span
+$1.6\times10^{13}$--$2.8\times10^{15}$\,W, with a median of
+$2.1\times10^{14}$\,W (Figure~\ref{fig:eirp}, left panel); as expected
+for a volume-ordered survey, the deepest limits are for the very nearest
+systems (e.g.\ $1.7\times10^{13}$\,W for the UV~Ceti binary at $\sim$2.7\,pc).
+One narrowband hit was automatically flagged by the pipeline as a
+``credible technosignature candidate'' (on-source peak signal-to-noise
+ratio above threshold and localised to the star's position, rather than
+appearing equally in the control positions): a signal towards $\beta$~Pictoris
+in ALMA Band~3 at 115.26\,GHz. This frequency coincides, to within the
+spectral resolution of the observation, with the rest frequency of the
+CO($J=1\to0$) rotational transition (115.271\,GHz), and $\beta$~Pictoris
+is a well-known debris-disc system with previously reported CO emission;
+we therefore attribute this hit to line contamination rather than a
+genuine technosignature. No other candidate has survived both the
+spatial-coincidence and (where triggered) closure-phase vetting tests
+described in \S\ref{sec:closurephase}; in practice, the closure-phase test
+has not yet been exercised against a real ALMA measurement, since no
+other candidate has crossed the initial detection threshold to trigger it.
+
+\subsection{Continuum search}
+
+Of the 19 target/bands with a continuum measurement, five show a
+$\geq5\sigma$ continuum detection and fourteen are non-detections
+(Figure~\ref{fig:eirp}, right panel). The non-detections reach 5$\sigma$
+upper limits of 0.19--3.6\,mJy (median 0.59\,mJy). Two of the five
+detections -- catalogued separately in our target list as G~272-61A and
+G~272-61B -- are in fact the two components of the well-known, closely
+separated visual binary UV~Ceti, observed within a single ALMA pointing;
+the reported flux (0.85\,mJy) is for the spatially unresolved, blended
+pair and cannot be attributed to either component individually. The
+remaining three detections ($\tau$~Ceti, and $\beta$~Pictoris in both
+Bands 3 and 6) are consistent with previously known circumstellar/debris
+material or stellar activity in these well-studied systems and are not
+treated as anomalous. The population-level anomaly check described in
+\S\ref{sec:popanomaly} has been applied to every target processed to
+date but has not yet flagged any star, and in most $T_{\rm eff}$ bins the
+survey does not yet have the minimum of five comparison stars needed for
+the population-relative component of the test; both the physical-baseline
+and population-relative statistics will accumulate statistical power as
+the survey proceeds.
+
+\begin{figure*}
+\centering
+\includegraphics[width=0.95\textwidth]{figures/eirp_continuum_vs_distance.pdf}
+\caption{Technosignature EIRP upper limits (left) and continuum flux
+densities (right; downward triangles are $5\sigma$ upper limits, filled
+circles are detections) as a function of distance, for the 19
+target/bands searched to date. The single automatically-flagged
+candidate ($\beta$~Pictoris, Band 3) is marked with a star and is
+identified in the text as CO(1--0) line contamination rather than a
+technosignature.}
+\label{fig:eirp}
+\end{figure*}
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{figures/sample_distance_distribution.pdf}
+\caption{Cumulative number of stars, $N(<d)$, within 20\,pc as a function
+of distance $d$. The grey curve is the full known stellar population
+within 20\,pc from our reference Gaia~DR3 catalogue (2357 stars); the
+blue curve is our 120-star volume-limited sample -- every one of those
+2357 stars that additionally has public ALMA archival coverage, only
+$\sim$5\% of the total. The two curves are not expected to track one
+another: ALMA proposal pressure on the immediate solar neighbourhood is
+itself not spectral-type- or distance-uniform, so our sample is
+volume-limited and unbiased \emph{within} the ALMA-observed population,
+but is not a complete or unbiased sample of the local stellar population
+as a whole (see \S\ref{sec:sample}).}
+\label{fig:sample}
+\end{figure}
+
+\section{Discussion}
+\label{sec:discussion}
+
+The results presented here are necessarily preliminary: only 19 of 120
+planned target/bands (16\%) have been completed, and the survey is
+ordered to complete the nearest, most sensitively-constrained systems
+first, so the eventual full sample will extend these results to
+significantly larger distances and, correspondingly, shallower EIRP and
+continuum limits at the faint end. No credible technosignature has been
+found among the systems searched so far; the one automatically-flagged
+candidate is confidently attributable to CO(1--0) line emission rather
+than an artificial signal, underlining the importance -- already
+highlighted by \citet{Mason2024} -- of checking any millimetre-band
+narrowband hit against known molecular transitions before treating it as
+a candidate. Applying the statistical frameworks of \citet{Wright2018}
+and \citet{Margot2023} to derive a quantitative bound on the prevalence
+of detectable transmitters in the solar neighbourhood is deferred to a
+future version of this paper, once a statistically meaningful fraction
+of the volume-limited sample has been completed; with only 19 systems
+searched to date such a bound would not yet be usefully constraining.
+
+The two supplementary analyses introduced in this work
+(\S\ref{sec:closurephase}, \S\ref{sec:popanomaly}) are best understood as
+infrastructure investments rather than sources of results in their own
+right at this early stage. The closure-phase test has not yet been
+exercised against real data, simply because no candidate other than the
+already-explained $\beta$~Pictoris CO line has crossed threshold; it
+remains available, at negligible ongoing cost, for any future hit. The
+population-level anomaly check is accumulating the population of
+same-$T_{\rm eff}$-bin comparison stars it needs to become statistically
+powerful, and we expect it to become genuinely diagnostic only once
+several dozen targets per broad spectral-type bin have been processed.
+We regard both as a useful methodological contribution independent of
+whether they ultimately flag anything in this particular sample: to our
+knowledge, neither has previously been applied in a technosignature
+search, and both are made possible specifically by properties of this
+survey (interferometric data; a volume-limited, unbiased sample) that do
+not hold for the great majority of prior technosignature work reviewed in
+\S\ref{sec:background}.
+
+The UV~Ceti unresolved-pair case (\S\ref{sec:results}) illustrates a
+general caveat for any archival, position-agnostic survey of this kind:
+close visual binaries and multiple systems that are unresolved at the
+relevant ALMA angular resolution will necessarily share a single
+measurement, and any future statistical analysis of this sample's
+completeness must account for this rather than double-counting such
+pairs as independent trials.
+
+\section{Conclusions}
+\label{sec:conclusions}
+
+We have described the design, methodology, and first results of a
+volume-limited technosignature search of all 120 stars within 20\,pc
+with public ALMA archival coverage, irrespective of disc-hosting or
+planet-host status. Nineteen of the planned 120 target/bands have been
+completed as of this version, yielding EIRP limits of
+$1.6\times10^{13}$--$2.8\times10^{15}$\,W and fourteen continuum
+non-detections reaching a median $5\sigma$ limit of 0.59\,mJy, with no
+credible technosignature identified. We have introduced two analyses
+-- interferometric closure-phase vetting and a population-level,
+spectral-type-normalised continuum anomaly check -- that exploit
+properties unique to this survey and are, to our knowledge, new to the
+technosignature literature; both are now running as a standard part of
+the pipeline and will accumulate statistical power as the survey
+proceeds. This paper will be updated as further targets are completed,
+and we anticipate extending the volume limit to 30, 40, and 50\,pc as a
+natural next step once the 20\,pc sample is complete.
+
+\section*{Acknowledgements}
+This paper makes use of the following ALMA data: [the full list of ALMA
+project codes used will be compiled once the survey is complete; see
+Table~\ref{tab:full} in Appendix~\ref{app:table} for the individual
+execution blocks searched to date]. ALMA is a partnership of ESO
+(representing its member states), NSF (USA) and NINS (Japan), together with NRC
+(Canada), MOST and ASIAA (Taiwan), and KASI (Republic of Korea), in cooperation
+with the Republic of Chile. The Joint ALMA Observatory is operated by ESO,
+AUI/NRAO and NAOJ. This work has made use of data from the European Space
+Agency (ESA) mission {\it Gaia}, processed by the {\it Gaia} Data Processing and
+Analysis Consortium (DPAC).
+
+\section*{Data Availability}
+The reduced data products underlying this paper, together with the full
+target-selection and analysis pipeline, are being made available at
+\url{https://github.com/Tilanthi/SETI} as the survey progresses. Raw ALMA
+visibility data are publicly available from the ALMA Science Archive at
+\url{https://almascience.org}.
+
+
+\appendix
+\section{Full per-target results table}
+\label{app:table}
+
+Table~\ref{tab:full} lists the full per-target/band results underlying the
+summary given in Section~\ref{sec:results}: the narrowband technosignature
+frequency range actually searched (not the full ALMA tuning -- only the
+single finest-resolution spectral window is searched, per
+\S\ref{sec:method}), the resulting EIRP$_{\rm min}$ limit, whether the
+automated pipeline flagged a credible candidate, and the continuum flux
+density (or, for non-detections, the $5\sigma$ upper limit, marked UL).
+This table will grow as the survey proceeds; the version current at the
+time of writing is reproduced here so that the summary statistics quoted
+in the main text are fully traceable.
+
+\begin{table*}
+\centering
+\footnotesize
+\caption{Per-target/band results, ordered by distance. Frequency range is
+in GHz; EIRP$_{\rm min}$ is in W. ``Cand.'' indicates whether the
+automated pipeline flagged the narrowband search as a credible
+technosignature candidate (Y/N); see \S\ref{sec:results} for the
+disposition of the one Y in this table.}
+\label{tab:full}
+\begin{tabularx}{\textwidth}{@{}l c c c c c c X@{}}
+\hline
+Target & Band & Dist.\ (pc) & Freq.\ range (GHz) & EIRP$_{\rm min}$ (W) & Cand.\ & Continuum (mJy) & Notes \\
+\hline
+Proxima Cen & B6 & 1.30 & 223.09--224.91 & 3.43e+13 & N & 0.666 (UL) &  \\
+NAME Barnard's star & B7 & 1.83 & \ldots & \ldots & \ldots & 3.622 (UL) & narrowband search failed \\
+Wolf  359 & B7 & 2.41 & \ldots & \ldots & \ldots & 3.380 (UL) & narrowband search failed \\
+Sirius B & B3 & 2.67 & 92.13--93.86 & 2.56e+13 & N & 0.189 (UL) &  \\
+Sirius B & B4 & 2.67 & 142.13--143.86 & 2.31e+13 & N & 0.247 (UL) &  \\
+Sirius B & B5 & 2.67 & 195.13--196.86 & 3.48e+13 & N & 0.455 (UL) &  \\
+G 272-61B & B3 & 2.67 & 89.63--91.36 & 1.65e+13 & N & 0.850 (det.) & unresolved UV Cet AB pair, blended flux \\
+G 272-61A & B3 & 2.72 & 89.63--91.36 & 1.71e+13 & N & 0.850 (det.) & unresolved UV Cet AB pair, blended flux \\
+CD-23 14742 & B6 & 2.98 & 223.09--224.91 & 1.20e+14 & N & 0.388 (UL) &  \\
+tau Cet &  & 3.65 & 229.63--231.47 & 3.79e+13 & N & 0.863 (det.) &  \\
+GJ 674 & B6 & 4.55 & 223.09--224.91 & 2.74e+14 & N & 0.516 (UL) &  \\
+GJ 581 &  & 6.30 & 223.09--224.91 & 6.35e+14 & N & 0.451 (UL) &  \\
+GJ 849 &  & 8.81 & 229.08--230.92 & 8.30e+14 & N & 0.712 (UL) &  \\
+HD 285968 &  & 9.49 & 229.04--230.88 & 3.45e+14 & N & 0.700 (UL) &  \\
+HD 23484 & B6 & 16.17 & 229.61--231.45 & 1.70e+15 & N & 0.497 (UL) &  \\
+HD 10647 & B7 & 17.35 & 330.35--332.19 & 1.97e+15 & N & 2.020 (UL) &  \\
+HD 53143 &  & 18.34 & 229.60--231.44 & 2.84e+15 & N & 0.877 (UL) &  \\
+bet Pic & B3 & 19.63 & 114.83--115.69 & 2.08e+14 & Y & 0.444 (det.) & CO(1-0) line, see text \\
+bet Pic & B6 & 19.63 & 230.08--231.00 & 2.01e+15 & N & 5.659 (det.) &  \\
+\hline
+\end{tabularx}
+\end{table*}
+
+\begin{thebibliography}{99}
+
+\bibitem[Backus \& Project Phoenix Team(2002)]{Backus2002} Backus P.~R., Project Phoenix Team, 2002, in Bulletin of the American Astronomical Society. p.\ 1173
+
+\bibitem[Choza et al.(2024)]{Choza2024} Choza C., et al., 2024, AJ, 168, 254
+
+\bibitem[Cocconi \& Morrison(1959)]{CocconiMorrison1959} Cocconi G., Morrison P., 1959, Nature, 184, 844
+
+\bibitem[Czech et al.(2021)]{Czech2021} Czech D., et al., 2021, PASP, 133, 064502
+
+\bibitem[Czech et al.(2026)]{BLMeerKAT2026} Czech D.~J., et al., 2026, arXiv:2607.23651
+
+\bibitem[Drake(1960)]{Drake1960} Drake F.~D., 1960, Physics Today, 13, 40
+
+\bibitem[Drake(1974)]{Drake1974} Drake F.~D., 1974, in Sagan C., ed., Communication with Extraterrestrial Intelligence (CETI). MIT Press
+
+\bibitem[Drake(1986)]{Drake1986} Drake F.~D., 1986, in Applications of Digital Image Processing IX. SPIE
+
+\bibitem[Enriquez \& Price(2019)]{Enriquez2019} Enriquez E., Price D., 2019, turboSETI, Astrophysics Source Code Library, record ascl:1906.006
+
+\bibitem[Enriquez et al.(2017)]{Enriquez2017} Enriquez J.~E., et al., 2017, ApJ, 849, 104
+
+\bibitem[Gajjar et al.(2019)]{Gajjar2019EarthTransitZone} Gajjar V., et al., 2019, in Bulletin of the American Astronomical Society. AAS Meeting \#233
+
+\bibitem[Garrett et al.(2026)]{BRaTs2026} Garrett M.~A., et al., 2026, MNRAS, accepted (arXiv:2605.10212)
+
+\bibitem[Isaacson et al.(2017)]{BLoverview} Isaacson H., et al., 2017, PASP, 129, 054501
+
+\bibitem[Jacobson-Bell et al.(2025)]{GLOBULAR2025} Jacobson-Bell K., et al., 2025, AJ, 169, 233
+
+\bibitem[Johnson et al.(2023)]{LOFARdualsite2023} Johnson O.~A., et al., 2023, AJ, 166, 193
+
+\bibitem[Lacki et al.(2021)]{GBTarchiveML2025} Lacki B.~C., et al., 2021, arXiv:2101.02244
+
+\bibitem[Li et al.(2026)]{FAST3IATLAS2025} Li J.-K., Tao Z.-Z., Zhang T.-J., 2026, arXiv:2603.19023
+
+\bibitem[Ma et al.(2023)]{Ma2023} Ma P.~X., et al., 2023, Nature Astronomy, 7, 492
+
+\bibitem[Margot et al.(2023)]{Margot2023} Margot J.-L., et al., 2023, AJ, 166, 189
+
+\bibitem[Mason et al.(2024)]{Mason2024} Mason L.~A., Garrett M.~A., Wandia K., Siemion A.~P.~V., 2024, MNRAS, 536, 2127
+
+\bibitem[Morrison et al.(2023)]{Morrison2023} Morrison I.~S., et al., 2023, PASA, 40, e038
+
+\bibitem[Ng et al.(2022)]{ngVLASETI2022} Ng C., et al., 2022, AJ, 164, 205
+
+\bibitem[Poznanski et al.(2025)]{AnomalyParkesGBT2025} Poznanski D., et al., 2025, AJ, in press (arXiv:2505.03927)
+
+\bibitem[Price et al.(2020)]{Price2020} Price D.~C., et al., 2020, AJ, 159, 86
+
+\bibitem[Sheikh(2020)]{Sheikh2020} Sheikh S.~Z., 2020, International Journal of Astrobiology, 19, 237
+
+\bibitem[Sheikh et al.(2025a)]{EarthDetectingEarth2025} Sheikh S.~Z., et al., 2025, AJ, 169, 108
+
+\bibitem[Sheikh et al.(2025b)]{ATAISO2025} Sheikh S.~Z., et al., 2025, arXiv:2512.18142 (``A Search for Radio Technosignatures from Interstellar Object 3I/ATLAS with the Allen Telescope Array'')
+
+\bibitem[Siemion et al.(2015)]{SKA2015} Siemion A.~P.~V., et al., 2015, arXiv:1412.4867
+
+\bibitem[Tarter(2001)]{Tarter2001} Tarter J., 2001, ARA\&A, 39, 511
+
+\bibitem[Tremblay et al.(2024)]{Tremblay2024} Tremblay C.~D., et al., 2024, PASA, 41, e004
+
+\bibitem[Tremblay et al.(2026)]{SKA2026review} Tremblay C.~D., et al., 2026, in Advancing Astrophysics with the SKA II (AASKAII), arXiv:2606.27565
+
+\bibitem[Tusay et al.(2024)]{ATATRAPPIST2024} Tusay N., Sheikh S.~Z., Sneed E.~L., Farah W., Pollak A.~W., Cruz L.~F., Siemion A., DeBoer D.~R., Wright J.~T., 2024, AJ, 168, 283
+
+\bibitem[Tusay et al.(2025)]{TESSeclipsing2025} Tusay N., et al., 2025, arXiv:2506.13459
+
+\bibitem[Valente et al.(2025)]{SRT2025} Valente G., et al., 2025, Acta Astronautica, in press
+
+\bibitem[Vidal et al.(2026)]{SETIreview2025} Vidal C., et al., 2026, arXiv:2605.21093 (``The Search for Technosignatures: a Review of Possibilities'')
+
+\bibitem[Von Korff et al.(2025)]{SETIhome2025} Von Korff J., et al., 2025, AJ, 170, 112
+
+\bibitem[Wright et al.(2018)]{Wright2018} Wright J.~T., Kanodia S., Lubar E.~G., 2018, AJ, 156, 260
+
+\bibitem[Zhang et al.(2020)]{Zhang2020} Zhang Z.-S., et al., 2020, ApJ, 891, 174
+
+\end{thebibliography}
+
+\end{document}
