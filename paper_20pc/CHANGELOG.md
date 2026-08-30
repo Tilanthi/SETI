@@ -125,7 +125,20 @@ Paper II's actual results/discussion/conclusions sections are added.
   standing versioning policy.
 - Pushed to `Tilanthi/SETI` at `paper_20pc/v2.00/`.
 
-## Planned for v2.01+
+## v2.01 (2026-08-30)
+- Glenn: Figure 2 should be a cumulative plot (total number of stars out
+  to distance $d$) rather than a binned histogram of counts per bin.
+  Regenerated from the same underlying 120-star master list as a step
+  plot of $N(<d)$ vs.\ $d$; updated the figure caption to describe the
+  cumulative curve (steepening reflects increasing shell volume at larger
+  $d$) rather than the old per-bin-count description. No other content
+  changed from v2.00.
+  Verified with the same compile-3x + zero-`??` + visual-render check as
+  every version since the v1.01 incident. 9 pages, clean, 1 negligible
+  page-break `Overfull \vbox`.
+- Pushed to `Tilanthi/SETI` at `paper_20pc/v2.01/`.
+
+## Planned for v2.02+
 - Add the full ALMA project-code list to the Acknowledgements section
   (deferred again — still meaningful to wait until survey completion so
   it's compiled once, not incrementally).
