@@ -277,7 +277,98 @@ Paper II's actual results/discussion/conclusions sections are added.
   completes, before treating the 19-target repeat pass as trustworthy.
 - Pushed to `Tilanthi/SETI` at `paper_20pc/v2.04/`.
 
-## Planned for v2.05+
+## v2.05 (2026-08-30)
+- **Abstract cut to ~1/3 length** (316 → 111 words), per direct instruction.
+- **Citation fix**: `(White & Dey, in prep.; archived at
+  https://github.com/Tilanthi/SETI)` → `\citep{White2026}` = "(White 2026)";
+  added `White G. J., 2026, MNRAS, submitted` to the bibliography.
+- Removed the parenthetical `(an "ichnoscale" of unity)` aside in §2.5.
+- **New methodology paragraph**: automated spectral-line-contamination
+  check. Added `check_known_line()` to `seti_drift_search_generic.py`,
+  cross-referencing every hit's frequency (at its best-fit drift rate)
+  against the same known-molecular-transition table already used by
+  `continuum_map_generic.py`'s line exclusion; a hit within one channel
+  width of a known line AND consistent with zero drift is now
+  automatically flagged `likely_line_contamination` and excluded from
+  `credible_technosignature_candidate` — previously this check was only
+  ever done by hand, once, for the one hit produced so far (β Pic CO(1-0)).
+- **New methodology paragraph**: confirmed and made explicit (i) the
+  drift/frequency-shift correction has no dependence on the target's
+  position relative to the phase centre (verified directly from the
+  code: the trial-drift shift grid depends only on elapsed time/channel
+  width, applied identically to every sky position); (ii) Earth's own
+  orbital-motion-induced drift (~0.02 Hz/s/GHz peak) is >100x smaller
+  than the 12 Hz/s/GHz generic search margin, so needs no separate
+  correction.
+- **Primary-beam correction — found not implemented, now added**: neither
+  the EIRP nor the continuum pipeline had ever applied a primary-beam
+  correction (`tclean(..., pbcor=False)`, and no PB term anywhere in the
+  DFT-based narrowband extraction). Added an explicit Gaussian-PB
+  correction (`1/exp(-4 ln2 (offset/FWHM)^2)`) to both
+  `seti_drift_search_generic.py` (new `S_min_measured_Jy`,
+  `primary_beam_offset_arcsec`, `primary_beam_atten`,
+  `primary_beam_corrected` fields; `S_min_Jy`/`EIRP_min_W` now
+  PB-corrected) and `continuum_map_generic.py` (new
+  `primary_beam_correction`/`primary_beam_corrected` fields; `rms`/`peak`
+  corrected before both the PNG title and JSON summary are written).
+  Quantified impact: negligible (<0.3%) for nearly all targets (offsets
+  ≲2″ against 17–70″ beams), but 3.6–16% for Sirius~B specifically
+  (7–8″ offset, high proper motion since the archival epoch) — its three
+  Table 1 rows (B3/B4/B5) recomputed by hand with the correct factor,
+  since its raw MS data has already been cleaned up and can't be cheaply
+  rerun. UV Ceti's own ~2″ offset gives a merely 0.2% (negligible)
+  correction, confirmed and left unchanged.
+- **Found and fixed a second live pipeline bug while implementing the
+  above**: `continuum_map_generic.py` had no equivalent of the
+  narrowband path's crossmatch/pointing sanity check. Caught live:
+  G~9-38A/B produced a bogus ~8 Jy "detection" (wildly inconsistent with
+  every other continuum measurement in the survey, all sub-10 mJy) from
+  a MOUS whose real pointing is ~3150″ from the star (>40x its own 70″
+  beam) — an upstream target-MOUS crossmatch error, not a real result.
+  Also caught for SCR~J1845-6357 (offset 205499″) and Wolf~358
+  (offset 65590″, a *different* star from Wolf 359, dist 6.97 pc vs
+  2.41 pc). Added the same `>2x primary beam FWHM → abort` check already
+  used by `seti_extract_generic.py`. These 4 target/bands are excluded
+  from Table 1 and all statistics in this version; flagged in §5/§6 for
+  re-investigation and reprocessing against a corrected dataset.
+- **Table 1 updated with new/corrected values**:
+  - "NAME Barnard's star" → "Barnard's Star" (the literal SIMBAD
+    identifier-type prefix had leaked into the target list/paper).
+  - Sirius B (B3/B4/B5): primary-beam-corrected EIRP/Flux/RMS (see above).
+  - GJ 581: now 4 rows (all configured spectral windows searched, no
+    candidate in any) — the first target/band with full multi-window
+    coverage under the pipeline extended in v2.04.
+  - tau Ceti: refreshed with a freshly-reprocessed measurement (same
+    correlator setup, consistent with the prior value).
+  - Two new target/bands added: **HD 33793** = Kapteyn's Star (subdwarf
+    sdM1, 3.93 pc) and **Wolf 28** = Van Maanen's Star (white dwarf DZ7,
+    4.31 pc) — both literature spectral types confirmed via WebSearch.
+  - Table caption/intro clarify EIRP$_{\rm min}$'s exact definition
+    (minimum EIRP for a 5σ detection, same threshold and PB-correction
+    as the continuum column) per direct instruction.
+  - All summary statistics in Abstract/§5/§6 recomputed for consistency:
+    21 of 120 target/bands (was 19); EIRP median 3.1e14 W (was 2.1e14,
+    driven up mainly by GJ 581's four new ~6e14 W values); continuum
+    5 detections/16 non-detections (was 5/14), median UL 0.55 mJy.
+- **Figure 1**: Earth-radio-leakage reference line removed from the EIRP
+  panel (now shown only in caption + main text) so the y-axis auto-scales
+  to the actual data range; Arecibo-radar line kept. Regenerated with all
+  19 current EIRP points (deepest-per-spw for GJ 581, per instruction)
+  and 21 continuum points.
+- Verified with the standard compile-3x + zero-`??` + visual-render
+  discipline; caught and fixed one caption self-reference bug
+  (`\S\ref{app:table}` should have been `\S\ref{sec:method}`) and one
+  factual slip (initially over-stated the negligible UV Ceti PB
+  correction as if it matched Sirius B's) before finalizing. 11 pages.
+- Live cluster validation: the new `continuum_map_generic.py` crossmatch
+  check and PB correction have been deployed and syntax/unit-tested but
+  not yet exercised end-to-end on a fresh live target at push time (the
+  fix landed after GJ_581_B6/Wolf_358_B7 had already completed under the
+  pre-fix code) — flagged honestly as an open verification item, same as
+  the analogous v2.04 gap, which *was* subsequently confirmed correct.
+- Pushed to `Tilanthi/SETI` at `paper_20pc/v2.05/`.
+
+## Planned for v2.06+
 - Add the full ALMA project-code list to the Acknowledgements section
   (deferred again — still meaningful to wait until survey completion so
   it's compiled once, not incrementally).
