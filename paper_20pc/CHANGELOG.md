@@ -168,7 +168,52 @@ Paper II's actual results/discussion/conclusions sections are added.
   discipline. 9 pages, clean, 1 negligible page-break `Overfull \vbox`.
 - Pushed to `Tilanthi/SETI` at `paper_20pc/v2.02/`.
 
-## Planned for v2.03+
+## v2.03 (2026-08-30)
+- Glenn raised three substantive, well-founded questions after reading
+  v2.02 closely:
+  1. **Spectral window coverage**: does the narrowband search cover every
+     correlator sub-band configured together, or just one? Verified
+     against real data (`calibrate_status.json` per target): ALMA
+     configures 4-24 spectral windows simultaneously per observation in
+     our sample (median 4; tau Cet's spectral-scan setup has 24), and we
+     only ever search the single finest-resolution one — meaning, on
+     average, only ~23% (range 4-25%) of the instantaneously configured
+     spectral windows are actually searched narrowband. Added an explicit
+     paragraph to §4 stating this with real numbers, and a new N$_{\rm
+     spw}$ column in the Appendix table giving the exact count per
+     target, rather than leaving it as an aggregate-only statement.
+  2. **Continuum upper limit definition**: "(UL)" wasn't quantitative
+     enough — is it 1σ, 3σ, 5σ, the raw measurement? Fixed by (a)
+     explicitly restating throughout that a UL = 5×rms (the same
+     threshold used to define a detection), (b) adding an explicit RMS
+     (mJy) column to the Appendix table so the underlying measurement is
+     given directly, not just the pre-multiplied 5σ value, letting a
+     reader rescale to any confidence level they want, (c) switching from
+     the ambiguous "X.XXX (UL)" notation to the standard astronomical
+     "$<$X.XXX" convention.
+  3. **EIRP context**: added a new §4.1 "Reference transmitter
+     benchmarks" citing two real, precisely-sourced values from
+     \citet{EarthDetectingEarth2025} — an Arecibo-like planetary radar
+     ($2\times10^{13}$ W, the most powerful deliberate transmitter humans
+     have built) and typical unintentional Earth radio leakage
+     ($\sim4\times10^{9}$ W, LTE/cellular). Both added as horizontal
+     reference lines on Figure 1's EIRP panel, with matching discussion
+     in §5.1 (Results): our deepest limits are only just competitive with
+     an Arecibo-equivalent transmitter at the very nearest handful of
+     stars, and nowhere near sensitive enough yet to detect
+     Earth-leakage-equivalent activity at any distance probed so far — an
+     honest, useful calibration of what the survey can and cannot claim.
+- Precise sourcing: fetched the actual Sheikh et al. (2025) "Earth
+  Detecting Earth" paper text rather than relying on memory for these
+  numbers — confirmed "Arecibo's characteristic EIRP at S-band is 20 TW"
+  and the 4 GW LTE-leakage figure directly from the source text before
+  citing either.
+- Verified with the standard compile-3x + zero-`??` + visual-render
+  discipline. 10 pages (grew by 1 from the new benchmarks subsection),
+  clean, 1 negligible page-break `Overfull \vbox`.
+- Pushed to `Tilanthi/SETI` at `paper_20pc/v2.03/`.
+
+## Planned for v2.04+
 - Add the full ALMA project-code list to the Acknowledgements section
   (deferred again — still meaningful to wait until survey completion so
   it's compiled once, not incrementally).
