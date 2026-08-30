@@ -213,7 +213,71 @@ Paper II's actual results/discussion/conclusions sections are added.
   clean, 1 negligible page-break `Overfull \vbox`.
 - Pushed to `Tilanthi/SETI` at `paper_20pc/v2.03/`.
 
-## Planned for v2.04+
+## v2.04 (2026-08-30)
+- **Pipeline extended to search every configured spectral window, not just
+  the finest one.** `select_finest_spw.py` rewritten to enumerate *all*
+  distinct spws per observation (deduplicated across repeated execution
+  blocks, capped at 8/target to bound compute cost), splitting each to
+  its own MS; `process_one_target.sh` now loops the extract+search steps
+  once per spw (via the pre-existing `SETI_MS`/`SETI_SFX` env-var
+  override mechanism, previously used only for injection tests);
+  `seti_drift_search_generic.py`'s closure-phase-vetting MS path fixed to
+  respect the `SETI_MS` override (was hardcoded, would have silently
+  vetted against the wrong MS once multi-spw naming took effect).
+  `SETI_SEARCH_FAILED` now only fires if *all* spws for a target fail,
+  not just the first.
+- **19 already-completed targets identified as needing full
+  reprocessing** (not cheap re-analysis) since their raw per-spw MS data
+  had already been cleaned up under the project's disk-discipline policy
+  before the multi-spw extension existed. Confirmed with Glenn
+  ("Yes, they should be requeued") and requeued: DONE/failure markers
+  cleared for all 19, `driver_summary_master20pc.json` trimmed
+  accordingly, and a `chain_multispw_repeat.sh` wrapper launched that
+  waits for the main 120-target driver to finish before automatically
+  re-running the multi-spw pipeline against just those 19.
+- **Table 1 (Appendix) restructured** per direct instruction:
+  - Added a **Spectral Type** column immediately after Dist. (pc),
+    sourced from Gaia GSP-Phot-derived Teff/radius where available and a
+    literature-value override (`LITERATURE_SPTYPE`) for five well-known
+    stars lacking Gaia atmospheric parameters (Wolf 359, Sirius B, and
+    the UV Ceti AB pair), each individually WebSearch-verified against a
+    named literature source.
+  - **Band numbers now given without the "B" prefix** (e.g. "6" not
+    "B6") to avoid visual confusion with B-type spectral classes now
+    sitting in the adjacent column; caption states this explicitly.
+    Also backfilled 5 previously-blank Band cells (tau Ceti, GJ 581,
+    GJ 849, HD 285968, HD 53143 — all inferred as Band 6 from their
+    211–275 GHz observed frequency range, consistent with the pipeline's
+    own band-edge lookup table).
+  - **"Cand." column dropped** (redundant with the Notes-column flag
+    already given for the one automatically-flagged candidate).
+  - **Flux and RMS columns swapped** so Flux (mJy) now precedes RMS
+    (mJy).
+  - Notes column and Appendix intro text updated to explicitly flag,
+    per-row, which of the 19 target/bands are legacy single-window
+    results now queued for multi-window reprocessing.
+- §4 (Data and methodology) rewritten to describe the new multi-window
+  search explicitly (superseding the old "we search only the single
+  finest-resolution spectral window" statement), and to note that once
+  several windows have been searched per target, Figure 1 will continue
+  to plot only the single deepest (lowest EIRP$_{\rm min}$) result per
+  target/band, to avoid crowding the plot — per direct instruction.
+- Verified with the standard compile-3x + zero-`??` + visual-render
+  discipline (rendered and inspected the table and Figure 1 pages
+  directly, not just grepped the log). 10 pages, clean, only a
+  negligible 4pt page-break `Overfull \vbox` and expected underfull
+  hboxes from narrow Notes-column word-wrapping in `tabularx`.
+- **Live validation gap, noted honestly**: the new multi-spw search code
+  has been deployed and syntax-checked but had not yet been exercised
+  end-to-end on real ALMA data at the time of this push — the one live
+  target being processed under the new code (`LSR_J1835-3259`, Band 3)
+  turned out to be an unusually large/complex case (33 GB raw MS, ~65
+  configured spws) still in calibration after 40+ minutes. Will confirm
+  correctness on the next update once that target (or a smaller one)
+  completes, before treating the 19-target repeat pass as trustworthy.
+- Pushed to `Tilanthi/SETI` at `paper_20pc/v2.04/`.
+
+## Planned for v2.05+
 - Add the full ALMA project-code list to the Acknowledgements section
   (deferred again — still meaningful to wait until survey completion so
   it's compiled once, not incrementally).
