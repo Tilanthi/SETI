@@ -65,10 +65,75 @@ Paper II's actual results/discussion/conclusions sections are added.
   — do not delete it.
 - Pushed to `Tilanthi/SETI` at `paper_20pc/v1.01/`.
 
-## Planned for v1.02+
-- Populate Results/Discussion/Conclusions once the 20pc campaign
-  (see `/data/SETI/` on the compute cluster) completes.
-- Add the full ALMA project-code list to the Acknowledgements section.
-- Add figures: sample sky/distance distribution, spectral-type histogram,
-  EIRP/continuum upper-limit plots.
-- Consider extending to 30/40/50 pc per Section 5's stated roadmap.
+## v2.00 (2026-08-30)
+- **Major restructure, per Glenn's instruction**: "Paper I" and "Paper II"
+  are no longer separate — this is now a single, standalone paper that is
+  updated in place as the survey progresses, rather than a background-only
+  piece promising results in a future companion paper. All "Paper I of a
+  series"/"will be presented in Paper II" language removed from title,
+  abstract, introduction, and the old placeholder "Scope of Paper II"
+  section (§5) is replaced with real content.
+- **New content**:
+  - §4.1 Closure-phase point-source vetting, §4.2 Population-level
+    spectral-type-normalised continuum anomaly check — full methodology
+    write-ups of the two new analyses added to the live pipeline this
+    session (see MEMORY.md 2026-08-30 07:25 entry for implementation
+    details). Both explicitly framed as novel relative to the entire
+    technosignature literature reviewed in §2, not just re-implementations
+    of Ma et al./GLOBULAR/Poznanski.
+  - §5 Results (real, current data): pulled and rigorously filtered actual
+    campaign output — 26 target/bands had *some* data on disk, but 7 of
+    those were STALE, pre-fix results for targets on the known
+    "needs-redo" list (multi-field/phase-centre/mosaic-continuum bugs,
+    or old pre-budget-fix timeouts) that the volume-limited campaign
+    hasn't reprocessed yet (it's still working through nearer targets
+    first) — these 7 were explicitly excluded from every statistic and
+    from the appendix table, not silently included. Final dataset: 19
+    valid target/bands. Caught and correctly explained, not silently
+    reported as anomalous: (a) the one flagged "candidate" (β Pictoris,
+    Band 3, 115.26 GHz) is the CO(1-0) line; (b) G 272-61A/B showing
+    bit-identical continuum flux is NOT a bug recurrence — verified via
+    `calibrate_status.json` that both share one single-field MOUS with
+    `target_field=uv_cet`, i.e. these ARE the two components of the
+    well-known UV Ceti visual binary, genuinely unresolved by ALMA at
+    this configuration — flagged as an honest caveat, not excluded.
+  - §6 Discussion, §7 Conclusions — new, grounded in the actual (partial,
+    honestly labelled as preliminary — 19/120 = 16%) results.
+  - Appendix A (`Table~1`, `tabularx`-based for proper text wrapping —
+    plain `tabular` overflowed the page width by ~68pt on first attempt,
+    caught by the standard `Overfull \hbox` log check and fixed): full
+    per-target table (target, band, distance, frequency range searched,
+    EIRP_min, candidate flag, continuum value, notes) — kept OUT of the
+    main body per Glenn's explicit instruction; main text has summary
+    statistics and two figures only.
+  - Figure 1: EIRP and continuum vs. distance (two-panel), Figure 2:
+    full 120-star sample distance distribution — both generated from real
+    pipeline output, not illustrative/mock data.
+- **Process notes**: gathered fresh data directly from the cluster
+  (`/data/SETI/logs/driver_summary_master20pc.json` + all
+  `*_result.json`/`continuum_summary.json` files), built a local
+  `paper_data.json` → filtered → `paper_data_valid.json` pipeline so the
+  filtering-out of stale data is itself reproducible/auditable, not a
+  one-off manual edit.
+- Verified with the full compile-3x + `pdftotext | grep "??"` = 0 discipline
+  established after the v1.01 unresolved-references incident, on a
+  completely clean rebuild (deleted the PDF and recompiled from scratch)
+  as the final check before packaging for push.
+- 9 pages, clean compile, 1 negligible 3pt page-break `Overfull \vbox`
+  (not a content defect).
+- **v1.00 and v1.01 kept in place**, superseded but recoverable, per the
+  standing versioning policy.
+- Pushed to `Tilanthi/SETI` at `paper_20pc/v2.00/`.
+
+## Planned for v2.01+
+- Add the full ALMA project-code list to the Acknowledgements section
+  (deferred again — still meaningful to wait until survey completion so
+  it's compiled once, not incrementally).
+- Populate a quantitative transmitter-prevalence bound (Wright et al. 2018 /
+  Margot et al. 2023 frameworks) once a statistically meaningful fraction
+  of the 120-target sample is complete — explicitly deferred in §6 as
+  premature at n=19.
+- First real closure-phase-vetting result and first population-anomaly
+  flag, whenever either actually triggers.
+- Consider extending to 30/40/50 pc per the roadmap already stated in the
+  paper, once the 20 pc sample is complete.
