@@ -32,7 +32,40 @@ Paper II's actual results/discussion/conclusions sections are added.
 - 6 pages, clean compile, no undefined references, no overfull boxes.
 - Pushed to `Tilanthi/SETI` GitHub repo.
 
-## Planned for v1.01+
+## v1.01 (2026-08-30)
+- **Journal target corrected**: Glenn confirmed the paper will likely go to
+  the **Open Journal of Astrophysics (OJA)**, not MNRAS as originally
+  assumed. Re-typeset using OJA's official `openjournal.cls`
+  (http://www.thphys.nuim.ie/staff/pcoles/openjournal.cls, v09/06/15,
+  AASTeX/emulateapj-style, built on `revtex4-1`) instead of `mnras.cls`.
+  **Content is otherwise identical to v1.00** — same title, authors,
+  abstract, full Background/Lit-Review text, Sample Selection, Methodology,
+  Scope-of-Paper-II placeholder, and the same (corrected, individually
+  verified) ~30-entry bibliography — only the document class, front-matter
+  markup (`\shorttitle`/`\altaffilmark`/`\altaffiltext` instead of MNRAS's
+  `\author[]{}`/`\pubyear`), and resulting page layout (OJA is single-column
+  AASTeX-style vs MNRAS's two-column) changed.
+- Dependencies: `openjournal.cls` requires `revtex4-1.cls` (now installed on
+  this container via `apt-get install texlive-publishers`; NOT bundled in
+  the repo since it's a standard TeXLive component, unlike the one-off
+  `openjournal.cls` itself, which IS bundled per-version for
+  recoverability) and the small legacy `epsf.sty` (bundled in `v1.01/`,
+  fetched from `fits.gsfc.nasa.gov/standard30/epsf.sty` since it is not in
+  this container's TeXLive install and CTAN's own mirrors served an HTML
+  error page for the direct .sty path tried first).
+  Kept natbib-compatible `\citet`/`\citep` and `\bibitem[Author(Year)]{key}`
+  bibliography entries unchanged from v1.00 — `openjournal.cls` restores
+  natbib internally, so no citation-syntax changes were needed, only the
+  front matter.
+  6 pages, clean compile (pdfLaTeX only needed, no BibTeX step — bibliography
+  is a manual `thebibliography` block, same as v1.00), 1 negligible 3pt
+  overfull \vbox (page-break rounding, not a real content overflow).
+- **v1.00 (MNRAS-format) is now superseded but kept in place** for the
+  record, per the "any previous version can be recovered" versioning policy
+  — do not delete it.
+- Pushed to `Tilanthi/SETI` at `paper_20pc/v1.01/`.
+
+## Planned for v1.02+
 - Populate Results/Discussion/Conclusions once the 20pc campaign
   (see `/data/SETI/` on the compute cluster) completes.
 - Add the full ALMA project-code list to the Acknowledgements section.
