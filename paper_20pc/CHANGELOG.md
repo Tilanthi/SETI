@@ -368,15 +368,92 @@ Paper II's actual results/discussion/conclusions sections are added.
   the analogous v2.04 gap, which *was* subsequently confirmed correct.
 - Pushed to `Tilanthi/SETI` at `paper_20pc/v2.05/`.
 
-## Planned for v2.06+
+## v2.06 (2026-08-31)
+- **Four new/extended analyses added**, per Glenn's explicit request for
+  "Tier 1" scientific-usefulness additions that reuse already-downloaded/
+  already-retained data at essentially zero marginal cost:
+  1. **Injection-recovery sensitivity validation** (§4.4): synthetic
+     narrowband tones (1–10× the noise level, 24 trials, 3 channel
+     positions per amplitude) injected into Proxima Cen's own
+     already-validated calibrated MS (reusing the extraction code's
+     existing `SETI_INJECT` mechanism) and recovered through the
+     unmodified search pipeline. Finding: recovered SNR is ~10% below
+     injected at high SNR (small, expected coherence loss); the actual
+     50%-recovery point sits at injected SNR≈6, not the nominal 5σ design
+     value — i.e. our quoted 5σ limits are, if anything, mildly
+     *conservative*. Single-target pilot; broader multi-band campaign
+     recommended as future work.
+  2. **Chirped-drift + periodicity re-analysis of retained spectra**
+     (§4.5, new `reanalyze_srcspec.py`): extends the primary linear-drift
+     search with (i) a quadratic-drift (chirp) term and (ii) a
+     time-domain FFT periodicity/pulse search, both run entirely off the
+     already-retained `*_srcspec.npz` files (star + 8 controls) — no
+     re-download, no CASA. Applied to all 79 retained spectra to date:
+     8 (10%) chirp-credible, 10 (13%) periodicity-credible, both
+     statistically indistinguishable from the ~11% expected purely by
+     chance from a 1-vs-8-control "max" comparison. Clean null result;
+     validates the star-vs-control differencing design (caught, and
+     correctly rejected, one large but *shared* systematic in a first
+     single-file test, confirming controls and star are compared fairly).
+  3. **Cross-target frequency-occupancy RFI check** (§4.6, new
+     `frequency_occupancy.py`): since this single-pointing archival
+     survey has no ON/OFF cadence, uses the fact that many unrelated
+     targets share near-identical correlator setups instead — flags any
+     frequency where ≥2 distinct targets' peak channel or formal hit
+     coincide within 5 MHz. Applied to 101 target/spw results (60 formal
+     hits): zero coincidences found to date (a modest, currently
+     under-powered but genuinely clean null result that strengthens as
+     the survey grows and more targets share a given tuning).
+  4. **Serendipitous molecular-line catalogue** (§5.3): the continuum
+     line-exclusion step's outlier list, aggregated across all completed
+     targets as a free byproduct — 18 outlier groups, 12 unidentified
+     (likely noise), 6 plausibly real: confirmed β Pictoris CO(1–0)/
+     CO(2–1) (already known, matches literature), a tentative few-channel
+     CO(2–1)-consistent feature towards HD 285968 (reported honestly as
+     unconfirmed, not a detection), and a likely-spurious single-channel
+     SiO(5–4)-adjacent bump towards HD 53143 (large offset, low
+     significance, flagged as probably not real).
+- **Two subsample framing notes added to Discussion**: (a) exoplanet-host
+  subsample — 8 of 18 distinct stars processed to date (44%, 16 planets
+  total) are confirmed exoplanet hosts, extractable directly from Table 1
+  without compromising the volume-limited framing of the main sample;
+  (b) white-dwarf subsample — Sirius B and Van Maanen's Star (Wolf 28)
+  are white dwarfs included only by accident of ALMA coverage, tied to
+  the small but active post-main-sequence-SETI literature (new citation:
+  Huang, Tao & Zhang 2026, ApJ, 1006, 9, a very recent chemical-pollution
+  white-dwarf technosignature search — different modality, same
+  motivating question).
+- Abstract, Introduction roadmap, and Conclusions updated to reflect all
+  four new analyses (now "four supplementary analyses" throughout,
+  distinguished from the original two — closure-phase vetting and the
+  population-anomaly check — which remain separately described).
+- All underlying data products and analysis scripts pushed alongside the
+  paper in `paper_20pc/v2.06_analysis/` for transparency/reproducibility:
+  `reanalyze_srcspec.py`, `frequency_occupancy.py`, `run_injection_test.sh`,
+  plus the raw JSON/JSONL results each produced.
+- Verified with the standard compile-3x + zero-`??` + visual-render
+  discipline. 12 pages, clean, no overfull boxes, no undefined refs.
+- Pushed to `Tilanthi/SETI` at `paper_20pc/v2.06/`.
+
+## Planned for v2.07+
 - Add the full ALMA project-code list to the Acknowledgements section
   (deferred again — still meaningful to wait until survey completion so
   it's compiled once, not incrementally).
 - Populate a quantitative transmitter-prevalence bound (Wright et al. 2018 /
   Margot et al. 2023 frameworks) once a statistically meaningful fraction
   of the 120-target sample is complete — explicitly deferred in §6 as
-  premature at n=19.
+  premature at n=21.
 - First real closure-phase-vetting result and first population-anomaly
   flag, whenever either actually triggers.
+- Broader, multi-band injection-recovery campaign (beyond the single-target
+  v2.06 pilot).
+- Re-run the frequency-occupancy and chirp/periodicity checks as the
+  survey grows past its current 41-target/101-target-spw state — both
+  gain statistical power with N and cost nothing to re-run incrementally.
+- Re-investigate and reprocess the 4 crossmatch-error target/bands found
+  in v2.05 (SCR J1845-6357, G 9-38A, G 9-38B, Wolf 358).
 - Consider extending to 30/40/50 pc per the roadmap already stated in the
   paper, once the 20 pc sample is complete.
+- Refresh Table 1 with the ~20 additional target/bands completed by the
+  live driver since v2.05/v2.06 (currently at 41 completed target/bands
+  vs. 21 reflected in the current table).

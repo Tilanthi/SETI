@@ -1,0 +1,200 @@
+[
+ {
+  "target_dir": "targets",
+  "star_name": "GJ 581",
+  "spw": "1",
+  "ms": "A002_Xd16a1e_Xf0d_target.ms",
+  "freq_lo_GHz": 225.0703,
+  "freq_hi_GHz": 225.0703,
+  "n_chan": 1,
+  "line": null,
+  "offset_MHz": null
+ },
+ {
+  "target_dir": "targets",
+  "star_name": "GJ 581",
+  "spw": "2",
+  "ms": "A002_Xd16a1e_Xf0d_target.ms",
+  "freq_lo_GHz": 239.0859,
+  "freq_hi_GHz": 239.0859,
+  "n_chan": 1,
+  "line": null,
+  "offset_MHz": null
+ },
+ {
+  "target_dir": "targets",
+  "star_name": "GJ 581 [B6]",
+  "spw": "1",
+  "ms": "A002_Xd16a1e_Xf0d_target.ms",
+  "freq_lo_GHz": 225.0703,
+  "freq_hi_GHz": 225.0703,
+  "n_chan": 1,
+  "line": null,
+  "offset_MHz": null
+ },
+ {
+  "target_dir": "targets",
+  "star_name": "GJ 581 [B6]",
+  "spw": "2",
+  "ms": "A002_Xd16a1e_Xf0d_target.ms",
+  "freq_lo_GHz": 239.0859,
+  "freq_hi_GHz": 239.0859,
+  "n_chan": 1,
+  "line": null,
+  "offset_MHz": null
+ },
+ {
+  "target_dir": "targets",
+  "star_name": "GJ 674 [B6]",
+  "spw": "3",
+  "ms": "A002_X10854a6_X3ac1_target.ms",
+  "freq_lo_GHz": 242.3516,
+  "freq_hi_GHz": 242.3516,
+  "n_chan": 1,
+  "line": null,
+  "offset_MHz": null
+ },
+ {
+  "target_dir": "targets",
+  "star_name": "GJ 849",
+  "spw": "0",
+  "ms": "A002_Xd86f11_X584b_target.ms",
+  "freq_lo_GHz": 212.2414,
+  "freq_hi_GHz": 212.2414,
+  "n_chan": 1,
+  "line": null,
+  "offset_MHz": null
+ },
+ {
+  "target_dir": "targets",
+  "star_name": "HD53143 (Gaia DR3 5479222240596469632)",
+  "spw": "1",
+  "ms": "A002_X10a341d_X82d2_target.ms",
+  "freq_lo_GHz": 217.3,
+  "freq_hi_GHz": 217.3,
+  "n_chan": 1,
+  "line": "SiO(5-4)",
+  "offset_MHz": 195
+ },
+ {
+  "target_dir": "targets",
+  "star_name": "HD 10647 [B7]",
+  "spw": "1",
+  "ms": "A002_Xff294f_X40a2_target.ms",
+  "freq_lo_GHz": 332.3424,
+  "freq_hi_GHz": 332.3424,
+  "n_chan": 1,
+  "line": null,
+  "offset_MHz": null
+ },
+ {
+  "target_dir": "targets",
+  "star_name": "HD 285968",
+  "spw": "0",
+  "ms": "A002_Xd98580_X3bf6_target.ms",
+  "freq_lo_GHz": 212.5152,
+  "freq_hi_GHz": 212.5152,
+  "n_chan": 1,
+  "line": null,
+  "offset_MHz": null
+ },
+ {
+  "target_dir": "targets",
+  "star_name": "HD 285968",
+  "spw": "3",
+  "ms": "A002_Xd98580_X3bf6_target.ms",
+  "freq_lo_GHz": 230.5021,
+  "freq_hi_GHz": 230.5021,
+  "n_chan": 1,
+  "line": "CO(2-1)",
+  "offset_MHz": 36
+ },
+ {
+  "target_dir": "targets",
+  "star_name": "HD 285968",
+  "spw": "0",
+  "ms": "A002_Xda2c82_X7136_target.ms",
+  "freq_lo_GHz": 212.6731,
+  "freq_hi_GHz": 212.6731,
+  "n_chan": 1,
+  "line": null,
+  "offset_MHz": null
+ },
+ {
+  "target_dir": "targets",
+  "star_name": "HD 285968",
+  "spw": "3",
+  "ms": "A002_Xdaef5a_Xdd9b_target.ms",
+  "freq_lo_GHz": 230.5076,
+  "freq_hi_GHz": 230.5081,
+  "n_chan": 2,
+  "line": "CO(2-1)",
+  "offset_MHz": 30
+ },
+ {
+  "target_dir": "targets",
+  "star_name": "HD  33793 [B6]",
+  "spw": "3",
+  "ms": "A002_Xc8b2b0_X9c35_target_field0.ms",
+  "freq_lo_GHz": 242.3047,
+  "freq_hi_GHz": 242.3047,
+  "n_chan": 1,
+  "line": null,
+  "offset_MHz": null
+ },
+ {
+  "target_dir": "targets",
+  "star_name": "* alf CMa B [B4]",
+  "spw": "3",
+  "ms": "A002_Xcc626d_X579_target_field2.ms",
+  "freq_lo_GHz": 156.9243,
+  "freq_hi_GHz": 156.9243,
+  "n_chan": 1,
+  "line": null,
+  "offset_MHz": null
+ },
+ {
+  "target_dir": "targets",
+  "star_name": "bet Pic [B3]",
+  "spw": "3",
+  "ms": "A002_Xf5d76d_X32f1_target.ms",
+  "freq_lo_GHz": 115.2602,
+  "freq_hi_GHz": 115.2611,
+  "n_chan": 5,
+  "line": "CO(1-0)",
+  "offset_MHz": 10
+ },
+ {
+  "target_dir": "targets",
+  "star_name": "bet Pic [B6]",
+  "spw": "0",
+  "ms": "A002_X6f1341_X1484_target.ms",
+  "freq_lo_GHz": 230.5269,
+  "freq_hi_GHz": 230.5294,
+  "n_chan": 11,
+  "line": "CO(2-1)",
+  "offset_MHz": 10
+ },
+ {
+  "target_dir": "targets",
+  "star_name": "bet Pic [B6]",
+  "spw": "0",
+  "ms": "A002_X7116f1_X1785_target.ms",
+  "freq_lo_GHz": 230.5255,
+  "freq_hi_GHz": 230.5277,
+  "n_chan": 10,
+  "line": "CO(2-1)",
+  "offset_MHz": 11
+ },
+ {
+  "target_dir": "targets",
+  "star_name": "tau Cet [B6]",
+  "spw": "22",
+  "ms": "A002_Xb9cc97_X150a_target_field1.ms",
+  "freq_lo_GHz": 232.7967,
+  "freq_hi_GHz": 232.7967,
+  "n_chan": 1,
+  "line": null,
+  "offset_MHz": null
+ }
+]

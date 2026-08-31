@@ -1,0 +1,8 @@
+{
+ "n_target_spw_results": 101,
+ "tolerance_MHz": 5.0,
+ "n_peak_coincidence_clusters": 0,
+ "peak_coincidence_clusters": [],
+ "n_formal_hits": 60,
+ "n_formal_hit_coincidence_clusters": 0
+}

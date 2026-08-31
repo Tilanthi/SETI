@@ -1,0 +1,797 @@
+{
+ "n_files": 79,
+ "n_chirp_credible": 8,
+ "n_periodicity_credible": 10,
+ "results": [
+  {
+   "path": "61_Vir_B7/products/A002_Xc067f7_X822_spw16_srcspec_reanalysis.json",
+   "star_name": "61 Vir [B7]",
+   "chirp_star_peak_snr": 5.206478608569419,
+   "chirp_control_peak_snr": 5.694986726155967,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 22.464312259964842,
+   "periodicity_control_peak_z": 24.11312249079618,
+   "periodicity_credible": false
+  },
+  {
+   "path": "61_Vir_B7/products/A002_Xc067f7_X822_spw18_srcspec_reanalysis.json",
+   "star_name": "61 Vir [B7]",
+   "chirp_star_peak_snr": 9.197587105464896,
+   "chirp_control_peak_snr": 10.373769791848252,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 12.50414919663543,
+   "periodicity_control_peak_z": 17.46317351079889,
+   "periodicity_credible": false
+  },
+  {
+   "path": "61_Vir_B7/products/A002_Xc067f7_X822_spw20_srcspec_reanalysis.json",
+   "star_name": "61 Vir [B7]",
+   "chirp_star_peak_snr": 9.037517709432057,
+   "chirp_control_peak_snr": 9.472491419624818,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 11.9405693394111,
+   "periodicity_control_peak_z": 17.135865904132274,
+   "periodicity_credible": false
+  },
+  {
+   "path": "61_Vir_B7/products/A002_Xc067f7_X822_spw22_srcspec_reanalysis.json",
+   "star_name": "61 Vir [B7]",
+   "chirp_star_peak_snr": 8.596318050968302,
+   "chirp_control_peak_snr": 9.536452995240179,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 13.279375516895408,
+   "periodicity_control_peak_z": 20.321789986779393,
+   "periodicity_credible": false
+  },
+  {
+   "path": "AU_Mic_B3/products/A002_X1237e23_Xdb0_spw0_srcspec_reanalysis.json",
+   "star_name": "AU Mic [B3]",
+   "chirp_star_peak_snr": 15.28963185814797,
+   "chirp_control_peak_snr": 17.307174977096025,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 14.705798315906865,
+   "periodicity_control_peak_z": 18.32706639315631,
+   "periodicity_credible": false
+  },
+  {
+   "path": "AU_Mic_B3/products/A002_X1237e23_Xdb0_spw1_srcspec_reanalysis.json",
+   "star_name": "AU Mic [B3]",
+   "chirp_star_peak_snr": 14.849217449825986,
+   "chirp_control_peak_snr": 17.856969349189885,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 15.224817925739613,
+   "periodicity_control_peak_z": 17.02877087284955,
+   "periodicity_credible": false
+  },
+  {
+   "path": "AU_Mic_B3/products/A002_X1237e23_Xdb0_spw2_srcspec_reanalysis.json",
+   "star_name": "AU Mic [B3]",
+   "chirp_star_peak_snr": 16.166141126085705,
+   "chirp_control_peak_snr": 16.320447532684604,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 14.739192840204842,
+   "periodicity_control_peak_z": 15.77370535082235,
+   "periodicity_credible": false
+  },
+  {
+   "path": "AU_Mic_B3/products/A002_X1237e23_Xdb0_spw3_srcspec_reanalysis.json",
+   "star_name": "AU Mic [B3]",
+   "chirp_star_peak_snr": 5.052010125816683,
+   "chirp_control_peak_snr": 4.603901040899357,
+   "chirp_credible": true,
+   "periodicity_star_peak_z": 22.72204507935788,
+   "periodicity_control_peak_z": 23.505048107465136,
+   "periodicity_credible": false
+  },
+  {
+   "path": "AU_Mic_B6/products/A002_X899169_X1838_spw0_srcspec_reanalysis.json",
+   "star_name": "AU Mic [B6]",
+   "chirp_star_peak_snr": 5.313932582929357,
+   "chirp_control_peak_snr": 5.27083286509468,
+   "chirp_credible": true,
+   "periodicity_star_peak_z": 18.11214625507973,
+   "periodicity_control_peak_z": 22.812332177710246,
+   "periodicity_credible": false
+  },
+  {
+   "path": "AU_Mic_B6/products/A002_X899169_X1838_spw1_srcspec_reanalysis.json",
+   "star_name": "AU Mic [B6]",
+   "chirp_star_peak_snr": 9.261421544234622,
+   "chirp_control_peak_snr": 9.441072806980076,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 14.42411208114919,
+   "periodicity_control_peak_z": 17.02732758965237,
+   "periodicity_credible": false
+  },
+  {
+   "path": "AU_Mic_B6/products/A002_X899169_X1838_spw2_srcspec_reanalysis.json",
+   "star_name": "AU Mic [B6]",
+   "chirp_star_peak_snr": 8.773740294760167,
+   "chirp_control_peak_snr": 9.699580197226044,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 11.746434690376265,
+   "periodicity_control_peak_z": 17.280088951535124,
+   "periodicity_credible": false
+  },
+  {
+   "path": "AU_Mic_B6/products/A002_X899169_X1838_spw3_srcspec_reanalysis.json",
+   "star_name": "AU Mic [B6]",
+   "chirp_star_peak_snr": 9.357133348834516,
+   "chirp_control_peak_snr": 11.416563935339678,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 12.948718082087895,
+   "periodicity_control_peak_z": 15.945092447972746,
+   "periodicity_credible": false
+  },
+  {
+   "path": "CD-23_14742_B6/products/A002_Xfeb5e6_X13ee_srcspec_reanalysis.json",
+   "star_name": "CD-23 14742 [B6]",
+   "chirp_star_peak_snr": 27.681929985181988,
+   "chirp_control_peak_snr": 28.625703468445572,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 16.601616176535988,
+   "periodicity_control_peak_z": 22.77757834339485,
+   "periodicity_credible": false
+  },
+  {
+   "path": "GJ_581_B6/products/A002_Xd16a1e_X8d4_spw0_srcspec_reanalysis.json",
+   "star_name": "GJ 581 [B6]",
+   "chirp_star_peak_snr": 27.487136795772578,
+   "chirp_control_peak_snr": 29.182604366917733,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 16.696465386145405,
+   "periodicity_control_peak_z": 18.690339370152785,
+   "periodicity_credible": false
+  },
+  {
+   "path": "GJ_581_B6/products/A002_Xd16a1e_X8d4_spw1_srcspec_reanalysis.json",
+   "star_name": "GJ 581 [B6]",
+   "chirp_star_peak_snr": 27.23570132360094,
+   "chirp_control_peak_snr": 29.11504957548968,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 22.461735053159916,
+   "periodicity_control_peak_z": 18.61634078902315,
+   "periodicity_credible": true
+  },
+  {
+   "path": "GJ_581_B6/products/A002_Xd16a1e_X8d4_spw2_srcspec_reanalysis.json",
+   "star_name": "GJ 581 [B6]",
+   "chirp_star_peak_snr": 26.43887327563322,
+   "chirp_control_peak_snr": 28.773631107794582,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 16.747440383315265,
+   "periodicity_control_peak_z": 19.694348531095386,
+   "periodicity_credible": false
+  },
+  {
+   "path": "GJ_581_B6/products/A002_Xd16a1e_X8d4_spw3_srcspec_reanalysis.json",
+   "star_name": "GJ 581 [B6]",
+   "chirp_star_peak_snr": 30.40155061304119,
+   "chirp_control_peak_snr": 32.755372603288414,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 17.77179794974634,
+   "periodicity_control_peak_z": 17.4399933510696,
+   "periodicity_credible": true
+  },
+  {
+   "path": "GJ_849_B6/products/A002_Xd86f11_X584b_spw0_srcspec_reanalysis.json",
+   "star_name": "GJ 849 [B6]",
+   "chirp_star_peak_snr": 9.469937347153705,
+   "chirp_control_peak_snr": 10.61812231078645,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 12.076894385791961,
+   "periodicity_control_peak_z": 16.89720450543497,
+   "periodicity_credible": false
+  },
+  {
+   "path": "GJ_849_B6/products/A002_Xd86f11_X584b_spw1_srcspec_reanalysis.json",
+   "star_name": "GJ 849 [B6]",
+   "chirp_star_peak_snr": 10.987193533487254,
+   "chirp_control_peak_snr": 9.861662320782756,
+   "chirp_credible": true,
+   "periodicity_star_peak_z": 15.347999773666738,
+   "periodicity_control_peak_z": 23.044838026398203,
+   "periodicity_credible": false
+  },
+  {
+   "path": "GJ_849_B6/products/A002_Xd86f11_X584b_spw2_srcspec_reanalysis.json",
+   "star_name": "GJ 849 [B6]",
+   "chirp_star_peak_snr": 11.054678088132427,
+   "chirp_control_peak_snr": 10.584711580702855,
+   "chirp_credible": true,
+   "periodicity_star_peak_z": 15.638567113799155,
+   "periodicity_control_peak_z": 18.658900666501122,
+   "periodicity_credible": false
+  },
+  {
+   "path": "GJ_849_B6/products/A002_Xd86f11_X584b_spw3_srcspec_reanalysis.json",
+   "star_name": "GJ 849 [B6]",
+   "chirp_star_peak_snr": 5.820070042138693,
+   "chirp_control_peak_snr": 8.183716798118335,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 19.32804166096843,
+   "periodicity_control_peak_z": 23.733844641229393,
+   "periodicity_credible": false
+  },
+  {
+   "path": "HD_285968_B6/products/A002_Xd98580_X3bf6_spw0_srcspec_reanalysis.json",
+   "star_name": "HD 285968 [B6]",
+   "chirp_star_peak_snr": 9.243661568845695,
+   "chirp_control_peak_snr": 10.953039594627333,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 12.541582448587075,
+   "periodicity_control_peak_z": 14.588866485855666,
+   "periodicity_credible": false
+  },
+  {
+   "path": "HD_285968_B6/products/A002_Xd98580_X3bf6_spw1_srcspec_reanalysis.json",
+   "star_name": "HD 285968 [B6]",
+   "chirp_star_peak_snr": 10.204249943678978,
+   "chirp_control_peak_snr": 10.405554000869895,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 13.865204573805268,
+   "periodicity_control_peak_z": 18.30569690994497,
+   "periodicity_credible": false
+  },
+  {
+   "path": "HD_285968_B6/products/A002_Xd98580_X3bf6_spw2_srcspec_reanalysis.json",
+   "star_name": "HD 285968 [B6]",
+   "chirp_star_peak_snr": 8.685091833278472,
+   "chirp_control_peak_snr": 11.92782358890266,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 15.231947624858082,
+   "periodicity_control_peak_z": 24.05739591793404,
+   "periodicity_credible": false
+  },
+  {
+   "path": "HD_285968_B6/products/A002_Xd98580_X3bf6_spw3_srcspec_reanalysis.json",
+   "star_name": "HD 285968 [B6]",
+   "chirp_star_peak_snr": 5.843795877352839,
+   "chirp_control_peak_snr": 8.71830937218772,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 21.078719729483765,
+   "periodicity_control_peak_z": 25.63565361070594,
+   "periodicity_credible": false
+  },
+  {
+   "path": "HD_69830_B7/products/A002_X1207c39_X9417_spw0_srcspec_reanalysis.json",
+   "star_name": "HD 69830 [B7]",
+   "chirp_star_peak_snr": 20.508417289055306,
+   "chirp_control_peak_snr": 23.141207092644333,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 21.399278286850645,
+   "periodicity_control_peak_z": 19.639057846753367,
+   "periodicity_credible": true
+  },
+  {
+   "path": "HD_69830_B7/products/A002_X1207c39_X9417_spw1_srcspec_reanalysis.json",
+   "star_name": "HD 69830 [B7]",
+   "chirp_star_peak_snr": 4.22980098565364,
+   "chirp_control_peak_snr": 4.796268753978064,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 18.982070982764913,
+   "periodicity_control_peak_z": 19.879647670815203,
+   "periodicity_credible": false
+  },
+  {
+   "path": "HD_69830_B7/products/A002_X1207c39_X9417_spw2_srcspec_reanalysis.json",
+   "star_name": "HD 69830 [B7]",
+   "chirp_star_peak_snr": 4.32840618635387,
+   "chirp_control_peak_snr": 4.748515145541137,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 17.708833596268775,
+   "periodicity_control_peak_z": 21.58169525631282,
+   "periodicity_credible": false
+  },
+  {
+   "path": "HD_69830_B7/products/A002_X1207c39_X9417_spw3_srcspec_reanalysis.json",
+   "star_name": "HD 69830 [B7]",
+   "chirp_star_peak_snr": 4.553700665461508,
+   "chirp_control_peak_snr": 4.921878828606349,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 19.236225918754226,
+   "periodicity_control_peak_z": 20.570339308118285,
+   "periodicity_credible": false
+  },
+  {
+   "path": "HD__33793_B6/products/A002_Xc8b2b0_X9c35_srcspec_reanalysis.json",
+   "star_name": "HD  33793 [B6]",
+   "chirp_star_peak_snr": 16.156809220316838,
+   "chirp_control_peak_snr": 16.109917927394022,
+   "chirp_credible": true,
+   "periodicity_star_peak_z": 13.132825546927005,
+   "periodicity_control_peak_z": 18.92849457519076,
+   "periodicity_credible": false
+  },
+  {
+   "path": "HR_1010__Gaia_DR3_4722135642226902656__B6/products/A002_Xc66ce1_Xaa9_spw0_srcspec_reanalysis.json",
+   "star_name": "HR 1010 (Gaia DR3 4722135642226902656) [B6]",
+   "chirp_star_peak_snr": 8.692275912519674,
+   "chirp_control_peak_snr": 9.939985827055644,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 21.41910703448239,
+   "periodicity_control_peak_z": 22.518637705962103,
+   "periodicity_credible": false
+  },
+  {
+   "path": "HR_1010__Gaia_DR3_4722135642226902656__B6/products/A002_Xc66ce1_Xaa9_spw1_srcspec_reanalysis.json",
+   "star_name": "HR 1010 (Gaia DR3 4722135642226902656) [B6]",
+   "chirp_star_peak_snr": 9.477111596508596,
+   "chirp_control_peak_snr": 10.950030571975818,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 11.896821764368466,
+   "periodicity_control_peak_z": 18.477221943622368,
+   "periodicity_credible": false
+  },
+  {
+   "path": "HR_1010__Gaia_DR3_4722135642226902656__B6/products/A002_Xc66ce1_Xaa9_spw2_srcspec_reanalysis.json",
+   "star_name": "HR 1010 (Gaia DR3 4722135642226902656) [B6]",
+   "chirp_star_peak_snr": 9.919494172307912,
+   "chirp_control_peak_snr": 10.678258715676424,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 18.52035952722046,
+   "periodicity_control_peak_z": 21.00107020786349,
+   "periodicity_credible": false
+  },
+  {
+   "path": "HR_1010__Gaia_DR3_4722135642226902656__B6/products/A002_Xc66ce1_Xaa9_spw3_srcspec_reanalysis.json",
+   "star_name": "HR 1010 (Gaia DR3 4722135642226902656) [B6]",
+   "chirp_star_peak_snr": 9.647799009412124,
+   "chirp_control_peak_snr": 10.798622131673902,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 13.125419987164431,
+   "periodicity_control_peak_z": 16.539626395879417,
+   "periodicity_credible": false
+  },
+  {
+   "path": "HR_1010__Gaia_DR3_4722135642226902656__B7/products/A002_Xc6141c_X3af0_spw0_srcspec_reanalysis.json",
+   "star_name": "HR 1010 (Gaia DR3 4722135642226902656) [B7]",
+   "chirp_star_peak_snr": 4.581806422539844,
+   "chirp_control_peak_snr": 5.310021385425209,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 25.407673984477043,
+   "periodicity_control_peak_z": 25.37839882235539,
+   "periodicity_credible": true
+  },
+  {
+   "path": "HR_1010__Gaia_DR3_4722135642226902656__B7/products/A002_Xc6141c_X3af0_spw1_srcspec_reanalysis.json",
+   "star_name": "HR 1010 (Gaia DR3 4722135642226902656) [B7]",
+   "chirp_star_peak_snr": 8.683841890580393,
+   "chirp_control_peak_snr": 9.650650324250542,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 11.712341248432638,
+   "periodicity_control_peak_z": 20.13454813154762,
+   "periodicity_credible": false
+  },
+  {
+   "path": "HR_1010__Gaia_DR3_4722135642226902656__B7/products/A002_Xc6141c_X3af0_spw2_srcspec_reanalysis.json",
+   "star_name": "HR 1010 (Gaia DR3 4722135642226902656) [B7]",
+   "chirp_star_peak_snr": 6.89387837812249,
+   "chirp_control_peak_snr": 8.268947819412956,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 14.791022052823763,
+   "periodicity_control_peak_z": 16.753238854105348,
+   "periodicity_credible": false
+  },
+  {
+   "path": "HR_1010__Gaia_DR3_4722135642226902656__B7/products/A002_Xc6141c_X3af0_spw3_srcspec_reanalysis.json",
+   "star_name": "HR 1010 (Gaia DR3 4722135642226902656) [B7]",
+   "chirp_star_peak_snr": 7.705525620389442,
+   "chirp_control_peak_snr": 8.712616285129869,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 18.585608159734722,
+   "periodicity_control_peak_z": 18.65018871574849,
+   "periodicity_credible": false
+  },
+  {
+   "path": "LP__349-25_B3/products/A002_Xb9a2bb_X1899_spw17_srcspec_reanalysis.json",
+   "star_name": "LP  349-25 [B3]",
+   "chirp_star_peak_snr": 20.0773585055428,
+   "chirp_control_peak_snr": 20.62885577020229,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 15.198679527511826,
+   "periodicity_control_peak_z": 19.684212418787876,
+   "periodicity_credible": false
+  },
+  {
+   "path": "LP__349-25_B3/products/A002_Xb9a2bb_X1899_spw19_srcspec_reanalysis.json",
+   "star_name": "LP  349-25 [B3]",
+   "chirp_star_peak_snr": 16.88582960256391,
+   "chirp_control_peak_snr": 18.723877103625746,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 15.051281172822694,
+   "periodicity_control_peak_z": 19.15223658837021,
+   "periodicity_credible": false
+  },
+  {
+   "path": "LP__349-25_B3/products/A002_Xb9a2bb_X1899_spw21_srcspec_reanalysis.json",
+   "star_name": "LP  349-25 [B3]",
+   "chirp_star_peak_snr": 18.16947963316953,
+   "chirp_control_peak_snr": 18.715775277378768,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 14.294518592741694,
+   "periodicity_control_peak_z": 18.978098132535063,
+   "periodicity_credible": false
+  },
+  {
+   "path": "NAME_AT_Mic_AB__Gaia_DR3_6792436799475128960__B7/products/A002_Xcd97a1_X3f1e_spw0_srcspec_reanalysis.json",
+   "star_name": "NAME AT Mic AB (Gaia DR3 6792436799475128960) [B7]",
+   "chirp_star_peak_snr": 12.029250720303082,
+   "chirp_control_peak_snr": 11.601940891848392,
+   "chirp_credible": true,
+   "periodicity_star_peak_z": 18.099149904772112,
+   "periodicity_control_peak_z": 22.3868802065365,
+   "periodicity_credible": false
+  },
+  {
+   "path": "NAME_AT_Mic_AB__Gaia_DR3_6792436799475128960__B7/products/A002_Xcd97a1_X3f1e_spw1_srcspec_reanalysis.json",
+   "star_name": "NAME AT Mic AB (Gaia DR3 6792436799475128960) [B7]",
+   "chirp_star_peak_snr": 10.853994024689412,
+   "chirp_control_peak_snr": 13.19368302329508,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 17.792015793953812,
+   "periodicity_control_peak_z": 18.138998573759157,
+   "periodicity_credible": false
+  },
+  {
+   "path": "NAME_AT_Mic_AB__Gaia_DR3_6792436799475128960__B7/products/A002_Xcd97a1_X3f1e_spw2_srcspec_reanalysis.json",
+   "star_name": "NAME AT Mic AB (Gaia DR3 6792436799475128960) [B7]",
+   "chirp_star_peak_snr": 11.872536930358052,
+   "chirp_control_peak_snr": 12.266246463009836,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 13.985859345772838,
+   "periodicity_control_peak_z": 17.488131750359248,
+   "periodicity_credible": false
+  },
+  {
+   "path": "NAME_AT_Mic_AB__Gaia_DR3_6792436799475128960__B7/products/A002_Xcd97a1_X3f1e_spw3_srcspec_reanalysis.json",
+   "star_name": "NAME AT Mic AB (Gaia DR3 6792436799475128960) [B7]",
+   "chirp_star_peak_snr": 4.58523542949952,
+   "chirp_control_peak_snr": 5.019857741688011,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 31.45466594596653,
+   "periodicity_control_peak_z": 25.11702559701974,
+   "periodicity_credible": true
+  },
+  {
+   "path": "TRAPPIST-1_B3/products/A002_Xc9831a_X443_spw0_srcspec_reanalysis.json",
+   "star_name": "TRAPPIST-1 [B3]",
+   "chirp_star_peak_snr": 19.864063529219578,
+   "chirp_control_peak_snr": 23.82030557848446,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 15.260085571143623,
+   "periodicity_control_peak_z": 22.586825897662028,
+   "periodicity_credible": false
+  },
+  {
+   "path": "TRAPPIST-1_B3/products/A002_Xc9831a_X443_spw1_srcspec_reanalysis.json",
+   "star_name": "TRAPPIST-1 [B3]",
+   "chirp_star_peak_snr": 20.235088372475378,
+   "chirp_control_peak_snr": 20.695114790975328,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 15.628083261971023,
+   "periodicity_control_peak_z": 18.109493636517083,
+   "periodicity_credible": false
+  },
+  {
+   "path": "TRAPPIST-1_B3/products/A002_Xc9831a_X443_spw2_srcspec_reanalysis.json",
+   "star_name": "TRAPPIST-1 [B3]",
+   "chirp_star_peak_snr": 19.77548393917294,
+   "chirp_control_peak_snr": 20.814869412033097,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 14.046247636493652,
+   "periodicity_control_peak_z": 17.426953297189563,
+   "periodicity_credible": false
+  },
+  {
+   "path": "TRAPPIST-1_B3/products/A002_Xc9831a_X443_spw3_srcspec_reanalysis.json",
+   "star_name": "TRAPPIST-1 [B3]",
+   "chirp_star_peak_snr": 21.827058103298334,
+   "chirp_control_peak_snr": 21.36661718496568,
+   "chirp_credible": true,
+   "periodicity_star_peak_z": 14.25002983835472,
+   "periodicity_control_peak_z": 22.744944839941482,
+   "periodicity_credible": false
+  },
+  {
+   "path": "TRAPPIST-1_B6/products/A002_X12a8fc8_X10b8_spw0_srcspec_reanalysis.json",
+   "star_name": "TRAPPIST-1 [B6]",
+   "chirp_star_peak_snr": 21.03460904559637,
+   "chirp_control_peak_snr": 21.943571949364802,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 17.205241616896224,
+   "periodicity_control_peak_z": 21.741519045742166,
+   "periodicity_credible": false
+  },
+  {
+   "path": "TRAPPIST-1_B6/products/A002_X12a8fc8_X10b8_spw1_srcspec_reanalysis.json",
+   "star_name": "TRAPPIST-1 [B6]",
+   "chirp_star_peak_snr": 20.937338293086082,
+   "chirp_control_peak_snr": 21.8665103066626,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 14.776380163936318,
+   "periodicity_control_peak_z": 16.593379722541858,
+   "periodicity_credible": false
+  },
+  {
+   "path": "TRAPPIST-1_B6/products/A002_X12a8fc8_X10b8_spw2_srcspec_reanalysis.json",
+   "star_name": "TRAPPIST-1 [B6]",
+   "chirp_star_peak_snr": 21.21303453035134,
+   "chirp_control_peak_snr": 22.280078086801797,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 15.548433596517153,
+   "periodicity_control_peak_z": 18.416031345488495,
+   "periodicity_credible": false
+  },
+  {
+   "path": "TRAPPIST-1_B6/products/A002_X12a8fc8_X10b8_spw3_srcspec_reanalysis.json",
+   "star_name": "TRAPPIST-1 [B6]",
+   "chirp_star_peak_snr": 22.57261726875815,
+   "chirp_control_peak_snr": 24.139592241395604,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 17.028495846883267,
+   "periodicity_control_peak_z": 17.311477963892653,
+   "periodicity_credible": false
+  },
+  {
+   "path": "TRAPPIST-1_B7/products/A002_Xcccc19_X5564_spw0_srcspec_reanalysis.json",
+   "star_name": "TRAPPIST-1 [B7]",
+   "chirp_star_peak_snr": 17.502479245108077,
+   "chirp_control_peak_snr": 20.66294272457881,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 15.418579991366547,
+   "periodicity_control_peak_z": 23.722121837444664,
+   "periodicity_credible": false
+  },
+  {
+   "path": "TRAPPIST-1_B7/products/A002_Xcccc19_X5564_spw1_srcspec_reanalysis.json",
+   "star_name": "TRAPPIST-1 [B7]",
+   "chirp_star_peak_snr": 16.637450192576406,
+   "chirp_control_peak_snr": 19.008626536911027,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 13.504473547518195,
+   "periodicity_control_peak_z": 17.00816428887604,
+   "periodicity_credible": false
+  },
+  {
+   "path": "TRAPPIST-1_B7/products/A002_Xcccc19_X5564_spw2_srcspec_reanalysis.json",
+   "star_name": "TRAPPIST-1 [B7]",
+   "chirp_star_peak_snr": 18.73215833043079,
+   "chirp_control_peak_snr": 19.94590255403073,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 13.334811668597405,
+   "periodicity_control_peak_z": 18.052896131801234,
+   "periodicity_credible": false
+  },
+  {
+   "path": "TRAPPIST-1_B7/products/A002_Xcccc19_X5564_spw3_srcspec_reanalysis.json",
+   "star_name": "TRAPPIST-1 [B7]",
+   "chirp_star_peak_snr": 5.0634328283540215,
+   "chirp_control_peak_snr": 5.285217801894359,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 25.324966617017296,
+   "periodicity_control_peak_z": 26.873412735367765,
+   "periodicity_credible": false
+  },
+  {
+   "path": "V_AT_Mic_B_B7/products/A002_Xcd97a1_X3f1e_spw0_srcspec_reanalysis.json",
+   "star_name": "V* AT Mic B [B7]",
+   "chirp_star_peak_snr": 12.351829841707492,
+   "chirp_control_peak_snr": 14.037665918619117,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 16.118313819332474,
+   "periodicity_control_peak_z": 22.134308568269407,
+   "periodicity_credible": false
+  },
+  {
+   "path": "V_AT_Mic_B_B7/products/A002_Xcd97a1_X3f1e_spw1_srcspec_reanalysis.json",
+   "star_name": "V* AT Mic B [B7]",
+   "chirp_star_peak_snr": 10.195592942442758,
+   "chirp_control_peak_snr": 11.972488967933712,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 18.030012427125623,
+   "periodicity_control_peak_z": 22.550770278109848,
+   "periodicity_credible": false
+  },
+  {
+   "path": "V_AT_Mic_B_B7/products/A002_Xcd97a1_X3f1e_spw2_srcspec_reanalysis.json",
+   "star_name": "V* AT Mic B [B7]",
+   "chirp_star_peak_snr": 11.293945120271752,
+   "chirp_control_peak_snr": 12.833565149213213,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 13.261607997114481,
+   "periodicity_control_peak_z": 19.074865055448743,
+   "periodicity_credible": false
+  },
+  {
+   "path": "V_AT_Mic_B_B7/products/A002_Xcd97a1_X3f1e_spw3_srcspec_reanalysis.json",
+   "star_name": "V* AT Mic B [B7]",
+   "chirp_star_peak_snr": 4.448211928934437,
+   "chirp_control_peak_snr": 5.309899720447526,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 22.814615852489034,
+   "periodicity_control_peak_z": 25.594885718312288,
+   "periodicity_credible": false
+  },
+  {
+   "path": "Wolf___28_B6/products/A002_X9f2ff8_X25b0_srcspec_reanalysis.json",
+   "star_name": "Wolf   28 [B6]",
+   "chirp_star_peak_snr": 20.471897913967055,
+   "chirp_control_peak_snr": 21.094018291765423,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 13.9039285559035,
+   "periodicity_control_peak_z": 16.877037558213082,
+   "periodicity_credible": false
+  },
+  {
+   "path": "_gam_Lep_B6/products/A002_Xd28a9e_Xbcdf_spw0_srcspec_reanalysis.json",
+   "star_name": "* gam Lep [B6]",
+   "chirp_star_peak_snr": 19.296967221626115,
+   "chirp_control_peak_snr": 20.55227645732339,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 14.344403780770554,
+   "periodicity_control_peak_z": 21.680698374644123,
+   "periodicity_credible": false
+  },
+  {
+   "path": "_gam_Lep_B6/products/A002_Xd28a9e_Xbcdf_spw1_srcspec_reanalysis.json",
+   "star_name": "* gam Lep [B6]",
+   "chirp_star_peak_snr": 18.898438523598056,
+   "chirp_control_peak_snr": 20.526674218650967,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 14.590108444770063,
+   "periodicity_control_peak_z": 18.03235555747415,
+   "periodicity_credible": false
+  },
+  {
+   "path": "_gam_Lep_B6/products/A002_Xd28a9e_Xbcdf_spw2_srcspec_reanalysis.json",
+   "star_name": "* gam Lep [B6]",
+   "chirp_star_peak_snr": 19.056308765054517,
+   "chirp_control_peak_snr": 20.45386853162761,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 16.791455005967684,
+   "periodicity_control_peak_z": 19.75171061211709,
+   "periodicity_credible": false
+  },
+  {
+   "path": "_gam_Lep_B6/products/A002_Xd28a9e_Xbcdf_spw3_srcspec_reanalysis.json",
+   "star_name": "* gam Lep [B6]",
+   "chirp_star_peak_snr": 22.43484245832298,
+   "chirp_control_peak_snr": 23.01218251542752,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 19.010484260628154,
+   "periodicity_control_peak_z": 18.381488143540142,
+   "periodicity_credible": true
+  },
+  {
+   "path": "_gam_Lep_B7/products/A002_Xd248b5_X5186_spw0_srcspec_reanalysis.json",
+   "star_name": "* gam Lep [B7]",
+   "chirp_star_peak_snr": 12.524834954984513,
+   "chirp_control_peak_snr": 14.342389309496973,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 15.427232872651643,
+   "periodicity_control_peak_z": 17.80478909142324,
+   "periodicity_credible": false
+  },
+  {
+   "path": "_gam_Lep_B7/products/A002_Xd248b5_X5186_spw1_srcspec_reanalysis.json",
+   "star_name": "* gam Lep [B7]",
+   "chirp_star_peak_snr": 13.004918829486542,
+   "chirp_control_peak_snr": 13.887227865894753,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 15.15104419282982,
+   "periodicity_control_peak_z": 14.778774997584444,
+   "periodicity_credible": true
+  },
+  {
+   "path": "_gam_Lep_B7/products/A002_Xd248b5_X5186_spw2_srcspec_reanalysis.json",
+   "star_name": "* gam Lep [B7]",
+   "chirp_star_peak_snr": 13.370330761797428,
+   "chirp_control_peak_snr": 13.851148704559128,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 12.379195081103598,
+   "periodicity_control_peak_z": 17.49216889579383,
+   "periodicity_credible": false
+  },
+  {
+   "path": "_gam_Lep_B7/products/A002_Xd248b5_X5186_spw3_srcspec_reanalysis.json",
+   "star_name": "* gam Lep [B7]",
+   "chirp_star_peak_snr": 13.654688376145941,
+   "chirp_control_peak_snr": 14.433614152882688,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 25.308438436998017,
+   "periodicity_control_peak_z": 22.430633349321567,
+   "periodicity_credible": true
+  },
+  {
+   "path": "_gam_Vir_B6/products/A002_Xd95042_X2d99_spw0_srcspec_reanalysis.json",
+   "star_name": "* gam Vir [B6]",
+   "chirp_star_peak_snr": 17.51059227960159,
+   "chirp_control_peak_snr": 17.927597805698586,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 17.826617869691475,
+   "periodicity_control_peak_z": 17.252464160952638,
+   "periodicity_credible": true
+  },
+  {
+   "path": "_gam_Vir_B6/products/A002_Xd95042_X2d99_spw1_srcspec_reanalysis.json",
+   "star_name": "* gam Vir [B6]",
+   "chirp_star_peak_snr": 17.494269145640907,
+   "chirp_control_peak_snr": 18.22939295754502,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 18.189936651519982,
+   "periodicity_control_peak_z": 18.385725491696864,
+   "periodicity_credible": false
+  },
+  {
+   "path": "_gam_Vir_B6/products/A002_Xd95042_X2d99_spw2_srcspec_reanalysis.json",
+   "star_name": "* gam Vir [B6]",
+   "chirp_star_peak_snr": 17.190431600267985,
+   "chirp_control_peak_snr": 17.729894306135314,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 14.900244145520697,
+   "periodicity_control_peak_z": 18.202319871269676,
+   "periodicity_credible": false
+  },
+  {
+   "path": "_gam_Vir_B6/products/A002_Xd95042_X2d99_spw3_srcspec_reanalysis.json",
+   "star_name": "* gam Vir [B6]",
+   "chirp_star_peak_snr": 20.133007769695173,
+   "chirp_control_peak_snr": 19.945423943382195,
+   "chirp_credible": true,
+   "periodicity_star_peak_z": 14.755008267624364,
+   "periodicity_control_peak_z": 17.246045621592433,
+   "periodicity_credible": false
+  },
+  {
+   "path": "_gam_Vir_B7/products/A002_Xd6ebab_X41a3_spw0_srcspec_reanalysis.json",
+   "star_name": "* gam Vir [B7]",
+   "chirp_star_peak_snr": 16.351265795722735,
+   "chirp_control_peak_snr": 18.016136487291718,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 21.05960493147611,
+   "periodicity_control_peak_z": 17.964820804687914,
+   "periodicity_credible": true
+  },
+  {
+   "path": "_gam_Vir_B7/products/A002_Xd6ebab_X41a3_spw1_srcspec_reanalysis.json",
+   "star_name": "* gam Vir [B7]",
+   "chirp_star_peak_snr": 16.046871121138988,
+   "chirp_control_peak_snr": 17.551258254505846,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 16.38150739133888,
+   "periodicity_control_peak_z": 20.21080133178306,
+   "periodicity_credible": false
+  },
+  {
+   "path": "_gam_Vir_B7/products/A002_Xd6ebab_X41a3_spw2_srcspec_reanalysis.json",
+   "star_name": "* gam Vir [B7]",
+   "chirp_star_peak_snr": 16.9871792109249,
+   "chirp_control_peak_snr": 17.471353667727175,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 18.21412170744758,
+   "periodicity_control_peak_z": 18.59357968304114,
+   "periodicity_credible": false
+  },
+  {
+   "path": "_gam_Vir_B7/products/A002_Xd6ebab_X41a3_spw3_srcspec_reanalysis.json",
+   "star_name": "* gam Vir [B7]",
+   "chirp_star_peak_snr": 16.14629506266583,
+   "chirp_control_peak_snr": 17.919969413908944,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 17.328592482573686,
+   "periodicity_control_peak_z": 20.45982405538974,
+   "periodicity_credible": false
+  },
+  {
+   "path": "tau_Cet_B6/products/A002_Xb9cc97_X150a_srcspec_reanalysis.json",
+   "star_name": "tau Cet [B6]",
+   "chirp_star_peak_snr": 4.320972936174024,
+   "chirp_control_peak_snr": 5.00273371374047,
+   "chirp_credible": false,
+   "periodicity_star_peak_z": 22.79413198328474,
+   "periodicity_control_peak_z": 31.81240248850736,
+   "periodicity_credible": false
+  }
+ ]
+}
