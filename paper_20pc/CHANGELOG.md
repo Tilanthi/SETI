@@ -435,23 +435,121 @@ Paper II's actual results/discussion/conclusions sections are added.
   discipline. 12 pages, clean, no overfull boxes, no undefined refs.
 - Pushed to `Tilanthi/SETI` at `paper_20pc/v2.06/`.
 
-## Planned for v2.07+
+## v2.07 (2026-08-31)
+- **Full data refresh**: Table 1 grew from 21 to 36 valid target/bands
+  (92 rows; 28 distinct stars), reflecting everything the live 120-star
+  driver had completed by the time of writing. Fourteen new target/bands
+  added for the first time (61 Vir, AU Mic, HD 207129, HD 38858, HR 1010
+  ×2 bands, the AT Mic pair, **TRAPPIST-1** ×3 bands, γ Leporis ×2 bands,
+  γ Virginis ×2 bands); three previously single-window entries (GJ 849,
+  HD 285968, HD 23484) expanded to their full multi-spw results.
+  Spectral types assigned via Teff-interpolation against a documented
+  Pecaut & Mamajek main-sequence table (consistent with the method
+  already used for radii), with literature overrides for well-known
+  cases (TRAPPIST-1 M8V, AU Mic M1Ve, γ Vir F0V, 61 Vir G5V).
+- **★ Second automated candidate flag: AU Mic, Band 6, 230.83 GHz.**
+  Investigated in full before writing anything: does not coincide with
+  any catalogued line (287 MHz from nearest, CO(2-1)); closure phase
+  consistent with a point source; but the gating statistic (star
+  check-ring peak 5.97 vs control-ensemble peak 5.85) differs by only
+  0.12 — well within the expected false-positive rate for a survey
+  running many thousands of independent trials. Judged not credible;
+  flagged prominently and honestly rather than either hidden or
+  oversold, with AU Mic's well-known high flare activity noted as by far
+  the more parsimonious explanation if the excess turns out to be real.
+  Cross-checked against the frequency-occupancy tool: does not recur at
+  any other target.
+- **★★ Major finding: a bookkeeping bug was silently marking crossmatch-failed
+  target/bands as permanently "complete".** While building this update's
+  aggregate dataset, found 19 additional target/bands (beyond the 4
+  reported in v2.05: e.g. ε Eridani, HD 188088, LHS 1140) where the
+  pointing sanity check had correctly intercepted a wrong-MOUS assignment
+  on *both* the narrowband and continuum steps (zero bogus output
+  produced, unlike the earlier 4) — but `process_one_target.sh` still
+  unconditionally `touch`ed `logs/DONE` at the end regardless, which
+  would have permanently excluded these stars from ever being retried
+  once a corrected dataset association becomes available. **Fixed**:
+  `DONE` is no longer written if both `SETI_SEARCH_FAILED` and
+  `CONTINUUM_MAP_FAILED` are set (i.e. zero science product resulted).
+  Total crossmatch-excluded target/bands now 23 of the ~96 attempted in
+  this phase (roughly half) — a materially higher rate than previously
+  visible, now stated plainly in the paper (§6) as a finding in its own
+  right, not just a data-quality footnote.
+- **A third bug found and fixed**: `calibrate_generic.py`'s
+  `gentle_download()` crashed with an opaque, uncaught
+  `TypeError: expected str, bytes or os.PathLike object, not NoneType`
+  whenever a MOUS's file listing had no `_auxiliary.tar` entry at all
+  (`aux_file is None`, called unconditionally). Now fails cleanly with an
+  informative message instead, correctly bucketed with the other
+  "no calibration recipe available" cases. Found live (LP 649-72, and
+  G 70-43/44, which share one MOUS).
+- **Download budget raised 45→85 GB** per Glenn's explicit instruction
+  ("you can exceed the self-imposed download-budget cap if need be"),
+  recovering 4 previously-unreachable targets (HD 69830, GJ14, G 3-14,
+  1RXS J0336+3118, whose smallest available EB ranges 50–67 GB). Verified
+  this doesn't bypass real protection first: a *separate*, always-on
+  check against live free disk space (100 GB margin) and the outer
+  driver's emergency watchdog (kills any target if free space drops
+  below 80 GB, polled every 30s) remain fully intact regardless of the
+  fixed cap's value.
+- **Figure 1 and all summary statistics recomputed**: EIRP now
+  1.6e13–6.3e15 W (median 4.2e14 W, up from 3.1e14 — driven by several
+  new, more distant targets with intrinsically shallower limits);
+  continuum 12 detections / 24 non-detections (up from 5/16), deepest UL
+  now 0.036 mJy (TRAPPIST-1 Band 3, the tightest continuum limit in the
+  survey to date, replacing the previous 0.16 mJy record).
+  Exoplanet-host subsample grew to 11 of 28 stars (39%, 30 planets),
+  now headlined by TRAPPIST-1's 7 planets.
+- Chirp/periodicity and frequency-occupancy checks re-run on the larger,
+  current dataset (91 retained spectra; 113 target/spw results) —
+  results unchanged in character (clean null, statistically as
+  expected), numbers updated throughout.
+- **★★★ Found, and fixed, a serious LaTeX bug before it reached Glenn**:
+  the growing Table 1 (92 rows) was silently overflowing off the bottom
+  of the page in a plain `table*` environment — LaTeX does not
+  automatically paginate floats, so roughly the second half of the table
+  was being rendered *outside the visible page area* with no error or
+  warning (`Overfull \vbox` was not triggered; the float simply extended
+  past the page boundary). First attempted the standard fix
+  (`xltabular`, combining `longtable`-style pagination with `tabularx`'s
+  auto-wrapping `X` column) but found this to be **fundamentally
+  incompatible with `openjournal.cls`** (a revtex4-1-derived class) —
+  reproducibly isolated via binary search down to a 1-row minimal test
+  case (`Undefined control sequence` / `Missing \endgroup` errors
+  originating in `array.sty`'s low-level preamble-parsing macros).
+  Reverted to the traditional, reliable fix instead: manually split the
+  table into 4 separate `table*` blocks (never splitting a single
+  target's multi-row block across parts), letting LaTeX's normal float
+  placement handle pagination as it always has. Verified rigorously:
+  confirmed all 92 rows, including the final row, are present and
+  correctly rendered across all 4 parts before pushing.
+- Verified with the standard compile-3x + zero-`??` + visual-render
+  discipline, **applied to every one of the 4 table parts individually**
+  given the pagination bug just found. 14 pages, clean, only the same
+  negligible pre-existing 2.98pt title-page `Overfull \vbox`.
+- Pushed to `Tilanthi/SETI` at `paper_20pc/v2.07/`, with the full
+  per-target aggregate JSON and the two fixed pipeline scripts
+  (`process_one_target.sh`, `calibrate_generic.py`) pushed alongside in
+  `paper_20pc/v2.07_analysis/` for transparency.
+
+## Planned for v2.08+
 - Add the full ALMA project-code list to the Acknowledgements section
   (deferred again — still meaningful to wait until survey completion so
   it's compiled once, not incrementally).
 - Populate a quantitative transmitter-prevalence bound (Wright et al. 2018 /
   Margot et al. 2023 frameworks) once a statistically meaningful fraction
   of the 120-target sample is complete — explicitly deferred in §6 as
-  premature at n=21.
-- First real closure-phase-vetting result and first population-anomaly
-  flag, whenever either actually triggers.
-- Broader, multi-band injection-recovery campaign (beyond the single-target
-  v2.06 pilot).
-- Re-run the frequency-occupancy and chirp/periodicity checks as the
-  survey grows past its current 41-target/101-target-spw state — both
-  gain statistical power with N and cost nothing to re-run incrementally.
-- Re-investigate and reprocess the 4 crossmatch-error target/bands found
-  in v2.05 (SCR J1845-6357, G 9-38A, G 9-38B, Wolf 358).
+  premature at n=36.
+- Re-investigate and reprocess the 23 crossmatch-error target/bands
+  (4 from v2.05 + 19 newly found in v2.07).
+- Re-run the frequency-occupancy and chirp/periodicity checks again as
+  the survey grows further — both gain statistical power with N and cost
+  nothing to re-run incrementally.
+- Broader, multi-band injection-recovery campaign (beyond the
+  single-target v2.06 pilot).
+- Refresh Table 1 again once the live driver + chain-repeat pass finish
+  their current run (survey was at 36 valid / ~96 attempted target/bands
+  at the time of writing, still climbing).
 - Consider extending to 30/40/50 pc per the roadmap already stated in the
   paper, once the 20 pc sample is complete.
 - Refresh Table 1 with the ~20 additional target/bands completed by the
