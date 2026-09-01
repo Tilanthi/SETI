@@ -532,26 +532,61 @@ Paper II's actual results/discussion/conclusions sections are added.
   (`process_one_target.sh`, `calibrate_generic.py`) pushed alongside in
   `paper_20pc/v2.07_analysis/` for transparency.
 
-## Planned for v2.08+
+## v2.08 (2026-09-01)
+- **Data refresh, mainly triggered by the main 120-star driver finishing
+  its full first pass** (146/146 planned target/bands attempted, after
+  48 hours; the queued multi-spw repeat pass for the legacy 19 has now
+  started). Table 1 grew 36→37 target/bands: **η Corvi** (Band 8, the
+  survey's first Band-8/~480-495 GHz target — a well-known, extensively
+  studied debris-disc system) added as new; **HD 53143** upgraded from
+  its old single-window entry to its full 4-window result.
+- Recomputed statistics: EIRP now 1.6e13–7.1e16 W (median 5.2e14 W — the
+  new ceiling set by η Corvi, whose combination of larger distance,
+  coarse channels, and ALMA's less sensitive Band-8 receivers gives
+  markedly shallower limits than anything searched so far; explained
+  explicitly in §5.1 so it doesn't read as an anomaly). Continuum 12
+  detections / 25 non-detections (deepest UL unchanged: TRAPPIST-1 B3 at
+  0.036 mJy). Exoplanet-host subsample now 11 of 29 distinct stars (38%).
+- Chirp/periodicity and frequency-occupancy checks re-run on the now
+  much larger dataset (122 retained spectra, up from 91; 144 target/spw
+  results, up from 113) — same clean-null character, numbers refreshed.
+- **A new, distinct data-quality issue found and handled carefully**:
+  γ Lupi (Band 6) is a genuine *partial*-crossmatch case (most spectral
+  windows/epochs in its MOUS correctly point at the star, a handful
+  don't — correctly separated out per-window by the existing pointing
+  check, unlike the 23 excluded target/bands which are wrong in their
+  entirety). However, one of the windows that *did* pass produced an
+  implausibly deep EIRP limit derived from only 12 seconds of on-source
+  integration (a probable low-statistics artefact, not a real result) —
+  investigated in detail (checked continuum notes confirmed the imaged
+  epochs are the correctly-pointed ones) before deciding: **withheld
+  from this version pending closer inspection**, reported openly as a
+  new, separate category from the 23 crossmatch exclusions, rather than
+  either silently including the suspect number or silently dropping the
+  target without explanation.
+- Verified with the standard compile-3x + zero-`??` + visual-render
+  discipline, checking every table page individually given the v2.07
+  pagination scare. 15 pages, clean.
+- Pushed to `Tilanthi/SETI` at `paper_20pc/v2.08/`, with the updated
+  per-target aggregate JSON pushed alongside in `paper_20pc/v2.08_analysis/`.
+
+## Planned for v2.09+
 - Add the full ALMA project-code list to the Acknowledgements section
   (deferred again — still meaningful to wait until survey completion so
   it's compiled once, not incrementally).
 - Populate a quantitative transmitter-prevalence bound (Wright et al. 2018 /
   Margot et al. 2023 frameworks) once a statistically meaningful fraction
   of the 120-target sample is complete — explicitly deferred in §6 as
-  premature at n=36.
+  premature at n=37.
 - Re-investigate and reprocess the 23 crossmatch-error target/bands
-  (4 from v2.05 + 19 newly found in v2.07).
+  (4 from v2.05 + 19 newly found in v2.07), plus resolve γ Lupi's
+  partial-crossmatch/short-integration data-quality question.
 - Re-run the frequency-occupancy and chirp/periodicity checks again as
   the survey grows further — both gain statistical power with N and cost
   nothing to re-run incrementally.
 - Broader, multi-band injection-recovery campaign (beyond the
   single-target v2.06 pilot).
-- Refresh Table 1 again once the live driver + chain-repeat pass finish
-  their current run (survey was at 36 valid / ~96 attempted target/bands
-  at the time of writing, still climbing).
+- Refresh Table 1 again once the multi-spw repeat pass (now running)
+  finishes reprocessing the remaining legacy target/bands.
 - Consider extending to 30/40/50 pc per the roadmap already stated in the
   paper, once the 20 pc sample is complete.
-- Refresh Table 1 with the ~20 additional target/bands completed by the
-  live driver since v2.05/v2.06 (currently at 41 completed target/bands
-  vs. 21 reflected in the current table).
