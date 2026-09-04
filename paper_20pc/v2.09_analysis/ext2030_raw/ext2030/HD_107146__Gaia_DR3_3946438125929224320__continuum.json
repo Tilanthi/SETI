@@ -1,0 +1,10 @@
+{
+ "star_name": "HD 107146 (Gaia DR3 3946438125929224320)",
+ "image_rms_mJy": 0.005146756848262157,
+ "image_peak_mJy": 0.019601253370638005,
+ "peak_snr": 3.808466911315918,
+ "peak_offset_arcsec": 6.363961030678928,
+ "continuum_source_detected": false,
+ "sig_threshold": 5.0,
+ "pos_tol_arcsec": 3.0
+}

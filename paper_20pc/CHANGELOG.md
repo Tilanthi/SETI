@@ -213,380 +213,116 @@ Paper II's actual results/discussion/conclusions sections are added.
   clean, 1 negligible page-break `Overfull \vbox`.
 - Pushed to `Tilanthi/SETI` at `paper_20pc/v2.03/`.
 
-## v2.04 (2026-08-30)
-- **Pipeline extended to search every configured spectral window, not just
-  the finest one.** `select_finest_spw.py` rewritten to enumerate *all*
-  distinct spws per observation (deduplicated across repeated execution
-  blocks, capped at 8/target to bound compute cost), splitting each to
-  its own MS; `process_one_target.sh` now loops the extract+search steps
-  once per spw (via the pre-existing `SETI_MS`/`SETI_SFX` env-var
-  override mechanism, previously used only for injection tests);
-  `seti_drift_search_generic.py`'s closure-phase-vetting MS path fixed to
-  respect the `SETI_MS` override (was hardcoded, would have silently
-  vetted against the wrong MS once multi-spw naming took effect).
-  `SETI_SEARCH_FAILED` now only fires if *all* spws for a target fail,
-  not just the first.
-- **19 already-completed targets identified as needing full
-  reprocessing** (not cheap re-analysis) since their raw per-spw MS data
-  had already been cleaned up under the project's disk-discipline policy
-  before the multi-spw extension existed. Confirmed with Glenn
-  ("Yes, they should be requeued") and requeued: DONE/failure markers
-  cleared for all 19, `driver_summary_master20pc.json` trimmed
-  accordingly, and a `chain_multispw_repeat.sh` wrapper launched that
-  waits for the main 120-target driver to finish before automatically
-  re-running the multi-spw pipeline against just those 19.
-- **Table 1 (Appendix) restructured** per direct instruction:
-  - Added a **Spectral Type** column immediately after Dist. (pc),
-    sourced from Gaia GSP-Phot-derived Teff/radius where available and a
-    literature-value override (`LITERATURE_SPTYPE`) for five well-known
-    stars lacking Gaia atmospheric parameters (Wolf 359, Sirius B, and
-    the UV Ceti AB pair), each individually WebSearch-verified against a
-    named literature source.
-  - **Band numbers now given without the "B" prefix** (e.g. "6" not
-    "B6") to avoid visual confusion with B-type spectral classes now
-    sitting in the adjacent column; caption states this explicitly.
-    Also backfilled 5 previously-blank Band cells (tau Ceti, GJ 581,
-    GJ 849, HD 285968, HD 53143 — all inferred as Band 6 from their
-    211–275 GHz observed frequency range, consistent with the pipeline's
-    own band-edge lookup table).
-  - **"Cand." column dropped** (redundant with the Notes-column flag
-    already given for the one automatically-flagged candidate).
-  - **Flux and RMS columns swapped** so Flux (mJy) now precedes RMS
-    (mJy).
-  - Notes column and Appendix intro text updated to explicitly flag,
-    per-row, which of the 19 target/bands are legacy single-window
-    results now queued for multi-window reprocessing.
-- §4 (Data and methodology) rewritten to describe the new multi-window
-  search explicitly (superseding the old "we search only the single
-  finest-resolution spectral window" statement), and to note that once
-  several windows have been searched per target, Figure 1 will continue
-  to plot only the single deepest (lowest EIRP$_{\rm min}$) result per
-  target/band, to avoid crowding the plot — per direct instruction.
-- Verified with the standard compile-3x + zero-`??` + visual-render
-  discipline (rendered and inspected the table and Figure 1 pages
-  directly, not just grepped the log). 10 pages, clean, only a
-  negligible 4pt page-break `Overfull \vbox` and expected underfull
-  hboxes from narrow Notes-column word-wrapping in `tabularx`.
-- **Live validation gap, noted honestly**: the new multi-spw search code
-  has been deployed and syntax-checked but had not yet been exercised
-  end-to-end on real ALMA data at the time of this push — the one live
-  target being processed under the new code (`LSR_J1835-3259`, Band 3)
-  turned out to be an unusually large/complex case (33 GB raw MS, ~65
-  configured spws) still in calibration after 40+ minutes. Will confirm
-  correctness on the next update once that target (or a smaller one)
-  completes, before treating the 19-target repeat pass as trustworthy.
-- Pushed to `Tilanthi/SETI` at `paper_20pc/v2.04/`.
+## v2.04-v2.08 (2026-08-30 -- 2026-09-01)
+- **Retroactive summary** (this file was not updated incrementally during
+  these versions; full detail for each is in `/workspace/MEMORY.md`,
+  search "v2.04" through "v2.08" -- reconstructed here briefly so the
+  version history stays traceable from this file alone):
+  - **v2.04**: Table 1 restructured to a full spectral-window-per-row
+    format (previously one row per target); added N$_{\rm spw}$ column.
+  - **v2.05**: abstract cut to ~1/3 length per journal guidance; found
+    and excluded the first batch of 4 crossmatch-error target/bands.
+  - **v2.06**: implemented full multi-spw search (previously only the
+    single finest-resolution window per target was searched).
+  - **v2.07**: full data refresh (21→36 valid target/bands incl.
+    TRAPPIST-1); second candidate flag (AU Mic, judged not credible);
+    found 19 MORE crossmatch-error target/bands beyond the original 4,
+    plus the bookkeeping bug that would have permanently excluded them
+    from retry.
+  - **v2.08**: main 120-star driver finished its full first pass
+    (146/146 attempted, 68 succeeded at process level); added eta Corvi
+    (first Band-8 target); found and carefully handled a new
+    data-quality category (gamma Lupi partial-crossmatch + an
+    implausible short-integration result, withheld pending
+    investigation).
 
-## v2.05 (2026-08-30)
-- **Abstract cut to ~1/3 length** (316 → 111 words), per direct instruction.
-- **Citation fix**: `(White & Dey, in prep.; archived at
-  https://github.com/Tilanthi/SETI)` → `\citep{White2026}` = "(White 2026)";
-  added `White G. J., 2026, MNRAS, submitted` to the bibliography.
-- Removed the parenthetical `(an "ichnoscale" of unity)` aside in §2.5.
-- **New methodology paragraph**: automated spectral-line-contamination
-  check. Added `check_known_line()` to `seti_drift_search_generic.py`,
-  cross-referencing every hit's frequency (at its best-fit drift rate)
-  against the same known-molecular-transition table already used by
-  `continuum_map_generic.py`'s line exclusion; a hit within one channel
-  width of a known line AND consistent with zero drift is now
-  automatically flagged `likely_line_contamination` and excluded from
-  `credible_technosignature_candidate` — previously this check was only
-  ever done by hand, once, for the one hit produced so far (β Pic CO(1-0)).
-- **New methodology paragraph**: confirmed and made explicit (i) the
-  drift/frequency-shift correction has no dependence on the target's
-  position relative to the phase centre (verified directly from the
-  code: the trial-drift shift grid depends only on elapsed time/channel
-  width, applied identically to every sky position); (ii) Earth's own
-  orbital-motion-induced drift (~0.02 Hz/s/GHz peak) is >100x smaller
-  than the 12 Hz/s/GHz generic search margin, so needs no separate
-  correction.
-- **Primary-beam correction — found not implemented, now added**: neither
-  the EIRP nor the continuum pipeline had ever applied a primary-beam
-  correction (`tclean(..., pbcor=False)`, and no PB term anywhere in the
-  DFT-based narrowband extraction). Added an explicit Gaussian-PB
-  correction (`1/exp(-4 ln2 (offset/FWHM)^2)`) to both
-  `seti_drift_search_generic.py` (new `S_min_measured_Jy`,
-  `primary_beam_offset_arcsec`, `primary_beam_atten`,
-  `primary_beam_corrected` fields; `S_min_Jy`/`EIRP_min_W` now
-  PB-corrected) and `continuum_map_generic.py` (new
-  `primary_beam_correction`/`primary_beam_corrected` fields; `rms`/`peak`
-  corrected before both the PNG title and JSON summary are written).
-  Quantified impact: negligible (<0.3%) for nearly all targets (offsets
-  ≲2″ against 17–70″ beams), but 3.6–16% for Sirius~B specifically
-  (7–8″ offset, high proper motion since the archival epoch) — its three
-  Table 1 rows (B3/B4/B5) recomputed by hand with the correct factor,
-  since its raw MS data has already been cleaned up and can't be cheaply
-  rerun. UV Ceti's own ~2″ offset gives a merely 0.2% (negligible)
-  correction, confirmed and left unchanged.
-- **Found and fixed a second live pipeline bug while implementing the
-  above**: `continuum_map_generic.py` had no equivalent of the
-  narrowband path's crossmatch/pointing sanity check. Caught live:
-  G~9-38A/B produced a bogus ~8 Jy "detection" (wildly inconsistent with
-  every other continuum measurement in the survey, all sub-10 mJy) from
-  a MOUS whose real pointing is ~3150″ from the star (>40x its own 70″
-  beam) — an upstream target-MOUS crossmatch error, not a real result.
-  Also caught for SCR~J1845-6357 (offset 205499″) and Wolf~358
-  (offset 65590″, a *different* star from Wolf 359, dist 6.97 pc vs
-  2.41 pc). Added the same `>2x primary beam FWHM → abort` check already
-  used by `seti_extract_generic.py`. These 4 target/bands are excluded
-  from Table 1 and all statistics in this version; flagged in §5/§6 for
-  re-investigation and reprocessing against a corrected dataset.
-- **Table 1 updated with new/corrected values**:
-  - "NAME Barnard's star" → "Barnard's Star" (the literal SIMBAD
-    identifier-type prefix had leaked into the target list/paper).
-  - Sirius B (B3/B4/B5): primary-beam-corrected EIRP/Flux/RMS (see above).
-  - GJ 581: now 4 rows (all configured spectral windows searched, no
-    candidate in any) — the first target/band with full multi-window
-    coverage under the pipeline extended in v2.04.
-  - tau Ceti: refreshed with a freshly-reprocessed measurement (same
-    correlator setup, consistent with the prior value).
-  - Two new target/bands added: **HD 33793** = Kapteyn's Star (subdwarf
-    sdM1, 3.93 pc) and **Wolf 28** = Van Maanen's Star (white dwarf DZ7,
-    4.31 pc) — both literature spectral types confirmed via WebSearch.
-  - Table caption/intro clarify EIRP$_{\rm min}$'s exact definition
-    (minimum EIRP for a 5σ detection, same threshold and PB-correction
-    as the continuum column) per direct instruction.
-  - All summary statistics in Abstract/§5/§6 recomputed for consistency:
-    21 of 120 target/bands (was 19); EIRP median 3.1e14 W (was 2.1e14,
-    driven up mainly by GJ 581's four new ~6e14 W values); continuum
-    5 detections/16 non-detections (was 5/14), median UL 0.55 mJy.
-- **Figure 1**: Earth-radio-leakage reference line removed from the EIRP
-  panel (now shown only in caption + main text) so the y-axis auto-scales
-  to the actual data range; Arecibo-radar line kept. Regenerated with all
-  19 current EIRP points (deepest-per-spw for GJ 581, per instruction)
-  and 21 continuum points.
-- Verified with the standard compile-3x + zero-`??` + visual-render
-  discipline; caught and fixed one caption self-reference bug
-  (`\S\ref{app:table}` should have been `\S\ref{sec:method}`) and one
-  factual slip (initially over-stated the negligible UV Ceti PB
-  correction as if it matched Sirius B's) before finalizing. 11 pages.
-- Live cluster validation: the new `continuum_map_generic.py` crossmatch
-  check and PB correction have been deployed and syntax/unit-tested but
-  not yet exercised end-to-end on a fresh live target at push time (the
-  fix landed after GJ_581_B6/Wolf_358_B7 had already completed under the
-  pre-fix code) — flagged honestly as an open verification item, same as
-  the analogous v2.04 gap, which *was* subsequently confirmed correct.
-- Pushed to `Tilanthi/SETI` at `paper_20pc/v2.05/`.
+## v2.09 (2026-09-04)
+- **Full data refresh**: re-ran the aggregation against current cluster
+  data. Main $\leq$20pc sample grows from 37→50 target/bands (28→39
+  unique stars); 22 target/bands new or reprocessed this version. EIRP
+  limits now $1.7\times10^{13}$--$7.1\times10^{16}$W (median
+  $3.1\times10^{14}$W); continuum 14 detections / 33 non-detections
+  (median UL 0.52 mJy, was 0.56).
+- **NEW: preliminary 20-30 pc extension appendix** (Appendix B), per
+  Glenn's request. Investigated what "the additional searches out to 30
+  pc" actually are: **there is no actively-maintained, parallel 20-30pc
+  campaign** -- only archived metadata from the older, non-distance-limited
+  pre-pivot survey (`archive_gt20pc_metadata/`). Identified the 12 stars
+  in that archive falling in 20-30pc, characterised each honestly: 5
+  usable (narrowband+continuum), 2 continuum-only (narrowband failed), 5
+  with no usable data at all (calibration/download/governor failures,
+  never retried since that survey was stopped, not paused, at the
+  pivot). Reported as a clearly-separated, explicitly non-volume-complete
+  table -- NOT merged into the main Table 1, and the paper states plainly
+  what it is and isn't.
+- **Candidate-vetting catch (20-30pc data)**: HD 107146's archived result
+  carried `credible_technosignature_candidate=true` (3 hits) but its
+  control-ensemble peak SNR (6.013) is statistically indistinguishable
+  from its source-region peak SNR (6.029) -- applied the same
+  control-ensemble discipline used throughout the main survey and
+  correctly rejected it as non-credible, rather than reporting the raw
+  flag.
+- **Two real pipeline findings, reported with the same rigour as
+  v2.05-v2.08's crossmatch-bug disclosures**:
+  1. A specific spectral window (recurring with byte-identical anomalous
+     parameters: 12.1s on-source vs 393-520s for sibling windows, yet an
+     implausibly *smaller* combined noise estimate) found in TWO
+     independent targets sharing a similar Band-6 correlator setup
+     (HD 10647 and the star catalogued as "gamma Lupi" -- NOT the famous
+     naked-eye B-star of the same name, confirmed via grossly
+     inconsistent Teff/distance). Cross-target recurrence with matching
+     detail elevates this from "one target's odd result" (as left open
+     in v2.08) to a diagnosed, reproducible pipeline defect. Both
+     targets' affected window is excluded, contaminated continuum
+     withheld, other windows retained.
+  2. Confirmed a previously-reported (pre-v2.08) continuum-imaging gap is
+     STILL outstanding: Giclas 9-38A/B remains unfixed and still produces
+     a spurious ~8 Jy, 86sigma "detection" at an offset the code reports
+     as 0.00 arcsec (actually ~52 arcmin off, since the continuum step
+     lacks the narrowband step's pointing-offset guard). By contrast,
+     confirmed that most of the OTHER crossmatch-affected targets
+     (SCR J1845-6357, Wolf 358, eps Eridani, and others) have since been
+     successfully reprocessed and now appear in Table 1 with legitimate
+     data -- the retry mechanism is working as designed.
+  3. **Separately, an operational (not scientific-pipeline) bug**: this
+     version's cluster driver relaunch (following the exact command given
+     in the task brief) omitted required `SETI_TARGET_CSV`/`SETI_BAND_MOUS`
+     env vars and silently ran the OLD non-volume-limited target list for
+     ~20 min before being caught and fixed. See `STATUS.md` and
+     `/workspace/MEMORY.md` for detail; does not affect any number
+     reported in this paper.
+- Exoplanet-host subsample: 13/41 unique stars (32%, 33 planets), adding
+  eps Eridani and HD 69830.
+- Three supplementary-analysis subsections (molecular-line catalogue,
+  chirped-drift/periodicity, frequency-occupancy) explicitly note their
+  quoted counts are carried over unchanged from v2.08 -- re-running them
+  against the larger sample needs the original scripts, not available
+  this session; deferred honestly to next version rather than
+  guessed/fabricated.
+- Verified with the full discipline: rendered and eyeballed every page
+  (not just first/last) via `pdftoppm`; `grep "Overfull \hbox"` = 0
+  after one minor rewording fix; 0 unresolved `??`/undefined refs;
+  clean-from-scratch rebuild MD5-verified before packaging. 17 pages
+  (was 15).
+- Figures: EIRP/continuum-vs-distance figure regenerated from fresh
+  aggregate data with the 7 20-30pc points overlaid as visually distinct
+  open orange diamonds, clearly labelled as the preliminary extension in
+  both the legend and caption. Sample-distance-distribution figure
+  (Fig. 2) carried forward unchanged (its underlying 2357-star/120-star
+  lists did not change this version).
+- Pushed to `Tilanthi/SETI` at `paper_20pc/v2.09/`; aggregate JSON and
+  generation scripts pushed to `paper_20pc/v2.09_analysis/` for
+  transparency, following the established pattern.
 
-## v2.06 (2026-08-31)
-- **Four new/extended analyses added**, per Glenn's explicit request for
-  "Tier 1" scientific-usefulness additions that reuse already-downloaded/
-  already-retained data at essentially zero marginal cost:
-  1. **Injection-recovery sensitivity validation** (§4.4): synthetic
-     narrowband tones (1–10× the noise level, 24 trials, 3 channel
-     positions per amplitude) injected into Proxima Cen's own
-     already-validated calibrated MS (reusing the extraction code's
-     existing `SETI_INJECT` mechanism) and recovered through the
-     unmodified search pipeline. Finding: recovered SNR is ~10% below
-     injected at high SNR (small, expected coherence loss); the actual
-     50%-recovery point sits at injected SNR≈6, not the nominal 5σ design
-     value — i.e. our quoted 5σ limits are, if anything, mildly
-     *conservative*. Single-target pilot; broader multi-band campaign
-     recommended as future work.
-  2. **Chirped-drift + periodicity re-analysis of retained spectra**
-     (§4.5, new `reanalyze_srcspec.py`): extends the primary linear-drift
-     search with (i) a quadratic-drift (chirp) term and (ii) a
-     time-domain FFT periodicity/pulse search, both run entirely off the
-     already-retained `*_srcspec.npz` files (star + 8 controls) — no
-     re-download, no CASA. Applied to all 79 retained spectra to date:
-     8 (10%) chirp-credible, 10 (13%) periodicity-credible, both
-     statistically indistinguishable from the ~11% expected purely by
-     chance from a 1-vs-8-control "max" comparison. Clean null result;
-     validates the star-vs-control differencing design (caught, and
-     correctly rejected, one large but *shared* systematic in a first
-     single-file test, confirming controls and star are compared fairly).
-  3. **Cross-target frequency-occupancy RFI check** (§4.6, new
-     `frequency_occupancy.py`): since this single-pointing archival
-     survey has no ON/OFF cadence, uses the fact that many unrelated
-     targets share near-identical correlator setups instead — flags any
-     frequency where ≥2 distinct targets' peak channel or formal hit
-     coincide within 5 MHz. Applied to 101 target/spw results (60 formal
-     hits): zero coincidences found to date (a modest, currently
-     under-powered but genuinely clean null result that strengthens as
-     the survey grows and more targets share a given tuning).
-  4. **Serendipitous molecular-line catalogue** (§5.3): the continuum
-     line-exclusion step's outlier list, aggregated across all completed
-     targets as a free byproduct — 18 outlier groups, 12 unidentified
-     (likely noise), 6 plausibly real: confirmed β Pictoris CO(1–0)/
-     CO(2–1) (already known, matches literature), a tentative few-channel
-     CO(2–1)-consistent feature towards HD 285968 (reported honestly as
-     unconfirmed, not a detection), and a likely-spurious single-channel
-     SiO(5–4)-adjacent bump towards HD 53143 (large offset, low
-     significance, flagged as probably not real).
-- **Two subsample framing notes added to Discussion**: (a) exoplanet-host
-  subsample — 8 of 18 distinct stars processed to date (44%, 16 planets
-  total) are confirmed exoplanet hosts, extractable directly from Table 1
-  without compromising the volume-limited framing of the main sample;
-  (b) white-dwarf subsample — Sirius B and Van Maanen's Star (Wolf 28)
-  are white dwarfs included only by accident of ALMA coverage, tied to
-  the small but active post-main-sequence-SETI literature (new citation:
-  Huang, Tao & Zhang 2026, ApJ, 1006, 9, a very recent chemical-pollution
-  white-dwarf technosignature search — different modality, same
-  motivating question).
-- Abstract, Introduction roadmap, and Conclusions updated to reflect all
-  four new analyses (now "four supplementary analyses" throughout,
-  distinguished from the original two — closure-phase vetting and the
-  population-anomaly check — which remain separately described).
-- All underlying data products and analysis scripts pushed alongside the
-  paper in `paper_20pc/v2.06_analysis/` for transparency/reproducibility:
-  `reanalyze_srcspec.py`, `frequency_occupancy.py`, `run_injection_test.sh`,
-  plus the raw JSON/JSONL results each produced.
-- Verified with the standard compile-3x + zero-`??` + visual-render
-  discipline. 12 pages, clean, no overfull boxes, no undefined refs.
-- Pushed to `Tilanthi/SETI` at `paper_20pc/v2.06/`.
-
-## v2.07 (2026-08-31)
-- **Full data refresh**: Table 1 grew from 21 to 36 valid target/bands
-  (92 rows; 28 distinct stars), reflecting everything the live 120-star
-  driver had completed by the time of writing. Fourteen new target/bands
-  added for the first time (61 Vir, AU Mic, HD 207129, HD 38858, HR 1010
-  ×2 bands, the AT Mic pair, **TRAPPIST-1** ×3 bands, γ Leporis ×2 bands,
-  γ Virginis ×2 bands); three previously single-window entries (GJ 849,
-  HD 285968, HD 23484) expanded to their full multi-spw results.
-  Spectral types assigned via Teff-interpolation against a documented
-  Pecaut & Mamajek main-sequence table (consistent with the method
-  already used for radii), with literature overrides for well-known
-  cases (TRAPPIST-1 M8V, AU Mic M1Ve, γ Vir F0V, 61 Vir G5V).
-- **★ Second automated candidate flag: AU Mic, Band 6, 230.83 GHz.**
-  Investigated in full before writing anything: does not coincide with
-  any catalogued line (287 MHz from nearest, CO(2-1)); closure phase
-  consistent with a point source; but the gating statistic (star
-  check-ring peak 5.97 vs control-ensemble peak 5.85) differs by only
-  0.12 — well within the expected false-positive rate for a survey
-  running many thousands of independent trials. Judged not credible;
-  flagged prominently and honestly rather than either hidden or
-  oversold, with AU Mic's well-known high flare activity noted as by far
-  the more parsimonious explanation if the excess turns out to be real.
-  Cross-checked against the frequency-occupancy tool: does not recur at
-  any other target.
-- **★★ Major finding: a bookkeeping bug was silently marking crossmatch-failed
-  target/bands as permanently "complete".** While building this update's
-  aggregate dataset, found 19 additional target/bands (beyond the 4
-  reported in v2.05: e.g. ε Eridani, HD 188088, LHS 1140) where the
-  pointing sanity check had correctly intercepted a wrong-MOUS assignment
-  on *both* the narrowband and continuum steps (zero bogus output
-  produced, unlike the earlier 4) — but `process_one_target.sh` still
-  unconditionally `touch`ed `logs/DONE` at the end regardless, which
-  would have permanently excluded these stars from ever being retried
-  once a corrected dataset association becomes available. **Fixed**:
-  `DONE` is no longer written if both `SETI_SEARCH_FAILED` and
-  `CONTINUUM_MAP_FAILED` are set (i.e. zero science product resulted).
-  Total crossmatch-excluded target/bands now 23 of the ~96 attempted in
-  this phase (roughly half) — a materially higher rate than previously
-  visible, now stated plainly in the paper (§6) as a finding in its own
-  right, not just a data-quality footnote.
-- **A third bug found and fixed**: `calibrate_generic.py`'s
-  `gentle_download()` crashed with an opaque, uncaught
-  `TypeError: expected str, bytes or os.PathLike object, not NoneType`
-  whenever a MOUS's file listing had no `_auxiliary.tar` entry at all
-  (`aux_file is None`, called unconditionally). Now fails cleanly with an
-  informative message instead, correctly bucketed with the other
-  "no calibration recipe available" cases. Found live (LP 649-72, and
-  G 70-43/44, which share one MOUS).
-- **Download budget raised 45→85 GB** per Glenn's explicit instruction
-  ("you can exceed the self-imposed download-budget cap if need be"),
-  recovering 4 previously-unreachable targets (HD 69830, GJ14, G 3-14,
-  1RXS J0336+3118, whose smallest available EB ranges 50–67 GB). Verified
-  this doesn't bypass real protection first: a *separate*, always-on
-  check against live free disk space (100 GB margin) and the outer
-  driver's emergency watchdog (kills any target if free space drops
-  below 80 GB, polled every 30s) remain fully intact regardless of the
-  fixed cap's value.
-- **Figure 1 and all summary statistics recomputed**: EIRP now
-  1.6e13–6.3e15 W (median 4.2e14 W, up from 3.1e14 — driven by several
-  new, more distant targets with intrinsically shallower limits);
-  continuum 12 detections / 24 non-detections (up from 5/16), deepest UL
-  now 0.036 mJy (TRAPPIST-1 Band 3, the tightest continuum limit in the
-  survey to date, replacing the previous 0.16 mJy record).
-  Exoplanet-host subsample grew to 11 of 28 stars (39%, 30 planets),
-  now headlined by TRAPPIST-1's 7 planets.
-- Chirp/periodicity and frequency-occupancy checks re-run on the larger,
-  current dataset (91 retained spectra; 113 target/spw results) —
-  results unchanged in character (clean null, statistically as
-  expected), numbers updated throughout.
-- **★★★ Found, and fixed, a serious LaTeX bug before it reached Glenn**:
-  the growing Table 1 (92 rows) was silently overflowing off the bottom
-  of the page in a plain `table*` environment — LaTeX does not
-  automatically paginate floats, so roughly the second half of the table
-  was being rendered *outside the visible page area* with no error or
-  warning (`Overfull \vbox` was not triggered; the float simply extended
-  past the page boundary). First attempted the standard fix
-  (`xltabular`, combining `longtable`-style pagination with `tabularx`'s
-  auto-wrapping `X` column) but found this to be **fundamentally
-  incompatible with `openjournal.cls`** (a revtex4-1-derived class) —
-  reproducibly isolated via binary search down to a 1-row minimal test
-  case (`Undefined control sequence` / `Missing \endgroup` errors
-  originating in `array.sty`'s low-level preamble-parsing macros).
-  Reverted to the traditional, reliable fix instead: manually split the
-  table into 4 separate `table*` blocks (never splitting a single
-  target's multi-row block across parts), letting LaTeX's normal float
-  placement handle pagination as it always has. Verified rigorously:
-  confirmed all 92 rows, including the final row, are present and
-  correctly rendered across all 4 parts before pushing.
-- Verified with the standard compile-3x + zero-`??` + visual-render
-  discipline, **applied to every one of the 4 table parts individually**
-  given the pagination bug just found. 14 pages, clean, only the same
-  negligible pre-existing 2.98pt title-page `Overfull \vbox`.
-- Pushed to `Tilanthi/SETI` at `paper_20pc/v2.07/`, with the full
-  per-target aggregate JSON and the two fixed pipeline scripts
-  (`process_one_target.sh`, `calibrate_generic.py`) pushed alongside in
-  `paper_20pc/v2.07_analysis/` for transparency.
-
-## v2.08 (2026-09-01)
-- **Data refresh, mainly triggered by the main 120-star driver finishing
-  its full first pass** (146/146 planned target/bands attempted, after
-  48 hours; the queued multi-spw repeat pass for the legacy 19 has now
-  started). Table 1 grew 36→37 target/bands: **η Corvi** (Band 8, the
-  survey's first Band-8/~480-495 GHz target — a well-known, extensively
-  studied debris-disc system) added as new; **HD 53143** upgraded from
-  its old single-window entry to its full 4-window result.
-- Recomputed statistics: EIRP now 1.6e13–7.1e16 W (median 5.2e14 W — the
-  new ceiling set by η Corvi, whose combination of larger distance,
-  coarse channels, and ALMA's less sensitive Band-8 receivers gives
-  markedly shallower limits than anything searched so far; explained
-  explicitly in §5.1 so it doesn't read as an anomaly). Continuum 12
-  detections / 25 non-detections (deepest UL unchanged: TRAPPIST-1 B3 at
-  0.036 mJy). Exoplanet-host subsample now 11 of 29 distinct stars (38%).
-- Chirp/periodicity and frequency-occupancy checks re-run on the now
-  much larger dataset (122 retained spectra, up from 91; 144 target/spw
-  results, up from 113) — same clean-null character, numbers refreshed.
-- **A new, distinct data-quality issue found and handled carefully**:
-  γ Lupi (Band 6) is a genuine *partial*-crossmatch case (most spectral
-  windows/epochs in its MOUS correctly point at the star, a handful
-  don't — correctly separated out per-window by the existing pointing
-  check, unlike the 23 excluded target/bands which are wrong in their
-  entirety). However, one of the windows that *did* pass produced an
-  implausibly deep EIRP limit derived from only 12 seconds of on-source
-  integration (a probable low-statistics artefact, not a real result) —
-  investigated in detail (checked continuum notes confirmed the imaged
-  epochs are the correctly-pointed ones) before deciding: **withheld
-  from this version pending closer inspection**, reported openly as a
-  new, separate category from the 23 crossmatch exclusions, rather than
-  either silently including the suspect number or silently dropping the
-  target without explanation.
-- Verified with the standard compile-3x + zero-`??` + visual-render
-  discipline, checking every table page individually given the v2.07
-  pagination scare. 15 pages, clean.
-- Pushed to `Tilanthi/SETI` at `paper_20pc/v2.08/`, with the updated
-  per-target aggregate JSON pushed alongside in `paper_20pc/v2.08_analysis/`.
-
-## Planned for v2.09+
+## Planned for v2.04+
 - Add the full ALMA project-code list to the Acknowledgements section
   (deferred again — still meaningful to wait until survey completion so
   it's compiled once, not incrementally).
 - Populate a quantitative transmitter-prevalence bound (Wright et al. 2018 /
   Margot et al. 2023 frameworks) once a statistically meaningful fraction
   of the 120-target sample is complete — explicitly deferred in §6 as
-  premature at n=37.
-- Re-investigate and reprocess the 23 crossmatch-error target/bands
-  (4 from v2.05 + 19 newly found in v2.07), plus resolve γ Lupi's
-  partial-crossmatch/short-integration data-quality question.
-- Re-run the frequency-occupancy and chirp/periodicity checks again as
-  the survey grows further — both gain statistical power with N and cost
-  nothing to re-run incrementally.
-- Broader, multi-band injection-recovery campaign (beyond the
-  single-target v2.06 pilot).
-- Refresh Table 1 again once the multi-spw repeat pass (now running)
-  finishes reprocessing the remaining legacy target/bands.
+  premature at n=19.
+- First real closure-phase-vetting result and first population-anomaly
+  flag, whenever either actually triggers.
 - Consider extending to 30/40/50 pc per the roadmap already stated in the
   paper, once the 20 pc sample is complete.
