@@ -314,6 +314,82 @@ Paper II's actual results/discussion/conclusions sections are added.
   generation scripts pushed to `paper_20pc/v2.09_analysis/` for
   transparency, following the established pattern.
 
+## v2.10 (2026-09-07)
+- **Headline finding: first-ever ALMA technosignature search of Barnard's
+  Star and Wolf 359.** Investigating why neither of these two very
+  nearby, high-value stars had ever been reached by the pipeline despite
+  deep archival ALMA coverage existing for both revealed a genuine
+  upstream bug: the crossmatch step matching a catalogued star's position
+  to ALMA archive pointings was not propagating the star's Gaia proper
+  motion before matching. For most of the sample this makes no
+  difference, but Barnard's Star (10.4"/yr) and Wolf 359 (4.7"/yr) are
+  respectively the highest- and among the highest-proper-motion stars in
+  the entire 20pc sample -- over the years between the archival
+  observation and the crossmatch, each star had drifted far enough that a
+  real, on-target MOUS was never even offered to the pipeline as a
+  candidate. Fixed and reprocessed: both now have clean Band-6 results
+  (primary-beam offsets 0.54"/0.51", dead-centre; EIRP limits
+  6.2-6.9e13 W and 7.8-9.1e13 W respectively; non-detections throughout).
+  Given real narrative weight in the paper (new §5.1-5.2), not just a
+  table row.
+- **Five further target/bands recovered via two distinct mechanisms**,
+  reported precisely (not conflated): **three** genuine legacy-format
+  recoveries (Wolf 219 [B6], chi01 Ori [B3], eta Cru [B6]) via a
+  newly-built capability to replay pre-automated-pipeline ALMA calibration
+  scripts (`scriptForCalibration.py`) the pipeline previously could not
+  read at all; **two** stale-marker corrections (CD-38 10980 [B6],
+  GL 3379 [B6]) -- modern-format data sitting on stale FAILED markers
+  from an earlier, since-fixed bug, recovered by clearing and retrying.
+  All five yield clean, non-anomalous results; chi01 Ori and eta Cru show
+  modest photospheric continuum detections consistent with their spectral
+  types (G0V, F2V), not anomalous.
+- Two further target/bands (eta Corvi's second band [B7], alongside its
+  already-reported [B8]; HN Lib [B6]; LHS 1140 [B6]) completed in the
+  ordinary course of the survey's continuing progress during this period
+  -- HN Lib and LHS 1140 are both themselves known exoplanet hosts
+  (HN Lib b and LHS 1140 b/c, both habitable-zone candidates), adding a
+  genuine ALMA non-detection to their existing planet-search literature.
+- Several further pipeline reliability bugs found/fixed but not
+  individually detailed in the paper text (consistent with prior
+  versions' level of disclosure for non-result-changing fixes):
+  download-retry state-cleanup, log-file search path, and a
+  cache-corruption issue from an earlier false-success bug.
+- **Ground-truth verification discipline** (per direct instruction not to
+  trust cached numbers): re-derived every statistic from real product
+  files on the cluster via a fresh has_data walk. Found and corrected a
+  real discrepancy in the dispatch's own headline number: a naive global
+  directory scan suggested 72/166 valid target-bands, but this
+  double-counted 9 legacy single-band duplicate directories (superseded
+  by their current multi-band counterparts, e.g. `GJ_581` bare-name dir
+  vs the current `GJ_581_B6`) and included 1 out-of-scope star
+  (HD 45184, not in the <=20pc master list). The correct, verified figure
+  is **60 valid target/bands out of 148 planned** (up from 50/146 in
+  v2.09), 46 unique stars. Reported the correction transparently rather
+  than publishing the higher, uncorrected number.
+- Full data refresh: EIRP now 1.6e13-7.1e16 W (median 2.7e14 W, was
+  3.1e14); continuum 17 detections/40 non-detections (median UL still
+  0.52 mJy); exoplanet-host subsample 15/46 (33%, 36 planets, was
+  13/41). No new credible candidates -- re-verified with the same
+  control-ensemble discipline as before; still only the already-known,
+  already-explained beta Pic CO-line and AU Mic marginal cases.
+- Single-window ("reprocessing queued") target count dropped from 11 to
+  3 ($\tau$ Cet, Kapteyn's Star, Van Maanen's Star) as most of the
+  sample's earliest-processed targets (Proxima Cen, Sirius B, the UV Cet
+  pair, GJ 674, CD-23 14742) were reprocessed to full multi-spw coverage
+  during this period.
+- Verified with the full discipline: page-by-page render review (22
+  pages, up from 17), `grep "Overfull \hbox"` = 0, 0 undefined refs, 0
+  unresolved `??`. Found and fixed a real LaTeX layout defect during
+  verification: with 8 appendix table parts now (up from 5), floating
+  `table*` blocks were drifting past the bibliography's `\begin{document}`
+  boundary, splitting the References section in half around interleaved
+  table floats -- fixed with an explicit `\clearpage` before
+  `\begin{thebibliography}`. Clean-from-scratch rebuild MD5-verified
+  before packaging.
+- Aggregate JSON and generation scripts pushed to
+  `paper_20pc/v2.10_analysis/` for transparency, following the
+  established pattern.
+
 ## Planned for v2.04+
 - Add the full ALMA project-code list to the Acknowledgements section
   (deferred again — still meaningful to wait until survey completion so

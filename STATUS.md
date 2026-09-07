@@ -1,6 +1,30 @@
 # ALMA-SETI on TRAPPIST-1 — live status
 
-## ►► CURRENT: 20pc volume-limited survey + v2.09 paper (2026-09-04 06:20 UTC)
+## ►► CURRENT: 20pc volume-limited survey + v2.10 paper (2026-09-07 06:30 UTC)
+- **Paper**: v2.10 pushed to `Tilanthi/SETI` at `paper_20pc/v2.10/` (see
+  `paper_20pc/CHANGELOG.md` for full detail). Main <=20pc sample: 60/148
+  planned target/bands complete (46 unique stars), up from 50/146 in
+  v2.09. **Headline result: first-ever ALMA technosignature search of
+  Barnard's Star and Wolf 359**, recovered via a proper-motion crossmatch
+  bug fix (both had real, on-target archival coverage that was being
+  silently missed due to their high proper motion). Also recovered: 5
+  more target/bands via two mechanisms (3 legacy-calibration-script
+  replays: Wolf 219, chi01 Ori, eta Cru; 2 stale-marker corrections:
+  CD-38 10980, GL 3379).
+- **Verification note**: the initial dispatch claimed "72/166 valid
+  target-bands" -- independently re-verified against real product files
+  and found this over-counted by including 9 legacy duplicate
+  directories and 1 out-of-scope star; the correct, published figure is
+  60/148. See CHANGELOG.md v2.10 entry for detail.
+- **Backup**: a second full reduced-data backup (superseding/supplementing
+  the 2026-09-04 one) is being built — see `backups/` on GitHub for the
+  current manifest once pushed.
+- Full ongoing DONE/FAILED/candidate monitoring is tracked in
+  `/workspace/MEMORY.md` (top section, search "SETI monitor").
+
+---
+
+## ARCHIVE: 20pc volume-limited survey + v2.09 paper (2026-09-04 06:20 UTC)
 The project has grown well beyond the single-target TRAPPIST-1 work this
 file was originally about (see below for that history). Current live
 state:
