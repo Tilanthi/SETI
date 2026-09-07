@@ -1,3 +1,15 @@
+# SETI reduced-data backups
+
+Two full backups exist, taken at different points in the survey's progress. **The 2026-09-07
+backup is the more recent and complete one** (60/148 valid target/bands vs 50/146); the 2026-09-04
+backup is retained for anyone who specifically needs that earlier snapshot rather than deleted.
+
+- `2026-09-07/README.md` — latest, 60/148 valid target/bands, includes the Barnard's Star / Wolf
+  359 proper-motion crossmatch fix and recovery campaign (paper v2.10)
+- This directory (below) — original, 2026-09-04, 50/146 valid target/bands (paper v2.09-era)
+
+---
+
 # SETI reduced-data backup — 2026-09-04
 
 Full backup of the reduced/processed SETI technosignature search data (results, continuum
