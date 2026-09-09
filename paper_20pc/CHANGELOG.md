@@ -390,6 +390,63 @@ Paper II's actual results/discussion/conclusions sections are added.
   `paper_20pc/v2.10_analysis/` for transparency, following the
   established pattern.
 
+## v3.24 (2026-09-09, Glenn, offline)
+- Versions v2.11-v3.24 were drafted by Glenn offline; no changelog entries
+  were made here for them. v3.24 is the baseline this assistant reproduced
+  byte-for-byte (44/44 pages pixel-identical, full-text SHA256 identical)
+  before taking over editing. Build notes: `v3.24/BUILD_NOTES.md`.
+
+## v3.25 (2026-09-09)
+- Rescoped 0-20 pc -> 0-40 pc (partial, stated explicitly in a new
+  front-matter "Scope of this version" note, since parts of the text still
+  quote the 20 pc counts).
+- Adopted the **symmetric** star-versus-control statistic in place of the
+  earlier region-max statistic; the AU Mic feature is reclassified from
+  candidate to non-candidate as a direct consequence. 44 -> 43 pp.
+
+## v3.26 (2026-09-09)
+- All 13 data figures regenerated on the 40 pc sample from a
+  written-from-scratch, re-runnable `make_figures.py`.
+- **Noise-defect exclusion generalised from a name list to a physical
+  test** (`sigma*sqrt(t_on*dnu_ch)` more than 100x below the sample
+  median): 6 of 448 windows fail, not the 2 named in v3.25. Those 6 had
+  been setting the headline depth; corrected best threshold 1.6e13 W.
+- Two real manuscript defects fixed: an internal author note that was
+  **rendering as body text** on p2 of v3.24 and v3.25, and leaked referee
+  tags. Appendices trimmed 34%. 43 -> 38 pp.
+
+## v3.27 (2026-09-09) - ancillary relocation, main text -20.0%
+- **Structural trim only: no scientific claim, number, figure or table was
+  removed from the paper.** Ancillary and validation material was moved
+  from the main text into the online-only supplementary material, and each
+  moved block left behind a summary carrying every number the main text
+  depends on.
+- Relocated: injection-recovery validation (+ its table and figure);
+  closure-phase vetting; the population-level continuum anomaly screen;
+  the chirp/periodicity screen; the cross-target frequency-occupancy check
+  (+ the scope table); the integration-time audit; the continuum-search
+  results; the serendipitous molecular-line catalogue; the AU Mic
+  localisation/recurrence/statistical-scale detail; the velocity-space
+  line mask's justification; the symmetric-null validation subset; and
+  three false-alarm robustness checks (trials-count reconciliation,
+  stratification, control-ring geometry).
+- Where a summary and its "full specification" appendix existed as separate
+  objects, they are now merged into one online section, so each topic lives
+  in exactly one place.
+- **Lengths**: main text 110,773 -> 88,655 characters (**-20.0%**);
+  printed article (through the last printed appendix) 26 -> 20 pp;
+  main text alone 19 -> 15 pp; total document **38 pp, unchanged** - the
+  material moved, it was not deleted, so the no-growth constraint holds.
+- Verification: 0 undefined references, 0 undefined citations, 0
+  multiply-defined labels, 0 Type3 bitmap fonts, 38/38 pages render.
+  Number-preservation diff against v3.26 shows no numeric value lost.
+- Two pre-existing defects fixed in passing: a `\ref` inside a
+  `\subsection*` moving argument (would have printed an undefined
+  reference), and the claim that "the block-permutation model ... remains
+  the operative release-wide estimate", which contradicted the appendix
+  that retires that ladder - now the empirical star-versus-ring
+  calibration, which is what is actually used.
+
 ## Planned for v2.04+
 - Add the full ALMA project-code list to the Acknowledgements section
   (deferred again — still meaningful to wait until survey completion so
