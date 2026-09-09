@@ -447,6 +447,55 @@ Paper II's actual results/discussion/conclusions sections are added.
   that retires that ladder - now the empirical star-versus-ring
   calibration, which is what is actually used.
 
+## v3.28 (2026-09-09) - referee revision: 40 pc rescope completed, two reports addressed point by point
+
+**The central referee complaint, from both reports: the title and abstract described a
+40 pc sample while every result reported the older <=20 pc one. Fixed by completing the
+rescope.** Every survey number is now recomputed from ONE frozen export by `survey_stats.py`,
+and the figures and tables come from the same export via `make_figures_v328.py` and
+`make_tables_v328.py`, so text, tables and figures cannot drift apart.
+
+- **Sample**: 168-star census; **85 stars / 79 independent systems / 104 of 208 star-band
+  datasets / 417 windows / 100 execution blocks**, 1.30-38.83 pc. 448 rows extracted, minus
+  21 repeats, 6 noise-defect windows and 4 withheld.
+- **The science changed.** Four windows now contain a spatially significant hit, not three:
+  the two known beta Pic CO lines, plus **HD 48370** - whose CO(2-1) emission is
+  independently reported by Cataldi et al. (2023) and attributed there to foreground cloud
+  contamination, an external corroboration the survey recovered blind - plus **CP-72 2713**,
+  a new marginal crossing. **AU Mic is no longer flagged at all.** Zero candidates.
+- **Occurrence limits re-derived and re-ordered** so the completeness-aware number leads:
+  f95 < **6.5%** at EIRP >= 1e16 W (56 injection-calibrated systems), with 3.8% (unit
+  recovery) and 9.0% (uniform 42%) demoted to bracketing calculations. Bayesian cross-check
+  with a uniform prior gives 6.4%. Duty-cycle dependence is now in the abstract, a table and
+  a figure: 13.0% at D=0.5, 65% at D=0.1.
+- **Nomenclature simplified** to hit / spatially significant hit / candidate, so the paper
+  now says "four spatially significant hits, zero candidates" and cannot generate a
+  candidate headline.
+- **AU Mic transparency**: the symmetric criterion's flagged set is a strict SUBSET of the
+  old region-max set - it removed three windows (ALMA J1537-3319, AU Mic, HD 14055), in all
+  of which the star never beat its own control ring. A bias correction, not a power
+  reduction, and demonstrably not tuned to reject one object.
+- **New figures**: frequency x system coverage waterfall; noise-QA showing the 3.2-decade
+  empty gap that justifies the defect cut; drift ceiling vs orbital radius by host mass;
+  occurrence vs EIRP with duty-cycle curves; control-ring exchangeability diagnostics.
+  Removed: the 1 Hz sensitivity extrapolation (referee asked), plus two superseded figures.
+- **New in text**: explicit T* equation, an algorithm box, a nomenclature table, an
+  authoritative survey-state table at the head of Results, a "What this survey does not
+  constrain" box, a priorities-for-next-release section, and a pre-committed look-elsewhere
+  rule across the planned release sequence.
+- **eps Eri Band 6 withheld** rather than published with a provisional 2.9-3.4x primary-beam
+  correction; Sirius B retained with its bounded <=16% systematic stated as such.
+- **Length**: 38 pages, unchanged from v3.27, despite all of the above. Paid for entirely by
+  removing repetition and non-essential wording (~25k characters), not by deleting analyses.
+- **Defects fixed that we had shipped**: `completeness.pdf` in v3.27 did not match its own
+  caption; `pipeline_schematic.pdf` embedded Type 3 fonts (broken text extraction) in
+  v3.24-v3.27; the main text called the retired block-permutation ladder the operative
+  false-alarm model; and a de-duplication rule that materially affects two windows is now
+  disclosed rather than silent.
+- Verification: 0 undefined references, 0 undefined citations, 0 multiply-defined labels,
+  0 LaTeX errors, 0 Type 3 fonts, 0 residual "within 20 pc" text, 0 manuscript-version
+  history. Point-by-point response in `v3.28/REFEREE_RESPONSE.md`.
+
 ## Planned for v2.04+
 - Add the full ALMA project-code list to the Acknowledgements section
   (deferred again — still meaningful to wait until survey completion so
