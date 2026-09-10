@@ -722,6 +722,58 @@ Normalised. That, not text deletion, is what returned the paper to 38 pages.
 multiply-defined labels, 0 LaTeX errors, 0 Type 3 fonts, 346 generated-macro calls, and a clean
 sweep on eight stale-number patterns.
 
+## v3.32 (2026-09-10) - the coarse-channel completeness campaign, and a withdrawn claim
+
+**THE PAPER'S CENTRAL LIMITATION WAS WRONG AND IS WITHDRAWN.** Every version since v3.24 has
+said the pipeline's "per-channel temporal-median subtraction" suppresses temporally persistent,
+frequency-stationary carriers, and that a classical continuous beacon therefore lies outside
+what this survey constrains. It does not. **The pipeline performs no temporal-median
+subtraction at all**: its baseline step is a running median along FREQUENCY (65 channels,
+per integration), which by construction cannot remove a feature confined to one or two
+channels -- its own docstring says so -- and the de-drift step is an inverse-variance-weighted
+SUM over integrations, which accumulates a persistent carrier coherently.
+
+**MEASURED, TWO WAYS.**
+- Dwell-fraction campaign: 3,888 trial-level injections over 12 real windows (6 coarse,
+  6 fine, 11 targets), amplitudes 2-20 sigma per integration, dwell 0.10-1.00, six
+  realisations. Recovery RISES with dwell. Pooling amplitudes >=4 sigma: coarse 100% at
+  dwell 1.00, 100% at 0.25, 83% at 0.10; fine 100%, 91%, 71%.
+- End-to-end through the unmodified released pipeline: a zero-drift, always-on tone injected
+  into calibrated visibilities of a coarse Band 7 window at 1, 3 and 10x the per-integration
+  rms returns T_star = 20.5, 65.3 and 217.7, recovered within one channel of the injected
+  frequency, detection=True in every case. For 639 integrations the ideal coherent gain is
+  sqrt(639)=25, so 20.5 at the per-integration noise level is essentially perfect.
+
+**WHERE THE OLD "0 of 500" CAME FROM.** That campaign's frozen recovery criterion required the
+recovered peak drift to lie within one grid step of the injected drift. On a coarse window
+every in-grid drift is sub-channel over a track, so the trial grid is degenerate and the
+reported peak drift is arbitrary; the clause fails even for a 200-sigma detection. A criterion
+artefact, read for four versions as physical suppression.
+
+**CONSEQUENCES**
+- The 73 per cent completeness gap that both referee rounds called the survey's biggest
+  weakness is now FILLED: coarse windows have measured C(A, f_dwell).
+- The survey DOES constrain the classical continuous narrowband beacon.
+- The genuine coarse-window limitation is narrower and still real: no drift DISCRIMINATION
+  (the grid is degenerate), while amplitude sensitivity is full. That replaces item (i) of the
+  "what this survey does not constrain" box and heads the next-release priorities.
+- The abstract, introduction, boxed reading rule, limitations box, injection appendix and
+  future-work list are all corrected; the withdrawal is stated explicitly rather than quietly.
+- New section 5.5 "Dwell-fraction completeness, and a withdrawn claim" with Table 11, and the
+  trial-level records released as per_target dwell_campaign_trials_v3.32.csv -- which also
+  answers the referees' standing request for per-injection provenance.
+
+**OPERATIONAL: the survey was deadlocked and is now running again.** While scoping the
+campaign the driver was found stalled -- the disk governor had been blocking it for hours at
+149G free against a 150G floor, because the target it was working on (HD172555 B7) had
+accumulated 175G of per-spw split measurement sets in its own products directory. The search
+step reclaims its waterfall intermediate but never reclaimed the split MS. Freeing one
+completed spw's MS (30G) unblocked it immediately, and the reclaim gap is now fixed in
+seti_drift_search_generic.py so it cannot recur.
+
+**Length**: 38 pages, unchanged. 0 undefined references, 0 undefined citations, 0
+multiply-defined labels, 0 LaTeX errors, 0 Type 3 fonts.
+
 ## Planned for v2.04+
 - Add the full ALMA project-code list to the Acknowledgements section
   (deferred again — still meaningful to wait until survey completion so
