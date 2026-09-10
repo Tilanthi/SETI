@@ -496,6 +496,71 @@ and the figures and tables come from the same export via `make_figures_v328.py` 
   0 LaTeX errors, 0 Type 3 fonts, 0 residual "within 20 pc" text, 0 manuscript-version
   history. Point-by-point response in `v3.28/REFEREE_RESPONSE.md`.
 
+## v3.29 (2026-09-10) - second referee round: single-source numbering, Figure 1 physics corrected, occurrence bound demoted
+
+Note for the record: two reports were forwarded and **the second was for a different paper**
+(an 18-page study of the L_IR-L'_HCN(3-2) relation in Galactic clumps, with a 107-source
+Table A1, a W49A point, and "Grozdanova et al., in preparation"). Our paper is 38 pp and
+contains none of that; its only HCN mention is one of eight masked species. Not acted on;
+the editor has been asked for the correct report.
+
+**THE REFEREE'S FOUR ACCEPTANCE CONDITIONS**
+- **Single-version numerical audit.** Every survey quantity is now a LaTeX macro emitted by
+  `make_numbers.py` into a generated `survey_numbers.tex`. The manuscript contains no typed
+  digits for these quantities. Root cause fixed, not symptoms: the manual effort of keeping
+  a number consistent used to scale with the number of places it appeared.
+- **Figure 1 physics corrected.** The W Hz^-1 panel is WITHDRAWN. EIRP/dnu_ch is a
+  channel-averaged equivalent spectral luminosity, right only for channel-filling emission,
+  not the spectral power of an unresolved carrier - our own worked example proves it (a 1 Hz
+  carrier still needs the full 1.6e13 W, so ~1e13 W/Hz intrinsic, not 1e6). The panel
+  flattered ALMA by six orders of magnitude against exactly the signal class searched.
+  Figure 1 is now single-column, total power only.
+- **Occurrence bound demoted and reframed.** The headline is now the non-detection plus the
+  threshold range. The bound is no longer called a prevalence: it is an effective conditional
+  occurrence bound given occupancy of each target's own observed frequencies, on the 79
+  systems processed. Duty-cycle degradation travels with it everywhere (6.5% -> 13% at D=0.5,
+  65% at D=0.1). **New: the conditioning is now measured** - under a uniform p(nu) across
+  ALMA's tuning range, F_i falls to ~4.5e-3 and the bound is VACUOUS (f~3.8 transmitters per
+  system needed for one expected detection).
+- **Injection provenance.** Trial-level records were not retained, so denominators are
+  reconstructed from the design. Disclosed rather than disguised; the bound is labelled a
+  pilot, configuration-limited estimate; trial-level logging committed for the next release.
+
+**ALSO FIXED (all errors the referee found were real)**
+Conclusions reverted to three candidates incl. AU Mic (now four spatially significant
+windows, zero candidates); 42 vs 79 systems; 46 vs 85 stars; 104/208 called 41% (is 50%);
+local-population fraction given as both ~7% and ~1% (is ~1%); "extend to 30, 40 and 50 pc
+once the 20 pc sample is complete"; glossary and nomenclature table disagreeing on the
+definition of "candidate".
+
+**NEW ANALYSIS**
+- **Pseudo-star null calibration** (referee-requested): each of the 512 controls ranked in
+  turn against the other 511, pooled over the release. 213,504 ranks uniform to the
+  discreteness floor (mean 0.5010, KS D=1/512, p=0.39), uniform in every band and both
+  channelisations; star vs pseudo-star two-sample p=0.31. The control-ring argument is now
+  measured, not assumed.
+- New completeness surface (recovery vs amplitude and drift fraction), drawn as discrete
+  cells with hatching so it cannot imply per-cell data we do not have.
+
+**PRESENTATION**: drift relation promoted to a displayed equation with the frequency-
+independent dnu/nu form; "volume-limited census" -> "archive-defined 40 pc sample"; line
+vetting distinguishes "outside the eight-line mask" from "no plausible known transition";
+novelty claims scoped to ALMA archival technosignature surveys; coverage waterfall moved to
+p5 per the referee; injection figure brought into the main text.
+
+**DEFECTS IN OUR OWN PRIOR RELEASE**: `eirp_context.pdf` in v3.28 was not the figure its
+caption described (a histogram, not the scatter); the Margot et al. (2023) comparison value
+was plotted at 1.0e13 W instead of the published 1.35e13 W; "only targets within ~3 pc reach
+below Arecibo" described two components of ONE bound system.
+
+**FLAGGED, NOT SILENTLY HARMONISED**: the injection campaign is described as using a
+"49-trial drift grid", but 5 amplitudes x 5 drift fractions = 25 and 1200/6/5 = 40; neither
+is 49 and no retained product explains it.
+
+**Length**: 38 pages, unchanged. Verification: 0 undefined refs, 0 undefined citations,
+0 multiply-defined labels, 0 errors, 0 Type 3 fonts, 0 literals disagreeing with a macro.
+Point-by-point reply in `v3.29/REFEREE_RESPONSE_ROUND2.md`.
+
 ## Planned for v2.04+
 - Add the full ALMA project-code list to the Acknowledgements section
   (deferred again — still meaningful to wait until survey completion so
