@@ -15,11 +15,15 @@ for r in good:
 rows=list(best.values())
 fig=plt.figure(figsize=(3.4,2.9),constrained_layout=True)
 ax=fig.add_subplot(111)
-col={3:'#1f77b4',4:'#8c564b',5:'#9467bd',6:'#2ca02c',7:'#d62728',8:'#ff7f0e'}
-for b in sorted({r['band_x'] for r in rows}):
-    sub=[r for r in rows if r['band_x']==b]
-    ax.scatter([r['dist_pc'] for r in sub],[r['eirp'] for r in sub],s=11,marker='v',
-               facecolor='none',edgecolor=col[b],linewidths=0.7,label='B%d'%b)
+# Referee: distinguish windows whose completeness IS calibrated (fine channels,
+# the injection-measured drifting class) from those where it is not (coarse).
+fine=[r for r in rows if r['res_x']=='fine']; coarse=[r for r in rows if r['res_x']!='fine']
+ax.scatter([r['dist_pc'] for r in coarse],[r['eirp'] for r in coarse],s=13,marker='v',
+           facecolor='none',edgecolor='0.62',linewidths=0.7,
+           label='deepest window coarse: completeness unmeasured (%d)'%len(coarse))
+ax.scatter([r['dist_pc'] for r in fine],[r['eirp'] for r in fine],s=15,marker='o',
+           facecolor='#1f77b4',edgecolor='none',alpha=0.85,
+           label='deepest window fine: completeness measured (%d)'%len(fine))
 flag={'bet Pic','CP-72 2713','HD 48370'}
 sub=[r for r in rows if r['star_name'] in flag]
 ax.scatter([r['dist_pc'] for r in sub],[r['eirp'] for r in sub],s=34,marker='*',
@@ -33,8 +37,8 @@ from matplotlib.ticker import FixedLocator, FixedFormatter
 ax.xaxis.set_major_locator(FixedLocator([2,3,5,10,20,40]))
 ax.xaxis.set_major_formatter(FixedFormatter(['2','3','5','10','20','40']))
 ax.xaxis.set_minor_locator(FixedLocator([]))
-ax.legend(fontsize=5.9,frameon=False,ncol=3,loc='upper left',handletextpad=0.25,
-          columnspacing=0.7,borderpad=0.15)
+ax.legend(fontsize=5.6,frameon=False,ncol=1,loc='upper left',handletextpad=0.3,
+          borderpad=0.15)
 ax.grid(alpha=0.25,lw=0.4)
 fig.savefig('figures/eirp_vs_distance.pdf')
 print('rows plotted',len(rows),'stars',len({r['star_name'] for r in rows}),

@@ -51,7 +51,7 @@ track and/or drifting in frequency, and says nothing about a stable
 beacon. Each window's stellar position is compared with \NCtrl{}
 control positions carried through an identical search, calibrating the
 false-alarm rate empirically rather than assuming Gaussian statistics.
-Four windows contain a spatially significant hit: three are
+Four windows contain a control-ring exceedance: three are
 circumstellar or foreground CO (two toward $\beta$~Pictoris, one
 toward HD~48370) and one, toward CP$-$72~2713, is a marginal crossing
 consistent with the \ExpFlags{} expected under the noise null. None
@@ -59,7 +59,7 @@ survives vetting, so this release reports \NCandidates{} candidates.
 
 Nominal $5\sigma$ trigger thresholds span
 $1.6\times10^{13}$--$2.8\times10^{17}$\,W in EIRP (median
-$1.3\times10^{15}$\,W). Because most windows are channelised at
+$\EirpMedian$\,W). Because most windows are channelised at
 \ChanMedianMHz\,MHz, these bound carriers unresolved at the native
 ALMA channel width and are not Hz-resolution sensitivities. A
 \NTrials{}-trial injection campaign into real calibrated visibilities
@@ -283,7 +283,7 @@ and spatially unresolved pairs (e.g.\ the UV~Ceti entries at 2.7\,pc,
 with blended fluxes) are marked in the notes column.} and since the 44
 narrowband-covered entries include the unresolved UV~Ceti and AT~Mic
 pairs, the \NStarBands{} star/band datasets, \NWindows{} windows and
-57 execution blocks derive from \NSystems{} systems -- the paired rows
+\NEB{} execution blocks derive from \NSystems{} systems -- the paired rows
 being bookkeeping, not independent trials.
 
 ``Usable public ALMA coverage'' is a five-criterion decision tree,
@@ -466,7 +466,7 @@ step 9 onward distinguishes them.}
 7 & $T(\mathbf{x})$ from Eq.~\ref{eq:tstar} \\
 8 & repeat 3--7 at \NCtrl{} control positions on a ring \\
 9 & threshold: $T_\star\geq5$ (a hit) \\
-10 & rank test: $T_\star>\max_i T_i$ (spatially significant hit) \\
+10 & rank test: $T_\star>\max_i T_i$ (control-ring exceedance) \\
 11 & molecular-line mask, $\pm50$\,km\,s$^{-1}$ stellar frame \\
 12 & vetting: recurrence, closure phase, cross-target occupancy \\
 \hline
@@ -485,9 +485,9 @@ Term & Meaning \\
 \hline
 hit & one channel$\times$drift cell at the stellar position with
 $T\geq5$ \\
-spatially significant hit & a window whose $T_\star$ exceeds all \NCtrl{}
+control-ring exceedance & a window whose $T_\star$ exceeds all \NCtrl{}
 control statistics \\
-candidate & a spatially significant hit surviving every veto; none in
+candidate & a control-ring exceedance surviving every veto; none in
 this release \\
 $5\sigma$ trigger threshold & local instrumental trigger level, \emph{not}
 a completeness limit \\
@@ -721,7 +721,8 @@ Per-window on-source time & 21--5274\,s (median 2177\,s) \\
 Exposure$\times$bandwidth & $\ExposureSGHz$\,s\,GHz \\
 Nominal $S_{\rm min}$ & \SminMin\,mJy--\SminMax\,Jy (median \SminMedian\,mJy) \\
 Nominal EIRP$_{5\sigma}$ & $\EirpMin$--$\EirpMax$\,W (median $\EirpMedian$) \\
-Measured recovery at threshold (searched class) & $\RecThresh^{+\RecThreshHi}_{-\RecThreshLo}$\% \\
+Measured recovery at threshold, fine/drifting class & $\RecThresh^{+\RecThreshHi}_{-\RecThreshLo}$\% (\NFine{} windows) \\
+\quad coarse/time-variable class & \emph{not measured} (\NCoarse{} windows) \\
 Hits ($\geq5\sigma$ at the stellar position) & \NHits{} windows \\
 Spatially significant hits & \NSpatial{} windows \\
 \quad circumstellar or foreground CO & \NLineAttrib{} \\
@@ -790,7 +791,7 @@ repeats are identical, but two are not -- two reductions of the same
 $\tau$~Ceti Band~6 window differ by 44 per cent in threshold, and the
 two HR~1010 Band~6 rows straddle the $5\sigma$ threshold (5.10 and 4.95)
 -- so the hit count is rule-dependent at the level of one window. The
-four spatially significant windows are not: no discarded row is both a
+four control-ring exceedance windows are not: no discarded row is both a
 hit and star-beats-ring, and every row, kept or discarded, ships with
 its status. The audit is otherwise clean apart from four windows of
 elevated system temperature, and every census identifier re-resolves
@@ -823,7 +824,7 @@ result (process-level failures, \S\ref{sec:exclusions}, uncounted),
 spanning \NWindows{} spectral-window measurements after the catalogue
 audit removed \NDup{} duplicate rows (Appendix~\ref{app:table}).
 EIRP$_{5\sigma}$ limits span $1.6\times10^{13}$--$2.8\times10^{17}$\,W,
-median $1.3\times10^{15}$\,W (Figures~\ref{fig:eirp},
+median $\EirpMedian$\,W (Figures~\ref{fig:eirp},
 \ref{fig:waterfall}, \ref{fig:context}); as expected for a
 volume-ordered survey the deepest are the nearest systems'
 ($1.6\times10^{13}$\,W for the UV~Ceti pair at 2.7\,pc), the shallowest
@@ -834,7 +835,7 @@ of G~272-61 at 2.7\,pc reach below the Arecibo-like planetary-radar
 EIRP, and none approaches the $\sim4\times10^{9}$\,W of unintentional
 Earth leakage.
 
-Four windows contain a \emph{spatially significant hit}; none survives
+Four windows contain a \emph{control-ring exceedance}; none survives
 vetting, so this release reports \emph{zero candidates}.
 Table~\ref{tab:funnel} follows the cascade, Table~\ref{tab:flagged} each
 flagged window and the evidence dispositioning it.
@@ -855,7 +856,7 @@ Channel $\times$ drift trial cells (all windows) & $\TrialCells$ \\
 Control positions compared per window & \NCtrl{} \\
 Windows searched after quality control & \NWindows{} \\
 Windows containing $\geq$1 hit ($\geq5\sigma$ at the stellar position) & \NHits{} \\
-Windows containing a spatially significant hit & \NSpatial{} \\
+Windows containing a control-ring exceedance & \NSpatial{} \\
 \quad attributed to circumstellar or foreground CO & \NLineAttrib{} \\
 \quad indistinguishable from the control ensemble & \NUnattrib{} \\
 Candidates (surviving every veto) & \NCandidates{} \\
@@ -871,11 +872,15 @@ Candidates (surviving every veto) & \NCandidates{} \\
 %% Every survey number below is recomputed from the frozen export
 %% through the prologue of survey_stats.py.
 
+%% Generated by make_referee2_artefacts.py -- do not edit by hand.
+%% Every survey number below is recomputed from the frozen export
+%% through the prologue of survey_stats.py.
+
 \begin{table}
 \centering
 \small
 \setlength{\tabcolsep}{4pt}
-\caption{The four windows containing a spatially significant hit and the evidence dispositioning each. $T_\star$ is the search statistic at the stellar position (Eq.~\ref{eq:tstar}), `ring max' the largest of that window's \NCtrl{} control statistics. $\Delta\nu$ and $\Delta v$ are the same offset of the crossing from the nearest of the eight masked species' catalogued transitions, in frequency and in velocity, topocentric; the $\pm50$\,km\,s$^{-1}$ mask applies in the stellar frame after the conversion chain of Appendix~\ref{app:conventions}. Giving both makes the conversion explicit for every row rather than for $\beta$~Pic alone: at these window frequencies 1\,MHz is 2.6, 1.3 and 0.87\,km\,s$^{-1}$ in Bands~3, 6 and~7 respectively. No disposition rests on a single test.}
+\caption{The four windows containing a control-ring exceedance and the evidence dispositioning each. $T_\star$ is the search statistic at the stellar position (Eq.~\ref{eq:tstar}), `ring max' the largest of that window's \NCtrl{} control statistics. $\Delta\nu$ and $\Delta v$ are the same offset of the crossing from the nearest of the eight masked species' catalogued transitions, in frequency and in velocity, topocentric; the $\pm50$\,km\,s$^{-1}$ mask applies in the stellar frame after the conversion chain of Appendix~\ref{app:conventions}. Giving both makes the conversion explicit for every row rather than for $\beta$~Pic alone: at these window frequencies 1\,MHz is 2.6, 1.3 and 0.87\,km\,s$^{-1}$ in Bands~3, 6 and~7 respectively. No disposition rests on a single test.}
 \label{tab:flagged}
 \begin{tabular}{@{}lrrrrrl@{}}
 \toprule
@@ -889,7 +894,7 @@ CP$-$72~2713 B7 & 345.1152 & 5.81 & 5.68 & $-$1526.2 & $-$1326 (CO\,$3{\to}2$) &
 \end{tabular}
 \end{table}
 
-Do the \NSpatial{} spatially significant hits exceed this survey's own
+Do the \NSpatial{} control-ring exceedances exceed this survey's own
 calibration, or is any distinguishable from the empirical background or
 known astrophysical emission? No to both.
 
@@ -1023,9 +1028,13 @@ a misbehaving ring; but the departure is genuine, so fine-window rank
 probabilities are slightly optimistic. Two stratifications the retained
 products cannot support, storing no per-control radial position or
 primary-beam gain: with the ring radius small compared with the beam
-(targets lie a median $0.1$\,arcsec from the pointing centre) all
-controls should share the target's response, but we have not measured
-that. Remaining robustness checks -- trials-count reconciliation under
+(targets lie a median $0.1$\,arcsec from the pointing centre) all controls should share the target's response to a good
+approximation -- but we have not measured it, and because the whole
+false-alarm framework rests on the ring being exchangeable with the
+star, we record this as a \emph{required} item for the completed
+survey rather than a refinement: the holography-model gain at a sample
+of control positions, relative to the target, for representative
+windows in each band. Remaining robustness checks -- trials-count reconciliation under
 channel adjacency, control-ring geometry -- are in
 Appendix~\ref{app:falsealarm}.
 
@@ -1075,7 +1084,11 @@ three epochs and both transitions land within $0.9$\,km\,s$^{-1}$ of
 each other and $3.6$\,km\,s$^{-1}$ of systemic, deep inside the
 $\pm50$\,km\,s$^{-1}$ mask, though raw topocentric offsets are
 $-27.5$ and $-28.4$\,km\,s$^{-1}$: we attribute both to this
-kinematically offset CO.
+kinematically offset CO. They are also the survey's empirical positive
+control -- two transitions of one species at the same stellar-frame
+velocity, recovered at separate epochs -- showing that the pipeline
+does detect narrow spectral emission localised on a target when it is
+there.
 
 Their empirical significance under the release background is
 nonetheless extreme, so the attribution is no dismissal: the Band~3
@@ -1304,6 +1317,10 @@ Peak drift (Hz\,s$^{-1}$) & 1418.5 & 1593 & 1281 \\
 %% Every survey number below is recomputed from the frozen export
 %% through the prologue of survey_stats.py.
 
+%% Generated by make_referee2_artefacts.py -- do not edit by hand.
+%% Every survey number below is recomputed from the frozen export
+%% through the prologue of survey_stats.py.
+
 \begin{table}
 \centering
 \small
@@ -1381,10 +1398,14 @@ openly, including the two we think probably spurious.
 \begin{figure}
 \centering
 \includegraphics[width=\columnwidth]{figures/eirp_vs_distance.pdf}
-\caption{Nominal EIRP$_{5\sigma}$ thresholds (boxed rule,
+\caption{Nominal EIRP$_{5\sigma}$ trigger thresholds (boxed rule,
 \S\ref{sec:method}) against distance, one deepest window per star and
-band (\NStarBands{} datasets, \NStars{} stars); every point is an upper
-limit. Stars mark the four windows with a spatially significant hit
+band (\NStarBands{} datasets, \NStars{} stars). Symbols mark whether
+that window is fine-channel, where the injection campaign measures a
+recovery fraction, or coarse-channel, where completeness for the
+time-variable class those windows search is unmeasured; survey-wide
+the split is \NFine{} fine against \NCoarse{} coarse windows. Every point is an upper
+limit. Stars mark the four windows with a control-ring exceedance
 (Table~\ref{tab:flagged}). The dashed line is an Arecibo-like planetary
 radar, $2\times10^{13}$\,W, a scale for human transmitter power, not a
 claim that the survey reaches Earth-technology detectability
@@ -1428,9 +1449,8 @@ Table~\ref{tab:perband} (online-only appendix) decomposes the release
 by ALMA band.
 
 Coverage eligibility and search completeness differ. The census of
-public usable ALMA data (\S\ref{sec:sample}) sets eligibility; every
-held execution block in scope was searched, so no EB-level selection
-lies behind the 57. Availability is measured directly, not inherited
+public usable ALMA data (\S\ref{sec:sample}) sets eligibility; every held execution block in scope was searched, so no EB-level
+selection lies behind the \NEB{}. Availability is measured directly, not inherited
 from release bookkeeping: a proper-motion-matched ALMA archive census
 (2026 September~9; public rows, all bands, pointing within
 30\,arcsec of the propagated stellar position at the observation
@@ -1573,7 +1593,7 @@ secondary to the non-detection and threshold range. Trial-level logging -- ident
 frequency phase, drift, morphology and recovered flag per injected
 signal -- is committed for the next release.
 
-\emph{Which number is the result.} The measured form is this paper's
+\emph{Which number is which.} The measured form is this paper's
 observational result, the only one whose recovery fraction is measured rather than assumed: at
 EIRP $\geq10^{16}$\,W, $f_{95}=\OccMeasured$ per cent. The thresholded form (\OccUnit{} per
 cent) assumes unit recovery and a uniform $C=0.42$ gives
@@ -1689,7 +1709,7 @@ Table~\ref{tab:supp} are infrastructure investments, not sources of
 results at this stage: the Type-I error budget is carried by the primary lane alone
 (\S\ref{sec:technosearch}): the screens gate nothing in it, are
 correlated with it by construction, and disposition none of the
-\NSpatial{} spatially significant windows, so their
+\NSpatial{} control-ring exceedance windows, so their
 non-detections must not be multiplied into a stronger constraint than
 the primary lane's.
 
@@ -1772,7 +1792,7 @@ channel for more than roughly 40 per cent of a track is removed by the
 per-channel temporal-median subtraction, by construction and at every
 amplitude tested (\S\ref{sec:ancillary});
 (ii) transmitters emitting \emph{outside the searched spectral
-windows}, which are 34 narrow islands totalling \UnionGHz\,GHz
+windows}, which are \UnionIntervals{} narrow islands totalling \UnionGHz\,GHz
 (Fig.~\ref{fig:waterfall}), not ALMA's frequency range;
 (iii) transmitters active \emph{outside the archival epochs} observed
 -- the limits assume continuous emission and are already weak at duty
@@ -1813,7 +1833,7 @@ non-detections in the ancillary continuum screen of unquantified
 statistical power (median $5\sigma$ limit 0.52\,mJy). No credible technosignature was identified: nothing of the searched
 morphology rose above the nominal instrumental threshold during the
 analysed intervals. Of the
-\NSpatial{} windows with a spatially significant hit, \NLineAttrib{}
+\NSpatial{} windows with a control-ring exceedance, \NLineAttrib{}
 are attributed to CO -- two towards $\beta$\,Pictoris, one towards
 HD~48370, the last independently reported by \citet{Cataldi2023} --
 and \NUnattrib{} towards CP$-$72~2713 is a marginal crossing
@@ -1878,7 +1898,9 @@ database, operated at CDS, Strasbourg, France.
 \section*{Competing interests}
 
 G.J.W. declares no competing interests. R.D. is an employee of VBRL Holdings Inc., a private software company
-with no astronomy, archival-tooling or SETI-related product line; VBRL has no financial or intellectual stake in ALMA
+with no astronomy, archival-tooling or SETI-related product line; the
+collaboration arose independently of that employment, and no
+proprietary VBRL tooling was used at any stage of the pipeline; VBRL has no financial or intellectual stake in ALMA
 archival technosignature work, provided no funding for this study, and
 had no role in its design, analysis, or decision to publish. The authors
 therefore declare no competing interest.
@@ -2050,7 +2072,7 @@ QA2 & the ALMA observatory pipeline's second-stage quality-assurance calibration
 \texttt{obscore} & the IVOA table protocol of the ALMA Science Archive metadata service from which coverage and EB metadata are queried \\
 Native channel & the correlator channel width of the window, 15.3\,kHz--31.25\,MHz here \\
 Threshold crossing (``hit'') & a $\geq5\sigma$ spectral feature at the star's position in a searched window \\
-Candidate & a spatially significant hit that survives every astrophysical and instrumental veto (\NCandidates{} in this release) \\
+Candidate & a control-ring exceedance that survives every astrophysical and instrumental veto (\NCandidates{} in this release) \\
 Control ring & \NCtrl{} off-source test positions per window, used for empirical false-alarm calibration \\
 Star-beats-ring & a window whose star statistic exceeds all \NCtrl{} control statistics (\NSbr/\NWindows) \\
 Drift trial & one trial Doppler drift rate of the stack grid; 2--1944 per window \\
@@ -2263,11 +2285,12 @@ Frequency-occupancy check & 366 overlapping star pairs & Executed
 
 % Generated by make_tables_v328.py -- do not edit by hand.
 % Generated by make_tables_v328.py -- do not edit by hand.
+% Generated by make_tables_v328.py -- do not edit by hand.
 \begin{table}
 \centering
 \small
 \setlength{\tabcolsep}{4pt}
-\caption{Selection function of the searched sample against a volume-limited reference census. Reference census: Gaia~DR3 sources with $\varpi>0$, $\sigma_\varpi/\varpi\le0.1$ and $1/\varpi\le40$\,pc (17566 objects; 8594, 49 per cent, carry a \texttt{teff\_gspphot} estimate). Sample: the 88 stars with at least one searched window in this release. Distances for the sample are the values used by the search itself and are complete; effective temperatures are available for 52 of the 88 stars (all 88 were matched to the 168-entry ALMA-covered census, 58 of them by exact name; 52 of those matches carry a temperature), so the temperature panel is normalised within each column over classified objects only and $T_{\rm eff}$ is used as a proxy for spectral class. ``Ratio'' is the sample column fraction divided by the census column fraction, so 1 means the sample tracks the reference population and $>1$ means over-representation.}
+\caption{Selection function of the searched sample against a volume-limited reference census. Reference census: Gaia~DR3 sources with $\varpi>0$, $\sigma_\varpi/\varpi\le0.1$ and $1/\varpi\le40$\,pc (17566 objects; 8594, 49 per cent, carry a \texttt{teff\_gspphot} estimate). Sample: the 88 stars with at least one searched window in this release. Distances for the sample are the values used by the search itself and are complete; effective temperatures are available for 51 of the 88 stars (all 87 were matched to the 168-entry ALMA-covered census, 58 of them by exact name; 51 of those matches carry a temperature), so the temperature panel is normalised within each column over classified objects only and $T_{\rm eff}$ is used as a proxy for spectral class. ``Ratio'' is the sample column fraction divided by the census column fraction, so 1 means the sample tracks the reference population and $>1$ means over-representation.}
 \label{tab:selfunc}
 \begin{tabular}{@{}lrrr@{}}
 \toprule
@@ -2280,16 +2303,16 @@ Property & Census & Searched & Ratio \\
 \quad 20--30\,pc & 5391 (30.7\%) & 18 (20.5\%) & 0.7 \\
 \quad 30--40\,pc & 9818 (55.9\%) & 27 (30.7\%) & 0.5 \\
 \midrule
-\multicolumn{4}{@{}l}{$T_{\rm eff}$ class$^{a}$ (52 searched; 8594 census)} \\
-\quad A ($\ge7500$\,K) & 24 (0.3\%) & 1 (1.9\%) & 6.9 \\
-\quad F (6000--7500\,K) & 402 (4.7\%) & 9 (17.3\%) & 3.7 \\
-\quad G (5300--6000\,K) & 860 (10.0\%) & 16 (30.8\%) & 3.1 \\
-\quad K (3900--5300\,K) & 1400 (16.3\%) & 5 (9.6\%) & 0.6 \\
-\quad M ($<3900$\,K) & 5908 (68.7\%) & 21 (40.4\%) & 0.6 \\
+\multicolumn{4}{@{}l}{$T_{\rm eff}$ class$^{a}$ (51 searched; 8594 census)} \\
+\quad A ($\ge7500$\,K) & 24 (0.3\%) & 1 (2.0\%) & 7.0 \\
+\quad F (6000--7500\,K) & 402 (4.7\%) & 8 (15.7\%) & 3.4 \\
+\quad G (5300--6000\,K) & 860 (10.0\%) & 16 (31.4\%) & 3.1 \\
+\quad K (3900--5300\,K) & 1400 (16.3\%) & 5 (9.8\%) & 0.6 \\
+\quad M ($<3900$\,K) & 5908 (68.7\%) & 21 (41.2\%) & 0.6 \\
 \midrule
 \multicolumn{4}{@{}l}{Other axes} \\
 \quad Known planet hosts$^{b}$ & 20 (11.9\%) & 18 (20.5\%) & 1.7 \\
-\quad Searched stars / systems & -- & 88 / 83 & -- \\
+\quad Searched stars / systems & -- & 88 / 82 & -- \\
 \bottomrule
 \end{tabular}
 
@@ -2303,7 +2326,12 @@ Property & Census & Searched & Ratio \\
 \includegraphics[width=0.95\textwidth]{figures/selection.pdf}
 \caption{The survey's selection funnel, from archive availability to
 the zero-candidate outcome. Top: star selection. Bottom:
-archive-availability accounting on the $\le$20\,pc subset, quoting its
+archive-availability accounting on the $\le$20\,pc subset -- these
+ancillary checks are scoped that way because they need dense
+overlapping coverage between targets, which only the inner sample has,
+not because they inherit an earlier release; the headline false-alarm
+calibration of \S\ref{sec:technosearch} is computed on the full
+\NWindows-window release -- quoting its
 counts -- public on-star execution blocks from the
 proper-motion-matched archive census, the star--execution-block pairs
 in scope, the window-level records with their correct unit (${\sim}4$
@@ -2658,11 +2686,15 @@ Proxima~Cen -- TRAPPIST-1 & 7.31 \\
 %% Every survey number below is recomputed from the frozen export
 %% through the prologue of survey_stats.py.
 
+%% Generated by make_referee2_artefacts.py -- do not edit by hand.
+%% Every survey number below is recomputed from the frozen export
+%% through the prologue of survey_stats.py.
+
 \begin{table}
 \centering
 \small
 \setlength{\tabcolsep}{4pt}
-\caption{The full crossing funnel: every one of the 20 windows, of \NWindows{}, containing a $\geq5\sigma$ crossing at the propagated stellar position, ordered by $T_\star$. `Ring max' is the largest of that window's \NCtrl{} control statistics, and a window is spatially significant (bold, four of the 20) when $T_\star$ exceeds it. $\Delta\nu$ and $\Delta v$ are the offsets of the crossing from the nearest catalogued transition of the eight masked species, topocentric; the $\pm50$\,km\,s$^{-1}$ mask applies in the stellar frame after the conversion chain of Appendix~\ref{app:conventions}. $\nu$ is the window centre, not the crossing frequency, so it is not $\Delta\nu$ from the transition. A dash means the released products record no nearest masked transition for that window. ALMA~J1537$-$3319 is ALMA J153702653-33192492 in the released table.}
+\caption{The full crossing funnel: every one of the 20 windows, of \NWindows{}, containing a $\geq5\sigma$ crossing at the propagated stellar position, ordered by $T_\star$. `Ring max' is the largest of that window's \NCtrl{} control statistics, and a window is control-ring exceedance (bold, four of the 20) when $T_\star$ exceeds it. $\Delta\nu$ and $\Delta v$ are the offsets of the crossing from the nearest catalogued transition of the eight masked species, topocentric; the $\pm50$\,km\,s$^{-1}$ mask applies in the stellar frame after the conversion chain of Appendix~\ref{app:conventions}. $\nu$ is the window centre, not the crossing frequency, so it is not $\Delta\nu$ from the transition. A dash means the released products record no nearest masked transition for that window. ALMA~J1537$-$3319 is ALMA J153702653-33192492 in the released table.}
 \label{tab:allhits}
 \begin{tabular}{@{}llr rr c lrr@{}}
 \toprule
@@ -2749,11 +2781,12 @@ lies outside the searched grid. Only TRAPPIST-1\,b reaches it (\S\ref{sec:discus
 
 % Generated by make_tables_v328.py -- do not edit by hand.
 % Generated by make_tables_v328.py -- do not edit by hand.
+% Generated by make_tables_v328.py -- do not edit by hand.
 \begin{table}
 \centering
 \small
 \setlength{\tabcolsep}{4pt}
-\caption{Per-band survey characterisation of the 431 searched windows. ``Sys.'' counts unique stellar systems searched in the band, so a system observed in two bands is counted in both rows (83 systems, 88 stars in total); ``EBs'' the execution blocks contributing, attributed by the provenance of the de-duplicated windows; ``Win.'' the searched windows; $\Delta\nu_{\rm ch}$ the native channel width in MHz (median, with the range in brackets); ``Union'' the unique sky frequency searched in the band, after merging overlapping windows; EIRP$_{5\sigma}$ the median nominal threshold across the band's windows; $\dot{\nu}_{\rm ceil}$ the range of drift-rate ceilings in Hz\,s$^{-1}$ per GHz of carrier frequency. The ``All'' row is computed over the whole sample, not summed down the columns: EBs and systems recur across bands and the frequency unions are disjoint by construction.}
+\caption{Per-band survey characterisation of the 431 searched windows. ``Sys.'' counts unique stellar systems searched in the band, so a system observed in two bands is counted in both rows (82 systems, 88 stars in total); ``EBs'' the execution blocks contributing, attributed by the provenance of the de-duplicated windows; ``Win.'' the searched windows; $\Delta\nu_{\rm ch}$ the native channel width in MHz (median, with the range in brackets); ``Union'' the unique sky frequency searched in the band, after merging overlapping windows; EIRP$_{5\sigma}$ the median nominal threshold across the band's windows; $\dot{\nu}_{\rm ceil}$ the range of drift-rate ceilings in Hz\,s$^{-1}$ per GHz of carrier frequency. The ``All'' row is computed over the whole sample, not summed down the columns: EBs and systems recur across bands and the frequency unions are disjoint by construction.}
 \label{tab:perband}
 \begin{tabular}{@{}c r r r l r r r@{}}
 \hline
@@ -2763,10 +2796,10 @@ Band & Sys. & EBs & Win. & $\Delta\nu_{\rm ch}$ (MHz) & Union (GHz) & Med.\ EIRP
 4 & 1 & 1 & 4 & 15.63 & 6.9 & $2.6\times10^{13}$ & 12.0 \\
 5 & 1 & 1 & 4 & 15.63 & 6.9 & $4.4\times10^{13}$ & 12.0 \\
 6 & 54 & 54 & 216 & 15.63 (0.015--31.25) & 29.4 & $1.3\times10^{15}$ & 12.0--13.3 \\
-7 & 35 & 34 & 155 & 15.63 (0.061--15.63) & 22.6 & $2.9\times10^{15}$ & 12.0--13.3 \\
+7 & 34 & 34 & 155 & 15.63 (0.061--15.63) & 22.6 & $2.9\times10^{15}$ & 12.0--13.3 \\
 8 & 3 & 3 & 12 & 15.63 (0.061--15.63) & 6.6 & $6.1\times10^{16}$ & 12.0 \\
 \hline
-All & 83 & 102 & 431 & 15.63 (0.015--31.25) & 93.1 & $1.4\times10^{15}$ & 12.0--13.3 \\
+All & 82 & 102 & 431 & 15.63 (0.015--31.25) & 93.1 & $1.4\times10^{15}$ & 12.0--13.3 \\
 \hline
 \end{tabular}
 \end{table}
@@ -2872,11 +2905,12 @@ All species (merged) & 1.48 & 0.05 & 0.21 & 15.10 & 5.36 & 0.00 & 22.20 & 4.96 \
 
 % Generated by make_tables_v328.py -- do not edit by hand.
 % Generated by make_tables_v328.py -- do not edit by hand.
+% Generated by make_tables_v328.py -- do not edit by hand.
 \begin{table*}
 \centering
 \scriptsize
 \setlength{\tabcolsep}{3pt}
-\caption{One row per searched star, ordered by distance; the table is split into two side-by-side blocks that read down the left block and then down the right. $d$ is the distance used by the search; ``Bands'' lists the ALMA bands in which that star has at least one searched window; $N_{\rm w}$ is the number of searched windows; EIRP$_{5\sigma}$ is the deepest (smallest) nominal $5\sigma$ threshold of any of those windows, in W. Star names are the identifiers used in the released machine-readable table (\texttt{per\_target\_results\_v3.28.csv}) and cross-reference it directly. 88 stars, 83 independent systems, 431 searched windows; de-duplicated, noise-defect and withheld windows are excluded here but are present, and labelled, in the released file.}
+\caption{One row per searched star, ordered by distance; the table is split into two side-by-side blocks that read down the left block and then down the right. $d$ is the distance used by the search; ``Bands'' lists the ALMA bands in which that star has at least one searched window; $N_{\rm w}$ is the number of searched windows; EIRP$_{5\sigma}$ is the deepest (smallest) nominal $5\sigma$ threshold of any of those windows, in W. Star names are the identifiers used in the released machine-readable table (\texttt{per\_target\_results\_v3.31.csv}) and cross-reference it directly. 88 stars, 82 independent systems, 431 searched windows; de-duplicated, noise-defect and withheld windows are excluded here but are present, and labelled, in the released file.}
 \label{tab:starsummary}
 \begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.27\textwidth}rlrr@{\hspace{1.2em}}>{\raggedright\arraybackslash}p{0.27\textwidth}rlrr@{}}
 \hline
@@ -3202,7 +3236,7 @@ channelisation: 17.0 per cent fine ($n=47$) against 12.4 per cent
 coarse ($n=178$). By primary-beam offset: 15.7 per cent above the
 median offset (0.10\,arcsec) against 11.0 per cent below. The
 disc-hosting caveat inverts empirically: disc- or planet-hosting stars
-contribute every crossing window and every spatially significant hit
+contribute every crossing window and every control-ring exceedance
 but a \emph{lower} star-beats-ring rate (9.8 per cent) than non-hosts
 (18.3 per cent), so circumstellar emission shared by star and ring
 does not drive the statistic. Excluding the fifteen $\beta$~Pictoris
@@ -3388,7 +3422,7 @@ unaffected.
 
 \bibitem[Margot et al.(2023)]{Margot2023} Margot J.-L., et al., 2023, AJ, 166, 206
 
-\bibitem[Mason et al.(2024)]{Mason2024} Mason L.~A., Garrett M.~A., Wandia K., Siemion A.~P.~V., 2024, MNRAS, 536, 2427
+\bibitem[Mason et al.(2024)]{Mason2024} Mason L.~A., Garrett M.~A., Wandia K., Siemion A.~P.~V., 2024, MNRAS, 536, 2127
 
 \bibitem[Matrà et al.(2017)]{Matra2017} Matrà L., Dent W. R. F., Wyatt M. C., et al., 2017, ApJ, 842, 9
 

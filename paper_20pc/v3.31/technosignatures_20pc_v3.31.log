@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.8.25)  10 SEP 2026 09:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.8.25)  10 SEP 2026 10:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -570,178 +570,179 @@ Package pdftex.def Info: figures/completeness_surface.pdf  used on input line 6
 <figures/noise_qa.pdf, id=465, 505.89pt x 321.2pt>
 File: figures/noise_qa.pdf Graphic file (type pdf)
 <use figures/noise_qa.pdf>
-Package pdftex.def Info: figures/noise_qa.pdf  used on input line 810.
+Package pdftex.def Info: figures/noise_qa.pdf  used on input line 811.
 (pdftex.def)             Requested size: 513.11743pt x 325.79645pt.
  [9] [10 <./figures/noise_qa.pdf>] [11]
 <figures/control_diagnostics.pdf, id=526, 505.89pt x 411.5375pt>
 File: figures/control_diagnostics.pdf Graphic file (type pdf)
 <use figures/control_diagnostics.pdf>
 Package pdftex.def Info: figures/control_diagnostics.pdf  used on input line 10
-34.
+43.
 (pdftex.def)             Requested size: 513.11743pt x 417.42671pt.
  [12 <./figures/control_diagnostics.pdf>]
-<figures/bpic_velocity_space.pdf, id=569, 469.755pt x 332.24126pt>
+<figures/bpic_velocity_space.pdf, id=568, 469.755pt x 332.24126pt>
 File: figures/bpic_velocity_space.pdf Graphic file (type pdf)
 <use figures/bpic_velocity_space.pdf>
 Package pdftex.def Info: figures/bpic_velocity_space.pdf  used on input line 11
-30.
+43.
 (pdftex.def)             Requested size: 513.11743pt x 362.91142pt.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 1156.
+(Font)              using `T1/cmr/m/it' instead on input line 1169.
 
 [13] [14 <./figures/bpic_velocity_space.pdf>] [15]
-<figures/eirp_vs_distance.pdf, id=643, 245.718pt x 209.58301pt>
+<figures/eirp_vs_distance.pdf, id=642, 245.718pt x 209.58301pt>
 File: figures/eirp_vs_distance.pdf Graphic file (type pdf)
 <use figures/eirp_vs_distance.pdf>
-Package pdftex.def Info: figures/eirp_vs_distance.pdf  used on input line 1383.
+Package pdftex.def Info: figures/eirp_vs_distance.pdf  used on input line 1400.
 
 (pdftex.def)             Requested size: 513.11743pt x 437.71002pt.
  [16 <./figures/eirp_vs_distance.pdf>]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-439.
+459.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ) [17]
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 1598.
+(Font)              using `T1/cmr/m/it' instead on input line 1618.
 
-<figures/occurrence_duty.pdf, id=714, 469.755pt x 331.2375pt>
+[18]
+<figures/occurrence_duty.pdf, id=721, 469.755pt x 331.2375pt>
 File: figures/occurrence_duty.pdf Graphic file (type pdf)
 <use figures/occurrence_duty.pdf>
-Package pdftex.def Info: figures/occurrence_duty.pdf  used on input line 1664.
+Package pdftex.def Info: figures/occurrence_duty.pdf  used on input line 1684.
 (pdftex.def)             Requested size: 513.11743pt x 361.815pt.
-[18] [19 <./figures/occurrence_duty.pdf>] [20] [21] [22]
-Underfull \hbox (badness 10000) in paragraph at lines 2207--2207
+ [19 <./figures/occurrence_duty.pdf>] [20] [21] [22]
+Underfull \hbox (badness 10000) in paragraph at lines 2229--2229
 []|\T1/cmr/m/n/9 pioneered
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2207--2207
+Underfull \hbox (badness 10000) in paragraph at lines 2229--2229
 \T1/cmr/m/n/9 multi-site RFI
  []
 
 
-Underfull \hbox (badness 3138) in paragraph at lines 2207--2207
+Underfull \hbox (badness 3138) in paragraph at lines 2229--2229
 \T1/cmr/m/n/9 com-men-sal SETI
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2207--2207
+Underfull \hbox (badness 10000) in paragraph at lines 2229--2229
 []|$\OML/cmm/m/it/9 ^^L$\T1/cmr/m/n/9 -CVAE cuts
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2207--2207
+Underfull \hbox (badness 10000) in paragraph at lines 2229--2229
 \T1/cmr/m/n/9 human-vetting
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2207--2207
+Underfull \hbox (badness 10000) in paragraph at lines 2229--2229
 []|\T1/cmr/m/n/9 interstellar-object
  []
 
 
-Overfull \hbox (10.42145pt too wide) in paragraph at lines 2207--2207
+Overfull \hbox (10.42145pt too wide) in paragraph at lines 2229--2229
 []|\T1/cmr/m/n/9 eclipsing/occultation
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2207--2207
+Underfull \hbox (badness 10000) in paragraph at lines 2229--2229
 []|\T1/cmr/m/n/9 commensal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2207--2207
+Underfull \hbox (badness 10000) in paragraph at lines 2229--2229
 []|\T1/cmr/m/n/9 first ALMA
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2207--2207
+Underfull \hbox (badness 10000) in paragraph at lines 2229--2229
 \T1/cmr/m/n/9 tech-nosig-na-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2207--2207
+Underfull \hbox (badness 10000) in paragraph at lines 2229--2229
 \T1/cmr/m/n/9 ture search;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2207--2207
+Underfull \hbox (badness 10000) in paragraph at lines 2229--2229
 \T1/cmr/m/n/9 EIRP$[] \OT1/cmr/m/n/9 =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2207--2207
+Underfull \hbox (badness 10000) in paragraph at lines 2229--2229
 \OT1/cmr/m/n/9 6\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 9 \OMS/cmsy/m/n/9 ^^B \OT1/cmr/
 m/n/9 10[]$\T1/cmr/m/n/9 W
  []
 
 [23] [24]
-Underfull \hbox (badness 10000) in paragraph at lines 2244--2245
+Underfull \hbox (badness 10000) in paragraph at lines 2266--2267
 []|\T1/cmr/m/n/9 In head-line
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2246--2246
+Underfull \hbox (badness 10000) in paragraph at lines 2268--2268
 []|\T1/cmr/m/n/9 Primary nar-row-band
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2252--2253
+Underfull \hbox (badness 10000) in paragraph at lines 2274--2275
 []|\T1/cmr/m/n/9 Disposition
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2253--2253
+Underfull \hbox (badness 10000) in paragraph at lines 2275--2275
 []|\T1/cmr/m/n/9 Injection-recovery
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2255--2256
+Underfull \hbox (badness 10000) in paragraph at lines 2277--2278
 []|\T1/cmr/m/n/9 Completeness
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2258--2258
+Underfull \hbox (badness 10000) in paragraph at lines 2280--2280
 []|\T1/cmr/m/n/9 Frequency-occupancy
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2259--2260
+Underfull \hbox (badness 10000) in paragraph at lines 2281--2282
 []|\T1/cmr/m/n/9 Disposition
  []
 
-<figures/selection.pdf, id=997, 679.53876pt x 476.78125pt>
+<figures/selection.pdf, id=996, 679.53876pt x 476.78125pt>
 File: figures/selection.pdf Graphic file (type pdf)
 <use figures/selection.pdf>
-Package pdftex.def Info: figures/selection.pdf  used on input line 2303.
+Package pdftex.def Info: figures/selection.pdf  used on input line 2326.
 (pdftex.def)             Requested size: 487.45999pt x 342.01636pt.
 <figures/symcdf.pdf, id=999, 332.24126pt x 259.97125pt>
 File: figures/symcdf.pdf Graphic file (type pdf)
 <use figures/symcdf.pdf>
-Package pdftex.def Info: figures/symcdf.pdf  used on input line 2320.
+Package pdftex.def Info: figures/symcdf.pdf  used on input line 2348.
 (pdftex.def)             Requested size: 513.11743pt x 401.56288pt.
 [25] [26 <./figures/selection.pdf>] [27 <./figures/symcdf.pdf>]
 <figures/completeness.pdf, id=1053, 505.89pt x 542.025pt>
 File: figures/completeness.pdf Graphic file (type pdf)
 <use figures/completeness.pdf>
-Package pdftex.def Info: figures/completeness.pdf  used on input line 2476.
+Package pdftex.def Info: figures/completeness.pdf  used on input line 2504.
 (pdftex.def)             Requested size: 441.2813pt x 472.8068pt.
  [28] [29 <./figures/completeness.pdf>] [30]
 <figures/sample_distance_distribution.pdf, id=1093, 245.718pt x 187.902pt>
 File: figures/sample_distance_distribution.pdf Graphic file (type pdf)
 <use figures/sample_distance_distribution.pdf>
 Package pdftex.def Info: figures/sample_distance_distribution.pdf  used on inpu
-t line 2726.
+t line 2758.
 (pdftex.def)             Requested size: 513.11743pt x 392.42967pt.
 <figures/drift_acceleration.pdf, id=1096, 549.05125pt x 347.2975pt>
 File: figures/drift_acceleration.pdf Graphic file (type pdf)
 <use figures/drift_acceleration.pdf>
-Package pdftex.def Info: figures/drift_acceleration.pdf  used on input line 273
-9.
+Package pdftex.def Info: figures/drift_acceleration.pdf  used on input line 277
+1.
 (pdftex.def)             Requested size: 513.11743pt x 324.59433pt.
  [31 <./figures/sample_distance_distribution.pdf>]
 [32 <./figures/drift_acceleration.pdf>] [33] [34] [35] [36]
@@ -749,7 +750,7 @@ Package pdftex.def Info: figures/drift_acceleration.pdf  used on input line 273
 File: figures/aumic_control_maxima.pdf Graphic file (type pdf)
 <use figures/aumic_control_maxima.pdf>
 Package pdftex.def Info: figures/aumic_control_maxima.pdf  used on input line 3
-279.
+313.
 (pdftex.def)             Requested size: 420.76004pt x 309.41783pt.
  [37 <./figures/aumic_control_maxima.pdf>] (./technosignatures_20pc_v3.31.bbl) 
 [38]
@@ -759,10 +760,10 @@ nged.
 (rerunfilecheck)             Checksum: 92BA796A35197F8514FA942120A2EAAA;8875.
  ) 
 Here is how much of TeX's memory you used:
- 12910 strings out of 480247
- 194918 string characters out of 5896151
- 579612 words of memory out of 5000000
- 30458 multiletter control sequences out of 15000+600000
+ 12909 strings out of 480247
+ 194908 string characters out of 5896151
+ 580181 words of memory out of 5000000
+ 30457 multiletter control sequences out of 15000+600000
  490249 words of font info for 85 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  70i,13n,76p,1344b,399s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -801,10 +802,10 @@ e1/public/cm-super/sfti0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
 fti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt0800.pfb></usr/sh
 are/texmf/fonts/type1/public/cm-super/sftt0900.pfb></usr/share/texmf/fonts/type
 1/public/cm-super/sftt1000.pfb>
-Output written on technosignatures_20pc_v3.31.pdf (38 pages, 1398991 bytes).
+Output written on technosignatures_20pc_v3.31.pdf (38 pages, 1399600 bytes).
 PDF statistics:
  1428 PDF objects out of 1440 (max. 8388607)
- 1084 compressed objects within 11 object streams
+ 1085 compressed objects within 11 object streams
  186 named destinations out of 1000 (max. 500000)
  380 words of extra memory for PDF output out of 10000 (max. 10000000)
 

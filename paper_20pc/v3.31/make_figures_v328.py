@@ -693,7 +693,7 @@ def selection_stages(D):
         ("with public ALMA coverage", D["n_census"], "star"),
         ("stars processed in this release", D["n_stars"], "star"),
         ("star--band datasets", D["n_starbands"], "dataset"),
-        ("spectral windows extracted", D["n_uniq"], "win"),
+        ("unique windows after duplicate removal", D["n_uniq"], "win"),
         ("windows passing QA", D["n_windows"], "win"),
         (r"windows with a $\geq5\sigma$ on-star crossing", D["n_cross"], "win"),
         ("also beating their 512-position control ring", D["n_flagged"], "win"),
