@@ -561,6 +561,51 @@ is 49 and no retained product explains it.
 0 multiply-defined labels, 0 errors, 0 Type 3 fonts, 0 literals disagreeing with a macro.
 Point-by-point reply in `v3.29/REFEREE_RESPONSE_ROUND2.md`.
 
+## v3.30 (2026-09-10) - post-push audit: residual stale content found and removed
+
+v3.29 was pushed after a verification pass that checked for specific literal strings. A
+deeper independent audit then found that several of the referee's objections survived as
+**paraphrases** rather than literals, plus a set of defects that pass had not looked for.
+v3.30 fixes them. Nothing here changes a result; all of it is consistency and correctness.
+
+**A REAL ERROR IN THE CONCLUSIONS.** The occurrence sentence had its descriptors swapped:
+it attributed "the injection-measured, frequency-integrated completeness folded in" to the
+3.8% figure, which S6.1 and tab:occurrence define as the *thresholded, unit-recovery*
+bracket, and it hard-coded "24 calibrated systems" where the value is 56. Rewritten, with
+the duty-cycle degradation and the vacuity-under-a-frequency-prior statement attached.
+
+**A TABLE THAT CONTRADICTED THE PAPER, DELETED.** `tab:bandsummary` was an unreferenced,
+hand-written duplicate of the generated `tab:perband`: 439 windows instead of 417, and its
+"Best EIRP" column quoted **2.8e12 and 2.0e12 W** - the two noise-defect windows this paper
+explicitly excludes, and whose exclusion is one of its headline corrections. Removing an
+unreferenced stale duplicate that states what S5.3 refutes is an error fix, not a cut.
+
+**`tab:ebs` claimed 100 execution blocks and listed 57.** The caption now says what is true:
+57 blocks whose archive metadata had been recovered at freeze time, out of the 100 searched,
+the remainder to accompany the machine-readable release.
+
+**"Candidate" was still used for objects the paper defines as non-candidates** - the AU Mic
+window in five places including two figure captions, the beta Pic windows in four, "the three
+candidate windows", and tab:supp listing closure-phase vetting as applied to "3 candidates".
+All reworded; "candidate" now means only what tab:nomenclature says it means.
+
+**Further 20 pc-era residue**: "four of the 46 are white dwarfs"; "the 120 entries comprise
+113 distinct physical systems"; "spanning 1.3-19.6 pc"; "~7% of the catalogued stars"
+(elsewhere ~1%); a stray "within 20 pc" in the frame-conversion appendix; and version history
+("Versions up to 3.24") in an appendix the referee had asked be cleared of it.
+
+**Housekeeping**: App. R contradicted S5.3 on which item the process-level failures are;
+two orphaned references (Drake 1974, Gentile Fusillo et al. 2021) restored to in-text
+anchors; the Data Availability TODO named a superseded tag. `make_tables_v328.py` now carries
+a warning that re-running it reverts the trimming and re-hardcodes numbers over the macros.
+
+**Still open and flagged, not guessed**: `Tristan2025` remains uncited - it is the authors'
+own co-authored flare paper and its intended anchor is theirs to place.
+
+**Length**: 38 pages, unchanged. 0 undefined references, 0 undefined citations, 0
+multiply-defined labels, 0 LaTeX errors, 0 Type 3 fonts, 0 stale-era residue patterns,
+285 generated-macro calls, every referenced label defined and every figure present.
+
 ## Planned for v2.04+
 - Add the full ALMA project-code list to the Acknowledgements section
   (deferred again — still meaningful to wait until survey completion so
