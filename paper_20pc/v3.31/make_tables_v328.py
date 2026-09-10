@@ -132,7 +132,11 @@ def drift_ceiling(r):
 # ---------------------------------------------------------------------------
 # 3.  name matching against the ranked census
 # ---------------------------------------------------------------------------
-norm = lambda s: re.sub(r'[^a-z0-9]', '', s.lower())
+# the export applies the archival-hygiene alias g Lup -> HD 139664; the ranked
+# census still carries the old identifier, so map it back for the crossmatch
+_REV_ALIAS = {'hd139664': 'glup'}
+_n = lambda s: re.sub(r'[^a-z0-9]', '', s.lower())
+norm = lambda s: _REV_ALIAS.get(_n(s), _n(s))
 ranked = list(csv.DictReader(open(RANKED)))
 by_norm = {}
 for r in ranked:

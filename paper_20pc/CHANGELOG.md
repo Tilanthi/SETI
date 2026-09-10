@@ -664,6 +664,64 @@ still said "g Lup". Fixed at source in the exporter, so the released data agree.
 **Length**: 38 pages, unchanged since v3.27. 0 undefined references, 0 undefined citations,
 0 multiply-defined labels, 0 LaTeX errors, 0 Type 3 fonts, 316 generated-macro calls.
 
+## v3.31 (rev 3, 2026-09-10) - fifth referee round: duty-cycle model corrected, local noise measured, statistics named
+
+**DUTY CYCLE CORRECTED (Referee 1's principal technical point).** The occurrence ladder used
+D_i = D, discarding the benefit of repeated epochs. A system observed in n_i independent
+execution blocks is sampled n_i times, so D_i = 1-(1-D)^n_i. 18 of the 82 systems have n_i>1
+(13 with two epochs, five with three). Recomputed: at EIRP >= 1e16 W the measured-completeness
+bound goes 12.3 -> 10.8 per cent at D=0.5 and 62 -> 48 per cent at D=0.1, and D=0.05 moves from
+unconstrained to 95 per cent. The independence assumption is stated, and correlated or periodic
+on-states are explicitly outside the model.
+
+**LOCAL NOISE MEASURED, not deferred (Referee 1 point 8).** The referee asked that the global
+MAD noise scale be checked locally for the four exceedances rather than left to a future
+release. Done, using the retained per-integration spectra on the cluster: local-to-global
+ratios are 0.97 (CP-72 2713), 1.29 (HD 48370), 0.93 (beta Pic B3), 1.02 (beta Pic B6). The
+global scale is accurate to a few per cent except toward HD 48370, where a local estimate sits
+29 per cent higher because that field is full of CO - the disposition already assigned to it.
+For CP-72 2713 the local scale is slightly LOWER, so its excess is marginally understated
+rather than inflated. No disposition changes. Stated honestly as a test of the noise scale,
+not of T_star, since the retained products keep no drift-stacked cube.
+
+**THREE STATISTICS NAMED (Referee 1 point 4).** "Symmetric" was doing two jobs. Now: the SP
+statistic (single stellar position vs 512 single controls) is operative over all 431 windows
+and is the source of every count; the SR statistic (region maximisation at star AND controls)
+needs raw-visibility reprocessing and exists for seven windows as a consistency check; the
+legacy asymmetric statistic is retired.
+
+**DEVELOPMENTAL vs CONFIRMATORY (Referee 1 point 5).** Because this release is the sample on
+which the statistic was developed, its false-alarm calibration is now labelled retrospective.
+The pre-registration binds only the remaining 101 planned datasets, which become the
+confirmatory sample.
+
+**ERRORS FIXED**
+- Stellar composition: "76 of the 168 stars are M dwarfs (63 per cent)" - the enumerated counts
+  summed to 120, and 76/120 (not /168) gives 63 per cent. Referee 2 caught it. Replaced with
+  the generated, correctly scoped Teff composition from the selection-function table.
+- Four hard-typed 417-window numbers survived the refresh to 431 and contradicted the macros:
+  the AU Mic statistical-scale percentile/count/p-value, the AU Mic figure legend, "18 windows
+  with an on-star crossing" (now 20), and "among 402" non-beta-Pic windows (now 416). All
+  recomputed, macro-ised, and the figure regenerated. This was the same bug class the macro
+  system exists to prevent, surviving only because these four were typed rather than generated.
+- A crossmatch alias broke by my own earlier fix: the export renames g Lup -> HD 139664 while
+  the ranked census keeps the old identifier, so one star failed to match. Reverse alias added;
+  the table now reads "all 88 were matched" rather than 87.
+- Nine duplicated generated-table header comment blocks, left by successive re-splices.
+
+**TERMINOLOGY**: "phase-steady" -> "temporally persistent, frequency-stationary" (the pipeline
+subtracts a temporal median of intensity, not electromagnetic phase, so the old term invited a
+physics misreading); "vacuous" -> "unconstrained"; channel-width range spelled out as spanning
+more than three orders of magnitude.
+
+**FIGURE SIZING FIXED**: three supplement figures were being upscaled to 154-209 per cent of
+their natural width, which is why their axis labels were visibly larger than the body text.
+Normalised. That, not text deletion, is what returned the paper to 38 pages.
+
+**Length**: 38 pages, unchanged. 0 undefined references, 0 undefined citations, 0
+multiply-defined labels, 0 LaTeX errors, 0 Type 3 fonts, 346 generated-macro calls, and a clean
+sweep on eight stale-number patterns.
+
 ## Planned for v2.04+
 - Add the full ALMA project-code list to the Acknowledgements section
   (deferred again — still meaningful to wait until survey completion so
