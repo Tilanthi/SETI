@@ -606,6 +606,64 @@ own co-authored flare paper and its intended anchor is theirs to place.
 multiply-defined labels, 0 LaTeX errors, 0 Type 3 fonts, 0 stale-era residue patterns,
 285 generated-macro calls, every referenced label defined and every figure present.
 
+## v3.31 (2026-09-10) - refreshed to live pipeline data + third referee round, in one version
+
+**LIVE DATA CONNECTION ESTABLISHED.** The survey runs on **astra-climate**
+(`fetch-agi@34.143.130.135`), not in any agent container; `/data` does not exist locally.
+The SSH key was already on the shared drive, mis-recorded as "awaiting authorization".
+There was also **no exporter** - the analysis export had been a manual step nobody preserved,
+which is why the paper kept going stale. `/data/SETI/bin/export_figdata.py` now rebuilds it in
+one command. Route and refresh cycle documented in `/shared/SHARED.md`.
+
+**DATA REFRESHED** to snapshot 2026-09-10T06:43Z (was 2026-09-09T16:26Z):
+
+| | v3.30 | v3.31 |
+|---|---|---|
+| searched windows | 417 | **431** |
+| stars / systems | 85 / 79 | **88 / 82** |
+| star-band datasets | 104 of 208 | **107 of 208** |
+| execution blocks | 100 | **102** |
+| distance span | 1.30-38.83 pc | **1.30-39.63 pc** |
+| hits / flagged / candidates | 18 / 4 / 0 | **20 / 4 / 0** |
+
+**The science is unchanged**: the same four spatially significant windows (beta Pic x2,
+HD 48370, CP-72 2713), still zero candidates. Coverage grew; conclusions did not move.
+Because every number is macro-generated, refreshing the export updated the abstract, body,
+tables and captions in one step - the point of the v3.29 macro system.
+
+**REFEREE ROUND 3, both reports addressed.** Referee 1 was right that the rank-null argument
+was wrong: under exchangeability the probability that one designated position of 513 ranks
+first is exactly 1/513, *independent of tail shape*, so the previous "heavy tails inflate
+1/513" explanation was invalid. Replaced with the real one: of the 5 rank-first windows,
+3 carry genuine celestial line emission at the stellar position and are not draws from the
+noise null at all; the residual 2 against 0.84 expected give P = 0.21, unremarkable. Also:
+which statistic is applied to all 431 windows vs the 7 reprocessed ones is now stated once,
+unambiguously; a three-level hierarchy (instrument/noise -> astrophysical-source ->
+technosignature) is enforced; "5 sigma" is a *trigger* threshold throughout; the occurrence
+number is renamed a **conditional in-band transmitter fraction**, demoted below the
+non-detection, and always quoted with its duty-cycle degradation; the title is shorter; the
+abstract is restructured and now scopes the 42 per cent completeness to the fine-channel
+class only (Referee 2 M1); AU Mic is purged of "candidate" language; closure phase is
+presented as demonstrated-but-not-sensitivity-effective.
+
+**NEW ARTEFACTS**: `tab:bothstats` (all seven originally-flagged windows under both
+statistics - the audit trail Referee 2 asked for; it also closed the only undefined reference
+in v3.30); `tab:allhits` (all 20 hit windows, the full funnel); frequency offsets alongside
+velocity offsets in the flagged-window table; channel width exposed on Figure 1
+(GBT/Parkes 2.8 Hz, Margot 3.0 Hz, Mason 30.5 kHz, this survey 15.63 MHz median); a
+completeness surface; a C_i = F_i R_i D_i C_morph decomposition; an online-appendix index.
+
+**CORRECTIONS TO OUR OWN TEXT**, found by audit: "this release's 42 systems all lie inside
+20 pc" was flatly false after the rescope (82 systems, 41 inside 20 pc) and its "~2500x
+deeper than Mason+2024" was wrong (~1250x); "15 of the 46 processed stars (36 planets)"
+contradicted Section 3 and is now 18 of 88 (41 planets); Figure 13 said "n=86" and "within
+20 pc"; and the archival-hygiene lesson the paper now teaches in the main text - that the
+catalogue entry "gamma Lupi" is really HD 139664 - was contradicted by our own tables, which
+still said "g Lup". Fixed at source in the exporter, so the released data agree.
+
+**Length**: 38 pages, unchanged since v3.27. 0 undefined references, 0 undefined citations,
+0 multiply-defined labels, 0 LaTeX errors, 0 Type 3 fonts, 316 generated-macro calls.
+
 ## Planned for v2.04+
 - Add the full ALMA project-code list to the Acknowledgements section
   (deferred again — still meaningful to wait until survey completion so
