@@ -1,6 +1,7 @@
 # arXiv upload set for v3.46
 
-Verified 2026-09-12 (v3.46, after the de-AI prose sweep) by running
+Verified 2026-09-12 (v3.46, after the de-AI prose sweep and the
+verification-and-corrections pass) by running
 `./arxivset.sh` into an empty directory containing only the files below, then
 `pdflatex` x3: **29 pages, 0 errors, 0 undefined references/citations, 0
 multiply-defined labels, 0 overfull boxes, 0 underfull boxes, 0 Type 3 fonts,
@@ -10,10 +11,13 @@ Nothing else in this folder is needed by arXiv; the `.py` generators, the
 provenance rather than build inputs.
 
 **29 items: 22 tex/cls/sty + 7 figures.** The two additions over v3.45 are
-`survey_numbers_pointing.tex` and `survey_numbers_bprec.tex`, the macro files
-for the pointing audit and the beta Pic recurrence control, together with
-`survey_numbers_round15.tex` in place of the v3.45 round list; resolved by
-`arxivset.sh`, not maintained by hand.
+`survey_numbers_pointing.tex` (pointing audit) and `survey_numbers_round15.tex`
+(the beta Pic recurrence control, the retry programme, the SEFD residual test
+and the statistic-revision chronology). `survey_numbers_bprec.tex` was created
+during this cycle and then **withdrawn**: its numbers were superseded by
+`survey_numbers_round15.tex`, and one of them was wrong. The file and its
+generator are parked in `.superseded/` and are not part of the build.
+The set is resolved by `arxivset.sh`, not maintained by hand.
 
 - `technosignatures_20pc_v3.46.tex`   (bibliography is inline; no .bbl/.bst needed)
 - `openjournal.cls`                   (Open Journal of Astrophysics class)
@@ -23,7 +27,6 @@ for the pointing audit and the beta Pic recurrence control, together with
 - `survey_numbers_recurrence.tex`  (CP-72 2713 two-epoch test; `\input` at line 30)
 - `survey_numbers_localnull.tex`
 - `survey_numbers_pointing.tex`  (pointing audit)
-- `survey_numbers_bprec.tex`     (beta Pic recurrence control)
 - `tab_compcurve.tex`, `tab_occurrence.tex`, `tab_selection.tex`, `tab_perband.tex`
 - `figures/` (7 PDFs, all of them used):
   `completeness`, `control_diagnostics`, `coverage_waterfall`,

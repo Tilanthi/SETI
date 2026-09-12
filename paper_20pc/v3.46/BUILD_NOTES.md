@@ -1383,3 +1383,146 @@ paragraph whose last line carries two words removes a whole line.
 
 Snapshots: `.snap_prose_start.tex` / `.pdf` (incoming, 30 pages) and `.snap_29pp.tex`
 (first build at 29 pages). **Not pushed, per the brief.**
+
+# BUILD_NOTES — v3.46 VERIFICATION AND CORRECTIONS PASS
+
+Third run in this folder, sequenced after the prose/trim run per
+`/shared/ASTRA/reviews/v3.46_MANDATORY_CORRECTIONS.md` ("one writer at a time").
+Incoming state: 29 pages, main 20.45, all gates 0, abstract 1907/1920.
+Snapshot of the incoming file: `.snap_verify_start.tex`.
+
+## What this pass was for
+
+The numbers the brief supplied for the two new results had not been checked
+against the products. Three of them did not reproduce, and one supported a
+claim that was false. This pass verified them, corrected the manuscript, and
+added the two referee-requested measurements that were still outstanding.
+
+## Corrections applied
+
+1. **The beta Pic recurrence paragraph, rewritten.** It said "the two beta Pic
+   windows attributed to circumstellar CO were re-searched" and gave 9.95
+   against 10.16 for Band 6. The Band 6 window re-searched is 230.528134 GHz in
+   `uid://A002/X5a9a13/X58b`, a crossing; `tab:flagged`'s Band 6 row is
+   230.516128 GHz in `uid://A001/X133d/Xbb5` at T* = 11.68, and no second block
+   of it exists in the archive. The text contradicted the paper's own Table 5.
+   It now names both windows explicitly and says which is a stage-1 outlier.
+2. **0.34 km/s -> the products.** `\BpRecThreeDv{0.34}` came from differencing
+   against the table's rounded 115.2605 GHz. The frequency comparison is now
+   made after removing each block's own tuning, which is what ALMA sets per
+   date: **exactly 1.00 channel in Band 3 and 3.00 in Band 6**, verified from
+   `freq_lo` and `star_peak_freq` in the result files. The barycentric argument
+   the old text leaned on is not valid (the tuning has already absorbed that
+   term) and is replaced by a frame-free statement: the CO peaks of four blocks,
+   two transitions, nine years apart, all lie within 0.7 km/s of beta Pic's
+   systemic velocity. This reproduces `/shared/ASTRA/reviews/v3.46_evidence_bpic.md`
+   independently.
+3. **A third Band 3 block, which landed at 06:35 UTC and no one had.**
+   `A002_Xf5d76d_Xe19`: T* = 27.68, 24 channels above threshold, 0 of 512
+   controls above the star, and its peak one channel from the published block
+   after the tuning correction. The B3 control is now three blocks, not two.
+4. **The retry programme.** The brief said 0 successes in 38 attempts. The
+   processing log says **39 attempts, 1 success, 38 failures**; the success is
+   AU Mic [B9], outside Bands 3-8 and outside this release. The exclusions
+   section now states the verified form.
+5. **The pointing macros.** `pointing_calc.py` pooled every candidate unit of
+   every failed target-band, including the eight that do point at the star,
+   giving a median of 1.4 deg and a maximum of 8777". Restricted to the 60
+   never-pointed entries, one number each, being the nearest field centre:
+   **250" to 8205", median 1.6 deg**, which is what the audit document reports.
+6. **The denominator.** 53 of the 168 candidate stars fail on pointing in every
+   band, so the searched sample is 88 of about **115** genuinely covered stars,
+   not 88 of 168. Verified by matching all 54 never-pointed stars to census
+   entries by designation: exactly one of them, Wolf 28, is also in the searched
+   88 through another band.
+7. **The Conclusions still said "retired as a noise excursion"** (referee A12,
+   brief 2.9). Replaced with the mandated wording. The Results section had
+   already been fixed; the Conclusions had not.
+8. **The statistic-revision chronology (brief 2.15, referee B1).** The old text
+   implied the revision preceded inspection of the flag. The repository says
+   otherwise: the AU Mic flag is first committed 2026-08-31T11:55:04Z
+   (`8e00f90e8f8c`, stated in that version's abstract, verified by fetching the
+   file), and the symmetric statistic becomes operative 2026-09-09T16:14:07Z
+   (`0c465f2661bd`). The paper now says the redesign postdates the flag by nine
+   days and lets the algebra carry the weight. The CP-72 2713 retire criterion
+   is cited the same way: `119a68a6ab50`, 9 hours before the second block was
+   searched.
+9. **The coarse-noise defect (brief 2.17, referee B4).** The subsection no
+   longer says the failure mode is unidentified. All six windows are 12 m,
+   three in Band 6 and three in Band 7, all 15.6 MHz, in 5 execution blocks
+   across 4 projects, and **every one has a finer-channelised window in the same
+   block covering the same frequencies that behaves normally** (verified here
+   from the frozen export, q ratios 2.9e3 to 6.3e3). The position-independence
+   question the appendix left open is settled from the pipeline source: `sigma`
+   is `(nint, nch)`, estimated from the control probes and applied to every
+   position alike. And the residual test the referee asked for: predicting q
+   from each window's band, array and antenna count, the 431 retained windows
+   are unimodal, 98.4 per cent inside half a decade of the median, interquantile
+   spread a factor 2.3, no internal gap wider than 0.04 dex, with the six
+   excluded windows 3.0 dex below the lowest retained one.
+
+## Paid for by
+
+`tab:nomenclature` lost two rows (brief section 3 asks for it to be shrunk);
+both are stated in full in the boxed reading rule immediately above it. The
+older beta Pic validation paragraph lost its check-list restatement, now
+carried by the recurrence result. The CP-72 subsection lost a trials-budget
+sentence duplicated in section 3 and one rhetorical closer. Net: 29 pages held,
+main 20.45 -> 20.70.
+
+## Hygiene
+
+- `survey_numbers_bprec.tex` and `recurrence_control_calc.py` are **withdrawn**
+  to `.superseded/`: every macro in that file was unreferenced after the
+  rewrite, and one was wrong. `ARXIV_UPLOAD.md` records the withdrawal.
+- `pointing_calc.py`, `recurrence_control_calc.py` and `v346_calc.py` were not
+  in `make_all.sh`, so a clean regeneration would not have reproduced their
+  macro files. The two that survive are now wired in.
+- **Clean-regeneration test run**: every generated `survey_numbers*.tex` and
+  `tab_*.tex` deleted, `make_all.sh` re-run, rebuild identical, and the
+  regenerated files diff clean against the backup apart from the
+  retired-macro comment lines.
+- `macrosweep.py`: **0 unused macros** after `retire_macros.py`.
+- `arxivset.sh` from an empty directory: **29 items, 29 pages, every gate 0**.
+
+## Four referee items the prose run had not reached, done here
+
+Checked rather than assumed, by grepping for the wording each referee asked for:
+Figure 1's caption now says the panels are to be read together and that a lower
+EIRP there does not imply greater sensitivity to a hertz-wide carrier (A17);
+the mask discussion now states that a deliberate transmitter could sit on a
+molecular transition, so those channels are searched but intrinsically ambiguous
+(A13); the first false-alarm component now describes the control ensemble as an
+empirical null conditional on approximate spatial exchangeability rather than a
+local false-alarm probability (A10); and the appendix carrying the development
+history is headed **Analysis audit trail**, with the validation section opening
+"What follows is the final analysis" and pointing to it (brief section 5).
+
+## Final measurement
+
+    gate.sh     : 29 pages | 0 errors | 0 undef | 0 multdef | 0 overfull | 0 underfull | 0 Type3
+    pagesplit   : main 20.75  back 1.05  appendices 6.88  bib 0.31  = 28.99 content pages
+    abstract    : 1904 / 1920 rendered characters
+    macrosweep  : 586 macros defined, 0 unused
+    arxivset.sh : 29 items from an empty directory, 29 pages, 0 missing files, 0 Type 3, 1.6 MB
+    prosecount  : A total main 18, app 6, 24 | em-dash 0 | negative definition 2
+    worddiff    : main +312 net (672 inserted, 360 deleted), appendices -48, whole +264
+
+The last page was bought back twice: the first time by dropping two rows from
+`tab:nomenclature` that the boxed reading rule already states in full, the
+second by setting `tab:occurrence` in `\footnotesize` and trimming its caption
+and the thrice-stated "illustrative only" opener. The main-text measure is
+float-quantised and did not respond to several small prose cuts, so the cuts
+that counted were the ones landing on the last two pages.
+
+## Still open, and not this pass's to close
+
+- Brief section 3, the vocabulary replacement ("lane" -> search branch, and the
+  rest): **not done**. "lane" still occurs 46 times. The nomenclature table has
+  been shrunk but the terms have not been replaced.
+- Main text is 20.75 against the author's 20.45. The additions above are all
+  referee-requested; the remaining blocks of the right size are `fig:cp72ctrl`
+  (protected) and `tab:algorithm` (no referee asked).
+- The author TODO markers are untouched, as instructed.
+
+**Not pushed, per the brief.**

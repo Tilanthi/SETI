@@ -56,7 +56,7 @@ We have searched \NWindows{} archival ALMA spectral windows,
 coverage criteria: complete in targets and tunings, not in epochs
 (\S\ref{sec:sample}). It holds \PctSampleOfCensus{} per cent of that
 volume's stars, over-representing F and G types and under-representing
-M dwarfs. Barnard's Star and Wolf~359 gain first millimetre limits. Four windows raise a stage-1 spatial outlier. Two toward $\beta$~Pic and one toward HD~48370 match
+M dwarfs. Barnard's Star and Wolf~359 gain first millimetre limits. Four windows are stage-1 spatial outliers. Two toward $\beta$~Pic and one toward HD~48370 match
 known circumstellar or foreground CO; the fourth, toward CP$-$72~2713,
 has no astrophysical attribution and does not recur in a second, deeper
 archival block at the same tuning. It fails the pre-defined recurrence
@@ -167,12 +167,10 @@ methodology to TRAPPIST-1 across Bands 3, 6 and 7 (EIRP$_{\rm
 min}\sim5$--$10\times10^{13}$\,W, no detection) and built the ranked
 100-star list this survey grew from. Nothing here depends on it, because every
 claim attributed to it below is restated from the products released with
-this work. Three things are new here, to our knowledge, \emph{in an ALMA archival
-technosignature survey}: the archive-complete sample selection
-(\S\ref{sec:sample}), the \NCtrl-position control annulus with its local
-false-alarm calibration, and the quantified search domain. The four
-further diagnostics of \S\ref{sec:intro} gate nothing, and we claim no
-wider priority over their centimetre-wave counterparts.
+this work. The three contributions listed in \S\ref{sec:intro} are new, to our
+knowledge, \emph{in an ALMA archival technosignature survey}; the four further
+diagnostics there gate nothing, and we claim no wider priority over their
+centimetre-wave counterparts.
 
 % TODO (AUTHOR INPUT, for the editor's cross-check request): confirm the
 % EB-by-EB overlap between this paper and White (2026) -- which execution
@@ -210,7 +208,8 @@ limits of \citet{Price2020}. Grey dotted: EIRP $\propto d^{2}$ at constant recei
 dashed: Arecibo-class power (\S\ref{sec:benchmarks}).
 \emph{(b)}~Native channel width against observing frequency for the
 same windows and programmes: native resolutions differ by
-${\sim}10^{7}$. Thresholds are nominal (boxed rule, \S\ref{sec:method});
+${\sim}10^{7}$, so the panels should be read together and a lower EIRP here
+does not imply greater sensitivity to a hertz-wide carrier. Thresholds are nominal (boxed rule, \S\ref{sec:method});
 conventions differ between surveys.}
 \label{fig:context}
 \end{figure}
@@ -1107,12 +1106,12 @@ the appendix.
 
 \label{sec:validation}
 
-The pipeline as released differs from earlier working versions in five
-substantive ways, each settled before the analysis was frozen and
-logged with its effect on released products in
-Appendix~\ref{app:exclusions} and the repository change-log.
-Asymmetric-derived quantities are historical there and enter no
-operative number.
+What follows is the final analysis. The pipeline as released differs from
+earlier working versions in five substantive ways, each logged with its effect
+on released products in Appendix~\ref{app:exclusions} and the repository
+change-log; \S\ref{sec:aumic} dates the one that changes a released number.
+Asymmetric-derived quantities are historical there and enter no operative
+number.
 
 \medskip
 \noindent\rule{\columnwidth}{0.4pt}
@@ -1290,20 +1289,19 @@ only over-state sensitivity, never manufacture a star-exceeds-ring window. All
 six have on-source times of 12 to 48\,s, and no integration-time cut is applied
 anywhere.
 
-The six share a signature rather than an origin in the observing programme. All
+The six share a signature rather than an origin in the observing programme: all
 are \DefectArrays{} array, \NDefectBandSix{} in Band~6 and \NDefectBandSeven{} in
-Band~7, all at \DefectChanwMHz\,MHz, spread over \NDefectEBs{} execution blocks
-in \NDefectProjects{} projects; and every one has a finer-channelised window in
-the same execution block, covering the same frequencies, that behaves normally
-(Appendix~\ref{app:exclusions}). That is the pattern of an auxiliary window
-riding on a science baseband with an amplitude scale that never reached the
-calibrated one. The screen's reach can be bounded directly as well. Predicting $q$ for every retained window from its own band, array and
-antenna count, the residuals are unimodal about their median, with
-\SefdResidPctHalfDex{} per cent inside half a decade of it, an interquantile
-spread of a factor \SefdResidSpreadFac{} and no empty interval wider than
-\SefdResidGapDex\,dex inside the distribution; the excluded six lie
-\SefdResidDefGapDex\,dex below the lowest retained window with nothing between.
-There is no continuum of smaller deflations hiding under the cut.
+Band~7, all at \DefectChanwMHz\,MHz, in \NDefectEBs{} execution blocks across
+\NDefectProjects{} projects, and every one has a normally behaved
+finer-channelised window covering the same frequencies in the same block
+(Appendix~\ref{app:exclusions}), which is what an auxiliary window riding on a
+science baseband looks like. The screen's reach is bounded directly as well.
+Predicting $q$ for every retained window from its own band, array and antenna
+count, the residuals are unimodal, \SefdResidPctHalfDex{} per cent inside half a
+decade of the median, with an interquantile spread of a factor
+\SefdResidSpreadFac{} and no internal gap wider than \SefdResidGapDex\,dex; the
+excluded six lie \SefdResidDefGapDex\,dex below the lowest retained window with
+nothing between, so no continuum of smaller deflations hides under the cut.
 
 \NDup{} of the \NExtracted{} extracted rows are duplicate catalogue
 entries for one physical window, the same (star, execution block,
@@ -1423,7 +1421,10 @@ applies them.
 
 \emph{(i) The empirical spatial rank probability.} The per-window
 significance quantity is an empirical spatial rank probability under the
-control-position null, and no Gaussian-tail $p$-value. Under exchangeability
+control-position null, and no Gaussian-tail $p$-value; what the control
+ensemble delivers is an empirical null distribution conditional on approximate
+spatial exchangeability, and not a direct measurement of a local false-alarm
+probability. Under exchangeability
 one designated position of \RankFloor{} ranks first with probability exactly
 $1/\RankFloor$, whether the noise is Gaussian or heavy-tailed, so heavy tails
 cannot explain an excess. The
@@ -1850,9 +1851,10 @@ independent measurements.
 A non-recurrence is only meaningful if the same machinery can recover a
 repeat when one exists, so we applied it to emission we already believe in.
 The observing unit behind the Band~3 flag holds further public blocks that the
-download budget of \S\ref{sec:sample} declined, and \BpRecThreeNBlocksExtra{}
-have since been calibrated and searched unmodified. The CO($1\rightarrow0$)
-feature is in all \BpRecThreeNBlocks, at $T_\star=\BpRecThreeTList$, with
+download budget of \S\ref{sec:sample} declined, and \BpRecThreeNBlocksExtra{} of
+them have since been calibrated and searched unmodified. The CO($1\rightarrow0$)
+feature is present in all \BpRecThreeNBlocks{} blocks, at
+$T_\star=\BpRecThreeTList$, with
 \BpRecThreeHitsList{} channels above threshold and no control of the \NCtrl{}
 reaching the star in any block. A second Band~6 CO($2\rightarrow1$) window,
 \FobsBpicSixB\,GHz in a different unit, crosses the threshold without becoming
@@ -1861,13 +1863,13 @@ $T_\star=\BpRecSixTList$ on an exact configuration match
 (\BpRecSixChanKHz\,kHz, \BpRecSixNChan{} channels), integrated line flux
 $\BpRecSixFluxOne\pm\BpRecSixErrOne$ against
 $\BpRecSixFluxTwo\pm\BpRecSixErrTwo$\,mJy\,MHz, a difference of
-\BpRecSixFluxSig$\sigma$. The stage-1 Band~6 window at \FobsBpicSix\,GHz has no
+$\BpRecSixFluxSig\sigma$. The stage-1 Band~6 window at \FobsBpicSix\,GHz has no
 second block in the archive and is not part of this test.
 
 Frequencies are compared after removing each block's own tuning, which ALMA
 sets per date and which therefore absorbs most of the barycentric difference;
 on that basis the Band~3 peaks agree to \BpRecThreeTuneChanMax{} channel and the
-Band~6 peaks to \BpRecSixTuneChanMax. In the barycentric frame the CO peaks of
+Band~6 peaks to \BpRecSixTuneChanMax{} channels. In the barycentric frame the CO peaks of
 the \BpRecNBlocksBary{} blocks with a recorded epoch span
 \BpRecVsysList\,km\,s$^{-1}$, within \BpRecVsysSpread\,km\,s$^{-1}$ of
 $\beta$~Pictoris' systemic velocity across two transitions and nine years. Real
@@ -1950,7 +1952,9 @@ $\pm100$\,km\,s$^{-1}$ masks \MaskBWTwenty, \MaskBWThirty,
 admits no new unattributed flag; at every width the only unmasked
 unattributed flag is CP$-$72~2713. Masked regions are reported
 throughout as \emph{excluded search space} and never as
-searched-and-empty.
+searched-and-empty. A deliberate transmitter could of course sit on a
+molecular transition, so those channels are searched but intrinsically
+ambiguous without a further discriminant.
 
 Four defects in the mask as executed are all repaired here. Its rest
 frequencies were rounded to \MaskRestRoundMHz\,MHz, worth up to
@@ -3082,7 +3086,7 @@ drive the statistic. Excluding the \NBPWindows{} $\beta$~Pictoris
 windows leaves one unattributed crossing among \NNonBP, against
 \ExpNonBP{} expected ($P(\geq1)=\PgeOneNonBPPct$ per cent).
 
-\section{Excluded entries, and the retired statistic}
+\section{Analysis audit trail: excluded entries and the retired statistic}
 \label{app:exclusions}
 
 Five pre-freeze changes are logged with their effect on released
@@ -3128,26 +3132,25 @@ thresholds by ${\lesssim}20$ per cent in amplitude).
 
 \begin{table}
 \centering
-\small
+\footnotesize
 \setlength{\tabcolsep}{4pt}
 \caption{Conditional searched-domain transmitter fraction, illustrative
 calculation only. \emph{These numbers assume every searched star was
 broadcasting continuously, in band, at the stated power during the
-observation. They are not a demographic limit on the 40\,pc stellar
-population, nor on planet-hosting or Earth-like systems.} (a) the 95 per cent upper limit $f_{95}(P)$ above EIRP $P$, $n$ the systems
-with non-zero completeness there; the \emph{measured} column uses the
+observation. They are not a demographic limit on any stellar population.}
+(a) the 95 per cent upper limit $f_{95}(P)$ above EIRP $P$, $n$ the systems with
+non-zero completeness there; the \emph{measured} column uses the
 injection-measured recovery, whose single-configuration transfer error is
 unquantified. (b) epoch-activity dependence at $P\geq10^{16}$\,W, thresholded
-(\NSystems{} systems, unit recovery) and measured-completeness (\NOccSystems{}
-Class~A-calibrated). `Unconstrained' means no bound at that combination.}
+and measured-completeness. `Unconstrained' means no bound at that combination.}
 \label{tab:occurrence}
 \input{tab_occurrence}
 \end{table}
 
-\emph{Illustrative calculation only.} Nothing here is a survey result,
-no number in it appears among the headline quantities of
-Table~\ref{tab:searchspace}, and it is kept for the framework, whatever number it returns. A zero detection constrains a fraction of systems only through a
-per-system detection probability, factorised as
+No number here appears among the headline quantities of
+Table~\ref{tab:searchspace}; the appendix is kept for the framework, whatever
+number it returns. A zero detection constrains a fraction of systems only
+through a per-system detection probability, factorised as
 %
 \begin{equation}
 C_i(P) \;=\; F_i\;R_i(P)\;D_i\;C_{{\rm morph},i},

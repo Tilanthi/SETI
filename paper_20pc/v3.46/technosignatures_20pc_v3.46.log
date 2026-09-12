@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.8.25)  12 SEP 2026 07:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.8.25)  12 SEP 2026 07:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -530,102 +530,102 @@ Class revtex4-1 Warning: Assuming \noaffiliation for authors.
 
 Class revtex4-1 Info: Enlarging page 1 by -10.56pt on input line 83.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<figures/eirp_context.pdf, id=215, 509.50327pt x 212.35814pt>
+<figures/eirp_context.pdf, id=214, 509.50327pt x 212.35814pt>
 File: figures/eirp_context.pdf Graphic file (type pdf)
 <use figures/eirp_context.pdf>
-Package pdftex.def Info: figures/eirp_context.pdf  used on input line 202.
+Package pdftex.def Info: figures/eirp_context.pdf  used on input line 200.
 (pdftex.def)             Requested size: 513.11743pt x 213.86436pt.
  [2 <./figures/eirp_context.pdf>]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
-61.
+60.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-<figures/coverage_waterfall.pdf, id=302, 505.89pt x 469.755pt>
+<figures/coverage_waterfall.pdf, id=301, 505.89pt x 469.755pt>
 File: figures/coverage_waterfall.pdf Graphic file (type pdf)
 <use figures/coverage_waterfall.pdf>
-Package pdftex.def Info: figures/coverage_waterfall.pdf  used on input line 355
+Package pdftex.def Info: figures/coverage_waterfall.pdf  used on input line 354
 .
 (pdftex.def)             Requested size: 369.44518pt x 343.06166pt.
  [3] [4 <./figures/coverage_waterfall.pdf>] [5] [6] [7] [8]
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 1049.
+(Font)              using `T1/cmr/m/it' instead on input line 1048.
 
 (./tab_compcurve.tex) [9] [10] [11]
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 1388.
+(Font)              using `T1/cmr/m/it' instead on input line 1386.
 
 [12] [13]
 <figures/control_diagnostics.pdf, id=523, 505.89pt x 215.80624pt>
 File: figures/control_diagnostics.pdf Graphic file (type pdf)
 <use figures/control_diagnostics.pdf>
 Package pdftex.def Info: figures/control_diagnostics.pdf  used on input line 15
-75.
+76.
 (pdftex.def)             Requested size: 513.11743pt x 218.89447pt.
  [14 <./figures/control_diagnostics.pdf>] [15] [16]
 <figures/cp72_control_distribution.pdf, id=593, 303.534pt x 216.81pt>
 File: figures/cp72_control_distribution.pdf Graphic file (type pdf)
 <use figures/cp72_control_distribution.pdf>
 Package pdftex.def Info: figures/cp72_control_distribution.pdf  used on input l
-ine 1881.
+ine 1883.
 (pdftex.def)             Requested size: 287.3445pt x 205.24712pt.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 1907.
+(Font)              using `T1/cmr/m/it' instead on input line 1909.
 
 [17 <./figures/cp72_control_distribution.pdf>]
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 2072.
+(Font)              using `T1/cmr/m/it' instead on input line 2076.
 
 [18]
 <figures/sensitivity_2d.pdf, id=658, 505.89pt x 245.718pt>
 File: figures/sensitivity_2d.pdf Graphic file (type pdf)
 <use figures/sensitivity_2d.pdf>
-Package pdftex.def Info: figures/sensitivity_2d.pdf  used on input line 2185.
+Package pdftex.def Info: figures/sensitivity_2d.pdf  used on input line 2189.
 (pdftex.def)             Requested size: 338.65938pt x 164.49522pt.
  [19] [20 <./figures/sensitivity_2d.pdf>] [21] [22] (./tab_selection.tex)
 [23]
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 2724.
+(Font)              using `T1/cmr/m/it' instead on input line 2728.
 
 <figures/completeness.pdf, id=785, 505.89pt x 301.125pt>
 File: figures/completeness.pdf Graphic file (type pdf)
 <use figures/completeness.pdf>
-Package pdftex.def Info: figures/completeness.pdf  used on input line 2748.
+Package pdftex.def Info: figures/completeness.pdf  used on input line 2752.
 (pdftex.def)             Requested size: 400.23096pt x 238.23534pt.
 [24]
 <figures/drift_acceleration.pdf, id=793, 549.05125pt x 347.2975pt>
 File: figures/drift_acceleration.pdf Graphic file (type pdf)
 <use figures/drift_acceleration.pdf>
 Package pdftex.def Info: figures/drift_acceleration.pdf  used on input line 283
-4.
+8.
 (pdftex.def)             Requested size: 318.1303pt x 201.2366pt.
  (./tab_perband.tex) [25 <./figures/completeness.pdf>] [26 <./figures/drift_acc
 eleration.pdf>] [27]
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 3142.
+(Font)              using `T1/cmr/m/it' instead on input line 3145.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 3142.
+(Font)              using `T1/cmr/m/it' instead on input line 3145.
 
 (./tab_occurrence.tex) [28]
 No file technosignatures_20pc_v3.46.bbl.
 [29] (./technosignatures_20pc_v3.46.aux)
 Package rerunfilecheck Info: File `technosignatures_20pc_v3.46.out' has not cha
 nged.
-(rerunfilecheck)             Checksum: 17AC918D1816B764E9CA5F867EC70964;6674.
+(rerunfilecheck)             Checksum: 4C05AC2517877143176F0070B674B082;6788.
  ) 
 Here is how much of TeX's memory you used:
  13296 strings out of 480247
- 199241 string characters out of 5896151
- 533458 words of memory out of 5000000
+ 199239 string characters out of 5896151
+ 534996 words of memory out of 5000000
  30854 multiletter control sequences out of 15000+600000
  489160 words of font info for 83 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -666,7 +666,7 @@ hare/texmf/fonts/type1/public/cm-super/sfti0800.pfb></usr/share/texmf/fonts/typ
 e1/public/cm-super/sfti0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
 fti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt0800.pfb></usr/sh
 are/texmf/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on technosignatures_20pc_v3.46.pdf (29 pages, 971771 bytes).
+Output written on technosignatures_20pc_v3.46.pdf (29 pages, 970806 bytes).
 PDF statistics:
  1062 PDF objects out of 1200 (max. 8388607)
  888 compressed objects within 9 object streams
