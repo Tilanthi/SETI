@@ -1,0 +1,45 @@
+{
+ "_doc": "closure_phase_vetting blocks read read-only from the pipeline's own per-window products on the processing host, 2026-09-12. The screen is exploratory and gates nothing; it is recorded here because a z=2.68 mean-closure departure sits in the released product for the CP-72 2713 window and the manuscript never mentioned it.",
+ "uniform_phase_sd_deg_formula": "360/sqrt(12)",
+ "per_baseline_snr_lo": 0.5,
+ "per_baseline_snr_hi": 0.7,
+ "windows": {
+  "CP-72 2713 [B7]": {
+   "product": "/data/SETI/targets/CP-72_2713_B7/products/A002_Xff0235_X4a6d_spw3_result.json",
+   "star_peak_snr": 5.809,
+   "n_triangles": 50,
+   "mean_closure_phase_deg": 34.968306471573456,
+   "std_closure_phase_deg": 92.2014250149965,
+   "z_score": 2.68177271974238,
+   "consistent_with_point_source": true
+  },
+  "bet Pic [B3]": {
+   "product": "/data/SETI/targets/bet_Pic_B3/products/A002_Xf5d76d_X32f1_spw3_result.json",
+   "star_peak_snr": 14.654,
+   "n_triangles": 50,
+   "mean_closure_phase_deg": 14.044731502353045,
+   "std_closure_phase_deg": 115.34109421734819,
+   "z_score": 0.8610222533994696,
+   "consistent_with_point_source": true
+  },
+  "bet Pic [B6]": {
+   "product": "/data/SETI/targets/bet_Pic_B6/products/A002_Xd9668b_X3a90_spw5_result.json",
+   "star_peak_snr": 11.681,
+   "n_triangles": 50,
+   "mean_closure_phase_deg": -4.874332091543755,
+   "std_closure_phase_deg": 89.38748385402636,
+   "z_score": 0.3855879063912755,
+   "consistent_with_point_source": true
+  },
+  "bet Pic [B6] repeat": {
+   "product": "/data/SETI/targets/bet_Pic_B6_EB_Xa9df/products/A002_Xd9668b_Xa9df_spw5_result.json",
+   "star_peak_snr": 8.9476,
+   "n_triangles": 50,
+   "mean_closure_phase_deg": 0.37818770164746146,
+   "std_closure_phase_deg": 97.30030232479922,
+   "z_score": 0.02748389080062673,
+   "consistent_with_point_source": true
+  }
+ },
+ "hd48370_b8_has_closure_record": false
+}
