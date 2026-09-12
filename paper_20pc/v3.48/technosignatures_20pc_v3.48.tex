@@ -1,0 +1,3261 @@
+\documentclass[numberedappendix]{openjournal}
+
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{array}
+
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage{booktabs}
+% suppress the class's end-of-document template advertisement;
+% delete this block to restore it
+\makeatletter
+\renewenvironment{bottompar}{\setbox\z@\vbox\bgroup}{\egroup}
+\makeatother
+
+\shorttitle{An ALMA Archival Technosignature Search within 40\,pc}
+\shortauthors{White \& Dey}
+
+\input{survey_numbers}
+\input{survey_numbers_round5}
+\input{survey_numbers_round6}
+\input{survey_numbers_round7}
+\input{survey_numbers_round8}
+\input{survey_numbers_round9}
+\input{survey_numbers_round10}
+\input{survey_numbers_round11}
+\input{survey_numbers_round12}
+\input{survey_numbers_round13}
+\input{survey_numbers_pointing}
+\input{survey_numbers_round15}
+\input{survey_numbers_round16}
+\input{survey_numbers_round17}
+\input{survey_numbers_recurrence}
+\input{survey_numbers_round14}
+\input{survey_numbers_localnull}
+
+
+\begin{document}
+
+\title{An ALMA Archival Search for Spectral Technosignatures toward
+Stars within 40\,pc}
+
+\author{Glenn J. White\altaffilmark{1,2} and Robin Dey\altaffilmark{3}}
+\altaffiltext{1}{School of Physical Sciences, The Open University, Walton Hall, Milton Keynes, MK7 6AA, UK; glenn.white@open.ac.uk}
+\altaffiltext{2}{RAL Space, STFC Rutherford Appleton Laboratory, Harwell Campus, Didcot, OX11 0QX, UK}
+% TODO (AUTHOR INPUT, referee R2-m1): complete the VBRL Holdings Inc.
+% affiliation (city, country) and add an Acknowledgements/competing-interest
+% statement disclosing Robin Dey's employment relationship to VBRL and whether
+% VBRL funded or otherwise supported this work. Cannot be authored by the
+% assistant -- awaiting the authors' wording.
+\altaffiltext{3}{VBRL Holdings Inc.}
+
+\begin{abstract}
+We have searched \NWindows{} archival ALMA spectral windows,
+\UnionLo--\UnionHi\,GHz (Bands~3--8), toward \NStars{} stars in
+\NSystems{} systems within 40\,pc for unresolved spectral carriers, comparing each stellar position with \NCtrl{} controls in an annulus. \textbf{No credible technosignature is found.} The sample is every star within 40\,pc meeting our public-archive
+coverage criteria: complete in targets and tunings, not in epochs
+(\S\ref{sec:sample}). It holds \PctSampleOfCensus{} per cent of that
+volume's stars, over-representing F and G types and under-representing
+M dwarfs. Barnard's Star and Wolf~359 gain first millimetre technosignature limits. Four windows are stage-1 spatial outliers. Two toward $\beta$~Pic and one toward HD~48370 match
+known circumstellar or foreground CO; the fourth, toward CP$-$72~2713,
+has no astrophysical attribution and does not recur in a second, deeper
+block at the same tuning. It fails the pinned recurrence
+criterion and is retired, though two epochs cannot separate an excursion from
+a non-repeating one; the same test recovers $\beta$~Pic CO in every
+re-searched block.
+No flag is significant alone; the test resolves no probability below
+$1/\RankFloor$, far above the Bonferroni scale. Thresholds are trigger levels, not completeness limits.
+They span $\EirpMinA$--$\EirpMaxA$\,W EIRP over the \NWinA{} drift-resolved
+windows and $\EirpMinB$--$\EirpMaxB$\,W over the \NWinB{} coarse ones, against
+1\,MW on a 12\,m aperture at 230\,GHz (${\approx}8\times10^{14}$\,W). A sub-channel carrier makes them optimistic by
+$\times\HanFacBest$ to $\times\HanFacWorst$ (median $\times\HanFacMed$). Only \NWinA{} of \NWindows{} windows
+discriminate drift; the rest search for unresolved spectral excess. The
+completeness measured for the reference Class~A configuration is transferred
+to the rest by assumption, bracketed $0.5$--$2\times$. The search is
+polarisation-blind, and the drift ceiling does not cover
+TRAPPIST-1\,b, the only sample planet to reach it. The statistic and line mask were defined on these data, so the rank and
+false-alarm figures describe this dataset rather than independently
+validating the pipeline's false-positive rate.
+\end{abstract}
+
+\keywords{extraterrestrial intelligence, radio lines: stars, submillimetre: stars, surveys, astrobiology}
+
+\enlargethispage{-\baselineskip}
+\section{Introduction}
+\label{sec:intro}
+
+A technological civilisation, signalling deliberately or going about
+its affairs, may imprint the electromagnetic spectrum detectably,
+a \emph{technosignature} \citep{Sheikh2020,SETIreview2025}.
+Six decades of radio searches cover many thousands of stars yet sample only
+\HaystackFrac{} of the haystack of transmitter frequency,
+bandwidth, power and duty cycle \citep{Wright2018}. Three gaps persist. The
+millimetre and submillimetre regime is essentially unsearched, and everything
+above that axis's ${\sim}115$\,GHz upper limit wholly so.
+Most surveys are aimed at interest-selected classes of star, leaving the local
+stellar population unsampled as a population. Few reprocess \emph{existing}
+interferometric archives.
+
+This paper addresses all three, asking how strongly existing ALMA
+observations constrain unresolved artificial spectral emission from
+nearby stellar systems. The sample it uses characterises the stars ALMA has
+observed, over-representing F and G stars and under-representing M dwarfs
+(\S\ref{sec:sample}), and every limit inherits that bias. We mine the
+archive, correcting for proper motion and Doppler drift, for unresolved
+spectral carriers (channel-confined excess at native ALMA resolution) and
+anomalous millimetre continuum. Throughout, ``narrowband'' describes the
+assumed intrinsically narrow transmitter and never the resolving power of
+the data (\S\ref{sec:method}). Channelisation sets which of two search classes
+a window belongs to, and the completeness of each class is measured in
+\S\ref{sec:dwell}.
+The paper's three contributions are systematic exploitation of
+archival ALMA stellar fields, \NStarBands{} target/band datasets mined
+from public data with no new observing time; spatial-control null
+calibration for interferometric SETI, the same statistic evaluated at
+the star and at \NCtrl{} control positions so the false-alarm rate is
+measured; and a quantitative accounting of the frequency, EIRP and drift
+domain actually searched, which gives the non-detection explicit
+boundaries. No ancillary analysis carries a technosignature disposition, the continuum
+screen alone feeding an argument in the primary lane
+(\S\ref{sec:statistic}, \S\ref{sec:ancillary}). One worked case runs through
+the paper, a crossing towards $\beta$~Pictoris, the largest
+star-versus-control contrast here, attributed to the disc's known
+circumstellar CO across two transitions and three epochs
+(\S\ref{sec:technosearch}). Per-target results are in Appendix~\ref{app:table}, and dispositions,
+false-alarm accounting and injection completeness consolidate in
+Tables~\ref{tab:searchspace} and~\ref{tab:flagged} with
+Appendices~\ref{app:falsealarm} and~\ref{app:inject}.
+
+The symmetric detection statistic and the
+$\pm\MaskVWidth$\,km\,s$^{-1}$ molecular-line mask were both defined,
+and the statistic once revised, on these data (\S\ref{sec:aumic}).
+The rank probabilities and false-alarm figures are therefore
+descriptive of this dataset, not an independent validation of the
+pipeline's false-positive rate, and this is restated where it bears on a
+number.
+
+\section{Background}
+\label{sec:background}
+
+Radio searches, from \citet{CocconiMorrison1959} and
+\citet{Drake1960} through the programmes reviewed by
+\citet{Tarter2001} and Project Phoenix \citep{Backus2002}, divide into
+wide-field commensal and targeted surveys
+\citep{Zhang2020,Czech2021,Morrison2023,FAST3IATLAS2025,LOFARdualsite2023,SRT2025,Tremblay2024},
+with machine-learning interference rejection now central
+\citep{Ma2023,Choza2024,GLOBULAR2025,AnomalyParkesGBT2025,BRaTs2026}, a
+capability our classical threshold search lacks. Essentially all of it
+lies below ${\sim}10$\,GHz, and the mm/submm regime above has been
+searched once, with ALMA \citep{Mason2024}. Physical reasons favour going higher: interstellar scattering and
+dispersion fall steeply with frequency, a given aperture delivers a
+tighter beam per watt of EIRP, and directional communication, radar and
+beamed power are already engineered coherent mm-wave
+emission. Atmospheric transmission, receiver noise, photons per watt per
+hertz, and pointing and phase stability raise the cost of such a search
+without forbidding it.
+
+\citet{Mason2024} searched archival Band~3 windows toward 28 ``stellar
+bycatch'' stars, observed for other science and usable for free,
+placing EIRP$_{\rm min} > 7\times10^{17}$\,W for the nearest and
+identifying the challenges of high-frequency work: drift rates scale
+with frequency, smearing erodes sensitivity without a drift search, and
+the dense forest of molecular lines raises the confusion background. Our pilot \citep[][citation provisional]{White2026} extended that
+methodology to TRAPPIST-1 across Bands 3, 6 and 7 (EIRP$_{\rm
+min}\sim5$--$10\times10^{13}$\,W, no detection) and built the ranked
+100-star list this survey grew from. Nothing here depends on it, because every
+claim attributed to it below is restated from the products released with
+this work. The three contributions listed in \S\ref{sec:intro} are new, to our knowledge,
+\emph{in an ALMA archival technosignature survey}.
+
+% TODO (AUTHOR INPUT, for the editor's cross-check request): confirm the
+% EB-by-EB overlap between this paper and White (2026) -- which execution
+% blocks appear in both, and whether any number printed here is also
+% printed there. Draft statement below; verify against the White (2026)
+% manuscript before submission and complete the bracketed clause.
+No execution block is analysed in both papers: the pilot's 100-star
+search products are superseded here, not re-used, and every
+window here was re-reduced and re-searched from the raw archive data
+with the pipeline of \S\ref{sec:method}. Where a star is treated in
+both, the numbers to cite are this paper's frozen products, and any
+discrepancy resolves in their favour.
+% AUTHOR: confirm the single deliberate exception, if any -- e.g.\ shared
+% calibrator-only usage -- and state it here; otherwise delete this
+% bracket and the sentence stands as the complete answer.
+
+Figure~\ref{fig:context} places the nominal EIRP thresholds among
+published searches in \emph{total power}. As the in-panel note warns, vertical
+position carries no technosignature merit. This survey's competitive EIRP
+toward the nearest systems comes predominantly from the $d^{2}$ factor ($d$
+spans a factor ${\sim}10^{3}$ in $d^{2}$), and only weakly from sensitivity to
+Hz-wide carriers, to which a 15.625-MHz channel and a 2.8-Hz SETI channel
+respond very differently (\S\ref{sec:method}).
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{figures/eirp_context.pdf}
+\caption{Literature context of the 5$\sigma$ trigger
+thresholds, in total power (\S\ref{sec:background}).
+\emph{(a)}~EIRP against distance. Blue: this survey, deepest window
+per star (\NStars{} stars, \DistMin--\DistMax\,pc; filled: Class~A,
+drift-resolved; open: Class~B, unresolved excess); orange: \citet{Enriquez2017}; aqua: \citet{Margot2023};
+violet: \citet{Mason2024}; left-edge ticks: deepest per-target
+limits of \citet{Price2020}. Grey dotted: EIRP $\propto d^{2}$ at constant received flux. Green
+dashed: Arecibo-class power (\S\ref{sec:benchmarks}).
+\emph{(b)}~Native channel width against observing frequency for the
+same windows and programmes: native resolutions differ by
+${\sim}10^{7}$, so the panels should be read together and a lower EIRP here
+does not imply greater sensitivity to a hertz-wide carrier;
+conventions differ between surveys.}
+\label{fig:context}
+\end{figure}
+
+A non-detection must become a quantitative exclusion statement:
+\citet{Wright2018} formalised the ``Cosmic Haystack'' search volume,
+\citet{Margot2023} its conversion into an upper bound on the
+transmitter-hosting fraction, and \citet{EarthDetectingEarth2025} asked
+where Earth's technosignatures would be detectable. That bound is valid
+only if the sample represents the underlying population, which
+interest-selected samples do not. Most surveys select by proximity, spectral type, planets or Earth
+Transit Zone membership; the ALMA-specific form, disc selection, skews
+the sample young and dynamically active. We instead take every star
+within 40\,pc lying in the usable field of at least one public ALMA
+observation (\S\ref{sec:sample}), a sample archive-complete for the observed
+subset of the local population in a fixed volume while making no completeness
+claim for that population itself. That choice removes technosignature-specific
+selection and leaves the archival astrophysical selection in place; the
+\NCensus{} sample entries are
+${\sim}1$ per cent of the catalogued population within 40\,pc (the
+\NStars{} actually searched here are ${\sim}0.5$ per cent), and the
+residual coverage selection is characterised as a completeness function
+(\S\ref{sec:sample}, Table~\ref{tab:searchspace}).
+
+\section{Sample selection}
+\label{sec:sample}
+
+The sample is ALMA-archive-complete within 40\,pc, which is a weaker
+condition than volume completeness. It comprises every star within 40\,pc of
+the Sun (Gaia~DR3 parallaxes, distances direct inversions $d = 1/\pi$; every
+entry $\pi \ge 25$\,mas with a parallax measured to better than
+\PlxAdqlPct{} per cent, which is the condition the archive query applied) whose
+proper-motion-corrected position at the observation epoch falls in the field
+of view of at least one public ALMA execution block. The star need not sit at the pointing centre. Disc, planet and
+spectral type enter as descriptive metadata only.
+Throughout, a \emph{star} is one catalogue entry and a \emph{system}
+the set of entries bound to it; a \emph{target/band} dataset is one
+star in one ALMA band; an \emph{execution block} (EB) one archival
+observation; and a \emph{window}
+is one spectral window of one execution block. This gives \NCensus{} unique target stars, processed nearest-first. Because
+trigger thresholds scale with $d^{2}$ at fixed noise, that order is
+sensitivity-ranked, so the prevalence statements of \S\ref{sec:discussion} are
+conditional on it.
+
+Composition follows from the archival selection and is tabulated against
+the reference census in Table~\ref{tab:selfunc}. It rests on
+\texttt{teff\_gspphot} as a spectral-class proxy, available for 52 of
+\NStars{} sample stars and missing preferentially for the coolest
+objects, so the M fraction is a lower limit and the earlier-type ratios
+upper limits: among searched stars carrying a Gaia temperature, 41 per
+cent are M~dwarfs against 69 per cent of the census. The non-detection
+therefore bears on an F/G-enriched mix that under-represents the M dwarfs
+dominating the local volume, a mismatch of astrobiological priority that
+leaves statistical validity intact. \NExoHosts{} of the \NStars{} processed stars are confirmed exoplanet hosts
+(\S\ref{sec:discussion}); the debris-disc hosts ($\beta$~Pic, AU~Mic,
+$\tau$~Cet, and $\epsilon$~Eri whose Band~6 windows are withheld,
+\S\ref{sec:frames}) contribute dusty continua, kept from masquerading as
+anomalies by the continuum lane's screen (\S\ref{sec:method}). Window counts are also concentrated:
+$\beta$~Pic (\ConcBpicWin{} windows), AU~Mic (\ConcAumicWin{}) and
+TRAPPIST-1 (\ConcTrapWin{}) alone carry \ConcThreeWin{} of the
+\NWindows{} searched windows (\ConcThreePct{} per cent) from
+\ConcThreeSys{} systems, so any window-weighted statement leans on
+a few heavily observed young, active or disc-hosting systems.
+
+The \NCensus{} stars are complete against, and conditional only
+on, the 40-parsec reference catalogue intersected with the
+public-archive snapshot of 2026 September~8. Against that Gaia~DR3
+solar-neighbourhood catalogue (17\,566 stars within 40\,pc) they are
+$\lesssim$1 per cent, and fewer once \S\ref{sec:exclusions} removes those
+never in fact observed. The two parallax cuts are not interchangeable. The
+sample's binding condition is $\sigma_\varpi/\varpi<\PlxAdqlPct$ per cent and
+the reference census's is $\le$10 per cent (Table~\ref{tab:selfunc}), so the
+ratio compares two differently selected populations. The realised sample is
+far better than its condition, $\sigma_\varpi/\varpi$ reaching
+\PlxWorstPct{} per cent at worst and exceeding 1 per cent in only
+\NPlxOverEight{} entries. The census is also incomplete at both ends,
+and the fraction shows only that coverage is small.
+Table~\ref{tab:selfunc} leaves the selection function inspectable; age and
+disc-hosting flags are documented qualitatively, being unevenly available.
+
+Stellar counts throughout are catalogue-entry counts. The \NStars{}
+searched entries comprise \NSystems{} independent systems, differing by
+seven designation-linked component pairs (SIMBAD designations;
+per-entry rows, distances and unresolved-pair notes in the
+machine-readable catalogue). The \NStarBands{} star/band datasets,
+\NWindows{} windows and \NEB{} execution blocks therefore derive from
+\NSystems{} systems, the paired rows being a bookkeeping convenience. The \NWindows{} rows comprise
+\NDistinctDatasets{} distinct (execution block, spectral window)
+datasets, and \S\ref{sec:technosearch} and
+Appendix~\ref{app:falsealarm} use the larger number as the trials
+denominator, which is conservative.
+
+``Usable public ALMA coverage'' is a five-criterion decision tree,
+frozen absent an erratum: (i) at least one public
+execution block (EB) whose visibilities have passed ALMA's second-stage
+quality assurance (QA2) and cover the star's
+epoch-propagated position in the primary beam, with no minimum
+integration, sensitivity, antenna count, mosaic-tile count or array
+configuration beyond QA2; (ii) that position inside the field's primary beam, the extraction
+aborting beyond $2\,\theta_{\rm PB}$ (largest retained offset
+$\PbMaxRoverTheta\,\theta_{\rm PB}$, \PbMaxStar, so nothing approaches
+the bound; largest retained primary-beam correction $\PbMax\times$,
+\S\ref{sec:frames}); (iii) each spectral window admitted
+individually, on QA2 vetting alone; (iv) no
+programme-category restriction, science, calibration and observatory
+projects entering on identical terms; (v) a fixed archive snapshot
+date (2026 September~8). No star
+or window was excluded by an unlisted criterion, none for short
+integration (the shortest retained are 1.0 and 1.5\,min).
+
+Archive-completeness holds in targets and tunings. It does not extend to
+epochs or to integration time, and the shortfall is quantified here. The
+\NMous{} member observing unit sets (MOUS) that supply the
+searched blocks hold \NProgenitorEB{} public execution blocks between them,
+of which \NEB{} were searched (\PctEbSearched{} per cent) and
+\NUnsearchedEB{} were not. Two deliberate choices cause that, a per-target
+download budget capping the blocks taken at \MaxSearchedEBStar, and
+spectral-window de-duplication by identifier across the blocks of one set.
+\NMousMulti{} of the \NMous{} sets hold at least one unsearched block,
+supplying \NWinMultiEB{} of the \NWindows{} windows (\PctWinMultiEB{} per
+cent) and \NStarMultiEB{} of the \NStars{} stars, for which up to
+\MaxProgEBStar{} public blocks exist against the \MaxSearchedEBStar{} this
+survey searched. Every epoch statement here, the epoch-activity bound of
+Appendix~\ref{app:population} included, therefore concerns searched epochs,
+and the archive would support a stronger one. \NEpochExtSearched{} of those
+blocks have since been searched, as the recurrence tests of
+\S\ref{sec:technosearch}. They are targeted follow-ups outside the survey, leaving the counts in this
+section and the trials budget of \S\ref{sec:technosearch} unchanged.
+
+ALMA project metadata quantify pointed versus serendipitous coverage:
+almost every spectral-window-covered star is the pointed science target
+in at least one execution block, leaving Wolf~219 the sole serendipitous star.
+The residual selection function of an archive-complete sample is the union of
+ALMA target lists, quantified here at a bycatch fraction of 1 star in 44 and
+1 EB in 57.
+
+\begin{figure*}
+\centering
+\includegraphics[width=0.72\textwidth]{figures/coverage_waterfall.pdf}
+\caption{What this survey sampled in frequency. Each searched window is
+a horizontal segment on its host system's row, rows ordered by
+distance, coloured by nominal EIRP$_{5\sigma}$, with line weight
+distinguishing the drift-resolved (Class~A) from the
+unresolved-spectral-excess (Class~B) channelisation; the upper panel
+counts systems per gigahertz of sky frequency. The coverage is narrow,
+clustered and repeatedly revisited: \UnionIntervals{} islands
+concentrated near 230 and 345\,GHz, with summed window bandwidth
+$\GrossOverUnion\times$ the union, which is what the in-band transmitter fractions
+of Appendix~\ref{app:population} condition on (Scope of the constraints,
+\S\ref{sec:method}).}
+\label{fig:waterfall}
+\end{figure*}
+
+\section{Data and methodology}
+\label{sec:method}
+
+The design is one shared archive-ingestion stage feeding two
+independent search lanes over the 40\,pc archive-complete sample;
+Table~\ref{tab:algorithm} gives the data path of the primary lane in
+order. For each target we mine, within a bounded budget, all calibrated
+(or locally recalibrated) archival execution blocks
+covering the star's Gaia-propagated position. Their visibilities feed (i) the
+\emph{primary} lane, a Doppler-drift-corrected
+spectral-carrier search following \citet{Mason2024} and
+\citet{Enriquez2017}, which converts each non-detection into an equivalent
+isotropic radiated power limit
+$\mathrm{EIRP_{5\sigma}} = 4\pi d^{2} S_{\rm min}\Delta\nu$. Here
+$S_{\rm min}$ is five times the searched window's per-channel rms,
+primary-beam corrected, $\Delta\nu$ the native channel width and $d$ the
+target distance (worked numerically in
+Appendix~\ref{app:conventions}). Their systematic budget is the ALMA absolute flux scale (5--10 per cent,
+band- and epoch-dependent), residual atmospheric phase after water-vapour
+correction and phase referencing (a coherent point-source loss
+$\exp(-\sigma_\phi^{2}/2)$, typically 5--20 per cent at 230--345\,GHz, common
+to the star and the annulus within the isoplanatic patch and so no threat to
+exchangeability), the primary-beam model at the stellar
+offset, the instrumental spectral response (the boxed rule below; median
+$\times\HanFacMed$) and visibility calibration. Each
+multiplies $S_{\rm min}$ and hence EIRP$_{5\sigma}$ directly; \emph{Gaia}
+distance errors are negligible here. The same
+visibilities feed (ii) an \emph{ancillary} line-excluded continuum lane
+(Appendix~\ref{app:continuum}). ``5$\sigma$'' throughout is the local
+instrumental \emph{trigger} threshold of Table~\ref{tab:nomenclature},
+estimated empirically (\S\ref{sec:technosearch}). In most windows an intrinsically
+Hz-wide carrier is unresolved within a 15.625\,MHz channel, and the
+data could not show that a one-channel excess is intrinsically
+narrow. The search is reported as two survey
+classes, distinguished by the dimensionless drift parameter
+\begin{equation}
+\eta_{\rm drift} \;=\; |\dot\nu_{\max}|\,T\,/\,\Delta\nu_{\rm ch},
+\label{eq:etadrift}
+\end{equation}
+the channel-width fraction the \emph{maximum} searched drift
+$|\dot\nu_{\max}|$ traverses over the full on-source track $T$ at native channel
+width $\Delta\nu_{\rm ch}$. The track is the right time-scale, the de-drift step accumulating coherently
+along it; $\eta_{\rm smear}$ (Appendix~\ref{app:conventions}) is the same ratio
+over one integration. A window is \emph{drift-resolving} when
+$\eta_{\rm drift}\gtrsim1$, carrying a carrier across enough
+channels for its motion to be measured. The drift
+ceiling inside $\eta_{\rm drift}$ is a search-grid boundary, the widest
+trial drift the stack evaluates, not a prior on transmitter
+drift rates; carriers drifting faster are missed, and
+\S\ref{sec:detectable} gives the resulting selection function
+(Fig.~\ref{fig:accel}).
+
+\emph{Class~A} is the drift-resolved spectral-carrier search: the
+\NWinA{} windows of fine channelisation, native widths
+\ChanAMinKHz--\ChanAMaxKHz\,kHz (median \ChanAMedKHz\,kHz;
+\ChanAModePct{} per cent at the \ChanAModeKHz-kHz mode), spanning
+$\eta_{\rm drift}=\EtaAmin$--$\EtaAmax$ (median \EtaAmed). It is the
+only class with measured end-to-end recovery of a drifting carrier.
+\emph{Class~B} is the unresolved spectral-excess search: the \NWinB{}
+coarse windows, \PctCoarse{} per cent of the sample, native widths
+\ChanBMinMHz--\ChanBMaxMHz\,MHz (\ChanBModeN{} windows at the
+\ChanBModeMHz-MHz mode), spanning
+$\eta_{\rm drift}=\EtaBmin$--$\EtaBmax$ (median \EtaBmed). It is
+sensitive to persistent near-stationary excess power, carries no drift
+discrimination, and is never described as a narrowband search anywhere
+in this paper.
+
+$\eta_{\rm drift}$ is the physical criterion and the classes are
+labelled by the instrument. Channelisation is bimodal, with no window
+between \ChanAMaxKHz\,kHz and \ChanBMinMHz\,MHz, an empty gap of factor
+\ChanGapFac, so any boundary inside the gap assigns identical membership
+and figures label the classes by name. The two criteria do not coincide
+exactly, and the overlap is quantified:
+\EtaBgeOneNow{} long-integration Class~B windows reach
+$\eta_{\rm drift}\geq1$, and only marginally (maximum \EtaBgeOneMax),
+where a one-to-two channel traverse supports no discriminative drift fit
+after baseline removal; \EtaAltOneNow{} short Class~A windows fall below
+unity and are conservatively kept in Class~A. Each window's
+$\eta_{\rm drift}$, $\eta_{\rm smear}$, trial drift count and maximum
+searched acceleration $a_{\max}=\AmaxMin$--$\AmaxMax$\,m\,s$^{-2}$ are
+columns of the released catalogue, so any reader may reclassify on the
+physical criterion alone. Results are given per class first and combined
+only where statistically appropriate (\S\ref{sec:technosearch}).
+
+Both lanes exclude catalogued molecular transitions at tolerances suited
+to their statistics. The continuum lane masks the common species at
+native resolution before integrating; the carrier lane applies a
+$\pm\MaskVWidth$\,km\,s$^{-1}$ stellar-frame velocity exclusion mask
+(\S\ref{sec:linecost}) to any threshold crossing. The mask is
+\emph{excluded search space}: the unmasked survey covers
+\UnionGHz\,GHz of unique sky frequency, the effective default quoted
+throughout is the ${\approx}\SearchedUnionGHz$\,GHz surviving it, and no
+constraint is placed on carriers inside the excluded velocity regions.
+Masking reduces the frequency space a candidate can occupy while leaving
+the per-channel noise untouched, so no threshold moves. All flux densities and EIRP
+thresholds are total intensity (Stokes~$I$), summed over the two
+parallel-hand cross-correlations with QA2 weights; no cross-hand
+extraction or circularity test was performed, so the construction is
+polarisation-blind in amplitude and a strongly polarised artificial
+signal responds like an unpolarised one at fixed total power. The estimator is
+safe in this respect, though the data have not been audited for it.
+The retained
+products do not record per-correlation flagging, so we cannot say what
+fraction of datasets kept both hands unflagged through QA2; one that lost a
+hand would be $\sqrt{2}$ less sensitive than its threshold implies, with
+nothing here to catch it.
+
+\medskip
+\noindent\rule{\columnwidth}{0.4pt}
+\smallskip
+\noindent\textbf{How to read every limit in this paper.}
+\emph{Every EIRP$_{5\sigma}$ value here is a nominal, local
+instrumental detection threshold, the \emph{trigger power}
+$P_{\rm trig}$: five times the per-channel rms of
+the searched window, at that window's native channel width, for a transmitter at the star's position matching the searched
+spectral morphology, with a measured recovery rising with the fraction
+of the track the carrier occupies its channel, highest for a continuous
+one (\S\ref{sec:ancillary},
+Appendix~\ref{app:inject}). A calibrated completeness limit is a different
+quantity, the power $P_x$ at which recovery reaches $x$ per cent.
+$P_{50}=1.10\,P_{\rm trig}$ and $P_{90}>2\,P_{\rm trig}$ for the
+calibration configuration's drifting class, both carrying an
+\emph{unbounded} transfer systematic to any other configuration
+(bracketed as $0.5$--$2\times$, Appendix~\ref{app:population}), where
+they are \emph{not determined}; $P_{\rm trig}$ is quoted throughout. ALMA's
+native channelisation sets it, so it is a total-power threshold and no measure
+of Hz-resolution sensitivity, optimistic by $\times\HanFacBest$ to
+$\times\HanFacWorst$ under the
+instrument's Hanning response (Appendix~\ref{app:conventions}). Every
+headline EIRP is quoted beside its native channel width, and the
+machine-readable catalogue carries the nominal threshold and both
+Hanning-corrected values per window. The same reading applies to
+every subsequent ``5$\sigma$''.}
+\par\smallskip
+\noindent\rule{\columnwidth}{0.4pt}
+\medskip
+
+\medskip
+\noindent Three signal morphologies are detectable here, and
+\S\ref{sec:detectable} quantifies each with real windows. A continuous
+frequency-stationary carrier is the best case, recovered with near-ideal gain
+toward the nearest systems. A continuously drifting carrier in fine channels is
+recovered in \RecThresh{} per cent of injections at threshold and $75$--$83$
+per cent at twice threshold. An intermittent carrier of duty cycle $1/4$ is
+recovered in \DwellFineQ{} per cent of fine and \DwellCoarseQ{} per cent of
+coarse windows.
+
+\begin{table}
+\centering
+\small
+\caption{Nomenclature for search output and the two senses in which a
+probability is quoted.}
+\label{tab:nomenclature}
+\begin{tabular}{@{}p{0.28\columnwidth}p{0.64\columnwidth}@{}}
+\hline
+Term & Meaning \\
+\hline
+crossing & one channel$\times$drift cell at the stellar position with
+$T\geq5$: a threshold crossing (state 1); counted per window in the main
+text and per cell in Appendix~\ref{app:falsealarm} \\
+stage-1 spatial outlier & a window whose $T_\star$ exceeds all \NCtrl{}
+control statistics (``star-exceeds-ring''), a screening
+device that carries no candidate significance (state 2) \\
+$p_{\rm rank,min}$ & $1/(N_{\rm ctrl}+1)=1/\RankFloor$, the rank
+\emph{resolution} of one window's control ensemble: the smallest
+per-window probability the design can express \\
+$P(\text{false flag})$ & the survey-level false-positive probability
+after thresholding, correlation and non-Gaussianity. The two differ, the
+first being a property of one window's
+ensemble and the second of the whole survey, and the survey-wide Bonferroni
+scale $\BonferroniThresh$ lies two orders of magnitude below the first
+(\S\ref{sec:technosearch}) \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{The search statistic, and the words used for its output}
+\label{sec:statistic}
+
+The primary statistic is formed on extracted spectra, never on images or
+visibilities. It operates on the QA2-calibrated
+measurement set as delivered, per integration and per native channel, carrying
+the archive's flagging through untouched and applying no
+spectral regridding or interpolation (Table~\ref{tab:algorithm},
+step~3), and returns the real part of the weighted vector average of the phase-shifted
+visibilities at the propagated sky position $\mathbf{x}$: the
+natural-weighted dirty-map value there, with no deconvolution, so a quoted
+$S_{\rm peak}$ in a field with extended emission is a dirty-map amplitude.
+Baseline removal follows extraction (step~4), and the primary-beam correction enters the quoted thresholds and fluxes
+(\S\ref{sec:frames}), leaving untouched the extracted amplitudes the statistic
+ranks. For a sky position $\mathbf{x}$, each per-integration
+spectrum $I(\mathbf{x},t,\nu)$ is baseline-subtracted by a block median along the
+\emph{frequency} axis. No temporal median is applied at any stage
+(\S\ref{sec:ancillary}). The residual dynamic spectrum is stacked
+coherently along each trial linear drift rate $\dot\nu$ with
+inverse-variance weights, and the statistic is the maximum of that
+stack over the channel$\times$drift grid,
+%
+\begin{equation}
+T(\mathbf{x})=\max_{\dot\nu,\;\nu}\;
+\frac{\sum_{t} I\!\left(\mathbf{x},t,\nu+\dot\nu t\right)\big/\sigma^{2}(t,\nu)}
+     {\left[\sum_{t}1\big/\sigma^{2}(t,\nu)\right]^{1/2}},
+\label{eq:tstar}
+\end{equation}
+%
+a matched filter whose denominator is the noise of the stacked spectrum.
+Only when $\sigma$ is the same for every integration and channel does it
+reduce to a single-channel amplitude divided by one noise scale; otherwise the
+weights vary along the track. The scale
+$\sigma(t,\nu)$ is $1.4826\times$ the median absolute deviation taken
+\emph{across the control positions} at each integration $t$ and
+each channel $\nu$, which makes it global in position, local in frequency and
+in time, and shared by the star and by every control.
+
+The across-position median
+enters only in forming that deviation and is never subtracted from the
+numerator, so $T$ is an absolute stacked signal-to-noise carrying a
+cross-position noise scale, and it measures no local contrast. A line filling
+the primary beam therefore drives star and annulus up together instead
+of cancelling.
+
+The baseline filter takes the median in
+contiguous blocks of \MedWin{} channels and interpolates linearly between
+block centres, with $\max(2,n/\MedWin)$ blocks over $n$ usable channels,
+so its effective width is $W=\MedWin$ channels for the
+\NWinFullWidth{} windows holding more than \MedWinSplit{} channels
+(\MedWinFineLo--\MedWinFineHi{} in practice) and $n/2$, or
+\MedWinCoarseLo--\MedWinCoarseHi{} channels, for the short coarse
+windows whose block count collapses to two. The linewidth ceiling that
+imposes is ${\approx}\MedWinCeilFineMHz$\,MHz at the fine class's modal
+\ChanFineKHz\,kHz channelisation and
+${\approx}\MedWinCeilCoarseGHz$\,GHz at the coarse class's
+\ChanCoarseMHz\,MHz (Appendix~\ref{app:conventions}).
+The crossing channel is \emph{not}
+excluded from the scale. The median is taken across positions at a fixed
+channel, so what matters is how many of the \NCtrl{} controls carry the
+feature. A compact feature at the star appears in none of them and the
+50-per-cent breakdown point holds; emission filling the primary beam appears in
+all of them, which is the HD~48370 case (\S\ref{sec:technosearch}).
+$T_\star \equiv T(\mathbf{x}_\star)$ at the proper-motion-propagated
+stellar position, and the same operation, drift grid, channelisation and
+noise map give $\{T_i\}$ at all \NCtrl{} control positions.
+
+The controls are placed by
+\texttt{probe\_positions()} in the released extraction code, which adds
+its offsets to the star's own direction cosines, so the annulus is centred on
+the \emph{star} itself, wherever the star sits relative to the field phase
+centre. It holds \RingNProbe{} positions drawn uniform in
+area, $r=\sqrt{U(r_{\rm in}^{2},r_{\rm
+out}^{2})}$, and uniform in azimuth, from the fixed seed \RingSeed, re-applied
+per window, so all windows share one pattern in units of $\theta_{\rm PB}$ and
+two windows of one tuning sample identical sky positions
+(Fig.~\ref{fig:cp72ctrl}). Radii run
+$\RingInFrac$--$\RingOutFrac\,\theta_{\rm PB}$ with $\theta_{\rm
+PB}=\RingPbCoefCode\,\lambda/D$ evaluated at each window's own median
+frequency, so the annulus scales window by window. A separate
+inner check-ring of \RingNSrc{} positions, reaching
+$\RingCheckFrac\,\theta_{\rm PB}$, serves the point-source test. The full
+per-window geometry ships as catalogue columns (Data Availability).
+
+Because the frozen products carry none of it, the geometry is reconstructed
+from the code, and two checks confirm the layout that ran: the
+inner check-ring it generates has the \RingNSrc{} positions the
+retired region-max statistic maximised over, and
+where extended CO fills the beam the control statistics fall
+with reconstructed radius (Spearman $\rho=\RingRhoCO$,
+$p\sim10^{\RingRhoCOexp}$, in the HD~48370 Band~6 window). A wrong
+position-to-index mapping could not produce either.
+
+Placing controls off-centre costs sensitivity. A star
+near the pointing centre sits at primary-beam response ${\approx}1$,
+while the annulus samples \RingGainIn{} at $\RingInFrac\,\theta_{\rm
+PB}$ falling to \RingGainOut{} at $\RingOutFrac\,\theta_{\rm PB}$,
+area-weighted mean \RingGainMean{} (lower on ALMA's actual
+$\RingPbCoef\,\lambda/D$ beam). Star and controls are therefore not exchangeable in flux
+density, while they remain exchangeable in the signal-to-noise ratio the
+statistic actually ranks, because $T(\mathbf{x})$ in Eq.~\ref{eq:tstar} is
+formed on uncorrected amplitudes against one noise scale shared by every
+position. Extended sky brightness does not cancel,
+Smooth emission lives on short baselines, whose phases barely change
+under a phase rotation of a few arcsec, so its extracted amplitude is
+nearly position-independent inside the beam and star and annulus rise
+\emph{together}, as they do for HD~48370. Emission whose centroid is offset
+from the star instead raises particular controls above it, as in the same
+star's $^{13}$CO window, whose ring maximum of \HdThirteenRingMax{}
+at \HdThirteenOffset\,arcsec stands against \HdThirteenStar{} at the
+star (\S\ref{sec:technosearch}). Two asymmetries remain, in opposite
+directions. A suppressed control can only make a star-exceeds-ring
+outcome more likely under the null, while a multiplicative calibration
+error scales with the continuum flux at the extracted position and so
+favours the star, where that flux is not zero. The second is bounded
+below, and the bound is given with the noise estimator above.
+
+Neighbouring controls are correlated below the synthesised-beam scale,
+so a window's annulus carries $N_{\rm eff}\simeq30$--$43$ independent
+spatial trials in the compact configurations where the symmetric
+reprocessing runs measure it. That is the worst case, the annulus containing
+far more resolution elements than the \NCtrlCap{} positions drawn in all but
+those configurations (Appendix~\ref{app:falsealarm}). The rank test needs
+exchangeability rather than independence in any case, and correlation among
+controls costs resolution without touching the $1/\RankFloor$ floor. The
+frozen products do not carry the synthesised beam or the array
+configuration, so radii are quoted in arcsec and in $\theta_{\rm PB}$;
+the ALMA archive carries both, and what they say about this geometry,
+including the \PctWinSevenM{} per cent of windows taken with the ACA
+7\,m array against a $\theta_{\rm PB}$ defined on 12\,m, is in
+Appendix~\ref{app:falsealarm}.
+
+Ranking $T_\star$ against \NCtrl{} values fixes the smallest per-window
+$p$-value the design can express at $1/\RankFloor$, while a survey-wide
+Bonferroni scale over \NWindows{} windows is $\BonferroniThresh$, two
+orders of magnitude smaller. \textbf{No single event in this design can
+therefore reach survey-wide significance.} A stage-1 flag selects a feature for examination and establishes no
+statistical significance. The
+annulus estimates the local false-alarm rate; it cannot authenticate an
+individual event (component~v, \S\ref{sec:technosearch}). The vocabulary for
+search output nests strictly (Table~\ref{tab:nomenclature}), and
+Table~\ref{tab:algorithm} allows the statistic to be reimplemented from the
+main text alone.
+
+Because $\sigma$ is built from the annulus, it carries no variance that
+belongs to the stellar position alone: residual continuum after baseline
+removal, deconvolution or self-calibration residuals, and
+position-correlated calibration error all concentrate at or near the
+phase centre, where the pointed science target sits. The continuum lane
+detects 17 of 57 target/bands (Appendix~\ref{app:continuum}), so these
+stars are not all blank there. A multiplicative spectral calibration
+error carries the same asymmetry and in the unfavourable direction: a
+residual bandpass ripple of fractional amplitude $\epsilon$ leaves a
+channel-confined artefact of order $\epsilon\,S_{\rm cont}$ at the
+extracted position and essentially nothing on the annulus, where the
+continuum flux is negligible. The requirement is severe where it matters,
+and \S\ref{sec:technosearch} works it through for the one window where it
+was tested. The release does not carry
+per-target continuum flux densities, so that argument scales from typical
+fluxes and bounds no individual window. A direct
+comparison of the star's own residual variance against the controls'
+would be the sharper test. The release retains full dynamic spectra for
+the star and for only 8 of the \NCtrl{} controls per flagged window, too few
+to calibrate a variance ratio, and this is the one gap these products cannot
+close. What they do allow is a measurement of the scale's frequency
+dependence. Re-extracting the four flagged windows'
+per-integration spectra and recomputing the scale
+within a band around the feature and
+excluding the feature itself, gives local-to-global ratios of 0.97
+(CP$-$72~2713), 1.29 (HD~48370), 0.93 ($\beta$~Pic~B3) and 1.02
+($\beta$~Pic~B6). The global scale is accurate to a few per cent except
+towards HD~48370, where the local value sits 29 per cent higher because
+that field is filled with CO; rescaling both the statistic and its
+ensemble by the local value leaves it flagged ($T_\star=\HdCorrectedT$
+against a corrected ring maximum of \HdCorrectedRing), the disposition
+already assigned to it. For CP$-$72~2713 the local scale is slightly \emph{lower}, so its excess is if anything
+understated and no disposition moves. The retained products keep no
+drift-stacked cube, so this tests only the noise scale, and a per-crossing local scale inside the search is an open item
+(\S\ref{sec:futurework}). The same estimator runs at the star and at all
+\NCtrl{} control positions, so a badly misstated $\sigma$ would displace
+the control distribution, and the pseudo-star ranks are uniform in every
+band and at both channelisations (\S\ref{sec:technosearch}). The one
+departing stratum is the fine-channel one, and that departure is the
+four flagged windows themselves.
+
+A rank means something only when the identical operation runs at the star
+and at every control. Maximising
+over an $n_{\rm src}$-position region at the star while comparing against
+single-position controls breaks that requirement. Under a pure-noise null the region
+maximum exceeds all $n_{\rm ctrl}$ single controls with probability
+$n_{\rm src}/(n_{\rm src}+n_{\rm ctrl})=\AsymExpectPct$ per cent for the
+$\RingNSrc$-position check-ring, an inflation that is a property of the
+estimator and holds for any window and any noise distribution. The
+released statistic therefore evaluates one position at the star and one
+at each control. An earlier version used the asymmetric region maximum;
+\S\ref{sec:aumic} states the chronology and audits the windows it affected.
+
+\begin{table}
+\centering
+\footnotesize
+\caption{The statistical data path, in order. Steps 1--8 run
+identically at the stellar position and all \NCtrl{} controls; only
+step 9 onward distinguishes them.}
+\label{tab:algorithm}
+\begin{tabular}{@{}rl@{}}
+\hline
+1 & calibrated measurement set from the ALMA archive \\
+2 & stellar position propagated to the observation epoch (Gaia DR3) \\
+3 & spectral extraction at that position, native channelisation \\
+4 & per-integration baseline removal: block median along frequency ($W=\MedWin$) \\
+5 & stack along each trial linear drift rate \\
+6 & robust noise map $\sigma(t,\nu)$: MAD across the \NCtrl{} controls \\
+7 & $T(\mathbf{x})$ from Eq.~\ref{eq:tstar}, an inverse-variance-weighted stack \\
+8 & repeat 3--7 at \NCtrl{} control positions on a ring \\
+9 & threshold: $T_\star\geq5$ (a crossing) \\
+10 & rank test: $T_\star>\max_i T_i$ (stage-1 spatial outlier) \\
+11 & molecular-line mask, $\pm50$\,km\,s$^{-1}$ stellar frame \\
+12 & vetting: recurrence, closure phase, cross-target occupancy \\
+\hline
+\end{tabular}
+\end{table}
+
+
+The searched drift-rate range is the larger of (a) a generic
+frequency-scaled default (12--13\,Hz\,s$^{-1}$\,GHz$^{-1}$), the
+\citet{Mason2024} fiducial with a threefold safety margin, and
+(b) for confirmed exoplanet hosts, the maximum line-of-sight orbital
+acceleration of the innermost known planet, so a transmitter on a
+short-period planet cannot drift out of the window. Drift rate maps
+onto line-of-sight acceleration through the first-order Doppler
+relation
+%
+\begin{equation}
+a_{\rm los} \;=\; c\,\frac{\dot\nu}{\nu},
+\label{eq:drift}
+\end{equation}
+%
+so the ceiling is quoted in cross-band-comparable form
+$\dot\nu/\nu$: 12--13\,Hz\,s$^{-1}$\,GHz$^{-1}$ is
+$\dot\nu/\nu = (1.2$--$1.3)\times10^{-8}$\,s$^{-1}$, i.e.\
+$|a_{\rm los}| = 3.6$--$3.9$\,m\,s$^{-2}$ (Eq.~\ref{eq:drift}),
+independent of observing
+frequency. That is the acceleration at ${\sim}0.04$\,au around a
+solar-type star. Earth-motion contributions
+($\lesssim0.13$\,Hz\,s$^{-1}$\,GHz$^{-1}$) lie two orders of magnitude
+below, subsumed by the grid. The grid itself is uniform in $\dot\nu$,
+spanning the searched range in $n_{\rm drift}$ steps (2--1944 across
+windows, recorded per window in the released file), so the
+worst-case mismatch, a carrier midway between trial rates, leaves a
+residual drift that traverses at most \DriftGridFineHalf{} of one
+native channel over the longest fine-class track
+(\DriftGridCoarseHalf{} over the coarse class), and the
+stacked-amplitude loss is bounded by that sub-channel smearing alone,
+an order below the recovery slope measured between $5\sigma$ and
+$10\sigma$. The injection campaign injected on grid
+points; continuous randomisation between them belongs with the
+stratified campaign of \S\ref{sec:futurework}.
+Very short-period systems lie at the edge of the searched drift range. An
+artificial emitter need not be tied to a known planet at all, since a
+free-flying platform, rotating structure or deliberately chirped carrier can
+accelerate as it chooses, and such emitters fall outside the constraints
+reported here without being excluded by them.
+These are \emph{apparent} topocentric drift rates, including deliberate
+transmitted chirp and acceleration-induced drift, which the survey does
+not distinguish, so the constraints concern linear apparent drift within
+the searched range only. For circular orbits the ceiling covers a
+transmitter co-orbiting an Earth analogue by three orders of magnitude
+and Proxima~b comfortably, while TRAPPIST-1\,b
+($a_{\rm los}=\OrbAccTrapb$\,m\,s$^{-2}$) sits at it and c
+($\OrbAccTrapc$\,m\,s$^{-2}$) reaches it only at modest eccentricity.
+Eccentricity raises the periastron value by up to
+$(1{+}e)/(1{-}e)^{2}$, $1.9\times$ at $e=0.2$, so borderline cases move
+outside the searched domain at modest eccentricity
+(Fig.~\ref{fig:accel}).
+
+Across the \NWindows{} windows maximum searched drift rates span
+1.1--5.9\,kHz\,s$^{-1}$ and trial drift rates per window 2--1944 (median 4).
+The threefold margin matters. At $1\times$ the search would have
+been blind to two of its threshold-crossing windows, including the AU~Mic
+crossing, while at $5\times$ no disposition changes; transmitters drifting
+faster than the \DriftCeilLo--\DriftCeilHi\,Hz\,s$^{-1}$\,GHz$^{-1}$ ceiling
+remain unconstrained.
+Intra-integration smearing is negligible for \NSmearOk{} windows: at most
+1.10 channels, median 0.001. \NSmearLo{} windows have $\eta_{\rm
+smear} < 0.99$ (Appendix~\ref{app:conventions}); \NSmearWorst{} of them, all
+\SmearWorstChanKHz\,kHz Band~6 windows and so among the most drift-capable
+here, carry effective thresholds
+\SmearWorstPenLo--\SmearWorstPenHi$\times$ nominal, and \NSmearFlagged{}
+are stage-1 flags. Channel widths are
+effective resolutions from the measurement sets' spectral
+window tables (Appendix~\ref{app:conventions}).
+
+\subsection{Frequency and velocity reference frames}
+\label{sec:frames}
+
+Every frequency axis here, searched spectra, tabulated ranges and
+crossing frequencies alike, is \emph{topocentric} as delivered by the
+ALMA correlator, with no velocity-frame shift applied at any stage.
+Velocities enter only in the vetting stage's line mask, whose conversion
+chain is in Appendix~\ref{app:conventions}. The stacking is coherent in
+frequency and in the drift-rate trial, and preserves no electric-field
+phase coherence between integrations.
+
+The native channel width is also the linewidth convention for every EIRP
+threshold, the commonest confusion when technosignature limits are
+compared across surveys. Channel dilution spreads a sub-channel carrier's total line flux across
+the channel, so the minimum detectable total power is
+$4\pi d^{2}S_{\min}\Delta\nu_{\rm ch}$, independent of the transmitter's
+own width below the channel (Appendix~\ref{app:conventions}).
+EIRP$_{5\sigma}$ is thus the minimum \emph{total} power of a channel-confined
+carrier, never a spectral power density. Dividing by
+$\Delta\nu_{\rm ch}$ gives the minimum spectral power for wider
+transmitters, so a $10^{15}$\,W threshold at 15.625-MHz channelisation
+is $6.4\times10^{7}$\,W\,Hz$^{-1}$. The 1-Hz and 3-Hz
+limits of Hz-resolution surveys are total powers in the same sense, each
+the best case of its own channelisation, which makes the axes of
+Fig.~\ref{fig:context} commensurable. Channelisation is the dominant price the
+archive exacts, and we do not project an Hz-resolution sensitivity from it,
+because a radiometer-equation scaling $P_{\min}\propto\sqrt{\Delta\nu}$ across
+six orders of magnitude in spectral resolution would be a thought experiment
+not an achievable ALMA sensitivity.
+
+Every spectral window of an observation enters the spectral-carrier search,
+capped at 8 per target to bound compute cost. The cap bound
+one target/band, 61~Vir Band~7 (four of eight windows searched), whose
+frequency-space selection function is tabulated; three further targets
+($\tau$~Cet, Kapteyn's Star, Van~Maanen's Star) are represented by their
+deepest single window and are marked in the released catalogue. Each
+searched window yields its own EIRP$_{5\sigma}$ row, and
+Figure~\ref{fig:context} plots only the deepest per star. When a crossing is checked against the masked species the operative
+discriminant is velocity coincidence: circumstellar emission sits at
+rest offset by the gas's kinematics, while a technosignature may appear
+at any frequency and drift rate. The searches as executed used a
+narrower one-channel-width implementation, which agrees with the
+velocity-space form on every disposition here (\S\ref{sec:linecost}).
+
+Both carrier-lane thresholds and continuum fluxes are corrected for
+ALMA's primary-beam response at the star's offset from the phase centre,
+negligibly for most targets (median factor \PbMedian, 90th percentile
+\PbPninety), but \NPbAboveTwoPct{} of the \NWindows{} retained windows exceed
+2 per cent and \NPbAboveTenPct{} exceed 10 per cent, across
+\NPbTierStars{} catalogue entries (five designations: the two
+HD~139084B rows share one). The largest retained correction is
+\PbMaxStar{} Band~\PbMaxBand{} at $\PbMax\times$, at
+$\PbMaxRoverTheta\,\theta_{\rm PB}$, and Sirius~B spans \PbSirLoPct--\PbSirHiPct{} per cent over its
+\NSirWin{} windows at
+\PbSirRoverThetaLo--\PbSirRoverThetaHi$\,\theta_{\rm PB}$. The boundary
+between a retained bounded correction and a withheld window is whether the
+Gaussian beam form is defensible at the offset in question, and the offset by
+itself does not decide it.
+$\epsilon$\,Eri Band~6 lies beyond the first sidelobe transition, where the
+correction reaches $2.9$--$3.4\times$ and the Gaussian form fails, so we
+\emph{withhold} those four windows, which enter no number here but are
+released, flagged, in the catalogue. Everything retained sits inside
+$\PbMaxRoverTheta\,\theta_{\rm PB}$, where the correction stays a bounded
+systematic within a valid beam model. Excluding Sirius~B would change neither endpoint of the quoted EIRP range
+nor any conclusion, and would move the median by one significant figure,
+$\EirpMedWithSirius\to\EirpMedNoSirius\times10^{15}$\,W.
+The correction uses the same $\theta_{\rm PB}=\RingPbCoefCode\,\lambda/D$ as
+the annulus geometry, the Airy first-null coefficient rather than ALMA's
+FWHM of ${\approx}\RingPbCoef\,\lambda/D$, so off-axis thresholds are
+optimistic by up to ${\sim}10$ per cent at the largest retained offset,
+which is $\PbMaxRoverFwhm$ of a true FWHM.
+\label{sec:benchmarks}
+
+The EIRP thresholds are compared throughout to an Arecibo-like planetary
+radar \citep[][EIRP $2\times10^{13}$\,W]{Drake1974,EarthDetectingEarth2025},
+which is a technological \emph{power} scale carrying no transmitter model. It is an \ArecGHz\,GHz number, and aperture gain scales as
+$\nu^{2}$, so the same aperture and transmitter power at 230\,GHz would
+radiate $2\times10^{13}\times(230/\ArecGHz)^{2}\simeq\ArecScaledW\times10^{17}$\,W.
+The Arecibo figure carries that dish's real aperture efficiency; the
+frequency-matched benchmark below is geometric. That benchmark is a
+12-m aperture radiating 1\,MW at 230\,GHz, EIRP
+${\approx}8\times10^{14}$\,W, within a factor of two of the median
+Class~A threshold $\EirpMedA$\,W.
+
+\subsection{Ancillary and validation analyses}
+\label{sec:ancillary}
+
+Four further analyses are summarised here as far as the main text depends on
+them.
+
+\emph{Injection-recovery validation} (Appendix~\ref{app:inject}).
+Synthetic tones of known amplitude were injected into real visibilities
+and recovered with the unmodified pipeline: \NTrials{} trials across six
+window configurations, three bands and both resolution classes. The
+pipeline's baseline step is a per-integration block median along
+\emph{frequency}
+(Table~\ref{tab:algorithm}, step~4), which by construction cannot remove
+a feature confined to one or two channels, and its de-drift step is an
+inverse-variance-weighted sum over integrations, which accumulates a
+persistent carrier coherently. Appendix~\ref{app:inject} tells one validation-history item in full. The
+campaign's original report of 0 of 500 coarse-window recoveries was an
+artefact of its recovery \emph{criterion} and never of the search
+pipeline. The corrected
+criterion has not been re-derived by an independent
+implementation, and that cross-check is an open item
+(\S\ref{sec:futurework}). The independent evidence is the dwell campaign
+of \S\ref{sec:dwell}, which measures persistent near-static carriers as
+\emph{recovered} (Table~\ref{tab:dwell}), reversing the artefact's reading.
+
+The primary statistic has no automated injection test on every pipeline
+change; three quantified checks bound undetected pipeline faults
+instead: the machinery-only lane (fidelity $-9$/$+14$ per cent, the
+bound that caught this artefact), the AU~Mic re-analyses of
+\S\ref{sec:aumic} under three treatments, whose recomputation agrees
+with the released products, and the pseudo-star rank uniformity
+(\NPseudo{} pooled ranks uniform, mean \PseudoMean{} against 0.5, KS
+$p=\PseudoKSp$), which any defect of the statistic itself would
+displace. For the drifting class on the fine window, recovery is 17,
+\RecThresh, 58, 75 and \RecTwice{} per cent at $4$, $5$, $6$, $8$ and
+$10\sigma$, measured on the single calibration configuration of one
+star and one Band~6 window and transferred by assumption to all \NWinA{}
+Class~A windows, an error the bracketing of
+Appendix~\ref{app:population} treats as a 0.5--2$\times$ rescaling. That
+gives EIRP$_{50}=1.10\,$EIRP$_{5\sigma}$ and, as a bound,
+EIRP$_{90}>2.0\,$EIRP$_{5\sigma}$, each with an unbounded transfer
+systematic bracketed as $0.5$--$2\times$
+(Fig.~\ref{fig:completeness}, Table~\ref{tab:classcomp}). Tables here
+stay in nominal EIRP$_{5\sigma}$.
+
+\subsection{Dwell-fraction completeness}
+\label{sec:dwell}
+
+How long a carrier occupies one native channel defines the searched class, so
+we measure recovery against that directly. A carrier was
+injected into the retained per-integration spectra of \NDwellWin{} real
+windows, six coarse and six fine, at amplitudes of 2--20 times the
+per-integration noise and dwell fractions
+$f_{\rm dwell}=0.10$--1.00, six realisations each: \NDwellTrials{}
+trials, released with one row per injection (Table~\ref{tab:dwell}). Its
+detection criterion, recovered when the logged per-integration S/N
+reaches five, was re-derived from the released rows and agrees with the
+logged flag \XcheckAgree{} times in \XcheckN{} trials, with
+\XcheckMismatch{} mismatches across a clean separating gap. Recovery rises
+monotonically with dwell. Pooling amplitudes at or above $4\sigma$,
+coarse windows recover \DwellCoarseOne{} per cent of continuous
+carriers, \DwellCoarseQ{} per cent at $f_{\rm dwell}=0.25$ and
+\DwellCoarseT{} per cent at 0.10; fine windows give \DwellFineOne,
+\DwellFineQ{} and \DwellFineT{} per cent.
+
+An end-to-end check confirms this through the unmodified pipeline. Injecting a zero-drift, always-on tone into the
+calibrated visibilities of a coarse Band~7 window at 1, 3 and 10 times
+the per-integration rms and running the released extraction and search
+returns $T_\star = 20.5$, $65.3$ and $217.7$, each recovered within one channel of the
+injection and flagged as a detection. For 639
+integrations the ideal coherent gain is $\sqrt{639}=25$, so a carrier at
+the per-integration noise level should reach ${\sim}25\sigma$: the
+measured 20.5 is that, less weighting and flagging losses.
+
+Two distinctions apply. The dwell
+campaign injects into retained per-integration spectra, after the
+baseline step of Table~\ref{tab:algorithm}, while the end-to-end check
+injects into visibilities, before it. One cell is also measured only in
+part, the through-pipeline recovery of near-static carriers on Class~A
+windows, which no end-to-end zero-drift injection has yet constrained
+(Appendix~\ref{app:inject}). The earlier claim that the pipeline
+suppresses persistent carriers is withdrawn.
+
+The campaign measures completeness at the survey threshold and across
+configurations. The trigger acts on the stacked statistic and the
+de-drift step is an inverse-variance-weighted sum over integrations, so
+a carrier of per-integration amplitude $A$ present for a dwell fraction
+$f_{\rm dwell}$ of a track of $N_{\rm int}$ integrations accumulates to
+%
+\begin{equation}
+a \;=\; A\,f_{\rm dwell}\sqrt{N_{\rm int}}
+\label{eq:stacked}
+\end{equation}
+%
+in units of the per-integration noise. Recovery depends only on the combination
+$a$, so binning the
+released trials in $a$ unifies the two axes and places all \CompWin{}
+injected windows on one axis. Those windows span
+$N_{\rm int}=\CompNintLo$--\CompNintHi, a factor of \CompNintFactor,
+over \CompTgt{} targets in Bands \CompBands{} and both resolution
+classes, so configuration-independence is measurable. In the \CompFiftyN{} windows whose amplitude grid straddles the
+trigger, the 50 per cent recovery point lies at
+$a=\CompFiftyLo$--\CompFiftyHi{} (median \CompFiftyMed), which is the $5\sigma$ threshold itself, independent of channelisation, integration
+count and band. In the other \CompSatN{} the weakest
+injection already stacks to $a=\CompSatMin$ and at least \CompSatRec{}
+per cent of every injection is recovered, consistent but uninformative
+about the curve's position. The pooled curves
+(Table~\ref{tab:compcurve}) agree between classes within the sampling
+noise.
+
+The injected carriers do not
+drift, so what is measured across \CompWin{} configurations is the
+persistent and partial-dwell, non-drifting class. On Class~B windows
+that is the searched class, which therefore carries a survey-threshold
+completeness curve. On Class~A windows the searched
+class is the drifting carrier, whose curve is still the single
+calibration configuration of Appendix~\ref{app:inject}; the fine column
+of Table~\ref{tab:compcurve} constrains the near-static cell at the
+search stage only and bounds nothing about the transfer error. The quantity $a$
+is a derived combination, justified by the form of the statistic and by the
+collapse of \CompWin{} configurations onto one curve; it is not measured
+independently at every $(A,f_{\rm dwell})$ pair.
+
+\begin{table}
+\centering
+\footnotesize
+\caption{The dwell campaign. \emph{(a)} Recovery of high
+per-integration-S/N injected carriers as a function of dwell fraction, pooling injected amplitudes
+$\geq4\sigma$ per integration, from \NDwellTrials{} trials over
+\NDwellWin{} real windows. Recovery rises with dwell, a continuously
+transmitting carrier being the easiest case. The experiment establishes the
+dependence on temporal occupancy; absolute completeness at the survey
+detection threshold comes from the end-to-end campaign of
+Fig.~\ref{fig:completeness}.}
+\label{tab:dwell}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+$f_{\rm dwell}$ & coarse windows & fine windows \\
+\midrule
+1.00 & \DwellCoarseOne\% & \DwellFineOne\% \\
+0.50 & 100\% & 99\% \\
+0.25 & \DwellCoarseQ\% & \DwellFineQ\% \\
+0.10 & \DwellCoarseT\% & \DwellFineT\% \\
+\bottomrule
+\end{tabular}
+
+\input{tab_compcurve}
+\end{table}
+
+One caveat attaches to the drift ceiling. The searched value is
+\DriftCeilLo--\DriftCeilHi\,Hz\,s$^{-1}$\,GHz$^{-1}$, line-of-sight
+$|a|=\AccelCeilLo$--\AccelCeilHi\,m\,s$^{-2}$, the generic value
+everywhere except the \NAccelPlanet{} windows where a known planet's own
+bound raises it. It clears Earth-rotation and Earth-orbit drifts by two orders of
+magnitude but is marginal against a close-in planet on a
+TRAPPIST-1\,b-like orbit, so the limits of \S\ref{sec:discussion} are
+conditional on it (Figure~\ref{fig:accel}).
+
+\emph{Closure-phase vetting} (Appendix~\ref{app:closure}). This one-sided
+point-source test needs multiple independent baselines, so single-dish and
+beamformed surveys cannot perform it. It is implemented and
+simulation-validated, and at this survey's flux densities it has
+\emph{no discriminating power}: per-baseline S/N never exceeds 5.1 in
+the positive-control fields, so no flagged window could have failed it
+whatever its nature. It is a proof-of-principle diagnostic and never an operative filter, and no
+window is described as having ``survived'' it.
+
+\emph{Extended and cross-target screens}
+(Appendices~\ref{app:extended} and \ref{app:freqoccupancy}). Satellite constellations grew across the 2013--2025 archival
+baseline. No known ordinary downlink
+allocation maps into the searched frequencies, but that excludes neither
+harmonics, intermodulation products nor unconventional emitters, and no
+exclusion claim rests on allocation alone. The primary defences are the
+control ensemble and the time-domain tests. A satellite enters star and
+control extractions alike within an integration, the channel-width
+mismatch and the drift-stacked statistic dilute transient passes, and a
+pass confined to one block and one target would evade the cross-target
+occupancy check by construction. A near-field emitter need not share a
+celestial source's far-field interferometric response, one reason a
+dedicated per-integration RFI screen and visibility-domain checks
+belong in any successor analysis. A chirped (quadratic-drift) extension, a per-channel
+periodicity search and a cross-target recurrence match at the same sky
+frequency all ran as demonstrations only. All
+three behave as the null predicts, none produces a candidate and no limit
+derives from them; Appendix~\ref{app:extended} gives the rates, the pair
+counts and one bookkeeping caveat.
+
+
+What follows is the final analysis. The pipeline as released differs from
+earlier working versions in five substantive ways, each logged with its effect
+on released products in Appendix~\ref{app:exclusions} and the repository
+change-log; \S\ref{sec:aumic} dates the one that changes a released number.
+Asymmetric-derived quantities are historical there and enter no operative
+number.
+
+\medskip
+\noindent\rule{\columnwidth}{0.4pt}
+\smallskip
+\noindent\textbf{Scope of the constraints.} \emph{What was searched:}
+\UnionIntervals{} frequency islands totalling \UnionGHz\,GHz
+(\SearchedUnionGHz\,GHz after molecular-line masking) at
+15.3\,kHz--31.25\,MHz channelisation, during the analysed archival
+intervals, for carriers within the searched drift ceiling and one
+native channel in width, at nominal trigger thresholds whose measured
+recovery is \RecThresh{} per cent (single configuration, transferred
+by assumption). Inside that box the non-detection is a constraint.
+\emph{Nothing in this paper bounds the prevalence of:}
+(i) drift-rate structure on the \NCoarse{} coarse windows, which carry
+no drift discrimination and no survey-threshold completeness curve
+(\S\ref{sec:dwell});
+(ii) transmitters emitting \emph{outside the searched spectral
+windows}, meaning those \UnionIntervals{} islands, not ALMA's
+frequency range (Fig.~\ref{fig:waterfall});
+(iii) transmitters active \emph{outside the archival epochs}: the
+limits assume near-continuous emission and are only weakly constraining
+below epoch activity ${\sim}0.1$ (Table~\ref{tab:occurrence});
+(iv) drift rates \emph{above} the searched ceiling
+$|a|=\AccelCeilLo$--\AccelCeilHi\,m\,s$^{-2}$, excluding the most
+close-in orbits
+(Fig.~\ref{fig:accel});
+(v) carriers placed \emph{inside} the $\pm50$\,km\,s$^{-1}$
+molecular-line mask, which is excluded search space and not
+searched-and-empty;
+(vi) emission \emph{broader} than one native channel, for which the
+thresholds must be rescaled;
+(vii) anything below the nominal threshold, where measured recovery
+is $\RecThresh^{+\RecThreshHi}_{-\RecThreshLo}$ per cent
+(Appendix~\ref{app:inject});
+(viii) any transmitter-frequency prior spanning ALMA's tuning range,
+under which the conditional bound vanishes (\S\ref{sec:null}).
+\smallskip
+\noindent\rule{\columnwidth}{0.4pt}
+\medskip
+
+
+\section{Results}
+\label{sec:results}
+
+The search, its non-detection and the per-window thresholds come first
+(\S\ref{sec:exclusions}, \S\ref{sec:technosearch}), then the four flagged
+windows and their dispositions (\S\ref{sec:aumic}), and last the ancillary
+by-products, which gate nothing in the primary lane
+(\S\ref{sec:ancillaryresults}). The non-detection is stated under two
+late-stage corrections, and both made the reported picture more conservative.
+The mid-analysis statistic revision (\S\ref{sec:aumic},
+Table~\ref{tab:bothstats}) only ever removed flags (seven windows before, four
+after, none in which the star dominated its own controls), and withdrawing the
+coarse-window 0-of-500 recovery artefact (\S\ref{sec:ancillary}) restored the
+recovery of persistent near-static carriers rather than removing a claim.
+
+\begin{table}
+\centering
+\footnotesize
+\caption{The survey as searched, and the paper's
+headline numbers in one place. Every count quoted in this paper reconciles with it; subset numbers are
+identified where used. The two completeness experiments measure different quantities and are
+kept in separate tables. The conditional
+searched-domain transmitter fraction is a methodological demonstration
+(Appendix~\ref{app:population}) and is deliberately absent.}
+\label{tab:searchspace}
+\begin{tabular}{@{}p{0.53\columnwidth}p{0.40\columnwidth}@{}}
+\hline
+Quantity & Value \\
+\hline
+Stars within 40\,pc with qualifying public ALMA coverage & \NCensus{} \\
+\quad genuinely pointed at; never observed (\S\ref{sec:exclusions}) & \NGenuinelyCovered{}; \NNeverObsStars{} \\
+Stars searched; independent systems & \NStars{}; \NSystems{} \\
+Star/band datasets & \NStarBands{} \\
+Spectral windows searched & \NWindows{} \\
+\quad extracted; repeats, defective, withheld & \NExtracted{}; \NDup{}, \NDefect{}, \NWithheld{} \\
+\quad Class A drift-resolved / Class B unresolved-excess & \NWinA{} / \NWinB{} (\PctCoarse\% Class B) \\
+Execution blocks & \NEB{} \\
+Distance range & \DistMin--\DistMax\,pc \\
+Unique frequency union & \UnionGHz\,GHz (\UnionIntervals{} intervals, \UnionLo--\UnionHi\,GHz) \\
+Windows by ALMA band (3/4/5/6/7/8) & \BandWinThree/\BandWinFour/\BandWinFive/\BandWinSix/\BandWinSeven/\BandWinEight \\
+Effective after line-exclusion mask & ${\approx}\SearchedUnionGHz$\,GHz \\
+Native channel widths & 15.3\,kHz--31.25\,MHz; median \ChanMedianMHz\,MHz \\
+Drift-rate ceilings & 1.1--5.9\,kHz\,s$^{-1}$ (12.0--13.3\,Hz\,s$^{-1}$\,GHz$^{-1}$) \\
+On-source time per window & \OnsrcMin--\OnsrcMax\,s (median \OnsrcMedian\,s) \\
+Nominal $S_{\rm min}$ & \SminMin\,mJy--\SminMax\,Jy (median \SminMedian\,mJy) \\
+Nominal $P_{\rm trig}$, Class A (\ChanLoA--\ChanHiA\,kHz) & $\EirpMinA$--$\EirpMaxA$\,W (median $\EirpMedA$) \\
+Nominal $P_{\rm trig}$, Class B (\ChanLoB--\ChanHiB\,MHz) & $\EirpMinB$--$\EirpMaxB$\,W (median $\EirpMedB$) \\
+\quad worst-case Hanning-corrected medians & $\EirpHanMedA$ / $\EirpHanMedB$\,W \\
+Completeness, by class and experiment & Table~\ref{tab:classcomp} (amplitude); Table~\ref{tab:dwell} (dwell) \\
+Threshold crossings ($\geq5\sigma$ at the stellar position) & \NHits{} windows (all Class A) \\
+Star-exceeds-ring windows ($\geq5\sigma$) & \NSpatial{} windows (all Class A) \\
+\quad circumstellar or foreground CO & \NLineAttrib{} \\
+\quad unattributed, retired on non-recurrence & \NUnattrib{} \\
+Credible technosignatures & \NCandidates{} \\
+\hline
+\end{tabular}
+\end{table}
+
+
+Strict volume ordering (nearest first, \S\ref{sec:sample}) weights these
+results to the nearest stars, over \DistMin--\DistMax\,pc; per-target values,
+including each band's searched frequency range, are in the released catalogue
+(Data Availability).
+
+
+\subsection{Barnard's Star and Wolf~359}
+\label{sec:barnardswolf}
+
+Barnard's Star and Wolf~359, the second- and fourth-nearest stellar
+systems, have not to our knowledge been searched for technosignatures at
+ALMA frequencies before. Both are non-detections in public
+Band~6 archival data: nominal EIRP$_{5\sigma}$ trigger thresholds of
+$6.2$--$6.9\times10^{13}$\,W (Barnard's Star, 4 windows) and
+$7.8$--$9.1\times10^{13}$\,W (Wolf~359), with continuum upper limits
+of 0.575 and 0.453\,mJy.
+
+\subsection{Data-quality exclusions and open items}
+\label{sec:exclusions}
+
+\NStarBands{} target/bands are searched to completion and reported here.
+Four classes of entry are absent from the released catalogue and
+itemised in Appendix~\ref{app:exclusions}: four process-level search
+failures, each still carrying a continuum non-detection; one pair
+excluded for data quality; windows withheld for a noise-handling defect;
+one relabelled entry.
+
+A further \NAudit{} candidate target/bands were selected but never delivered a
+searchable product, and the cause lies in the selection step. Re-running the
+crossmatch against the archive shows that \NNotPointed{} of them were
+never observed at all, since no observing unit offered to those entries
+contains the star. They sit a median \SepMedianDeg{} degrees from the nearest
+field centre, because the observations were pointed at solar-system targets
+whose quoted field of view is enormous, and a candidate crossmatch that trusts
+that quantity will admit stars far outside any real primary beam. The
+per-star pointing ledger is released. The remaining \NPointed{} entries are genuine processing
+failures; re-running the failed set on the current code returned
+\NRetryFail{} further failures in \NRetryAttempt{} attempts, its one recovery
+falling outside Bands~3 to~8 and outside this release. A positional
+crossmatch must not use the quoted field of view of an ephemeris or solar
+delivery as a search radius. \NNeverObsStars{} of the \NCoveredCand{} stars
+admitted to the candidate list fail on pointing in every band, so the sample
+here is \NStars{} of at most about \NGenuinelyCovered{} genuinely covered stars rather
+than \NStars{} of \NCoveredCand, and the coverage completeness of
+Table~\ref{tab:searchspace} should be read against the smaller denominator.
+
+\subsubsection*{The coarse-noise defect, and the bound on its reach}
+
+A reproducible defect produces implausibly small noise in a minority of
+coarse-channel windows. The radiometer relation
+$\sigma\propto{\rm SEFD}/\sqrt{N_{\rm bl}\Delta\nu_{\rm ch}t_{\rm on}}$, in the
+system equivalent flux density (SEFD), makes
+$q\equiv\sigma\sqrt{t_{\rm on}\Delta\nu_{\rm ch}}\propto{\rm SEFD}/\sqrt{N_{\rm
+bl}}$ a quantity physics predicts, so a window whose $q$ lies far below the
+sample median is too extreme for a noise fluctuation and points instead to a
+bookkeeping defect; we exclude such windows at $100\times$ below the median.
+Six of \NWindows{} windows fail, across five stars, and their nominal thresholds of
+$2.0$--$7.8\times10^{12}$\,W would otherwise have set this paper's
+headline depth; excluding them, the best is $1.6\times10^{13}$\,W.
+
+The retained population is itself broad, so the exclusion does not rest on its
+narrowness; $q$ runs over a factor ${\sim}290$ of the sample median, mostly the
+band dependence the same relation predicts through SEFD. It rests on the size of
+the gap, the six sitting a factor $1.5\times10^{3}$ below the lowest retained
+window across an empty 3.2 decades, so that any threshold between
+$1.5\times10^{1}$ and $2.2\times10^{4}$ in absolute $q$ units selects the same
+six. It rests also on direction: $\sigma$ is estimated from the control probes
+and applied to every position of a window alike, so a window-level deflation can
+only over-state sensitivity, never manufacture a star-exceeds-ring window. All
+six have on-source times of 12 to 48\,s, and no integration-time cut is applied
+anywhere.
+
+The six share a signature rather than an origin in the observing programme: all
+are \DefectArrays{} array, \NDefectBandSix{} in Band~6 and \NDefectBandSeven{} in
+Band~7, all at \DefectChanwMHz\,MHz, in \NDefectEBs{} execution blocks across
+\NDefectProjects{} projects, and every one has a normally behaved
+finer-channelised window covering the same frequencies in the same block
+(Appendix~\ref{app:exclusions}), which is what an auxiliary window riding on a
+science baseband looks like. Modelling $q$ for every retained window from its
+own band, array and antenna count leaves those residuals unimodal with the six
+\SefdResidDefGapDex\,dex below the lowest retained window and nothing between,
+so no continuum of smaller deflations hides under the cut.
+
+\NDup{} of the \NExtracted{} extracted rows are duplicate catalogue
+entries for one physical window, the same (star, execution block,
+frequency range, channel width) key appearing twice in the archive query,
+either as repeated archive products or as alternative calibrations of one
+execution block, so one row per key is the right statistical unit. The retention rule is deterministic and
+quantity-independent, the key's first-listed row in the archive query's
+own identifier order, so it consults no measured value and cannot prefer
+a crossing or a deeper threshold. Repeats need not agree; two reductions of the
+same $\tau$~Ceti Band~6 window differ by 44 per cent in threshold, which
+exceeds the flux-scale systematic of \S\ref{sec:frames} and is the most direct
+empirical bound here on threshold reproducibility. The two HR~1010
+Band~6 rows straddle $5\sigma$ at 5.10 and 4.95, so the crossing count is
+rule-dependent at the level of one window. The four flagged windows are not,
+no discarded row being both a crossing and star-exceeds-ring
+(Appendix~\ref{app:exclusions}).
+
+
+\subsection{Technosignature search}
+\label{sec:technosearch}
+
+All \NStarBands{}
+star/band datasets yielded at least one carrier-lane result
+(process-level failures, \S\ref{sec:exclusions}, uncounted), spanning
+\NWindows{} spectral-window measurements after the catalogue audit
+removed \NDup{} duplicate rows (Appendix~\ref{app:table});
+B6/\BandWinSix{} and B7/\BandWinSeven{} dominate (per-band breakdown in
+Table~\ref{tab:perband}). EIRP$_{5\sigma}$ trigger thresholds span
+$\EirpMin$--$\EirpMax$\,W, median $\EirpMedian$\,W
+(Figures~\ref{fig:waterfall}, \ref{fig:context}); the deepest thresholds are
+reached toward the nearest systems ($1.6\times10^{13}$\,W for the UV~Ceti pair
+at 2.7\,pc), though depth also tracks integration time and channelisation, and
+the shallowest is $\eta$~Corvi. Against the
+benchmarks of \S\ref{sec:benchmarks}, only that pair's two resolved
+components reach below the Arecibo-like planetary-radar EIRP,
+\CaseDetCoarseNow{} system of \NSystems.
+
+The statistics come strictly before the astrophysics, in three named
+stages that do not promote one another. A \emph{crossing} is one
+channel$\times$drift cell at the stellar position reaching $T\geq5$:
+\NHits{} of the \NWindows{} windows contain one. A \emph{stage-1 spatial outlier} is a window whose stellar statistic
+also exceeds all \NCtrl{} controls: four do. That screening device selects a
+window for examination (\S\ref{sec:statistic}). Each of the four is then
+carried past that floor by a second-stage local null ((v) below), which asks
+whether a feature exceeds the noise at its own position without discriminating
+spatially; in \LNNCtrlClear{} of the \LNNWindows{} windows the control-ring
+maximum clears it too, so candidacy still turns on the first-stage
+star-versus-control comparison. A \emph{candidate} is a stage-1 flag
+surviving every veto, and there are none. Three of the four flags have
+independent CO evidence, matched transitions, velocities and epochs at
+$\beta$~Pictoris and published foreground emission at HD~48370; the
+fourth, towards CP$-$72~2713, never acquired one and is retired on a second
+archival epoch, below. What disposes of the three is that astrophysical
+evidence, with the $\pm\MaskVWidth$\,km\,s$^{-1}$ mask playing no part.
+Table~\ref{tab:flagged} gives each flagged window with the evidence
+dispositioning it.
+
+%% Generated by make_referee2_artefacts.py -- do not edit by hand.
+%% Every survey number below is recomputed from the frozen export
+%% through the prologue of survey_stats.py.
+
+\begin{table}
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{The four windows containing a stage-1 spatial outlier, with
+the evidence dispositioning each. $T_\star$ is the search statistic at
+the stellar position (Eq.~\ref{eq:tstar}) and `ring max' the largest of
+that window's \NCtrl{} control statistics. $\nu_{\rm cross}$ is the crossing channel, which differs from the window centre
+by up to 0.85\,GHz here, and $S_{\rm peak}=T_\star\sigma$ is the peak flux
+density in one native channel. $\Delta\nu$ and $\Delta v$ are the offset
+of that channel from the nearest \emph{laboratory} rest frequency of the
+masked species, topocentric, as $c\,\Delta\nu/\nu_{\rm rest}$ and so
+positive when the observed frequency exceeds the rest frequency; the
+$\pm\MaskVWidth$\,km\,s$^{-1}$ mask applies in the stellar frame after
+the conversion chain of Appendix~\ref{app:conventions}, and the repaired
+mask of \S\ref{sec:linecost} changes no row. The frozen mask stored rest
+frequencies rounded to \MaskRestRoundMHz\,MHz, so the released offset
+column reads \CatCOerrMHz\,MHz (\CatCOerrKms\,km\,s$^{-1}$) smaller than
+the values here for CO($1{\to}0$). The HD~48370 row is the limiting case, a near-tie of rank
+dispositioned by velocity coincidence with independently published
+emission (\S\ref{sec:technosearch}).}
+\label{tab:flagged}
+\begin{tabular}{@{}lrrrrrl@{}}
+\toprule
+Window & $\nu_{\rm cross}$ (GHz) & $T_\star$ & ring max & $S_{\rm peak}$ &
+$\Delta\nu$; $\Delta v$ & Disposition \\
+ & & & & (mJy) & (MHz; km\,s$^{-1}$) & \\
+\midrule
+$\beta$~Pic B3 & \FobsBpicThree & 14.65 & 7.27 & \FluxBpicThree &
+\DnuBpicThree; \DvBpicThree{} (CO\,$1{\to}0$) & circumstellar CO \\
+$\beta$~Pic B6 & \FobsBpicSix & 11.68 & 9.12 & \FluxBpicSix &
+\DnuBpicSix; \DvBpicSix{} (CO\,$2{\to}1$) & circumstellar CO \\
+HD~48370 B6 & \FobsHdFour & 27.10 & 26.83 & $\FluxHdFour\times10^{3}$ &
+\DnuHdFour; \DvHdFour{} (CO\,$2{\to}1$) & foreground CO \\
+CP$-$72~2713 B7 & \FobsCpSeven & 5.81 & 5.68 & \FluxCpSeven &
+\DnuCpSeven; \DvCpSeven{} (CO\,$3{\to}2$) & unattributed; no recurrence \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+None of the \NSpatial{} stage-1 flags exceeds this survey's own
+calibration or separates from the empirical background and known
+astrophysical emission.
+
+\subsubsection*{Survey-level false-alarm calibration}
+
+Each window-level test compares the peak signal-to-noise ratio at the
+star's position with the same statistic at \NCtrl{} controls. The drift grid and thousands of channels apply identically to both, so
+the per-window trials factor is absorbed empirically. The statistic is
+symmetric, one propagated stellar position against one position per control.
+Every number here derives from that frozen statistic; the retired
+asymmetric variant is development history
+(Appendix~\ref{app:exclusions}). The
+false-alarm probability has five components, in the order the procedure
+applies them.
+
+\emph{(i) The empirical spatial rank probability.} The per-window
+significance quantity is an empirical spatial rank probability under the
+control-position null, and no Gaussian-tail $p$-value; what the control
+ensemble delivers is an empirical null distribution conditional on approximate
+spatial exchangeability, and not a direct measurement of a local false-alarm
+probability. Under exchangeability
+one designated position of \RankFloor{} ranks first with probability exactly
+$1/\RankFloor$, whether the noise is Gaussian or heavy-tailed, so heavy tails
+cannot explain an excess. The
+survey expectation is $\NWindows/\RankFloor=\ExpFlags$ windows, and
+$P(\geq\SbrN\,|\,\ExpFlags)=\SbrPobs$ under an independent-Poisson
+approximation. That excess is astrophysical: in \SbrAstro{} of the
+\SbrN{} rank-first windows genuine celestial line emission sits at the
+stellar position (Table~\ref{tab:flagged}), so they are not draws from
+the noise null, and removing them leaves \SbrResid{} against
+\ExpFlags{} expected ($P=\SbrResidP$).
+
+\emph{(ii) The $\geq5\sigma$ amplitude requirement and (iii) the line
+mask.} Only \NHits{} of \NWindows{} windows contain any $\geq5\sigma$
+crossing at the stellar position. The ensemble calibrates the rank and the
+trial count follows from it, because a window's channel$\times$drift grid holds
+up to \CellsWinMax{} cells (Appendix~\ref{app:falsealarm}), far more than
+\NCtrl{} controls can resolve, so the control maximum absorbs whatever
+effective trial count the noise carries. The velocity-space mask
+(Appendix~\ref{app:linemask}) then removes known molecular emission from every
+crossing before it can count as unattributed. It is an analysis choice, never
+lowers the noise-null budget, and carries no disposition alone, the three CO
+attributions being kinematic (Table~\ref{tab:flagged}).
+
+\emph{(iv) The family-level pseudo-target Monte Carlo.} Each trial draws
+one control per window uniformly from its annulus as the pseudo-star and
+passes it through the operative gates, $T\geq5\sigma$ then the velocity mask.
+This prespecified procedure carries threshold, mask and ring geometry together
+on real data and expects \PsFlagMu{} flagged pseudo-target windows
+(\PsFlagPzero{} per cent of trials flag none); (i) and the Bonferroni scale
+agree.
+
+\emph{(v) The control-ensemble floor, and the second-stage local null.}
+Authentication falls to localisation, recurrence and astrophysical
+attribution (\S\ref{sec:statistic}), and we pre-commit that no crossing will
+be advanced as a candidate on rank statistics alone. That floor belongs to
+the first stage, and a second-stage local null carries the four flagged
+windows past it. For each we take a retained control position,
+standardise its residual
+by the pipeline's per-integration noise map, shift every integration
+independently and at random in channel, and re-run the identical search, with
+the same noise map, weights, drift grid and channel count. A rigid shift
+preserves each integration's spectral autocorrelation,
+\LNLagOne{} at lag one, and the maximum runs over the same grid, so each null
+realisation carries the same trials factor as the measurement at the star.
+Independence across integrations leaves nothing coherent along a drift
+track, so each realisation is signal-free by construction, and between
+$\LNDrawsMin$ and $\LNDrawsMax$ realisations per window resolve
+probabilities well below $1/\RankFloor$. The statistic was reimplemented
+from the pipeline source and reproduced all four published $T_\star$
+values bit for bit before any null was drawn.
+
+Each null has first to reproduce the distribution of the
+\LNNFirstStage{} real control maxima, genuine draws of the same
+statistic at exchangeable positions. The criteria were fixed before inspection: \LNValidLo{} to \LNValidHi{}
+per cent of real controls above the null's 99th percentile, under 1 per
+cent above its maximum. Three windows pass. HD~48370 Band~6 fails badly: \LNHDnAbove{} of its
+\LNNFirstStage{} real controls, \LNHDPctAbove{} per cent, exceed the
+maximum of $\LNDrawsMax$ null draws, and those controls sit at median
+\LNHDRealMed{} against the null's \LNHDNullMed. The cause is physical,
+the field carrying extended emission and its imaging residuals, coherent
+across integrations, which the scramble destroys by design. A
+scrambled-noise probability there would be manufactured significance, so
+we quote none for that window.
+
+The two $\beta$~Pictoris windows act as positive controls: no draw
+reaches $T_\star$ in either, giving $p<\LNpBpicThree$ in Band~3 and
+$p<\LNpBpicSix$ in Band~6, which is what a working statistic should return
+where a genuine localised astrophysical signal is present, here on
+independently known CO. For CP$-$72~2713 the null resolves the value itself,
+\LNnExceedCP{} of $\LNDrawsMax$ draws equalling or
+exceeding $T_\star$, and an extreme-value fit to that window's
+\LNNFirstStage{} control maxima agrees with it to a factor
+\LNCPAgreeFac, a \LNNBootGEV-fold bootstrap putting the chance of the
+true value falling below the Bonferroni scale at \LNCPBootPct{} per
+cent; the values, and what they do and do not license, are with that
+window below. The same fit places HD~48370 at $p=\LNpHDgev$
+($\LNpHDgevLo$ to $\LNpHDgevHi$), unremarkable and consistent with the
+CO attribution.
+
+Two limits attach to these numbers. The retained products
+keep full dynamic spectra for \LNNRetained{} of the \LNNFirstStage{}
+control positions, so position-to-position heterogeneity rests on
+\LNNRetained{} draws; that is what breaks the HD~48370 null, a limit the
+retained products impose on the method and one that retaining more control
+spectra would remove. Parametric extrapolation of a null tail
+is not used for any number quoted here: for $\beta$~Pictoris Band~3 the
+natural fits disagree by \LNTailDex{} orders of magnitude and one
+implies a bounded tail and returns exactly zero.
+
+Exchangeability is the central assumption of the statistic: the
+rank expectation holds only if the star and its \NCtrl{} controls are
+exchangeable under the null, which spatially varying noise,
+sidelobes, correlated pixels or phase-centre-localised calibration
+residuals could spoil. For a debris-disc archive the dominant violation is
+none of those but resolved astrophysical emission filling the annulus, measured
+here in HD~48370's CO ring and in $\beta$~Pictoris' recurring Band~6 window,
+where the ring outshines the star by $\BpRecSixRingRatio\times$. It suppresses
+a star-exceeds-ring outcome and never manufactures one, so it costs sensitivity
+alone. The primary-beam term is settled by construction
+(\S\ref{sec:statistic}): the statistic is formed on \emph{uncorrected}
+amplitudes, whose thermal noise is position-independent across the field, and
+$\sigma(t,\nu)$ is one scale shared by the star and every control. The
+\RankFloor{} positions are therefore exchangeable under the noise-only null by
+construction, and the primary beam enters only in converting to flux. The rest we measure by stratum
+(Fig.~\ref{fig:ctrldiag}). Median per-window control maxima are flat
+across bands, 4.46, 4.59, 4.42, 4.52, 4.63 and 4.69 in Bands 3 to 8, and
+a Kolmogorov--Smirnov test of the star's rank among its controls against
+$U(0,1)$ is consistent in every band ($p=\KsBandLo{}$--$\KsBandHi$) and
+in the coarse stratum ($p=\KsCoarse$). Fine-channel windows sit higher
+(control maximum \CtrlMedFine{} against \CtrlMedCoarse), as their far larger channel$\times$drift trial count predicts; the test
+is conditional on the window, so that is no violation.
+
+For the stronger question, exchangeability of the ensemble itself, we
+ranked each of a window's \NCtrl{} controls against the other
+\NCtrl-1 by the statistic and add-one rule used for the star, pooled over the
+survey. The \NPseudo{} pseudo-star ranks are uniform to the resolution the
+ensemble can express ($p=\PseudoKSp$) in every band and at both
+channelisations; the mean of \PseudoMean{} is the construction value
+under the add-one rule and carries no information.
+That test compares a control against the other \NCtrl-1 plus add-one, a
+different geometry from star-against-ring, so it cannot by itself detect
+a centre-versus-annulus asymmetry. \textbf{The test that can is the
+two-sample comparison of the \NWindows{} real stellar ranks against the
+pooled pseudo-ranks, $p=\StarPseudoP$: the stellar position behaves like
+one more position in its own annulus}, their median \emph{statistics}
+agreeing at \SymMedStar{} against \SymMedCtrl{} ($D=\SymKSd$). The
+radial test is the second: the Spearman correlation of control statistic
+against reconstructed radius has median \RingRhoNull{} over the
+\RingRhoNullN{} crossing-free windows, with 5th and 95th percentiles
+\RingRhoNullLo{} and \RingRhoNullHi, so any systematic radial
+suppression of the controls is bounded below \RingRhoBoundPct{} per cent
+in the mean. Both are null, which supplies the bound the one-sidedness argument
+above lacks.
+
+One stratum departs, and we report it separately. The fine-channel
+windows fail the same $U(0,1)$ test at $p=\KsFine$ ($n=\NFine$): four
+contain an on-star peak above their own control maximum, against 0.22
+expected, precisely the four flagged windows of Table~\ref{tab:flagged}.
+That fits the astrophysical line features identified below, with no misbehaving
+ensemble, but the departure is genuine, so fine-window rank
+probabilities are slightly optimistic. It is also localised, since excluding
+the 20 fine windows with any $\geq5\sigma$ stellar crossing restores uniformity
+($p=\KsFineNoCross$, $n=98$). Per-control noise records and gain are two stratifications the frozen
+products cannot support, so the empirical rank distributions bound the
+net effect: expected flags \PsFlagMu{} against a rank-only budget of
+\ExpFlags, with no excess in any stratum. The windows nearest the beam
+edge are not silently affected either: the largest retained offset,
+\PbMaxStar{} at $\PbMaxRoverTheta\,\theta_{\rm PB}$, sits inside the
+annulus's own radial span, and the four $\epsilon$\,Eri Band~6 windows
+are withheld outright (\S\ref{sec:frames}). Controls at equal
+holography-model gain would remove the sky-brightness term.
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{figures/control_diagnostics.pdf}
+\caption{Exchangeability of the \NCtrl-position control ensemble by
+stratum. Boxes: per-window control maximum; diamonds: median on-star
+peak; $p$: the Kolmogorov--Smirnov test of the text. The ensemble tracks the on-star statistic in every band and both
+channelisation classes.
+The one departure is the drift-search class ($p=\KsFine$), driven by the
+four flagged windows of Table~\ref{tab:flagged}.}
+\label{fig:ctrldiag}
+\end{figure}
+
+\subsubsection*{The fully symmetric region-max check}
+
+A fully symmetric region-max variant, applying identical
+source-region, drift-rate and frequency maximisation at the star and at
+every control, needs products the frozen release does not carry, so its
+domain is seven locally reprocessed windows. All give
+$T_\star=3.7$--$4.9$ against control maxima of 6.7--7.7, $p=0.81$--1.00,
+so the star is exchangeable with its ring wherever the test runs at full
+symmetry. The single-position calibration above remains the operative
+release-wide criterion; the two are never interchanged
+(Appendix~\ref{app:falsealarm}).
+
+\subsubsection*{Astrophysical end-to-end validation: $\beta$~Pictoris CO}
+
+Two of the four flagged windows are towards $\beta$~Pictoris, a debris
+disc with resolved CO emission \citep{Matra2017,Dent2014}: one in Band~3
+and one in Band~6 (Table~\ref{tab:flagged}), each offset from its CO rest
+frequency by more than the automated one-channel check allowed, which is why
+that check missed both. Through the frame chain (Table~\ref{tab:bpicaudit}) the
+offsets are one kinematic component, \StelBpicThree{} and
+\StelBpicSix\,km\,s$^{-1}$ from stellar systemic, in the
+two lowest CO rotational transitions of a system with detected
+circumstellar CO. The unflagged Class~\BpRecSixClass{} window at
+\FobsBpicSixB\,GHz, a third epoch six years earlier, independently shows CO at
+\StelBpicCoarse\,km\,s$^{-1}$: all three epochs and
+both transitions lie within \BpicMaxAbsStel\,km\,s$^{-1}$ of systemic, deep
+inside the $\pm\MaskVWidth$\,km\,s$^{-1}$ mask. The stage-1 Band~6 window carries \NCrossBpicSix{}
+formal $\geq5\sigma$ crossings where a channel-confined carrier admits
+one; the retained products do not record whether those channels are
+contiguous, so the count sets a floor of \BpWidthSixKms\,km\,s$^{-1}$ on the
+feature's extent without measuring it
+(Appendix~\ref{app:extended} for the tabulation cap). Peak flux densities of \FluxBpicThree{} and \FluxBpicSix\,mJy per
+channel, ratio \FluxRatioBpic, are the right order for this belt's
+spatially integrated CO though below the optically thin LTE ratio
+($\simeq4$). Excitation cannot account for a deficit that size, since
+\citet{Matra2017} find this gas only mildly subthermal
+(CO $3{-}2/2{-}1=1.9\pm0.3$ against 2.25 in LTE); beam dilution and
+resolved-out flux can, the synthesised beams being
+\BeamBpicThree{} and \BeamBpicSixFlag\,arcsec; and since both channels are far
+narrower than the line, the peak per channel is comparable across the two
+despite their differing widths.
+
+We attribute both crossings to this kinematically offset CO. Within the frozen
+release the validation rests on the velocity chain of
+Table~\ref{tab:bpicaudit}, which recovers the whole check list untuned:
+frequencies to the frame chain's stated tolerance, velocity concordance across
+epochs and transitions, localisation against the control ensemble, and drift
+class zero to within the grid.
+
+Attributing the pair to CO does not diminish it. Measured on the operative symmetric
+statistic and against the survey background, the Band~3 peak
+$T_\star=\BpicBThreeTsym$ is matched or exceeded by
+\NCtrlGeBpicBThree{} of the \NWindows{} per-window control maxima
+(add-one $p=\BpicBThreeAddOne$ on a denominator of \BpicAddOneDen) and
+the Band~6 peak $T_\star=\BpicBSixTsym$ by the same \NCtrlGeBpicBSix{}
+(add-one $p=\BpicBSixAddOne$). Those \NCtrlGeBpicBThree{} include this star's own
+CO-filled Band~6 ensemble at \BpicCoRingMax, the
+\BpicCoRingRank th largest control maximum in the survey.
+The alternative needs a transmitter coincidentally placed at matched
+offsets from two CO transitions in the same star. Every flagged window,
+and the crossing the statistic revision removed, belongs to one
+population: $\beta$~Pic, AU~Mic and CP$-$72~2713 are $\beta$~Pictoris
+moving-group members with debris discs, and HD~48370 is a disc host
+behind a molecular cloud. The searched sample is a debris-disc archive in the
+archive's own terms: \NDiskCatStars{} of the \NStars{} stars were observed
+under proposals categorised \emph{Disks and planet formation} and
+\NDebrisKwStars{} carry the \emph{Debris disks} science keyword
+(\NDebrisKwSys{} of \NSystems{} systems). That is the worst case for astrophysical
+false positives at millimetre wavelengths, so the flags concentrate where the
+foreground is richest.
+
+The same population raises the stellar-emission question directly, and
+the search suppresses it twice. Gyrosynchrotron and free-free emission
+from chromospheres and coronae are broadband, while the block-median
+baseline of \S\ref{sec:statistic} removes everything broader than its
+\MedWin-channel passband, ${\sim}32$\,MHz at the fine class, a
+fractional bandwidth of ${\sim}10^{-4}$; \citet{MacGregor2020}'s AU~Mic
+flares are coherent across the full 8\,GHz. Flares are also
+time-confined, so the inverse-variance stack over all integrations
+dilutes them. What survives is the multiplicative route of
+\S\ref{sec:statistic}, a flare continuum times a spectral calibration
+residual, bounded there and measured for CP$-$72~2713 below. The search
+is blind to the time axis by construction, and the retained dynamic
+spectra are the only handle on it.
+
+\subsubsection*{Dispositions of the remaining flagged windows}
+
+The third, towards HD~48370 in Band~6, is the largest excess here in
+absolute and the smallest in relative terms: $T_\star=27.10$ against a
+control-ring maximum of 26.83, the star exceeding its ring by one per
+cent of the statistic. Star and ring rising together is what emission filling the
+primary beam looks like. The window sits $-34.2$\,km\,s$^{-1}$
+topocentric from CO($J{=}2{\to}1$). The attribution is independently
+published: \citet{Cataldi2023} report prominent CO($2{\to}1$) and
+$^{13}$CO($2{\to}1$) emission towards HD~48370 at $v_{\rm
+bary}\approx41$\,km\,s$^{-1}$, well separated from its
+$23.6$\,km\,s$^{-1}$ systemic velocity and noted by them as potential
+foreground cloud contamination; our frame chain returns
+$v_{\rm bary}=+41.2$\,km\,s$^{-1}$, so we recover it and confirm it
+kinematically. Two further checks close the alternative. The same authors
+report the HD~48370 disc undetected in both CO and carbon, which excludes the
+circumstellar alternative to their sensitivity; and the sight line runs through the outer
+Galaxy at $l=214.55^{\circ}$, $b=-3.19^{\circ}$, where a flat rotation curve
+($R_{0}=\RzeroKpc$\,kpc, $\Theta_{0}=\ThetaZeroKms$\,km\,s$^{-1}$) reaches the
+$+\VlsrHdLsr$\,km\,s$^{-1}$ our own LSR chain measures at a kinematic distance
+of \KinDistKpc\,kpc, which nothing local could produce.
+The peak is $\FluxHdFour$\,Jy
+in one 122-kHz channel with the ring at the same level. The $^{13}$CO($2{\to}1$) window of the same execution block has a
+control maximum of \HdThirteenRingMax{} against only \HdThirteenStar{}
+at the star, so there is bright $^{13}$CO in the field but not at the
+star, as extended foreground emission predicts. The reconstructed annulus
+geometry puts that peak \HdThirteenOffset\,arcsec from the star, which against
+the window's \HdBeamArcsec-arcsec synthesised beam is
+\HdCoOffsetBeams{} beams: the emission is resolved away from the star and
+clustered off-centre, with the per-control radii in the released catalogue. The Band~8 tuning says the same thing by omission: all twelve Band~8 windows here belong to
+$\eta$~Crv, HD~48370 and HD~61005 and are [C\,\textsc{i}]
+$^{3}P_{1}$--$^{3}P_{0}$ (\MaskCIGHz\,GHz) tunings, and HD~48370's
+carries a $5.05\sigma$ on-star crossing against a ring maximum of 6.23,
+which is not one of the four stage-1 flags because its own ring exceeds
+it.
+Its crossing channel sits \CIcrossKms\,km\,s$^{-1}$ from
+[C\,\textsc{i}], so it is not [C\,\textsc{i}] emission from the disc, the cloud
+or the star; its own ring dispositions it as an ordinary noise crossing.
+What the window does show is no line at the star in this disc's carbon tuning,
+which is what \citet{Cataldi2023} report. The rank statistic identifies nothing here, a
+stated limitation of the spatial test.
+
+\subsubsection*{CP$-$72~2713: an unattributed flag, and its retirement}
+
+The fourth flag, towards CP$-$72~2713 in Band~7, never acquired an
+astrophysical attribution and was marginal throughout. Its prior for one is
+high, the star being a K7/M0 member of the ${\sim}24$\,Myr $\beta$~Pictoris
+moving group with a cold, dust-rich debris disc detected in ALMA 1.33-mm
+continuum \citep{Moor2020}, the same population and class of magnetically
+active star as AU~Mic. We recorded the window as an unattributed stage-1 flag,
+a statistical or astrophysical feature rather than candidate evidence, under
+criteria pinned in advance: \emph{promote} on independent confirmation,
+\emph{retire} on a clean second epoch or on identification with catalogued
+emission. That wording is committed to the released repository on \CpCritDate{}
+(\texttt{\CpCritHash}), \CpCritLeadHours{} hours before the second block was
+searched.
+
+That same member observing unit set, \texttt{\CpMous}, holds a second public
+execution block at this tuning, \texttt{\CpEbUnsearched}, which the per-target
+download budget of \S\ref{sec:sample} declined. We have since calibrated and
+searched it with the unmodified pipeline. It matches the first epoch in
+tuning, channel width (\CpRecChanwkHz\,kHz), channel count (\CpNChan),
+integrations (\CpRecNInt) and on-source time, and the two frequency axes are
+registered to \CpRecOffkHz\,kHz, \CpRecOffChan{} of a channel, so the feature
+falls in the same channel, \CpRecChan. Only the drift grid differs, one trial
+coarser, which puts the first epoch's fitted rate \CpRecNodeChan{} channel
+from the nearest node. The second block is also the deeper, combined rms
+\CpRecRmsTwo\,mJy against \CpRecRmsOne, so a persistent emitter at the first
+epoch's flux would have appeared there at $T_\star=\CpRecExpT$, above both the
+$5\sigma$ trigger and that window's largest control, \CpRecCtrlMax. That
+margin is narrow, so a second \emph{flag} was never assured; what the
+retirement rests on is the flux comparison below, which carries no trials
+factor.
+
+\textbf{The feature does not recur.} The first-epoch feature drifts. Its
+maximum lies at a drift of $\CpRecDriftkHzs$\,kHz\,s$^{-1}$,
+a track sweeping \CpRecSweepChan{} channels across the block, so the test
+belongs at that frequency \emph{and} that drift. There the second epoch
+measures $\CpRecFluxTwo\pm\CpRecErrTwo$\,mJy, $\CpRecSigTwo\sigma$, against
+$\CpRecFluxOne\pm\CpRecErrOne$\,mJy in the first. Read as two measurements of
+one constant amplitude, the pair is inconsistent at $\CpRecExclPair\sigma$;
+with the first epoch's flux taken as exact, which flatters the test because
+that flux is the largest value in the window and so biased high, the second
+epoch alone excludes it at $\CpRecExclCond\sigma$. Maximised afresh over the
+second epoch's own drift grid, the same channel returns $T_\star=\CpRecT$
+against \CpTwoTstar, worth $\CpRecExclDmax\sigma$ with an arbitrary recovered
+rate, and that weaker comparison is the form in which such tests are usually
+quoted. Two epochs cannot separate a noise excursion from an intermittent
+emitter, and we do not claim they do.
+
+Nothing else in the block is elevated. At the feature channel
+$T_\star=\CpRecT$ stands $\CpRecNbrSig\sigma$ above the ten neighbouring
+channels (mean \CpRecNbrMean, standard deviation \CpRecNbrSd), the noise-only
+expectation for a maximum over drift trials. The window's largest excursion,
+\CpRecWinPeak, ranks \CpRecRank{} of \CpRecRankOf{} against the same \NCtrl{}
+controls the first epoch topped, add-one $p=\CpRecRankP$.
+
+One qualification travels with this result. The two
+blocks are a single night's pair, \CpRecDate, beginning \CpRecUTone{} and
+\CpRecUTtwo\,UT, a \CpRecGapMin-minute gap that puts the second measurement
+\CpRecStartSepH\,h after the first. That makes the test strong
+against the class the scramble null below cannot reach, because a correlator
+spur, a fixed-channel bandpass residual or a birdie is at its most
+reproducible two hours later in the same configuration and tuning, and none
+reproduced. It also constrains persistence across two hours alone, leaving the
+duty cycles of Appendix~\ref{app:population} untouched. AU~Mic's two epochs
+(\S\ref{sec:aumic}) are ten weeks apart, a different test.
+
+The second-stage local null replaces the $1/\RankFloor$ rank resolution with a
+measured probability, $p=\LNpCP$ from $\LNDrawsMax$ scramble draws on a
+control and \LNpCPstar{} on the star's own residual, with $p=\LNpCPgev$ from
+an extreme-value fit to this window's \NCtrl{} control maxima, all three above
+the Bonferroni scale; the window's \emph{ring} maximum has local-null $p$ of
+\LNpCPRing, only \LNCPRingRatio{} times the star's. The
+scramble shifts every integration independently in channel, destroying
+anything coherent across integrations and with it any frequency-stationary
+instrumental feature: a correlator spur, a fixed-channel bandpass residual, a
+birdie. A small local-null probability disfavours thermal noise alone and is
+not evidence against an instrumental origin.
+
+Evidence that framed the flag survives as supporting detail. The feature
+is at \FobsCpSeven\,GHz, not the window centre \CpTwoFreqGHz\,GHz quoted in
+earlier versions, and channel \EdgeChanMin{} of \CpNChan{} makes
+it the most edge-proximate crossing in the survey, \EdgeFracMin{} of the way
+into its own window, though edge proximity is common across the survey,
+\NPeakOuterThree{} of \NPeakRows{} recorded peak channels falling in the outer
+3 per cent of their own. $T_\star$ exceeds the ring maximum by \CpTwoMargin, the smallest margin
+\NCtrl{} controls can express, so the margin records a resolution floor alone.
+
+Frequency disposes of the catalogue entries. At zero drift the first-epoch
+statistic here is only $\CpRecZeroSig\sigma$, while a catalogued transition is
+stationary in the observed frame to well within a channel over two hours, so
+none can produce this feature. Re-querying the wider
+catalogues at the corrected \CpCatFreq\,GHz, filtered to species observed in
+space and pushed through this paper's frame chain
+(Appendix~\ref{app:conventions}), returns \NCpTube{} entries in the
+$\pm50$\,km\,s$^{-1}$ tube in both the stellar and the LSR frame, of which
+SO($8_{8}$--$7_{7}$) at \CpSoFreq\,GHz is no obscure one: it is absent from the
+\MaskNTransNew-transition mask of \S\ref{sec:linecost}, and had it been present
+the feature would have been masked at \CpSoVstar\,km\,s$^{-1}$ in the stellar
+frame. Width does not contradict that reading, the feature occupying one
+\CpTwoChanwkHz\,kHz channel against the
+${\sim}\CoAssumedDVkms$\,km\,s$^{-1}$ of a belt at \BeltRadiusAu\,au.
+The same query at each of
+the \NCrossQueried{} crossing frequencies, counted topocentrically, returns at
+least one catalogued transition within 60\,km\,s$^{-1}$ for \NCrossWithCat{}
+of them, median \CrossCatMedian, so bare catalogue proximity has no
+discriminating power at these frequencies and the earlier reliance on it was
+misplaced.
+
+The star's debris belt, resolved by \citet{Moor2020} at \BeltRadiusAu\,au
+(\BeltRadiusArcsec\,arcsec at \CpTwoDist\,pc), lies six beams from the
+flagged window's \CpBeamSeven-arcsec extraction, so the disc is not the
+feature; that star's Band~6 window bounds circumstellar CO($2{\to}1$) at
+$M_{\rm CO}<\CoMassLo$--$\CoMassHi\times10^{19}$\,kg in optically thin LTE. A split-half of
+the retained \CpNInt{} integrations gives $T_\star=\CpSplitLo$ and \CpSplitHi{}
+against \CpSplitExp{} expected for a persistent source, so both halves carry
+the feature and an event confined to either one is excluded; the
+\CpSplitSigma$\sigma$ difference between them is consistency, not exclusion. The per-integration continuum of
+$\CpContMjy\pm\CpContErrMjy$\,mJy would need
+$\epsilon\approx\CpBandpassEps$ to drive the multiplicative bandpass route of
+\S\ref{sec:statistic}. Polarisation hands, baseline splits, visibility-domain
+localisation and calibrator comparison need re-extraction beneath the frozen
+products, and we claim no test we have not run.
+
+The pinned criterion is met, and the flag is retired as a candidate on the
+matched-frequency, matched-drift null of the second epoch.
+
+A non-recurrence is only meaningful if the same machinery can recover a
+repeat when one exists. We therefore applied it to emission we already believe in.
+Blocks of one observing unit are not independent epochs, and the download
+budget of \S\ref{sec:sample} took one block per unit. The unit behind the Band~3 flag holds
+\BpUnitThreeAvail{} blocks and all \BpUnitThreeDone{} are now searched
+unmodified, an exhaustive control. The CO($1\rightarrow0$)
+feature is present in every one, at $T_\star=\BpRecThreeTList$, with
+\BpRecThreeHitsList{} channels above threshold and the control maximum below
+the star throughout (largest \BpThreeRingMax{} against a smallest
+$T_\star$ of \BpThreeTmin). Those executions share one
+scheduling block within \BpThreeSessionH\,h and are one epoch
+repeated. A second Band~6 CO($2\rightarrow1$) window,
+\FobsBpicSixB\,GHz in a different and also exhaustive unit
+(\BpUnitSixDone{} of \BpUnitSixAvail, \BpSixGapD\,d apart), crosses the
+threshold without becoming a stage-1 spatial outlier:
+$T_\star=\BpRecSixTList$ on an exact configuration match
+(\BpRecSixChanKHz\,kHz, \BpRecSixNChan{} channels), integrated line flux
+$\BpRecSixFluxOne\pm\BpRecSixErrOne$ against
+$\BpRecSixFluxTwo\pm\BpRecSixErrTwo$\,mJy\,MHz, differing by
+$\BpRecSixFluxSig\sigma$. It is Class~\BpRecSixClass, so the recurrence is
+demonstrated at the survey's finest drift discrimination. The stage-1 Band~6 window at
+\FobsBpicSix\,GHz is out of this test for a different reason: its unit holds a
+second block, \BpFlagSixSecondEB{} at \BpFlagSixSecondGB\,GB, which has not
+been searched; no second-epoch measurement of that window exists either way.
+
+The recurring window also locates the emission. In both blocks the annulus is
+brighter than the star (ring maxima \BpRecSixRingList{} against
+$T_\star=\BpRecSixTList$, \BpRecSixNCtrlGe{} of the \NCtrl{} controls above
+the star), and that annulus, \BpRecSixRin--\BpRecSixRout\,arcsec, sits on this
+disc's CO belt, peaking near \BpBeltAu\,au $=\BpBeltArcsec$\,arcsec at
+\BpDistPc\,pc \citep{Matra2017}. The window is therefore not a stage-1 outlier
+because the source fills the ring, and the frozen products place it off the
+star, though only coarsely: the window's \BeamBpicSixRec-arcsec synthesised
+beam exceeds $r_{\rm in}$, so the innermost controls are not resolved from it.
+
+Frequencies are compared after removing each block's own tuning, which ALMA
+sets per date, absorbing most of the barycentric difference;
+on that basis the Band~3 peaks agree to \BpRecThreeTuneChanMax{} channel and the
+Band~6 peaks to \BpRecSixTuneChanMax{} channels. In the barycentric frame, and
+now in the ordinary radial-velocity convention rather than the frequency-offset
+sign of Table~\ref{tab:bpicaudit}, the CO peaks of
+the \BpRecNBlocksBary{} blocks with a recorded epoch span
+\BpRecVsysList\,km\,s$^{-1}$, within \BpRecVsysSpread\,km\,s$^{-1}$ of the
+adopted systemic velocity across
+two transitions and \BpBaselineYr\,yr, \BpSpanFirst{} to \BpSpanLast. Widths
+place the same conclusion beyond a frequency coincidence: the channel counts
+above threshold correspond to \BpWidthThreeLo--\BpWidthThreeHi\,km\,s$^{-1}$ in
+Band~3 and \BpWidthSixRecLo--\BpWidthSixRecHi\,km\,s$^{-1}$ in Band~6, both an
+order of magnitude above the one channel a carrier occupies. The $\beta$~Pictoris test establishes
+that the machinery preserves a real repeat; what establishes that
+\emph{this} repeat would have been seen is the $T_\star=\CpRecExpT$
+expectation above.
+
+
+\begin{figure}
+\centering
+\includegraphics[width=0.56\columnwidth]{figures/cp72_control_distribution.pdf}
+\caption{The CP$-$72~2713 Band~7 crossing inside its own control ensemble, in
+both epochs. Histograms give the \NCtrl{} single-position control statistics of
+that window in epoch~1 (filled) and in the second block \CpRecStartSepH\,h later
+(outline); the two agree, which is the evidence that the datasets are
+comparable. Vertical lines mark $T_\star$ and the largest control in each. In
+epoch~2 the control annulus alone reaches \CpRecCtrlMax, beyond the
+\CpTwoTstar{} that raised the flag, while the star falls to \CpRecT.}
+\label{fig:cp72ctrl}
+\end{figure}
+
+
+\begin{table*}
+\centering
+\small
+\caption{Line-attribution audit of the three line-attributed windows
+(first three rows) and the Class~A $\beta$~Pictoris Band~6 window at
+230.528134\,GHz, which carries no stage-1 flag yet shows the same CO
+component, through the frame chain of \S\ref{sec:frames}. Topocentric
+offsets are observed
+minus catalogued rest frequency as $c\,\Delta\nu/\nu_{\rm rest}$ (CO $J{=}1{\to}0$
+\LabCOoneGHz\,GHz, CO $J{=}2{\to}1$ 230.538000\,GHz,
+\citealt{Pickett1998}; the frozen mask's own entries, rounded to
+\MaskRestRoundMHz\,MHz, are not used here), so a negative offset means
+the observed frequency lies below rest; the barycentric correction
+is the Earth-ephemeris term at the execution-block mid-time (block uids
+in the machine-readable release). The AU~Mic systemic velocity is
+catalogued (SIMBAD, \emph{Gaia}~DR2, \citealt{Fouque2018}). For
+$\beta$~Pictoris we adopt the gas-derived
+$v_{\rm sys}=\VsysBpic\pm\VsysBpicErr$\,km\,s$^{-1}$ of
+\citet{Matra2017} rather than the \emph{Gaia}~DR3 catalogue value of
+$+16.84$\,km\,s$^{-1}$ \citep{GaiaDR3}: the star is A6V with
+$v\sin i\simeq130$\,km\,s$^{-1}$, inside the hot-star template regime
+in which DR3 radial velocities carry a known systematic
+\citep{Blomme2023}.}
+\label{tab:bpicaudit}
+\begin{tabular}{@{}llrrrrrr@{}}
+\toprule
+Flag & UTC start & $f_{\rm obs}$ (GHz) &
+Transition & Topo.\ offset & Bary.\ corr. & $v_{\rm sys}$ &
+Stellar-frame \\
+ & & & & (MHz; km\,s$^{-1}$) & (km\,s$^{-1}$) & (km\,s$^{-1}$) &
+offset (km\,s$^{-1}$) \\
+\midrule
+$\beta$~Pic B3 & 2022-03-03 21:49 & \FobsBpicThree &
+CO($1{\to}0$) & \DnuBpicThree; $-27.46$ & $-7.90$ & \VsysBpic & \StelBpicThree \\
+$\beta$~Pic B6 & 2019-03-12 00:14 & \FobsBpicSix &
+CO($2{\to}1$) & \DnuBpicSix; $-28.44$ & $-8.15$ & \VsysBpic & \StelBpicSix \\
+AU~Mic B6 & 2014-08-18 04:01 & 230.825230 &
+CO($2{\to}1$) & $+287.23$; $+373.51$ & $-10.02$ & $-4.71$ & $+378.82$ \\
+$\beta$~Pic B6$^{\dagger}$ & 2013-10-06 06:23 & 230.528134 &
+CO($2{\to}1$) & \DnuBpicCoarse; \DvBpicCoarse & $+7.63$ & \VsysBpic & \StelBpicCoarse \\
+\bottomrule
+\end{tabular}
+\parbox{\textwidth}{\footnotesize $^{\dagger}$Class~A Band~6 window of a
+different execution block, without a stage-1 flag
+(Appendix~\ref{app:table}), shown because it independently shows the
+same CO component.}
+\end{table*}
+
+\subsubsection*{Line exclusion: definition, repair, and cost}
+\label{sec:linecost}
+
+The searches as executed used an automated line check matching crossings
+to catalogued rest frequencies within one spectral channel at zero
+drift. The $\beta$~Pictoris windows showed that inadequate: both fell
+outside its one-channel tolerance, by 10.6 and 21.9\,MHz, while lying,
+after the frame chain, within 3.6\,km\,s$^{-1}$ of the stellar systemic
+of a resolved, mapped disc, the regime a channel-width tolerance is
+blind to. Every crossing was therefore reclassified with a
+velocity-space mask, $\pm\MaskVWidth$\,km\,s$^{-1}$ in the stellar frame
+around each catalogued transition. Its kinematic justification, empirical conservatism and the
+counter-argument that a communicator might deliberately choose these
+natural reference frequencies are in Appendix~\ref{app:linemask}. The mask is applied \emph{retrospectively}, as a post-hoc classification criterion and never a detection threshold. The
+half-width was adopted after the $\beta$~Pictoris crossings had been seen. A sensitivity test
+reclassifying all \NHits{} crossings at $\pm20$, $\pm30$, $\pm50$ and
+$\pm100$\,km\,s$^{-1}$ masks \MaskBWTwenty, \MaskBWThirty,
+\MaskBWFifty{} and \MaskBWHundred{} per cent of gross bandwidth and
+admits no new unattributed flag; at every width the only unmasked
+unattributed flag is CP$-$72~2713. Masked regions are reported
+throughout as \emph{excluded search space}, not as
+searched-and-empty.
+
+Four defects in the mask as executed are all repaired here. Its rest
+frequencies were rounded to \MaskRestRoundMHz\,MHz, worth up to
+\MaskRoundWorstKms\,km\,s$^{-1}$. It carried no atomic carbon, though every
+Band~8 window here is a [C\,\textsc{i}] $^{3}P_{1}$--$^{3}P_{0}$ tuning, and
+no hydrogen recombination line, though H30$\alpha$ falls in the standard
+Band~6 tuning of much of the sample. It was also applied in the stellar frame
+alone, the wrong frame for the Galactic foreground behind one of the three
+line attributions. The repaired catalogue holds
+\MaskNTransNew{} transitions of \MaskNSpecNew{} species at full JPL/CDMS
+precision \citep{Pickett1998,CDMS2005}, including [C\,\textsc{i}] at
+\MaskCIGHz\,GHz and H30$\alpha$ at \MaskHthirtyGHz\,GHz, against
+\MaskNTransOld{} of \MaskNSpecOld{} before, and it is applied in the
+LSR frame as well as the stellar frame. The species count also
+reconciles the text with the products, which always used
+\MaskNSpecOld{} species: earlier versions of this paper said eight,
+omitting H$_2$CO.
+
+Re-running the survey was not affordable, so the repaired mask is re-applied to
+the frozen crossing list as a post-hoc filter, using each crossing channel's
+own frequency as the pipeline recorded it. \textbf{No disposition changes.} The two
+$\beta$~Pictoris crossings remain inside the stellar-frame tube, at
+\StelBpicThree{} and \StelBpicSix\,km\,s$^{-1}$ from CO($1{\to}0$) and
+CO($2{\to}1$). HD~48370's crossing remains inside it at
+$-17.8$\,km\,s$^{-1}$ and is now caught by the LSR-frame tube as well,
+at $-23.9$\,km\,s$^{-1}$, which is the frame its foreground
+attribution always implied. CP$-$72~2713's crossing lies $\DvCpSeven$\,km\,s$^{-1}$ from the nearest
+masked transition in the topocentric frame and $-1300$\,km\,s$^{-1}$ in
+the LSR frame, so no tube of this mask excludes it; a wider
+catalogue does place entries inside the tube, which
+\S\ref{sec:technosearch} treats on the physics. Across all \NCrossFreq{}
+crossing windows the repaired catalogue moves the nearest transition in
+exactly \MaskNewCoinc{} case, \CIcrossStar's Band~8 crossing at
+\CIcrossGHz\,GHz, whose nearest entry changes from CO($4{\to}3$)
+\CIcrossOldKms\,km\,s$^{-1}$ away to [C\,\textsc{i}] at
+\CIcrossKms\,km\,s$^{-1}$. That is still outside the tube, and the frame corrections are at most a
+few tens of km\,s$^{-1}$, so no frame masks it; it was never a
+flag, its own control ensemble exceeding it. The two new transitions cost a further
+\MaskExtraGHz\,GHz of unique searched frequency,
+\MaskExtraPct{} per cent.
+
+The masking cost uses one definition: every JPL catalogued transition of
+the \MaskNSpecOld{} frozen species (276), displaced by each system's radial velocity,
+$\pm50$\,km\,s$^{-1}$ stellar-frame half-width, intersected with each
+window and merged. It costs \MaskUnionPct{} per cent of the unique-frequency
+union (Table~\ref{tab:searchspace}, Fig.~\ref{fig:waterfall}) and
+\MaskGrossPct{} per cent of the window-summed gross bandwidth, the per-window
+usable fraction having median 0.960 (10th percentile
+0.790). CN and CO dominate the loss, and the per-species, per-band breakdown
+ships in the released veto-mask export. Total exposure is
+$\ExposureSGHz$\,s\,GHz, or \ExpoTotalSHG{} star-hour-GHz, with
+\ExpoTopPct{} per cent of it in the five best-populated 2-GHz bins,
+which any frequency-prior calculation must weight
+(Appendix~\ref{app:table}). The mask governs dispositions and leaves the noise-derived thresholds alone,
+so the quoted EIRP$_{5\sigma}$ values are unchanged; no signal was found
+outside the excluded velocity regions in any window.
+
+Masking is a design selection effect: a signal coincident with a
+molecular line is not thereby ``false'' but \emph{excluded from the
+technosignature search domain}, the astrophysical prior there being
+overwhelming and this pipeline unable to separate the two. We place no
+constraint on transmitters in the excluded regions, \MaskUnionPct{} per
+cent of the unique-frequency union. Masked channels are retained for a line-coincident search with independent discrimination. Nor is the exposure confined to
+the flagged windows: 131 of \NWindows{} windows (30 per cent) contain an
+in-band catalogued transition of the masked species, as do all four
+flagged windows, yet in none does a crossing fall within one native channel of a rest
+frequency, the regime the velocity-space criterion covers.
+
+\subsection{Changing the detection statistic, and the AU~Mic crossing}
+\label{sec:aumic}
+
+The estimator is justified on its own terms in \S\ref{sec:statistic},
+from the exchangeability the rank test needs and independently of any
+dataset, and the chronology of the change was as follows. An earlier region-max statistic
+maximised over an $n_{\rm src}=\RingNSrc$-position region centred on the
+star against \NCtrl{} single-position controls, and under it a crossing
+towards AU~Mic in Band~6 at 230.83\,GHz was carried as a candidate. The
+released repository dates both steps. That flag is first committed on
+\StatFlagDate{} (\texttt{\StatFlagHash}), in the manuscript of the day and in
+its machine-readable aggregate; the asymmetry is identified and the symmetric
+form of Eq.~\ref{eq:tstar} adopted as operative \StatGapDays{} days later, on
+\StatSymDate{} (\texttt{\StatSymHash}). The redesign postdates the flag, and we
+do not claim otherwise. The argument therefore rests on the algebra, which owes
+nothing to these data: under exchangeability an $n_{\rm src}$-position maximum
+at the star against single-position controls ranks first with probability
+$n_{\rm src}/(n_{\rm src}+\NCtrl)=\AsymExpectPct$ per cent, and the symmetric
+form removes that inflation.
+
+Table~\ref{tab:bothstats} audits every window the original statistic flagged, so the sequence can be checked. The symmetric criterion flags a strict \emph{subset},
+seven before and four after. Both $\beta$~Pic windows and HD~48370 keep
+their flags under either statistic; AU~Mic, ALMA~J1537$-$3319 and
+HD~14055 drop out, in each case because the stellar position never
+exceeded its own control ensemble, the one configuration a localised
+transmitter cannot produce. Under a
+decision rule fixed without reference to these data, the $1/\RankFloor$
+rank test, AU~Mic fails on the same evidence: 10 of its \NCtrl{}
+controls reach or exceed the stellar statistic. Because the statistic
+was settled on these data, the false-alarm calibration here is
+descriptive of them.
+
+%% Generated by make_referee2_artefacts.py -- do not edit by hand.
+%% Every survey number below is recomputed from the frozen export
+%% through the prologue of survey_stats.py.
+
+\begin{table}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\caption{Every window flagged by the original region-max statistic,
+under both statistics, so the revision can be audited across all of
+them, not just the AU~Mic window. $S_{\rm reg}$: region maximum of Eq.~\ref{eq:tstar} over $n_{\rm
+src}=135$ positions; $T_\star$: the symmetric single-position statistic;
+`ctrl max', `ring max': the largest control statistic under each. The $\nu$ column is each window's \emph{centre}; the crossing frequency
+differs by up to 0.85\,GHz, and Table~\ref{tab:flagged} carries
+$\nu_{\rm cross}$. For CP$-$72~2713 the region maximum already lay on
+the star, so the two coincide.}
+\label{tab:bothstats}
+\begin{tabular}{@{}llr rr rr l@{}}
+\toprule
+& & & \multicolumn{2}{c}{region-max statistic} & \multicolumn{2}{c}{symmetric statistic} & \\
+\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Star & Band & $\nu$ (GHz) & $S_{\rm reg}$ & ctrl max & $T_\star$ & ring max & Symmetric outcome \\
+\midrule
+HD~48370 & 6 & 230.7305 & 27.95 & 26.83 & 27.10 & 26.83 & flagged \\
+$\beta$~Pic & 3 & 115.2605 & 20.31 & 7.27 & 14.65 & 7.27 & flagged \\
+$\beta$~Pic & 6 & 230.5164 & 12.78 & 9.12 & 11.68 & 9.12 & flagged \\
+AU~Mic & 6 & 230.5384 & 5.97 & 5.85 & 5.22 & 5.85 & not flagged \\
+ALMA~J1537$-$3319 & 6 & 217.0183 & 5.83 & 5.63 & 5.09 & 5.63 & not flagged \\
+CP$-$72~2713 & 7 & 345.1152 & 5.81 & 5.68 & 5.81 & 5.68 & flagged \\
+HD~14055 & 7 & 345.1377 & 5.80 & 5.74 & 5.22 & 5.74 & not flagged \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The within-window add-one rank is $p=0.021$, a different quantity from
+the survey-wide rate at which any window's ring maximum reaches 5.97
+($p=\AuP$, Appendix~\ref{app:aumic}), and far from the $1/\RankFloor$
+floor either way. The crossing also fails two pre-named tests, localisation and
+recurrence. Under the three treatments that decide it, the frozen
+region-max products, a fully symmetric reprocessing of the same
+first-epoch block and the second-epoch block of the same programme, the
+star statistic is 5.97, 4.93 and 4.77 against control maxima of 5.85,
+7.70 and 6.78, with add-one star ranks $p=0.81$ and $0.97$ in the latter
+two.
+
+Appendix~\ref{app:aumic} gives both in full: neither the reprocessed first epoch nor the
+further public Band~6 block at 230.83\,GHz shows a
+localised excess, the second epoch a clean non-recurrence. That rejects
+a continuous or repeating source at this frequency and these epochs,
+though not intermittent transmission. Each star was \emph{searched}
+independently in one to three blocks, so the non-detection concerns
+the epochs searched and not permanent activity; \NStarMoreEB{} stars hold
+further public blocks this survey did not take (\S\ref{sec:sample}), and
+\S\ref{sec:discussion} turns that structure into an epoch-activity constraint.
+\subsection{Ancillary results}
+\label{sec:ancillaryresults}
+
+Two ancillary results are reported in full below; the third ships with
+the data.
+
+\emph{Integration-time audit} (machine-readable release). Two of the 58
+star--execution-block groups over-count their on-source time against the
+archive's own exposure accounting, AT~Mic by a factor 1.43 and
+CD$-$38~10980 by 7 per cent, the rest being conservative. No EIRP
+threshold depends on integration time, so nothing moves and the
+exposure-weighted coverage is at worst optimistic by under 1 per cent
+(Appendix~\ref{app:falsealarm}).
+
+\emph{Continuum search} (Appendix~\ref{app:contsearch}). An exploratory by-product over the 57 target/bands processed far enough
+for a usable measurement: seventeen $\geq5\sigma$ detections and forty
+non-detections reaching 0.036--3.6\,mJy (median 0.52\,mJy). Every
+detection is astrophysically unsurprising, the auroral emitter
+LSR~J1835$+$3259 meriting deeper follow-up. No technosignature
+disposition rests on it.
+
+\emph{Serendipitous molecular-line catalogue} (machine-readable release;
+it has no appendix here). The line-exclusion step identifies every
+$\geq5\sigma$ outlier channel as a by-product; across the subset scanned,
+twelve outlier groups are single- or few-channel features with no
+\emph{masked} transition within 300\,MHz and six are plausibly real, all
+reported openly. That proximity is measured against the
+\MaskNTransNew-transition mask of \S\ref{sec:linecost}, which is what the line-exclusion step compares to, and never against the wider
+catalogues. \S\ref{sec:technosearch} shows those lie within 60\,km\,s$^{-1}$ of
+\NCrossWithCat{} of the \NCrossQueried{} crossing frequencies.
+
+
+
+
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{What signals could ALMA archival data actually detect?}
+\label{sec:detectable}
+
+Each measured morphology is illustrated with a real window and the
+completeness entries of Table~\ref{tab:classcomp}; Fig.~\ref{fig:sens2d} maps
+every window. Denominators count the \NSystems{} systems whose deepest
+threshold in the class lies at or below the case power.
+
+\emph{(i) A continuous, frequency-stationary carrier} in a coarse
+channel is the best case. Toward the UV~Ceti pair
+(2.7\,pc, deepest window EIRP$_{5\sigma}=1.6\times10^{13}$\,W) such a
+carrier confined to its channel is recovered at near-ideal
+$\sqrt{N}$ gain (\S\ref{sec:dwell}), so a carrier matching the
+\emph{total} EIRP of an Arecibo-like planetary radar
+(\S\ref{sec:benchmarks}) is detectable toward the nearest systems at
+15.625-MHz resolution. \CaseDetCoarseNow{} system of \NSystems{}
+qualifies, \CaseDetCoarseTwoNow{} at twice the power.
+
+\emph{(ii) A continuously drifting carrier} in a fine 488-kHz channel
+toward $\tau$~Ceti (3.65\,pc, threshold $3.8\times10^{13}$\,W) is
+recovered \RecThresh{} per cent of the time at threshold for
+$f_{\rm drift}\geq0.5$ and $75$--$83$ per cent at $1.6$--$2\times$
+threshold (Appendix~\ref{app:inject}). A drifting transmitter above ${\sim}8\times10^{13}$\,W is recovered in
+\RecTwice{} per cent of trials with its drift inside the searched ceiling, and
+\CaseDetFineNow{} systems reach that depth in Class~A.
+
+\emph{(iii) An intermittent carrier, on for a quarter of the track},
+toward HD~10647 (17.4\,pc, $1.5\times10^{14}$\,W) is recovered
+\DwellFineQ{} per cent of the time in fine channels, \DwellCoarseQ{}
+per cent in coarse ones, so a duty-$1/4$ transmitter above
+${\sim}2\times10^{14}$\,W is detected toward \CaseDetDwellNow{} such
+mid-distance systems. Recovery falls rapidly at smaller dwell fractions
+(Table~\ref{tab:dwell}), and below $f_{\rm dwell}\sim0.1$ only the
+nearest windows carry information.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.66\columnwidth]{figures/sensitivity_2d.pdf}
+\caption{Two-dimensional sensitivity: nominal EIRP trigger threshold
+(boxed rule, \S\ref{sec:method}) against window centre frequency for all
+\NWindows{} searched windows, symbol by channelisation class, the axis
+along which completeness differs
+(Table~\ref{tab:classcomp}). Grey lines mark the Bands 3, 6 and 7
+concentrations; dotted, Arecibo-class power.}
+\label{fig:sens2d}
+\end{figure}
+
+\subsection{What does the null result mean?}
+\label{sec:null}
+
+No credible technosignature has been found (\S\ref{sec:technosearch}).
+The EIRP$_{5\sigma}$ values are nominal trigger powers
+(\S\ref{sec:method}), and completeness-calibrated exclusion holds only in
+Class~A, where the measured recovery curve applies.
+
+One exclusion deserves the converse emphasis. The line mask removes
+$\pm\MaskVWidth$\,km\,s$^{-1}$ stellar-frame tubes around the
+catalogued transitions, whose rest frequencies are the
+`magic' channels \citet{CocconiMorrison1959} argued a communicator might
+choose. This survey is blind by construction to a transmitter parked
+there in the stellar frame, a false-positive control purchased with
+\MaskGrossPct{} per cent of gross bandwidth and one physically motivated
+class of signal. Of the \NExoPlanets{} planets known around the
+\NExoHosts{} hosts, only TRAPPIST-1\,b reaches the
+drift ceiling in its edge-on worst case, on star--planet relative
+accelerations $GM_\star/r^{2}$ from NASA Exoplanet Archive parameters
+maximised over orbital phase and inclination.
+Figure~\ref{fig:accel} shows the ceiling as a selection function of period and
+host mass, the host-mass dependence being weak ($a\propto M_\star^{1/3}$ at
+fixed period). Coverage eligibility
+and search completeness differ, and an EB-level selection does lie
+behind the \NEB{} searched blocks: \S\ref{sec:sample} gives the datalink audit
+that counts \NProgenitorEB{} public execution blocks in scope against the
+\NEB{} searched. Those unsearched blocks are the survey's largest single
+untaken resource, and \S\ref{sec:futurework} ranks them.
+
+The survey sits against \citet{Wright2018}'s haystack axis by axis. On
+frequency (10\,MHz--115\,GHz) only Band~3 falls inside,
+\UnionBandThree{} of 115\,GHz, \UnionBandThreeFrac{} of the axis, where Hz-resolution surveys go finer;
+the remaining \UnionBandsFourEight\,GHz (Bands~4--8,
+\UnionHiLoGHz--\UnionHiHiGHz\,GHz) lies wholly outside and is new territory. On transmitted bandwidth (0--20\,MHz) a native-channel search probes a
+fraction set by channel width (mean 0.63). On sensitivity the
+median threshold of Table~\ref{tab:searchspace} detects a
+$10^{13}$\,W transmitter only within ${\sim}0.9$\,pc. Against the sole prior
+ALMA-archival search \citep[][28 bycatch targets at $\geq$1.01\,kpc,
+deepest EIRP$_{\rm min}$ $6.91\times10^{17}$\,W]{Mason2024}, the
+\NSystems{} systems here, \NSysInTwentyNow{} inside 20\,pc, reach median
+per-target thresholds ${\sim}\MasonRatio\times$ deeper. These fractions
+are not combined into one coverage: the axes are strongly coupled,
+distance and sensitivity above all, so a product of marginals would
+misstate the overlap by orders of magnitude.
+
+What the zero detection bounds is conditioned on each target's searched
+frequencies, the epochs searched and the searched morphology class.
+Turning it into a fraction of systems requires a per-system detection
+probability, which is not a demographic occurrence rate. We call it the
+\emph{conditional searched-domain transmitter fraction} throughout, and its
+framework, demonstration and sensitivity analysis sit in
+Appendix~\ref{app:population} as an \emph{illustrative calculation only},
+among no headline quantity. The result of this paper is the search
+sensitivity, the exposure and the null.
+
+In plain terms: as a by-product of other science, ALMA has stared at
+\NStars{} of the nearest stars across parts of the millimetre and
+submillimetre band that no technosignature search had examined. We
+looked for a narrow, artificial-looking spectral line at each star, and
+found none the surrounding sky could not also produce. The powers we
+could have seen are enormous by human standards, and we could look only
+in the few gigahertz and the few hours each star happened to be
+observed. A non-detection on those terms says little about how common
+transmitters are.
+
+Because selection is on archival coverage alone, useful subsamples
+fall out without compromising the archive-complete framing, subject to
+the unresolved-pair caveat of \S\ref{sec:sample}. \NExoHosts{} of the
+\NStars{} processed stars (\NExoPlanets{} known planets) are confirmed
+exoplanet hosts, among them Proxima~Centauri, $\tau$~Ceti,
+$\epsilon$~Eridani, $\beta$~Pictoris and the seven-planet TRAPPIST-1
+system; HN~Lib and LHS~1140, each with a habitable-zone planet, now
+carry an ALMA technosignature non-detection. Four searched stars are
+white dwarfs \citep{GentileFusillo2021}: Sirius~B, Van~Maanen's Star,
+Wolf~219 and CD$-$38~10980, all continuum non-detections and among the few
+mm/submm SETI constraints for white dwarfs \citep{PollutedWD2026}.
+
+\subsection{A next-generation ALMA technosignature search}
+\label{sec:futurework}
+\label{sec:instrument}
+
+ALMA's advantages here are its mm-wave sensitivity, an essentially
+unsearched tuning range, the interferometric spatial discrimination that
+supplies the control statistic of \S\ref{sec:statistic}, and a public
+archive re-processable without new allocations. Six changes would enlarge what
+this experiment can say, ranked by the signal space each buys.
+
+\emph{Search the blocks already held.} \NUnsearchedEB{} of the
+\NProgenitorEB{} public execution blocks in scope were never downloaded
+(\S\ref{sec:sample}), and one has since settled this survey's only
+unattributed flag (\S\ref{sec:technosearch}). Searching the rest costs no
+telescope time and would make a multi-epoch survey of \NStarMoreEB{} stars.
+The worked case sets the expectation, its two blocks being repeat executions
+of one scheduling block on one night, so such a pair often supplies a baseline
+of hours; the distribution of separations is one archive query.
+
+\emph{Use the visibilities.} The largest unused advantage is the
+interferometric phase itself: whether a spectral feature carries the
+signature of a celestial point source at a known position. For each
+surviving candidate one would compare competing likelihoods,
+$H_{\star}$, a source at the propagated stellar position,
+$V_{ij}=A(t,\nu)\,e^{-2\pi i(u_{ij}l_\star+v_{ij}m_\star)}$; $H_{\rm
+sky}$, a source elsewhere; $H_{\rm common}$, correlated or common-mode
+interference; and $H_{\rm noise}$, thermal and calibration residual, and
+evaluate $\Lambda=\mathcal L(V|H_\star)/\mathcal L(V|H_{\rm
+noise}{+}H_{\rm common})$. That is strictly more powerful than ranking a peak
+against a control ensemble, and would demote the ensemble to a calibration
+layer.
+
+\emph{Drift discrimination on coarse windows.} Within the searched
+ceiling every in-grid drift on a 15.625-MHz window is sub-channel over a
+track, so \NCoarse{} of \NWindows{} windows measure amplitude but cannot
+distinguish a drifting carrier from a stationary one
+(\S\ref{sec:dwell}). Finer channelisation, or a drift model spanning several blocks, would recover
+that axis.
+
+\emph{Retain more control spectra.} The two-stage scheme of
+\S\ref{sec:technosearch}, \NCtrl{} controls routinely and a local null
+for any window that passes, fails wherever that null cannot be
+validated, because full dynamic spectra survive for only \LNNRetained{}
+control positions. Retaining all of them, at modest storage cost, would
+make the second stage usable in structured fields too.
+
+\emph{Extend the injection campaign and the polarisation axis.} The
+completeness curve should be measured per band, channel width,
+integration time, antenna count and primary-beam position, and pushed
+past $10\sigma$ until it asymptotes. The design is a stratified grid
+over those axes, injections at randomised drift rates and channel phases,
+morphologies extended to sinusoidal acceleration tracks from
+representative sample orbits, trial-level logging from the first run,
+and an independent re-implementation cross-check. The
+polarisation axis buys discrimination against weakly polarised
+astrophysical backgrounds at no sensitivity cost.
+
+\emph{A boundary on drift linearity.} The search assumes linear drift over a track. Curvature matters when $\tfrac{1}{2}\ddot\nu T^{2}$
+exceeds half a native channel, reached only by the shortest-period
+orbits: $P\lesssim1.6$\,d for a typical Class~A window (230\,GHz,
+488\,kHz, $T\approx2000$\,s), about an hour for Class~B.
+TRAPPIST-1\,b, at $1.51$\,d, sits just inside the boundary and is also
+the case exceeding the drift ceiling; elsewhere the constant-drift model
+is adequate, and the chirp-search extension
+(Appendix~\ref{app:extended}) covers the remainder.
+
+\section{Conclusions}
+\label{sec:conclusions}
+
+The public ALMA archive already holds a technosignature search of
+\NStars{} stars within 40\,pc over \UnionGHz\,GHz of unique sky
+frequency between \UnionLo{} and \UnionHi\,GHz, raising a $5\sigma$
+trigger at powers of roughly $10^{13}$ to $10^{17}$\,W EIRP. No signal
+satisfying the survey's statistical, spatial, recurrence and
+astrophysical-vetting criteria was found. This survey searched, within 40\,pc, every
+star with public usable coverage, \NStarBands{} target/bands, \NStars{}
+stars in \NSystems{} independent systems, ALMA-archive-complete and
+audited for position and identity (\S\ref{sec:exclusions}), but covering
+\PctSampleOfCensus{} per cent of the catalogued stars in that volume and
+inheriting the archive's non-uniform targeting. The archive's channelisation
+splits the search. \NWinA{} Class~A windows cover drift-resolved spectral
+carriers and \NWinB{} Class~B windows only unresolved spectral excess, leaving
+no
+drift discrimination over \PctCoarse{} per cent of the survey
+(\S\ref{sec:statistic}). Four windows raised a stage-1 statistical
+screening flag. Three are consistent with, and very likely caused by, CO
+emission, two circumstellar components towards $\beta$~Pictoris across
+two transitions and three epochs and one previously reported foreground
+cloud towards HD~48370 \citep{Cataldi2023}. The fourth, towards CP$-$72~2713 at
+\FobsCpSeven\,GHz, never acquired an astrophysical attribution and was
+marginal throughout. A second-stage local null on its own dynamic spectrum
+gives $p=\LNpCP$, about \LNCPRatio{} times above the survey-wide Bonferroni
+scale, and a second public execution block at the same tuning records
+$\CpRecFluxTwo\pm\CpRecErrTwo$\,mJy at the feature's own frequency and drift
+where the first epoch has $\CpRecFluxOne\pm\CpRecErrOne$\,mJy. It fails the recurrence criterion pinned
+before the block was searched and is retired as a candidate, and the data cannot
+separate a statistical or instrumental excursion from a non-repeating or
+intermittent event (\S\ref{sec:technosearch}). None survives vetting, so we report
+\NCandidates{} credible technosignatures. Barnard's Star and
+Wolf~359 carry their first published mm/submm technosignature limits
+(\S\ref{sec:barnardswolf}), and forty ancillary continuum measurements (median $5\sigma$ limit 0.52\,mJy)
+are non-detections of unquantified power.
+
+These EIRP$_{5\sigma}$ values are nominal trigger thresholds (boxed rule,
+\S\ref{sec:method}), $\EirpMinA$--$\EirpMaxA$\,W over Class~A at
+\ChanLoA--\ChanHiA\,kHz native resolution and
+$\EirpMinB$--$\EirpMaxB$\,W over Class~B at
+\ChanLoB--\ChanHiB\,MHz, deep enough for an unresolved carrier matching
+the total power of an Arecibo-like planetary radar toward
+\CaseDetCoarseNow{} of the \NSystems{} systems. The conditional
+searched-domain transmitter fraction stays illustrative
+(Appendix~\ref{app:population}). The \emph{Scope of the constraints} box of
+\S\ref{sec:method} fixes what the non-detection binds, and outside it nothing
+is bounded. \S\ref{sec:futurework} ranks the extensions that would enlarge it.
+By-products ship with the data, a serendipitous molecular-line catalogue,
+exoplanet-host and white-dwarf subsample limits, and a closure-phase
+diagnostic demonstrated without discriminating power at these flux
+densities.
+
+\section*{Acknowledgements}
+This paper uses ALMA data from the public ALMA Science Archive. The
+\NEB{} execution blocks searched, with project codes and epochs, are
+listed in the machine-readable release and should be cited from it in
+the standard JAO.ALMA\#XXXX.X.NNNNN.S form. They span 2013 October~6 to
+2025 June~11 across 36 proposal codes. The AU~Mic crossing window of
+\S\ref{sec:aumic} comes from the 2014 August~18 block of project
+2012.1.00198.S, and one further public block of that project
+(uid://A002/X7d80c7/X15c6, 2014 June~5) also covers the 230.83\,GHz
+window and is the second epoch of its recurrence test.
+ALMA is a partnership of ESO
+(representing its member states), NSF (USA) and NINS (Japan), together with NRC
+(Canada), MOST and ASIAA (Taiwan), and KASI (Republic of Korea), in cooperation
+with the Republic of Chile. The Joint ALMA Observatory is operated by ESO,
+AUI/NRAO and NAOJ. This work has made use of data from the European Space
+Agency (ESA) mission {\it Gaia}, processed by the {\it Gaia} Data Processing and
+Analysis Consortium (DPAC). This research has made use of the SIMBAD
+database (CDS, Strasbourg, France).
+
+\section*{Competing interests}
+
+G.J.W. declares no competing interests. R.D. is an employee of VBRL
+Holdings Inc. (a private software company with no astronomy or
+SETI-related product line), which provided no funding for and took no
+role in this work. The authors declare no competing interests.
+% AUTHOR ACTION (referee R2-m2): confirm the two factual clauses above
+% -- VBRL's absence of stake and of funding -- and complete the VBRL
+% affiliation with city and country. Reword if either is inaccurate.
+% AUTHOR ACTION (referee R2-m3): supply the arXiv identifier for
+% White (2026) so referees can assess methodological continuity, and
+% flag the dependency to the handling editor.
+
+\section*{Author contributions (CRediT)}
+% TODO (AUTHOR INPUT, referee R1-8): adjust the role split to the actual
+% contributions; the skeleton below reflects the paper's own structure
+% (pipeline and analysis vs.\ programme leadership) and needs author
+% confirmation before submission.
+\textbf{Glenn J. White:} Conceptualisation, Methodology, Supervision,
+Writing -- review \& editing.
+
+\textbf{Robin Dey:} Software, Investigation, Formal analysis, Data
+curation, Visualisation, Writing -- original draft.
+
+\section*{Data Availability}
+% TODO (AUTHOR ACTION, at submission): create the git tag
+% `submitted-v3.32` on the SETI repository commit that corresponds to the
+% submitted-analysis snapshot (the pipeline state that produced every number
+% in this paper) before the manuscript is submitted -- the Data Availability
+% statement names that tag as the snapshot identifier, and the short
+% commit hash it resolves to should be pasted into the sentence naming
+% the tag.
+The reduced data products underlying this paper, with the full
+target-selection and analysis pipeline, are at
+\url{https://github.com/Tilanthi/SETI}. All numerical values here come
+from the \emph{submitted-analysis snapshot}, the repository commit tagged at
+submission, which freezes pipeline code and input data as run and reproduces
+every number, table and figure from the regeneration scripts shipped with it.
+
+The machine-readable catalogue,
+\texttt{per\_target\_results\_v3.48.csv}, carries \NCatRows{} rows, one per searched window, in \NCatCols{}
+columns. Each row gives star name and machine-readable
+\texttt{system\_id} (the independent stellar system that is the
+statistical unit, seven bound pairs sharing one identifier), distance,
+ALMA band and execution block, searched frequency range, native channel
+width, on-source time and integration count, per-channel rms, the
+nominal EIRP$_{5\sigma}$ threshold with both Hanning-corrected values
+(\S\ref{sec:method}), the drift ceiling as a rate and as an
+acceleration, the trial drift count, $\eta_{\rm drift}$, $\eta_{\rm
+smear}$, resolution and search class, stellar and control peak
+statistics with the count of controls at or above the star and the
+add-one rank probability, the crossing frequency, the nearest catalogued
+transition with its offset in MHz and km\,s$^{-1}$, the full control
+geometry (ring centre, $\theta_{\rm PB}$, $r_{\rm in}$, $r_{\rm out}$,
+control count, seed) and the disposition, verbatim from
+Table~\ref{tab:flagged} and so carrying the CP$-$72~2713 retirement. The
+re-searched $\beta$~Pictoris blocks of \S\ref{sec:technosearch} lie outside
+this frozen release; their per-block $T_\star$, control maximum, control count,
+channel width and epoch ship in the accompanying epoch-extension record.
+Four defects disclosed in earlier versions are repaired: HD~139084B is no
+longer counted as two systems, so \NSystems{} is the independent-system total;
+the empty \texttt{n\_ant} column is removed, per-window antenna counts being
+recoverable only from the raw measurement sets; the disposition strings match
+Table~\ref{tab:flagged}; and the directory-name sanitisation that stripped the
+sign from four designations is undone, so \texttt{star\_name} now reads
+LSR~J1835$+$3259, PM~J03433$+$1958, WD~0407$-$179 and BD$+$05~1668.
+
+The complete release will also be deposited on Zenodo, with a DOI minted
+on final acceptance and inserted here. It comprises (i) per-window
+search products for all \NWindows{} windows: spectral extracts,
+per-drift-trial peak statistics, the machine-readable line-exclusion
+mask in both its frozen and repaired forms (\S\ref{sec:linecost}),
+archive UID, epoch-propagated target coordinates and field centre,
+primary-beam gain, channel frequencies and widths, the drift grid, and
+the target statistic with all \NCtrl{} control statistics from which the
+rank and $p$-value are recomputable; (ii) control-ensemble calibration
+products at all \NCtrl{} positions; (iii) closure-phase and
+population-anomaly outputs; (iv) the full injection-recovery campaign
+products, all \NTrials{} trials of Appendix~\ref{app:inject} and all
+\NDwellTrials{} dwell trials, together with the second-stage local-null
+code, its per-window outputs and the retained null-draw arrays
+(\S\ref{sec:technosearch}); (v) the frozen pipeline code and input
+data snapshot with its change-log; (vi) the execution-block metadata and
+integration-time audit tables; (vii) the serendipitous molecular-line catalogue,
+\texttt{line\_catalogue.json}, written by the pipeline's own continuum
+line-exclusion step; (viii) the
+execution-block availability census of \S\ref{sec:sample}, from the ALMA
+datalink service, with its per-star ledger and the annulus-geometry and
+smearing-census table fragments generated for this paper; and (ix) the
+retained per-integration dynamic spectra behind the time-domain and
+continuum checks of \S\ref{sec:technosearch}, which are held on the
+processing host rather than in the manuscript source bundle; and (x) the
+second-epoch search products behind the CP$-$72~2713 retirement
+(\S\ref{sec:technosearch}), the four
+\texttt{A002\_Xff0235\_X502d\_spw\{0..3\}} result, search and source-spectrum
+files, together with \texttt{cp72\_recurrence.json} and the script that
+derives it. Data products carry the
+Creative Commons Attribution 4.0 International licence (CC~BY~4.0), and
+the pipeline code the MIT licence; neither author's employer asserts any
+intellectual-property claim over the released code. Raw ALMA visibility
+data are public from the ALMA Science Archive at
+\url{https://almascience.org}.
+
+\section*{Software}
+The pipeline depends on CASA~6.7.6 (casatools/casatasks 6.7.6-14;
+calibration, imaging and the local reprocessing of
+\S\S\ref{sec:technosearch}--\ref{sec:aumic}), Python~3 with astropy,
+numpy and scipy (spectral extraction and statistics), and the ALMA
+Science Archive and SIMBAD TAP interfaces; all are free and
+open-source, with exact versions recorded in the frozen release.
+
+
+\appendix
+\label{page:appstart}
+\section{Frequency conventions, linewidth reading, and smearing}
+\label{app:conventions}
+
+\emph{Reference frames.} The line mask's chain runs topocentric
+$\rightarrow$ barycentric (Earth ephemeris at the execution-block
+mid-time) $\rightarrow$ stellar rest frame (catalogued systemic radial
+velocity), with JPL/CDMS rest frequencies
+\citep{Pickett1998,CDMS2005}; in the LSR frame it stops at the standard
+solar motion, not the systemic velocity (\S\ref{sec:linecost}).
+The residual error is the catalogue radial-velocity uncertainty alone, a
+few km\,s$^{-1}$ within 40\,pc; second-order relativistic terms
+at the \MaskVWidth\,km\,s$^{-1}$ scale are $\lesssim5$\,kHz at 350\,GHz,
+below the finest native channel searched (15.3\,kHz). The
+$\beta$~Pictoris and AU~Mic attributions use the same chain, so their
+offsets are comparable to the exclusion tolerance.
+
+\emph{Channel widths, and the instrumental response.} These come from
+the measurement sets' own spectral window tables (CHAN\_WIDTH). Earlier
+versions read a missing ``EFFECTIVE\_BANDWIDTH'' column as evidence of
+no online spectral averaging; MS~v2 defines no such column, so the check
+is withdrawn, and with it the claim that the quoted channelisations are
+noise bandwidths.
+
+ALMA applies online Hanning smoothing by default, so the spectral
+response is ${\sim}2$ channels wide and neighbouring channels are correlated.
+For the $0.25/0.5/0.25$ kernel the coefficients are
+$\rho_1=\HanRhoOneFrac=\HanRhoOne$ and $\rho_2=\HanRhoTwo$, with
+$\sigma_{\rm smoothed}/\sigma_{\rm raw}=\HanSigRatio$: the correlation is not
+confined to adjacent channels, the lag-two term being a sixth. A sub-channel tone keeps \HanBest{} of its power in the peak channel at
+the channel centre and \HanWorst{} on a boundary, median \HanMed{} over
+uniform placement. Every EIRP$_{5\sigma}$ here is therefore optimistic
+by $\times\HanFacBest$ to $\times\HanFacWorst$, median
+$\times\HanFacMed$; the released catalogue carries the nominal threshold
+and both corrected values per window, and the sensitivity summary quotes
+the worst case. The injections deposit an unsmoothed delta-in-channel
+tone, so the recovery curves of \S\ref{sec:dwell} and
+Appendix~\ref{app:inject} carry the same bias and the end-to-end check
+(Eq.~\ref{eq:stacked}) cannot see it. The retained per-integration residuals of the second-stage local
+null (\S\ref{sec:results}) have a measured lag-one spectral autocorrelation of
+\LNLagOne, against the Hanning prediction \HanRhoOne, so that correlation is
+instrumental and the residual spectra are smoothed and un-averaged, which is
+the independent confirmation of the smoothing state. The archive's reported effective
+spectral resolution per window, against each measurement set's own
+channel separation, is exactly 2.00 in \NHanTwo{} of the \NHanKnown{}
+windows, in both correlator modes and including \NHanTwoCoarse{} of the
+\NCoarseHanKnown{} coarse time-division-mode (TDM) ones; the other \NHanOther{} report a
+smaller ratio, the signature of online channel averaging, where the
+peak-channel loss is smaller. The blanket factor is right for the great
+majority of both classes. We still do not rescale, so each threshold
+here is nominal and up to $\times\HanFacWorst$ optimistic.
+
+\emph{Linewidth convention.} The statistic is the single-channel
+flux density after drift correction, so the quoted EIRP$_{5\sigma}$
+applies to any transmitter narrower than the native channel, flat in the
+assumed linewidth, with two sub-channel qualifications. Flatness is exact only for a centred tone, a boundary-straddling one
+splitting its power between two channels at worst by a factor of two;
+and the channel-to-channel transition follows the correlator's passband
+shape, which the frozen products do not retain, so flatness is a
+channel-centred idealisation good to tens of per cent. Thresholds therefore carry a
+sub-channel-position systematic of that size, a randomly placed tone
+keeping a mean 0.75 of its power in the stronger channel, and EIRP
+values are quoted to two significant figures.
+
+\emph{Transmitters wider than one channel.} The baseline filter
+(\S\ref{sec:statistic}) is flat for features narrower than roughly half
+its effective width $W$ and falls to zero above $W$, so the survey's
+sensitivity is to channel-confined morphologies and $W$ is the linewidth
+ceiling: \MedWinFineLo--\MedWinFineHi{} channels over the fine class and
+\MedWinCoarseLo--\MedWinCoarseHi{} over the coarse one, that is
+${\approx}\MedWinCeilFineMHz$\,MHz at \ChanFineKHz\,kHz and
+${\approx}\MedWinCeilCoarseGHz$\,GHz at \ChanCoarseMHz\,MHz. Within
+that ceiling, a top-hat transmitter spanning
+$N_{\rm ch}$ native channels has per-channel flux the total divided by
+$N_{\rm ch}$ at unchanged noise, so to first order
+\begin{equation}
+\mathrm{EIRP}_{5\sigma}(N_{\rm ch}) \;\simeq\; N_{\rm ch}\times
+\mathrm{EIRP}_{5\sigma}(1), \qquad N_{\rm ch} \lesssim W/2,
+\end{equation}
+the rescaling the main text applies to signals broader than one channel.
+
+\emph{Worked example: from flux to EIRP.} Take UV~Ceti (G~272-61B)
+Band~3, the deepest of its \NUVCetiWin{} windows in that band
+(execution block \UVCetiEB, lower edge \UVCetiFlo\,GHz). Its per-channel
+rms is \UVCetiRms\,mJy, so
+$S_{\rm min} = 5\times\UVCetiRms = \UVCetiSmin$\,mJy in one 15.625-MHz native
+channel, or $1.21\times10^{-29}$\,W\,m$^{-2}$\,Hz$^{-1}$ at 2.67\,pc,
+and $\mathrm{EIRP}_{5\sigma} = 4\pi d^{2} S_{\rm min} \Delta\nu =
+1.6\times10^{13}$\,W.
+
+\emph{Intra-integration smearing.} The frequency excursion at the
+maximum searched drift rate across one integration,
+$\dot\nu_{\max} t_{\rm int}$, is at most 1.10 channels across the
+\NWindows{} windows (median 0.001, 90th percentile 0.06). A linear
+drift smeared by $\Delta$ channels within an integration keeps a
+fraction $\eta_{\rm smear} = \mathrm{sinc}(\pi\Delta/2)$ of the
+peak-channel amplitude, so the effective threshold is
+$\mathrm{EIRP}_{5\sigma}/\eta_{\rm smear}$. The \NSmearLo{} windows with
+$\eta_{\rm smear}<0.99$, generated from the released catalogue as star,
+band, ($\eta_{\rm smear}$, threshold multiplier): \SmearList. The
+remaining \NSmearOk{} agree with their nominal thresholds to better than
+1 per cent (compounding the worst smearing penalty with the worst
+Hanning factor gives $\times\CompoundWorst$ on the nominal threshold for
+those five windows; no released column carries the product). The $\mathrm{sinc}(\pi\Delta/2)$ form is the transform of a
+tone swept uniformly across $\Delta$ channels within one integration,
+evaluated at the peak channel, and is the conservative reading: a pure
+occupancy argument would retain $\min(1,1/\Delta)$, giving 1.0 rather
+than 0.64 at $\Delta=1$.
+
+\section{Injection-recovery sensitivity validation}
+\label{app:inject}
+
+To test whether a $5\sigma$ threshold behaves as idealised Gaussian
+noise predicts, we inject synthetic tones of known amplitude into real
+visibilities, through the extraction code's own mechanism and as far
+upstream of the statistic as retained products allow, and measure what
+the unmodified pipeline returns. Three results inherit its
+single-configuration limitation: the drifting-class recovery of
+Appendix~\ref{app:population}, the machinery and boundary-placement
+amplitude factors of \S\ref{sec:ancillary}, and the coarse-window dwell
+reading of \S\ref{sec:dwell}.
+
+Six configurations span three bands and both classes: three
+coarse Band~7 spws of AT~Mic, one coarse spw each in Bands~3 and~6 of
+AU~Mic, and AU~Mic's 488-kHz flagband window with its 49-trial drift
+grid. Each receives a complex tone at the star position, at amplitudes
+$4$--$10\times$ the statistic's own noise, drift fractions
+$f_{\rm drift}=0$, $0.25$, $0.5$, $0.75$, $1.0$ of the ceiling, on- and
+half-grid rates, and channel-centred and boundary placements:
+200 trials per configuration, \NTrials{} in all, under a frozen
+criterion ($T\geq5$, peak channel within 3 of the injection, peak drift
+within one grid step).
+
+The coarse-window variant recovered 0 of 500 injections at every
+amplitude from $4\sigma$ to $10\sigma$ under that criterion. The recovery
+criterion produced that artefact and the pipeline suppresses nothing, which
+makes it the one withdrawn result here: the drift-matching clause cannot be satisfied
+on coarse windows, where every in-grid drift is sub-channel over the
+track, so the reported peak drift is arbitrary. Scored on detection
+alone the same windows recover essentially everything, and an end-to-end
+injection through the released pipeline
+returns $T_\star$ of 20.5, 65.3 and 217.7 at 1, 3 and 10 times the
+per-integration noise, against an ideal coherent gain of
+$\sqrt{639}=25$. Class~B limits therefore bound carriers of any dwell
+fraction, with the completeness of \S\ref{sec:dwell}; what those windows
+lack is drift discrimination. The fine window fails the same criterion
+the same way, and that cell is unmeasured, since carriers with
+$f_{\rm drift}\leq0.25$ dwell ${\geq}40$ per cent of the track per
+channel and fail it, while those with $f_{\rm drift}\geq0.5$ survive as the
+searched class.
+
+The second result is the completeness curve. On the fine window,
+drifting carriers ($f_{\rm drift}\geq0.5$, pooled over grid phase and
+sub-channel placement) are recovered 17, \RecThresh, 58, 75 and
+\RecTwice{} per cent at $4$, $5$, $6$, $8$ and $10\sigma$, saturating by
+twice threshold power (Fig.~\ref{fig:completeness}). The machinery
+alone, with the tone injected after the baseline step, is
+amplitude-faithful to within $-9$/$+14$ per cent for channel-centred
+tones at every drift fraction. Boundary-straddling placement costs a
+factor $0.6$--$0.8$ in the statistic and recovers 0 per cent at
+$5\sigma$ against 83 per cent for centred ones (67 and 100 per cent at
+$10\sigma$), crossing 50 per cent near $1.4\times$ threshold amplitude.
+Survey completeness uses the placement-pooled curve, conservative for
+the boundary-straddling case: EIRP$_{50}=1.10\,\mathrm{EIRP}_{5\sigma}$
+and EIRP$_{90}>2.0\,\mathrm{EIRP}_{5\sigma}$, a bound only, both
+carrying an unbounded transfer systematic to every configuration but
+this one, bracketed as $0.5$--$2\times$ in
+Appendix~\ref{app:population}. Not spanned: other target environments,
+primary-beam offsets, integration durations and edge-phased drift
+grids; bounding that transfer error, propagated in
+Appendix~\ref{app:population}, needs the multi-configuration campaign
+of \S\ref{sec:futurework}.
+
+\begin{table}
+\centering
+\footnotesize
+\caption{Amplitude completeness at the trigger, by window class and
+carrier morphology, from the \NTrials{} injections of this appendix.
+``Detection'' is amplitude recovery at the nominal trigger; ``drift'' is
+whether a recovered drift rate is informative about the transmitter; $N$
+counts the searched windows of that class. The second experiment,
+Table~\ref{tab:dwell}, is \emph{not} a threshold completeness: it
+injects non-drifting carriers at $\geq4\sigma$ per integration into
+\NDwellWin{} real windows and measures temporal occupancy. The two must
+not be read across.}
+\label{tab:classcomp}
+\begin{tabular}{@{}llccc@{}}
+\toprule
+Class & Morphology & Detection & Drift & $N$ \\
+\midrule
+Class A (fine) & drifting & measured: $C_{5\sigma}=0.42$ &
+measured & \NWinA \\
+Class A (fine) & near-static & post-baseline only$^{a}$ &
+n/a$^{b}$ & \NWinA \\
+Class B (coarse) & any & end-to-end & none & \NWinB \\
+\bottomrule
+\end{tabular}
+
+
+\smallskip
+{\footnotesize $^{a}$The dwell campaign recovers 91--100 per cent at
+$f_{\rm dwell}\geq0.25$, injecting after the baseline step;
+through-pipeline recovery is unmeasured. $^{b}$Sub-channel drift over
+the track by definition.}
+\end{table}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.78\columnwidth]{figures/completeness.pdf}
+\caption{Measured injection recovery on real ALMA data, fine-channel
+configuration. Recovery
+$C(A, f_{\rm drift})$ rises with amplitude for drifting carriers; static
+and near-static ones fail the frozen criterion, and boundary-straddling
+tones can fail its peak-drift clause while still being detected. Coarse
+configurations are not plotted: under the same criterion they recover
+nothing, withdrawn in the text as an artefact of the criterion.}
+\label{fig:completeness}
+\end{figure}
+
+\section{Ancillary screens with no operative role here}
+\label{app:closure}
+
+\emph{Closure phase.} The closure phase
+$\arg(V_{ij})+\arg(V_{jk})-\arg(V_{ik})$ vanishes for an unresolved point
+source anywhere on sky and is immune to per-station calibration errors,
+so it tests point-source coherence alone and a coherent far-sidelobe
+interferer would pass. We score consistency with zero by a circular
+z-score of the mean drift-tracked closure phase, nulled on each
+observation's own integrations, and ran it on continuum detections in
+four local reprocessing fields, the resolved AT~Mic Band~7 binary among
+them as a control. At these flux densities it is useless: per-baseline
+S/N is 0.5--0.7 at the median, only 0.02 per cent of triangles have all
+three baselines above 5, and every field's closure phases, the binary
+included, are indistinguishable from noise.
+
+\emph{Chirped drift and periodicity.}
+\label{app:extended}
+Stacking at constant linear drift rate is blind by design to a drift
+rate that changes during the observation, and to pulsed or periodically
+modulated carriers. We implemented a chirped (quadratic-drift) extension
+on a coarser grid of 21 linear-drift $\times$ 5 chirp-rate trials, and a
+per-channel periodicity search, a per-position FFT along each channel's
+time axis; both vet the star against 8 retained control positions, a
+strict subset of that window's ensemble. On the 122 retained spectra
+this is a demonstration: flag rates of 10.7 and 13.1 per cent against a
+${\sim}11$ per cent chance rate show only that the extension runs
+correctly under the null, and no limit derives from it.
+
+\emph{Cross-target frequency occupancy.}
+\label{app:freqoccupancy}
+With no ON/OFF cadence against radio-frequency interference, this
+single-pointing archival survey substitutes the many unrelated stars
+sharing similar correlator setups: a channel-confined feature recurring
+at the same observed \emph{sky frequency} towards different targets is
+almost certainly interference or instrumental. Over every target/spw
+result the check pairs the best-fit-channel frequency and the formal
+$\geq5\sigma$ crossings, matching $\nu_1,\nu_2$ towards different
+targets when $|\nu_1-\nu_2| < \max(k\,\Delta\nu_1,\; k\,\Delta\nu_2)$
+with $k=3$ (${\sim}46$\,kHz). Across the \NWindows{} windows and 107
+tabulated crossings, no pair falls within the kernel, or within
+0.5\,MHz. The kernel is narrower than the $\beta$~Pictoris line offsets
+of 10.6 and 21.9\,MHz, so those windows were dispositioned by
+line-catalogue inspection.
+
+The null's power is the count of target pairs sharing frequency
+coverage: on the $\le$20\,pc subset, 366 of 946 star pairs overlap by at least
+0.01\,GHz and 109 involve one of the five stars carrying formal crossings, so
+every crossing frequency was tested against overlapping independent targets.
+The UV~Ceti and AT~Mic shared execution blocks are excluded as identities by
+construction. The interim product's
+per-window crossing lists are capped at 50 frequencies, so the true
+count is 171 crossings against 107 tabulated. The difference is one
+window, $\beta$~Pic Band~6 ultra-fine, whose 114 formal crossings enter
+as the 50 strongest; its untabulated 64 could not be tested, so the null
+is demonstrated for the tabulated set and unresolved for the rest. The
+public release ships uncapped crossing lists.
+
+\input{tab_selection}
+
+\section{Per-target results}
+\label{app:table}
+
+The per-window results ship as the comma-separated catalogue of the Data
+Availability statement. Its EIRP$_{5\sigma}$ column uses the definition of
+\S\ref{sec:method}, on the same threshold and primary-beam correction as the
+continuum column, so a row's two limits are comparable; its per-channel
+flux-density threshold uses the carrier lane's per-channel noise rather than
+the tabulated \texttt{rms\_mJy}, the two differing by $5\times G(r)$. Bands~6 and~7 supply \PctBandsSixSeven{} per cent of the
+windows.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.62\columnwidth]{figures/drift_acceleration.pdf}
+\caption{The drift-rate ceiling as a physical selection function.
+Maximum star--planet relative acceleration, edge-on and maximised over
+orbital phase, as the carrier drift rate it induces (Hz\,s$^{-1}$ per
+GHz of carrier frequency; equivalently
+$\dot\nu/\nu=\dot v/c$), against orbital period, for host-star
+masses 0.09--1.8\,$M_{\odot}$ (lines) and the known planets of the
+planet-hosting targets (points). Shaded band: the survey's drift-search
+ceiling, above which a transmitter lies outside the searched grid. Only
+TRAPPIST-1\,b reaches it (\S\ref{sec:discussion}).}
+\label{fig:accel}
+\end{figure}
+
+\input{tab_perband}
+
+% Generated by make_tables_v328.py -- do not edit by hand.
+
+\section{The velocity-space line mask: justification and retrospective
+application} \label{app:linemask}
+
+The one-channel line check failed the $\beta$~Pictoris windows
+(\S\ref{sec:technosearch}): a native channel spans a fraction of a
+km\,s$^{-1}$, while circumstellar kinematics shift real emission by
+many channels. The replacement mask takes its tolerance from the
+kinematic budget of circumstellar gas: Keplerian motion where these
+molecules survive ($\gtrsim$10\,au), $\lesssim$13\,km\,s$^{-1}$;
+cold-gas linewidths $\lesssim$1\,km\,s$^{-1}$; cold dense-gas tracers
+with no bulk-wind term for the dwarfs dominating the sample; and an
+uncorrected barycentric term bounded by
+$\pm$30\,km\,s$^{-1}$. The result is empirically conservative: the largest
+attributed circumstellar component ($\beta$~Pic, within
+\BpicMaxAbsStel\,km\,s$^{-1}$ of systemic) sits at
+\BpicMaskPct{} per cent of it, and \emph{zero}
+crossing frequencies lie 13--50\,km\,s$^{-1}$ from their nearest
+\emph{masked} transition (the wider catalogues are another matter:
+\S\ref{sec:technosearch}), so a $\pm13$\,km\,s$^{-1}$ Keplerian-only mask would have
+suppressed and released the same windows: the wider tolerance costs no
+yield and buys robustness against radial-velocity catalogue error.
+
+\emph{The repaired mask.} The four defects and the retrospective
+re-application that repairs them are in \S\ref{sec:linecost}; no
+disposition changes. The rounding defect is why the released
+CO($1{\to}0$) offset column,
+referred to the frozen mask's rounded \CatCOoneGHz\,GHz entry, reads
+\CatCOerrMHz\,MHz (\CatCOerrKms\,km\,s$^{-1}$) smaller than the
+laboratory-referred value of Table~\ref{tab:bpicaudit}. A cheaper, better-founded rule than enumerating species: the archive
+records the rest frequency each execution block was tuned to, so masking
+each window's own tuned line would catch the $\beta$~Pictoris, HD~48370
+and [C\,\textsc{i}] windows automatically, alongside an LSR-frame tube of
+a few $\times10$\,km\,s$^{-1}$.
+
+The crossing ledger, once: of the \NHits{} windows with an on-star
+crossing, \NSpatial{} also beat their control ring and three of those
+are accounted for by the mask. Two further crossing windows fall inside
+the mask without beating their ring (the unflagged $\beta$~Pic
+Class~\BpRecSixClass{} window at \StelBpicCoarse\,km\,s$^{-1}$; HD~285968 at $+8.7$\,km\,s$^{-1}$,
+already rejected by its ring, maximum 10.9 against a star peak of 6.5),
+and the remainder lie far outside any circumstellar tolerance (AU~Mic
+$+379$, LHS~1140 $+115$\,km\,s$^{-1}$). The other
+\NonExcRingGe{} are ordinary noise crossings: in each, the window's own
+control ring reaches or exceeds the stellar value (ring-maximum median
+\NonExcRingMed{} against a crossing median \NonExcHitMed), the expected
+Gaussian-tailed population of moderate $5$--$5.5\sigma$ crossings with
+comparably strong peaks among \NCtrl{} controls. But the transitions
+that make astrophysical false positives cheap are also natural reference
+frequencies for a deliberate communicator \citep{CocconiMorrison1959},
+so the released products keep a known-line-coincident list for a future
+search with independent discrimination: every on-source $5\sigma$
+crossing inside the masked intervals, with its offset from each nearby
+transition.
+
+\section{AU~Mic: the three tests in full}
+\label{app:aumic}
+
+\emph{Localisation.} Reprocessed from the raw science data model with
+the observatory pipeline's own calibration recipe (310 integrations
+against the release pipeline's 249, on a finer drift grid) and re-run
+through the symmetric statistic of \S\ref{sec:statistic}, the crossing
+window's star does not beat its control ensemble. The frozen products
+agree only asymmetrically: the source-region peak exceeds the
+\NCtrl-control maximum by 0.12, below that statistic's window-to-window
+scatter, and the crossing fails the single-position variant too.
+
+\emph{Recurrence.} The one further public Band~6 block covering
+230.83\,GHz, the same programme executed 2014 June~5, was searched
+identically: no channel within $\pm$10 of the first-epoch flagged
+channel exceeds 3.1, and nothing is localised to the star. Its band rms
+(1.48\,mJy per 488-kHz channel) matches the first epoch's 1.9\,mJy, so a
+comparable excess would have been recovered, and the frequency recurs at
+no other target. Intermittent or precisely-scheduled transmissions
+outside the sampled windows stay unconstrained.
+
+\emph{Statistical scale.} The on-source peak (5.97) sits at the
+\AuPct{}th percentile of the control-maxima distribution over all
+\NWindows{} windows (median \CtrlMed, 90th percentile \CtrlPninety):
+\AuNge{} windows (\AuFrac{} per cent) match or exceed it, add-one
+empirical $p=\AuP$ before any multiple-testing correction: a survey-wide
+window-level rate, distinct from the within-window rank of
+\S\ref{sec:aumic}. The crossing matches no catalogued molecular
+transition (Table~\ref{tab:bpicaudit}), and closure-phase vetting finds it
+point-source consistent, which is one-sided evidence
+(Appendix~\ref{app:closure}).
+
+Two astrophysical contexts are recorded for re-examination;
+neither grounds the rejection. AU~Mic is an exceptionally active flare
+star, but the block's own quiescent continuum (0.15\,mJy) rules out the
+later-epoch GHz-wide flares of \citet{MacGregor2020} (16.8 and
+6.1\,mJy): an 11\,mJy channel-confined excess would sit ${\sim}70\times$
+above a continuum that shows nothing. The controls share the primary-beam
+footprint, so smooth structure such as the debris belt raises star and
+controls alike and cannot alone produce a localised excess.
+
+\section{The ancillary continuum lane}
+\label{app:continuum}
+\label{app:contsearch}
+
+The continuum lane is an exploratory by-product, with
+57 measurements, 17 detections and 40 limits, a millimetre excess being
+at best an indirect, model-dependent observable of waste-heat
+technology. An ``upper limit'' is $5\times$ the
+primary-beam-corrected map rms at the star's position, and the deepest
+non-detection is towards TRAPPIST-1 in Band~3. Under the combined error
+model sixteen of seventeen detections stay above $5\sigma$; the
+exception ($\eta$~Corvi Band~7, $4.7\sigma$ combined) is marginal.
+Bright far-from-target peaks fall outside the 3-arcsec tolerance and count
+as non-detections.
+
+Every detection is astrophysically unsurprising: the unresolved UV~Ceti
+binary; six systems of disc or chromospheric emission ($\beta$~Pic, AU~Mic,
+AT~Mic and $\tau$~Cet among them); six stars at photospheric flux; and two
+late-M dwarfs of documented magnetic activity, LP~349$-$25 and the auroral
+emitter LSR~J1835$+$3259 \citep{Hallinan2015}. Closure phase discriminates
+structure for none of them at these flux densities.
+
+\emph{The anomaly screen.} Each star's flux is tested against its own
+photospheric expectation (Planck function with Gaia DR3 parameters,
+Pecaut \& Mamajek fallback where GSP-Phot is unavailable) and against
+same-$T_{\rm eff}$ stars in coarse bins of at least five, by a robust
+median/MAD statistic. The error model, evaluated before any flag,
+is $\sigma_{\rm tot}^{2} = \sigma_{\rm map}^{2} + (f_{\rm cal}\,S_\nu)^{2}
++ \sigma_{\rm model}^{2}$, with $f_{\rm cal}$ 5 per cent in Bands~3--6
+and 10 per cent in Bands~7--8 and $\sigma_{\rm model}$ propagated from
+Gaia temperature and radius errors and the fallback relation's scatter.
+The model has \emph{no intrinsic-variability term}, which is adequate for
+a photosphere and wrong for an active M dwarf whose millimetre flux can
+vary by factors of several, so the screen is uninformative for exactly
+the stars a radio-stellar reader cares about, and at the five-star
+minimum it flags for inspection, without testing per-star hypotheses.
+One outlier results: $\chi^1$~Ori at Band~3 (excess ratio 2.52, resampled
+tail probability 0.53 in its six-star bin), consistent with a spectroscopic
+G0V binary's unresolved companion or a chromosphere.
+
+\section{False-alarm accounting under the symmetric criterion}
+\label{app:falsealarm}
+
+The per-window rate is $1/\RankFloor$, the survey expectation
+$\NWindows/\RankFloor=\ExpFlags$ flags. The floor
+falls only if the control ensemble grows, which the primary beam bounds;
+and windows are not fully independent, grouping into \NEB{} execution
+blocks that share weather, calibration and correlator setup, so
+$N/\RankFloor$ is an expectation over a mildly correlated sample, not
+$N$ independent trials. Both limits are conservative for the conclusion
+drawn, that no window warrants candidate status: they widen the null range.
+
+The trials budget, in one set of units. A window holds
+\CellsWinMin--\CellsWinMax{} channel$\times$drift cells (median
+\CellsWinMed), and the survey \CellsTotal{} in total. A one-sided
+Gaussian $5\sigma$ tail ($2.87\times10^{-7}$) therefore predicts
+\CellExpect{} chance cells across the survey, an expectation in cells and
+not in windows. The frozen products carry the observed count in the same units:
+\CellsObserved{} on-star cells reach $5\sigma$, in \NHitWindows{}
+windows, and \CellsObsFlagged{} of them belong to the four stage-1
+flags, three of which are CO. The remaining \CellsObsRest{} cells, over
+\NHitWindowsRest{} windows, stand against the \CellExpect{} expected, a
+factor \CellsRestOverExpect{} that is the product of two, only the
+second of them correlation. Correlation cannot move the expected
+\emph{number} above $5\sigma$, which is $Np$ whatever the correlation;
+it moves the clumping. Summing
+$1-(1-2.87\times10^{-7})^{n_{\rm cells}}$ over the \NWindows{} windows
+predicts \ExpCrossWin{} windows carrying at least one on-star crossing
+against the \NHitWindowsRest{} observed, a factor \CrossWinRatio{} at
+Poisson $p=\CrossWinPoisson$; within a crossing window the iid
+expectation is \CellsPerCrossExp{} cells against \CellsPerCrossObs{}
+observed, a factor \CellsPerCrossRatio, and that one is channel
+adjacency. The two multiply to \CellsRestOverExpect. The budget is also almost entirely fine-class:
+\CellsFineSci{} of the \CellsTotal{} cells, so \ExpCrossWinFine{} chance
+crossings are expected among the \NWinA{} Class~A windows against
+\ExpCrossWinCoarse{} among the \NWinB{} Class~B ones, which is why all
+\NCrossWin{} crossings are fine windows.
+
+The control ensembles calibrate this empirically, no Gaussian
+assumption surviving. The same arithmetic on each window's \NCtrl{}
+controls predicts \NCtrlWinExp{} of the \NWindows{} windows carrying at
+least one control above $5\sigma$; \NCtrlWinObs{} do, agreeing to
+\CtrlWinAgreePct{} per cent. The observed per-window
+control maxima track the iid-Gaussian prediction for
+$\NCtrl\times n_{\rm cells}$ trials at a median ratio of
+\CtrlMaxRatioMed{} (5th--95th percentile
+\CtrlMaxRatioLo--\CtrlMaxRatioHi), separately in both classes: fine
+median observed control maxima \CtrlMedFine{} against an expected maximum
+\FaPredFine, coarse \CtrlMedCoarse{} against \FaPredCoarse. That agreement is partly bookkeeping:
+$n_{\rm cells}$ counts grid cells, not independent trials, and both axes are
+oversampled, in frequency by the Hanning correlation
+($\rho_1=\HanRhoOneFrac$, Appendix~\ref{app:conventions}) and in drift by a
+grid whose adjacent trials differ by about half a channel over the track.
+Dividing the trial count by a combined factor of \FaOverCount{} lowers the
+predictions to \FaPredFineCorr{} and \FaPredCoarseCorr, leaving a
+$+\FaExcessFine$ and $+\FaExcessCoarse$ per cent excess at the controls in the
+two classes independently. Mild non-Gaussianity of that size is exactly why
+the operative statement is the empirical rank and not the Gaussian budget. The
+residual window-level factor \CrossWinRatio{} at the star against
+\CtrlWinRatio{} at the controls is the closest measurement of
+position-specific excess at the phase centre the release affords. It is
+marginal, and the crossing list is dominated by CO($2{\to}1$) at
+230.5\,GHz toward disc hosts, the expected astrophysical reading. The
+operative false-alarm statement remains the rank against the control
+ensemble. Beyond the shared primary-beam gain, neighbouring
+control positions are correlated below the synthesised-beam scale, so
+independent spatial trials fall from \NCtrl{} to $N_{\rm
+eff}\simeq30$--$43$, a floor to which the empirical \RateRankFirst{} per cent rate, measured
+on the correlated ensembles themselves, is immune by construction. That
+figure is the compact case: taking the archive's own synthesised beam
+(\BeamMinArcsec--\BeamMaxArcsec\,arcsec, median \BeamMedArcsec) and
+$N_{\rm geom}=\pi(r_{\rm out}^{2}-r_{\rm in}^{2})/1.133\theta_{\rm beam}^{2}$
+gives \NeffLo{} to \NeffHi{} resolution elements, median \NeffMed, across the
+\NWindows{} windows. That counts what the annulus \emph{contains}, so it caps
+$N_{\rm eff}$ at the \NCtrlCap{} positions actually drawn and shows the blanket
+30--43 to be a worst case, not a typical one. The same metadata exposes two geometric limitations, unrepaired here
+because repairing them means re-running the extraction. \NWinSevenM{} windows
+(\PctWinSevenM{} per cent) come from \NEbSevenM{} ACA 7\,m execution
+blocks while $\theta_{\rm PB}$ is $\RingPbCoefCode\,\lambda/12$\,m
+throughout, so there the annulus sits at a smaller fraction of the true
+primary beam than \RingInFrac--\RingOutFrac{} implies and its gains are
+higher than quoted; and in \NWinRinBelowBeam{} windows $r_{\rm in}$ falls
+below the synthesised beam, so the innermost controls are not
+resolution-independent of the star, which for a typical ACA geometry is
+${\sim}4$ per cent of the \NCtrl, far below the median's breakdown point. Of the four stage-1 flags only
+HD~48370 Band~6 is ACA. Both consequences run in the conservative
+direction. On the true 7\,m beam the ACA annuli span
+\AcaAnnFracLo--\AcaAnnFracHi{} of $\theta_{\rm PB}$ at a median
+area-weighted gain of \AcaAnnGain{} against \RingGainMean{} for the
+12\,m windows, so exchangeability in flux density improves
+there; and of the \NPbAboveTwoPct{} windows carrying a primary-beam
+correction above 2 per cent, \NPbHiTwelve{} are 12\,m and
+\NPbHiSeven{} are 7\,m, with all four at the $\PbMax\times$ maximum 12\,m, so the applied
+correction is overstated only for the five ACA rows, where the
+$\AcaDiamRatio\times$ dish-diameter ratio makes a
+$\times\AcaCorrShown$ correction really $\times\AcaCorrTrue$.
+
+No single stratum drives the rank-first rate: under the withdrawn asymmetric
+statistic it moved only between 11 and 20 per cent across band, channelisation
+and primary-beam offset, and disc- or planet-hosting stars showed a
+\emph{lower} rate than non-hosts, so shared circumstellar emission does not
+drive it. Excluding the \NBPWindows{} $\beta$~Pictoris
+windows leaves one unattributed crossing among \NNonBP, against
+\ExpNonBP{} expected ($P(\geq1)=\PgeOneNonBPPct$ per cent).
+
+\section{Analysis audit trail: excluded entries and the retired statistic}
+\label{app:exclusions}
+
+Five pre-freeze changes are logged with their effect on released products in
+the repository change-log, and four are treated above. Only the replacement of the
+asymmetric region-max statistic by the symmetric single-position form of
+\S\ref{sec:statistic} (release re-run, criterion frozen) changes a
+released number. Counted \emph{without} the $\geq5\sigma$ amplitude gate,
+that is on rank alone, rank-first windows
+\NRankFirstOld/\NWindows{} (\RateRankFirstOld{} per cent) become \NRankFirst/\NWindows{}
+(\RateRankFirst{} per cent); counted \emph{with} the gate, which is the
+stage-1 flag of the main text, \NSpatialOld{} become \NSpatial{} and
+the AU~Mic crossing becomes unflagged. Under a pure-noise null the retired region maximum over $n_{\rm src}$
+positions beats single controls with probability
+$n_{\rm src}/(n_{\rm src}+n_{\rm ctrl})=\AsymExpectPct$ per cent, the
+order of the measured region-max rate. Nothing derived from it enters an
+operative false-alarm probability.
+
+\emph{The four classes of excluded entry.} (i) Four target/bands
+(Barnard's Star [B7], Wolf~359 [B7], SCR~J1845$-$6357, Wolf~358) have no
+carrier result from a process-level failure; each keeps a valid
+continuum non-detection and no EIRP threshold. (ii) Giclas~9$-$38A and
+Giclas~9$-$38B [B3] are excluded entirely, the pair's only matched MOUS
+pointing ${\sim}52$~arcmin from either star, $35\times$ its own
+primary-beam FWHM; the carrier step aborts correctly, continuum imaging
+lacks that guard. (iii) Six windows across five stars (51~Eri,
+HD~10647, HD~139664, TWA~7, HD~92945 twice) fail the noise test of
+\S\ref{sec:exclusions}: all are 15.62-MHz coarse windows whose reported
+rms is inconsistent with their reported integration by three to four
+orders of magnitude and sits a factor \DefectSibFacLo--\DefectSibFacHi{}
+below the shallowest sibling of the same block and channel width, a
+normalisation signature, not weather or configuration (\S\ref{sec:exclusions}). (iv) The catalogue entry
+``$\gamma$~Lupi'' resolves to the F4V debris-disc host HD~139664 at
+17.40\,pc, not the naked-eye $\gamma$~Lupi; all such entries are
+relabelled and no measured value changes. The supporting quality audit
+is clean across all \NWindows{} windows bar four $\chi^{1}$~Ori Band~3
+windows flagged as elevated
+(\ChiOriQaLo--\ChiOriQaHi$\times$ the Band~3 median, weakening their
+thresholds by ${\lesssim}20$ per cent in amplitude).
+
+\section{The conditional searched-domain transmitter fraction}
+\label{app:population}
+
+\begin{table}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\caption{Conditional searched-domain transmitter fraction, illustrative
+calculation only. \emph{These numbers assume every searched star was
+broadcasting continuously, in band, at the stated power during the
+observation. They are not a demographic limit on any stellar population.}
+(a) the 95 per cent upper limit $f_{95}(P)$ above EIRP $P$, $n$ the systems with
+non-zero completeness there; the \emph{measured} column uses the
+injection-measured recovery, whose single-configuration transfer error is
+unquantified. (b) epoch-activity dependence at $P\geq10^{16}$\,W, thresholded
+and measured-completeness. `Unconstrained' means no bound at that combination.}
+\label{tab:occurrence}
+\input{tab_occurrence}
+\end{table}
+
+No number here appears among the headline quantities of
+Table~\ref{tab:searchspace}; the appendix is kept for the framework. A zero
+detection constrains a fraction of systems only through a per-system
+probability, factorised as
+%
+\begin{equation}
+C_i(P) \;=\; F_i\;R_i(P)\;D_i\;C_{{\rm morph},i},
+\label{eq:conditioning}
+\end{equation}
+%
+with $F_i$ the chance the transmitter's sky frequency lies in system
+$i$'s searched intervals, $R_i(P)$ the chance a transmitter of EIRP $P$
+would have crossed that system's threshold, $D_i$ the chance it emitted
+during the analysed archival interval, and $C_{{\rm morph},i}$ the
+measured recovery of a carrier of the searched drift and temporal
+morphology (Appendix~\ref{app:inject}). The probability of zero credible
+detections if a fraction $f$ of systems hosts one is
+\begin{equation}
+P(N_{\rm det}=0\,|\,f)=\prod_{i=1}^{N_{\rm sys}}\left(1-f\,C_i\right),
+\label{eq:prevalence}
+\end{equation}
+and the one-sided 95 per cent upper limit $f_{95}$ solves
+$P(N_{\rm det}=0\,|\,f_{95})=0.05$ over the \NSystems{} systems.
+
+Everything below sets $F_i=D_i=1$ \emph{by conditioning, not by
+measurement}. At EIRP
+$\geq10^{16}$\,W the measured form gives
+$f_{95}\approx\OccMeasuredRound$ per cent over the \NOccSystems{}
+systems carrying a Class~A window, with idealised brackets \OccUnit{}
+and \OccUniform{} per cent. Folding in the dwell-measured Class~B curve,
+so each window carries the completeness measured for the morphology it
+searches, extends the calculation to \NOccAll{} systems and moves the
+number to \OccAll{} per cent. Table~\ref{tab:occurrence} carries the ladder in
+EIRP and in epoch activity.
+
+How far this travels is bounded three ways. The Class~A recovery curve is
+measured on one configuration (AU~Mic, 488-kHz Band~6) and applied to all
+\NWinA{} Class~A windows; the $^{+\RecThreshHi}_{-\RecThreshLo}$
+percentage-point binomial interval is sampling noise within that one run and
+does not bound the transfer error, whereas scaling the curve by
+0.5--2$\times$ moves the number from \OccMeasured{} to
+\OccBracketLo--\OccBracketHi{} per cent, which is the honest width. The $C_i$
+are not independent: windows group into \NEB{} execution blocks with an
+intraclass correlation of \IccRank, whose design effect moves
+\OccMeasuredRound{} to \EffFIccPct{} per cent, an order below the transfer
+term. Under any transmitter-frequency prior spread across ALMA's tuning range
+the bound vanishes, the per-system Class~A union being 1.73\,GHz in the median
+against ${\sim}75$\,GHz.
+
+
+Writing $p_{\rm epoch}$ for the chance a transmitter is on in any one
+epoch, a system \emph{searched} in $n_i$ independent execution blocks is
+sampled $n_i$ times, so $D_i=1-(1-p_{\rm epoch})^{n_i}$; \NMultiEpoch{}
+of the \NSystems{} systems have $n_i>1$, against \NSysMultiEB{} with two or
+more public blocks archived (\S\ref{sec:sample}), so the bound below is what
+the searched epochs support. With at most three epochs at
+year-scale separations this is a phase-averaged bound, and an
+intermittent transmitter is at least as plausible \emph{a priori}, so
+the $p_{\rm epoch}=1$ entries should never be quoted without it.
+
+
+\begin{thebibliography}{99}
+\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
+
+\bibitem[Backus \& Project Phoenix Team(2002)]{Backus2002} Backus P.~R., Project Phoenix Team, 2002, in Bull. Am. Astron. Soc., p.\ 1173
+\bibitem[Blomme et al.(2023)]{Blomme2023} Blomme R., et al., 2023, A\&A, 674, A7
+\bibitem[Cataldi et al.(2023)]{Cataldi2023} Cataldi G., et al., 2023, ApJ, 951, 111
+\bibitem[Choza et al.(2024)]{Choza2024} Choza C., et al., 2024, AJ, 168, 254
+\bibitem[Cocconi \& Morrison(1959)]{CocconiMorrison1959} Cocconi G., Morrison P., 1959, Nature, 184, 844
+\bibitem[Czech et al.(2021)]{Czech2021} Czech D.~J., et al., 2021, PASP, 133, 064502
+
+\bibitem[Dent et al.(2014)]{Dent2014} Dent W. R. F., et al., 2014, Science, 343, 1490
+\bibitem[Drake(1960)]{Drake1960} Drake F.~D., 1960, Physics Today, 13, 40
+\bibitem[Drake(1974)]{Drake1974} Drake F.~D., 1974, in Sagan C., ed., Communication with Extraterrestrial Intelligence (CETI). MIT Press
+
+\bibitem[Enriquez et al.(2017)]{Enriquez2017} Enriquez J.~E., et al., 2017, ApJ, 849, 104
+\bibitem[Fouqu\'e et al.(2018)]{Fouque2018} Fouqu\'e P., et al., 2018, MNRAS, 475, 1960
+\bibitem[Gaia Collaboration et al.(2022)]{GaiaDR3} Gaia Collaboration, Vallenari A., Brown A.~G.~A., et al., 2022, arXiv:2206.05595 ({\it Gaia} DR3 summary)
+
+\bibitem[Garrett et al.(2026)]{BRaTs2026} Garrett M.~A., et al., 2026, MNRAS, accepted (arXiv:2605.10212)
+\bibitem[Gentile Fusillo et al.(2021)]{GentileFusillo2021} Gentile Fusillo N.~P., et al., 2021, MNRAS, 508, 3877
+
+\bibitem[Hallinan et al.(2015)]{Hallinan2015} Hallinan G., et al., 2015, Nature, 523, 568
+\bibitem[Huang et al.(2026)]{PollutedWD2026} Huang B.-L., Tao Z.-Z., Zhang T.-J., 2026, ApJ, 1006, 9
+
+\bibitem[Jacobson-Bell et al.(2025)]{GLOBULAR2025} Jacobson-Bell K., et al., 2025, AJ, 169, 233
+\bibitem[Johnson et al.(2023)]{LOFARdualsite2023} Johnson O.~A., et al., 2023, AJ, 166, 193
+
+\bibitem[Li et al.(2026)]{FAST3IATLAS2025} Li J.-K., Tao Z.-Z., Zhang T.-J., 2026, arXiv:2603.19023
+\bibitem[Ma et al.(2023)]{Ma2023} Ma P.~X., et al., 2023, Nat. Astron., 7, 492
+\bibitem[MacGregor et al.(2020)]{MacGregor2020} MacGregor M.~A., Osten R.~A., Hughes A.~M., 2020, ApJ, 891, 80
+\bibitem[Margot et al.(2023)]{Margot2023} Margot J.-L., et al., 2023, AJ, 166, 206
+\bibitem[Mason et al.(2024)]{Mason2024} Mason L.~A., Garrett M.~A., Wandia K., Siemion A.~P.~V., 2024, MNRAS, 536, 2127
+\bibitem[Matrà et al.(2017)]{Matra2017} Matrà L., Dent W. R. F., Wyatt M. C., et al., 2017, MNRAS, 464, 1415
+\bibitem[Moór et al.(2020)]{Moor2020} Moór A., Pawellek N., Ábrahám P., et al., 2020, AJ, 159, 288
+\bibitem[M\"uller et al.(2005)]{CDMS2005} M\"uller H.~S.~P., Schl\"oder F., Stutzki J., Winnewisser G., 2005, J. Mol. Struct., 742, 215
+\bibitem[Morrison et al.(2023)]{Morrison2023} Morrison I.~S., et al., 2023, PASA, 40, e038
+
+\bibitem[Pickett et al.(1998)]{Pickett1998} Pickett H.~M., et al., 1998, J. Quant. Spectrosc. Radiat. Transfer, 60, 883
+\bibitem[Poznanski et al.(2025)]{AnomalyParkesGBT2025} Poznanski D., et al., 2025, AJ, in press (arXiv:2505.03927)
+\bibitem[Price et al.(2020)]{Price2020} Price D.~C., et al., 2020, AJ, 159, 86
+\bibitem[Sheikh(2020)]{Sheikh2020} Sheikh S.~Z., 2020, Int. J. Astrobiol., 19, 237
+\bibitem[Sheikh et al.(2025a)]{EarthDetectingEarth2025} Sheikh S.~Z., et al., 2025, AJ, 169, 108
+
+\bibitem[Tarter(2001)]{Tarter2001} Tarter J., 2001, ARA\&A, 39, 511
+\bibitem[Tremblay et al.(2024)]{Tremblay2024} Tremblay C.~D., et al., 2024, PASA, 41, e004
+
+
+\bibitem[Valente et al.(2025)]{SRT2025} Valente G., et al., 2025, Acta Astronautica, in press
+\bibitem[Vidal et al.(2026)]{SETIreview2025} Vidal C., et al., 2026, arXiv:2605.21093
+
+\bibitem[White(2026)]{White2026} White G.~J., 2026, MNRAS, submitted
+\bibitem[Wright et al.(2018)]{Wright2018} Wright J.~T., Kanodia S., Lubar E.~G., 2018, AJ, 156, 260
+\bibitem[Zhang et al.(2020)]{Zhang2020} Zhang Z.-S., et al., 2020, ApJ, 891, 174
+\end{thebibliography}
+
+
+\end{document}
