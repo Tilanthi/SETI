@@ -1,0 +1,100 @@
+{
+ "figures": [
+  "/workspace/SETI/paper_20pc/v3.49/figures/eirp_context.pdf",
+  "/workspace/SETI/paper_20pc/v3.49/figures/eirp_context.pdf"
+ ],
+ "numbers": {
+  "eirp_context": {
+   "n_windows": 431,
+   "n_stars": 88,
+   "d_min_pc": 1.3015802655852167,
+   "d_max_pc": 39.63436208736827,
+   "eirp_min_W": 16158991296689.695,
+   "eirp_max_W": 1.47975537517826e+16,
+   "eirp_median_W": 554654170861092.5,
+   "eirp_p16_W": 61240919622806.305,
+   "eirp_p84_W": 1759947410760960.8,
+   "n_stars_below_arecibo": 2,
+   "deepest_star": "G 272-61B",
+   "nearest_star": "Proxima Cen",
+   "chanw_median_Hz": 15625000.0,
+   "chanw_min_Hz": 15258.7890625,
+   "chanw_max_Hz": 31250000.0,
+   "chanw_median_label": "15.63 MHz",
+   "chanw_range_label": "15.26 kHz--31.25 MHz",
+   "literature_channel_Hz": {
+    "enriquez2017": 2.79,
+    "margot2023": 2.98,
+    "mason2024": 30520.0,
+    "price2020": 2.79
+   },
+   "literature_freq_GHz": {
+    "enriquez2017": [
+     1.1,
+     1.9
+    ],
+    "margot2023": [
+     1.15,
+     1.73
+    ],
+    "mason2024": [
+     84.0,
+     116.0
+    ],
+    "price2020": [
+     1.1,
+     3.45
+    ]
+   },
+   "channel_width_span_dex": 7.05
+  }
+ },
+ "literature": {
+  "enriquez2017": {
+   "pts": [
+    [
+     50.0,
+     10000000000000.0
+    ]
+   ],
+   "src": "Enriquez et al. 2017, ApJ 849, 104, abstract: 'none of the observed systems host high-duty-cycle radio transmitters ... with an Equivalent Isotropic Radiated Power of ~10^13 W ... fewer than ~0.1% of the stellar systems within 50 pc'."
+  },
+  "margot2023": {
+   "pts": [
+    [
+     100.0,
+     13500000000000.0
+    ],
+    [
+     6135.0,
+     5.08e+16
+    ]
+   ],
+   "src": "Margot et al. 2023, AJ 166, 206, sec. 6: 'fewer than 6.6% of the 331,312 stars within 100 pc host a transmitter that is detectable in our survey (EIRP > 1.35 x 10^13 W) ... For stars located within 20,000 ly, ... (EIRP > 5.08 x 10^16 W)'.  20,000 ly = 6135 pc.  NOTE: the superseded v3.24 figure plotted the near point at 1.0e13 W; the published value is 1.35e13 W and is used here."
+  },
+  "mason2024": {
+   "pts": [
+    [
+     1010.0,
+     6.91e+17
+    ]
+   ],
+   "src": "Mason et al. 2024, MNRAS 536, 2127, sec. 4: 'the smallest minimum detectable power ... is 6.91 x 10^17 W for the closest target star (Gaia DR3 4154920820659128192)'; that star's distance in their Table 2 is 1.010 kpc."
+  },
+  "price2020": {
+   "pts": [
+    [
+     null,
+     2000000000000.0
+    ],
+    [
+     null,
+     9000000000000.0
+    ]
+   ],
+   "src": "Price et al. 2020, AJ 159, 86, abstract: 'we can put an upper limit on the power of potential radio transmitters at these frequencies at 2x10^12 W, and 9x10^12 W for GBT and Parkes respectively'.  These are deepest per-target limits, not a single sample distance, so they are drawn as left-edge ticks rather than as points in distance."
+  }
+ },
+ "arecibo_reference_W": 20000000000000.0,
+ "d2_guide_norm_W_at_1pc": 4000000000000.0
+}
