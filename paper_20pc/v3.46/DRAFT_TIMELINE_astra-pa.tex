@@ -1,0 +1,66 @@
+%% DRAFT ONLY, from astra-pa run 3. NOT \input by anything and NOT in make_all.sh.
+%% Ready-to-paste prose for brief 2.15 (referee B1 timeline, B10 CP-72 anchor).
+%% Every hash and timestamp is verified in /shared/ASTRA/reviews/v3.46_evidence.md 1.
+%% Style notes honoured: no em-dashes, no "X is not Y; it is Z", explanatory rather
+%% than telegraphic, no aphoristic closer, varied sentence length.
+%%
+%% Use the two hashes and the interval. Do NOT date the flag from the v3.24
+%% control-maxima figure (157f92c08d, 2026-09-09T15:45Z): that figure is a
+%% diagnostic made nine days after the flag, and dating from it understates the
+%% interval by a factor of about 440.
+
+The order in which these two things happened is a fair question, and the record
+answers it against us. AU~Mic was flagged as a candidate under the region-max
+statistic on 2026 August~31 (commit \texttt{8e00f90e8f8c}, 11:55:04~UTC), in the
+machine-readable aggregate of that version's search products and in the version's
+own text. The asymmetry in that statistic was identified, and the symmetric
+replacement adopted, nine days later on 2026 September~9 (commit
+\texttt{0c465f2661bd}, 16:14:07~UTC). We have looked for an earlier trace and
+there is none: the first committed text that even diagnoses the asymmetry is
+dated 2026 September~9 as well, 15:39:59~UTC. The redesign therefore postdates
+the flag by nine days, and no part of it can be dated before the window that it
+removed.
+
+What carries the argument instead is that the replacement follows from the
+definition of the test rather than from anything seen in this window. Under a
+pure-noise null with exchangeable positions, the maximum over $n_{\rm src}$
+source-region positions exceeds the maximum over $n_{\rm ctrl}$ single controls
+with probability $n_{\rm src}/(n_{\rm src}+n_{\rm ctrl})$, which for
+$n_{\rm src}=\RingNSrc$ and $n_{\rm ctrl}=\NCtrl$ is
+\AsymExpectPct{}~per~cent. That is a property of every window in the survey and
+was computed for none of them individually. Two further facts bear on it. The
+released record of the flagged window already contains the symmetric quantity,
+and it is unremarkable: the single propagated stellar position reached
+$\mathrm{S/N}=5.22$ against a control maximum of $5.85$, while the region
+maximum, $5.97$, was the value that exceeded it. The symmetric test would not
+have selected this window even on the data as they then stood. And the set of
+windows flagged under the symmetric criterion is a strict subset of the set
+flagged under the region maximum, so the revision removed candidates generally
+and was not shaped around one of them. Neither fact establishes priority, and we
+do not offer them as though they did.
+
+%% ---- CP-72 2713 pre-registration anchor (referee B10). Keep the margins exact.
+%% Do not write "the criterion predates the flag": it does not. It predates the
+%% SEARCH, which is what the referee asks about.
+
+The retirement criterion can be anchored in the same record, with one limitation
+stated plainly. The programme-wide rule that no crossing would be advanced on
+rank statistics alone was committed on 2026 September~9 (commit
+\texttt{db1e2ee6f7c0}, 19:42:21~UTC), in the same commit that first reports this
+window, so the rule is contemporaneous with the flag rather than earlier than it.
+The paired promote-and-retire form, including retirement on a clean second epoch,
+was committed on 2026 September~11 (commit \texttt{119a68a6ab50}, 11:33:40~UTC).
+The second-epoch search began later that day, at 20:19:23~UTC, and wrote its
+first product at 21:30:07~UTC. The criterion actually exercised was therefore on
+the public record eight hours and forty-six minutes before the second-epoch data
+were touched, and the programme-wide rule two days before that. The ordering that
+can be demonstrated is criterion before search; the ordering criterion before
+flag cannot be demonstrated and we do not claim it.
+
+%% Macros referenced above that may need checking or adding:
+%%   \RingNSrc     (135, exists in survey_numbers_round12.tex)
+%%   \NCtrl        (512, exists)
+%%   \AsymExpectPct(20.9, exists, generated in v342_calc.py)
+%% The three S/N values 5.22 / 5.85 / 5.97 are the v2.07 released record for this
+%% window. The reprocessed 40 pc release quotes T* = 4.93 against ring max 7.70
+%% for the same window. Both point the same way. Print one pair, never both.
