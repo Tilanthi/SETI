@@ -1,0 +1,35 @@
+{
+ "n_windows": 899,
+ "n_blocks": 224,
+ "n_stars": 35,
+ "median_rank": 0.4249512670565302,
+ "ks_D": 0.09155505250581653,
+ "ks_p": 5.228733475726999e-07,
+ "n_cross": 27,
+ "n_stage1": 6,
+ "n_stage1_co": 4,
+ "n_stage1_unattrib": 2,
+ "unattrib": [
+  {
+   "star": "61 Vir",
+   "band": 7,
+   "flo": 344.87240523008694,
+   "t": 6.15580940246582,
+   "ctrl": 5.878187656402588,
+   "n_repeat_blocks": 1,
+   "repeat_best_t": 4.8324198722839355,
+   "repeat_nge": 119
+  },
+  {
+   "star": "HD 23484",
+   "band": 6,
+   "flo": 229.60971680373652,
+   "t": 5.295742034912109,
+   "ctrl": 5.251204490661621,
+   "n_repeat_blocks": 3,
+   "repeat_best_t": 4.994508743286133,
+   "repeat_nge": 21
+  }
+ ],
+ "asof": "2026-09-13T19:30Z"
+}
