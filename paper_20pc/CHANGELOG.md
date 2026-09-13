@@ -853,3 +853,81 @@ HALTED.md.)
   flag, whenever either actually triggers.
 - Consider extending to 30/40/50 pc per the roadmap already stated in the
   paper, once the 20 pc sample is complete.
+
+## v3.63 (2026-09-13) — referee cycle after v3.62; the S_min unit repair
+
+- **Band 9/10 S_min unit defect repaired (referee 1, point 5).** The twelve
+  Band 9/10 rows restored at v3.60 carried S_min in mJy while every other row
+  of the frozen export carries Jy. `v343_calc.py` infers the primary-beam
+  correction as S_min/(5 sigma_rms) and so printed "1000.13x" as the largest
+  retained correction. Repaired at the point of use in `v342_calc.py` with the
+  freeze untouched, verified against the pipeline's own EIRP_min_W, and an
+  assertion added that 0.95 < S_min/(5 sigma_rms) < 5 for every row. The
+  largest retained correction is 1.81x at 0.46 theta_PB.
+- **Explicit primary-beam response floor adopted**: a window is retained only
+  where the response at the stellar position is >= 0.5 (correction <= x2). All
+  443 released windows satisfy it; the four withheld eps Eri windows fail it.
+- **Leave-one-star-out cross-validation of the radial repair** (27 held-out
+  stars): median 0.437, D = 0.081, against 0.437 and 0.081 in sample. The
+  profile is not over-fitted and does not restore exchangeability. The
+  detrended statistic is no longer presented as a validated null.
+- **New Table 14**: formal 12-m vs ACA 7-m array-split robustness table.
+- **Solar-system crossmatch for CP-72 2713**: SkyBoT returns zero known minor
+  planets at 30/300/1800 arcsec at the flagged block's epoch; positive control
+  on the ecliptic at the same epoch returns 118-444.
+- **ITU RR No. 5.340** replaces a single FCC filing as the basis of the
+  no-allocation argument: 13.3 GHz (11.6 per cent) of the searched union is
+  "all emissions prohibited", and 44 per cent lies above 275 GHz.
+- TRAPPIST-1 b exceeds the drift ceiling over 5-29 per cent of orbital phase
+  edge-on, 0.3-10 per cent averaged over inclination.
+- Terminology: "spatial-control null" -> "spatial-control screen";
+  "second-stage local null" -> "local scramble test"; Eq. (1) track duration
+  T -> tau_track; Class A/B introduced as fine-channel/coarse-channel;
+  "pre-registered" -> "repository-timestamped"/"prospectively frozen".
+- Abstract restructured on referee 1's ordering (1833/1920 chars). Conclusions
+  open with the referee's own primary-result sentence. Sentence-level bold cut
+  from 12 to 4. Occurrence ladder withdrawn from Appendix I.
+- Software citations added (CASA Team 2022; Astropy 2022; Harris 2020;
+  Virtanen 2020).
+- **Page budget NOT met: 32 pages, 31.20 pp of content.** Three costed options
+  for the authors in `REFEREE_RESPONSE_V363.md` section 0.
+
+## v3.64 / v3.65 / v3.66 (2026-09-13) — three rounds of internal peer review
+
+Full record in `PEER_REVIEW_ROUNDS_SUMMARY.md` and
+`VIRTUAL_REFEREES_ROUND{1,2,3}.md`.
+
+**v3.64 (round 1)** — primary-beam floor now states the gap it sits in
+(retained to 0.46 theta_PB / x1.81; first withheld at 0.62 / x2.88); Class A/B
+rename completed across nine text sites; abstract gives 88 of 115
+archive-covered stars; ITU percentage to one decimal (11.6); the x3.2 debit no
+longer called a worst case; TRAPPIST-1 quoted edge-on only (it transits);
+Table 14's expectation labelled as the exchangeable lower bound; ACA array
+assignment described as measured; solar-system argument extended to
+uncatalogued bodies by non-sidereal motion; astroquery cited.
+
+**v3.65 (round 2)** — Figure 8's right axis no longer claims a single-factor
+P_eff (per-window ratio x1.33-3.98 now generated into the caption); Figures 2
+and 8 regenerated with the new class names; noise-quality figure no longer
+counts withheld windows as passes; local-to-global scale ratios tied to the
+reproducible R_sigma test; Table 8's "survives" column given units and a stated
+convention; data-availability statement admits unprinted diagnostic figures.
+
+**v3.66 (round 3)** — **a claim added in round 2 was reversed**: beta Pictoris
+Band 6 is narrow (53.9 MHz) but finely channelised, so it carries 1944 drift
+trials against a survey median of 4, the largest trials load in the survey, and
+its rank is harder to earn, not easier; the numbers are generated with an
+assertion. Positive control now states the drift it is recovered at. Primary-
+beam gap quoted in responses as well as offsets. Figure 8's axis label
+un-clipped, verified from text-block bounding boxes. Conclusions carry the
+physical drift-resolution count. **`regen_count.py` added**: the macro counting
+regenerated products was previously emitted before the figures were built, so
+the one file that failed a clean-regeneration test was the file carrying the
+reproducibility claim.
+
+Gates at v3.66: 32 pages, 31.39 pp content, 0 errors / 0 undefined / 0 overfull
+/ 0 Type 3, 12 underfull, 860 macros 0 unused, abstract 1850/1920, arXiv set 46
+items, clean regeneration 50/50 byte-identical.
+
+**Page budget still not met** (32 not 31); three costed options for the authors
+in `PEER_REVIEW_ROUNDS_SUMMARY.md`.
