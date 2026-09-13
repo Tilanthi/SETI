@@ -1,0 +1,174 @@
+{
+ "_doc": "Referee 1's principal requirement: do not merely characterise the radial\ndefect in the spatial null, repair it and RERUN the candidate generation.\n\nTwo repaired screens are built, both from stored products:\n\n  (A) RADIUS-MATCHED.  Rank the star against only those control probes whose\n      radius lies in the inner part of the annulus, the closest approach to an\n      iso-primary-beam comparison the frozen products allow.  Honest cost: the\n      ensemble shrinks from 512 to 54 probes, so the rank resolution falls from\n      1/513 to 1/55 and the screen necessarily admits more windows.\n\n  (B) RADIALLY DETRENDED.  Keep all 512 probes and remove the measured radial\n      trend instead.  In units of each window's own robust scale the pooled\n      control level is m(u); subtract s*m(u_k) from every control and s*m(0)\n      from the star, where s is that window's 1.4826*MAD scale.  m(0) is taken\n      as the innermost measured bin, which is the conservative choice: the\n      trend is still rising inwards there, so the star is debited less than an\n      extrapolation would debit it.  Rank resolution stays 1/513.\n\nScreen (B) is the one the paper adopts as its primary candidate-generation\ncriterion.  Screen (A) is reported beside it because it assumes nothing about\nthe shape of the trend.\n\nOutputs `radius_matched_v362.json`: the flagged set under each screen, the\ncomparison with the released set, and the held-out rank distributions that\nshow whether the repair works out of sample.",
+ "n": 443,
+ "inner_n": 54,
+ "inner_u": 0.3,
+ "nbin": 8,
+ "profile": [
+  0.1476971940383227,
+  0.12340946206951398,
+  0.09705823699114215,
+  0.06547732732326786,
+  0.09771445921397837,
+  0.11372328407752581,
+  0.12968620547669016,
+  0.18381101916390694
+ ],
+ "m_star": 0.1476971940383227,
+ "debit_calibrated": 0.31804950737296167,
+ "n_flag_at_calibrated": 3,
+ "flag_at_calibrated": [
+  "CP-72 2713",
+  "bet Pic"
+ ],
+ "released": [
+  {
+   "star": "bet Pic",
+   "band": "3",
+   "flo": 114.829247,
+   "t": 14.654,
+   "cmax": 7.266,
+   "a_flag": true,
+   "b_flag": true,
+   "a_rank": 0.01818181818181818,
+   "b_rank": 0.001949317738791423,
+   "survives": 25.7745304725834,
+   "disposition": "circumstellar CO"
+  },
+  {
+   "star": "bet Pic",
+   "band": "6",
+   "flo": 230.48941,
+   "t": 11.681,
+   "cmax": 9.1167,
+   "a_flag": true,
+   "b_flag": true,
+   "a_rank": 0.01818181818181818,
+   "b_rank": 0.001949317738791423,
+   "survives": 10.804484960679305,
+   "disposition": "circumstellar CO"
+  },
+  {
+   "star": "HD 48370",
+   "band": "6",
+   "flo": 230.500443,
+   "t": 27.1031,
+   "cmax": 26.8257,
+   "a_flag": true,
+   "b_flag": true,
+   "a_rank": 0.01818181818181818,
+   "b_rank": 0.001949317738791423,
+   "survives": 0.21353590356866645,
+   "disposition": "foreground CO"
+  },
+  {
+   "star": "CP-72 2713",
+   "band": "7",
+   "flo": 344.252656,
+   "t": 5.8089,
+   "cmax": 5.6832,
+   "a_flag": true,
+   "b_flag": true,
+   "a_rank": 0.01818181818181818,
+   "b_rank": 0.001949317738791423,
+   "survives": 0.6078865390192777,
+   "disposition": "unattributed; absent in epoch 2"
+  }
+ ],
+ "a_flagged": [
+  {
+   "star": "bet Pic",
+   "band": "3",
+   "flo": 114.829247,
+   "t": 14.654,
+   "cls": "A",
+   "released": true
+  },
+  {
+   "star": "bet Pic",
+   "band": "6",
+   "flo": 230.48941,
+   "t": 11.681,
+   "cls": "A",
+   "released": true
+  },
+  {
+   "star": "CD-57 1054",
+   "band": "7",
+   "flo": 345.123177,
+   "t": 5.1083,
+   "cls": "A",
+   "released": false
+  },
+  {
+   "star": "HD 48370",
+   "band": "6",
+   "flo": 230.500443,
+   "t": 27.1031,
+   "cls": "A",
+   "released": true
+  },
+  {
+   "star": "CP-72 2713",
+   "band": "7",
+   "flo": 344.252656,
+   "t": 5.8089,
+   "cls": "A",
+   "released": true
+  }
+ ],
+ "b_flagged": [
+  {
+   "star": "bet Pic",
+   "band": "3",
+   "flo": 114.829247,
+   "t": 14.654,
+   "cls": "A",
+   "released": true
+  },
+  {
+   "star": "bet Pic",
+   "band": "6",
+   "flo": 230.48941,
+   "t": 11.681,
+   "cls": "A",
+   "released": true
+  },
+  {
+   "star": "HD 48370",
+   "band": "6",
+   "flo": 230.500443,
+   "t": 27.1031,
+   "cls": "A",
+   "released": true
+  },
+  {
+   "star": "CP-72 2713",
+   "band": "7",
+   "flo": 344.252656,
+   "t": 5.8089,
+   "cls": "A",
+   "released": true
+  }
+ ],
+ "a_expected": 8.054545454545455,
+ "b_expected": 0.8635477582846004,
+ "heldout": {
+  "raw_median": 0.42884990253411304,
+  "raw_D": 0.09079134489906837,
+  "raw_p": 9.30132487831171e-05,
+  "det_median": 0.43664717348927873,
+  "det_D": 0.08076488754812283,
+  "det_p": 0.000745787508927898,
+  "n": 599
+ },
+ "survey": {
+  "raw_median": 0.46588693957115007,
+  "raw_D": 0.04520393031739123,
+  "raw_p": 0.31885500725382226,
+  "det_median": 0.47368421052631576,
+  "det_D": 0.03627139079200381,
+  "det_p": 0.5970231561474981,
+  "n": 443
+ }
+}
