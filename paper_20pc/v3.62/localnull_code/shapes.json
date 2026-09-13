@@ -1,0 +1,190 @@
+{
+ "CP-72_2713_B7": {
+  "srcspec_path": "/data/SETI/targets/CP-72_2713_B7/products/A002_Xff0235_X4a6d_spw3_srcspec.npz",
+  "srcspec_bytes": 63430610,
+  "search_path": "/data/SETI/targets/CP-72_2713_B7/products/A002_Xff0235_X4a6d_spw3_search.npz",
+  "search_bytes": 7984136,
+  "I_star": [
+   495,
+   3840
+  ],
+  "I_control_sample": [
+   495,
+   8,
+   3840
+  ],
+  "W": [
+   495,
+   3840
+  ],
+  "times": [
+   495
+  ],
+  "freqs": [
+   3840
+  ],
+  "control_sample_names": [
+   "probe_0",
+   "probe_73",
+   "probe_146",
+   "probe_219",
+   "probe_292",
+   "probe_365",
+   "probe_438",
+   "probe_511"
+  ],
+  "chanw_Hz": 488281.25,
+  "sigma": [
+   495,
+   3534
+  ],
+  "best_src": [
+   135,
+   3534
+  ],
+  "ctrl_max": [
+   512
+  ]
+ },
+ "HD_48370_B6": {
+  "srcspec_path": "/data/SETI/targets/HD_48370_B6/products/A002_Xc26103_X155a_spw16_srcspec.npz",
+  "srcspec_bytes": 25521935,
+  "search_path": "/data/SETI/targets/HD_48370_B6/products/A002_Xc26103_X155a_spw16_search.npz",
+  "search_bytes": 4534119,
+  "I_star": [
+   186,
+   4096
+  ],
+  "I_control_sample": [
+   186,
+   8,
+   4096
+  ],
+  "W": [
+   186,
+   4096
+  ],
+  "times": [
+   186
+  ],
+  "freqs": [
+   4096
+  ],
+  "control_sample_names": [
+   "probe_0",
+   "probe_73",
+   "probe_146",
+   "probe_219",
+   "probe_292",
+   "probe_365",
+   "probe_438",
+   "probe_511"
+  ],
+  "chanw_Hz": 122070.3125,
+  "sigma": [
+   186,
+   3770
+  ],
+  "best_src": [
+   135,
+   3770
+  ],
+  "ctrl_max": [
+   512
+  ]
+ },
+ "bet_Pic_B3": {
+  "srcspec_path": "/data/SETI/targets/bet_Pic_B3/products/A002_Xf5d76d_X32f1_spw3_srcspec.npz",
+  "srcspec_bytes": 25633241,
+  "search_path": "/data/SETI/targets/bet_Pic_B3/products/A002_Xf5d76d_X32f1_spw3_search.npz",
+  "search_bytes": 4453651,
+  "I_star": [
+   200,
+   3840
+  ],
+  "I_control_sample": [
+   200,
+   8,
+   3840
+  ],
+  "W": [
+   200,
+   3840
+  ],
+  "times": [
+   200
+  ],
+  "freqs": [
+   3840
+  ],
+  "control_sample_names": [
+   "probe_0",
+   "probe_73",
+   "probe_146",
+   "probe_219",
+   "probe_292",
+   "probe_365",
+   "probe_438",
+   "probe_511"
+  ],
+  "chanw_Hz": 244140.625,
+  "sigma": [
+   200,
+   3534
+  ],
+  "best_src": [
+   135,
+   3534
+  ],
+  "ctrl_max": [
+   512
+  ]
+ },
+ "bet_Pic_B6": {
+  "srcspec_path": "/data/SETI/targets/bet_Pic_B6/products/A002_Xd9668b_X3a90_spw5_srcspec.npz",
+  "srcspec_bytes": 49478943,
+  "search_path": "/data/SETI/targets/bet_Pic_B6/products/A002_Xd9668b_X3a90_spw5_search.npz",
+  "search_bytes": 7027501,
+  "I_star": [
+   385,
+   3840
+  ],
+  "I_control_sample": [
+   385,
+   8,
+   3840
+  ],
+  "W": [
+   385,
+   3840
+  ],
+  "times": [
+   385
+  ],
+  "freqs": [
+   3840
+  ],
+  "control_sample_names": [
+   "probe_0",
+   "probe_73",
+   "probe_146",
+   "probe_219",
+   "probe_292",
+   "probe_365",
+   "probe_438",
+   "probe_511"
+  ],
+  "chanw_Hz": 15258.7890625,
+  "sigma": [
+   385,
+   3534
+  ],
+  "best_src": [
+   135,
+   3534
+  ],
+  "ctrl_max": [
+   512
+  ]
+ }
+}
