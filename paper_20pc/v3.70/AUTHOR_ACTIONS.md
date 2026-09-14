@@ -139,21 +139,29 @@ style, and mark the corresponding author, which the manuscript currently does
 not do. Related to A1.
 
 
-## A12. Competing-interest / funding statement (referee 2, point 9)
+## A12. Competing-interest statement — CLOSED 2026-09-14: not required
 
-The *Funding and competing interests* section was deleted at v3.67 on the
-authors' instruction. Referee 2 has now asked for a standard disclosure, noting
-that affiliation 3 is a private company. **The authors must decide**: reinstate
-a one-line statement ("no competing interests", or the appropriate wording), or
-reply to the referee explaining the omission. The assistant will not reinstate
-a section the authors removed.
+Referee 2 asked for a COI/funding disclosure. **The authors have ruled that it is
+not needed.** The section deleted at v3.67 stays deleted; the referee response
+should record the decline explicitly rather than leave the request unanswered.
 
-## A13. A new unattributed event in the calibration sample
 
-The re-harvest of 2026-09-13 found a second non-recurring single-epoch outlier,
-**61 Vir Band 7 at 344.872 GHz**, T* = 6.16 against a ring maximum of 5.88,
-which does not recur at the same tuning in a further block (T* = 4.83, 119
-controls above the star). It is reported as consistent with the measured
-false-alarm rate. The authors should confirm they are content with that
-disposition before submission, since 61 Vir is a bright, well-studied planet
-host and the event will attract attention.
+## A13. The 61 Vir event — CLOSED 2026-09-14: disposition confirmed
+
+The authors confirm the disposition of **61 Vir Band 7, 344.872 GHz**
+(T* = 6.16 against a ring maximum of 5.88, not recurring: T* = 4.83 with 119
+controls above the star at the same tuning in a further block) as an
+unattributed, non-recurring single-epoch event consistent with the measured
+false-alarm rate.
+
+
+## A14. Submission deferred until the archive sweep completes (2026-09-14)
+
+The authors have decided **not to submit at v3.70**. The paper will be finalised
+once the full archive sweep now queued (the 82 remaining in-scope blocks plus the
+199 Option A blocks, ~2.6 TB) has been collected and searched, and only then
+considered for arXiv. v3.70 is therefore an interim build, not a submission
+candidate, and the release will be re-frozen at the completed scope.
+
+**Design consequence the authors should settle before the re-freeze** — see the
+note at the top of this file's companion, `SUBMISSION_PLAN_v370.md`.
