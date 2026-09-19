@@ -1,0 +1,2693 @@
+{
+ "_doc": "ALMA obscore harvest 2026-09-12 (v3.48): scientific_category and science_keyword for every execution block searched here, from 'SELECT DISTINCT asdm_uid, scientific_category, science_keyword FROM ivoa.obscore WHERE asdm_uid IN (<the 102 EBs of the released catalogue>)' on the ALMA TAP service (almascience.eso.org/tap).  102 of 102 EBs matched.  Companion to archive_meta_v343.json, which carries the array and beam for the same blocks. v3.60: extended to the two Band 9/10 execution blocks (uid://A002/X11d9ce7/X5257, uid://A002/Xbf792a/X26ec), 104 of 104 EBs matched. | v3.80: re-harvested for the completed sweep; blocks obscore does not index by asdm_uid were resolved through their member OUS.",
+ "blocks": {
+  "uid://A002/Xff0235/X4a6d": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/X1239f8e/Xa43b": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/X128b034/X187cc": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xcf749a/X4871": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xd10f82/X706f": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xccea8d/X2ff5": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xd189ef/X867b": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xd86f11/X584b": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xcda49e/Xdebb": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/X12a8fc8/X10b8": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Exo-planets;null"
+  },
+  "uid://A002/Xc99ad7/X348": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around high-mass stars"
+  },
+  "uid://A002/Xd28a9e/Xbcdf": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around high-mass stars"
+  },
+  "uid://A002/Xcc626d/X579": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around high-mass stars"
+  },
+  "uid://A002/Xe3da01/X4265": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xc19d6f/X19ce": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xbbadbe/X3846": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xb999fd/X148": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xa95c04/X14cd": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xa68906/X1590": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xb0be8b/X785f": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/X106a1f1/X6a0c": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets"
+  },
+  "uid://A002/Xc8b2b0/X9c35": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/Xcd64ec/X21c9": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xd98580/X3bf6": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xd09670/X23c5": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xc6141c/X3af0": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/Xc9831a/X443": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Exo-planets;null"
+  },
+  "uid://A002/Xd9d7c7/Xb3d2": {
+   "scientific_category": "ISM and star formation",
+   "science_keyword": "Pre-stellar cores, Infra-Red Dark Clouds (IRDC);null"
+  },
+  "uid://A002/Xe4f0a6/X3658": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/X6f1341/X1484": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/X899169/X1838": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xd3607d/X6487": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Disks around high-mass stars"
+  },
+  "uid://A002/Xc74b5b/X7c16": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/Xd16a1e/X8d4": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/Xcdd033/X85ff": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xc296d2/X148c": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xe5808e/X80a1": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xda2c82/X765d": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xd9d7c7/X6fd2": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xc66ce1/Xaa9": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/Xb2e94e/X361a": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xd9668b/X3a90": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Solar system - Comets"
+  },
+  "uid://A002/Xcd2acd/X6125": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xce1e34/X1fb8": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/X1207c39/X9417": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/X1009c59/X1ba4d": {
+   "scientific_category": "ISM and star formation",
+   "science_keyword": "Pre-stellar cores, Infra-Red Dark Clouds (IRDC);null"
+  },
+  "uid://A002/X11e10bc/X12662": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Solar system - Comets"
+  },
+  "uid://A002/X877e41/X14c1": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;null"
+  },
+  "uid://A002/Xd9398d/X322a": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xff294f/X7bf4": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/X1001fdc/X2085": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/Xff294f/X2db6": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/Xe539c7/X113b1": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xe50c9e/X17ab": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xdc621b/X2bb0": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xce574d/X123f": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xc20718/X2fcf": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xb39557/X3789": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xb77b17/X3940": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xcd64ec/X9149": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xcf0c6b/X6513": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xff0235/X8c42": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/X1263402/X816f": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xcd8029/Xb6b0": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xcdb7b8/Xfb16": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xb95160/X3e24": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/X74c92c/X6d5": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xb9cc97/X150a": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/Xd0fb35/X90dc": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around high-mass stars"
+  },
+  "uid://A002/Xbe7502/X2047": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/X10b0d7d/X323f": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/X12277ed/X22e53": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Solar system - Comets"
+  },
+  "uid://A002/X74deb6/Xff1": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;null"
+  },
+  "uid://A002/Xba3ea7/X2ab4": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;Brown dwarfs"
+  },
+  "uid://A002/Xb9a2bb/X1899": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;Brown dwarfs"
+  },
+  "uid://A002/X9f2ff8/X25b0": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xd95042/X2d99": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around high-mass stars"
+  },
+  "uid://A002/Xd6ebab/X41a3": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around high-mass stars"
+  },
+  "uid://A002/Xb25e1a/Xed74": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets"
+  },
+  "uid://A002/Xfdf45f/X478e": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;null"
+  },
+  "uid://A002/Xfdb69b/X667a": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;null"
+  },
+  "uid://A002/X126c7ed/Xe9d": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xd12f5c/Xd7c6": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/X12925a3/Xa4b1": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/X74fea5/Xd70": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xcd97a1/X2377": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xcbb583/Xb78": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xf5d76d/X32f1": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xe64b7b/X1704c": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/X107fa96/Xce38": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets"
+  },
+  "uid://A002/Xfeb5e6/X13ee": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;null"
+  },
+  "uid://A002/Xd10f82/X2635": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xcf525f/X5aa4": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xcd97a1/X3f1e": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/X1237e23/Xdb0": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xc26103/X155a": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xcf196f/Xabc5": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xcccc19/X5564": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/Xd248b5/X5186": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around high-mass stars"
+  },
+  "uid://A002/X10a341d/X82d2": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xc067f7/X822": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xd64dca/X410": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/X11d9ce7/X5257": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xbf792a/X26ec": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/X1001fdc/X29ae": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X1001fdc/Xc06e": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X1003af4/X14e08": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1003af4/X3a2c": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1006d51/X228e": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X101088d/Xbf80": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1015532/X20dc8": {
+   "scientific_category": "ISM and star formation",
+   "science_keyword": "Pre-stellar cores, Infra-Red Dark Clouds (IRDC);null",
+   "obs_title": "CLOAK: unCovering Lupus brOwn dwArfs bulK emission",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1018459/X73b0": {
+   "scientific_category": "ISM and star formation",
+   "science_keyword": "Pre-stellar cores, Infra-Red Dark Clouds (IRDC);null",
+   "obs_title": "CLOAK: unCovering Lupus brOwn dwArfs bulK emission",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X1020da2/X78cd": {
+   "scientific_category": "ISM and star formation",
+   "science_keyword": "Pre-stellar cores, Infra-Red Dark Clouds (IRDC);null",
+   "obs_title": "CLOAK: unCovering Lupus brOwn dwArfs bulK emission",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X10228b9/X423": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X105e6e0/X7c5e": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1066403/Xbbde": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X106b646/X1295": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X106b646/X19c5": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X106b646/X21a9": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X106ccd1/X1a38": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X106ccd1/Xbe52": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X106ccd1/Xc4a6": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X106f040/X13932": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X106f040/X1426f": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X106f040/X148f3": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X106f040/X26c7": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X106f040/X2b06": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X106f040/X2e59": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X107376c/X12b9": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X107376c/X1ba2": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X107376c/X4442": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "When terrestrial planets collide: imaging the aftermath of an impact in the Solar neighbourhood",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X107376c/X6126": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X1074d99/X167": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1074d99/X74e": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1076174/X11cc": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X107649f/X59f": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X107649f/X868f": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X107649f/X8f30": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1077d5b/X9976": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1077d5b/Xa63d": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1077d5b/Xacdc": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X107fa96/X150f6": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X107fa96/X9a88": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X10854a6/X33f5": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X10854a6/X3ac1": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X1086384/X10bc1": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1086384/Xdeeb": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1088045/X3c7b": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1088045/X4ebc": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1088045/X51df": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1088045/X5c31": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X108c378/X1ced": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X108c378/X21d6": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X108c378/X26b3": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X108c378/X2a0f": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X108c378/X331a": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X108c378/X3ab4": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X1093ae8/X14a7": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1093ae8/X1c39": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1093ae8/X2228": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1093ae8/X28ac": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1093ae8/Xe18": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1096e27/X4a35": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1097a87/X1ba1": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1097a87/X1e64": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1097a87/X22ab": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1097a87/X75ae": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1097a87/X795f": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Simultaneous Monitoring of Stellar Flares with ALMA and TESS to Discover Space Weather Environments of Exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X10a341d/Xdc45": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Band 6 ACA Photometric survey of double-belts debris disks",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X10a513c/X389e": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Band 6 ACA Photometric survey of double-belts debris disks",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X10a513c/X3b99": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Band 6 ACA Photometric survey of double-belts debris disks",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X10b22d7/X1d34": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Band 6 ACA Photometric survey of double-belts debris disks",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X10b22d7/X2445": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Band 6 ACA Photometric survey of double-belts debris disks",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X10b33b1/X145d": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Band 6 ACA Photometric survey of double-belts debris disks",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X10b33b1/X1ca0": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Band 6 ACA Photometric survey of double-belts debris disks",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X10b33b1/X2700": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Band 6 ACA Photometric survey of double-belts debris disks",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X10b33b1/Xf94": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Band 6 ACA Photometric survey of double-belts debris disks",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X10b6f7c/X850c": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Band 6 ACA Photometric survey of double-belts debris disks",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X1119e64/X27e3": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X1171dca/X5df0": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X12209f7/X163ba": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Detecting gaseous water in a warm exo-asteroid belt and testing a new mechanism to deliver water to exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X12209f7/X16edb": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Detecting gaseous water in a warm exo-asteroid belt and testing a new mechanism to deliver water to exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X12235df/X7876": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Detecting gaseous water in a warm exo-asteroid belt and testing a new mechanism to deliver water to exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X12235df/X8337": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Detecting gaseous water in a warm exo-asteroid belt and testing a new mechanism to deliver water to exoplanets",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X12277ed/X178c6": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Detecting gaseous water in a warm exo-asteroid belt and testing a new mechanism to deliver water to exoplanets",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X122b6ff/X1041e": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Solar system - Comets",
+   "obs_title": "Exocometary volatile delivery in the inner regions of the Eta Corvi system",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X122b6ff/X18e15": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Solar system - Comets",
+   "obs_title": "Exocometary volatile delivery in the inner regions of the Eta Corvi system",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X1240efd/X13b03": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "Probing the Collisional Cascade in AU Mic with Resolved Vertical Structures at Multiple Wavelengths",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X1240efd/X14140": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "Probing the Collisional Cascade in AU Mic with Resolved Vertical Structures at Multiple Wavelengths",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X1240efd/X14e83": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "Probing the Collisional Cascade in AU Mic with Resolved Vertical Structures at Multiple Wavelengths",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1263402/X856c": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Measuring the millimetre emission for a sample of spatially resolved debris discs",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1263402/Xb082": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Measuring the millimetre emission for a sample of spatially resolved debris discs",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1264cde/X258b": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Measuring the millimetre emission for a sample of spatially resolved debris discs",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X1264cde/X2d40": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Measuring the millimetre emission for a sample of spatially resolved debris discs",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X126787e/X1170": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Measuring the millimetre emission for a sample of spatially resolved debris discs",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X126787e/X1c15": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Measuring the millimetre emission for a sample of spatially resolved debris discs",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X126787e/X227e": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Measuring the millimetre emission for a sample of spatially resolved debris discs",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X1268362/X812d": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Measuring the millimetre emission for a sample of spatially resolved debris discs",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X12694b3/Xab7": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Measuring the millimetre emission for a sample of spatially resolved debris discs",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X126d12f/X259f": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Measuring the millimetre emission for a sample of spatially resolved debris discs",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X126fc6d/Xc894": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Measuring the millimetre emission for a sample of spatially resolved debris discs",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1271cbb/X12af8": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Measuring the millimetre emission for a sample of spatially resolved debris discs",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X12754c1/X9b5": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Measuring the millimetre emission for a sample of spatially resolved debris discs",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1275eb2/Xe05": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Measuring the millimetre emission for a sample of spatially resolved debris discs",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X12771d5/X10e06": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Measuring the millimetre emission for a sample of spatially resolved debris discs",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X12771d5/X3b63": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Measuring the millimetre emission for a sample of spatially resolved debris discs",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X12771d5/X9f13": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Measuring the millimetre emission for a sample of spatially resolved debris discs",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X128b034/X11ca9": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Solar system - Comets",
+   "obs_title": "Exocometary volatile delivery in the inner regions of the Eta Corvi system",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1294347/X1af7f": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Measuring the millimetre emission for a sample of spatially resolved debris discs",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1294347/X1b730": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Measuring the millimetre emission for a sample of spatially resolved debris discs",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X1294347/X5c2e": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Measuring the millimetre emission for a sample of spatially resolved debris discs",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X129691d/X6985": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Measuring the millimetre emission for a sample of spatially resolved debris discs",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X129754b/X1a931": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "Probing the Collisional Cascade in AU Mic with Resolved Vertical Structures at Multiple Wavelengths",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X129754b/X22e6e": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "Probing the Collisional Cascade in AU Mic with Resolved Vertical Structures at Multiple Wavelengths",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X129754b/X2363e": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "Probing the Collisional Cascade in AU Mic with Resolved Vertical Structures at Multiple Wavelengths",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X129754b/X23b68": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "Probing the Collisional Cascade in AU Mic with Resolved Vertical Structures at Multiple Wavelengths",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X129754b/X2b51b": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "Probing the Collisional Cascade in AU Mic with Resolved Vertical Structures at Multiple Wavelengths",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X129754b/X6946": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Measuring the millimetre emission for a sample of spatially resolved debris discs",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X129754b/X70a9": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Measuring the millimetre emission for a sample of spatially resolved debris discs",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X129c219/X19cb": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "Probing the Collisional Cascade in AU Mic with Resolved Vertical Structures at Multiple Wavelengths",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X12a079b/X22389": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Exo-planets;null",
+   "obs_title": "Monitoring Flares from TRAPPIST 1 with ALMA and JWST",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X12a079b/Xf640": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "Probing the Collisional Cascade in AU Mic with Resolved Vertical Structures at Multiple Wavelengths",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X12a8fc8/X1980": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Exo-planets;null",
+   "obs_title": "Monitoring Flares from TRAPPIST 1 with ALMA and JWST",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X12a8fc8/X2201": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Exo-planets;null",
+   "obs_title": "Monitoring Flares from TRAPPIST 1 with ALMA and JWST",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/X12a8fc8/X44b": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Exo-planets;null",
+   "obs_title": "Monitoring Flares from TRAPPIST 1 with ALMA and JWST",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X12a8fc8/Xb82": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Exo-planets;null",
+   "obs_title": "Monitoring Flares from TRAPPIST 1 with ALMA and JWST",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X12ac5b5/X14ae": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Exo-planets;null",
+   "obs_title": "Monitoring Flares from TRAPPIST 1 with ALMA and JWST",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X12b3da5/X2f34": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Measuring the millimetre emission for a sample of spatially resolved debris discs",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X12b3da5/X4411": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Measuring the millimetre emission for a sample of spatially resolved debris discs",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X12b487b/X386a": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Exo-planets;null",
+   "obs_title": "Monitoring Flares from TRAPPIST 1 with ALMA and JWST",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X12b966a/X38de": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Exo-planets;null",
+   "obs_title": "Monitoring Flares from TRAPPIST 1 with ALMA and JWST",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X12bff3f/X3f36": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Exo-planets;null",
+   "obs_title": "Monitoring Flares from TRAPPIST 1 with ALMA and JWST",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X7116f1/X1785": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Dust structures in the beta Pictoris disk at high resolution",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X74eb2a/X80e": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;null",
+   "obs_title": "Solving the Faint Young Sun Paradox wit ALMA",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X74eb2a/Xaf0": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;null",
+   "obs_title": "Solving the Faint Young Sun Paradox wit ALMA",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X75bfbf/X1430": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Detailed structure of the Eta Corvi debris disk",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X75bfbf/Xace": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Dust structures in the beta Pictoris disk at high resolution",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X7d194b/X58f": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Massive CO-rich Comet Clouds Around Youthful Main Sequence Stars",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X7d80c7/X15c6": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Who Stirs the Pot? Dynamics of Edge-On Debris Disks",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X8602fa/X509f": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Constraining the Inner Disk Edge of the Solar Analog tau Ceti",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X9707f1/Xa89": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Constraining the Inner Disk Edge of the Solar Analog tau Ceti",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X99c183/X4f1e": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Resolving the narrow Kuiper belt analog around epsilon Eridani",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/X9db5ce/X224b": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "What lies outside super-Earth planetary systems?",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xa42f75/X319": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Who Stirs the Pot? Dynamics of Edge-On Debris Disks",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xa7a216/X23e4": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Dust structures in the beta Pictoris disk at high resolution",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xb0ebd1/X1855": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Debris Disk Structure around Nearby Sun-like Stars",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xb20b6d/Xc4c": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "Resolving the debris disk and its structure around the young M dwarf TWA 7",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xb28642/Xcff3": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Debris Disk Structure around Nearby Sun-like Stars",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xb2f730/X5b37": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Debris Disk Structure around Nearby Sun-like Stars",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xb2f730/X9e28": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets",
+   "obs_title": "Probing cool dust across the white dwarf cooling track: evidence for planetary remnants in evolved systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xb3d48f/X26f7": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Debris Disk Structure around Nearby Sun-like Stars",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xb47876/X3918": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Debris Disk Structure Disentangled",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xb54d65/X727": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "What lies beyond Exo-Jupiter planets?",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xb825df/X2265": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "Resolving the debris disk and its structure around the young M dwarf TWA 7",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xb99071/X3ca": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Signature of a Planet in the Gyr-old Eccentric Debris Ring of HD 202628",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xb9b1b9/X971": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;Brown dwarfs",
+   "obs_title": "Hot on the Trail of Millimeter Emission from the Coolest Stars",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xb9c01c/X2004": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Debris Disks Around Tau Ceti and Epsilon Eridani",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xb9c01c/X41a2": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "Double-ring debris disks at 10s of au: probing how far out planets can form",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xb9cc97/X1734": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Debris Disks Around Tau Ceti and Epsilon Eridani",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xb9cc97/X193f": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Debris Disks Around Tau Ceti and Epsilon Eridani",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xba0af7/X8a66": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "Double-ring debris disks at 10s of au: probing how far out planets can form",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xba38f9/X36d": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;Brown dwarfs",
+   "obs_title": "Hot on the Trail of Millimeter Emission from the Coolest Stars",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xba460f/X7e6": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Debris Disks Around Tau Ceti and Epsilon Eridani",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xba4d35/X2990": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Debris Disks Around Tau Ceti and Epsilon Eridani",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xba4d35/Xb3a3": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Debris Disks Around Tau Ceti and Epsilon Eridani",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xbaa732/X1627": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Debris Disks Around Tau Ceti and Epsilon Eridani",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xbb44e1/X5d00": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;Brown dwarfs",
+   "obs_title": "Hot on the Trail of Millimeter Emission from the Coolest Stars",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xbbcb1f/X7dd5": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "Double-ring debris disks at 10s of au: probing how far out planets can form",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xbbdc51/X2cb6": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "Double-ring debris disks at 10s of au: probing how far out planets can form",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xbcef34/X2720": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "SEARCHING FOR A KUIPER BELT ANALOG IN PROXIMA CENTAURI WITH ALMA",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xbe2ed7/X7c91": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "Double-ring debris disks at 10s of au: probing how far out planets can form",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xbf032d/X1d31": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "Double-ring debris disks at 10s of au: probing how far out planets can form",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xbf1cbb/X6176": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Signature of a Planet in the Gyr-old Eccentric Debris Ring of HD 202628",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xbf894a/X700d": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "The Debris Disk Surrounding HD 107146: A Possible Super-Earth at 80 AU",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xbf9c0a/X1d95": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "SEARCHING FOR A KUIPER BELT ANALOG IN PROXIMA CENTAURI WITH ALMA",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xc074d4/X2e6": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Debris Disk Structure Around Nearby Sun-like Stars with the ACA",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xc079b5/X1ae": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Debris Disk Structure Around Nearby Sun-like Stars with the ACA",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc079b5/X82f": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Debris Disk Structure Around Nearby Sun-like Stars with the ACA",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc19d6f/X1c16": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Debris Disk Structure Around Nearby Sun-like Stars with the ACA",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xc19d6f/X5706": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Debris Disk Structure Around Nearby Sun-like Stars with the ACA",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xc21a10/X28c4": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Debris Disk Structure Around Nearby Sun-like Stars with the ACA",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xc23361/Xb5c9": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Debris Disk Structure Around Nearby Sun-like Stars with the ACA",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xc296d2/X59c8": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "The hybrid disk phenomenon over the stellar mass range",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc66ce1/X1345": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Apocenter glow in the Gyr-old debris disk of HR 1010",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xc67b7e/X1f16": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Apocenter glow in the Gyr-old debris disk of HR 1010",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xc68b3e/X107b": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Apocenter glow in the Gyr-old debris disk of HR 1010",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc694dd/X3e5f": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Apocenter glow in the Gyr-old debris disk of HR 1010",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc694dd/X41ca": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Apocenter glow in the Gyr-old debris disk of HR 1010",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc6a3db/X26cc": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Apocenter glow in the Gyr-old debris disk of HR 1010",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc6a3db/X7b5b": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Apocenter glow in the Gyr-old debris disk of HR 1010",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc6b674/X23f2": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Apocenter glow in the Gyr-old debris disk of HR 1010",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc6b674/X28f5": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Apocenter glow in the Gyr-old debris disk of HR 1010",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc6c0d5/X121e": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Apocenter glow in the Gyr-old debris disk of HR 1010",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc6d2f9/X7060": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Apocenter glow in the Gyr-old debris disk of HR 1010",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc6e968/X1339": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Apocenter glow in the Gyr-old debris disk of HR 1010",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc6fa08/X1053": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Apocenter glow in the Gyr-old debris disk of HR 1010",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xc6ff69/X1560": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Apocenter glow in the Gyr-old debris disk of HR 1010",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xc7111c/X61dc": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Apocenter glow in the Gyr-old debris disk of HR 1010",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc77d4f/X6247": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc7a409/X5de8": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc7b4ea/X2729": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc7e4e4/X683a": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc7fa6f/X28a8": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc805c1/X1ab2": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc83b78/X256c": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc8592e/Xd319": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xc8ed16/X334b": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc8ed16/Xafd5": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc92012/X6a6f": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc92fe3/X255d": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc92fe3/X4379": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc92fe3/X4af1": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc92fe3/X9313": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc92fe3/Xa1eb": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc92fe3/Xaa2f": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc94c38/X1923": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc94c38/Xa4bc": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc94c38/Xaae": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc94c38/Xad7a": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc94c38/Xb5c5": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc94c38/Xc003": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc96463/X164e": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc96463/X1d7a": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc96463/X281c": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc96463/X30ea": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc96f17/X2a84": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc9831a/X13c7": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xc9831a/Xa0b7": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc9831a/Xe79": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc99ad7/X1619": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc99ad7/X2cc": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc99ad7/X5c4c": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Exo-planets;null",
+   "obs_title": "Constraining Ultracool Dwarf Radio Emission Mechanisms and Implications for the TRAPPIST-1 Planetary System",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc99ad7/X623d": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Exo-planets;null",
+   "obs_title": "Constraining Ultracool Dwarf Radio Emission Mechanisms and Implications for the TRAPPIST-1 Planetary System",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc99ad7/X67ff": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Exo-planets;null",
+   "obs_title": "Constraining Ultracool Dwarf Radio Emission Mechanisms and Implications for the TRAPPIST-1 Planetary System",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc99ad7/Xe20": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc9c531/X17b": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Exo-planets;null",
+   "obs_title": "Constraining Ultracool Dwarf Radio Emission Mechanisms and Implications for the TRAPPIST-1 Planetary System",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc9c531/X6143": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Exo-planets;null",
+   "obs_title": "Constraining Ultracool Dwarf Radio Emission Mechanisms and Implications for the TRAPPIST-1 Planetary System",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc9c531/X632d": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Exo-planets;null",
+   "obs_title": "Constraining Ultracool Dwarf Radio Emission Mechanisms and Implications for the TRAPPIST-1 Planetary System",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc9c531/X67a0": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Exo-planets;null",
+   "obs_title": "Constraining Ultracool Dwarf Radio Emission Mechanisms and Implications for the TRAPPIST-1 Planetary System",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xc9c531/X67e": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xca2b8a/Xe2c": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xca464b/Xebf": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xcb8a93/X395": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xcb8a93/X7bee": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xcb8a93/X83b4": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xcbc47c/X12a5": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xcbc47c/X2d9": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xcbc47c/Xd4": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Getting the composition of exocomets with ALMA",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xcc3ae3/X12e7": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xcc3ae3/Xcea0": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xcca365/X3822": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "REsolved ALMA Survey Of Nearby Stars (REASONS): a population study of the formation location of planetesimal belts",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xccb526/X733b": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xcccc19/X4dfa": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Debris disks around UCDs, what lies beyond TRAPPIST-1h?",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xcd1950/X1675": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "eta Crucis campaign",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xcd97a1/X2b1e": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "REsolved ALMA Survey Of Nearby Stars (REASONS): a population study of the formation location of planetesimal belts",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xce0587/Xe4d0": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The Fomalhaut C Debris Disk: Key to the famous eccentric ring around A?",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xce1e34/X7be": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "REsolved ALMA Survey Of Nearby Stars (REASONS): a population study of the formation location of planetesimal belts",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xce574d/X37e1": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The frontier of rocky planet formation: are low-mass stars super-efficient?",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xce574d/X8706": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The Fomalhaut C Debris Disk: Key to the famous eccentric ring around A?",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xcf749a/X36e0": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "What lies beyond Exo-Jupiter planets?",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xd09670/X1d79": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "REsolved ALMA Survey Of Nearby Stars (REASONS): a population study of the formation location of planetesimal belts",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd09670/X3077": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The frontier of rocky planet formation: are low-mass stars super-efficient?",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xd0e450/X1e19": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Debris disks around UCDs, what lies beyond TRAPPIST-1h?",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xd0e450/X259b": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Debris disks around UCDs, what lies beyond TRAPPIST-1h?",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd0e450/Xc008": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Debris disks around UCDs, what lies beyond TRAPPIST-1h?",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd0e450/Xc7a1": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Debris disks around UCDs, what lies beyond TRAPPIST-1h?",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd10f82/X7829": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The frontier of rocky planet formation: are low-mass stars super-efficient?",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd12f5c/X5deb": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xd16a1e/Xf0d": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd189ef/X5fa5": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xd1b0f3/X2f3": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd1b0f3/Xb67": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd1c06f/X4a7": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd1c06f/X9f4c": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd1c06f/Xf04b": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd1c06f/Xf769": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd1daeb/X282": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd1daeb/X9fd": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd1f23d/X53b2": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd1ff61/X166": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd20b17/X2e1a": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd21a3a/X8a5a": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd248b5/X2fa": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd28a9e/Xb92f": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd28a9e/Xbb59": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd28a9e/Xbd84": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd29c1f/X445c": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Searching for Kuiper-Belt analogues around the closest M-dwarf planetary systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd40be0/X749c": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Disks around high-mass stars",
+   "obs_title": "Unlocking the TWA 3 Triple System with ALMA",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd64dca/X820": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Circumplanetary ring system surrounding a distant planet around a Solar-type star?",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd659d4/X211": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Circumplanetary ring system surrounding a distant planet around a Solar-type star?",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd9398d/X37e8": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "Disk around a nearby resolved planet",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd95042/X5feb": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The disks around low-mass stars in the solar neirborhood",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xd95042/X67d7": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The disks around low-mass stars in the solar neirborhood",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd9668b/X3f6e": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Determining the Dynamical Origin of the Disk Structure Around HD 53143",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xd9668b/X7c83": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The disks around low-mass stars in the solar neirborhood",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd9668b/X841a": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The disks around low-mass stars in the solar neirborhood",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd9668b/X88ad": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The disks around low-mass stars in the solar neirborhood",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd9668b/Xa9df": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Solar system - Comets",
+   "obs_title": "The cyanide content of exocomets at the epoch of volatile delivery",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd99ff3/X152c8": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around high-mass stars",
+   "obs_title": "Measuring the Emission of Stellar Atmospheres at Submillimeter/Millimeter Wavelengths",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xd99ff3/X9611": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around high-mass stars",
+   "obs_title": "Measuring the Emission of Stellar Atmospheres at Submillimeter/Millimeter Wavelengths",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xd9d7c7/Xbb64": {
+   "scientific_category": "ISM and star formation",
+   "science_keyword": "Pre-stellar cores, Infra-Red Dark Clouds (IRDC);null",
+   "obs_title": "Confirmation of a sample of pre- and proto-substellar objects in Lupus molecular clouds",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xda1250/X6f6b": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The disks around low-mass stars in the solar neirborhood",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xda1250/X72ef": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The disks around low-mass stars in the solar neirborhood",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xda2c82/X62d7": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The disks around low-mass stars in the solar neirborhood",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xda2c82/X7136": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The disks around low-mass stars in the solar neirborhood",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xdaef5a/X14fed": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The disks around low-mass stars in the solar neirborhood",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xdaef5a/X6873": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The disks around low-mass stars in the solar neirborhood",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xdaef5a/X7167": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The disks around low-mass stars in the solar neirborhood",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xdaef5a/Xdd9b": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The disks around low-mass stars in the solar neirborhood",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xdb33cb/X729": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The disks around low-mass stars in the solar neirborhood",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xdb3eb4/X899": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The disks around low-mass stars in the solar neirborhood",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xdb4b9a/X108f": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The disks around low-mass stars in the solar neirborhood",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xdb4b9a/Xa7c": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The disks around low-mass stars in the solar neirborhood",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xdb7ab7/X1025": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Millimeter Monitoring of the Closest Planetary System - Stellar and Dust Emission from Proxima Centauri",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xdb7ab7/X140ee": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Millimeter Monitoring of the Closest Planetary System - Stellar and Dust Emission from Proxima Centauri",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xdb7ab7/X5b4e": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The disks around low-mass stars in the solar neirborhood",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xdb7ab7/X8bda": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Millimeter Monitoring of the Closest Planetary System - Stellar and Dust Emission from Proxima Centauri",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xdbc154/X138c": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Millimeter Monitoring of the Closest Planetary System - Stellar and Dust Emission from Proxima Centauri",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xdbc154/X8708": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Millimeter Monitoring of the Closest Planetary System - Stellar and Dust Emission from Proxima Centauri",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xdc0d09/X1938": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Millimeter Monitoring of the Closest Planetary System - Stellar and Dust Emission from Proxima Centauri",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xdc21b9/X252f": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Millimeter Monitoring of the Closest Planetary System - Stellar and Dust Emission from Proxima Centauri",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xdc946c/X226": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The disks around low-mass stars in the solar neirborhood",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xdcad18/X305b": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The disks around low-mass stars in the solar neirborhood",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xdcbe57/X2dd3": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The disks around low-mass stars in the solar neirborhood",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xdcf222/X4da7": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The disks around low-mass stars in the solar neirborhood",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xdd0d37/X17f99": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The disks around low-mass stars in the solar neirborhood",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xdd0d37/X18197": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars",
+   "obs_title": "The disks around low-mass stars in the solar neirborhood",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xe45e29/Xb7d4": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Gas around MS stars: A common exocometary origin for hot and cold gas",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xe48598/Xff51": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Massive Planets and Debris Discs: How do Planetary Systems evolve in the presence of Multiple Massive Planets",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xe4f0a6/Xf0fd": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Unveiling the planetary architecture around the Solar analogue HD107146",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xe539c7/X12189": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The Shape of Things to Come: Planetary Influence on the Inner Edge of the Closest Debris Disc",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xeba1ac/Xbc74": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "Unveiling the planetary architecture around the Solar analogue HD107146",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xeef629/X5a6e": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "The first minisurvey for neutral carbon gas in debris disks around G-type stars to test secondary gas disk models",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xf05a48/X269c": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "The first minisurvey for neutral carbon gas in debris disks around G-type stars to test secondary gas disk models",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xf4df6f/Xc7": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Enabling a full multiwavength analysis of secondary gas release in debris disks",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xf5d76d/Xcc5": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Enabling a full multiwavength analysis of secondary gas release in debris disks",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xf5d76d/Xe19": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Enabling a full multiwavength analysis of secondary gas release in debris disks",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xf5d76d/Xeb8": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null",
+   "obs_title": "Enabling a full multiwavength analysis of secondary gas release in debris disks",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xf8d29c/X173e": {
+   "scientific_category": "ISM and star formation",
+   "science_keyword": "Pre-stellar cores, Infra-Red Dark Clouds (IRDC);null",
+   "obs_title": "CLOAK: unCovering Lupus brOwn dwArfs bulK emission",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xf8f6a9/X10359": {
+   "scientific_category": "ISM and star formation",
+   "science_keyword": "Pre-stellar cores, Infra-Red Dark Clouds (IRDC);null",
+   "obs_title": "CLOAK: unCovering Lupus brOwn dwArfs bulK emission",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xfdc8ec/X4cec": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;null",
+   "obs_title": "The Origin and Impact of Flares in M Dwarf Systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xfdc8ec/X5134": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;null",
+   "obs_title": "The Origin and Impact of Flares in M Dwarf Systems",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xfddca6/Xcf25": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;null",
+   "obs_title": "The Origin and Impact of Flares in M Dwarf Systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xfe1962/X4ef9": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;null",
+   "obs_title": "The Origin and Impact of Flares in M Dwarf Systems",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xfe2e17/X282": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;null",
+   "obs_title": "The Origin and Impact of Flares in M Dwarf Systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xfe3986/X5c7e": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;null",
+   "obs_title": "The Origin and Impact of Flares in M Dwarf Systems",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xfe62c1/X398": {
+   "scientific_category": "ISM and star formation",
+   "science_keyword": "Pre-stellar cores, Infra-Red Dark Clouds (IRDC);null",
+   "obs_title": "CLOAK: unCovering Lupus brOwn dwArfs bulK emission",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xfec857/X11fd": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;null",
+   "obs_title": "The Origin and Impact of Flares in M Dwarf Systems",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xfec857/X6b2": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;null",
+   "obs_title": "The Origin and Impact of Flares in M Dwarf Systems",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xfed4ee/X1b1": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;null",
+   "obs_title": "The Origin and Impact of Flares in M Dwarf Systems",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xfee03e/X82ee": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;null",
+   "obs_title": "The Origin and Impact of Flares in M Dwarf Systems",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xff0235/X26e3": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xff0235/X3cf0": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xff0235/X502d": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xff0235/X8392": {
+   "scientific_category": "ISM and star formation",
+   "science_keyword": "Pre-stellar cores, Infra-Red Dark Clouds (IRDC);null",
+   "obs_title": "CLOAK: unCovering Lupus brOwn dwArfs bulK emission",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xff0235/X99ed": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xff294f/X1fb": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xff294f/X40a2": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xff294f/X634": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xff294f/X812c": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xff294f/Xaf70": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xff294f/Xc10b": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xff45a6/X107fe": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xff45a6/X10ca8": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xff45a6/X111c3": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xff45a6/X13fc": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xff45a6/X7d88": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "asdm_uid"
+  },
+  "uid://A002/Xff45a6/X8474": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xff699e/X7543": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xff699e/Xd7": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xff81e8/X6f26": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xff81e8/X734e": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xff99e1/X1b0c4": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xff99e1/X24be0": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xff99e1/X2b2ee": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xff99e1/X2c3bb": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xff99e1/X9cdf": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xfff3d8/Xd46": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xfffde1/X2b1a": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xfffde1/X3835": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xfffde1/X9bd6": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "member_ous"
+  },
+  "uid://A002/Xfffde1/Xffdf": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets",
+   "obs_title": "The ALMA survey to Resolve exoKuiper belt Substructures (ARKS)",
+   "cat_src": "asdm_uid"
+  }
+ },
+ "harvest": {
+  "asdm_uid": 130,
+  "member_ous": 248
+ }
+}

@@ -6,6 +6,42 @@ Bump the **minor** number (1.00 → 1.01) for content edits/additions within
 the same broad draft stage; bump the **major** number (1.x → 2.00) once
 Paper II's actual results/discussion/conclusions sections are added.
 
+
+## v3.80 (2026-09-19) — the completed archival sweep
+
+The catalogue grows from **443 windows / 104 execution blocks / 88 stars /
+81 systems** to **1956 / 479 / 94 / 87** as the archival download-and-search
+campaign completes, and every number, table and figure in the paper is
+rebuilt on it. Union bandwidth 113.9 -> 125.1 GHz; Class A/B 126/317 ->
+459/1497; systems with drift-resolving coverage 58 -> 65.
+
+- **The result the larger sample makes possible.** Stage-1 spatial outliers
+  go from 4 to 13, in 7 star-band pairs and 6 systems. Nine lie within
+  +-50 km/s of a molecular transition in the star's own frame and are CO;
+  **eight of those are beta Pictoris alone**, recovered independently in five
+  Band 3 and three Band 6 windows from six execution blocks. The remaining
+  **four are unattributed against 3.8 expected by chance** at the ensemble's
+  own rank floor of 1/513 (*p* = 0.53). Quadrupling the catalogue did not
+  accumulate unexplained events.
+- **Every stage-1 outlier is fine-channel**: 13 of 459 Class A against 0.89
+  expected, **0 of 1497 Class B** against 2.92 expected.
+- **A new external null.** 195 windows in 46 blocks toward stars at 40-50 pc
+  were queued by a beam-matching step that did not check distance. They are
+  outside the sample and excluded from every number in the paper, but they
+  ran through the identical frozen pipeline and entered no tuning decision:
+  ranks median 0.502, KS *p* = 0.96, **0 outliers against 0.4 expected**.
+- Occurrence limit at 1e16 W tightens 6.4 -> 5.9 per cent, duty-cycle variant
+  11.2 -> 7.6. Zero systems reach Arecibo-class effective EIRP (unchanged);
+  two now reach twice it, where one did.
+- **Engineering**: the catalogue's size is written once, to
+  `catalogue_constants.json`, and asserted against everywhere. Three
+  generators were still reading a 431-window snapshot three catalogues out of
+  date. Archive metadata and obscore categories re-harvested over all 482
+  blocks; Splatalogue harvest re-run (45 -> 49 islands, 4958 -> 5406 lines).
+- Gates: 30 pages, 0 errors / 0 undefined / 0 overfull / 0 Type 3, 800 macros
+  0 unused, abstract 1906/1920, clean regeneration **56/56 byte-identical**,
+  arXiv set 51 items.
+
 ## v1.00 (2026-08-30)
 - First draft. MNRAS-format LaTeX (official `mnras.cls`/`mnras.bst` v3.2
   from CTAN), authors Glenn J. White & Robin Dey.

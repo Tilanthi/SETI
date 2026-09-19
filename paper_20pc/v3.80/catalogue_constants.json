@@ -1,0 +1,18 @@
+{
+ "n_windows": 1956,
+ "n_fine": 459,
+ "n_coarse": 1497,
+ "n_stars": 94,
+ "n_systems": 87,
+ "n_eb": 479,
+ "n_starbands": 118,
+ "n_withheld": 12,
+ "n_defect": 15,
+ "n_dup": 41,
+ "n_flagged": 13,
+ "n_flagged_old": 23,
+ "n_src": 135,
+ "n_ctrl": 512,
+ "source": "frozen_export_v3.80.json",
+ "snapshot": "2026-09-19T20:41Z"
+}
