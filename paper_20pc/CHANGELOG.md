@@ -9,6 +9,35 @@ Paper II's actual results/discussion/conclusions sections are added.
 
 
 
+
+## v3.83 (2026-09-20) — three internal review rounds, readability, figure sizing
+
+Findings in `v3.83/REFEREE_ROUNDS_V383.md`.
+
+- **Three numerical defects found and fixed at the generator**: Table 5 said
+  every threshold crossing was Class A (4 of 75 are Class B); the crossing
+  ledger said the mask accounts for three stage-1 outliers (it accounts for
+  nine); **Fig. 2's decision-flow panel read "3 identified astrophysical; 1
+  unexplained" where the catalogue says 9 and 4** — hand-typed into the
+  figure generator and stale since the catalogue grew.
+- The abstract's scope narrowed to what is true: every public observation
+  *for which the archive holds a pipeline calibration*. The median window's
+  P90 is now quoted beside the deepest window's.
+- The HD 48370 near-tie, the limiting case of the whole screening argument,
+  was hand-typed; generated now.
+- The whole detection chain appears in one place, in the Fig. 2 caption.
+- **Readability**: the three densest main-text paragraphs rewritten to lead
+  with what the evidence shows; main-text sentences over 400 characters
+  44 -> 36. No number, qualification or citation removed.
+- **Figs 6, 9 and 10 resized**: all three were drawn wide and printed into a
+  single column at scales 0.58, 0.41 and 0.45, so their type rendered at
+  under half its designed size. Redrawn at single-column width, printing at
+  1:1. Fig. 10's panels stacked; its canvas had been hard-coded inside its
+  own generator, overriding the size table.
+- Gates: 32 pages, 0 errors / 0 undefined / 0 overfull / 0 Type 3, 850
+  macros 0 unused, abstract 1917/1920, clean regeneration **64/64
+  byte-identical**, audit 56 pass 0 fail.
+
 ## v3.82 (2026-09-20) — referee cycle
 
 Two referee reports, worked point by point. Reply in

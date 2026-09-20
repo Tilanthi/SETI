@@ -1,0 +1,1479 @@
+{
+ "_doc": "Splatalogue query (transitions flagged as observed in space) at the CORRECTED CP-72 2713 crossing frequency 344.269746 GHz and, for comparison, at the superseded window centre 345.1152 GHz; and the same query at each of the 20 crossing frequencies. Velocities use the convention dv = c (nu_obs - nu_rest)/nu_rest; the CP-72 2713 stellar and LSR columns use the paper own frame chain (BC = -15.31 km/s on 2022-10-14, v_sys = +7.985 km/s, LSR term 7.56 km/s), which reproduces the published CO(3-2) offsets -1323.2 and -1300 km/s.",
+ "generated_utc": "2026-09-11",
+ "cp72": {
+  "corrected_crossing_GHz": 344.269746,
+  "superseded_window_centre_GHz": 345.1152,
+  "frame_chain": {
+   "BC_kms": -15.31,
+   "v_sys_kms": 7.985,
+   "LSR_term_kms": 7.56,
+   "convention": "dv = c (nu_obs - nu_rest)/nu_rest"
+  },
+  "at_corrected": [
+   {
+    "name": "Unidentified Transition",
+    "qn": "U-344288.4",
+    "freq": 344.2884,
+    "eu": 0.0,
+    "chem": "UNIDENTIFIED",
+    "linelist": "Lovas",
+    "v_topo": -16.24,
+    "v_star": 7.05,
+    "v_lsr": 6.63,
+    "in_tube": true
+   },
+   {
+    "name": "34SO2 v=0",
+    "qn": "10(4,6)-10(3,7)",
+    "freq": 344.2453459,
+    "eu": 88.51118,
+    "chem": "Sulfur Dioxide",
+    "linelist": "CDMS",
+    "v_topo": 21.25,
+    "v_star": 44.54,
+    "v_lsr": 44.12,
+    "in_tube": true
+   },
+   {
+    "name": "SO 3Sigma v = 0",
+    "qn": "8( 8)- 7( 7)",
+    "freq": 344.310612,
+    "eu": 87.48155,
+    "chem": "Sulfur Monoxide",
+    "linelist": "CDMS",
+    "v_topo": -35.58,
+    "v_star": -12.29,
+    "v_lsr": -12.71,
+    "in_tube": true
+   },
+   {
+    "name": "HC15N v = 0",
+    "qn": "4-3",
+    "freq": 344.2003199,
+    "eu": 41.29825,
+    "chem": "Hydrogen Cyanide",
+    "linelist": "JPL",
+    "v_topo": 60.47,
+    "v_star": 83.76,
+    "v_lsr": 83.34,
+    "in_tube": false
+   },
+   {
+    "name": "CH3OCH3",
+    "qn": "19(1,19)-18(0,18) EE",
+    "freq": 344.357944,
+    "eu": 0.0,
+    "chem": "Dimethyl ether",
+    "linelist": "Lovas",
+    "v_topo": -76.78,
+    "v_star": -53.49,
+    "v_lsr": -53.91,
+    "in_tube": false
+   },
+   {
+    "name": "CH3OCHO v=0",
+    "qn": "28( 18,11)-  27( 18,10)  A",
+    "freq": 344.170873,
+    "eu": 454.24272,
+    "chem": "Methyl Formate",
+    "linelist": "SLAIM",
+    "v_topo": 86.12,
+    "v_star": 109.42,
+    "v_lsr": 108.99,
+    "in_tube": false
+   },
+   {
+    "name": "CH3OCHO v=0",
+    "qn": "28(18,10)-27(18,9) A",
+    "freq": 344.170873,
+    "eu": 0.0,
+    "chem": "Methyl Formate",
+    "linelist": "Lovas",
+    "v_topo": 86.12,
+    "v_star": 109.42,
+    "v_lsr": 108.99,
+    "in_tube": false
+   },
+   {
+    "name": "CH3OH vt = 0-2",
+    "qn": "18(2,16)-17(3,14)",
+    "freq": 344.109132,
+    "eu": 0.0,
+    "chem": "Methanol",
+    "linelist": "Lovas",
+    "v_topo": 139.93,
+    "v_star": 163.22,
+    "v_lsr": 162.8,
+    "in_tube": false
+   },
+   {
+    "name": "CH3OH vt = 0-2",
+    "qn": "19(1,19)-18(2,16) ++",
+    "freq": 344.4439,
+    "eu": 0.0,
+    "chem": "Methanol",
+    "linelist": "Lovas",
+    "v_topo": -151.58,
+    "v_star": -128.28,
+    "v_lsr": -128.71,
+    "in_tube": false
+   },
+   {
+    "name": "CH3OCHO v=0",
+    "qn": "32(  1,32)-  31(  0,31)  E",
+    "freq": 344.029288,
+    "eu": 276.09623,
+    "chem": "Methyl Formate",
+    "linelist": "SLAIM",
+    "v_topo": 209.54,
+    "v_star": 232.83,
+    "v_lsr": 232.41,
+    "in_tube": false
+   },
+   {
+    "name": "CH3OCHO v=0",
+    "qn": "32(  0,32)-  31(  0,31)  E",
+    "freq": 344.029287,
+    "eu": 276.09623,
+    "chem": "Methyl Formate",
+    "linelist": "SLAIM",
+    "v_topo": 209.54,
+    "v_star": 232.83,
+    "v_lsr": 232.41,
+    "in_tube": false
+   },
+   {
+    "name": "CH3OCHO v=0",
+    "qn": "32(  1,32)-  31(  1,31)  E",
+    "freq": 344.029286,
+    "eu": 276.09623,
+    "chem": "Methyl Formate",
+    "linelist": "SLAIM",
+    "v_topo": 209.54,
+    "v_star": 232.84,
+    "v_lsr": 232.41,
+    "in_tube": false
+   },
+   {
+    "name": "CH3OCHO v=0",
+    "qn": "32(  0,32)-  31(  1,31)  E",
+    "freq": 344.029285,
+    "eu": 276.09623,
+    "chem": "Methyl Formate",
+    "linelist": "SLAIM",
+    "v_topo": 209.54,
+    "v_star": 232.84,
+    "v_lsr": 232.41,
+    "in_tube": false
+   },
+   {
+    "name": "CH3OCH3",
+    "qn": "10(3,9)-10(2,8) EE",
+    "freq": 344.515377,
+    "eu": 0.0,
+    "chem": "Dimethyl ether",
+    "linelist": "Lovas",
+    "v_topo": -213.74,
+    "v_star": -190.45,
+    "v_lsr": -190.87,
+    "in_tube": false
+   },
+   {
+    "name": "CH3OCH3",
+    "qn": "11( 3, 9)-10( 2, 8) EE",
+    "freq": 344.5153801,
+    "eu": 72.78356,
+    "chem": "Dimethyl ether",
+    "linelist": "JPL",
+    "v_topo": -213.75,
+    "v_star": -190.45,
+    "v_lsr": -190.88,
+    "in_tube": false
+   },
+   {
+    "name": "CH3OCHO v=0",
+    "qn": "28( 16,13)-  27( 16,12)  A",
+    "freq": 344.515418,
+    "eu": 409.26609,
+    "chem": "Methyl Formate",
+    "linelist": "SLAIM",
+    "v_topo": -213.78,
+    "v_star": -190.49,
+    "v_lsr": -190.91,
+    "in_tube": false
+   },
+   {
+    "name": "CH3OCHO v=0",
+    "qn": "28(16,* )-28(16,* ) A",
+    "freq": 344.515418,
+    "eu": 0.0,
+    "chem": "Methyl Formate",
+    "linelist": "Lovas",
+    "v_topo": -213.78,
+    "v_star": -190.49,
+    "v_lsr": -190.91,
+    "in_tube": false
+   },
+   {
+    "name": "CH3OCHO v=0",
+    "qn": "28( 16,13)-  27( 16,12)  E",
+    "freq": 344.541313,
+    "eu": 409.26014,
+    "chem": "Methyl Formate",
+    "linelist": "SLAIM",
+    "v_topo": -236.3,
+    "v_star": -213.0,
+    "v_lsr": -213.43,
+    "in_tube": false
+   },
+   {
+    "name": "OC34S",
+    "qn": "29-28",
+    "freq": 343.9832677,
+    "eu": 247.66956,
+    "chem": "Carbonyl Sulfide",
+    "linelist": "JPL",
+    "v_topo": 249.68,
+    "v_star": 272.97,
+    "v_lsr": 272.55,
+    "in_tube": false
+   },
+   {
+    "name": "34SO2 v=0",
+    "qn": "19(1,19)-18(0,18)",
+    "freq": 344.5810445,
+    "eu": 167.65667,
+    "chem": "Sulfur Dioxide",
+    "linelist": "CDMS",
+    "v_topo": -270.84,
+    "v_star": -247.54,
+    "v_lsr": -247.97,
+    "in_tube": false
+   },
+   {
+    "name": "SO2 v2=1",
+    "qn": "24( 2,22)-23( 3,21)",
+    "freq": 343.9237512,
+    "eu": 1057.88331,
+    "chem": "Sulfur dioxide",
+    "linelist": "CDMS",
+    "v_topo": 301.6,
+    "v_star": 324.89,
+    "v_lsr": 324.47,
+    "in_tube": false
+   },
+   {
+    "name": "34SO",
+    "qn": "2( 3)- 2( 1)",
+    "freq": 343.8511297,
+    "eu": 20.90551,
+    "chem": "Sulfur Monoxide",
+    "linelist": "CDMS",
+    "v_topo": 364.98,
+    "v_star": 388.27,
+    "v_lsr": 387.85,
+    "in_tube": false
+   },
+   {
+    "name": "H2CS",
+    "qn": "10(  2, 8)-   9(  2, 7)",
+    "freq": 343.812941,
+    "eu": 143.37238,
+    "chem": "Thioformaldehyde",
+    "linelist": "SLAIM",
+    "v_topo": 398.32,
+    "v_star": 421.61,
+    "v_lsr": 421.19,
+    "in_tube": false
+   },
+   {
+    "name": "c-HCCCH  v=0",
+    "qn": "23(13,10)-23(12,11)",
+    "freq": 343.8050619,
+    "eu": 806.34581,
+    "chem": "Cyclopropenylidene",
+    "linelist": "CDMS",
+    "v_topo": 405.2,
+    "v_star": 428.49,
+    "v_lsr": 428.07,
+    "in_tube": false
+   },
+   {
+    "name": "CH2CHCN v15= 1",
+    "qn": "36(4,32)-35(4,31)",
+    "freq": 343.76194,
+    "eu": 0.0,
+    "chem": "Vinyl Cyanide",
+    "linelist": "Lovas",
+    "v_topo": 442.85,
+    "v_star": 466.15,
+    "v_lsr": 465.72,
+    "in_tube": false
+   },
+   {
+    "name": "CH3OCH3",
+    "qn": "17(  2,16)-  16(  1,15) EE",
+    "freq": 343.7542,
+    "eu": 143.6976,
+    "chem": "Dimethyl ether",
+    "linelist": "SLAIM",
+    "v_topo": 449.61,
+    "v_star": 472.91,
+    "v_lsr": 472.48,
+    "in_tube": false
+   },
+   {
+    "name": "CH3OCHO v=0",
+    "qn": "27(  7,20)-  26(  7,19)  E",
+    "freq": 343.731813,
+    "eu": 258.47142,
+    "chem": "Methyl Formate",
+    "linelist": "SLAIM",
+    "v_topo": 469.17,
+    "v_star": 492.46,
+    "v_lsr": 492.04,
+    "in_tube": false
+   },
+   {
+    "name": "34SO2 v=0",
+    "qn": "13(4,10)-13(3,11)",
+    "freq": 344.8079147,
+    "eu": 121.63281,
+    "chem": "Sulfur Dioxide",
+    "linelist": "CDMS",
+    "v_topo": -467.91,
+    "v_star": -444.61,
+    "v_lsr": -445.04,
+    "in_tube": false
+   }
+  ],
+  "at_superseded": [
+   {
+    "name": "CH3OCH3",
+    "qn": "35( 4,31)-35( 3,32) AE",
+    "freq": 345.1291037,
+    "eu": 581.64031,
+    "chem": "Dimethyl ether",
+    "linelist": "JPL",
+    "v_topo": -12.08,
+    "v_star": 11.22,
+    "v_lsr": 10.79,
+    "in_tube": true
+   },
+   {
+    "name": "CH3OCH3",
+    "qn": "35( 4,32)-35( 3,33) EA",
+    "freq": 345.1291038,
+    "eu": 581.64031,
+    "chem": "Dimethyl ether",
+    "linelist": "JPL",
+    "v_topo": -12.08,
+    "v_star": 11.22,
+    "v_lsr": 10.79,
+    "in_tube": true
+   },
+   {
+    "name": "CH3OCH3",
+    "qn": "35(  2,33)-  35(  1,34) EE",
+    "freq": 345.130999,
+    "eu": 581.63853,
+    "chem": "Dimethyl ether",
+    "linelist": "SLAIM",
+    "v_topo": -13.72,
+    "v_star": 9.57,
+    "v_lsr": 9.15,
+    "in_tube": true
+   },
+   {
+    "name": "SO2 v = 0",
+    "qn": "5( 5, 1)- 6( 4, 2)",
+    "freq": 345.1489696,
+    "eu": 75.14405,
+    "chem": "Sulfur dioxide",
+    "linelist": "JPL",
+    "v_topo": -29.33,
+    "v_star": -6.04,
+    "v_lsr": -6.46,
+    "in_tube": true
+   },
+   {
+    "name": "34SO2 v=0",
+    "qn": "8(4,4)-8(3,5)",
+    "freq": 345.1686641,
+    "eu": 71.047,
+    "chem": "Sulfur Dioxide",
+    "linelist": "CDMS",
+    "v_topo": -46.44,
+    "v_star": -23.14,
+    "v_lsr": -23.57,
+    "in_tube": true
+   },
+   {
+    "name": "NH2CHO",
+    "qn": "17(  0,17)-  16(  0,16)",
+    "freq": 345.181245,
+    "eu": 151.58724,
+    "chem": "Formamide",
+    "linelist": "SLAIM",
+    "v_topo": -57.36,
+    "v_star": -34.07,
+    "v_lsr": -34.49,
+    "in_tube": true
+   },
+   {
+    "name": "Unidentified Transition",
+    "qn": "U-345203.4",
+    "freq": 345.2034,
+    "eu": 0.0,
+    "chem": "UNIDENTIFIED",
+    "linelist": "Lovas",
+    "v_topo": -76.6,
+    "v_star": -53.3,
+    "v_lsr": -53.73,
+    "in_tube": false
+   },
+   {
+    "name": "Unidentified Transition",
+    "qn": "U-345226.6",
+    "freq": 345.2266,
+    "eu": 0.0,
+    "chem": "UNIDENTIFIED",
+    "linelist": "Lovas",
+    "v_topo": -96.74,
+    "v_star": -73.44,
+    "v_lsr": -73.87,
+    "in_tube": false
+   },
+   {
+    "name": "34SO2 v=0",
+    "qn": "11(4,8)-11(3,9)",
+    "freq": 344.9981602,
+    "eu": 98.62644,
+    "chem": "Sulfur Dioxide",
+    "linelist": "CDMS",
+    "v_topo": 101.7,
+    "v_star": 125.0,
+    "v_lsr": 124.57,
+    "in_tube": false
+   },
+   {
+    "name": "H13CN v2 = 1",
+    "qn": "J=4-3,  l=1e",
+    "freq": 345.238735,
+    "eu": 0.0,
+    "chem": "Hydrogen Cyanide",
+    "linelist": "Lovas",
+    "v_topo": -107.27,
+    "v_star": -83.98,
+    "v_lsr": -84.4,
+    "in_tube": false
+   },
+   {
+    "name": "34SO2 v=0",
+    "qn": "15(4,12)-15(3,13)",
+    "freq": 344.9875847,
+    "eu": 148.34497,
+    "chem": "Sulfur Dioxide",
+    "linelist": "CDMS",
+    "v_topo": 110.9,
+    "v_star": 134.19,
+    "v_lsr": 133.77,
+    "in_tube": false
+   },
+   {
+    "name": "34SO2 v=0",
+    "qn": "9(4,6)-9(3,7)",
+    "freq": 345.2856199,
+    "eu": 79.31737,
+    "chem": "Sulfur Dioxide",
+    "linelist": "CDMS",
+    "v_topo": -147.97,
+    "v_star": -124.67,
+    "v_lsr": -125.1,
+    "in_tube": false
+   },
+   {
+    "name": "Unidentified Transition",
+    "qn": "U-345291.6",
+    "freq": 345.2916,
+    "eu": 0.0,
+    "chem": "UNIDENTIFIED",
+    "linelist": "Lovas",
+    "v_topo": -153.16,
+    "v_star": -129.86,
+    "v_lsr": -130.29,
+    "in_tube": false
+   },
+   {
+    "name": "SiO v = 1",
+    "qn": "8-7",
+    "freq": 344.916543,
+    "eu": 0.0,
+    "chem": "Silicon Monoxide",
+    "linelist": "Lovas",
+    "v_topo": 172.67,
+    "v_star": 195.96,
+    "v_lsr": 195.54,
+    "in_tube": false
+   },
+   {
+    "name": "SiC2 v=0",
+    "qn": "16( 0,16)-15( 0,15)",
+    "freq": 344.906034,
+    "eu": 144.16149,
+    "chem": "Silicon Carbide",
+    "linelist": "CDMS",
+    "v_topo": 181.81,
+    "v_star": 205.1,
+    "v_lsr": 204.68,
+    "in_tube": false
+   },
+   {
+    "name": "SO2 v = 0",
+    "qn": "13,(2,12)-12(1,11)",
+    "freq": 345.338509,
+    "eu": 0.0,
+    "chem": "Sulfur dioxide",
+    "linelist": "Lovas",
+    "v_topo": -193.86,
+    "v_star": -170.56,
+    "v_lsr": -170.99,
+    "in_tube": false
+   },
+   {
+    "name": "SO2 v = 0",
+    "qn": "13( 2,12)-12( 1,11)",
+    "freq": 345.3385377,
+    "eu": 92.98367,
+    "chem": "Sulfur dioxide",
+    "linelist": "CDMS",
+    "v_topo": -193.88,
+    "v_star": -170.59,
+    "v_lsr": -171.01,
+    "in_tube": false
+   },
+   {
+    "name": "SO2 v = 0",
+    "qn": "62(16,46)-63(15,49)",
+    "freq": 345.3387778,
+    "eu": 2418.19987,
+    "chem": "Sulfur dioxide",
+    "linelist": "CDMS",
+    "v_topo": -194.09,
+    "v_star": -170.8,
+    "v_lsr": -171.22,
+    "in_tube": false
+   },
+   {
+    "name": "34SO2 v=0",
+    "qn": "13(4,10)-13(3,11)",
+    "freq": 344.8079147,
+    "eu": 121.63281,
+    "chem": "Sulfur Dioxide",
+    "linelist": "CDMS",
+    "v_topo": 267.17,
+    "v_star": 290.46,
+    "v_lsr": 290.04,
+    "in_tube": false
+   },
+   {
+    "name": "SO2 v = 0",
+    "qn": "26( 9,17)-27( 8,20)",
+    "freq": 345.4489815,
+    "eu": 520.99646,
+    "chem": "Sulfur dioxide",
+    "linelist": "JPL",
+    "v_topo": -289.67,
+    "v_star": -266.37,
+    "v_lsr": -266.8,
+    "in_tube": false
+   },
+   {
+    "name": "CH3OCHO v=0",
+    "qn": "28( 13,15)-  27( 13,14)  E",
+    "freq": 345.461052,
+    "eu": 351.85424,
+    "chem": "Methyl Formate",
+    "linelist": "SLAIM",
+    "v_topo": -300.13,
+    "v_star": -276.84,
+    "v_lsr": -277.26,
+    "in_tube": false
+   },
+   {
+    "name": "CH3OCHO v=0",
+    "qn": "28( 13,16)-  27( 13,15)  A",
+    "freq": 345.466941,
+    "eu": 351.85597,
+    "chem": "Methyl Formate",
+    "linelist": "SLAIM",
+    "v_topo": -305.24,
+    "v_star": -281.94,
+    "v_lsr": -282.37,
+    "in_tube": false
+   },
+   {
+    "name": "CH3OCHO v=0",
+    "qn": "28( 13,15)-  27( 13,14)  A",
+    "freq": 345.46699,
+    "eu": 351.85597,
+    "chem": "Methyl Formate",
+    "linelist": "SLAIM",
+    "v_topo": -305.28,
+    "v_star": -281.98,
+    "v_lsr": -282.41,
+    "in_tube": false
+   },
+   {
+    "name": "CH3OCHO v=0",
+    "qn": "28(13,* )-27(13,* ) A",
+    "freq": 345.46699,
+    "eu": 0.0,
+    "chem": "Methyl Formate",
+    "linelist": "Lovas",
+    "v_topo": -305.28,
+    "v_star": -281.98,
+    "v_lsr": -282.41,
+    "in_tube": false
+   },
+   {
+    "name": "CH3OCHO v=0",
+    "qn": "28( 13,16)-  27( 13,15)  E",
+    "freq": 345.486661,
+    "eu": 351.85116,
+    "chem": "Methyl Formate",
+    "linelist": "SLAIM",
+    "v_topo": -322.33,
+    "v_star": -299.04,
+    "v_lsr": -299.46,
+    "in_tube": false
+   },
+   {
+    "name": "34SO2 v=0",
+    "qn": "7(4,4)-7(3,5)",
+    "freq": 345.5196563,
+    "eu": 63.69764,
+    "chem": "Sulfur Dioxide",
+    "linelist": "CDMS",
+    "v_topo": -350.93,
+    "v_star": -327.63,
+    "v_lsr": -328.06,
+    "in_tube": false
+   },
+   {
+    "name": "Unidentified Transition",
+    "qn": "U-345544.4",
+    "freq": 345.5444,
+    "eu": 0.0,
+    "chem": "UNIDENTIFIED",
+    "linelist": "Lovas",
+    "v_topo": -372.37,
+    "v_star": -349.08,
+    "v_lsr": -349.5,
+    "in_tube": false
+   },
+   {
+    "name": "34SO2 v=0",
+    "qn": "6(4,2)-6(3,3)",
+    "freq": 345.5530927,
+    "eu": 57.26899,
+    "chem": "Sulfur Dioxide",
+    "linelist": "CDMS",
+    "v_topo": -379.9,
+    "v_star": -356.61,
+    "v_lsr": -357.03,
+    "in_tube": false
+   },
+   {
+    "name": "HC3N v=0",
+    "qn": "J=38-37",
+    "freq": 345.60901,
+    "eu": 323.49156,
+    "chem": "Cyanoacetylene",
+    "linelist": "CDMS",
+    "v_topo": -428.35,
+    "v_star": -405.05,
+    "v_lsr": -405.48,
+    "in_tube": false
+   },
+   {
+    "name": "34SO2 v=0",
+    "qn": "19(1,19)-18(0,18)",
+    "freq": 344.5810445,
+    "eu": 167.65667,
+    "chem": "Sulfur Dioxide",
+    "linelist": "CDMS",
+    "v_topo": 464.73,
+    "v_star": 488.02,
+    "v_lsr": 487.6,
+    "in_tube": false
+   },
+   {
+    "name": "34SO2 v=0",
+    "qn": "5(4,2)-5(3,3)",
+    "freq": 345.6512934,
+    "eu": 51.76028,
+    "chem": "Sulfur Dioxide",
+    "linelist": "CDMS",
+    "v_topo": -464.97,
+    "v_star": -441.67,
+    "v_lsr": -442.1,
+    "in_tube": false
+   },
+   {
+    "name": "34SO2 v=0",
+    "qn": "4(4,0)-4(3,1)",
+    "freq": 345.6787871,
+    "eu": 47.1706,
+    "chem": "Sulfur Dioxide",
+    "linelist": "CDMS",
+    "v_topo": -488.78,
+    "v_star": -465.48,
+    "v_lsr": -465.91,
+    "in_tube": false
+   },
+   {
+    "name": "CH3OCHO v=0",
+    "qn": "28( 16,13)-  27( 16,12)  E",
+    "freq": 344.541313,
+    "eu": 409.26014,
+    "chem": "Methyl Formate",
+    "linelist": "SLAIM",
+    "v_topo": 499.35,
+    "v_star": 522.65,
+    "v_lsr": 522.22,
+    "in_tube": false
+   }
+  ]
+ },
+ "crossings": [
+  {
+   "star": "HD 285968",
+   "band": "6",
+   "f_cross": 230.502079,
+   "paper_nearest": "CO(2-1)",
+   "paper_off_kms": "-46.712",
+   "flag": "False",
+   "cat_name": "Unidentified Transition",
+   "cat_qn": "U-230468",
+   "cat_freq": 230.468,
+   "cat_eu": 0.0,
+   "v_topo": 44.33,
+   "n_within_60kms_topo": 3,
+   "within": [
+    [
+     "Unidentified Transition",
+     "U-230468",
+     230.468,
+     44.3
+    ],
+    [
+     "CO v = 0",
+     "2-1",
+     230.538,
+     -46.7
+    ],
+    [
+     "CO v = 0",
+     "2- 1",
+     230.538,
+     -46.7
+    ]
+   ]
+  },
+  {
+   "star": "AU Mic",
+   "band": "6",
+   "f_cross": 230.82523,
+   "paper_nearest": "CO(2-1)",
+   "paper_off_kms": "373.515",
+   "flag": "False",
+   "cat_name": "CH2CHCN v15= 1",
+   "cat_qn": "24(1,23)-23(1,22)",
+   "cat_freq": 230.84138,
+   "cat_eu": 0.0,
+   "v_topo": -20.97,
+   "n_within_60kms_topo": 4,
+   "within": [
+    [
+     "CH2CHCN v15= 1",
+     "24(1,23)-23(1,22)",
+     230.84138,
+     -21.0
+    ],
+    [
+     "CH2CHCN v= 0",
+     "24(1,24)-23(0,23)",
+     230.808374,
+     21.9
+    ],
+    [
+     "AlF v=0",
+     "J=7-6",
+     230.793905,
+     40.7
+    ],
+    [
+     "g-CH3CH2OH",
+     "6(5,1)-5(4,1) ,  vt=0-1",
+     230.793506,
+     41.2
+    ]
+   ]
+  },
+  {
+   "star": "LHS 1140",
+   "band": "6",
+   "f_cross": 230.635464,
+   "paper_nearest": "CO(2-1)",
+   "paper_off_kms": "126.743",
+   "flag": "False",
+   "cat_name": "CO v = 0",
+   "cat_qn": "2-1",
+   "cat_freq": 230.538,
+   "cat_eu": 0.0,
+   "v_topo": 126.74,
+   "n_within_60kms_topo": 0,
+   "within": []
+  },
+  {
+   "star": "HD 10647",
+   "band": "7",
+   "f_cross": 331.497714,
+   "paper_nearest": "",
+   "paper_off_kms": "",
+   "flag": "False",
+   "cat_name": "CH3OH vt = 0-2",
+   "cat_qn": "11(1,10)-11(0,11) -+",
+   "cat_freq": 331.502333,
+   "cat_eu": 0.0,
+   "v_topo": -4.18,
+   "n_within_60kms_topo": 4,
+   "within": [
+    [
+     "CH3OH vt = 0-2",
+     "11(1,10)-11(0,11) -+",
+     331.502333,
+     -4.2
+    ],
+    [
+     "CH3OCHO v=0",
+     "28(  3,25)-  27(  3,24)  A",
+     331.469442,
+     25.6
+    ],
+    [
+     "CH3OCHO v=0",
+     "28(3,25)-27(3,24) A",
+     331.469442,
+     25.6
+    ],
+    [
+     "CH3OCHO v=0",
+     "27( 25, 3)-  26( 25, 2)  A",
+     331.469303,
+     25.7
+    ]
+   ]
+  },
+  {
+   "star": "bet Pic",
+   "band": "3",
+   "f_cross": 115.260644,
+   "paper_nearest": "CO(1-0)",
+   "paper_off_kms": "-26.934",
+   "flag": "True",
+   "cat_name": "CO v = 0",
+   "cat_qn": "1-0",
+   "cat_freq": 115.271202,
+   "cat_eu": 0.0,
+   "v_topo": -27.46,
+   "n_within_60kms_topo": 2,
+   "within": [
+    [
+     "CO v = 0",
+     "1-0",
+     115.271202,
+     -27.5
+    ],
+    [
+     "CO v = 0",
+     "1- 0",
+     115.271202,
+     -27.5
+    ]
+   ]
+  },
+  {
+   "star": "bet Pic",
+   "band": "6",
+   "f_cross": 230.528134,
+   "paper_nearest": "CO(2-1)",
+   "paper_off_kms": "-12.829",
+   "flag": "False",
+   "cat_name": "CO v = 0",
+   "cat_qn": "2-1",
+   "cat_freq": 230.538,
+   "cat_eu": 0.0,
+   "v_topo": -12.83,
+   "n_within_60kms_topo": 2,
+   "within": [
+    [
+     "CO v = 0",
+     "2-1",
+     230.538,
+     -12.8
+    ],
+    [
+     "CO v = 0",
+     "2- 1",
+     230.538,
+     -12.8
+    ]
+   ]
+  },
+  {
+   "star": "bet Pic",
+   "band": "6",
+   "f_cross": 230.516128,
+   "paper_nearest": "CO(2-1)",
+   "paper_off_kms": "-28.443",
+   "flag": "True",
+   "cat_name": "CO v = 0",
+   "cat_qn": "2-1",
+   "cat_freq": 230.538,
+   "cat_eu": 0.0,
+   "v_topo": -28.44,
+   "n_within_60kms_topo": 2,
+   "within": [
+    [
+     "CO v = 0",
+     "2-1",
+     230.538,
+     -28.4
+    ],
+    [
+     "CO v = 0",
+     "2- 1",
+     230.538,
+     -28.4
+    ]
+   ]
+  },
+  {
+   "star": "bet Pic",
+   "band": "6",
+   "f_cross": 241.751236,
+   "paper_nearest": "CS(5-4)",
+   "paper_off_kms": "-3898.032",
+   "flag": "False",
+   "cat_name": "Unidentified Transition",
+   "cat_qn": "U-241739.9",
+   "cat_freq": 241.7399,
+   "cat_eu": 0.0,
+   "v_topo": 14.06,
+   "n_within_60kms_topo": 7,
+   "within": [
+    [
+     "Unidentified Transition",
+     "U-241739.9",
+     241.7399,
+     14.1
+    ],
+    [
+     "CH2CHCN v= 0",
+     "25(2,23)-24(2,22)",
+     241.737567,
+     17.0
+    ],
+    [
+     "CH3OH vt = 0-2",
+     "5(-1,5)-4(-1,4)",
+     241.767247,
+     -19.9
+    ],
+    [
+     "Unidentified Transition",
+     "U-241732",
+     241.732,
+     23.9
+    ],
+    [
+     "HNCO v=0",
+     "11(0,11)-10(0,10)",
+     241.774037,
+     -28.3
+    ],
+    [
+     "Unidentified Transition",
+     "U-241719",
+     241.719,
+     40.0
+    ]
+   ]
+  },
+  {
+   "star": "CD-57 1054",
+   "band": "7",
+   "f_cross": 346.509896,
+   "paper_nearest": "CO(3-2)",
+   "paper_off_kms": "618.922",
+   "flag": "False",
+   "cat_name": "Unidentified Transition",
+   "cat_qn": "U-346508.7",
+   "cat_freq": 346.5087,
+   "cat_eu": 0.0,
+   "v_topo": 1.03,
+   "n_within_60kms_topo": 3,
+   "within": [
+    [
+     "Unidentified Transition",
+     "U-346508.7",
+     346.5087,
+     1.0
+    ],
+    [
+     "SO2 v = 0",
+     "16(4,12)-16(3,13)",
+     346.523864,
+     -12.1
+    ],
+    [
+     "SO2 v = 0",
+     "16( 4,12)-16( 3,13)",
+     346.5238776,
+     -12.1
+    ]
+   ]
+  },
+  {
+   "star": "ALMA J153702653-33192492",
+   "band": "6",
+   "f_cross": 217.591752,
+   "paper_nearest": "SiO(5-4)",
+   "paper_off_kms": "672.138",
+   "flag": "False",
+   "cat_name": "Unidentified Transition",
+   "cat_qn": "U-217582.3",
+   "cat_freq": 217.5823,
+   "cat_eu": 0.0,
+   "v_topo": 13.02,
+   "n_within_60kms_topo": 6,
+   "within": [
+    [
+     "Unidentified Transition",
+     "U-217582.3",
+     217.5823,
+     13.0
+    ],
+    [
+     "CH313CH2CN",
+     "24(3,21)-23(3,20)",
+     217.614359,
+     -31.1
+    ],
+    [
+     "CH313CH2CN",
+     "24(  3,21)-  23(  3,20)",
+     217.614359,
+     -31.1
+    ],
+    [
+     "Unidentified Transition",
+     "U-217568.5",
+     217.5685,
+     32.0
+    ],
+    [
+     "Unidentified Transition",
+     "U-217615.7",
+     217.6157,
+     -33.0
+    ],
+    [
+     "Unidentified Transition",
+     "U-217558.7",
+     217.5587,
+     45.5
+    ]
+   ]
+  },
+  {
+   "star": "ALMA J153702653-33192492",
+   "band": "6",
+   "f_cross": 218.766556,
+   "paper_nearest": "H2CO",
+   "paper_off_kms": "",
+   "flag": "False",
+   "cat_name": "H2CO",
+   "cat_qn": "3(2,1)-2(2,0)",
+   "cat_freq": 218.760071,
+   "cat_eu": 0.0,
+   "v_topo": 8.89,
+   "n_within_60kms_topo": 2,
+   "within": [
+    [
+     "H2CO",
+     "3(2,1)-2(2,0)",
+     218.760071,
+     8.9
+    ],
+    [
+     "c-HCCCH  v=0",
+     "7(1,6)-7(0,7)",
+     218.732679,
+     46.4
+    ]
+   ]
+  },
+  {
+   "star": "ALMA J153702653-33192492",
+   "band": "6",
+   "f_cross": 230.972966,
+   "paper_nearest": "CO(2-1)",
+   "paper_off_kms": "565.631",
+   "flag": "False",
+   "cat_name": "SO2 v = 0",
+   "cat_qn": "37(10,28)-38( 9,29)",
+   "cat_freq": 230.9652453,
+   "cat_eu": 891.24247,
+   "v_topo": 10.02,
+   "n_within_60kms_topo": 4,
+   "within": [
+    [
+     "SO2 v = 0",
+     "37(10,28)-38( 9,29)",
+     230.9652453,
+     10.0
+    ],
+    [
+     "SO2 v = 0",
+     "37(10,28)-38(9,29)",
+     230.965245,
+     10.0
+    ],
+    [
+     "t-CH3CH2OH",
+     "14(0,14)-13(1,13)",
+     230.991377,
+     -23.9
+    ],
+    [
+     "t-CH3CH2OH",
+     "16(5,11)-16(4,12)",
+     230.953787,
+     24.9
+    ]
+   ]
+  },
+  {
+   "star": "HD14055",
+   "band": "7",
+   "f_cross": 330.446597,
+   "paper_nearest": "CO(3-2)",
+   "paper_off_kms": "-13307.370",
+   "flag": "False",
+   "cat_name": "13CH3OH vt = 0",
+   "cat_qn": "7(1,6)-6(1,5) E",
+   "cat_freq": 330.442391,
+   "cat_eu": 0.0,
+   "v_topo": 3.82,
+   "n_within_60kms_topo": 10,
+   "within": [
+    [
+     "13CH3OH vt = 0",
+     "7(1,6)-6(1,5) E",
+     330.442391,
+     3.8
+    ],
+    [
+     "NH2CHO",
+     "19(  1,18)-  18(  2,17)",
+     330.459651,
+     -11.8
+    ],
+    [
+     "NH2CHO",
+     "19(1,18)-18(2,17)",
+     330.459651,
+     -11.8
+    ],
+    [
+     "NH2CHO",
+     "19( 1,18)-18( 2,17), F=19-18",
+     330.4601361,
+     -12.3
+    ],
+    [
+     "13CH3OH vt = 0",
+     "11(1,10)-11(0,11) A",
+     330.46387,
+     -15.7
+    ],
+    [
+     "13CH3OH vt = 0",
+     "7(3,4)-6(3,3) E",
+     330.408368,
+     34.7
+    ]
+   ]
+  },
+  {
+   "star": "HD14055",
+   "band": "7",
+   "f_cross": 345.234672,
+   "paper_nearest": "CO(3-2)",
+   "paper_off_kms": "-486.651",
+   "flag": "False",
+   "cat_name": "H13CN v2 = 1",
+   "cat_qn": "J=4-3,  l=1e",
+   "cat_freq": 345.238735,
+   "cat_eu": 0.0,
+   "v_topo": -3.53,
+   "n_within_60kms_topo": 9,
+   "within": [
+    [
+     "H13CN v2 = 1",
+     "J=4-3,  l=1e",
+     345.238735,
+     -3.5
+    ],
+    [
+     "Unidentified Transition",
+     "U-345226.6",
+     345.2266,
+     7.0
+    ],
+    [
+     "Unidentified Transition",
+     "U-345203.4",
+     345.2034,
+     27.2
+    ],
+    [
+     "34SO2 v=0",
+     "9(4,6)-9(3,7)",
+     345.2856199,
+     -44.2
+    ],
+    [
+     "NH2CHO",
+     "17(  0,17)-  16(  0,16)",
+     345.181245,
+     46.4
+    ],
+    [
+     "NH2CHO",
+     "17(0,17)-16(0,16)",
+     345.181244,
+     46.4
+    ]
+   ]
+  },
+  {
+   "star": "HD 48370",
+   "band": "6",
+   "f_cross": 230.511674,
+   "paper_nearest": "CO(2-1)",
+   "paper_off_kms": "-34.235",
+   "flag": "True",
+   "cat_name": "CO v = 0",
+   "cat_qn": "2-1",
+   "cat_freq": 230.538,
+   "cat_eu": 0.0,
+   "v_topo": -34.23,
+   "n_within_60kms_topo": 3,
+   "within": [
+    [
+     "CO v = 0",
+     "2-1",
+     230.538,
+     -34.2
+    ],
+    [
+     "CO v = 0",
+     "2- 1",
+     230.538,
+     -34.2
+    ],
+    [
+     "Unidentified Transition",
+     "U-230468",
+     230.468,
+     56.8
+    ]
+   ]
+  },
+  {
+   "star": "HD 48370",
+   "band": "8",
+   "f_cross": 491.949074,
+   "paper_nearest": "CO(4-3)",
+   "paper_off_kms": "20098.012",
+   "flag": "False",
+   "cat_name": "SO2 v = 0",
+   "cat_qn": "7( 4, 4)- 6( 3, 3)",
+   "cat_freq": 491.9347207,
+   "cat_eu": 65.01102,
+   "v_topo": 8.75,
+   "n_within_60kms_topo": 3,
+   "within": [
+    [
+     "SO2 v = 0",
+     "7( 4, 4)- 6( 3, 3)",
+     491.9347207,
+     8.7
+    ],
+    [
+     "SO2 v = 0",
+     "7(4,4)-6(3,3)",
+     491.934697,
+     8.8
+    ],
+    [
+     "H2CO",
+     "7(1,7)-6(1,6)",
+     491.968382,
+     -11.8
+    ]
+   ]
+  },
+  {
+   "star": "CP-72 2713",
+   "band": "7",
+   "f_cross": 344.269746,
+   "paper_nearest": "CO(3-2)",
+   "paper_off_kms": "-1323.206",
+   "flag": "True",
+   "cat_name": "Unidentified Transition",
+   "cat_qn": "U-344288.4",
+   "cat_freq": 344.2884,
+   "cat_eu": 0.0,
+   "v_topo": -16.24,
+   "n_within_60kms_topo": 3,
+   "within": [
+    [
+     "Unidentified Transition",
+     "U-344288.4",
+     344.2884,
+     -16.2
+    ],
+    [
+     "34SO2 v=0",
+     "10(4,6)-10(3,7)",
+     344.2453459,
+     21.2
+    ],
+    [
+     "SO 3Sigma v = 0",
+     "8(8)-7(7)",
+     344.310792,
+     -35.7
+    ]
+   ]
+  },
+  {
+   "star": "HD170773",
+   "band": "7",
+   "f_cross": 330.610721,
+   "paper_nearest": "CO(3-2)",
+   "paper_off_kms": "-13165.080",
+   "flag": "False",
+   "cat_name": "Unidentified Transition",
+   "cat_qn": "U-330621",
+   "cat_freq": 330.621,
+   "cat_eu": 0.0,
+   "v_topo": -9.32,
+   "n_within_60kms_topo": 5,
+   "within": [
+    [
+     "Unidentified Transition",
+     "U-330621",
+     330.621,
+     -9.3
+    ],
+    [
+     "13CO v = 0",
+     "3-2",
+     330.5879653,
+     20.6
+    ],
+    [
+     "13CO v = 0",
+     "3-2",
+     330.587965,
+     20.6
+    ],
+    [
+     "13CO v = 0",
+     "J= 3- 2, F=5/2-5/2",
+     330.5878671,
+     20.7
+    ],
+    [
+     "34SO2 v=0",
+     "21(2,20)-21(1,21)",
+     330.667757,
+     -51.7
+    ]
+   ]
+  },
+  {
+   "star": "HD 139084B 805632",
+   "band": "7",
+   "f_cross": 345.824056,
+   "paper_nearest": "CO(3-2)",
+   "paper_off_kms": "24.324",
+   "flag": "False",
+   "cat_name": "NS v=0",
+   "cat_qn": "J=15/2-13/2, &Omega;=1/2,  F=17/2-15/2, 15/2-13/2, l=e",
+   "cat_freq": 345.823288,
+   "cat_eu": 0.0,
+   "v_topo": 0.67,
+   "n_within_60kms_topo": 3,
+   "within": [
+    [
+     "NS v=0",
+     "J=15/2-13/2, &Omega;=1/2,  F=17/2-15/2, 15/2-13/2, l=e",
+     345.823288,
+     0.7
+    ],
+    [
+     "CO v = 0",
+     "3-2",
+     345.79599,
+     24.3
+    ],
+    [
+     "CO v = 0",
+     "3- 2",
+     345.79599,
+     24.3
+    ]
+   ]
+  },
+  {
+   "star": "HIP10679",
+   "band": "6",
+   "f_cross": 220.418512,
+   "paper_nearest": "13CO(2-1)",
+   "paper_off_kms": "26.540",
+   "flag": "False",
+   "cat_name": "13CO v = 0",
+   "cat_qn": "2-1",
+   "cat_freq": 220.398684,
+   "cat_eu": 0.0,
+   "v_topo": 26.97,
+   "n_within_60kms_topo": 1,
+   "within": [
+    [
+     "13CO v = 0",
+     "2-1",
+     220.398684,
+     27.0
+    ]
+   ]
+  }
+ ]
+}
