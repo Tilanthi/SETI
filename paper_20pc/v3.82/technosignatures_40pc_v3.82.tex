@@ -2398,7 +2398,7 @@ carry information.
 
 \begin{figure}
 \centering
-\includegraphics[width=0.66\columnwidth]{figures/sensitivity_2d.pdf}
+\includegraphics[width=\columnwidth]{figures/sensitivity_2d.pdf}
 \caption{Two-dimensional sensitivity against window centre frequency for all
 \NWindows{} searched windows, symbol by channelisation class, the axis along
 which completeness differs (Table~\ref{tab:classcomp}). \emph{Left axis}: the
@@ -2407,8 +2407,8 @@ nominal trigger threshold $P_{\rm trig}$, an internal detection statistic.
 $P_{\rm eff}=\HanFacMed\,P_{\rm trig}$, which is the power to compare with a
 transmitter (\S\ref{sec:method}); the released per-window ratio
 $P_{\rm eff,total}/P_{\rm trig}$ runs $\PeffRatioLo$--$\PeffRatioHi$, so read a
-single window's threshold from the catalogue and not from this axis. Ringed symbols are the \NSmearLo{} windows whose
-intra-integration smearing correction exceeds 1 per cent. Grey lines mark the
+single window's threshold from the catalogue and not from this axis. Red rings mark the \NSmearLo{} windows whose intra-integration smearing
+correction exceeds 1 per cent. Grey lines mark the
 Bands 3, 6 and 7 concentrations; dotted, the Arecibo \ArecGHz-GHz EIRP
 benchmark, a power scale only. Note the two decades of scatter at fixed
 frequency: there is no single survey sensitivity.}
@@ -2442,8 +2442,11 @@ Figure~\ref{fig:accel} shows the ceiling as a selection function of period and
 host mass, the host-mass dependence being weak ($a\propto M_\star^{1/3}$ at
 fixed period). Coverage eligibility and search completeness differ: \S\ref{sec:sample}
 audits the \NProgenitorEBTotal{} public blocks in scope against the \NEB{}
-searched, and the campaign of \S\ref{sec:heldout} is working through the
-remainder.
+in the headline sample. The remainder is accounted for and not outstanding:
+\NEbHeldOut{} blocks are the reserved calibration hold-out
+(\S\ref{sec:heldout}), \NEbExcluded{} carry no pipeline calibration in the
+archive, and the rest are duplicate coverage of the same star and tuning
+removed by the de-duplication of \S\ref{sec:sample}.
 
 The survey sits against \citet{Wright2018}'s haystack axis by axis. On
 frequency only Band~3 falls inside that axis's 10\,MHz--115\,GHz span,

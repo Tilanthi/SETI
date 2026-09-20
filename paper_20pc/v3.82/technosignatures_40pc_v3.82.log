@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.8.25)  20 SEP 2026 08:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.8.25)  20 SEP 2026 08:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -689,121 +689,111 @@ LaTeX Warning: A float is stuck (cannot be placed) on input line 2274.
 Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
 
 [20 <./figures/cp72_control_distribution.pdf>]
-<figures/sensitivity_2d.pdf, id=751, 518.60951pt x 258.4372pt>
+<figures/sensitivity_2d.pdf, id=751, 258.92734pt x 213.75836pt>
 File: figures/sensitivity_2d.pdf Graphic file (type pdf)
 <use figures/sensitivity_2d.pdf>
 Package pdftex.def Info: figures/sensitivity_2d.pdf  used on input line 2401.
-(pdftex.def)             Requested size: 161.8768pt x 80.66678pt.
+(pdftex.def)             Requested size: 245.26653pt x 202.48218pt.
  [21 <./figures/sensitivity_2d.pdf>] [22] [23]
-Underfull \hbox (badness 10000) in paragraph at lines 2750--2768
+Underfull \hbox (badness 10000) in paragraph at lines 2753--2771
 []\T1/cmr/m/n/10 The machine-readable cat-a-logue,
  []
 
 
-Underfull \hbox (badness 1924) in paragraph at lines 2750--2768
+Underfull \hbox (badness 1924) in paragraph at lines 2753--2771
 \T1/cmtt/m/n/10 per_target_results_v3.82.csv\T1/cmr/m/n/10 , car-ries 1655 rows
 ,
  []
 
 
-Underfull \hbox (badness 1472) in paragraph at lines 2750--2768
+Underfull \hbox (badness 1472) in paragraph at lines 2753--2771
 \T1/cmr/m/n/10 record. The re-lease also builds di-ag-nos-tic fig-ures
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2791--2797
+Underfull \hbox (badness 10000) in paragraph at lines 2794--2800
 []\T1/cmr/m/n/10 The pipeline de-pends on CASA 6.7.6
  []
 
 
-Underfull \hbox (badness 5954) in paragraph at lines 2791--2797
+Underfull \hbox (badness 5954) in paragraph at lines 2794--2800
 \T1/cmr/m/n/10 (casatools/casatasks 6.7.6-14; []CASA Team et al.[]
  []
 
-
-Underfull \hbox (badness 1565) in paragraph at lines 2823--2828
+[24]
+Underfull \hbox (badness 1565) in paragraph at lines 2826--2831
 \T1/cmr/m/n/10 dow ta-bles (CHAN_WIDTH). A miss-ing ``EF-FEC-
  []
 
-[24] [25]
-<figures/stratified_completeness.pdf, id=884, 491.436pt x 144.54pt>
+[25]
+<figures/stratified_completeness.pdf, id=886, 491.436pt x 144.54pt>
 File: figures/stratified_completeness.pdf Graphic file (type pdf)
 <use figures/stratified_completeness.pdf>
 Package pdftex.def Info: figures/stratified_completeness.pdf  used on input lin
-e 3007.
+e 3010.
 (pdftex.def)             Requested size: 420.76004pt x 123.7594pt.
- (./tab_selection.tex)
-<figures/drift_acceleration.pdf, id=887, 549.05125pt x 347.2975pt>
+ (./tab_selection.tex) [26]
+<figures/drift_acceleration.pdf, id=894, 549.05125pt x 347.2975pt>
 File: figures/drift_acceleration.pdf Graphic file (type pdf)
 <use figures/drift_acceleration.pdf>
 Package pdftex.def Info: figures/drift_acceleration.pdf  used on input line 304
-4.
+7.
 (pdftex.def)             Requested size: 225.64474pt x 142.72675pt.
  (./tab_perband.tex) (./tab_maskband.tex)
-[26] [27 <./figures/stratified_completeness.pdf> <./figures/drift_acceleration.
-pdf>] [28]
-
-LaTeX Warning: A float is stuck (cannot be placed) on input line 3253.
-
-
-LaTeX Warning: A float is stuck (cannot be placed) on input line 3253.
-
-
-Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
-
-[29]
-<figures/control_diagnostics.pdf, id=967, 505.89pt x 215.80624pt>
+[27 <./figures/stratified_completeness.pdf> <./figures/drift_acceleration.pdf>]
+[28] [29]
+<figures/control_diagnostics.pdf, id=969, 505.89pt x 215.80624pt>
 File: figures/control_diagnostics.pdf Graphic file (type pdf)
 <use figures/control_diagnostics.pdf>
 Package pdftex.def Info: figures/control_diagnostics.pdf  used on input line 34
-15.
+18.
 (pdftex.def)             Requested size: 225.64474pt x 96.25903pt.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 3458.
+(Font)              using `T1/cmr/m/it' instead on input line 3461.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3484.
+(hyperref)                removing `math shift' on input line 3487.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 3484.
+(hyperref)                removing `subscript' on input line 3487.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\sigma' on input line 3484.
+(hyperref)                removing `\sigma' on input line 3487.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3484.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3516.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\beta' on input line 3516.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3516.
+(hyperref)                removing `math shift' on input line 3487.
 
 [30 <./figures/control_diagnostics.pdf>]
 
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3519.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\beta' on input line 3519.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3519.
+
+
 LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 3573.
+(Font)              using `T1/cmr/m/it' instead on input line 3576.
 
 
-Underfull \hbox (badness 3343) in paragraph at lines 3624--3634
+Underfull \hbox (badness 3343) in paragraph at lines 3627--3637
 []\T1/cmr/m/it/10 The four classes of ex-cluded en-try. \T1/cmr/m/n/10 (i) Four
 
  []
 
 
-Underfull \hbox (badness 1831) in paragraph at lines 3624--3634
+Underfull \hbox (badness 1831) in paragraph at lines 3627--3637
 \T1/cmr/m/n/10 tar-get/bands (Barnard's Star [B7], Wolf 359 [B7],
  []
 
@@ -817,11 +807,11 @@ nged.
 Here is how much of TeX's memory you used:
  14156 strings out of 480247
  214194 string characters out of 5896151
- 558342 words of memory out of 5000000
+ 554338 words of memory out of 5000000
  31603 multiletter control sequences out of 15000+600000
  493770 words of font info for 90 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 70i,13n,76p,1856b,566s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 70i,13n,76p,1856b,514s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmbx5.pfb></usr/share/texlive/texmf-dist/
@@ -860,10 +850,10 @@ blic/cm-super/sfti0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti09
 00.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/t
 exmf/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/texmf/fonts/type1/pub
 lic/cm-super/sftt1000.pfb>
-Output written on technosignatures_40pc_v3.82.pdf (32 pages, 1231495 bytes).
+Output written on technosignatures_40pc_v3.82.pdf (32 pages, 1232057 bytes).
 PDF statistics:
- 1254 PDF objects out of 1440 (max. 8388607)
- 1035 compressed objects within 11 object streams
+ 1256 PDF objects out of 1440 (max. 8388607)
+ 1036 compressed objects within 11 object streams
  166 named destinations out of 1000 (max. 500000)
  411 words of extra memory for PDF output out of 10000 (max. 10000000)
 

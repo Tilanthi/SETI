@@ -72,3 +72,27 @@ adding any figure to this build.
 Type 3 · 13 underfull (the narrow measure) · 846 macros, 0 unused ·
 abstract 1842/1920 · clean regeneration **64/64 byte-identical** · audit
 **56 pass, 0 fail** · arXiv set builds clean.
+
+## Post-cycle correction: Figure 7
+
+Fig. 7 (`sensitivity_2d.pdf`) was drawn on a **504 pt two-column canvas**
+and then included at `width=0.66\columnwidth`, a scale factor of **0.31**:
+every label was printed at under a third of its designed size. Redrawn on a
+single-column canvas (245 pt) with the type set for 1:1 printing, and
+included at `width=\columnwidth`.
+
+★ **Its caption claimed something the figure did not show.** "Ringed
+symbols are the N windows whose intra-integration smearing correction
+exceeds 1 per cent" — no rings were ever drawn. They are drawn now, from
+the catalogue column the text quotes, and the caption says "red rings".
+Worth remembering: a figure caption is not checked by any gate in this
+build.
+
+Also corrected while on that page: the sentence saying the search campaign
+"is working through the remainder" of the public blocks. It is not; the
+sweep is complete. The remainder is now itemised — the reserved hold-out,
+the blocks the archive holds no pipeline calibration for, and duplicate
+coverage removed by de-duplication.
+
+Gates after the change: 32 pages, 0 errors / 0 undefined / 0 overfull /
+0 Type 3, audit 56 pass 0 fail, clean regeneration 64/64 byte-identical.

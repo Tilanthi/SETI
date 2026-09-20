@@ -95,22 +95,39 @@ def fig_cp72_controls():
 
 
 def fig_sensitivity_2d():
-    fig = plt.figure(figsize=(504.0 / 72.0, 244.8 / 72.0), layout="constrained")
-    fig.get_layout_engine().set(w_pad=0.012, h_pad=0.012)
+    # Single-column canvas: the OJA column is 245 pt, so drawing at that
+    # width and including at \columnwidth prints the figure at 1:1 and the
+    # type at the size it was set in. The previous 504 pt canvas was printed
+    # at 0.66 of a column, i.e. 0.31 scale.
+    fig = plt.figure(figsize=(245.0 / 72.0, 200.0 / 72.0), layout="constrained")
+    fig.get_layout_engine().set(w_pad=0.010, h_pad=0.010)
     ax = fig.add_subplot(111)
     ax.grid(False)
     # Class A open circles in C0, Class B small filled grey points, matching
     # the colours of the figure this generator replaces.
     for cls, lab, kw in (
-            ("B", "Class B: coarse-channel (drift undiscriminated)",
-             dict(s=7, marker="o", facecolor=GREY, edgecolor="none", zorder=2)),
-            ("A", "Class A: fine-channel (drifting-class recovery measured)",
-             dict(s=18, marker="o", facecolor="none",
-                  edgecolor="#1f77b4", linewidth=0.8, zorder=3))):
+            ("B", "Class B: coarse-channel",
+             dict(s=4, marker="o", facecolor=GREY, edgecolor="none", zorder=2)),
+            ("A", "Class A: fine-channel",
+             dict(s=11, marker="o", facecolor="none",
+                  edgecolor="#1f77b4", linewidth=0.6, zorder=3))):
         sel = [r for r in ROWS if r["search_class"] == cls]
         x = [0.5 * (f(r, "flo_GHz") + f(r, "fhi_GHz")) for r in sel]
         y = [f(r, "eirp_nominal_W") for r in sel]
         ax.scatter(x, y, label=lab, **kw)
+    # The caption says ringed symbols mark the windows whose
+    # intra-integration smearing correction exceeds one per cent. Nothing
+    # drew them, so the caption described a figure that did not exist.
+    # Draw them from the catalogue column the text quotes.
+    _sm = [r for r in ROWS
+           if r.get("eta_smear", "") != "" and f(r, "eta_smear") < 0.99]
+    if _sm:
+        ax.scatter([0.5 * (f(r, "flo_GHz") + f(r, "fhi_GHz")) for r in _sm],
+                   [f(r, "eirp_nominal_W") for r in _sm],
+                   s=34, marker="o", facecolor="none", edgecolor="#b03030",
+                   linewidth=0.7, zorder=4,
+                   label="smearing correction $>1$ per cent")
+
     # the grey lines the caption names: the median searched window centre in
     # each of the three bands that carry the survey, computed from the
     # catalogue rather than drawn by hand
@@ -119,14 +136,15 @@ def fig_sensitivity_2d():
                    for r in ROWS if r["band"] == band)
         ax.axvline(c[len(c) // 2], color="0.85", lw=0.6, zorder=0)
     ax.axhline(2e13, color="tab:red", ls=":", lw=0.9, zorder=1)
-    ax.annotate("Arecibo-like planetary radar", xy=(0.015, 2e13),
-                xycoords=("axes fraction", "data"), xytext=(0, 3),
-                textcoords="offset points", fontsize=8.5, va="bottom",
+    ax.annotate("Arecibo-like planetary radar", xy=(0.02, 2e13),
+                xycoords=("axes fraction", "data"), xytext=(0, 3.5),
+                textcoords="offset points", fontsize=6.4, va="bottom",
                 color="tab:red")
     ax.set_yscale("log")
-    ax.set_xlabel("window centre frequency (GHz)", fontsize=10)
-    ax.set_ylabel(r"nominal 5$\sigma$ trigger EIRP $P_{\rm trig}$ (W)", fontsize=10)
-    ax.tick_params(labelsize=9)
+    ax.set_xlabel("window centre frequency (GHz)", fontsize=7.6)
+    ax.set_ylabel(r"nominal 5$\sigma$ trigger EIRP $P_{\rm trig}$ (W)",
+                  fontsize=7.6)
+    ax.tick_params(labelsize=6.8)
     # v3.61 (referee 1, major 7): the physically meaningful threshold is
     # P_eff = HAN x P_trig, so carry it as a second axis rather than leaving
     # the reader to multiply.  The factor is read from the generated macro
@@ -152,11 +170,12 @@ def fig_sensitivity_2d():
         "\\newcommand{\\PeffRatioLo}{%.2f}\n"
         "\\newcommand{\\PeffRatioHi}{%.2f}\n" % (_eff[0], _eff[-1]))
     axr.set_ylabel(r"$P_{\rm eff}$ at the median response ($\times%.2f$)"
-                   % _han, fontsize=10)
-    axr.tick_params(labelsize=9)
+                   % _han, fontsize=7.6)
+    axr.tick_params(labelsize=6.8)
     h, l = ax.get_legend_handles_labels()
-    ax.legend(h[::-1], l[::-1], loc="upper left", fontsize=8.5,
-              borderpad=0.4, frameon=False)
+    ax.legend(h[::-1], l[::-1], loc="upper left", fontsize=6.4,
+              borderpad=0.3, handletextpad=0.4, labelspacing=0.3,
+              frameon=False)
     path = os.path.join(OUT, "sensitivity_2d.pdf")
     # bbox_inches="tight" so the secondary-axis label cannot be clipped by the
     # figure's own bbox: constrained layout does not reserve space for it.
