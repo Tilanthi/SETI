@@ -10,6 +10,44 @@ Paper II's actual results/discussion/conclusions sections are added.
 
 
 
+
+## v3.84 (2026-09-20) — two referee reports, all required changes
+
+Reply in `v3.84/REFEREE_RESPONSE_V384.md`.
+
+- **Visibility-domain test on all four unattributed events**, required by
+  referee 1. The measurement sets had been reclaimed, so the four blocks
+  were re-downloaded and recalibrated from the raw archive. **None is a
+  point source at the stellar position**: largest real part +2.5 sigma,
+  61 Vir below its own controls, and HD 14055's imaginary part 3.2 sigma
+  from zero, which emission at the star cannot produce.
+- **Local radial noise normalisation**, required by referee 2 in place of
+  the post-hoc stellar debit. Standardising each control probe within its
+  own radius bin removes the gradient by construction, with no free
+  parameter. 9 of 13 stage-1 windows keep their flag; the 4 that lose it
+  are the marginal cases, all already dispositioned otherwise. **No
+  disposition changes and the debit is no longer needed.**
+- **One block-accounting identity**: 656 progenitors = 484 processed
+  (404 science + 77 hold-out + 3 windowless) + 177 repeat coverage.
+  "Every public ALMA observation" and "the archive is exhausted" withdrawn.
+- Class A named as the primary experiment; P90 the primary sensitivity
+  everywhere including Fig. 1; the exchangeability failure promoted to the
+  head of section 5.3 and into the candidate-flow figure; a new "what this
+  excludes and what it does not" subsection; the 2e-7 parameter-volume
+  product deleted.
+- Confirmation completeness quantified: 40 of 65 Class A systems have a
+  same-tuning repeat, so for the rest the recurrence test cannot be
+  applied at all.
+- Abstract rewritten in plain language with the disc bias and the
+  duty-cycle blind spot in it; plain-language summary at the end of the
+  Introduction; four audit subsections and six CP-72 paragraphs moved to
+  appendices; conclusions cut to four claims.
+- New figures: selection bias by spectral class, cumulative systems vs
+  P90 with epochs per system, and the four unattributed events.
+- Gates: 34 pages, 0 errors / 0 undefined / 0 overfull / 0 Type 3, 866
+  macros 0 unused, abstract 1916/1920, clean regeneration **71/71
+  byte-identical**.
+
 ## v3.83 (2026-09-20) — three internal review rounds, readability, figure sizing
 
 Findings in `v3.83/REFEREE_ROUNDS_V383.md`.
