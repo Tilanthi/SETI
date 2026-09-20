@@ -7,6 +7,42 @@ the same broad draft stage; bump the **major** number (1.x → 2.00) once
 Paper II's actual results/discussion/conclusions sections are added.
 
 
+
+## v3.81 (2026-09-20) — the pre-registered hold-out, applied
+
+The archival sweep closed at **460/460 worklist items terminal** (428 searched,
+20 excluded because the archive holds no pipeline calibration for them, 12
+failed; 3.97 of 4.28 TB). This round splits that data on a rule fixed before
+it existed and reports the headline on one half, every empirical calibration
+on the other.
+
+- **The rule**: `holdout_rule_v371.py`, committed **2026-09-14T07:10:24Z**
+  (`c75069040eab`) — held out iff `sha256(canonical EB uid)[:8] mod 5 == 0`,
+  with two guards depending only on identifiers and the published block list.
+  **77 of 484 blocks reserved (15.9 %)**; headline 404 blocks / 1655 windows /
+  94 stars / 87 systems. **The reservation costs no star and no system**, which
+  is asserted rather than hoped for.
+- **Every calibration is now out of sample.** On the reserved blocks alone:
+  median stellar add-one rank **0.405** (block-clustered 95 % 0.341-0.458),
+  KS *D* = 0.109 at *p* = 0.0011 over 315 windows; false-alarm tail factor
+  **1.2** (95 % 0.6-1.9 over 5040 trials); **0 stage-1 outliers against 0.61
+  expected**. The rank displacement — the claim referee 1 objected was
+  in-sample — is reproduced on data the design never saw, at very nearly the
+  in-sample value.
+- **One honest negative**: the steep inner-edge radial excess is NOT
+  reproduced out of sample (profile +0.12, +0.10, +0.12, +0.16 inner to
+  outer). The radial correction is now presented as one demonstrated
+  mechanism for the displacement rather than the whole of it.
+- Stage-1 outliers unchanged at 13, all in the survey; 9 CO-attributed, 4
+  unattributed against **3.2 expected, *p* = 0.40**.
+- Occurrence limit loosens 5.86 -> 5.84 per cent and the duty-cycle variant
+  7.61 -> 7.75, as it must: holding data back cannot make a survey more
+  complete. That direction is the guard.
+- `survey_stats_systems.py` extracts the system-grouping rule into one module
+  so the hold-out's second guard groups systems exactly as the headline does.
+- Gates: 30 pages, 0 errors / 0 undefined / 0 overfull / 0 Type 3, 820 macros
+  0 unused, abstract 1897/1920, clean regeneration **61/61 byte-identical**.
+
 ## v3.80 (2026-09-19) — the completed archival sweep
 
 The catalogue grows from **443 windows / 104 execution blocks / 88 stars /
