@@ -1,0 +1,197 @@
+[
+ {
+  "pl_name": "TRAPPIST-1 b",
+  "hostname": "TRAPPIST-1",
+  "pl_orbper": 1.510826
+ },
+ {
+  "pl_name": "TRAPPIST-1 c",
+  "hostname": "TRAPPIST-1",
+  "pl_orbper": 2.421937
+ },
+ {
+  "pl_name": "GJ 581 e",
+  "hostname": "GJ 581",
+  "pl_orbper": 3.1481
+ },
+ {
+  "pl_name": "LHS 1140 c",
+  "hostname": "LHS 1140",
+  "pl_orbper": 3.77794
+ },
+ {
+  "pl_name": "TRAPPIST-1 d",
+  "hostname": "TRAPPIST-1",
+  "pl_orbper": 4.049219
+ },
+ {
+  "pl_name": "61 Vir b",
+  "hostname": "61 Vir",
+  "pl_orbper": 4.215
+ },
+ {
+  "pl_name": "GJ 674 b",
+  "hostname": "GJ 674",
+  "pl_orbper": 4.6938
+ },
+ {
+  "pl_name": "Proxima Cen d",
+  "hostname": "Proxima Cen",
+  "pl_orbper": 5.12338
+ },
+ {
+  "pl_name": "GJ 581 b",
+  "hostname": "GJ 581",
+  "pl_orbper": 5.3686
+ },
+ {
+  "pl_name": "HD 45184 b",
+  "hostname": "HD 45184",
+  "pl_orbper": 5.8854
+ },
+ {
+  "pl_name": "TRAPPIST-1 e",
+  "hostname": "TRAPPIST-1",
+  "pl_orbper": 6.101013
+ },
+ {
+  "pl_name": "AU Mic b",
+  "hostname": "AU Mic",
+  "pl_orbper": 8.463446
+ },
+ {
+  "pl_name": "HD 69830 b",
+  "hostname": "HD 69830",
+  "pl_orbper": 8.667
+ },
+ {
+  "pl_name": "HD 285968 b",
+  "hostname": "HD 285968",
+  "pl_orbper": 8.7836
+ },
+ {
+  "pl_name": "TRAPPIST-1 f",
+  "hostname": "TRAPPIST-1",
+  "pl_orbper": 9.20754
+ },
+ {
+  "pl_name": "Proxima Cen b",
+  "hostname": "Proxima Cen",
+  "pl_orbper": 11.18465
+ },
+ {
+  "pl_name": "TRAPPIST-1 g",
+  "hostname": "TRAPPIST-1",
+  "pl_orbper": 12.352446
+ },
+ {
+  "pl_name": "AU Mic d",
+  "hostname": "AU Mic",
+  "pl_orbper": 12.73596
+ },
+ {
+  "pl_name": "GJ 581 c",
+  "hostname": "GJ 581",
+  "pl_orbper": 12.9211
+ },
+ {
+  "pl_name": "HD 45184 c",
+  "hostname": "HD 45184",
+  "pl_orbper": 13.1354
+ },
+ {
+  "pl_name": "TRAPPIST-1 h",
+  "hostname": "TRAPPIST-1",
+  "pl_orbper": 18.772866
+ },
+ {
+  "pl_name": "AU Mic c",
+  "hostname": "AU Mic",
+  "pl_orbper": 18.859023
+ },
+ {
+  "pl_name": "tau Cet g",
+  "hostname": "tau Cet",
+  "pl_orbper": 20.0
+ },
+ {
+  "pl_name": "LHS 1140 b",
+  "hostname": "LHS 1140",
+  "pl_orbper": 24.73723
+ },
+ {
+  "pl_name": "HD 69830 c",
+  "hostname": "HD 69830",
+  "pl_orbper": 31.56
+ },
+ {
+  "pl_name": "AU Mic e",
+  "hostname": "AU Mic",
+  "pl_orbper": 33.11
+ },
+ {
+  "pl_name": "HN Lib b",
+  "hostname": "HN Lib",
+  "pl_orbper": 36.116
+ },
+ {
+  "pl_name": "61 Vir c",
+  "hostname": "61 Vir",
+  "pl_orbper": 38.021
+ },
+ {
+  "pl_name": "tau Cet h",
+  "hostname": "tau Cet",
+  "pl_orbper": 49.41
+ },
+ {
+  "pl_name": "61 Vir d",
+  "hostname": "61 Vir",
+  "pl_orbper": 123.01
+ },
+ {
+  "pl_name": "HD 69830 d",
+  "hostname": "HD 69830",
+  "pl_orbper": 197.0
+ },
+ {
+  "pl_name": "tau Cet f",
+  "hostname": "tau Cet",
+  "pl_orbper": 636.13
+ },
+ {
+  "pl_name": "HD 10647 b",
+  "hostname": "HD 10647",
+  "pl_orbper": 989.2
+ },
+ {
+  "pl_name": "bet Pic c",
+  "hostname": "bet Pic",
+  "pl_orbper": 1202.0
+ },
+ {
+  "pl_name": "GJ 849 b",
+  "hostname": "GJ 849",
+  "pl_orbper": 1925.31
+ },
+ {
+  "pl_name": "GJ 849 c",
+  "hostname": "GJ 849",
+  "pl_orbper": 5990.0
+ },
+ {
+  "pl_name": "bet Pic b",
+  "hostname": "bet Pic",
+  "pl_orbper": 8682.0
+ },
+ {
+  "pl_name": "51 Eri b",
+  "hostname": "51 Eri",
+  "pl_orbper": 9100.0
+ },
+ {
+  "pl_name": "bet Pic d",
+  "hostname": "bet Pic",
+  "pl_orbper": 33200.0
+ }
+]

@@ -8,6 +8,44 @@ Paper II's actual results/discussion/conclusions sections are added.
 
 
 
+
+## v3.82 (2026-09-20) — referee cycle
+
+Two referee reports, worked point by point. Reply in
+`v3.82/REFEREE_RESPONSE_V382.md`.
+
+- **The "factor 16" was wrong and is now 65.** The rank floor was being
+  divided by a Bonferroni scale read from a round-5 freeze on a superseded
+  window count, while printed beside the current 1655. Recomputed from the
+  catalogue, asserted consistent in all three places it appears.
+- **Two further internal inconsistencies fixed at source**: the reserved-
+  block count (75 against 77, from differencing two populations that were
+  never the same) and the out-of-sample median rank (0.405 against 0.44,
+  two samples under one name).
+- **A 56-check numerical audit now runs inside the build** and fails it on
+  any disagreement between the abstract, tables, body and conclusions.
+- **No probability is printed as an exact zero** anywhere, including inside
+  two figure panels.
+- New tables: the four unattributed stage-1 outliers, and the CP-72 2713
+  repeat test in full. New figure: a schematic of the Hanning response
+  correction.
+- P90 promoted above P_eff and P_trig; the molecular mask's cost reported
+  per class; a physical cause given for the radial non-exchangeability,
+  with its effect on completeness (+0.08 sigma at the star, so recovery is
+  pessimistic by ~2 per cent, not optimistic).
+- The pre-registration chronology is generated from repository timestamps
+  with the ordering asserted: statistic 2026-09-09, criteria 2026-09-11,
+  hold-out five days after the statistic, first reserved block three days
+  after that.
+- Figure 3 reduced from four variables to two; Figure 1's ordinate and
+  caption now carry the "not a like-for-like comparison" caveat.
+- Editorial: every mention of previous versions, peer review or revision
+  removed; title names the archive; abstract states the archive-complete
+  scope and the 4.1 TB downloaded; de-AI pass (em-dashes 0).
+- Gates: 32 pages, 0 errors / 0 undefined / 0 overfull / 0 Type 3, 846
+  macros 0 unused, abstract 1842/1920, clean regeneration **64/64
+  byte-identical**, audit 56 pass 0 fail.
+
 ## v3.81 (2026-09-20) — the pre-registered hold-out, applied
 
 The archival sweep closed at **460/460 worklist items terminal** (428 searched,

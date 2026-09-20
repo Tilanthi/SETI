@@ -1,0 +1,975 @@
+{
+ "n_rows_extracted": 1725,
+ "n_duplicate_rows": 45,
+ "n_noise_defect": 13,
+ "n_withheld": 12,
+ "n_windows_searched": 1655,
+ "n_stars": 94,
+ "n_systems": 87,
+ "n_starbands": 117,
+ "n_eb": 404,
+ "ranked_csv_exact_name_matches": 64,
+ "ranked_csv_normalised_matches": 94,
+ "ranked_csv_unmatched": [],
+ "n_sample_with_teff": 57,
+ "distance_mismatches_export_vs_ranked": [],
+ "n_census_entries": 168,
+ "n_exo_hosts_census": 20,
+ "n_exo_hosts_sample": 19,
+ "n_planets_sample": 42,
+ "gaia_rows_total": 33170,
+ "gaia_ref_40pc": 17566,
+ "gaia_ref_40pc_with_teff": 8594,
+ "gaia_plx_quality_cut": "sigma_pi/pi <= 0.10",
+ "distance_panel": [
+  {
+   "bin": "d5,",
+   "census_n": 48,
+   "census_pct": 0.273,
+   "sample_n": 12,
+   "sample_pct": 12.77,
+   "ratio": 46.72
+  },
+  {
+   "bin": "5--10,",
+   "census_n": 240,
+   "census_pct": 1.366,
+   "sample_n": 13,
+   "sample_pct": 13.83,
+   "ratio": 10.12
+  },
+  {
+   "bin": "10--20,",
+   "census_n": 2069,
+   "census_pct": 11.778,
+   "sample_n": 22,
+   "sample_pct": 23.4,
+   "ratio": 1.99
+  },
+  {
+   "bin": "20--30,",
+   "census_n": 5391,
+   "census_pct": 30.69,
+   "sample_n": 19,
+   "sample_pct": 20.21,
+   "ratio": 0.66
+  },
+  {
+   "bin": "30--40,",
+   "census_n": 9818,
+   "census_pct": 55.892,
+   "sample_n": 28,
+   "sample_pct": 29.79,
+   "ratio": 0.53
+  }
+ ],
+ "teff_panel": [
+  {
+   "bin": "A",
+   "census_n": 24,
+   "census_pct": 0.28,
+   "sample_n": 1,
+   "sample_pct": 1.75,
+   "ratio": 6.28
+  },
+  {
+   "bin": "F",
+   "census_n": 402,
+   "census_pct": 4.68,
+   "sample_n": 11,
+   "sample_pct": 19.3,
+   "ratio": 4.13
+  },
+  {
+   "bin": "G",
+   "census_n": 860,
+   "census_pct": 10.01,
+   "sample_n": 18,
+   "sample_pct": 31.58,
+   "ratio": 3.16
+  },
+  {
+   "bin": "K",
+   "census_n": 1400,
+   "census_pct": 16.29,
+   "sample_n": 6,
+   "sample_pct": 10.53,
+   "ratio": 0.65
+  },
+  {
+   "bin": "M",
+   "census_n": 5908,
+   "census_pct": 68.75,
+   "sample_n": 21,
+   "sample_pct": 36.84,
+   "ratio": 0.54
+  }
+ ],
+ "n_ref_with_teff": 8594,
+ "n_sample_teff_used": 57,
+ "per_band": [
+  {
+   "band": "3",
+   "systems": 8,
+   "eb": 27,
+   "win": 112,
+   "chanw_med_MHz": 15.625,
+   "chanw_lo_MHz": 0.244140625,
+   "chanw_hi_MHz": 15.625,
+   "union_GHz": 20.637784158686287,
+   "union_intervals": 8,
+   "eirp_med_W": 126424291089865.06,
+   "drift_lo": 11.999999999999998,
+   "drift_hi": 13.340000000000002
+  },
+  {
+   "band": "4",
+   "systems": 1,
+   "eb": 1,
+   "win": 4,
+   "chanw_med_MHz": 15.625,
+   "chanw_lo_MHz": 15.625,
+   "chanw_hi_MHz": 15.625,
+   "union_GHz": 6.9375,
+   "union_intervals": 4,
+   "eirp_med_W": 25737900112250.938,
+   "drift_lo": 12.0,
+   "drift_hi": 12.0
+  },
+  {
+   "band": "5",
+   "systems": 1,
+   "eb": 1,
+   "win": 4,
+   "chanw_med_MHz": 15.625,
+   "chanw_lo_MHz": 15.625,
+   "chanw_hi_MHz": 15.625,
+   "union_GHz": 6.9375,
+   "union_intervals": 4,
+   "eirp_med_W": 43776909497624.17,
+   "drift_lo": 12.000000000000002,
+   "drift_hi": 12.000000000000002
+  },
+  {
+   "band": "6",
+   "systems": 59,
+   "eb": 265,
+   "win": 1072,
+   "chanw_med_MHz": 15.625,
+   "chanw_lo_MHz": 0.0152587890625,
+   "chanw_hi_MHz": 31.25,
+   "union_GHz": 29.448409896629812,
+   "union_intervals": 5,
+   "eirp_med_W": 516700189709514.9,
+   "drift_lo": 11.999999999999998,
+   "drift_hi": 13.34
+  },
+  {
+   "band": "7",
+   "systems": 36,
+   "eb": 102,
+   "win": 427,
+   "chanw_med_MHz": 15.625,
+   "chanw_lo_MHz": 0.06103515625,
+   "chanw_hi_MHz": 15.625,
+   "union_GHz": 26.740974065718888,
+   "union_intervals": 10,
+   "eirp_med_W": 3620211895992254.5,
+   "drift_lo": 11.999999999999998,
+   "drift_hi": 13.340000000000002
+  },
+  {
+   "band": "8",
+   "systems": 3,
+   "eb": 6,
+   "win": 24,
+   "chanw_med_MHz": 15.625,
+   "chanw_lo_MHz": 0.06103515625,
+   "chanw_hi_MHz": 15.625,
+   "union_GHz": 6.680864005737192,
+   "union_intervals": 3,
+   "eirp_med_W": 4.222439657108523e+16,
+   "drift_lo": 11.999999999999998,
+   "drift_hi": 12.000000000000002
+  },
+  {
+   "band": "9",
+   "systems": 1,
+   "eb": 1,
+   "win": 4,
+   "chanw_med_MHz": 15.625,
+   "chanw_lo_MHz": 15.625,
+   "chanw_hi_MHz": 15.625,
+   "union_GHz": 6.9375,
+   "union_intervals": 4,
+   "eirp_med_W": 4295914643855554.0,
+   "drift_lo": 12.0,
+   "drift_hi": 12.0
+  },
+  {
+   "band": "10",
+   "systems": 1,
+   "eb": 1,
+   "win": 8,
+   "chanw_med_MHz": 0.9765625,
+   "chanw_lo_MHz": 0.9765625,
+   "chanw_hi_MHz": 0.9765625,
+   "union_GHz": 13.8046875,
+   "union_intervals": 8,
+   "eirp_med_W": 2.742860749841583e+16,
+   "drift_lo": 11.999999999999998,
+   "drift_hi": 12.000000000000002
+  },
+  {
+   "band": "All",
+   "systems": 87,
+   "eb": 404,
+   "win": 1655,
+   "chanw_med_MHz": 15.625,
+   "chanw_lo_MHz": 0.0152587890625,
+   "chanw_hi_MHz": 31.25,
+   "union_GHz": 118.12521962677218,
+   "union_intervals": 46,
+   "eirp_med_W": 711571865053305.1,
+   "drift_lo": 11.999999999999998,
+   "drift_hi": 13.340000000000002
+  }
+ ],
+ "per_star": [
+  {
+   "star": "Proxima Cen",
+   "dist_pc": 1.3019705311704333,
+   "bands": "6",
+   "n_win": 100,
+   "eirp_best_W": 19884840319776.637
+  },
+  {
+   "star": "NAME Barnards star",
+   "dist_pc": 1.828233981355542,
+   "bands": "6",
+   "n_win": 12,
+   "eirp_best_W": 61503722238525.63
+  },
+  {
+   "star": "Wolf  359",
+   "dist_pc": 2.408597252748958,
+   "bands": "6",
+   "n_win": 12,
+   "eirp_best_W": 72836063673401.94
+  },
+  {
+   "star": "alf CMa B",
+   "dist_pc": 2.6703012063129745,
+   "bands": "3,4,5",
+   "n_win": 12,
+   "eirp_best_W": 23446989583464.35
+  },
+  {
+   "star": "G 272-61B",
+   "dist_pc": 2.674910296032687,
+   "bands": "3",
+   "n_win": 4,
+   "eirp_best_W": 16158991296689.695
+  },
+  {
+   "star": "G 272-61A",
+   "dist_pc": 2.7195203918735054,
+   "bands": "3",
+   "n_win": 4,
+   "eirp_best_W": 16712866566452.117
+  },
+  {
+   "star": "CD-23 14742",
+   "dist_pc": 2.9759548649868903,
+   "bands": "6",
+   "n_win": 16,
+   "eirp_best_W": 101314890311072.64
+  },
+  {
+   "star": "tau Cet",
+   "dist_pc": 3.6521709611425766,
+   "bands": "6",
+   "n_win": 29,
+   "eirp_best_W": 26352155101606.543
+  },
+  {
+   "star": "BD05  1668",
+   "dist_pc": 3.7860589303898693,
+   "bands": "6",
+   "n_win": 100,
+   "eirp_best_W": 178060498074643.1
+  },
+  {
+   "star": "HD  33793",
+   "dist_pc": 3.9339320771222708,
+   "bands": "6",
+   "n_win": 85,
+   "eirp_best_W": 177865294281074.28
+  },
+  {
+   "star": "Wolf   28",
+   "dist_pc": 4.314436111908938,
+   "bands": "6",
+   "n_win": 1,
+   "eirp_best_W": 66717686433743.35
+  },
+  {
+   "star": "GJ 674",
+   "dist_pc": 4.550867586127579,
+   "bands": "6",
+   "n_win": 80,
+   "eirp_best_W": 227650604159770.25
+  },
+  {
+   "star": "GL 3379  Gaia DR3 3316364602541746048",
+   "dist_pc": 5.207968173719361,
+   "bands": "6",
+   "n_win": 24,
+   "eirp_best_W": 73038743967067.31
+  },
+  {
+   "star": "LSR J18353259",
+   "dist_pc": 5.688509718027581,
+   "bands": "3",
+   "n_win": 8,
+   "eirp_best_W": 51239578982960.54
+  },
+  {
+   "star": "HN Lib",
+   "dist_pc": 6.25302694251758,
+   "bands": "6",
+   "n_win": 20,
+   "eirp_best_W": 126034232277895.56
+  },
+  {
+   "star": "GJ 581",
+   "dist_pc": 6.300471781360879,
+   "bands": "6",
+   "n_win": 36,
+   "eirp_best_W": 418351835620126.0
+  },
+  {
+   "star": "lp 876-10  Gaia DR3 6623351805412369024",
+   "dist_pc": 7.676325777322197,
+   "bands": "7",
+   "n_win": 12,
+   "eirp_best_W": 27034923269171.86
+  },
+  {
+   "star": "61 Vir",
+   "dist_pc": 8.534415098502675,
+   "bands": "7",
+   "n_win": 20,
+   "eirp_best_W": 41495586607616.87
+  },
+  {
+   "star": "chi01 Ori",
+   "dist_pc": 8.699460211492765,
+   "bands": "3",
+   "n_win": 4,
+   "eirp_best_W": 107562483666430.61
+  },
+  {
+   "star": "GJ 849",
+   "dist_pc": 8.814865836983147,
+   "bands": "6",
+   "n_win": 24,
+   "eirp_best_W": 222179291883471.22
+  },
+  {
+   "star": "gam Lep",
+   "dist_pc": 8.905034452470854,
+   "bands": "6,7",
+   "n_win": 8,
+   "eirp_best_W": 92673878137234.53
+  },
+  {
+   "star": "HD 285968",
+   "dist_pc": 9.485192669253934,
+   "bands": "6",
+   "n_win": 16,
+   "eirp_best_W": 297341340364853.4
+  },
+  {
+   "star": "AU Mic",
+   "dist_pc": 9.714095582245003,
+   "bands": "3,6,9",
+   "n_win": 56,
+   "eirp_best_W": 37717224352178.016
+  },
+  {
+   "star": "V AT Mic B",
+   "dist_pc": 9.806576045454502,
+   "bands": "7",
+   "n_win": 4,
+   "eirp_best_W": 55978852076318.56
+  },
+  {
+   "star": "NAME AT Mic AB  Gaia DR3 6792436799475128960",
+   "dist_pc": 9.921411824522,
+   "bands": "7",
+   "n_win": 4,
+   "eirp_best_W": 58218689542034.07
+  },
+  {
+   "star": "gam Vir",
+   "dist_pc": 12.020173090740299,
+   "bands": "6,7",
+   "n_win": 16,
+   "eirp_best_W": 224000453517925.56
+  },
+  {
+   "star": "HR 1010  Gaia DR3 4722135642226902656",
+   "dist_pc": 12.03939579583873,
+   "bands": "6,7",
+   "n_win": 55,
+   "eirp_best_W": 618570579891593.2
+  },
+  {
+   "star": "TRAPPIST-1",
+   "dist_pc": 12.46691341544997,
+   "bands": "3,6,7",
+   "n_win": 72,
+   "eirp_best_W": 53676391313793.65
+  },
+  {
+   "star": "HD 69830",
+   "dist_pc": 12.56923231677139,
+   "bands": "6,7",
+   "n_win": 32,
+   "eirp_best_W": 39091714125056.79
+  },
+  {
+   "star": "CD-38 10980",
+   "dist_pc": 12.90802259420275,
+   "bands": "6",
+   "n_win": 4,
+   "eirp_best_W": 413540593108881.3
+  },
+  {
+   "star": "LP  349-25",
+   "dist_pc": 14.128083082528516,
+   "bands": "3",
+   "n_win": 8,
+   "eirp_best_W": 235877484852457.62
+  },
+  {
+   "star": "GJ14  Gaia DR3 383426372059603712",
+   "dist_pc": 14.687600745180884,
+   "bands": "6",
+   "n_win": 8,
+   "eirp_best_W": 102075653432204.17
+  },
+  {
+   "star": "LHS 1140",
+   "dist_pc": 14.963620881657688,
+   "bands": "6",
+   "n_win": 16,
+   "eirp_best_W": 623658988639878.0
+  },
+  {
+   "star": "HD 38858  Gaia DR3 3023711269067191296",
+   "dist_pc": 15.210375829466273,
+   "bands": "6",
+   "n_win": 13,
+   "eirp_best_W": 406639660073546.8
+  },
+  {
+   "star": "HD 207129  Gaia DR3 6564091190988411520",
+   "dist_pc": 15.558956955870052,
+   "bands": "6",
+   "n_win": 12,
+   "eirp_best_W": 590614799000322.9
+  },
+  {
+   "star": "HD 207129 (Gaia DR3 6564091190988411520)",
+   "dist_pc": 15.558956955870052,
+   "bands": "6",
+   "n_win": 4,
+   "eirp_best_W": 204096909256175.5
+  },
+  {
+   "star": "HD 23484  Gaia DR3 4856592239127350400",
+   "dist_pc": 16.169613332824454,
+   "bands": "6",
+   "n_win": 16,
+   "eirp_best_W": 1223469043389983.5
+  },
+  {
+   "star": "HD 10647",
+   "dist_pc": 17.348792545179204,
+   "bands": "6,7",
+   "n_win": 35,
+   "eirp_best_W": 142574195660823.3
+  },
+  {
+   "star": "* g Lup",
+   "dist_pc": 17.398608619535604,
+   "bands": "6",
+   "n_win": 4,
+   "eirp_best_W": 301879217018944.7
+  },
+  {
+   "star": "HD 139664",
+   "dist_pc": 17.398608619535604,
+   "bands": "6",
+   "n_win": 3,
+   "eirp_best_W": 254765197447370.78
+  },
+  {
+   "star": "* eta Crv",
+   "dist_pc": 18.243690056636073,
+   "bands": "7",
+   "n_win": 4,
+   "eirp_best_W": 627372051998143.1
+  },
+  {
+   "star": "eta Crv",
+   "dist_pc": 18.243690056636073,
+   "bands": "7,8",
+   "n_win": 20,
+   "eirp_best_W": 43626421116380.805
+  },
+  {
+   "star": "HD53143  Gaia DR3 5479222240596469632",
+   "dist_pc": 18.340130468614888,
+   "bands": "6",
+   "n_win": 20,
+   "eirp_best_W": 1717290212319431.0
+  },
+  {
+   "star": "HD53143 (Gaia DR3 5479222240596469632)",
+   "dist_pc": 18.340130468614888,
+   "bands": "6",
+   "n_win": 4,
+   "eirp_best_W": 178275258305322.16
+  },
+  {
+   "star": "Wolf  219",
+   "dist_pc": 18.88298291770258,
+   "bands": "6",
+   "n_win": 8,
+   "eirp_best_W": 842644600776628.0
+  },
+  {
+   "star": "bet Pic",
+   "dist_pc": 19.6345266018065,
+   "bands": "3,6",
+   "n_win": 50,
+   "eirp_best_W": 22333124100870.504
+  },
+  {
+   "star": "eta Cru",
+   "dist_pc": 19.688169605096633,
+   "bands": "6",
+   "n_win": 4,
+   "eirp_best_W": 1109071906343161.1
+  },
+  {
+   "star": "PM J034331958",
+   "dist_pc": 20.756656348019504,
+   "bands": "6",
+   "n_win": 4,
+   "eirp_best_W": 1006383690881662.6
+  },
+  {
+   "star": "V star TX PsA",
+   "dist_pc": 20.834996076326,
+   "bands": "7",
+   "n_win": 4,
+   "eirp_best_W": 274573178757579.53
+  },
+  {
+   "star": "V star WW PsA",
+   "dist_pc": 20.86731108424069,
+   "bands": "7",
+   "n_win": 4,
+   "eirp_best_W": 275775288554326.16
+  },
+  {
+   "star": "j1256-1257",
+   "dist_pc": 21.153581147174854,
+   "bands": "7",
+   "n_win": 8,
+   "eirp_best_W": 832336679264868.0
+  },
+  {
+   "star": "hd92945",
+   "dist_pc": 21.50854666682674,
+   "bands": "7",
+   "n_win": 12,
+   "eirp_best_W": 264844138641710.1
+  },
+  {
+   "star": "WD2039-202",
+   "dist_pc": 21.770851821218116,
+   "bands": "6",
+   "n_win": 4,
+   "eirp_best_W": 1294497312991924.0
+  },
+  {
+   "star": "HD 45184",
+   "dist_pc": 21.892263773131692,
+   "bands": "6",
+   "n_win": 28,
+   "eirp_best_W": 3034161004684739.5
+  },
+  {
+   "star": "LP 476-207 783296",
+   "dist_pc": 23.75250239823961,
+   "bands": "7",
+   "n_win": 4,
+   "eirp_best_W": 485351968553622.4
+  },
+  {
+   "star": "LP 476-207 384128",
+   "dist_pc": 23.787535885512828,
+   "bands": "7",
+   "n_win": 4,
+   "eirp_best_W": 472567765108945.8
+  },
+  {
+   "star": "HD202628",
+   "dist_pc": 23.794008118530165,
+   "bands": "6",
+   "n_win": 19,
+   "eirp_best_W": 176626937085908.94
+  },
+  {
+   "star": "HD 31392",
+   "dist_pc": 25.760172526564894,
+   "bands": "6",
+   "n_win": 36,
+   "eirp_best_W": 4254263698987182.0
+  },
+  {
+   "star": "CD-57 1054",
+   "dist_pc": 26.873154628817716,
+   "bands": "7",
+   "n_win": 4,
+   "eirp_best_W": 762845491025402.0
+  },
+  {
+   "star": "LP 353-51",
+   "dist_pc": 27.099096809465742,
+   "bands": "7",
+   "n_win": 8,
+   "eirp_best_W": 1070919300516214.2
+  },
+  {
+   "star": "hd107146",
+   "dist_pc": 27.46966568803521,
+   "bands": "7",
+   "n_win": 20,
+   "eirp_best_W": 454025788000736.94
+  },
+  {
+   "star": "L 836-122",
+   "dist_pc": 28.69665872849319,
+   "bands": "7",
+   "n_win": 4,
+   "eirp_best_W": 710861488004323.1
+  },
+  {
+   "star": "HD172555",
+   "dist_pc": 28.789014639652546,
+   "bands": "6,7",
+   "n_win": 8,
+   "eirp_best_W": 121453100291410.53
+  },
+  {
+   "star": "HD161868",
+   "dist_pc": 29.746518013453738,
+   "bands": "6,7",
+   "n_win": 48,
+   "eirp_best_W": 327168108300694.2
+  },
+  {
+   "star": "51 Eri",
+   "dist_pc": 29.905171464867223,
+   "bands": "6",
+   "n_win": 4,
+   "eirp_best_W": 1094340697007421.1
+  },
+  {
+   "star": "kap CrB",
+   "dist_pc": 29.99107142886642,
+   "bands": "6",
+   "n_win": 4,
+   "eirp_best_W": 639559811678698.6
+  },
+  {
+   "star": "HD 155555C",
+   "dist_pc": 30.41163075343437,
+   "bands": "7",
+   "n_win": 4,
+   "eirp_best_W": 690827594134460.5
+  },
+  {
+   "star": "2MASS J05241914-1601153 551040",
+   "dist_pc": 30.985412934448114,
+   "bands": "7",
+   "n_win": 3,
+   "eirp_best_W": 3620211895992254.5
+  },
+  {
+   "star": "WD0346-011",
+   "dist_pc": 31.03960555071531,
+   "bands": "6",
+   "n_win": 4,
+   "eirp_best_W": 2539730851931236.5
+  },
+  {
+   "star": "2MASS J05241914-1601153 717696",
+   "dist_pc": 31.190147581381755,
+   "bands": "7",
+   "n_win": 3,
+   "eirp_best_W": 3658093944215410.0
+  },
+  {
+   "star": "UCAC2 20312880",
+   "dist_pc": 33.76600145983334,
+   "bands": "7",
+   "n_win": 4,
+   "eirp_best_W": 1061483466929475.5
+  },
+  {
+   "star": "HR 2562",
+   "dist_pc": 33.92840645115612,
+   "bands": "7",
+   "n_win": 4,
+   "eirp_best_W": 3393906045017311.5
+  },
+  {
+   "star": "TWA 7",
+   "dist_pc": 34.09748983013265,
+   "bands": "7",
+   "n_win": 8,
+   "eirp_best_W": 711571865053305.1
+  },
+  {
+   "star": "WD 0407179",
+   "dist_pc": 34.11019824511173,
+   "bands": "6",
+   "n_win": 4,
+   "eirp_best_W": 2756768608089885.5
+  },
+  {
+   "star": "UCAC3 176-23654",
+   "dist_pc": 34.34591487127615,
+   "bands": "7",
+   "n_win": 4,
+   "eirp_best_W": 941933173293576.6
+  },
+  {
+   "star": "GJ 2006B",
+   "dist_pc": 34.97642342929373,
+   "bands": "7",
+   "n_win": 4,
+   "eirp_best_W": 804172799525577.8
+  },
+  {
+   "star": "ALMA J153702653-33192492",
+   "dist_pc": 35.00975445603521,
+   "bands": "6,7",
+   "n_win": 43,
+   "eirp_best_W": 3105305919232215.0
+  },
+  {
+   "star": "GJ 2006A",
+   "dist_pc": 35.0291581413077,
+   "bands": "7",
+   "n_win": 4,
+   "eirp_best_W": 795190060680141.6
+  },
+  {
+   "star": "TYC 2211-1309-1",
+   "dist_pc": 35.42393596572567,
+   "bands": "7",
+   "n_win": 4,
+   "eirp_best_W": 911557918491341.5
+  },
+  {
+   "star": "HD14055",
+   "dist_pc": 35.740498145648736,
+   "bands": "6,7",
+   "n_win": 76,
+   "eirp_best_W": 784806678277177.4
+  },
+  {
+   "star": "HD 48370",
+   "dist_pc": 35.95188010838147,
+   "bands": "6,8",
+   "n_win": 12,
+   "eirp_best_W": 2860340325335047.5
+  },
+  {
+   "star": "HD 89452",
+   "dist_pc": 36.22697725246051,
+   "bands": "6",
+   "n_win": 32,
+   "eirp_best_W": 8407486875662368.0
+  },
+  {
+   "star": "HD61005",
+   "dist_pc": 36.4505894175606,
+   "bands": "6,7,8,10",
+   "n_win": 32,
+   "eirp_best_W": 610090860249150.1
+  },
+  {
+   "star": "CP-72 2713",
+   "dist_pc": 36.722200774181445,
+   "bands": "6,7",
+   "n_win": 12,
+   "eirp_best_W": 773678564290131.2
+  },
+  {
+   "star": "HD170773",
+   "dist_pc": 36.93452283184798,
+   "bands": "6,7",
+   "n_win": 16,
+   "eirp_best_W": 547235405050324.06
+  },
+  {
+   "star": "TWA 3A 696000",
+   "dist_pc": 37.05470485656213,
+   "bands": "6",
+   "n_win": 8,
+   "eirp_best_W": 247327423000783.56
+  },
+  {
+   "star": "TWA 3A [576064]",
+   "dist_pc": 37.13008698569366,
+   "bands": "6",
+   "n_win": 4,
+   "eirp_best_W": 315476303470882.9
+  },
+  {
+   "star": "Barta 161 12",
+   "dist_pc": 37.281201883172756,
+   "bands": "7",
+   "n_win": 4,
+   "eirp_best_W": 1127521744638731.2
+  },
+  {
+   "star": "HD377",
+   "dist_pc": 38.40447080082988,
+   "bands": "6",
+   "n_win": 8,
+   "eirp_best_W": 1.196153286556238e+16
+  },
+  {
+   "star": "HD 139084B 921024",
+   "dist_pc": 38.71618767167229,
+   "bands": "7",
+   "n_win": 4,
+   "eirp_best_W": 1714474232828747.8
+  },
+  {
+   "star": "HIP 490",
+   "dist_pc": 38.82980105117917,
+   "bands": "6",
+   "n_win": 4,
+   "eirp_best_W": 436131503771048.1
+  },
+  {
+   "star": "HD110411",
+   "dist_pc": 38.92251079823753,
+   "bands": "6",
+   "n_win": 16,
+   "eirp_best_W": 413016011150930.3
+  },
+  {
+   "star": "HD 139084B 805632",
+   "dist_pc": 39.307605808821975,
+   "bands": "7",
+   "n_win": 4,
+   "eirp_best_W": 1749730221525080.0
+  },
+  {
+   "star": "HIP10679",
+   "dist_pc": 39.63436208736827,
+   "bands": "6",
+   "n_win": 4,
+   "eirp_best_W": 293676963251624.6
+  }
+ ],
+ "per_star_n": 94,
+ "per_star_eirp_best_overall": 16158991296689.695,
+ "per_star_deepest": "G 272-61B",
+ "csv_rows": 1725,
+ "csv_status_counts": {
+  "duplicate_row": 45,
+  "searched": 1655,
+  "withheld_primary_beam": 12,
+  "noise_defect": 13
+ },
+ "csv_n_hits_searched": 75,
+ "csv_n_spatially_significant_searched": 16,
+ "csv_n_joint_criterion": 13,
+ "csv_n_disposition_filled": 10,
+ "csv_n_ctrl_ge_star_consistent": false,
+ "crosscheck_vs_survey_stats": {
+  "n_windows": {
+   "tables": 1655,
+   "survey_stats": 1655,
+   "agree": true
+  },
+  "n_stars": {
+   "tables": 94,
+   "survey_stats": 94,
+   "agree": true
+  },
+  "n_systems": {
+   "tables": 87,
+   "survey_stats": 87,
+   "agree": true
+  },
+  "n_starbands": {
+   "tables": 117,
+   "survey_stats": 117,
+   "agree": true
+  },
+  "n_eb": {
+   "tables": 404,
+   "survey_stats": 404,
+   "agree": true
+  },
+  "n_dup": {
+   "tables": 45,
+   "survey_stats": 45,
+   "agree": true
+  },
+  "n_defect": {
+   "tables": 13,
+   "survey_stats": 13,
+   "agree": true
+  },
+  "n_withheld": {
+   "tables": 12,
+   "survey_stats": 12,
+   "agree": true
+  },
+  "union_GHz": {
+   "tables": 118.1252,
+   "survey_stats": 118.1252,
+   "agree": true
+  },
+  "n_cross": {
+   "tables": 75,
+   "survey_stats": 75,
+   "agree": true
+  },
+  "n_sbr": {
+   "tables": 16,
+   "survey_stats": 16,
+   "agree": true
+  },
+  "n_flagged": {
+   "tables": 13,
+   "survey_stats": 13,
+   "agree": true
+  }
+ }
+}
