@@ -154,3 +154,74 @@ Unchanged; see `AUTHOR_ACTIONS.md`. The White (2026) placeholder is no
 longer a blocker for the text — the sentence citing it is now
 self-contained and the bibliography entry carries no placeholder — but the
 identifier should still be supplied if it becomes available.
+
+---
+
+## Post-push correction (same day), prompted by an author question
+
+Glenn asked what §6.4 item (2) "Search the blocks already held" actually
+means — whether an even more extensive search is possible from data we
+already have. Checking it found three defects in the block accounting, all
+now fixed and asserted.
+
+**1. The block ledger did not close, and the assertion guarding it was
+tautological.** §3 said "the execution-block accounting closes as follows"
+and then printed 656 progenitor, 484 processed, 177 not processed. But
+484 + 177 = 661, not 656. The assertion in `v381_calc.py` was
+
+    catalogue + holdout + (processed - catalogue - holdout) == processed
+
+which is true for any three numbers. It asserted nothing and could never
+have caught this.
+
+Recomputed from the progenitor lists, **two identities close exactly and
+the paper had been mixing them**:
+
+    656 progenitor = 479 searched in scope + 177 never searched
+    484 processed  = 479 in scope + 5 with no recoverable member-OUS link
+
+The 5 are named blocks whose progenitor link the archive does not expose;
+3 of them are in the science sample. §3 now states both identities, says
+the two counts must not be added to each other, and the real assertions
+are in the build. The Introduction had also paired 656 with 404 (the
+science sample) rather than 479 (searched in scope); fixed.
+
+**2. §6 double-counted the uncalibrated blocks.** The remainder sentence
+listed 77 hold-out, 20 no-calibration "and the rest duplicate coverage",
+but the 20 are a *subset* of the 177 unsearched, as §3 says. Replaced with
+the generated three-way split 656 = 401 + 78 + 177, asserted.
+
+**3. Item (2) overstated what the held blocks buy, by a factor of about
+two.** It said searching them "would make a multi-epoch survey of
+\NStarMoreEB{} = 50 stars". `NStarMoreEB` counts stars whose available
+blocks exceed those **in the science sample** — and 67 of the 202 "extra"
+blocks have already been searched. They are the pre-registered hold-out,
+withheld by design, not waiting to be processed. Like for like, the number
+of stars with genuinely unsearched blocks is **29**, on **27 of 82
+systems**, from **135** blocks.
+
+Item (2) is rewritten to say what those blocks actually offer: every one
+is repeat coverage of a star and tuning already searched, so they add no
+star, no system and no frequency and extend only the time axis; they are
+concentrated on Proxima Centauri, TRAPPIST-1 and HD 202628 rather than
+spread; and of the 27 single-epoch systems, **only 5** would acquire a
+second block, so they barely touch the confirmation gap that limits the
+survey. The heading is also changed from "the blocks already held", which
+reads as "already on disk", to "the remaining public blocks these stars
+already hold".
+
+New macros, all generated and asserted: `LedInScope` 479, `LedNoProgLink`
+5, `LedSciInScope` 401, `LedHoldoutInScope` 78, `LedSciOutScope` 3,
+`NStarUnsearchedEB` 29, `NSysUnsearchedEB` 27, `NExtraBlocksUnsearched`
+135, `NExtraBlocksHeldOut` 67, `NSysOneEBGain` 5, `NSysOneEBNoGain` 22.
+
+Gates after the correction: 46 pages, 0 errors / 0 undefined /
+0 multiply-defined / 0 overfull / 0 Type 3, 1115 macros 0 unused, abstract
+1917/1920, clean regeneration **88/88 byte-identical**, number audit
+49/49, roundcollide 45/45, xrefcheck 0 misplaced.
+
+**The lesson, and it is the third time this family has appeared in three
+versions: an assertion that cannot fail is worse than no assertion, because
+it advertises a check that is not being made.** v3.61 printed a stale
+literal, v3.62 printed frozen-input arithmetic, and v3.87 printed a ledger
+that does not close — each behind a guard that looked adequate.

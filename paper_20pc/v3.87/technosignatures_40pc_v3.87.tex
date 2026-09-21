@@ -437,7 +437,8 @@ covered is searched, but not every execution block those stars hold is in
 this release. Of \NCoveredCand{} catalogue crossmatches,
 \NGenuinelyCovered{} correspond to genuine ALMA coverage and \NStars{}
 were searched; of the \NProgenitorEBTotal{} public execution blocks they
-hold, \NEB{} are searched here. It makes no completeness claim for the
+hold, \LedInScope{} have been searched and \LedCatalogue{} form the
+frozen science sample reported here. It makes no completeness claim for the
 local population itself. That choice removes technosignature-specific
 selection and leaves the archival astrophysical selection in place; the
 \NCensus{} sample entries are
@@ -460,18 +461,27 @@ populations.
 
 \begin{enumerate}[topsep=2pt,itemsep=1pt,parsep=0pt,leftmargin=1.4em]
 \item \LedProgenitor{} public execution blocks lie in the parent member
-  observing-unit sets of the sample stars.
-\item \LedProcessed{} of those were downloaded and calibrated,
-  \TotalDataTB\,TB of raw data through one frozen pipeline.
+  observing-unit sets of the sample stars. This is the population in
+  scope, and it splits in two.
+\item \LedInScope{} of them have been downloaded, calibrated and
+  searched; \LedNotProcessed{} have not. Every one of the
+  \LedNotProcessed{} is repeat coverage: each sits in an observing-unit
+  set from which another block was already taken, and the de-duplication
+  rule below keeps one block per star and tuning. \LedNoCalib{} of them
+  the archive offers as raw visibilities with no pipeline calibration at
+  all. That is the first identity,
+  $\LedInScope+\LedNotProcessed=\LedProgenitor$.
+\item \LedProcessed{} blocks were processed in total,
+  \TotalDataTB\,TB of raw data through one frozen pipeline. This is a
+  \emph{different} population from the \LedInScope: it is those plus
+  \LedNoProgLink{} whose member-OUS progenitor link the archive does not
+  expose, so they cannot be placed in the ledger above. That is the second
+  identity, $\LedInScope+\LedNoProgLink=\LedProcessed$. The two counts
+  must not be added to each other.
 \item Of the \LedProcessed, \LedCatalogue{} form the \emph{frozen science
   sample} reported here, \LedHoldout{} are the reserved calibration
   hold-out of \S\ref{sec:heldout}, and \LedNoWindow{} left no surviving
   window after the quality cut.
-\item The remaining \LedNotProcessed{} were not processed. Every one of
-  them is repeat coverage: each sits in an observing-unit set from which
-  another block was already taken, and the de-duplication rule below keeps
-  one block per star and tuning. \LedNoCalib{} of them the archive offers
-  as raw visibilities with no pipeline calibration at all.
 \end{enumerate}
 
 We therefore make no claim to have searched the whole ALMA archive, only
@@ -2812,11 +2822,16 @@ Figure~\ref{fig:accel} shows the ceiling as a selection function of period and
 host mass, the host-mass dependence being weak ($a\propto M_\star^{1/3}$ at
 fixed period). Coverage eligibility and search completeness differ: \S\ref{sec:sample}
 audits the \NProgenitorEBTotal{} public blocks in scope against the \NEB{}
-in the headline sample. The remainder is accounted for and not outstanding:
-\NEbHeldOut{} blocks are the reserved calibration hold-out
-(\S\ref{sec:heldout}), \NEbExcluded{} carry no pipeline calibration in the
-archive, and the rest are duplicate coverage of the same star and tuning
-removed by the de-duplication of \S\ref{sec:sample}.
+in the headline sample. The remainder is accounted for and not
+outstanding, and the split closes exactly:
+$\LedProgenitor=\LedSciInScope+\LedHoldoutInScope+\LedNotProcessed$,
+being the science-sample blocks that lie in the progenitor set, the
+reserved calibration hold-out (\S\ref{sec:heldout}), and blocks never
+searched because they are duplicate coverage of the same star and tuning
+(\S\ref{sec:sample}), of which \LedNoCalib{} carry no pipeline
+calibration in the archive at all. The \LedSciOutScope{} science blocks
+whose member-OUS link the archive does not expose sit outside this
+identity and are counted in \S\ref{sec:sample} instead.
 
 The survey sits against \citet{Wright2018}'s haystack axis by axis. On
 frequency only Band~3 falls inside that axis's 10\,MHz--115\,GHz span,
@@ -3012,14 +3027,28 @@ radius-matching problem entirely, and give each candidate a physically
 specific test rather than a rank. Doing so needs the visibilities retained,
 which this survey did not do, and it is the first change we would make, which is why it is ranked first here.
 
-\emph{(2) Search the blocks already held} [multiplies the epochs, at no telescope cost] The public blocks outside this analysis
-(\S\ref{sec:sample}) cost no telescope time, and analysing them would make a
-multi-epoch survey of \NStarMoreEB{} stars. A survey that keeps growing has no
-fixed denominator for its false-alarm accounting, which is why the analysis
-reported here has one. One caution carries over
-from the worked case, whose two blocks are repeat executions of a single
-scheduling block on one night: a second block often supplies a baseline of only hours, and which it is can be
-settled with one archive query before any download.
+\emph{(2) Search the remaining public blocks these stars already hold}
+[multiplies the epochs on a minority of systems, at no telescope cost]
+The \LedNotProcessed{} public blocks in scope that this analysis did not
+search (\S\ref{sec:sample}) are already public and already attached to
+sample stars, though not downloaded here, so they cost no telescope time
+and no new proposal. What they buy needs stating precisely, because it
+is narrower than it sounds. \textbf{Every one of them is repeat coverage
+of a star and a tuning already searched}, so they add no star, no system
+and no frequency: the only axis they extend is time. They are also
+concentrated, not spread --- \NExtraBlocksUnsearched{} of them attach to
+\NStarUnsearchedEB{} of the \NStars{} stars and
+\NSysUnsearchedEB{} of the \NSystems{} systems, with
+Proxima~Centauri, TRAPPIST-1 and HD~202628 accounting for the largest
+holdings. And they barely touch the confirmation gap that limits this
+survey: of the \NSysOneEB{} systems with a single searched epoch, only
+\NSysOneEBGain{} would acquire a second block. A survey that keeps
+growing has no fixed denominator for its false-alarm accounting, which is
+why the analysis reported here has one. One caution carries over from the
+worked case, whose two blocks are repeat executions of a single scheduling
+block on one night: a second block often supplies a baseline of only
+hours, and which it is can be settled with one archive query before any
+download.
 
 \emph{(3) Retain more control spectra} [repairs the second-stage null, at storage cost only] Full dynamic spectra survive for only
 \LNNRetained{} of the \NCtrl{} control positions, which is what breaks the

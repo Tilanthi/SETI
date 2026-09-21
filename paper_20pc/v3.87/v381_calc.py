@@ -745,11 +745,50 @@ m('LedNoWindow', '%d' % (_LED['n_processed'] - _LED['n_catalogue']
 m('LedNotProcessed', '%d' % _LED['n_not_processed'])
 m('LedDuplicate', '%d' % _LED['n_duplicate'])
 m('LedNoCalib', '%d' % _LED['n_no_calibration'])
-assert (_LED['n_catalogue'] + _LED['n_holdout']
-        + (_LED['n_processed'] - _LED['n_catalogue'] - _LED['n_holdout'])
-        == _LED['n_processed']), 'block ledger does not close'
-assert _LED['n_duplicate'] == _LED['n_not_processed'], \
-    'every unprocessed block should be duplicate coverage'
+
+# v3.87 post-push fix: the assertion that used to stand here was
+#   catalogue + holdout + (processed - catalogue - holdout) == processed
+# which is true for ANY three numbers. It asserted nothing, and it let the
+# paper print a ledger that does not close: 484 + 177 = 661, not 656.
+# Recompute both real identities from the progenitor lists.
+_progset = set()
+for _v in json.load(open('archive_meta_v381.json'))['mous'].values():
+    _progset |= {q if isinstance(q, str) else q.get('eb')
+                 for q in _v['progenitors']}
+_progset = {q for q in _progset if q}
+_procset = set(json.load(open('archive_meta_v381.json'))['ebs'])
+_searchedall = {l.strip() for l in open('searched_ebs_v381.txt') if l.strip()}
+_inscope = _searchedall & _progset
+_noprog = _procset - _progset
+
+assert len(_progset) == _LED['n_progenitor'], \
+    ('progenitor union %d != ledger %d' % (len(_progset), _LED['n_progenitor']))
+assert len(_procset) == _LED['n_processed'], \
+    ('processed set %d != ledger %d' % (len(_procset), _LED['n_processed']))
+# Identity 1: the progenitor population splits into searched and not.
+assert len(_inscope) + len(_progset - _searchedall) == len(_progset), \
+    'progenitor ledger does not close'
+assert len(_progset - _searchedall) == _LED['n_not_processed'], \
+    ('unsearched in scope %d != ledger n_not_processed %d'
+     % (len(_progset - _searchedall), _LED['n_not_processed']))
+# Identity 2: the processed population is the in-scope blocks plus those
+# whose member-OUS progenitor link the archive does not expose.
+assert len(_procset & _progset) + len(_noprog) == len(_procset), \
+    'processed ledger does not close'
+m('LedInScope', '%d' % len(_inscope))
+m('LedNoProgLink', '%d' % len(_noprog))
+# The in-scope searched blocks split into the science sample and the
+# hold-out. The S6 remainder sentence used to add the 20 uncalibrated
+# blocks alongside the 177 unsearched, but they are a SUBSET of the 177,
+# and it ignored the science blocks that fall outside the progenitor set.
+_frozenset = {r['eb'] for r in ROWS}
+_sci_in = len(_frozenset & _progset)
+_ho_in = len(_inscope) - _sci_in
+m('LedSciInScope', '%d' % _sci_in)
+m('LedHoldoutInScope', '%d' % _ho_in)
+m('LedSciOutScope', '%d' % len(_frozenset - _progset))
+assert _sci_in + _ho_in + len(_progset - _searchedall) == len(_progset), \
+    'the three-way in-scope split does not close'
 
 # ------------------------- the median window, beside the deepest one
 # Quoting only the deepest window invites a reader to treat it as the

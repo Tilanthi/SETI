@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.8.25)  21 SEP 2026 15:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.8.25)  21 SEP 2026 16:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -568,107 +568,126 @@ File: figures/eirp_context.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/eirp_context.pdf  used on input line 393.
 (pdftex.def)             Requested size: 507.98907pt x 211.72578pt.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 5
-06.
+16.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ) [3]
-<figures/selection_bias.pdf, id=436, 219.73343pt x 147.15703pt>
+<figures/selection_bias.pdf, id=435, 219.73343pt x 147.15703pt>
 File: figures/selection_bias.pdf Graphic file (type pdf)
 <use figures/selection_bias.pdf>
-Package pdftex.def Info: figures/selection_bias.pdf  used on input line 515.
+Package pdftex.def Info: figures/selection_bias.pdf  used on input line 525.
 (pdftex.def)             Requested size: 245.26653pt x 164.26685pt.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 538.
+(Font)              using `T1/cmr/m/it' instead on input line 548.
 
 (./tab_specclass_v385.tex) [4 <./figures/eirp_context.pdf> <./figures/selection
 _bias.pdf>]
-Underfull \hbox (badness 1721) in paragraph at lines 601--606
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 576.
+
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 576.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+
+Underfull \hbox (badness 1721) in paragraph at lines 611--616
 []\T1/cmr/m/n/10 ALMA project meta-data quan-tify pointed ver-sus
  []
 
 <figures/selection_funnel.pdf, id=488, 494.0377pt x 172.36395pt>
 File: figures/selection_funnel.pdf Graphic file (type pdf)
 <use figures/selection_funnel.pdf>
-Package pdftex.def Info: figures/selection_funnel.pdf  used on input line 608.
+Package pdftex.def Info: figures/selection_funnel.pdf  used on input line 618.
 (pdftex.def)             Requested size: 492.59618pt x 171.86116pt.
 <figures/coverage_waterfall.pdf, id=493, 505.89pt x 469.755pt>
 File: figures/coverage_waterfall.pdf Graphic file (type pdf)
 <use figures/coverage_waterfall.pdf>
-Package pdftex.def Info: figures/coverage_waterfall.pdf  used on input line 644
+Package pdftex.def Info: figures/coverage_waterfall.pdf  used on input line 654
 .
 (pdftex.def)             Requested size: 507.98907pt x 471.71068pt.
 [5] [6 <./figures/selection_funnel.pdf>] [7 <./figures/coverage_waterfall.pdf>]
-<figures/hanning_response.pdf, id=597, 432.1724pt x 129.78763pt>
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 919.
+
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 919.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+<figures/hanning_response.pdf, id=592, 432.1724pt x 129.78763pt>
 File: figures/hanning_response.pdf Graphic file (type pdf)
 <use figures/hanning_response.pdf>
-Package pdftex.def Info: figures/hanning_response.pdf  used on input line 933.
+Package pdftex.def Info: figures/hanning_response.pdf  used on input line 943.
 (pdftex.def)             Requested size: 482.33163pt x 144.85614pt.
 [8]
-Underfull \hbox (badness 1028) in paragraph at lines 1005--1011
+Underfull \hbox (badness 1028) in paragraph at lines 1015--1021
 \T1/cmr/m/n/10 in-de-pen-dent re-cur-rence or in-de-pen-dent as-tro-phys-i-cal
  []
 
 
-Underfull \hbox (badness 1895) in paragraph at lines 1032--1035
+Underfull \hbox (badness 1895) in paragraph at lines 1042--1045
  []\T1/cmr/bx/n/10 Astrophysical iden-ti-fi-ca-tion. \T1/cmr/m/n/10 The event i
 s
  []
 
 [9 <./figures/hanning_response.pdf>]
-Underfull \hbox (badness 5189) in paragraph at lines 1164--1179
+Underfull \hbox (badness 5189) in paragraph at lines 1174--1189
 []\T1/cmr/m/n/10 Neighbouring con-trols are cor-re-lated be-low the
  []
 
 
-Underfull \hbox (badness 2941) in paragraph at lines 1185--1211
+Underfull \hbox (badness 2941) in paragraph at lines 1195--1221
 []\T1/cmr/m/n/10 Residual con-tin-uum af-ter base-line re-moval, self-
  []
 
 [10] [11] [12]
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 1527.
+(Font)              using `T1/cmr/m/it' instead on input line 1537.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 1527.
+(Font)              using `T1/cmr/m/it' instead on input line 1537.
 
-(./tab_compcurve.tex)
-Underfull \hbox (badness 3942) in paragraph at lines 1566--1583
+(./tab_compcurve.tex) [13]
+Underfull \hbox (badness 3942) in paragraph at lines 1576--1593
 \T1/cmr/m/n/10 Satel-lite con-stel-la-tions grew across the 2013--2025
  []
 
-[13] [14]
-Underfull \hbox (badness 2293) in paragraph at lines 1722--1725
+[14]
+Underfull \hbox (badness 2293) in paragraph at lines 1732--1735
 \T1/cmr/m/n/10 cat-a-logue, and \T1/cmtt/m/n/10 reproduce_from_catalogue_v385.p
 y
  []
 
-<figures/classa_sensitivity.pdf, id=752, 431.62065pt x 166.95323pt>
+<figures/classa_sensitivity.pdf, id=749, 431.62065pt x 166.95323pt>
 File: figures/classa_sensitivity.pdf Graphic file (type pdf)
 <use figures/classa_sensitivity.pdf>
-Package pdftex.def Info: figures/classa_sensitivity.pdf  used on input line 174
+Package pdftex.def Info: figures/classa_sensitivity.pdf  used on input line 175
 3.
 (pdftex.def)             Requested size: 472.0671pt x 182.6072pt.
 
-Underfull \hbox (badness 1194) in paragraph at lines 1766--1771
+Underfull \hbox (badness 1194) in paragraph at lines 1776--1781
 []\T1/cmr/m/n/10 The choice of de-tec-tion statis-tic makes the non-
  []
 
 [15] [16 <./figures/classa_sensitivity.pdf>]
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 1985.
+(Font)              using `T1/cmr/m/it' instead on input line 1995.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 1985.
+(Font)              using `T1/cmr/m/it' instead on input line 1995.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 1985.
+(Font)              using `T1/cmr/m/it' instead on input line 1995.
 
 (./tab_falsealarm_v387.tex
 Underfull \hbox (badness 10000) in paragraph at lines 5--5
@@ -691,263 +710,276 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--11
  []
 
 ) [17]
-Underfull \hbox (badness 7433) in paragraph at lines 2101--2110
+Underfull \hbox (badness 7433) in paragraph at lines 2111--2120
 []\T1/cmr/m/n/10 One cau-tion about the con-tin-uum ap-plies to
  []
 
 (./tab_visfit_v385.tex)
-<figures/unattributed_vis.pdf, id=813, 434.87218pt x 338.08372pt>
+<figures/unattributed_vis.pdf, id=812, 434.87218pt x 338.08372pt>
 File: figures/unattributed_vis.pdf Graphic file (type pdf)
 <use figures/unattributed_vis.pdf>
-Package pdftex.def Info: figures/unattributed_vis.pdf  used on input line 2135.
+Package pdftex.def Info: figures/unattributed_vis.pdf  used on input line 2145.
 
 (pdftex.def)             Requested size: 482.33163pt x 374.9988pt.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 2176.
+(Font)              using `T1/cmr/m/it' instead on input line 2186.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 2176.
+(Font)              using `T1/cmr/m/it' instead on input line 2186.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 2176.
+(Font)              using `T1/cmr/m/it' instead on input line 2186.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 2176.
+(Font)              using `T1/cmr/m/it' instead on input line 2186.
 
 (./tab_stages_v386.tex) (./tab_unattributed_v383.tex)
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 2249.
+(Font)              using `T1/cmr/m/it' instead on input line 2259.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 2249.
+(Font)              using `T1/cmr/m/it' instead on input line 2259.
 
 (./tab_flagged_v380.tex) [18] [19]
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 2334.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 2327.
 
 [20 <./figures/unattributed_vis.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2370.
+(hyperref)                removing `math shift' on input line 2380.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\beta' on input line 2370.
+(hyperref)                removing `\beta' on input line 2380.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2370.
+(hyperref)                removing `math shift' on input line 2380.
 
 [21]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2473.
+(hyperref)                removing `math shift' on input line 2483.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2473.
+(hyperref)                removing `math shift' on input line 2483.
 
 [22]
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 2668.
+(Font)              using `T1/cmr/m/it' instead on input line 2678.
 
 (./tab_p90budget_v385.tex)
 <figures/dwell_selection.pdf, id=930, 248.87552pt x 170.539pt>
 File: figures/dwell_selection.pdf Graphic file (type pdf)
 <use figures/dwell_selection.pdf>
-Package pdftex.def Info: figures/dwell_selection.pdf  used on input line 2676.
+Package pdftex.def Info: figures/dwell_selection.pdf  used on input line 2686.
 (pdftex.def)             Requested size: 245.26653pt x 168.07425pt.
- [23 <./figures/dwell_selection.pdf>]
-<figures/sensitivity_2d.pdf, id=958, 258.92734pt x 213.75836pt>
+ [23]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 2729.
+
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 2729.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+<figures/sensitivity_2d.pdf, id=943, 258.92734pt x 213.75836pt>
 File: figures/sensitivity_2d.pdf Graphic file (type pdf)
 <use figures/sensitivity_2d.pdf>
-Package pdftex.def Info: figures/sensitivity_2d.pdf  used on input line 2770.
+Package pdftex.def Info: figures/sensitivity_2d.pdf  used on input line 2780.
 (pdftex.def)             Requested size: 245.26653pt x 202.48218pt.
- [24 <./figures/sensitivity_2d.pdf>]
-Underfull \hbox (badness 1735) in paragraph at lines 2874--2883
+[24 <./figures/dwell_selection.pdf> <./figures/sensitivity_2d.pdf>]
+Underfull \hbox (badness 1735) in paragraph at lines 2889--2898
 []\T1/cmr/m/n/10 Two caveats are not pre-sen-ta-tional. First, the
  []
 
-[25]
-Underfull \hbox (badness 1028) in paragraph at lines 3015--3023
-[]\T1/cmr/m/it/10 (2) Search the blocks al-ready held \T1/cmr/m/n/10 [mul-ti-pl
-ies the
- []
-
-
-Underfull \hbox (badness 1527) in paragraph at lines 3056--3071
+[25] [26]
+Underfull \hbox (badness 1527) in paragraph at lines 3085--3100
 \T1/cmr/m/n/10 at con-stant ac-cel-er-a-tion rather than con-stant drift
  []
 
-[26] [27]
-Underfull \hbox (badness 10000) in paragraph at lines 3242--3277
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 3271--3306
 []\T1/cmr/m/n/10 The machine-readable cat-a-logue,
  []
 
 
-Underfull \hbox (badness 3271) in paragraph at lines 3242--3277
+Underfull \hbox (badness 3271) in paragraph at lines 3271--3306
 \T1/cmtt/m/n/10 per_target_results_v3.87.csv\T1/cmr/m/n/10 , has one row per
  []
 
 
-Underfull \hbox (badness 4072) in paragraph at lines 3242--3277
+Underfull \hbox (badness 4072) in paragraph at lines 3271--3306
 \T1/cmr/m/n/10 searched win-dow, 1655 rows in 50 self-described
  []
 
 
-Underfull \hbox (badness 1052) in paragraph at lines 3242--3277
+Underfull \hbox (badness 1052) in paragraph at lines 3271--3306
 \T1/cmr/m/n/10 fre-quency range, chan-nel width, ex-po-sure and per-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3242--3277
+Underfull \hbox (badness 10000) in paragraph at lines 3271--3306
 \T1/cmr/m/n/10 ships \T1/cmtt/m/n/10 reproduce_from_catalogue_v385.py\T1/cmr/m/
 n/10 , which
  []
 
 
-Underfull \hbox (badness 1286) in paragraph at lines 3242--3277
+Underfull \hbox (badness 1286) in paragraph at lines 3271--3306
 \T1/cmr/m/n/10 ac-com-pa-ny-ing epoch-extension record. The re-lease
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 3300--3306
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 3329--3335
 []\T1/cmr/m/n/10 The pipeline de-pends on CASA 6.7.6
  []
 
 
-Underfull \hbox (badness 5954) in paragraph at lines 3300--3306
+Underfull \hbox (badness 5954) in paragraph at lines 3329--3335
 \T1/cmr/m/n/10 (casatools/casatasks 6.7.6-14; []CASA Team et al.[]
  []
 
-[28]
-Underfull \hbox (badness 1565) in paragraph at lines 3332--3337
+
+Underfull \hbox (badness 1565) in paragraph at lines 3361--3366
 \T1/cmr/m/n/10 dow ta-bles (CHAN_WIDTH). A miss-ing ``EF-FEC-
  []
 
 [29] [30]
-<figures/stratified_completeness.pdf, id=1122, 491.436pt x 144.54pt>
+<figures/stratified_completeness.pdf, id=1123, 491.436pt x 144.54pt>
 File: figures/stratified_completeness.pdf Graphic file (type pdf)
 <use figures/stratified_completeness.pdf>
 Package pdftex.def Info: figures/stratified_completeness.pdf  used on input lin
-e 3546.
+e 3575.
 (pdftex.def)             Requested size: 492.59618pt x 144.88809pt.
  (./tab_selection.tex)
-Underfull \hbox (badness 1490) in paragraph at lines 3571--3578
+Underfull \hbox (badness 1490) in paragraph at lines 3600--3607
 \T1/cmr/m/n/10 cat-a-logue of the Data Avail-abil-ity state-ment. Its
  []
 
-<figures/drift_acceleration.pdf, id=1125, 245.91875pt x 301.125pt>
+<figures/drift_acceleration.pdf, id=1126, 245.91875pt x 301.125pt>
 File: figures/drift_acceleration.pdf Graphic file (type pdf)
 <use figures/drift_acceleration.pdf>
-Package pdftex.def Info: figures/drift_acceleration.pdf  used on input line 358
-1.
+Package pdftex.def Info: figures/drift_acceleration.pdf  used on input line 361
+0.
 (pdftex.def)             Requested size: 245.26653pt x 300.33853pt.
 (./tab_perband.tex) (./tab_maskband.tex)
-Underfull \hbox (badness 1412) in paragraph at lines 3611--3631
+Underfull \hbox (badness 1412) in paragraph at lines 3640--3660
 \T1/cmr/m/n/10 these molecules sur-vive ($\U/msa/m/n/10 .$\T1/cmr/m/n/10 13kms$
 []$ be-yond 10au),
  []
 
 [31] [32 <./figures/stratified_completeness.pdf>]
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 3706.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 3719.
 
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 3706.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 3719.
 
 
 Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
 
-[33 <./figures/drift_acceleration.pdf>] [34]
-<figures/control_diagnostics.pdf, id=1203, 245.91875pt x 301.125pt>
+[33 <./figures/drift_acceleration.pdf>]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 3828.
+
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 3828.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[34]
+<figures/control_diagnostics.pdf, id=1204, 245.91875pt x 301.125pt>
 File: figures/control_diagnostics.pdf Graphic file (type pdf)
 <use figures/control_diagnostics.pdf>
 Package pdftex.def Info: figures/control_diagnostics.pdf  used on input line 39
-58.
+87.
 (pdftex.def)             Requested size: 245.26653pt x 300.33853pt.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 4005.
+(Font)              using `T1/cmr/m/it' instead on input line 4034.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 4031.
+(hyperref)                removing `math shift' on input line 4060.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 4031.
+(hyperref)                removing `subscript' on input line 4060.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\sigma' on input line 4031.
+(hyperref)                removing `\sigma' on input line 4060.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 4031.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 4067.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\beta' on input line 4067.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 4067.
+(hyperref)                removing `math shift' on input line 4060.
 
 [35 <./figures/control_diagnostics.pdf>]
 
-LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 4128.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4096.
 
-[36]
-<figures/rank_cdf.pdf, id=1276, 505.89pt x 155.38051pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\beta' on input line 4096.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4096.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
+(Font)              using `T1/cmr/m/it' instead on input line 4157.
+
+[36] [37]
+<figures/rank_cdf.pdf, id=1282, 505.89pt x 155.38051pt>
 File: figures/rank_cdf.pdf Graphic file (type pdf)
 <use figures/rank_cdf.pdf>
-Package pdftex.def Info: figures/rank_cdf.pdf  used on input line 4306.
+Package pdftex.def Info: figures/rank_cdf.pdf  used on input line 4335.
 (pdftex.def)             Requested size: 507.98907pt x 156.02736pt.
 
 
 Class revtex4-1 Warning: Float cannot be placed.
 
-[37]
-
-LaTeX Warning: A float is stuck (cannot be placed) on input line 4349.
-
-[38 <./figures/rank_cdf.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 4358.
+(hyperref)                removing `math shift' on input line 4387.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 4358.
+(hyperref)                removing `math shift' on input line 4387.
 
 
-Underfull \hbox (badness 3343) in paragraph at lines 4438--4448
+Underfull \hbox (badness 3343) in paragraph at lines 4467--4477
 []\T1/cmr/m/it/10 The four classes of ex-cluded en-try. \T1/cmr/m/n/10 (i) Four
 
  []
 
 
-Underfull \hbox (badness 1831) in paragraph at lines 4438--4448
+Underfull \hbox (badness 1831) in paragraph at lines 4467--4477
 \T1/cmr/m/n/10 tar-get/bands (Barnard's Star [B7], Wolf 359 [B7],
  []
 
-(./tab_visibility_v385.tex) [39] (./tab_cprepeat_v383.tex)
-(./tab_driftstrata_v385.tex) (./tab_partitions_v385.tex
+[38]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 4477.
+
+[39 <./figures/rank_cdf.pdf>] (./tab_visibility_v385.tex)
+(./tab_cprepeat_v383.tex) (./tab_driftstrata_v385.tex)
+(./tab_partitions_v385.tex
 Underfull \hbox (badness 10000) in paragraph at lines 6--6
 []|\T1/cmr/m/n/7 the search re-
  []
@@ -965,59 +997,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--7
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 4534.
+(hyperref)                removing `math shift' on input line 4563.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\beta' on input line 4534.
+(hyperref)                removing `\beta' on input line 4563.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 4534.
+(hyperref)                removing `math shift' on input line 4563.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 4617.
+(hyperref)                removing `math shift' on input line 4646.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 4617.
+(hyperref)                removing `math shift' on input line 4646.
 
-[40]
-<figures/cp72_control_distribution.pdf, id=1335, 245.91875pt x 175.65625pt>
+[40] [41]
+<figures/cp72_control_distribution.pdf, id=1341, 245.91875pt x 175.65625pt>
 File: figures/cp72_control_distribution.pdf Graphic file (type pdf)
 <use figures/cp72_control_distribution.pdf>
 Package pdftex.def Info: figures/cp72_control_distribution.pdf  used on input l
-ine 4683.
+ine 4712.
 (pdftex.def)             Requested size: 245.26653pt x 175.19746pt.
- [41] [42 <./figures/cp72_control_distribution.pdf>]
+ [42 <./figures/cp72_control_distribution.pdf>]
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 4834.
-
-
-LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 4834.
+(Font)              using `T1/cmr/m/it' instead on input line 4863.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
-(Font)              using `T1/cmr/m/it' instead on input line 4834.
+(Font)              using `T1/cmr/m/it' instead on input line 4863.
 
-[43] [44]
+
+LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
+(Font)              using `T1/cmr/m/it' instead on input line 4863.
+
+[43] [44] [45]
 No file technosignatures_40pc_v3.87.bbl.
-[45] (./technosignatures_40pc_v3.87.aux)
+[46] (./technosignatures_40pc_v3.87.aux)
 Package rerunfilecheck Info: File `technosignatures_40pc_v3.87.out' has not cha
 nged.
 (rerunfilecheck)             Checksum: 6B5DE9A1E6F2BE726DCAAABFA4498E80;14294.
  ) 
 Here is how much of TeX's memory you used:
- 14742 strings out of 480247
- 224383 string characters out of 5896151
- 601234 words of memory out of 5000000
- 32024 multiletter control sequences out of 15000+600000
+ 14752 strings out of 480247
+ 224523 string characters out of 5896151
+ 600032 words of memory out of 5000000
+ 32033 multiletter control sequences out of 15000+600000
  494795 words of font info for 92 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 70i,12n,76p,2202b,484s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 70i,12n,76p,2202b,538s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/
 fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
@@ -1058,10 +1090,10 @@ lic/cm-super/sfti0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti080
 xmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf/fonts/type1/publ
 ic/cm-super/sftt0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000
 .pfb></usr/share/texmf/fonts/type1/public/cm-super/sfxc0800.pfb>
-Output written on technosignatures_40pc_v3.87.pdf (45 pages, 1465634 bytes).
+Output written on technosignatures_40pc_v3.87.pdf (46 pages, 1467468 bytes).
 PDF statistics:
- 1652 PDF objects out of 1728 (max. 8388607)
- 1368 compressed objects within 14 object streams
- 244 named destinations out of 1000 (max. 500000)
+ 1657 PDF objects out of 1728 (max. 8388607)
+ 1372 compressed objects within 14 object streams
+ 245 named destinations out of 1000 (max. 500000)
  535 words of extra memory for PDF output out of 10000 (max. 10000000)
 

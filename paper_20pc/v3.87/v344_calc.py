@@ -238,6 +238,42 @@ for r in ROWS:
     sys_se.setdefault(r['system_id'], set()).add(r['eb'])
 M('NStarMoreEB', '%d' % sum(1 for s in star_av
                             if len(star_av[s]) > len(star_se[s])))
+# v3.87 post-push fix: NStarMoreEB compares against the SCIENCE SAMPLE, so a star
+# whose only extra blocks are its pre-registered hold-out counts as having
+# more available -- but those blocks are searched, just withheld. S6.4
+# quoted it as the number of stars a follow-up could turn multi-epoch,
+# which overstates it. These are the like-for-like counts against the set
+# of blocks that have been searched at all.
+_searched_any = {l.strip() for l in open('searched_ebs_v381.txt')
+                 if l.strip()}
+_star_unsearched = {s: (star_av[s] - _searched_any) for s in star_av}
+M('NStarUnsearchedEB',
+  '%d' % sum(1 for s in _star_unsearched if _star_unsearched[s]))
+M('NSysUnsearchedEB',
+  '%d' % len({r['system_id'] for r in ROWS
+              if _star_unsearched.get(r['star_name'])}))
+_extra_unsearched = set()
+for s in _star_unsearched:
+    _extra_unsearched |= _star_unsearched[s]
+M('NExtraBlocksUnsearched', '%d' % len(_extra_unsearched))
+_extra_all = set()
+for s in star_av:
+    _extra_all |= (star_av[s] - star_se[s])
+M('NExtraBlocksHeldOut', '%d' % len(_extra_all & _searched_any))
+assert len(_extra_unsearched) < len(_extra_all), \
+    'the unsearched extras must be a strict subset of the extras'
+# The number that matters for confirmation: single-epoch systems that a
+# follow-up on the held blocks would actually turn multi-epoch.
+_sys_searched = {}
+for r in ROWS:
+    _sys_searched.setdefault(r['system_id'], set()).add(r['eb'])
+_sys_unsearched = {}
+for r in ROWS:
+    _sys_unsearched.setdefault(r['system_id'], set()).update(
+        _star_unsearched.get(r['star_name']) or set())
+_one = [k for k, v in _sys_searched.items() if len(v) == 1]
+M('NSysOneEBGain', '%d' % sum(1 for k in _one if _sys_unsearched.get(k)))
+M('NSysOneEBNoGain', '%d' % sum(1 for k in _one if not _sys_unsearched.get(k)))
 M('MaxProgEBStar', '%d' % max(len(v) for v in star_av.values()))
 M('MaxSearchedEBStar', '%d' % max(len(v) for v in star_se.values()))
 M('NSysSingleEB', '%d' % sum(1 for s in sys_av if len(sys_av[s]) == 1))

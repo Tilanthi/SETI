@@ -64,4 +64,6 @@ Glenn's instruction: implement each before going on to the next.
 - [x] R2-t5 Fig. 1 caption: bold only the one critical sentence
 
 ## Release
-- [ ] gates, clean regeneration, arXiv set, BUILD_NOTES, CHANGELOG, push
+- [x] gates, clean regeneration, arXiv set, BUILD_NOTES, CHANGELOG, push
+      **DONE 2026-09-21: pushed `dc2deaf6f312`, 414 entries, PDF and .tex
+      byte-verified against the repo after pushing.**
