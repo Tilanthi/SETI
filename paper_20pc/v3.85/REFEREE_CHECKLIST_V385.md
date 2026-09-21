@@ -108,10 +108,12 @@ Rule from Glenn: one item at a time, do not start the next until the previous is
       band-independent Hz/s/GHz, with 1 Hz/s/GHz = 1e-9 /s = 0.30 m/s^2
 
 ## Release
-- [ ] gates (0 errors / undef / multdef / overfull / Type 3), macro sweep,
-      abstract <= 1920, clean regeneration byte-identity, arXiv set
-- [ ] BUILD_NOTES_v385.md, REFEREE_RESPONSE_V385.md, CHANGELOG
-- [ ] push
+- [x] gates: 41 pp, 0 errors / undef / multdef / overfull / Type 3,
+      1035 macros 0 unused, abstract 1878/1920, clean regen 81/81
+      byte-identical, arXiv set 70 items, audit 51/0, catalogue
+      reproduction 41 quantities
+- [x] BUILD_NOTES_v385.md, VPR_DISPOSITION.md, CHANGELOG, AUTHOR_ACTIONS.md
+- [x] push
 
 ## Glenn's instruction, received 2026-09-20 ~19:38 UTC
 After the build: **five rounds of self virtual peer review**, correcting after
@@ -123,4 +125,4 @@ everything in it.
 - [x] VPR round 3 — 27 MAJOR verified; the star-count bug (94 -> 90) and M1 both closed
 - [x] VPR round 4 — 27 MAJOR verified; the star count finished properly (90/82/113) and literalsweep.py added
 - [x] VPR round 5 — 25 must-fix items; all the MAJOR ones closed
-- [ ] single push
+- [x] single push — `47f6dee491f8`, 2026-09-21T12:01:47Z, 388 files
