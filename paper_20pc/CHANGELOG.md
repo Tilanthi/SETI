@@ -6,6 +6,62 @@ Bump the **minor** number (1.00 → 1.01) for content edits/additions within
 the same broad draft stage; bump the **major** number (1.x → 2.00) once
 Paper II's actual results/discussion/conclusions sections are added.
 
+## v3.86 — 2026-09-21
+
+Two referee reports, 29 points, worked one at a time in the order given.
+All closed. Notes: `v3.86/BUILD_NOTES_v386.md`; ledger
+`v3.86/CHECKLIST_V386.md`.
+
+**Changes that alter what the paper claims**
+
+- **The headline sensitivity is now the search's, not its trigger's.** A
+  signal becomes a stage-1 event only by crossing threshold *and*
+  outranking all 512 spatial controls, whose Class A median is 5.79σ. The
+  abstract, Table 5, the boxed rule, §6.1, the conclusions and Fig. 6 lead
+  with $P_{90}^{\rm sel}$: median $2.8\times10^{15}$ W per window,
+  $1.5\times10^{15}$ per system. $P_{90}$ is relabelled the matched-filter
+  completeness.
+- **Class A is the primary statistical reference population.** 1.1
+  (0.5–1.4) expected against 4 observed, described as a modest population
+  excess and not evidence for any individual event; the all-window figure
+  is now a secondary diagnostic. The paper also traces the consequence of
+  the "unmodelled tail" explanation: it would make the quoted completeness
+  optimistic by about the same factor.
+- **The recurrence test spans days, not years.** Dating all 404 searched
+  blocks gives 0–2 d between the four unattributed events and their 23
+  repeats, so the non-recurrence bounds persistence over hours to days and
+  nothing longer. Stated in the abstract, the summary and the conclusions.
+- **Title now counts 82 stellar systems**, with the 90 catalogue entries in
+  the abstract's first sentence.
+- **Class A and Class B frequency unions separated**: 47.7 GHz for the
+  drifting-carrier experiment, 70.4 GHz more for the coarse search, 118.1
+  total.
+
+**Additions**
+
+One table carrying all 13 stage-1 events through every pipeline stage; the
+visibility test promoted to stage 2; the per-system Class A bandwidth
+distribution (median 1.84 GHz, 3.9 per cent of the survey union); Author
+contributions, Funding and Competing interests sections; the illustrative
+√Δν rescaling as a number; a worked example of the systematic combination.
+
+**Presentation**
+
+Main text cut **19.3 per cent** (29.9 → 25.4 pages) by moving validation
+and audit material to the appendices; Tables 1 and 2 merged into one
+glossary; §4.2 now states that 1/513 is a resolution and not a false-alarm
+probability before developing it; Figure 1 reframed as parameter-space
+context; the null claim always carries its domain qualifier.
+
+**Bugs found**
+
+A fourth consecutive forward dependency in `make_all.sh`, caught only by
+the clean regeneration; `EirpEffMedian` emitted twice from two definitions
+of $P_{\rm eff}$; and the per-system macro trio silently changing meaning
+when the sensitivity figure switched quantity. Clean regeneration
+**83/83 byte-identical**.
+
+
 ## v3.85 — 2026-09-21
 
 Two referee reports worked item by item, then five rounds of independent
