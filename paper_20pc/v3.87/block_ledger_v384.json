@@ -1,0 +1,10 @@
+{
+ "n_progenitor": 656,
+ "n_processed": 484,
+ "n_catalogue": 404,
+ "n_holdout": 77,
+ "n_not_processed": 177,
+ "n_duplicate": 177,
+ "n_whole_mous": 0,
+ "n_no_calibration": 20
+}

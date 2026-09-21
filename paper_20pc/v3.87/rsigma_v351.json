@@ -1,0 +1,153 @@
+{
+ "_doc": "Referee D3: star-versus-control residual variance for the four stage-1 spatial-outlier windows, measured on the retained per-integration products (srcspec.npz: I_star, I_control_sample for the 8 retained controls, and the pipeline's own all-probe noise map sigma(t,nu) from search.npz). The residual is the pipeline's own baseline-subtracted spectrum (block median along frequency, W=65), standardised by sigma(t,nu); the scale is 1.4826 x MAD over the (integration, channel) plane with the 65 channels around the window's strongest on-star channel excluded at every position alike. R_sigma = sigma_star,residual / median(sigma_controls,residual). Measured read-only over ssh on 2026-09-12; nothing was downloaded and no pipeline stage was re-run.",
+ "windows": [
+  {
+   "window": "CP-72_2713_B7",
+   "stem": "A002_Xff0235_X4a6d_spw3",
+   "nint": 495,
+   "nch": 3534,
+   "nkeep": 3469,
+   "sigma_star": 1.0023225545883179,
+   "sigma_ctrl": [
+    1.0021835565567017,
+    1.0031023025512695,
+    1.0013210773468018,
+    1.0038306713104248,
+    1.0010606050491333,
+    1.0023467540740967,
+    1.0011087656021118,
+    1.0030500888824463
+   ],
+   "sigma_ctrl_median": 1.0022651553153992,
+   "sigma_ctrl_min": 1.0010606050491333,
+   "sigma_ctrl_max": 1.0038306713104248,
+   "R_sigma": 1.0000572695484966,
+   "R_sigma_vs_each": [
+    1.0001386951828404,
+    0.9992226635698388,
+    1.0010001559581365,
+    0.998497638331634,
+    1.0012606125271732,
+    0.9999758571715023,
+    1.0012124446692623,
+    0.9992746780024325
+   ],
+   "n_ctrl_above_star": 4,
+   "per_int_R_median": 0.9990588610869254,
+   "per_int_R_lo": 0.9582199729497214,
+   "per_int_R_hi": 1.0407325323715324,
+   "T_star_paper": 5.81
+  },
+  {
+   "window": "HD_48370_B6",
+   "stem": "A002_Xc26103_X155a_spw16",
+   "nint": 186,
+   "nch": 3770,
+   "nkeep": 3705,
+   "sigma_star": 1.0039095878601074,
+   "sigma_ctrl": [
+    1.0057927370071411,
+    1.0100866556167603,
+    1.0109628438949585,
+    1.008730411529541,
+    1.006706953048706,
+    1.0092192888259888,
+    1.008415937423706,
+    1.0116620063781738
+   ],
+   "sigma_ctrl_median": 1.008974850177765,
+   "sigma_ctrl_min": 1.0057927370071411,
+   "sigma_ctrl_max": 1.0116620063781738,
+   "R_sigma": 0.9949797932854668,
+   "R_sigma_vs_each": [
+    0.9981276966140785,
+    0.9938846160155624,
+    0.993023229214165,
+    0.9952208998416894,
+    0.9972212716122332,
+    0.9947388035240011,
+    0.9955312590803439,
+    0.9923369480427355
+   ],
+   "n_ctrl_above_star": 8,
+   "per_int_R_median": 0.9951779928360087,
+   "per_int_R_lo": 0.956413172286005,
+   "per_int_R_hi": 1.0357250482832123,
+   "T_star_paper": 27.1
+  },
+  {
+   "window": "bet_Pic_B3",
+   "stem": "A002_Xf5d76d_X32f1_spw3",
+   "nint": 200,
+   "nch": 3534,
+   "nkeep": 3469,
+   "sigma_star": 1.0022027492523193,
+   "sigma_ctrl": [
+    1.0007795095443726,
+    0.9995836615562439,
+    1.002328872680664,
+    1.002120018005371,
+    1.002967357635498,
+    1.0011736154556274,
+    1.0004180669784546,
+    1.0052911043167114
+   ],
+   "sigma_ctrl_median": 1.0016468167304993,
+   "sigma_ctrl_min": 0.9995836615562439,
+   "sigma_ctrl_max": 1.0052911043167114,
+   "R_sigma": 1.0005550185080552,
+   "R_sigma_vs_each": [
+    1.0014221311431473,
+    1.0026201785771467,
+    0.9998741696146022,
+    1.000082556226262,
+    0.9992376537707256,
+    1.0010279274052019,
+    1.0017839364689354,
+    0.9969278997385626
+   ],
+   "n_ctrl_above_star": 3,
+   "per_int_R_median": 1.0009430606151635,
+   "per_int_R_lo": 0.9604013846044885,
+   "per_int_R_hi": 1.0391700931090821,
+   "T_star_paper": 14.65
+  },
+  {
+   "window": "bet_Pic_B6",
+   "stem": "A002_Xd9668b_X3a90_spw5",
+   "nint": 385,
+   "nch": 3534,
+   "nkeep": 3469,
+   "sigma_star": 1.0037363767623901,
+   "sigma_ctrl": [
+    1.002996563911438,
+    1.0034644603729248,
+    1.0027024745941162,
+    1.0018492937088013,
+    1.000435471534729,
+    1.003123164176941,
+    1.0045192241668701,
+    1.0021998882293701
+   ],
+   "sigma_ctrl_median": 1.002849519252777,
+   "sigma_ctrl_min": 1.000435471534729,
+   "sigma_ctrl_max": 1.0045192241668701,
+   "R_sigma": 1.0008843375726737,
+   "R_sigma_vs_each": [
+    1.0007376025776868,
+    1.000270977598314,
+    1.001031115604549,
+    1.0018835997244686,
+    1.0032994684030918,
+    1.0006113033846171,
+    0.9992206745419638,
+    1.0015331158495084
+   ],
+   "n_ctrl_above_star": 1,
+   "per_int_R_median": 1.0016778850194075,
+   "per_int_R_lo": 0.9615218714452048,
+   "per_int_R_hi": 1.0428575693450008,
+   "T_star_paper": 11.68
+  }
+ ]
+}
