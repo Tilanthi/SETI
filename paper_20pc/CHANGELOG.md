@@ -6,6 +6,70 @@ Bump the **minor** number (1.00 → 1.01) for content edits/additions within
 the same broad draft stage; bump the **major** number (1.x → 2.00) once
 Paper II's actual results/discussion/conclusions sections are added.
 
+## v3.85 — 2026-09-21
+
+Two referee reports worked item by item, then five rounds of independent
+self-review with verification against the released products before every
+edit. Round reports `VPR_ROUND1..5.md`; dispositions, including the
+reviewer claims that were wrong, in `VPR_DISPOSITION.md`.
+
+**Corrections that change printed results**
+
+- The survey has **90 stars in 82 systems**, not 94 in 87. Four stars were
+  in the frozen export under two name strings each and TWA 3A's two Gaia
+  components were in no bound pair; six generators each held their own copy
+  of the map, so the count was consistently wrong everywhere. The title
+  said 94. One shared `star_alias.py` now owns canonicalisation and the
+  catalogue writer asserts that no two systems share a distance.
+- `j1256-1257` renamed to **LP 736-15**: the ALMA field name had been taken
+  for the star's, and the star in that field has the 21.154 pc parallax the
+  catalogue already carried.
+- **All four unattributed events have repeat coverage**, 23 blocks in all,
+  and none recurs. The repeat finder had required a crossing frequency the
+  release stores only sometimes.
+- The **drift-following, continuum-subtracted visibility fit** was run on
+  all 13 stage-1 events: β Pictoris recovered in 6 of 8 windows at
+  6.1–9.5σ, HD 48370 displaced, and |Re/σ| ≤ 0.93 for all four unattributed
+  events. It returns −0.86σ for CP−72 2713 where a continuum-inclusive fit
+  gives 5.5σ; the excess is that window's 10.9 mJy stellar continuum.
+- **Polarisation** re-queried over all searched blocks: 198 of the 200
+  resolvable deliver both parallel hands and **two do not**. The previous
+  "all 104 of 104" covered 26 per cent of the sample.
+- The chance expectation is now reported on **both reference classes**, 4.4
+  over all searched windows and 1.1 over the drift-resolving class, and the
+  paper states that on the narrow class the four unattributed events are a
+  ~2σ excess rather than choosing the class that removes the tension.
+- Rank uniformity recomputed: removing all 71 fine crossings leaves
+  p = 0.002, where a 431-window freeze had given 0.39.
+- $P_{90,\rm promote}$ added, because $P_{90}$ is a trigger completeness
+  and promotion needs the star to beat a ring whose Class A median is 5.79σ.
+- Numerous stale or hand-typed quantities re-derived: the drift ceiling,
+  the Class A $P_{\rm eff}$ row, the window concentration, the star–band
+  count, the Band 8 window count, the exposure conversion, the Mason
+  comparison, the benchmark shortfall, the exoplanet counts.
+
+**Withdrawn**
+
+- The radius-corrected statistic is no longer adopted as primary: it was
+  built after the candidate list and moves the survey median away from the
+  exchangeable value.
+- A dimensionally invalid recovery bracket (a percentage multiplied by a
+  power-transfer factor, clamped at 100).
+
+**Additions**
+
+Drift-resolved injection reporting; the searched domain in acceleration
+against observing frequency; a systematic budget on $P_{90}$ including two
+one-sided biases; a ten-step experiment summary and a redrawn Fig. 3; a
+glossary moved to the Introduction.
+
+**Infrastructure**
+
+`star_alias.py`, `inject_curve.py`, `localnorm_core.py` give each quantity
+one owner. `reproduce_from_catalogue_v385.py` re-derives 41 headline
+quantities from the released CSV alone and runs inside the build.
+`literalsweep.py` reports prose literals that duplicate a macro.
+Clean regeneration **81/81 byte-identical**.
 
 
 
