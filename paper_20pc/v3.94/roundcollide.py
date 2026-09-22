@@ -1,0 +1,85 @@
+#!/usr/bin/env python3
+"""Gate: no two generators may write the same survey_numbers_roundNN.tex,
+and every such file the manuscript \\inputs must have exactly one writer.
+
+Written after an occurrence-rate generator added in the v3.94 cycle
+silently overwrote survey_numbers_round47.tex, which stageonenull_v394.py
+owns. The build did not complain, because the macros it destroyed were
+still in the .aux from the previous run. Nothing in gate.sh could see it.
+The only defence is to check the writers, so this does.
+
+Exit status 1 on any collision, missing writer, or orphan file.
+"""
+import os
+import re
+import sys
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+PAT = re.compile(r'survey_numbers_round(\d+)\.tex')
+
+writers = {}
+for fn in sorted(os.listdir(HERE)):
+    if not fn.endswith('.py') or fn == os.path.basename(__file__):
+        continue
+    src = open(os.path.join(HERE, fn), errors='ignore').read()
+    # A generator "writes" a round file if it names it in a write context.
+    for mm in PAT.finditer(src):
+        name = mm.group(0)
+        # A generator is a WRITER of a round file if the filename appears
+        # either next to an explicit write, or as the value of an OUT-style
+        # variable that is later written. A generator that only READS a
+        # round file -- viscal_v394.py reads round38 to recombine the
+        # budget -- must not be counted, so read contexts are excluded.
+        line_start = src.rfind('\n', 0, mm.start()) + 1
+        line_end = src.find('\n', mm.end())
+        line = src[line_start:line_end if line_end > 0 else len(src)]
+        near = src[max(0, mm.start() - 80):mm.end() + 80]
+        is_read = ('.read()' in line or 'open(p).read' in near
+                   or re.search(r'def\s+\w+\([^)]*%s' % re.escape(name),
+                                src) is not None)
+        assigns_out = re.match(r'\s*(OUT|OUTFILE|OUTPATH)\s*=', line) is not None
+        writes_here = ("'w'" in line or '"w"' in line or '.write' in line)
+        if (writes_here or assigns_out) and not is_read:
+            writers.setdefault(name, set()).add(fn)
+
+# Rounds whose generator has been retired are shipped as frozen copies and
+# restored by make_all.sh; those have a legitimate single "writer".
+FROZEN = os.path.join(HERE, 'frozen_macros')
+if os.path.isdir(FROZEN):
+    for fn in sorted(os.listdir(FROZEN)):
+        if PAT.fullmatch(fn):
+            writers.setdefault(fn, set()).add('frozen_macros/ (retired)')
+
+tex = [f for f in os.listdir(HERE)
+       if f.startswith('technosignatures_') and f.endswith('.tex')]
+inputs = set()
+for f in tex:
+    body = open(os.path.join(HERE, f), errors='ignore').read()
+    for mm in re.finditer(r'\\input\{(survey_numbers_round\d+)\}', body):
+        inputs.add(mm.group(1) + '.tex')
+
+fail = 0
+for name in sorted(writers, key=lambda n: int(PAT.match(n).group(1))):
+    who = sorted(writers[name])
+    if len(who) > 1:
+        print('COLLISION %s written by %s' % (name, ', '.join(who)))
+        fail += 1
+
+for name in sorted(inputs, key=lambda n: int(PAT.match(n).group(1))):
+    if name not in writers:
+        print('NO WRITER %s is \\input by the manuscript but no generator '
+              'writes it' % name)
+        fail += 1
+    if not os.path.exists(os.path.join(HERE, name)):
+        print('MISSING   %s is \\input by the manuscript and does not exist'
+              % name)
+        fail += 1
+
+for name in sorted(writers, key=lambda n: int(PAT.match(n).group(1))):
+    if name not in inputs:
+        print('ORPHAN    %s is generated but never \\input' % name)
+        fail += 1
+
+print('roundcollide: %d round files, %d inputs, %d problems'
+      % (len(writers), len(inputs), fail))
+sys.exit(1 if fail else 0)

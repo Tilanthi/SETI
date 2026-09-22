@@ -6,6 +6,38 @@ Bump the **minor** number (1.00 → 1.01) for content edits/additions within
 the same broad draft stage; bump the **major** number (1.x → 2.00) once
 Paper II's actual results/discussion/conclusions sections are added.
 
+## v3.94 — 2026-09-22
+
+Two referee reports (Referee 1: 10 major + abstract/figures/minors;
+Referee 2: 7 major + 4 minors), plus Glenn's instruction to note the
+β Pictoris b radio detection. 19 items closed, 2 partial, 3 deferred with
+reasons. Notes: `v3.94/BUILD_NOTES_V394.md`; ledger `v3.94/CHECKLIST_V394.md`.
+
+- **Title changed** to "An Archival ALMA Search for Unresolved
+  Spectral-Carrier Technosignatures toward 82 Stellar Systems within
+  40 Parsecs" (R1-5), with the term defined at first use.
+- **arXiv:2609.16720 (Ortiz Ceballos et al. 2026)** discussed beside the
+  β Pic positive control: their ECMI emission is 1.4 decades below our
+  bands and out of reach *by physics* (89.6 GHz needs 32 kG, 26× their
+  field), and their circular polarisation shows the discrimination we forgo
+  is real — but also that circular polarisation is not itself a mark of
+  artificiality.
+- **Two corrections found in our own numbers**: the visibility-extension
+  partition was built on "searched" rather than "still held" (no crossing
+  block retains visibilities; 60→62 windows, 50→52 blocks, 0.31→0.40 TB);
+  and the ±13 km/s line-mask comparison mixed stellar-frame and observed-frame
+  velocities.
+- **Three new measurements**: SIMBAD activity/multiplicity of the four
+  unattributed hosts (3 of 4 active); line-mask robustness (attributed ≤34,
+  unattributed ≥328 km/s, a factor-10 gap); and the measured gain of the
+  visibility statistic (all 13 flagged windows sit at the rank floor and are
+  indistinguishable in the image plane; the visibility fit separates them by
+  5.0σ).
+- Main text shortened 17.1 % by moving four blocks to the appendices
+  (R1-10 asked 25–30 %; the shortfall is stated, not hidden).
+- Gates 0/0/0/0; clean regeneration 79/79 byte-identical; abstract
+  1904/1920.
+
 ## v3.86 — 2026-09-21
 
 Two referee reports, 29 points, worked one at a time in the order given.
