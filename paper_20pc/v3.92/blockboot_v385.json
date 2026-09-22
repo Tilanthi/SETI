@@ -1,0 +1,12 @@
+{
+ "n_blocks": 404,
+ "n_windows": 1614,
+ "n_boot": 20000,
+ "mean": 4.40685,
+ "median": 4.0,
+ "lo": 1.0,
+ "hi": 9.0,
+ "p_ge_observed": 0.6414,
+ "observed": 4,
+ "poisson_naive": 3.146198830409357
+}
