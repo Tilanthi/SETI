@@ -6,6 +6,42 @@ Bump the **minor** number (1.00 → 1.01) for content edits/additions within
 the same broad draft stage; bump the **major** number (1.x → 2.00) once
 Paper II's actual results/discussion/conclusions sections are added.
 
+## v3.97 — 2026-09-23
+
+Two referee reports, worked through by hand. Notes:
+`v3.97/BUILD_NOTES_V397.md`.
+
+- ★★ **A regression I introduced in v3.96**: deleting the "About this paper"
+  section swallowed the `\appendix` command, so the appendices numbered as
+  main sections 8–20 with "10.0.2" subsections — exactly what Referee 2 (M8)
+  reported. Restored; appendices now letter **A–E**, six orphan
+  subsubsections promoted, 0 labels printing X.0.Y.
+- ★★ **The line-mask percentages used two different masks** (Referee 2, S1).
+  The per-class figures came from a stale **8-transition** list while the
+  adopted mask has **17 transitions of 11 species**. Class A mask cost was
+  understated **eightfold**: 0.9 % → **7.4 %**; Class B 0.3 % → **3.1 %**.
+  Now computed on the adopted tube set, with the A/B ratio generated (2.4)
+  instead of the literal "three times".
+- ★ **The abstract quoted a displaced source as a positive control**
+  (minor 1): 5.9σ is HD 48370. `visgain` now selects on the verdict column
+  and asserts >6σ; range corrected to **6.1–9.5σ**.
+- ★ **Two generators computed the headline median differently** (minor 2):
+  1.4 vs 1.5 × 10¹⁵ W. Now built from the catalogue's stored column and
+  **cross-asserted** against the headline macro.
+- **RFI allocation statement corrected** (M6): 90–873 GHz is *not* above all
+  allocated services. New generator asserts that 1 of 1655 windows overlaps
+  the 94.0–94.1 GHz cloud-radar band, with 0 crossings and 0 stage-1 events.
+- **Star designations cleaned** (minor 30) — our own repair had WD 0407**+**179
+  as −179; suffixes and case now fixed via a `display()` function.
+- New "How to interpret a candidate" table (R1-6); non-recurrence reframed as
+  corroborating rather than excluding (R1-5); imaginary part presented as a
+  discriminant against displaced emission only (S3); polarisation claim
+  softened (R1-12); novelty reframed to two gaps (R1-8); conclusions end with
+  three sentences plus a misquotation guard (R1-10, R1-13).
+- Version history, commit hashes, seeds and build dates removed (M8);
+  White (2026, submitted) and two uncited references removed.
+- Gates 0/0/0/0; clean regeneration 82/82 byte-identical; abstract 1913/1920.
+
 ## v3.96 — 2026-09-23
 
 Two referee reports. Notes: `v3.96/BUILD_NOTES_V396.md`.
