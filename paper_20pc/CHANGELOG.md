@@ -6,6 +6,39 @@ Bump the **minor** number (1.00 → 1.01) for content edits/additions within
 the same broad draft stage; bump the **major** number (1.x → 2.00) once
 Paper II's actual results/discussion/conclusions sections are added.
 
+## v3.96 — 2026-09-23
+
+Two referee reports. Notes: `v3.96/BUILD_NOTES_V396.md`.
+
+- ★★ **Referee 2's M3 confirmed: a real bug, and our published explanation
+  was wrong.** The pipeline builds the control annulus from a hard-coded 12 m
+  primary beam for every window, so ACA 7 m windows have theirs at 58 % of the
+  correct radius — inner edge 3.8″ at 230 GHz, inside a ~7.3″ ACA synthesised
+  beam. Measured: inner-bin control excess **+0.108 in ACA against +0.007 in
+  12 m**, and the stellar rank is exchangeable in the 12 m stratum
+  (D = 0.027, p = 0.77) but not in ACA (D = 0.10, p < 0.001). The
+  primary-beam-gradient narrative is withdrawn, as is the claim that the
+  stage-1 excess was "an artefact of rank bias" — the bias pushes the star
+  *low* and cannot manufacture star-first outliers. New §6.4 states what rests
+  on the ACA windows; 3 of the 4 unattributed events are ACA, as the referee
+  inferred.
+- ★ **Referee 2's M1 confirmed, and it retracts our own table.** Only 4 of 13
+  stage-1 windows have a stored crossing frequency. The v3.94 mask-robustness
+  table used an uncorrected sky-frame offset where the rule is stellar-frame,
+  on offsets not measured at the crossing for 9 of 13 windows. Withdrawn.
+- **Table 7's recurrence criterion fixed**: it tested the trigger alone, so
+  HD 14055 was marked as recurring on a repeat that does not outrank its
+  controls. Now matches the stage-1 definition.
+- **Sensitivity is now a distribution** (3/22/55/60 systems at 10¹⁴–10¹⁷ W),
+  temporal incompleteness is explicit (40 of 82 systems have no independent
+  epoch), the title drops the system count, and the four events are rejected
+  on physical grounds first.
+- **Polarisation physics corrected**: ALMA's linear feeds mean a per-hand
+  search gains nothing on a circularly polarised carrier.
+- Deleted the continuum-lane appendix, the duplicate plain-language paragraph
+  and "About this paper". New gate checks prose literals against macros.
+- Gates 0/0/0/0; clean regeneration 81/81 byte-identical; abstract 1909/1920.
+
 ## v3.95 — 2026-09-23
 
 Readability and compression round, at Glenn's direction: the paper had come

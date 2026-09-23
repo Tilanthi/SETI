@@ -1,0 +1,61 @@
+{
+ "queried": "2026-09-22",
+ "hosts": {
+  "61 Vir": {
+   "main_id": "*  61 Vir",
+   "sp_type": "G6.5V",
+   "plx": 117.1726,
+   "otypes": [
+    "*",
+    "**",
+    "IR",
+    "MIR",
+    "NIR",
+    "PM*",
+    "Ro*",
+    "UV"
+   ]
+  },
+  "HD 23484": {
+   "main_id": "HD  23484",
+   "sp_type": "K2V",
+   "plx": 61.8444,
+   "otypes": [
+    "*",
+    "IR",
+    "MIR",
+    "NIR",
+    "PM*",
+    "X"
+   ]
+  },
+  "HD 14055": {
+   "main_id": "* gam Tri",
+   "sp_type": "A1Vnn",
+   "plx": 27.9795,
+   "otypes": [
+    "*",
+    "IR",
+    "MIR",
+    "NIR",
+    "PM*",
+    "UV"
+   ]
+  },
+  "CP$-$72 2713": {
+   "main_id": "CPD-72  2713",
+   "sp_type": "K7Ve",
+   "plx": 27.2315,
+   "otypes": [
+    "*",
+    "Er*",
+    "MIR",
+    "NIR",
+    "PM*",
+    "Ro*",
+    "V*",
+    "X"
+   ]
+  }
+ }
+}
