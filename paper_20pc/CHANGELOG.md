@@ -6,6 +6,34 @@ Bump the **minor** number (1.00 → 1.01) for content edits/additions within
 the same broad draft stage; bump the **major** number (1.x → 2.00) once
 Paper II's actual results/discussion/conclusions sections are added.
 
+## v3.95 — 2026-09-23
+
+Readability and compression round, at Glenn's direction: the paper had come
+to read like a technical diary amended over many revision cycles. Notes:
+`v3.95/BUILD_NOTES_V395.md`.
+
+- **Cut 19.8 %** of main text plus appendices (319,573 → 256,202 chars),
+  **49 → 42 pages**, with the majority from the appendices as instructed
+  (appendices −20.6 %, main text −18.8 %).
+- **New plain-language opening to the appendices**, "What this paper did,
+  and where the details are", replacing the terse roadmap: what was
+  searched, what was found, what the four unexplained events are, and the
+  two cautions that matter more than the limit.
+- **Diary removed**: defensive self-commentary, editorial history
+  ("an earlier version", "we withdrew", "the retired statistic"),
+  triple-stated caveats, and essay-length captions that carried argument
+  the body already made. Diary-flavoured headings renamed to plain
+  scientific ones.
+- **Rejected alternatives compressed to verdict plus evidence** — the
+  radius-corrected statistic changes no conclusion and no longer gets a
+  long narrative.
+- **Four defects found**: a cross-reference that resolved to the wrong
+  appendix; a gate silently disabled by rewording the prose it keys on; two
+  labels re-anchored by an inserted block; and a cut that would have made a
+  non-recurrence read as a recurrence.
+- Gates 0/0/0/0; clean regeneration 79/79 byte-identical; abstract
+  1904/1920.
+
 ## v3.94 — 2026-09-22
 
 Two referee reports (Referee 1: 10 major + abstract/figures/minors;

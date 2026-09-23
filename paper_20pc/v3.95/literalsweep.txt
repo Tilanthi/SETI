@@ -1,0 +1,78 @@
+literal sweep of technosignatures_40pc_v3.95.tex
+
+64 prose literals equal to a generated macro:
+  18         == GridOutNint,OccPgeOne,PsFlagPgeOne,VxHours  A and a single-dish C- and K-band programme at 6 and 18\,GHz with the Sardinia Radio Teles
+  28         == BpRecSixHitsTwo,CaseDetDwellNow,CpFilterKms,GridConfigs  bidding it. searched archival Band~3 windows toward 28 ``stellar bycatch'' stars, observed
+  0.99       == CtrlWinRatio                                is the candidate sequence of . {figure*} [width=0.99 ]{figures/coverage_waterfall.pdf} {Wh
+  0.94       == BpRecThreeGapD                              ng one, and an intermittent one. {figure*} [width=0.94 ]{figures/hanning_response.pdf} {Wh
+  0.2        == BpicSpreadKms,BudDist,CfgOffTol,KsBandLo    than , which for and is {} per cent rather than 0.2, a floor under which most crossings fl
+  1944       == BpSixTrials                                 by the grid. The grid is uniform in over steps (2--1944 across windows, recorded per windo
+  1.10       == BootMeanA,BpRecThreeChan,CellsPerCrossExp,ChiOriQaHi  for {} of the {} windows that carry a value, at most 1.10 channels and median 0.001; {} ha
+  0.001      == BootPALo,BpicBThreeAddOne                   s that carry a value, at most 1.10 channels and median 0.001; {} have , and {} of those, a
+  0.92       == ClustStageMean                              r than the sensitivity achieved. {figure*} [width=0.92 ]{figures/classa_sensitivity.pdf} {
+  2.7        == CoMassEarthLo,FitHdFortyIm                  d the nearest systems --- \,W for the UV~Ceti pair at 2.7\,pc --- though depth tracks inte
+  61         == StratRecFive                                hows emission at the star. The largest real part is ; 61~Vir does not exceed its own contr
+  0.94       == BpRecThreeGapD                              reference leaves.} {table*} {figure*} [width=0.94 ]{figures/unattributed_vis.pdf} {The vis
+  2.7        == CoMassEarthLo,FitHdFortyIm                  a coarse channel is the best case. The UV~Ceti pair at 2.7\,pc has a deepest window whose 
+  488        == CalChanKHz,ChanFineKHz,ChanMedA,CpTwoChanwkHz  RP. {(ii) A continuously drifting carrier} in a fine 488-kHz channel is the only morpholog
+  28         == BpRecSixHitsTwo,CaseDetDwellNow,CpFilterKms,GridConfigs  \,pc. Against the sole prior ALMA-archival search [][28 bycatch targets at 1.01\,kpc]{Maso
+  36         == HoStars                                     ks searched span 2013 October~6 to 2025 June~11 across 36 proposal codes; their project co
+  6.7        == BpRecOffChan                                ufficiency. *{Software} The pipeline depends on CASA~6.7.6 [casatools/casatasks 6.7.6-14;]
+  6.7        == BpRecOffChan                                e pipeline depends on CASA~6.7.6 [casatools/casatasks 6.7.6-14;][]{CASA2022}, Python~3 wit
+  14         == HOFracLoPct,NUntriedWithCal,OccAllDtenth,RecThreshLo  line depends on CASA~6.7.6 [casatools/casatasks 6.7.6-14;][]{CASA2022}, Python~3 with astr
+  17         == BootPGeRing,BpRecThreeHitsOne,BudPhaseHi,MaskCrossIn  are not all blank there, the continuum lane detecting 17 of 57 target/bands (Appendix~ ), 
+  57         == SsoNearestSep                               ot all blank there, the continuum lane detecting 17 of 57 target/bands (Appendix~ ), and a
+  0.97       == BudMCLo,RfiFracKsP                          ng the feature itself, gives local-to-global ratios of 0.97 (CP 72~2713), 1.29 (HD~48370),
+  0.93       == FitUnattMaxAbs,VgNullMax                    o-global ratios of 0.97 (CP 72~2713), 1.29 (HD~48370), 0.93 ( ~Pic~B3) and 1.02 ( ~Pic~B6)
+  5.68       == CpRecCtrlMaxOne,CpTwoRingMax                one. In Band~7 it reached against a ring maximum of 5.68, with no line within \,km\,s in t
+  28         == BpRecSixHitsTwo,CaseDetDwellNow,CpFilterKms,GridConfigs  e only prior ALMA-archival technosignature search. The 28 ``stellar bycatch'' targets of a
+  25         == BpSixGapD,MaxSearchedEBStar,RsigSampN,RsigSampWithin  two distance ranges are disjoint by a factor of about 25 and no target, hence no execution
+  112        == BandWinThree                                rget, hence no execution block, is common to both. The 112 Band~3 windows searched here ar
+  0.7        == BpRecVsysSpread,ClosSnrHi,EirpMedNoSirius,EirpMedWithSirius  rule, being ~Eridani Band~6, where the star sits near 0.7 primary-beam FWHM and the Gaussi
+  61         == StratRecFive                                to bound compute cost; the cap bound one target/band, 61~Vir Band~7, and three further tar
+  0.7        == BpRecVsysSpread,ClosSnrHi,EirpMedNoSirius,EirpMedWithSirius  MW at 230\,GHz with a realistic aperture efficiency of 0.7 has and an EIRP of \,W; a perfe
+  350        == StatRegCross                                elativistic terms at the \,km\,s scale are \,kHz at 350\,GHz, below the finest native chan
+  15.3       == ChanLoA,GridChanLo,SmearWorstChanKHz,StratChanLo  at 350\,GHz, below the finest native channel searched (15.3\,kHz). The ~Pictoris and AU~Mi
+  65         == BonfRankRatio,MedWin,MedWinFineLo,NOccSystems  e step --- a per-integration median in blocks of up to 65 channels --- could imprint corre
+  15.625     == ChanBMedMHz,ChanBModeMHz,ChanMedB,ChanMedianMHz  ,GHz). Its per-channel rms is \,mJy, so \,mJy in one 15.625-MHz native channel, or \,W\,m 
+  2.67       == FaFreqOver,HanFacWorst                      in one 15.625-MHz native channel, or \,W\,m \,Hz at 2.67\,pc, and \,W. {Intra-integration 
+  1.10       == BootMeanA,BpRecThreeChan,CellsPerCrossExp,ChiOriQaHi  rched drift rate across one integration, , is at most 1.10 channels across the {} windows 
+  0.001      == BootPALo,BpicBThreeAddOne                   s at most 1.10 channels across the {} windows (median 0.001, 90th percentile 0.06). A line
+  0.06       == CpContErrMjy,HOKsCrit,RingCheckFrac         across the {} windows (median 0.001, 90th percentile 0.06). A linear drift smeared by chan
+  0.64       == BootP,MaskLostOldGHz,StratTransferLo        rgument would retain instead, giving 1.0 rather than 0.64 at , so the sinc form is the con
+  71         == DwellFineT,KsFineCrossN,NCrossClassA,NHitsA  E-band feeder links of the second-generation systems, 71--76 and 81--86\,GHz , below the \
+  76         == CfgAxesOne,ClassBPct,FluxBpicThree,PctCoarse  and feeder links of the second-generation systems, 71--76 and 81--86\,GHz , below the \,GH
+  81         == NDiscProposalStars,NDiskCatStars,NSysReleased  der links of the second-generation systems, 71--76 and 81--86\,GHz , below the \,GHz start
+  86         == GridInsidePct,MaskNDbTrans,NOccSystemsUnit,RfiOtherStars  links of the second-generation systems, 71--76 and 81--86\,GHz , below the \,GHz start of 
+  488        == CalChanKHz,ChanFineKHz,ChanMedA,CpTwoChanwkHz  e window each in Bands~3 and~6 of AU~Mic, and AU~Mic's 488-kHz flagband window with its 49
+  49         == CfgAxesZeroOnePct,NEbOutOfScope,OccLitPhoenix,PmYears  AU~Mic, and AU~Mic's 488-kHz flagband window with its 49-trial drift grid. Each receives a
+  200        == CfgBandOut,NEbEpochExact,NEbPolKnown        rid rates and channel-centred and boundary placements: 200 trials per configuration, {} in
+  17         == BootPGeRing,BpRecThreeHitsOne,BudPhaseHi,MaskCrossIn  er grid phase and sub-channel placement) are recovered 17, , 58, 75 and {} per cent at , 5
+  58         == MaskCrossOut                                phase and sub-channel placement) are recovered 17, , 58, 75 and {} per cent at , 5, 6, 8 a
+  75         == NDebrisKwStars,NHitWindows,NHits,NOccAllFifteen  se and sub-channel placement) are recovered 17, , 58, 75 and {} per cent at , 5, 6, 8 and 
+  83         == DwellCoarseT,RecTwice                       atistic and recovers 0 per cent at the trigger against 83 per cent for centred tones, cros
+  20.5       == ClustMaxHi                                  gain over its 639 integrations is , and the measured 20.5 is that value less weighting and
+  30         == CfgChanOut,ExpoTopPct,MedWinCoarseLo,SsoRadius  m\,s , and an uncorrected barycentric term bounded by 30\,km\,s . The result is empiricall
+  10.9       == VisContMJy                                  68 at \,km\,s , already rejected by its ring, maximum 10.9 against a star peak of 6.5), an
+  6.5        == DriftStratMidPNinety,MaskWorstPct           ected by its ring, maximum 10.9 against a star peak of 6.5), and the remainder lie far out
+  57         == SsoNearestSep                               The continuum lane is an exploratory by-product: 57 measurements, 17 detections and 40 lim
+  17         == BootPGeRing,BpRecThreeHitsOne,BudPhaseHi,MaskCrossIn  um lane is an exploratory by-product: 57 measurements, 17 detections and 40 limits. A mill
+  15.6       == DefectChanwMHz,DefectChanwMinMHz            e-1 flagged window in the survey is drift-resolving. A 15.6--31.25\,MHz channel dilutes a 
+  31.25      == ChanBMaxMHz,ChanHiB,DomBChanHi              agged window in the survey is drift-resolving. A 15.6--31.25\,MHz channel dilutes a narrow
+  0.85       == BpicbFlo,OccLitEnriquez                     w's {centre}; the crossing frequency differs by up to 0.85\,GHz, and Table~ carries . For 
+  16         == CellsPerCrossN,ExtStars,ExtSystems,IntGainSpan  ncertainty on that factor is not binomial, because the 16 inner probes of one window share
+  0.99       == CtrlWinRatio                                those at this build date ( ). {figure*}[b] [width=0.99 ]{figures/rank_cdf.pdf} {Why the sp
+  21.9       == CtrlMaxSurveySecond                         dequate: both fell outside that tolerance, by 10.6 and 21.9\,MHz, while lying within 3.6\,
+  3.6        == AccelCeilLo,AccelCeilMed,AccelCeilMin,AmaxMin  t tolerance, by 10.6 and 21.9\,MHz, while lying within 3.6\,km\,s of the systemic velocity
+  15.625     == ChanBMedMHz,ChanBModeMHz,ChanMedB,ChanMedianMHz  imination on coarse windows.} Every in-grid drift on a 15.625-MHz window is sub-channel ov
+
+9 prose literals within 5 per cent of a macro (possible stale value):
+  44         ~ GridNintLo=45,NDup=45,NPbFixFivePct=43      reductions of the same ~Ceti Band~6 window differ by 44 per cent in threshold, which excee
+  272        ~ GridNoNint=271,RfiOtherBlocks=276,NEbSevenM=265  {Worked example: from flux to EIRP.} Take UV~Ceti (G~272-61B) Band~3, the deepest of its {
+  500        ~ CpRecNInt=495,CpNInt=495,OccNuMid=494       ) and {} dwell trials over {} real windows. The 0 of 500 coarse-window entry is a property
+  500        ~ CpRecNInt=495,CpNInt=495,OccNuMid=494       ift within one grid step. Coarse windows recover 0 of 500 injections from to under that cr
+  639        ~ LedProgenitor=656,NProgenitorEB=656,NProgenitorEBTotal=656  nel of the injection. The ideal stacking gain over its 639 integrations is , and the measu
+  230.5      ~ FobsHdFour=230.512,FobsBpicSix=230.516,FcenBpicSix=230.516  systematic: the crossing list is dominated by CO( ) at 230.5\,GHz toward disc hosts, and a
+  122        ~ CfgAxesZero=121,EcmiFieldBSeven=123,CampUnOneRepNge=119  he crossing peak in the flagged window is \,Jy in one 122-kHz channel, with the ring at th
+  6357       ~ DefectSibRatioHi=6300,MasonDsqRatio=6563    t/bands (Barnard's Star [B7], Wolf~359 [B7], SCR~J1845 6357, Wolf~358) yielded no carrier 
+  5000       ~ HoPseudoTrials=5040,MaskDbTrans=5114        re of centimetre-wave SETI operates; the array sits at 5000\,m on a site chosen partly for
