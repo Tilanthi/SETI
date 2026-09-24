@@ -112,6 +112,8 @@ python3 acageom_v399.py             > /dev/null   # -> survey_numbers_round61.te
 python3 sensdist_v399.py            > /dev/null   # -> survey_numbers_round62.tex (R1-4: P90^sel distribution across systems; built exactly as make_fig_classa_sens does, and cross-asserted against the median)
 python3 rfialloc_v399.py            > /dev/null   # -> survey_numbers_round63.tex (R2-M6: 94 GHz EESS radar band; ASSERTS no crossing or stage-1 event falls in it)
 python3 acafix_v399.py              > /dev/null   # -> survey_numbers_round64.tex (R2-M3: the ACA re-extraction; ASSERTS the pre-registered p>0.05 criterion and stops the build if it ever fails)
+python3 cresp_v399.py               > /dev/null   # -> survey_numbers_round65.tex (R2-M3b: C_resp from the correlator response; asserts it is LESS pessimistic than the adopted model and reproduces the 1.42 dB Hann scalloping loss)
+python3 acaverify_v399.py           > /dev/null   # -> survey_numbers_round66.tex (R2-M3: honest before/after, computed from the FROZEN and CORRECTED exports separately, with bootstrap intervals and the KS resolution limit)
 python3 regen_count.py              > /dev/null   # -> regen_count.tex (must be last but one)
 python3 audit_numbers_v385.py       > /dev/null   # forensic number audit; fails the build if any number is stale
 python3 literalsweep.py             > literalsweep.txt  # prose literals that duplicate a macro (report, not a gate)

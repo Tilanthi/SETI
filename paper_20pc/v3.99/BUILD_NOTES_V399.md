@@ -86,3 +86,44 @@ generated macros; `prosenum` is clean.
 - **R1-3**, the stellar-frame line-mask audit, is now unblocked: 1401 windows
   carry their crossing cell. It needs per-star systemic velocities, which are
   not in the catalogue.
+
+---
+
+# Addendum — a referee caught an error in the verification (same build)
+
+**A new referee report showed the before/after comparison was invalid, and
+it was right.** After the repair was folded into the export, the generator
+computing the array-split KS (`v352_calc.py`) was reading the *corrected*
+export, so both sides of the "before → after" comparison came from corrected
+data. The quoted "before" value (D = 0.03, p = 0.186) already satisfied our
+own success criterion, so the comparison demonstrated nothing.
+
+`acaverify_v399.py` now computes the comparison from the two exports
+separately, and adds the diagnostic the referee identifies as the sensitive
+one, with bootstrap intervals:
+
+| | before | after |
+|---|---|---|
+| ACA median rank | 0.409 | **0.476** |
+| ACA KS *D* | 0.102 (p < 0.001) | **0.035 (p = 0.14)** |
+| 12 m KS *D* (control) | 0.022 (p = 0.89) | 0.022 (p = 0.89) |
+| inner-bin excess, ACA | +0.093 [−0.14, +0.34] | +0.038 [−0.20, +0.28] |
+
+**The claim has been weakened to match the evidence.** Two cautions are now
+stated in the text:
+
+* the KS test resolves only *D* ≳ 0.041 at these sample sizes, so the
+  corrected value lies **below what the test can distinguish from uniform**.
+  The honest statement is *consistent with* exchangeability, not
+  *demonstrated* exchangeable;
+* the inner-bin excess moves in the right direction but its bootstrap
+  interval spans zero, so it does not independently confirm the repair.
+
+"A defect found, fixed and verified" is replaced by "A control-geometry
+defect, corrected", and the conclusions now say the displacement is removed
+and the ranks are consistent with exchangeability — not that the screen is
+proved exchangeable.
+
+The 12 m stratum being identical before and after (D = 0.022 both) remains
+the strongest single piece of evidence that the change did what it was
+aimed at and nothing else.

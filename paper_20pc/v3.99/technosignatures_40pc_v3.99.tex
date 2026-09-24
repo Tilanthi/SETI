@@ -83,6 +83,8 @@
 \input{survey_numbers_round62}
 \input{survey_numbers_round63}
 \input{survey_numbers_round64}
+\input{survey_numbers_round65}
+\input{survey_numbers_round66}
 % R2-4 (v3.99): a visually distinct symbol for tail quantities computed
 % against the screen's own exchangeability-violating null, so they cannot
 % be read as calibrated significance levels. p stays for genuine tests.
@@ -837,12 +839,30 @@ $\max(0.14\,\theta_{\rm PB},\,\FixAnnFactor\,\theta_{\rm syn})$. The factor
 \FixAnnFactor{} and the criterion for success were fixed in writing before
 the re-extraction was run.
 
-It worked. Over the \FixNAcaWin{} re-extracted ACA windows the stellar rank
-is now consistent with uniformity: $D=\FixKsD$, $p=\FixKsP$, median rank
-\FixMedRank{} against the exchangeable 0.5. The pre-specified criterion was
-$p>0.05$. Re-extracted 12\,m windows reproduce their released statistics, a
-regression check the correction had to pass and does, so the change is
-confined to the stratum it was aimed at.
+The effect is measurable, and it is worth being exact about how much it
+establishes. Computing the stellar-rank distribution separately from the
+original and the repaired extractions, the ACA median rank moves
+\VerAcaBeforeMed{} to \VerAcaAfterMed{} against the exchangeable 0.5, and
+the Kolmogorov--Smirnov statistic falls from $D=\VerAcaBeforeD$
+($p\,\VerAcaBeforeP$) to $D=\VerAcaAfterD$ ($p=\VerAcaAfterP$) over
+\VerAcaAfterN{} windows. The 12\,m stratum is unchanged by the same
+comparison, $D=\VerTwmBeforeD$ before and $D=\VerTwmAfterD$ after, which is
+the regression check: the change is confined to the stratum it was aimed at.
+
+Two cautions keep this from being a proof. At these sample sizes the
+Kolmogorov--Smirnov test resolves only $D\gtrsim\VerKsPowerAca$, so the
+corrected value lies below what the test can distinguish from uniform; the
+right statement is that the repaired ranks are \emph{consistent with}
+exchangeability, not that exchangeability has been demonstrated. And the
+diagnostic most directly sensitive to the defect, the excess of the
+innermost control bin over the outer annulus, moves from
+\VerAcaBeforeExc{} to \VerAcaAfterExc{} in the right direction but with
+bootstrap intervals (\VerAcaBeforeExcLo{} to \VerAcaBeforeExcHi, and
+\VerAcaAfterExcLo{} to \VerAcaAfterExcHi) that span zero, so it does not
+independently confirm the repair. What the evidence supports is that the
+geometry was the dominant cause and that correcting it removed the
+measurable displacement, not that the control ensemble is now provably
+exchangeable.
 
 Three consequences follow, and two of them strengthen the paper. First, the
 corrected screen returns \FixNStageOne{} stage-1 events among the ACA
@@ -2132,17 +2152,18 @@ assigns them no calibrated false-alarm probability: no rank against
 \NCtrl{} controls can carry survey-level significance, whatever its null
 (\S\ref{sec:floor}).
 
-\item \textbf{A defect found, fixed and verified.} The control annulus had
+\item \textbf{A control-geometry defect, corrected.} The control annulus had
 been built from a 12\,m primary beam for every window, which on ACA 7\,m
 data placed the innermost controls inside the star's own synthesised beam.
 All \FixNBlocks{} affected blocks (\FixTB\,TB) were re-fetched and
 re-searched with a corrected extractor whose geometry is measured from the
-data. \textbf{The screen is now exchangeable where it was not}
-($D=\FixKsD$, $p=\FixKsP$ over \FixNAcaWin{} windows, against
-$D=\KsAcaD$, $p\KsAcaP$), 12\,m windows reproduce their released values,
-and the repair recovers a $\beta$~Pictoris positive-control window the
-defect had hidden, while removing HD~23484 and HD~14055, which it had
-manufactured.
+data. The ACA stellar-rank displacement is removed: the median rank moves
+\VerAcaBeforeMed{} to \VerAcaAfterMed{} and $D$ falls \VerAcaBeforeD{} to
+\VerAcaAfterD, while the 12\,m stratum is unchanged. The corrected ranks
+are \emph{consistent with} exchangeability rather than proved
+exchangeable, since the test resolves only $D\gtrsim\VerKsPowerAca$. The
+repair recovers a $\beta$~Pictoris positive-control window the defect had
+hidden, and removes HD~23484 and HD~14055, which it had manufactured.
 
 \item \textbf{Interpretation.} No persistent, independently confirmed
 unresolved narrowband carrier was found within the frequency, drift-rate,
@@ -3513,15 +3534,35 @@ and~$8$.}
 \label{fig:completeness}
 \end{figure*}
 
-\emph{The spectral response, measured.} The $\times\HanFacMed$ correction of
-\S\ref{sec:method} is analytic, the injected tones being unsmoothed. A tone
+\emph{The spectral response: a numerical check of the adopted model, and a
+comparison with the correlator's own response.} The injection campaigns
+confirm that the pipeline implements the model the paper adopts. A tone
 injected at fractional position $\phi$, split between neighbouring channels
-as the delivered channelisation requires and convolved with the
-$0.25/0.5/0.25$ kernel, has a peak $\times\HanMeasCentred$ that of a
-channel-centred unsmoothed tone of equal total flux at $\phi=0$ and
-$\times\HanMeasEdge$ at the channel edge, median $\times\HanMeasMed$ over
-\HanMeasTrials{} trials, every point within \HanMeasDevPct{} per cent of the
-analytic value. Both campaigns ship trial-level records.
+and convolved with the $0.25/0.5/0.25$ kernel, has a peak
+$\times\HanMeasCentred$ that of a channel-centred unsmoothed tone of equal
+total flux at $\phi=0$ and $\times\HanMeasEdge$ at the channel edge, median
+$\times\HanMeasMed$ over \HanMeasTrials{} trials, every point within
+\HanMeasDevPct{} per cent of the analytic value. Because those injections
+use the same kernel, this is a check of the implementation and not of the
+kernel itself.
+
+The kernel is not the correlator's response, and the difference runs in our
+favour. An ALMA channel is a discrete-Fourier bin of a windowed lag
+function, so the response to a monochromatic tone is the transform of that
+window sampled on the channel grid, not a top-hat convolved with a
+three-point kernel. Computing both directly, the adopted model puts
+\CrAdoptEdgeFrac{} of a tone's power in the peak channel at a channel
+boundary against \CrTrueEdgeFrac{} for the Hann-windowed correlator, a
+worst-case scalloping loss of \CrScallopDb\,dB --- the textbook value for
+that window, which is the check that this calculation is the right one. The
+correction implied is therefore $\times\CrTrueLo$--$\times\CrTrueHi$
+rather than the $\times\CrAdoptLo$--$\times\CrAdoptHi$ adopted here, so
+the adopted model overstates the penalty by \CrOverPct{} per cent at the
+channel edge. \emph{We retain the adopted value.} It is conservative in
+the only direction that matters --- it makes the quoted powers harder to
+reach, not easier --- and changing it would loosen every limit in the
+paper on the strength of a model refinement rather than a measurement.
+Both campaigns ship trial-level records.
 
 \subsection{Dwell campaign: end-to-end check, scope and representativeness}
 \label{app:dwelldetail}
