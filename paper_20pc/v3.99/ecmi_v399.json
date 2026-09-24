@@ -1,0 +1,13 @@
+{
+ "arxiv": "2609.16720",
+ "field_kG": 1.25,
+ "reported_fhi_GHz": 3.5,
+ "ceiling_from_field_GHz": 3.49906123404163,
+ "survey_flo_GHz": 89.627387,
+ "survey_fhi_GHz": 873.091793,
+ "field_for_survey_flo_kG": 32.01836900138887,
+ "field_for_band7_kG": 123.24734297429823,
+ "ratio_at_survey_flo": 25.614695201111097,
+ "ratio_at_band7": 98.5978743794386,
+ "decades_below": 1.4083726908206855
+}

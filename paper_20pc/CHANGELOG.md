@@ -6,6 +6,27 @@ Bump the **minor** number (1.00 → 1.01) for content edits/additions within
 the same broad draft stage; bump the **major** number (1.x → 2.00) once
 Paper II's actual results/discussion/conclusions sections are added.
 
+## v3.99 — 2026-09-24
+
+Every downstream number regenerated from the corrected ACA extraction.
+Notes: `v3.99/BUILD_NOTES_V399.md`.
+
+- ★★★ **The catalogue is now built from the repaired data.** The correction is
+  folded in at the EXPORT (`corrected_export_v399.py`), because `v342_calc.py`
+  rewrites the catalogue CSV from that export on every build — a direct CSV
+  patch is silently discarded.
+- **Crossings 75 → 56; stage-1 13 → 12; line-attributed 9 → 10;
+  unattributed 4 → 2**; windows retaining a crossing cell 451 → **1401**.
+  Sample sizes and the 1.5e15 W sensitivity are unchanged, as they must be.
+- HD 23484 and HD 14055 disappear as artefacts; a β Pic CO(2−1) window is
+  recovered and attributed by the paper's own ±50 km/s rule.
+- **Four latent bugs surfaced and fixed**: the export write-target clobbered by
+  a blanket repoint; `EDGE.sort()` comparing dicts on ties; a 10 kHz hard-coded
+  frequency literal for a peak that the repair re-measures; and three frozen
+  constants encoding the old result, now derived.
+- The Band 8 [C I] passage removed — that crossing no longer exists.
+- Gates 0/0/0/0; `audit_numbers` 49 PASS / 0 FAIL; clean regeneration 83/83.
+
 ## v3.98 — 2026-09-24
 
 The ACA control-geometry defect, repaired and verified. Notes:
