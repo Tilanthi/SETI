@@ -6,6 +6,26 @@ Bump the **minor** number (1.00 → 1.01) for content edits/additions within
 the same broad draft stage; bump the **major** number (1.x → 2.00) once
 Paper II's actual results/discussion/conclusions sections are added.
 
+## v3.98 — 2026-09-24
+
+The ACA control-geometry defect, repaired and verified. Notes:
+`v3.98/BUILD_NOTES_V398.md`; spec and result in `ACA_REEXTRACTION_SPEC.md`.
+
+- ★★★ **278 blocks / 739 GB re-extracted, zero failures**, with the dish and
+  baseline now measured from the data and the annulus starting at
+  `max(0.14 theta_PB, 2 theta_syn)`. **The pre-registered test passed:
+  ACA stellar ranks D 0.10 -> 0.034, p <0.001 -> 0.169** (criterion p>0.05,
+  frozen before the run and asserted in the generator).
+- ★★ **Regression check passed**: 12 m windows reproduce the release,
+  233/239 within 1 %, median fractional difference 6.4e-06.
+- ★★ **The repair recovers a beta Pic CO positive-control window the defect
+  had hidden, and removes HD 23484 and HD 14055**, which it had manufactured.
+  One ACA unattributed event survives (61 Vir); CP-72 2713 is 12 m.
+- **M1 discharged**: every window now stores its peak frequency and drift.
+- The v3.97 "68-window caveat" was a stale-duplicate artefact of my own
+  export, not a data problem; resolved.
+- Gates 0/0/0/0; clean regeneration 83/83 byte-identical; abstract 1913/1920.
+
 ## v3.97 — 2026-09-23
 
 Two referee reports, worked through by hand. Notes:
