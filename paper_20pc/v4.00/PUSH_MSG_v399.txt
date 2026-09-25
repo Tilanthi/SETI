@@ -1,0 +1,72 @@
+paper v3.91 -- the presentational revision both referees made a condition
+
+MAIN TEXT 29 -> 26 PAGES. Main-text prose 122,142 -> 100,539 characters, a
+cut of 17.7 per cent against the 20-25 per cent asked for. I did not reach
+20 and would rather say so than pad the figure; what remains follows
+referee 1's specified order (sample, search domain, detection statistic,
+injection/recovery completeness, candidate sequence, null result,
+population interpretation, limitations), and further cuts would remove
+content rather than duplication. Nothing was deleted from the release.
+
+WHAT MOVED
+  glossary (Table 1)                      -> Appendix A, Notation
+  reproducibility/audit narrative         -> Appendix, Reproducibility and
+                                             provenance
+  extraction, control geometry,
+    position-correlated systematics       -> same appendix
+  sample bookkeeping (entry counts,
+    coverage criteria, pointed vs
+    serendipitous)                        -> same appendix
+  dwell campaign end-to-end check,
+    scope, representativeness             -> Appendix B
+  statistical units; data-quality
+    screening and exclusions; CP-72
+    narrative; continuum                  -> appendices
+  Figure 1(a) cross-survey EIRP           -> Appendix A
+  acceleration/drift figure               -> methodology, after the grid
+  R_sigma, region-max, polarisation,
+    CP-72 diagnostics, beta Pic
+    block-by-block                        -> one summary table
+
+The main-text Data Availability statement is now four sentences.
+
+REQUIRED CHANGES CLOSED
+  R1-4  The three frequency-union quantities are generated and asserted by
+        freqdef_v391.py: dnu_A = 47.7, dnu_B = 90.5 (the FULL Class B
+        union, overlapping Class A by 20.1), dnu_B-only = 70.4,
+        dnu_AuB = 118.1 GHz. Referee 1's diagnosis was exactly right: 90.5
+        and 70.4 were different quantities. The identity is asserted.
+  R1-5  "stage-1 spatial outlier" -> "stage-1 flagged window", 40
+        occurrences. "Outlier" did overstate what a rank screen shows.
+  R1-9  Figure 1 split; channel-width panel stays with the warning stated
+        once; EIRP panel relocated.
+  R1-12 After P_eff: every EIRP quoted is the TOTAL radiated power of an
+        unresolved monochromatic carrier, not the power in the peak channel.
+  R1-14 RFI: we claim only that no identified interference mechanism
+        accounts for these events.
+  R1-15 Acceleration figure moved into the methodology.
+  R2-2  Glossary relocated -- satisfies referee 1 (retain it) and referee 2
+        (get it out of the reader's path) together.
+  R2-3  Appendix G consolidated; six subsections become one table.
+  R2-4  Tail quantities computed against the screen's own
+        exchangeability-violating null are now written P_scr, never p, with
+        the convention fixed before first use. p is reserved for genuine
+        tests such as the KS tests on rank distributions.
+  R2-5  Sample-representativeness caveat is on the first page.
+  R2-m  Injection-campaign coverage justified: the limit is computational,
+        each injected window being re-searched end to end over the full
+        drift grid.
+  R2-m  The gamma Lupi relabelling was ALREADY correct in the released
+        catalogue -- all seven rows carry HD 139664. Verified, no change.
+
+Gates: main 26 pp / appendices 20 / total 46; 0 errors, 0 undefined, 0
+multiply-defined, 0 overfull, 0 Type 3; 1100 macros 0 unused; abstract
+1910/1920 on both counters; clean regeneration 95/95 byte-identical;
+number audit 49/49; consistency gate 0 problems; roundcollide 49/49;
+xrefcheck 0 misplaced. REFEREE_VERIFICATION_v391.txt ships every check.
+
+Still open: the stratified end-to-end injection through the selection gate
+and the per-hand polarisation both need the pipeline host, which the
+archive-mining campaign still occupies. The effective-exposure occurrence
+likelihood and the time-domain completeness figure are computable and are
+the next analysis increment.

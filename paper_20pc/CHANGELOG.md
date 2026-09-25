@@ -6,6 +6,27 @@ Bump the **minor** number (1.00 → 1.01) for content edits/additions within
 the same broad draft stage; bump the **major** number (1.x → 2.00) once
 Paper II's actual results/discussion/conclusions sections are added.
 
+## v4.00 — 2026-09-25
+
+Referee round 5. **P90^sel is now measured end to end** — carriers injected
+into calibrated visibilities and recovered through the unmodified pipeline,
+trigger and 512-control rank together (8,860 tones, 52 configurations, null
+0/9,543). The headline per-system sensitivity moves 1.5e15 -> 2.9e15 W.
+
+**The ACA control ensemble is worth 13 independent controls, not 512**, once
+every pair is required to be two synthesised beams apart; the rank
+resolution is 1/14 rather than 1/513, and the separated screen is *more*
+permissive (stage-1 12 -> 28).
+
+**The visibility test's power is now stated**: a compact source at the
+stellar position would return Re/sigma = 5.6-6.0 at the unattributed
+events against 2.47 observed, excluding emission there at 3.3-6.1 sigma.
+
+All 28 of Referee 2's numbered corrections closed, plus M2, M3(1), M4, M5,
+M7, R1-6/7/8/12/x and R2-S2/S5/S7/S9/S10. The "defect found and repaired"
+narrative is removed throughout, and removing it exposed a factual error.
+Main text cut to 17.3 pp. Notes: `v4.00/BUILD_NOTES_V400.md`.
+
 ## v3.99 — 2026-09-24
 
 Every downstream number regenerated from the corrected ACA extraction.
