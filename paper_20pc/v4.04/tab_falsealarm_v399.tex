@@ -1,0 +1,13 @@
+\begin{tabular}{@{}p{0.23\textwidth}rp{0.17\textwidth}p{0.15\textwidth}rr@{}}
+\toprule
+Sample & Windows & Rate per window & Predicts & Expected & Obs. \\
+\midrule
+All searched windows, exchangeable & 1655 & $1/(\NCtrl+1)$ & rank-first windows & 3.2 & -- \\
+Distinct (block, window) datasets & 1616 & $1/(\NCtrl+1)$ & rank-first windows & 3.1 & -- \\
+All windows, measured tail rate & 1655 & $\BootTail/(\NCtrl+1)$ & rank-first windows & 3.9 & -- \\
+All windows, block-resampled & 1614 & $\BootTail/(\NCtrl+1)$ & rank-first windows & 4.4 & -- \\
+Pseudo-star first-rank rate & 1655 & measured on inner probes & rank-first windows & 4.7 & -- \\
+Class~A windows, block-resampled & 394 & $\BootTail/(\NCtrl+1)$ & rank-first Class~A windows & 1.1 [0.5--1.4] & -- \\
+\textbf{Class~A windows, block-resampled, trigger required} & 394 & $\BootTail/(\NCtrl+1)$ if $\max c\geq\StageNullTrig$ & \textbf{unattributed stage-1 events} & $\mathbf{1.07}$ (0--3) & $\mathbf{2}$ \\
+\bottomrule
+\end{tabular}

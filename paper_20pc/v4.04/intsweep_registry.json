@@ -1,0 +1,319 @@
+{
+ "0": {
+  "literal": "the integer zero in prose (\"Cycle 0/1\", \"0 per cent\", \"0 of 500\"): a literal zero, not a survey count",
+  "context": "ation product in the archive, \\FateCalFail{} are Cycle~0/1 blocks whose legacy calibration-script replay this w"
+ },
+ "1": {
+  "literal": "author affiliation marker and \"Cycle 0/1\"",
+  "context": "SurvFreqHiA\\,GHz} \\author{Glenn J. White\\altaffilmark{1,2} and Robin Dey\\altaffilmark{3}} \\begin{abstra"
+ },
+ "2": {
+  "literal": "author affiliation marker; also the exponent-like \"2\" in prose ranges",
+  "context": "rvFreqHiA\\,GHz} \\author{Glenn J. White\\altaffilmark{1,2} and Robin Dey\\altaffilmark{3}} \\begin{abstract"
+ },
+ "3": {
+  "literal": "author affiliation marker",
+  "context": "J. White\\altaffilmark{1,2} and Robin Dey\\altaffilmark{3}} \\begin{abstract} \\emph{Experiment.} We have s"
+ },
+ "4": {
+  "literal": "cross-reference to the four-level vocabulary of Table 2 (\"level 4\")",
+  "context": "always with the unit named. ``Candidate'' means level~4 and nothing weaker.} \\end{table} The four terms a"
+ },
+ "5": {
+  "macro": "StageNullTrig",
+  "note": "the trigger level written as a digit in prose; tied to the macro so it cannot drift",
+  "context": "en requires zero --- \\emph{with against a trigger of 5, the smallest search statistic of all \\LgNCross{} cros"
+ },
+ "6": {
+  "literal": "ALMA band number / calendar day",
+  "context": "the MWA and a single-dish C- and K-band programme at 6 and 18\\,GHz with the Sardinia Radio Telescope , with"
+ },
+ "7": {
+  "literal": "ALMA band number",
+  "context": "ogue audit removed \\NDup{} duplicate rows, Bands~6 and~7 dominating (Table~ ). Nominal trigger thresholds span"
+ },
+ "8": {
+  "literal": "step number in the algorithm table (\"Steps 1--8\")",
+  "context": "\\caption{The statistical data path, in order. Steps 1--8 run identically at the stellar position and all \\NCtrl"
+ },
+ "9": {
+  "literal": "ALMA band number",
+  "context": "band-weighted, up to \\BudFluxWorst{} per cent at Bands~9 and~10, and epoch-dependent. \\item Residual atmospheri"
+ },
+ "10": {
+  "literal": "ALMA band number; also \"10 MHz\" in a cited axis span",
+  "context": "eighted, up to \\BudFluxWorst{} per cent at Bands~9 and~10, and epoch-dependent. \\item Residual atmospheric phase"
+ },
+ "11": {
+  "literal": "calendar day",
+  "context": "ution blocks searched span 2013 October~6 to 2025 June~11 across \\NProjCodes{} proposal codes, which in the stan"
+ },
+ "12": {
+  "literal": "drift-ceiling constant 12--13 Hz/s/GHz, the Mason et al. fiducial",
+  "context": "the larger of (a) a generic frequency-scaled default (12--13\\,Hz\\,s \\,GHz ), the fiducial with a threefold sa"
+ },
+ "13": {
+  "literal": "drift-ceiling constant 12--13 Hz/s/GHz, the Mason et al. fiducial",
+  "context": "larger of (a) a generic frequency-scaled default (12--13\\,Hz\\,s \\,GHz ), the fiducial with a threefold safety"
+ },
+ "16": {
+  "literal": "the brown dwarf Luhman 16, an object name",
+  "context": "he third if brown dwarfs are excluded, fifth if Luhman~16 and WISE~0855 0714 are counted; to our knowledge these"
+ },
+ "17": {
+  "literal": "ancillary continuum-lane detections, 17 of 57 target/bands; an ancillary lane, not a released catalogue quantity",
+  "context": "ll blank there --- an ancillary continuum lane detects 17 of 57 target/bands --- and a residual bandpass ripple"
+ },
+ "18": {
+  "literal": "observing frequency 18 GHz of a cited centimetre-wave programme",
+  "context": "A and a single-dish C- and K-band programme at 6 and 18\\,GHz with the Sardinia Radio Telescope , with machine"
+ },
+ "19": {
+  "literal": "WRC-19, the name of an ITU conference",
+  "context": "es active allocations throughout 90--275\\,GHz, and WRC-19 identified parts of 275--450\\,GHz for land-mobile and"
+ },
+ "20": {
+  "literal": "injection amplitude ladder top, 2--20 times the per-integration noise",
+  "context": "windows, six coarse and six fine, at amplitudes of 2--20 times the per-integration noise and dwell fractions -"
+ },
+ "24": {
+  "literal": "calendar day (2015 June 24)",
+  "context": "h a threshold crossing ( ) and the published 2015 June 24 millimetre flare of . In the crossing's own time wind"
+ },
+ "25": {
+  "literal": "\"a factor of about 25\" in distance, a rounded ratio of two quoted distances",
+  "context": "two distance ranges are disjoint by a factor of about 25 and no target, hence no execution block, is common to"
+ },
+ "28": {
+  "literal": "the 28 stellar-bycatch targets of Mason et al. 2025, their number not ours",
+  "context": "e only prior ALMA-archival technosignature search. The 28 ``stellar bycatch'' targets of all lie at or beyond"
+ },
+ "39": {
+  "literal": "transitions per GHz in the wide Splatalogue harvest at 344 GHz, quoted from the harvest",
+  "context": "ther than evidence: over this window the harvest holds 39 transitions per GHz and a uniformly random frequency f"
+ },
+ "40": {
+  "literal": "the 40 pc sample radius, a selection constant",
+  "context": "signatures toward \\NSysClassA{} Stellar Systems within 40\\,pc at \\SurvFreqLoA--\\SurvFreqHiA\\,GHz} \\author{Glenn"
+ },
+ "44": {
+  "literal": "\"44 per cent in threshold\", a measured discrepancy between two independent reductions",
+  "context": "reductions of the same ~Ceti Band~6 window differ by 44 per cent in threshold, which exceeds the flux-scale sy"
+ },
+ "49": {
+  "literal": "the 49-trial drift grid of one named window",
+  "context": "AU~Mic, and AU~Mic's 488-kHz flagband window with its 49-trial drift grid. Each receives a complex tone at the"
+ },
+ "50": {
+  "literal": "the 50-per-cent breakdown point of a robust estimator, a statistical constant",
+  "context": "a compact feature at the star appears in none and the 50-per-cent breakdown point holds, while emission filling"
+ },
+ "57": {
+  "literal": "ancillary continuum-lane denominator, 17 of 57 target/bands",
+  "context": "nk there --- an ancillary continuum lane detects 17 of 57 target/bands --- and a residual bandpass ripple of fra"
+ },
+ "58": {
+  "literal": "a recovery percentage of the sub-channel placement study",
+  "context": "d sub-channel placement) are recovered 17, \\RecThresh, 58, 75 and \\RecTwice{} per cent at , 5, 6, 8 and 10, sat"
+ },
+ "61": {
+  "literal": "the star name 61 Vir",
+  "context": "to bound compute cost; the cap bound one target/band, 61~Vir Band~7, and three further targets are represented"
+ },
+ "65": {
+  "literal": "MEDWIN = 65, the search pipeline baseline block length, a code constant",
+  "context": "e step --- a per-integration median in blocks of up to 65 channels --- could imprint correlation on longer scale"
+ },
+ "71": {
+  "literal": "ITU E-band feeder-link allocation edge, 71--76 GHz",
+  "context": "E-band feeder links of the second-generation systems, 71--76 and 81--86\\,GHz , below the \\UnionLo\\,GHz start o"
+ },
+ "72": {
+  "literal": "the star name CP-72 2713",
+  "context": "admits no new unattributed event at any width, and CP 72~2713 remains the only unmasked one throughout; this is"
+ },
+ "75": {
+  "literal": "a recovery percentage of the sub-channel placement study",
+  "context": "b-channel placement) are recovered 17, \\RecThresh, 58, 75 and \\RecTwice{} per cent at , 5, 6, 8 and 10, saturat"
+ },
+ "76": {
+  "literal": "ITU E-band feeder-link allocation edge, 71--76 GHz",
+  "context": "and feeder links of the second-generation systems, 71--76 and 81--86\\,GHz , below the \\UnionLo\\,GHz start of th"
+ },
+ "81": {
+  "literal": "ITU E-band feeder-link allocation edge, 81--86 GHz",
+  "context": "der links of the second-generation systems, 71--76 and 81--86\\,GHz , below the \\UnionLo\\,GHz start of the searc"
+ },
+ "83": {
+  "literal": "a recovery percentage of the sub-channel placement study",
+  "context": "atistic and recovers 0 per cent at the trigger against 83 per cent for centred tones, crossing 50 per cent near"
+ },
+ "86": {
+  "literal": "ITU E-band feeder-link allocation edge, 81--86 GHz",
+  "context": "links of the second-generation systems, 71--76 and 81--86\\,GHz , below the \\UnionLo\\,GHz start of the searched"
+ },
+ "90": {
+  "literal": "the 90 per cent completeness convention that defines P90",
+  "context": "ransmitter must radiate to reach it, the trigger's own 90 per cent recovery , and , the power the \\emph{comple"
+ },
+ "91": {
+  "literal": "the wide-harvest coincidence rate at 344 GHz, quoted from the harvest calibration",
+  "context": "random frequency falls within \\,km\\,s of one of them 91 per cent of the time, the nearest here being an uniden"
+ },
+ "95": {
+  "literal": "the 95 per cent confidence convention",
+  "context": "g carrier above each system's own at per cent, the 95 per cent Poisson limit; the convention common in the"
+ },
+ "106": {
+  "literal": "observing frequency 106 GHz of the cited AU Mic letter",
+  "context": "es used here. AU~Mic's impulsive millimetre flaring at 106\\,GHz is described in . Our extractor returns \\PxRoss"
+ },
+ "115": {
+  "literal": "115 GHz, the upper edge of a cited axis span",
+  "context": "that axis's span, which their \\S3.2.2 sets at 10\\,MHz--115\\,GHz --- the ionospheric cutoff to the top of the Gree"
+ },
+ "122": {
+  "literal": "122 kHz, the native channel width of one named window",
+  "context": "he crossing peak in the flagged window is \\,Jy in one 122-kHz channel, with the ring at the same level. \\begin{"
+ },
+ "154": {
+  "literal": "the star name Ross 154",
+  "context": "ux and is therefore immune to the term below; for Ross~154, measured two 2022 September flares from the same AC"
+ },
+ "200": {
+  "literal": "trials per configuration in a named injection study",
+  "context": "rid rates and channel-centred and boundary placements: 200 trials per configuration, \\NTrials{} in all. The recov"
+ },
+ "219": {
+  "literal": "the star name Wolf 219",
+  "context": "e target in at least one execution block, leaving Wolf~219 the sole serendipitous star, so the residual selection"
+ },
+ "230": {
+  "literal": "230 GHz, a reference frequency",
+  "context": "cing: a coherent point-source loss , -- per cent at 230--345\\,GHz. It is common to star and annulus within the"
+ },
+ "272": {
+  "literal": "the star designation G 272-61B",
+  "context": "ph{Worked example: from flux to EIRP.} Take UV~Ceti (G~272-61B) Band~3, the deepest of its \\NUVCetiWin{} windows"
+ },
+ "273": {
+  "literal": "the star name GJ 273 and its planet GJ 273 b",
+  "context": "~Centauri, TRAPPIST-1, LHS~1140, GJ~581, HN~Lib and GJ~273 (\\BdStar) with GJ~273\\,b , which earlier versions of"
+ },
+ "275": {
+  "literal": "ITU allocation edge 275 GHz",
+  "context": "ns Article~5 carries active allocations throughout 90--275\\,GHz, and WRC-19 identified parts of 275--450\\,GHz for"
+ },
+ "345": {
+  "literal": "345 GHz, a reference frequency",
+  "context": "a coherent point-source loss , -- per cent at 230--345\\,GHz. It is common to star and annulus within the isop"
+ },
+ "350": {
+  "literal": "350 GHz, a reference frequency",
+  "context": "c terms at the \\MaskVWidth\\,km\\,s scale are \\,kHz at 350\\,GHz, below the finest native channel searched (15.3\\,"
+ },
+ "358": {
+  "literal": "the star name Wolf 358",
+  "context": "ds (Barnard's Star , Wolf~359 , SCR~J1845 6357, Wolf~358) yielded no carrier result, each keeping a valid conti"
+ },
+ "359": {
+  "literal": "the star name Wolf 359",
+  "context": "ta Availability). \\subsection{Barnard's Star and Wolf~359} Barnard's Star is the second-nearest stellar syste"
+ },
+ "450": {
+  "literal": "ITU allocation edge 450 GHz",
+  "context": "hout 90--275\\,GHz, and WRC-19 identified parts of 275--450\\,GHz for land-mobile and fixed use. The specific hazar"
+ },
+ "488": {
+  "literal": "488 kHz, the native channel width of the worked-example window",
+  "context": "\\emph{(ii) A continuously drifting carrier} in a fine 488-kHz channel is the only morphology with a measured end"
+ },
+ "500": {
+  "literal": "the coarse-window dwell campaign size, 0 of 500",
+  "context": "dwell trials over \\NDwellWin{} real windows. The 0 of 500 coarse-window entry is a property of the recovery crit"
+ },
+ "581": {
+  "literal": "the star name GJ 581",
+  "context": "le zone --- Proxima~Centauri, TRAPPIST-1, LHS~1140, GJ~581, HN~Lib and GJ~273 (\\BdStar) with GJ~273\\,b , which e"
+ },
+ "639": {
+  "literal": "integrations in one named injection window",
+  "context": "nel of the injection. The ideal stacking gain over its 639 integrations is , and the measured 20.5 is that value"
+ },
+ "0714": {
+  "literal": "the object name WISE 0855-0714",
+  "context": "dwarfs are excluded, fifth if Luhman~16 and WISE~0855 0714 are counted; to our knowledge these are the first mm o"
+ },
+ "0855": {
+  "literal": "the object name WISE 0855-0714",
+  "context": "brown dwarfs are excluded, fifth if Luhman~16 and WISE~0855 0714 are counted; to our knowledge these are the first"
+ },
+ "1010": {
+  "literal": "the star name HR 1010",
+  "context": "ound here on threshold reproducibility, and the two HR~1010 Band~6 rows straddle the trigger at and , so the cr"
+ },
+ "1140": {
+  "literal": "the star name LHS 1140",
+  "context": "e habitable zone --- Proxima~Centauri, TRAPPIST-1, LHS~1140, GJ~581, HN~Lib and GJ~273 (\\BdStar) with GJ~273\\,b ,"
+ },
+ "1420": {
+  "literal": "1420 MHz, the neutral hydrogen line frequency",
+  "context": "' arguments that have guided targeted searches --- the 1420\\,MHz line, its multiples, the water hole, or and t"
+ },
+ "2013": {
+  "literal": "calendar year",
+  "context": "nce Archive. The \\NEB{} execution blocks searched span 2013 October~6 to 2025 June~11 across \\NProjCodes{} proposa"
+ },
+ "2015": {
+  "literal": "calendar year",
+  "context": "ntains both a threshold crossing ( ) and the published 2015 June 24 millimetre flare of . In the crossing's own t"
+ },
+ "2022": {
+  "literal": "calendar year",
+  "context": "immune to the term below; for Ross~154, measured two 2022 September flares from the same ACA visibilities used h"
+ },
+ "2024": {
+  "literal": "calendar year",
+  "context": "on used by spaceborne cloud radar, CloudSat and, since 2024, EarthCARE, which is a documented contaminant of ALMA"
+ },
+ "2025": {
+  "literal": "calendar year",
+  "context": "NEB{} execution blocks searched span 2013 October~6 to 2025 June~11 across \\NProjCodes{} proposal codes, which in"
+ },
+ "2026": {
+  "literal": "calendar year",
+  "context": "alogue intersected with the public-archive snapshot of 2026 September~8. Against that Gaia~DR3 catalogue of \\NGaia"
+ },
+ "2713": {
+  "literal": "the star name CP-72 2713",
+  "context": "mits no new unattributed event at any width, and CP 72~2713 remains the only unmasked one throughout; this is a on"
+ },
+ "5000": {
+  "literal": "the 5000 m altitude of the ALMA site",
+  "context": "ed with centimetre wavelengths, that the array sits at 5000\\,m on a site chosen partly for radio quietness, and, d"
+ },
+ "6357": {
+  "literal": "the star name SCR J1845-6357",
+  "context": "target/bands (Barnard's Star , Wolf~359 , SCR~J1845 6357, Wolf~358) yielded no carrier result, each keeping a v"
+ },
+ "14055": {
+  "literal": "the star name HD 14055",
+  "context": "full. \\paragraph*{Which extraction change removed HD~14055 and HD~23484.} Earlier versions of this paper listed \\"
+ },
+ "23484": {
+  "literal": "the star name HD 23484",
+  "context": "statistic that promotes ~Pictoris; CP 72~2713 and HD~23484 (Table~ ) are the third regime, marginal single cells"
+ },
+ "48370": {
+  "literal": "the star name HD 48370",
+  "context": "{} is the test working in that direction, and so is HD~48370, whose large real part comes with an imaginary part fa"
+ },
+ "61005": {
+  "literal": "the star name HD 61005",
+  "context": "he \\HiBandWin{} Band~9/10 windows toward AU~Mic and HD~61005 are included and none is a detection or spatial outlie"
+ },
+ "139664": {
+  "literal": "the star name HD 139664",
+  "context": "elled entries such as `` ~Lupi'', which resolves to HD~139664 at 17.40\\,pc; these are relabelled and no measured val"
+ }
+}

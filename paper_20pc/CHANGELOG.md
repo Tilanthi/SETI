@@ -6,6 +6,50 @@ Bump the **minor** number (1.00 → 1.01) for content edits/additions within
 the same broad draft stage; bump the **major** number (1.x → 2.00) once
 Paper II's actual results/discussion/conclusions sections are added.
 
+## v4.04 — 2026-09-26
+
+**The round-8 referee response.** Page length deferred by Glenn's directive;
+no science deleted to save space. Main text 14.98 → 16.62 pp, total 43 → 46 pp.
+Notes: `v4.04/BUILD_NOTES_V404.md`.
+
+- **Appendix J.3's arithmetic was wrong and its conclusion was reversed.**
+  Recomputed from the catalogue: 10 of the 14 rank-first windows carry an
+  identified CO attribution and the residual is 4 against 3.23 expected,
+  P(≥4) = 0.40 — consistent with chance. The rank-first excess is
+  astrophysical and is **not** evidence of non-exchangeability; that claim now
+  rests on the out-of-sample rank displacement instead.
+- **The line mask is TOPOCENTRIC, proved**: 1400 released MHz offsets and 1400
+  km/s offsets reproduce from the observed sky frequency against the
+  15-transition list the search ran; 0 reproduce barycentrically or in the
+  stellar frame. Two passages said the stellar frame.
+- **The α CMa B limit is withdrawn** — the extraction ignored Sirius B's
+  50.13-yr visual orbit and ran 3–5 synthesised beams off the star.
+- **AU Mic removed from Table 21 and Appendix F**: no AU Mic attribution
+  exists in the results.
+- **Which extraction change removed HD 14055 and HD 23484**: the ACA
+  control-annulus repair, shown before and after on the same three windows.
+  61 Vir 6.16/5.88 → 5.96/5.65, and the external calibration sample is
+  labelled pre-repair, tail rate included.
+- **Four terms adopted** (threshold crossing / screened event / localised
+  event / confirmed candidate) as `tab:vocab`, with one verbatim formulation
+  of the control rank's status used in four places.
+- **Stellar flares excluded by measurement, not by the localisation argument**
+  the referee assumed: a 5σ crossing needs a 49–4717σ continuum event;
+  observed median −0.29; a real published flare in a crossing block
+  contributes 0.17σ.
+- **Two exposure defects of opposite sign stated together**: +19.1 h
+  discarded by field truncation, −12.9 to −18.5 h over-counted by
+  `n_int × median(Δt)`.
+- **The omitted annual parallax** stated as a measured systematic and not
+  applied, with the optimistic direction and the injection campaign's
+  blindness to it explicit; plus the AU Mic / Ross 154 absolute-scale check
+  with its 7–8 per cent residual.
+- **New gates**: `intsweep.py` (every integer in running prose registered;
+  79/79) and `selftest_v404.py` (46 perturbations, 46 demonstrated failing).
+- **A live generator bug fixed**: the search's `H2CO` spelling left 20
+  released rows with an MHz offset and a blank km/s column.
+- All gates clean; **clean regeneration 116/116 byte-identical**.
+
 ## v4.02 — 2026-09-26
 
 **The non-ledger round-7 correction pass.** These changes were completed in

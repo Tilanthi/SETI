@@ -1,0 +1,34 @@
+[
+ {
+  "file": "null.npz",
+  "sha256": "4fa35a2015d93260b63c751059655c9e463f8eb5b5812fc6033be08f5e232e37",
+  "name": "null",
+  "amp": 0.0,
+  "drift_hz_s": 0.0,
+  "note": "pure noise; no carrier. Expect max |T| consistent with the extreme of NCHAN x NDRIFT standard normals."
+ },
+ {
+  "file": "stationary_5sigma.npz",
+  "sha256": "44ddf10130b41a276a491768f3a5476182d29017d5fb1d6bc9c08ee8c3cd1f90",
+  "name": "stationary_5sigma",
+  "amp": 5.0,
+  "drift_hz_s": 0.0,
+  "note": "stationary carrier at 5 sigma per-integration-stacked amplitude, centred in one channel. Expect T ~ 5 at zero drift, and a loss of ~sqrt(2) at half-channel offset."
+ },
+ {
+  "file": "drifting_5sigma.npz",
+  "sha256": "6cae6787b601e73e8c0b95e98d7a6e36cb136154ec34d5a06075ca7691a6c584",
+  "name": "drifting_5sigma",
+  "amp": 5.0,
+  "drift_hz_s": 1017.2526041666666,
+  "note": "carrier drifting by four channels across the track. Expect T ~ 5 ONLY at the matching drift trial; stacking at zero drift must lose approximately sqrt(NINT/4)."
+ },
+ {
+  "file": "drifting_offgrid.npz",
+  "sha256": "d7bc44f9c7fbe5ee35b355390157d320f60ff5f401bcbe6ba213bee0ff29aa65",
+  "name": "drifting_offgrid",
+  "amp": 5.0,
+  "drift_hz_s": 1144.4091796875,
+  "note": "drift falling between two trial rates. Expect the recovered amplitude to be reduced relative to the on-grid case; this is the grid-loss term the completeness curve must capture."
+ }
+]
