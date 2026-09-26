@@ -6,6 +6,54 @@ Bump the **minor** number (1.00 → 1.01) for content edits/additions within
 the same broad draft stage; bump the **major** number (1.x → 2.00) once
 Paper II's actual results/discussion/conclusions sections are added.
 
+## v4.02 — 2026-09-26
+
+**The non-ledger round-7 correction pass.** These changes were completed in
+the local `v4.01/` folder *after* `v4.01` had already been pushed, so the
+remote `v4.01` and this content are not the same paper; they are published
+under their own number rather than as a second commit on `v4.01`.
+
+- **The three frozen macro files are gone.** `survey_numbers_round{5,6,7}.tex`
+  were restored by `cp` from `frozen_macros/` and no generator could rebuild
+  them; they came from an extraction two revisions before the ACA repair and
+  **12 of their macros were still typeset**. All 12 now derive from the
+  released catalogue. `\HdCorrectedT/Ring` 21.0/20.8 → 20.8/14.2;
+  `\NonExcRingGe` 16 → 38; `\MaskBWTwenty/Hundred` 2.1/10 → 2.3/8.7.
+- **Two new gates**: `macrosyn.py` (macros that claim to be the same quantity
+  must agree; declared ledger identities must close; no macro file may exist
+  that no `.py` writes) and the figure pass of `audit_numbers_v385.py` (every
+  star designation drawn in a typeset figure must be in the catalogue and in
+  SIMBAD form).
+- **Mason et al. 2025 redone like-for-like** in minimum detectable received
+  flux, with their published EIRP reproduced from their own numbers to 0.3 %
+  as a build-stopping positive control. The "~361× lower" sentence is gone.
+- **The known-answer test vectors are RUN** (`katcheck_v401.py`), Eq. (3)
+  re-implemented importing nothing from the search or injection code.
+- **TRAPPIST-1's acceleration margin** was compared against one ceiling under
+  the other's name; both margins are now published and named.
+- **Main text 18.86 → 16.53 pp**, by deleting narration rather than
+  measurement.
+- v4.02 itself bumps the version, and **deletes two paragraphs the shipped
+  ledger has already made false**: §4.1's "the visibility test was applied to
+  the flagged windows rather than to all threshold crossings" and its cost
+  estimate, and the "one β Pictoris window is absent from this table" one.
+  Main text 16.53 → **16.03 pp**, total 44 → **43 pages**.
+
+**The visibility-test ledger carried here is the superseded round-6 one.** The
+round-7 refits, the epoch-convention change (`t0 = times[0]`) and the
+recurrence results land in v4.03. Notes: `v4.02/BUILD_NOTES_V402.md` and
+`v4.02/BUILD_NOTES_V401_NONLEDGER.md`.
+
+## v4.01 — 2026-09-25
+
+R2-M2's "factor of two" in the channel response answered: it is 9 per cent,
+and both sides were wrong. `cresp_v401.py` computes `C_resp` from the
+correlator's own lag window rather than from a linear split of the channel;
+`C_resp` = 2.00–2.36, median **2.08** (was 2.29). Five documented ALMA
+numbers reproduced and none fitted, including the archive's own reported
+effective resolutions for this survey's windows to four digits. Thirteen
+`P_eff`-family macros move by ~9 %; `P90^sel` does not move and must not.
+
 ## v4.00 — 2026-09-25
 
 Referee round 5. **P90^sel is now measured end to end** — carriers injected
