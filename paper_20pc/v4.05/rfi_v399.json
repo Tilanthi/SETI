@@ -1,0 +1,47 @@
+{
+ "bin_MHz": 1.0,
+ "edge_channels": {
+  "A002_Xc079b5_X82f": 817.0004480000352,
+  "A002_Xff0235_X4a6d": 35.000319999991916
+ },
+ "frac_ks_D": 0.022474789070078133,
+ "frac_ks_p": 0.4744902904046668,
+ "frac_median": 0.5042735042735043,
+ "max_multiplicity": 4,
+ "n_crossings_with_freq": 1401,
+ "n_frac": 1401,
+ "n_occupied_bins": 1215,
+ "null_max_mean": 2.4405,
+ "null_max_p95": 3.0,
+ "p_maxmult": 0.009,
+ "per_event": {
+  "A002_Xc079b5_X82f": {
+   "band": "7",
+   "f_cross_GHz": 346.313811,
+   "fhi": 346.712737,
+   "flo": 344.872405,
+   "n_other_blocks": 32,
+   "n_other_crossings": 2,
+   "n_other_stars": 25,
+   "n_overlap_windows": 41,
+   "n_same_channel_other_stars": 0,
+   "same_channel": [],
+   "star": "61 Vir"
+  },
+  "A002_Xff0235_X4a6d": {
+   "band": "7",
+   "f_cross_GHz": 344.269746,
+   "fhi": 345.977754,
+   "flo": 344.252656,
+   "n_other_blocks": 42,
+   "n_other_crossings": 4,
+   "n_other_stars": 8,
+   "n_overlap_windows": 43,
+   "n_same_channel_other_stars": 0,
+   "same_channel": [],
+   "star": "CP-72 2713"
+  }
+ },
+ "total_other_crossings": 6,
+ "total_other_stars": 33
+}
