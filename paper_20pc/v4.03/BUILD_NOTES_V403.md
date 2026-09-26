@@ -339,8 +339,36 @@ shipped a false sentence, using no new number:**
 - Appendix M's clustering test, which round 8 finds broken three ways
   (grid-respecting null gives $p=1.0000$; the right test finds clustering at
   $p=0.0025$ that is entirely the survey's own CO attributions).
-- The near-edge false-alarm excess of $\times2.4$--$3.5$, which bears on
-  CP$-$72 2713 (channel 35 of 3534) and on BD$+$05 1668.
+
+★ **Amended after the push** (notes only; the manuscript, its products and every
+gate result above are unchanged). Two of the items above were measured by the
+sibling worker `edge-and-maskframe` within the hour, and the answers change what
+v4.04 should do:
+
+- **The near-edge false-alarm excess of $\times2.4$--$3.5$ is WITHDRAWN**
+  (`referee_r8/EDGE_AND_MASKFRAME.md`). It is one window — HD 48370
+  `Xc26103_X155a` spw16, which holds the survey's bright *resolved* CO(2--1)
+  line 92 channels from the edge, where the control annulus sees it. Remove
+  that window and the ratio is $\times1.003$ ($p=0.51$). CP$-$72 2713's own
+  window has **zero** near-edge exceedances, so the "(e)" ground round 8
+  offered for that crossing is gone. **Nothing in v4.03 asserts it** — it was
+  listed here only as a v4.04 item, and it should now be struck.
+- **The 17-versus-15 mask discrepancy is settled, and v4.03's decision not to
+  guess was the right one.** They are two literals in `v342_calc.py`: the
+  search ran `CAT_OLD`, 15 transitions rounded to 1 MHz and identical value for
+  value to the search code's `KNOWN_LINES_GHZ`; `CAT` adds
+  [C\,\textsc{i}](1--0) and H30$\alpha$ at v3.46 to make 17. **0 of 51 nearest
+  transitions change between the two lists**, so it is a documentation defect
+  and not a correctness one. Appendix K.4.3's "\MaskNTransNew{} transitions"
+  is therefore correct about the paper's mask; v4.04 should say which list the
+  *search* ran.
+- ★★ **And the mask frame is TOPOCENTRIC, not stellar**: 51/51 `line_offset_MHz`
+  and 48/48 `line_offset_kms` reproduce topocentrically, 0 barycentric, 0
+  stellar. Appendix I's "the mask being evaluated in the stellar frame" is
+  wrong and is a v4.04 item. **Nothing v4.03 states is false on this**, because
+  0 of 44 attributions change between frames and the two stellar-frame offsets
+  v4.03 quotes ($\eta$~Crv's 9929 km s$^{-1}$, CP$-$72 2713's $-12.3$) are
+  computed quantities, correct in the frame they name.
 
 ## 11. Noticed, out of scope, not changed
 
