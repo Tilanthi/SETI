@@ -1,0 +1,440 @@
+{
+ "generated": "2026-09-24T14:34:19Z",
+ "n_units_total": 56,
+ "n_units_scored": 52,
+ "n_units_failed": 0,
+ "failed": [],
+ "positive_control_failures": [
+  [
+   "A002_X7116f1_X1785_spw0",
+   "positive control 0.88"
+  ],
+  [
+   "A002_X7116f1_X1785_spw2",
+   "positive control 0.93"
+  ],
+  [
+   "A002_Xb999fd_X148_spw20",
+   "positive control 0.88"
+  ],
+  [
+   "A002_Xc26103_X155a_spw16",
+   "positive control 0.88"
+  ]
+ ],
+ "strata": [
+  {
+   "stratum": "all",
+   "n_units": 52,
+   "n_tones": 8860,
+   "ladder": [
+    {
+     "amp_over_trig": 0.75,
+     "recovered": 0,
+     "n": 683,
+     "frac": 0.0,
+     "frac_trig_only": 0.0,
+     "frac_rank_only": 0.0029282576866764276,
+     "n_outside_trim": 0
+    },
+    {
+     "amp_over_trig": 1.0,
+     "recovered": 0,
+     "n": 682,
+     "frac": 0.0,
+     "frac_trig_only": 0.004398826979472141,
+     "frac_rank_only": 0.004398826979472141,
+     "n_outside_trim": 1
+    },
+    {
+     "amp_over_trig": 1.25,
+     "recovered": 3,
+     "n": 683,
+     "frac": 0.004392386530014641,
+     "frac_trig_only": 0.013177159590043924,
+     "frac_rank_only": 0.010248901903367497,
+     "n_outside_trim": 0
+    },
+    {
+     "amp_over_trig": 1.5,
+     "recovered": 10,
+     "n": 683,
+     "frac": 0.014641288433382138,
+     "frac_trig_only": 0.043923865300146414,
+     "frac_rank_only": 0.021961932650073207,
+     "n_outside_trim": 0
+    },
+    {
+     "amp_over_trig": 1.75,
+     "recovered": 25,
+     "n": 677,
+     "frac": 0.03692762186115214,
+     "frac_trig_only": 0.09601181683899557,
+     "frac_rank_only": 0.056129985228951254,
+     "n_outside_trim": 6
+    },
+    {
+     "amp_over_trig": 2.0,
+     "recovered": 55,
+     "n": 677,
+     "frac": 0.08124076809453472,
+     "frac_trig_only": 0.15952732644017725,
+     "frac_rank_only": 0.12998522895125553,
+     "n_outside_trim": 6
+    },
+    {
+     "amp_over_trig": 2.5,
+     "recovered": 174,
+     "n": 683,
+     "frac": 0.2547584187408492,
+     "frac_trig_only": 0.39970717423133234,
+     "frac_rank_only": 0.3294289897510981,
+     "n_outside_trim": 0
+    },
+    {
+     "amp_over_trig": 3.0,
+     "recovered": 363,
+     "n": 677,
+     "frac": 0.5361890694239291,
+     "frac_trig_only": 0.6514032496307238,
+     "frac_rank_only": 0.5819793205317577,
+     "n_outside_trim": 6
+    },
+    {
+     "amp_over_trig": 3.5,
+     "recovered": 507,
+     "n": 683,
+     "frac": 0.7423133235724744,
+     "frac_trig_only": 0.849194729136164,
+     "frac_rank_only": 0.7701317715959004,
+     "n_outside_trim": 0
+    },
+    {
+     "amp_over_trig": 4.0,
+     "recovered": 561,
+     "n": 683,
+     "frac": 0.821376281112738,
+     "frac_trig_only": 0.9297218155197657,
+     "frac_rank_only": 0.8389458272327965,
+     "n_outside_trim": 0
+    },
+    {
+     "amp_over_trig": 5.0,
+     "recovered": 632,
+     "n": 683,
+     "frac": 0.9253294289897511,
+     "frac_trig_only": 0.9970717423133236,
+     "frac_rank_only": 0.9267935578330894,
+     "n_outside_trim": 0
+    },
+    {
+     "amp_over_trig": 6.0,
+     "recovered": 652,
+     "n": 683,
+     "frac": 0.9546120058565154,
+     "frac_trig_only": 1.0,
+     "frac_rank_only": 0.9546120058565154,
+     "n_outside_trim": 0
+    },
+    {
+     "amp_over_trig": 8.0,
+     "recovered": 663,
+     "n": 683,
+     "frac": 0.9707174231332357,
+     "frac_trig_only": 1.0,
+     "frac_rank_only": 0.9707174231332357,
+     "n_outside_trim": 0
+    }
+   ],
+   "P90_over_trigger": 4.756338028169014,
+   "P90_ci68": [
+    4.419915151515151,
+    5.062941353383459
+   ],
+   "P90_bootstrap_undefined_frac": 0.0034999999999999476,
+   "ladder_top": 8.0,
+   "null_recovered": 0,
+   "null_n": 9543,
+   "null_frac": 0.0,
+   "positive_control_frac": 1.0,
+   "ctrl_top_clean": 4.793023586273193,
+   "ctrl_top_at_top_rung": 8.812995672225952
+  },
+  {
+   "stratum": "coarse (>5 MHz)",
+   "n_units": 34,
+   "n_tones": 5330,
+   "ladder": [
+    {
+     "amp_over_trig": 0.75,
+     "recovered": 0,
+     "n": 410,
+     "frac": 0.0,
+     "frac_trig_only": 0.0,
+     "frac_rank_only": 0.004878048780487805,
+     "n_outside_trim": 0
+    },
+    {
+     "amp_over_trig": 1.0,
+     "recovered": 0,
+     "n": 410,
+     "frac": 0.0,
+     "frac_trig_only": 0.0,
+     "frac_rank_only": 0.004878048780487805,
+     "n_outside_trim": 0
+    },
+    {
+     "amp_over_trig": 1.25,
+     "recovered": 1,
+     "n": 410,
+     "frac": 0.0024390243902439024,
+     "frac_trig_only": 0.004878048780487805,
+     "frac_rank_only": 0.012195121951219513,
+     "n_outside_trim": 0
+    },
+    {
+     "amp_over_trig": 1.5,
+     "recovered": 5,
+     "n": 410,
+     "frac": 0.012195121951219513,
+     "frac_trig_only": 0.01707317073170732,
+     "frac_rank_only": 0.024390243902439025,
+     "n_outside_trim": 0
+    },
+    {
+     "amp_over_trig": 1.75,
+     "recovered": 11,
+     "n": 410,
+     "frac": 0.026829268292682926,
+     "frac_trig_only": 0.03170731707317073,
+     "frac_rank_only": 0.05853658536585366,
+     "n_outside_trim": 0
+    },
+    {
+     "amp_over_trig": 2.0,
+     "recovered": 25,
+     "n": 410,
+     "frac": 0.06097560975609756,
+     "frac_trig_only": 0.06585365853658537,
+     "frac_rank_only": 0.13902439024390245,
+     "n_outside_trim": 0
+    },
+    {
+     "amp_over_trig": 2.5,
+     "recovered": 79,
+     "n": 410,
+     "frac": 0.1926829268292683,
+     "frac_trig_only": 0.2048780487804878,
+     "frac_rank_only": 0.3170731707317073,
+     "n_outside_trim": 0
+    },
+    {
+     "amp_over_trig": 3.0,
+     "recovered": 191,
+     "n": 410,
+     "frac": 0.4658536585365854,
+     "frac_trig_only": 0.4878048780487805,
+     "frac_rank_only": 0.5414634146341464,
+     "n_outside_trim": 0
+    },
+    {
+     "amp_over_trig": 3.5,
+     "recovered": 288,
+     "n": 410,
+     "frac": 0.7024390243902439,
+     "frac_trig_only": 0.7707317073170732,
+     "frac_rank_only": 0.748780487804878,
+     "n_outside_trim": 0
+    },
+    {
+     "amp_over_trig": 4.0,
+     "recovered": 338,
+     "n": 410,
+     "frac": 0.824390243902439,
+     "frac_trig_only": 0.8853658536585366,
+     "frac_rank_only": 0.8536585365853658,
+     "n_outside_trim": 0
+    },
+    {
+     "amp_over_trig": 5.0,
+     "recovered": 394,
+     "n": 410,
+     "frac": 0.9609756097560975,
+     "frac_trig_only": 0.9951219512195122,
+     "frac_rank_only": 0.9634146341463414,
+     "n_outside_trim": 0
+    },
+    {
+     "amp_over_trig": 6.0,
+     "recovered": 403,
+     "n": 410,
+     "frac": 0.9829268292682927,
+     "frac_trig_only": 1.0,
+     "frac_rank_only": 0.9829268292682927,
+     "n_outside_trim": 0
+    },
+    {
+     "amp_over_trig": 8.0,
+     "recovered": 405,
+     "n": 410,
+     "frac": 0.9878048780487805,
+     "frac_trig_only": 1.0,
+     "frac_rank_only": 0.9878048780487805,
+     "n_outside_trim": 0
+    }
+   ],
+   "P90_over_trigger": 4.553571428571429,
+   "P90_ci68": [
+    4.344571914893617,
+    4.705724675324674
+   ],
+   "P90_bootstrap_undefined_frac": 0.0,
+   "ladder_top": 8.0,
+   "null_recovered": 0,
+   "null_n": 5740,
+   "null_frac": 0.0,
+   "positive_control_frac": 1.0,
+   "ctrl_top_clean": 4.555586814880371,
+   "ctrl_top_at_top_rung": 9.424172639846802
+  },
+  {
+   "stratum": "fine (<1 MHz)",
+   "n_units": 18,
+   "n_tones": 3530,
+   "ladder": [
+    {
+     "amp_over_trig": 0.75,
+     "recovered": 0,
+     "n": 273,
+     "frac": 0.0,
+     "frac_trig_only": 0.0,
+     "frac_rank_only": 0.0,
+     "n_outside_trim": 0
+    },
+    {
+     "amp_over_trig": 1.0,
+     "recovered": 0,
+     "n": 272,
+     "frac": 0.0,
+     "frac_trig_only": 0.011029411764705883,
+     "frac_rank_only": 0.003676470588235294,
+     "n_outside_trim": 1
+    },
+    {
+     "amp_over_trig": 1.25,
+     "recovered": 2,
+     "n": 273,
+     "frac": 0.007326007326007326,
+     "frac_trig_only": 0.02564102564102564,
+     "frac_rank_only": 0.007326007326007326,
+     "n_outside_trim": 0
+    },
+    {
+     "amp_over_trig": 1.5,
+     "recovered": 5,
+     "n": 273,
+     "frac": 0.018315018315018316,
+     "frac_trig_only": 0.08424908424908426,
+     "frac_rank_only": 0.018315018315018316,
+     "n_outside_trim": 0
+    },
+    {
+     "amp_over_trig": 1.75,
+     "recovered": 14,
+     "n": 267,
+     "frac": 0.052434456928838954,
+     "frac_trig_only": 0.1947565543071161,
+     "frac_rank_only": 0.052434456928838954,
+     "n_outside_trim": 6
+    },
+    {
+     "amp_over_trig": 2.0,
+     "recovered": 30,
+     "n": 267,
+     "frac": 0.11235955056179775,
+     "frac_trig_only": 0.30337078651685395,
+     "frac_rank_only": 0.11610486891385768,
+     "n_outside_trim": 6
+    },
+    {
+     "amp_over_trig": 2.5,
+     "recovered": 95,
+     "n": 273,
+     "frac": 0.34798534798534797,
+     "frac_trig_only": 0.6923076923076923,
+     "frac_rank_only": 0.34798534798534797,
+     "n_outside_trim": 0
+    },
+    {
+     "amp_over_trig": 3.0,
+     "recovered": 172,
+     "n": 267,
+     "frac": 0.6441947565543071,
+     "frac_trig_only": 0.9026217228464419,
+     "frac_rank_only": 0.6441947565543071,
+     "n_outside_trim": 6
+    },
+    {
+     "amp_over_trig": 3.5,
+     "recovered": 219,
+     "n": 273,
+     "frac": 0.8021978021978022,
+     "frac_trig_only": 0.967032967032967,
+     "frac_rank_only": 0.8021978021978022,
+     "n_outside_trim": 0
+    },
+    {
+     "amp_over_trig": 4.0,
+     "recovered": 223,
+     "n": 273,
+     "frac": 0.8168498168498168,
+     "frac_trig_only": 0.9963369963369964,
+     "frac_rank_only": 0.8168498168498168,
+     "n_outside_trim": 0
+    },
+    {
+     "amp_over_trig": 5.0,
+     "recovered": 238,
+     "n": 273,
+     "frac": 0.8717948717948718,
+     "frac_trig_only": 1.0,
+     "frac_rank_only": 0.8717948717948718,
+     "n_outside_trim": 0
+    },
+    {
+     "amp_over_trig": 6.0,
+     "recovered": 249,
+     "n": 273,
+     "frac": 0.9120879120879121,
+     "frac_trig_only": 1.0,
+     "frac_rank_only": 0.9120879120879121,
+     "n_outside_trim": 0
+    },
+    {
+     "amp_over_trig": 8.0,
+     "recovered": 258,
+     "n": 273,
+     "frac": 0.945054945054945,
+     "frac_trig_only": 1.0,
+     "frac_rank_only": 0.945054945054945,
+     "n_outside_trim": 0
+    }
+   ],
+   "P90_over_trigger": 5.700000000000001,
+   "P90_ci68": [
+    3.6679789473684212,
+    5.9209385964912284
+   ],
+   "P90_bootstrap_undefined_frac": 0.26349999999999996,
+   "ladder_top": 8.0,
+   "null_recovered": 0,
+   "null_n": 3803,
+   "null_frac": 0.0,
+   "positive_control_frac": 1.0,
+   "ctrl_top_clean": 5.734346151351929,
+   "ctrl_top_at_top_rung": 8.812995672225952
+  }
+ ],
+ "P90_over_trigger": 4.756338028169014,
+ "n_tones_total": 8860
+}

@@ -6,6 +6,47 @@ Bump the **minor** number (1.00 → 1.01) for content edits/additions within
 the same broad draft stage; bump the **major** number (1.x → 2.00) once
 Paper II's actual results/discussion/conclusions sections are added.
 
+## v4.07 (2026-09-27)
+
+**The census name collision, and the star-blind overwrite behind it. One counted
+crossing was found to have been deleted at v3.99.** 52 pp, main text 19.69 pp (cap
+deliberately broken; length deferred).
+
+- `HD 139084B [921024]` and `[805632]` are not one star entered twice: they are the two
+  components of V343 Nor, 10.32 arcsec apart (SIMBAD: K0V SB* and M5Ve), against 0.44,
+  1.40 and 1.55 arcsec for the three collisions in this census that really are one star.
+  The primary had inherited the ALMA FIELD name. Renamed at the census generator, which
+  now REFUSES to disambiguate a collision wider than 3 arcsec by Gaia digits unless the
+  identities are declared.
+- `corrected_export_v399.py` matched the re-extraction harvest on (block, window) with no
+  star, and the harvest carries no target field, so one component's measurement was
+  written onto both rows at v3.99. `per_target_results_v3.81/84.csv` still carry the
+  companion's own T* = 5.6634 crossing at 345.1449 GHz; the present release carried the
+  primary's 4.1526 twice. Both appliers now refuse to spread one product over two stars.
+- The four rows are kept ONCE, under HD 139084 at 38.7162 pc, with the EIRP untouched --
+  the EIRP was right and the distance label was wrong, the opposite of the audit's
+  reading; rescaling by 1.0308 would have published the K0V primary's data as an M5Ve
+  limit. NStars 90 -> 89, NWindows 1655 -> 1651, NWinA 403 -> 402, NWinB 1252 -> 1249,
+  NStarBands 113 -> 112, NWinTwelveM 601 -> 597, NStarTwelveM 70 -> 69, on-source
+  1095.7 -> 1094.2 h.
+- NSystems 82, NSysClassA 60, the 56 crossings, the exoplanet-host and habitable-zone
+  counts and every per-system median are UNCHANGED, verified column by column: only
+  star_name and system_id on four rows, plus trigger_1pct_survey in the fourth decimal.
+  89 - 82 = 7 also makes the paper's own "seven designation-linked pairs" close.
+- Three new gates (C1 census collisions, C2 one-extraction-two-names, C3 EIRP vs the
+  distance printed beside it, the constant from first principles and not fitted) with
+  selftest_census_v407 driving them 29 ways in both directions, including the pair that
+  proves the retained star is COMPUTED from the EIRP-implied distance.
+- Repaired by-products: the (star, window) join into the peak-frequency snapshot is
+  canonicalised (renaming a star had silently blanked n_int, eta_smear,
+  eirp_eff_total_W and c_response_smear) and the count of windows without an
+  integration count is pinned; three generators now read the census from the deposit
+  instead of an external copy that had gone stale, which restores one star to the
+  selection table.
+- NOT in this version, pending a decision: restoring HD 139084 B, which would take the
+  crossing count to 57. It is rank-screened (p = 0.094, its own control ring 17.65) and
+  24.3 km/s from CO(3-2), so nothing about the null result is at risk.
+
 ## v4.06 (2026-09-27)
 
 **A flat 5 sigma is not a uniform criterion (D16), the stellar-frame multi-epoch

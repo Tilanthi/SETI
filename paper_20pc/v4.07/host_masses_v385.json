@@ -1,0 +1,20 @@
+{
+  "_provenance": "Host stellar masses for the planet-hosting targets, NASA Exoplanet Archive Planetary Systems default parameter set (st_mass), retrieved 2026-09-20. Used only to turn an orbital period into a maximum line-of-sight acceleration; the accelerations are insensitive to these at the 1/3 power.",
+  "_units": "solar masses",
+  "51 Eri": 1.75,
+  "61 Vir": 0.94,
+  "AU Mic": 0.50,
+  "GJ 581": 0.31,
+  "GJ 674": 0.35,
+  "GJ 849": 0.46,
+  "HD 10647": 1.10,
+  "HD 285968": 0.44,
+  "HD 45184": 1.03,
+  "HD 69830": 0.86,
+  "HN Lib": 0.53,
+  "LHS 1140": 0.184,
+  "Proxima Cen": 0.122,
+  "TRAPPIST-1": 0.0898,
+  "bet Pic": 1.75,
+  "tau Cet": 0.78
+}
