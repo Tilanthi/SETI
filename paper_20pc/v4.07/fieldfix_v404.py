@@ -81,9 +81,13 @@ def apply(rows, harvest=HARVEST, audit=AUDIT, verbose=True):
         if k in prod and len(prod[k]) == 1:
             _bystar.setdefault(k, set()).add(r['star_name'])
     _spread = sorted((k, sorted(v)) for k, v in _bystar.items() if len(v) > 1)
+    # `target_dir` is the field the round-8 harvester writes (referee_r8/
+    # HARVEST_POSITION_FIX.md): one directory per Gaia source per block, i.e.
+    # the identity that encodes the position.  Accept any of the spellings a
+    # harvest might use rather than forcing the harvester to match one.
+    _ATTRIB = ('star', 'star_name', 'tgt', 'target', 'target_dir')
     _blind = [(k, v) for k, v in _spread
-              if not any(prod[k][0].get(f) for f in ('star', 'star_name',
-                                                     'tgt', 'target'))]
+              if not any(prod[k][0].get(f) for f in _ATTRIB)]
     assert not _blind, (
         'the round-8 harvest would apply one product to rows of several stars '
         'in %d window(s) and carries no target field to attribute it with: '

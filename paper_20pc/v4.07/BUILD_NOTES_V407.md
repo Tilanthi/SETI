@@ -153,6 +153,11 @@ v4.06, 1,651 rows matched on the physical window):
    rows of more than one `star_name` unless the case is declared, naming the star it belongs to
    and what becomes of the others. In `fieldfix` the requirement is stronger — the harvest must
    carry a target field — because that is the applier the queued campaign runs through.
+   ★ The accepted attribution fields are `star`, `star_name`, `tgt`, `target` and **`target_dir`**,
+   which is the one the round-8 harvester writes (`referee_r8/HARVEST_POSITION_FIX.md`, produced
+   in parallel with this version): one directory per Gaia source per block, i.e. the identity
+   that encodes the position. The guard accepts any of them rather than forcing the harvester to
+   match one spelling, and it is unreachable until a harvest exists, so it changes no product.
 5. **`make_tables_v328.py`, `canon_names_v381.py`, `make_fig_sample.py`**: the census is now read
    **from the deposit** instead of `/workspace/SETI/ranked_master40pc.csv`, with an assertion that
    refuses a path outside the version directory. ★ That hole had already opened: v4.06 regenerated
