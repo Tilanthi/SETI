@@ -1,0 +1,46 @@
+{
+ "n_windows": 1322,
+ "n_blocks": 326,
+ "n_stars": 56,
+ "median_rank": 0.4191033138401559,
+ "ks_D": 0.09541040363558084,
+ "ks_p": 6.323176888895927e-11,
+ "n_cross": 60,
+ "n_stage1": 7,
+ "n_stage1_co": 4,
+ "n_stage1_unattrib": 3,
+ "n_with_ctrl_all": 1326,
+ "asof": "2026-09-17T08:59Z",
+ "unattrib": [
+  {
+   "star": "61 Vir",
+   "band": 7,
+   "flo": 344.87240523008694,
+   "t": 6.15580940246582,
+   "ctrl": 5.878187656402588,
+   "n_repeat_blocks": 2,
+   "repeat_best_t": 4.8324198722839355,
+   "repeat_nge": 119
+  },
+  {
+   "star": "HD~14055",
+   "band": 7,
+   "flo": 332.2269536215122,
+   "t": 6.0319342613220215,
+   "ctrl": 5.955653667449951,
+   "n_repeat_blocks": 17,
+   "repeat_best_t": 5.512836456298828,
+   "repeat_nge": 5
+  },
+  {
+   "star": "HD 23484",
+   "band": 6,
+   "flo": 229.60971680373652,
+   "t": 5.295742034912109,
+   "ctrl": 5.251204490661621,
+   "n_repeat_blocks": 3,
+   "repeat_best_t": 4.994508743286133,
+   "repeat_nge": 21
+  }
+ ]
+}

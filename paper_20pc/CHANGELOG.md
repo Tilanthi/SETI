@@ -6,6 +6,48 @@ Bump the **minor** number (1.00 → 1.01) for content edits/additions within
 the same broad draft stage; bump the **major** number (1.x → 2.00) once
 Paper II's actual results/discussion/conclusions sections are added.
 
+## v4.06 (2026-09-27)
+
+**A flat 5 sigma is not a uniform criterion (D16), the stellar-frame multi-epoch
+stack (D17), the C_resp averaging key (D18), and P90^sel through localisation (D14).**
+52 pp, main text 19.69 pp (cap deliberately broken; length deferred).
+
+- Cells per window span 4.8 decades, so 27.4-37.6 of the 51 crossings are EXPECTED by
+  chance at a flat 5 sigma (three routes bracket Class A at 33.5-41.1 against 50
+  observed) and eta Crv's T* = 5.006 is below its own window's requirement. s_w,
+  n_cells, N_ind and two uniform thresholds published as catalogue columns.
+- Multi-epoch stack: 394 groups, 78 stars, 1,454 h; gain sqrt(N_eff) not sqrt(N)
+  (0.991 vs 0.79); limits x1.39 deeper in the median; Proxima Centauri 5.15e12 W;
+  two survivors, both beta Pic CO, zero unattributed; reflex motion above
+  0.635 km/s de-registers a transmitter (47 channels, not 47,000).
+- C_resp keyed on the nearest modelled FWHM: 51 Eri's limit 1.46 -> 1.16e15 W,
+  conservative direction, 0 crossings. Channel covariance added as a sixth,
+  averaging-sensitive validation (18 of 18 windows confirm their key).
+- P90^sel measured through trigger -> localisation: Class A 5.70 -> 2.88 x P_trig,
+  per-system median 2.9e15 -> 1.5e15 W, systems at 1e15 W 14 -> 25. The chance
+  expectation RE-DERIVED on trigger + localisation + attribution: 34.5 expected
+  unattributed Class A crossings against 35 observed, a factor 39 above the
+  trigger+rank figure.
+- Measured nulls reported as nulls: morphology-for-threshold x1.16 (worse),
+  grid-quantisation recovery already inside P90^sel, dedup artefact absent. The one
+  unbooked gain (3-channel matched filter, x1.08/x1.17) measured and NOT applied.
+- Gates: 89/89 round files, 0/0/0/0 latex, intsweep 81/81, audit 49 PASS / 0 FAIL,
+  selftest_v406 65/65 demonstrated failing, clean regeneration 134/134 byte-identical.
+
+## v4.05 — 2026-09-26
+
+Round-8 measurements wired in at their generators (48 pp, main text 17.72 pp).
+Dispositions COMPUTED for all 56 crossings from the frozen 15-line mask,
+topocentrically, in three catalogue columns; Appendix M's clustering test replaced
+by a scale-aware scan; the occupancy z = 3.5 excess WITHDRAWN (the key was the
+execution-block directory, not the star); the mask-width ladder generated in both
+frames; \NExoHostsTab 19 -> 23 and \NExoPlanetsTab 42 -> 50; \HostNMult 1 -> 0
+on a live SIMBAD query; Appendix B's x26 replaced by a measured x9.2. Gates
+0/0/0/0/0, roundcollide 84/84, intsweep 82/82, audit 49 PASS / 0 FAIL,
+selftest_v405 60/60, clean regeneration 127/127 byte-identical.
+See `v4.05/BUILD_NOTES_V405.md`.
+(This entry was added at v4.06; v4.05 was pushed without one.)
+
 ## v4.04 — 2026-09-26
 
 **The round-8 referee response.** Page length deferred by Glenn's directive;

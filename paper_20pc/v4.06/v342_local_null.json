@@ -1,0 +1,734 @@
+{
+ "generated_utc": "2026-09-11T16:03:19+00:00",
+ "purpose": "Second-stage local null for the four stage-1 flagged windows, implementing referee A item 5 (and referee B's related point on the 1/513 rank floor).",
+ "survey_wide_bonferroni_scale": 0.00012,
+ "stage1_rank_floor": 0.001949317738791423,
+ "method": {
+  "statistic": "T_star = max over channels and drift trials of the inverse-variance-weighted, de-drifted stack at the stellar position, reimplemented from seti_drift_search_generic.py using only retained products (*_srcspec.npz for the per-integration spectra, *_search.npz for the all-probe robust noise map sigma[t,c], best_src and ctrl_max).",
+  "validation": "The reimplementation reproduces the published star_peak_snr bit-for-bit (absolute difference exactly 0.0 in float32) for all four windows, recovers the identical peak channel, and reproduces the entire per-channel best_src[0] curve to 2.4e-7 (float32 epsilon). It also reproduces the published ring-max column from ctrl_max.",
+  "null_A": {
+   "name": "integration-scramble (time-slide) local null",
+   "construction": "For a retained control position q let R_q[t,c] be the baseline-subtracted residual and sigma[t,c] the pipeline's own all-probe robust noise map. Form Z = R_q/sigma, give every integration t an independent uniform random circular channel shift delta_t, and rebuild Rtilde[t,c] = Z[t,(c+delta_t) mod nch] * sigma[t,c]. Re-run the identical search (same sigma, same weights, same drift grid, same channel count).",
+   "why_valid": [
+    "sigma is never scrambled, so the per-integration per-channel noise scale, weights and atmospheric/bandpass structure are preserved exactly.",
+    "A rigid circular shift preserves each integration's spectral autocorrelation exactly. This matters: the standardised residuals have measured lag-1 channel autocorrelation ~0.65, so an i.i.d. bootstrap would have implied far too many independent trials.",
+    "Shifts are independent across integrations, so no feature coherent across integrations along any drift track survives: the realisation is signal-free by construction.",
+    "The maximum is taken over the same n_chan x n_drift grid, so the trials factor is identical to the star's.",
+    "Unlike a null resampled from the 512 control MAXIMA, this null is not bounded above by an already-observed value, so the tail is resolvable well beyond 1/513."
+   ],
+   "resampled": "the 8 retained control positions, plus independent random per-integration spectral offsets",
+   "self_validation_test": "The null must reproduce the distribution of the 512 REAL control maxima measured by the first stage, which are genuine draws of the same statistic at exchangeable positions. Acceptance criteria, fixed before inspection: (i) the fraction of real controls above the null 99th percentile lies in [0.2%, 5%] (nominal 1%); (ii) fewer than 1% of real controls exceed the null maximum."
+  },
+  "null_B": {
+   "name": "GEV extrapolation of the 512 real control maxima",
+   "construction": "Fit a generalised extreme value distribution to the retained ctrl_max array (512 genuine control positions) and evaluate its survival function at T_star. Uncertainty from a 2000-fold nonparametric bootstrap over the 512 controls.",
+   "why_complementary": "Null A models only the local thermal-like noise at a position; null B uses genuine sky positions and therefore retains any extended astrophysical or imaging structure in the field, but pays for it with a parametric tail model. Where both are valid they should agree, and for CP-72 2713 they do."
+  },
+  "rules": [
+   "nothing under /data/SETI/bin was modified",
+   "nothing was written into any target products directory",
+   "the running seti_search_driver.py pipeline was not disturbed (all work at nice 15 on an otherwise ~1%-loaded 224-core host)"
+  ],
+  "scratch_dir": "/data/SETI/work/localnull_v342"
+ },
+ "windows": [
+  {
+   "label": "CP-72 2713, Band 7, 345.1152 GHz (the only unclassified flag)",
+   "target": "CP-72_2713_B7",
+   "window": "A002_Xff0235_X4a6d_spw3",
+   "band": 7,
+   "centre_GHz": 345.1152,
+   "files_used": {
+    "as_retained": {
+     "srcspec_path": "/data/SETI/targets/CP-72_2713_B7/products/A002_Xff0235_X4a6d_spw3_srcspec.npz",
+     "srcspec_bytes": 63430610,
+     "search_path": "/data/SETI/targets/CP-72_2713_B7/products/A002_Xff0235_X4a6d_spw3_search.npz",
+     "search_bytes": 7984136,
+     "I_star": [
+      495,
+      3840
+     ],
+     "I_control_sample": [
+      495,
+      8,
+      3840
+     ],
+     "W": [
+      495,
+      3840
+     ],
+     "times": [
+      495
+     ],
+     "freqs": [
+      3840
+     ],
+     "control_sample_names": [
+      "probe_0",
+      "probe_73",
+      "probe_146",
+      "probe_219",
+      "probe_292",
+      "probe_365",
+      "probe_438",
+      "probe_511"
+     ],
+     "chanw_Hz": 488281.25,
+     "sigma": [
+      495,
+      3534
+     ],
+     "best_src": [
+      135,
+      3534
+     ],
+     "ctrl_max": [
+      512
+     ]
+    },
+    "after_pipeline_edge_trim": {
+     "I_star": [
+      495,
+      3534
+     ],
+     "I_control_sample": [
+      495,
+      8,
+      3534
+     ],
+     "sigma": [
+      495,
+      3534
+     ],
+     "ctrl_max": [
+      512
+     ]
+    },
+    "note": "I_star/I_control_sample/W come from *_srcspec.npz; the all-probe robust noise map sigma[t,c], the per-channel best_src curve used for validation, and the 512 first-stage control maxima ctrl_max come from *_search.npz. Only 8 of the 512 control positions have full retained spectra (probe_0, 73, 146, ..., 511: a stride-73 subsample)."
+   },
+   "geometry": {
+    "n_int": 495,
+    "n_chan": 3534,
+    "n_drift": 129,
+    "n_search_cells": 455886,
+    "n_control_positions_retained_full_spectra": 8,
+    "n_control_positions_first_stage": 512
+   },
+   "reproduction": {
+    "T_star_published": 5.80891227722168,
+    "T_star_paper_table7": 5.81,
+    "T_star_reproduced": 5.80891227722168,
+    "abs_difference": 0.0,
+    "ring_max_published": 5.683185577392578,
+    "ring_max_paper_table7": 5.68,
+    "verdict": "EXACT (bit-identical float32)"
+   },
+   "stage1": {
+    "p": 0.001949317738791423,
+    "floor": 0.001949317738791423,
+    "note": "saturated at the floor: no control reaches the star"
+   },
+   "null_A": {
+    "draws": 100000,
+    "median": 4.5880186557769775,
+    "p90": 5.005366802215576,
+    "p99": 5.471344213485717,
+    "p99_9": 5.884478141784668,
+    "p99_99": 6.333315691804855,
+    "max": 6.572697639465332,
+    "mean": 4.626206009380818,
+    "std": 0.286947754412963,
+    "n_draws_ge_T_star": 157,
+    "p_local": 0.0015799842001579985,
+    "p_is_upper_bound": false,
+    "p_rule_of_three_95UCL": 3e-05,
+    "z_lag1_autocorr": 0.6533071772363979,
+    "z_std": 1.017825722694397,
+    "z_kurtosis": 3.103295087814331,
+    "n_eff_independent_trials": 309805.03098527796,
+    "self_validation": {
+     "null_median": 4.5880186557769775,
+     "real512_median": 4.628264427185059,
+     "median_offset": -0.040245771408081055,
+     "null_p99": 5.471344213485717,
+     "real512_p99": 5.568010411262511,
+     "null_max": 6.572697639465332,
+     "real512_max": 5.683185577392578,
+     "frac_real512_above_null_p99": 0.013671875,
+     "frac_real512_above_null_max": 0.0,
+     "ks_2samp": {
+      "stat": 0.06399749999999998,
+      "p": 0.02957145461375532
+     },
+     "VERDICT": "PASS"
+    },
+    "p_local_usable": true,
+    "recalibration_sensitivity_p_vs_added_offset": {
+     "0.00": 0.00158,
+     "0.02": 0.00177,
+     "0.04": 0.00196,
+     "0.06": 0.0022,
+     "0.10": 0.00266,
+     "0.20": 0.00474
+    }
+   },
+   "null_B_real_controls_gev": {
+    "shape_c": 0.07417358882458883,
+    "loc": 4.532244704608653,
+    "scale": 0.24154360055032487,
+    "goodness_of_fit_ks_p": 0.9989945902396611,
+    "p": 0.001218854378869177,
+    "p_95CI": [
+     0.00019892980601289264,
+     0.003190124510593604
+    ],
+    "bootstrap_prob_p_below_bonferroni": 0.013,
+    "n_bootstrap": 2000
+   },
+   "subband_cross_check": {
+    "n_subbands": 32,
+    "n_draws": 256,
+    "median": 3.68484365940094,
+    "max": 5.1079206466674805,
+    "n_ge_T_star": 0
+   },
+   "control_discrimination": {
+    "ring_max_p_against_local_null": 0.003029969700302997,
+    "n_of_512_controls_below_bonferroni_against_local_null": 0,
+    "note": "If the control ring itself clears the local null, the local null is not a spatial discriminator and the binding test remains the first-stage star-vs-control comparison."
+   },
+   "comparisons": {
+    "vs_stage1_floor_1_over_513": "resolves below the floor",
+    "vs_bonferroni_1p2e_4": "above Bonferroni (not survey-wide significant)"
+   },
+   "runtime_s": 1663.6,
+   "headline": {
+    "recommended_p": 0.0015799842001579985,
+    "recommended_source": "null_A (integration-scramble)",
+    "p_below_survey_wide_bonferroni_scale": false,
+    "astrophysical_disposition": "unclassified (the only such flag in the survey)",
+    "note": "This field reports the STATISTICAL result only. A p-value below the Bonferroni scale does not make a window a technosignature candidate: astrophysical disposition is a separate step, and for both beta Pic windows the small p-value is produced by known circumstellar CO, which is the expected and correct behaviour of a working statistic."
+   }
+  },
+  {
+   "label": "HD 48370, Band 6, 230.7305 GHz",
+   "target": "HD_48370_B6",
+   "window": "A002_Xc26103_X155a_spw16",
+   "band": 6,
+   "centre_GHz": 230.7305,
+   "files_used": {
+    "as_retained": {
+     "srcspec_path": "/data/SETI/targets/HD_48370_B6/products/A002_Xc26103_X155a_spw16_srcspec.npz",
+     "srcspec_bytes": 25521935,
+     "search_path": "/data/SETI/targets/HD_48370_B6/products/A002_Xc26103_X155a_spw16_search.npz",
+     "search_bytes": 4534119,
+     "I_star": [
+      186,
+      4096
+     ],
+     "I_control_sample": [
+      186,
+      8,
+      4096
+     ],
+     "W": [
+      186,
+      4096
+     ],
+     "times": [
+      186
+     ],
+     "freqs": [
+      4096
+     ],
+     "control_sample_names": [
+      "probe_0",
+      "probe_73",
+      "probe_146",
+      "probe_219",
+      "probe_292",
+      "probe_365",
+      "probe_438",
+      "probe_511"
+     ],
+     "chanw_Hz": 122070.3125,
+     "sigma": [
+      186,
+      3770
+     ],
+     "best_src": [
+      135,
+      3770
+     ],
+     "ctrl_max": [
+      512
+     ]
+    },
+    "after_pipeline_edge_trim": {
+     "I_star": [
+      186,
+      3770
+     ],
+     "I_control_sample": [
+      186,
+      8,
+      3770
+     ],
+     "sigma": [
+      186,
+      3770
+     ],
+     "ctrl_max": [
+      512
+     ]
+    },
+    "note": "I_star/I_control_sample/W come from *_srcspec.npz; the all-probe robust noise map sigma[t,c], the per-channel best_src curve used for validation, and the 512 first-stage control maxima ctrl_max come from *_search.npz. Only 8 of the 512 control positions have full retained spectra (probe_0, 73, 146, ..., 511: a stride-73 subsample)."
+   },
+   "geometry": {
+    "n_int": 186,
+    "n_chan": 3770,
+    "n_drift": 210,
+    "n_search_cells": 791700,
+    "n_control_positions_retained_full_spectra": 8,
+    "n_control_positions_first_stage": 512
+   },
+   "reproduction": {
+    "T_star_published": 27.103065490722656,
+    "T_star_paper_table7": 27.1,
+    "T_star_reproduced": 27.103065490722656,
+    "abs_difference": 0.0,
+    "ring_max_published": 26.825719833374023,
+    "ring_max_paper_table7": 26.83,
+    "verdict": "EXACT (bit-identical float32)"
+   },
+   "stage1": {
+    "p": 0.001949317738791423,
+    "floor": 0.001949317738791423,
+    "note": "saturated at the floor: no control reaches the star"
+   },
+   "null_A": {
+    "draws": 100000,
+    "median": 4.723086357116699,
+    "p90": 5.1298394203186035,
+    "p99": 5.596286597251891,
+    "p99_9": 6.023346001625065,
+    "p99_99": 6.413265771675056,
+    "max": 6.844761371612549,
+    "mean": 4.76102151119709,
+    "std": 0.28121155912460294,
+    "n_draws_ge_T_star": 0,
+    "p_local": 9.99990000099999e-06,
+    "p_is_upper_bound": true,
+    "p_rule_of_three_95UCL": 3e-05,
+    "z_lag1_autocorr": 0.6740276766529539,
+    "z_std": 1.0173877477645874,
+    "z_kurtosis": 3.106865167617798,
+    "n_eff_independent_trials": 596788.8032913648,
+    "self_validation": {
+     "null_median": 4.723086357116699,
+     "real512_median": 9.302691459655762,
+     "median_offset": -4.5796051025390625,
+     "null_p99": 5.596286597251891,
+     "real512_p99": 23.597511444091793,
+     "null_max": 6.844761371612549,
+     "real512_max": 26.825719833374023,
+     "frac_real512_above_null_p99": 0.875,
+     "frac_real512_above_null_max": 0.732421875,
+     "ks_2samp": {
+      "stat": 0.86821875,
+      "p": 0.0
+     },
+     "VERDICT": "FAIL"
+    },
+    "p_local_usable": false
+   },
+   "null_B_real_controls_gev": {
+    "shape_c": -0.1802095621905353,
+    "loc": 8.009423555688578,
+    "scale": 3.0293843220042262,
+    "goodness_of_fit_ks_p": 0.19417438574500068,
+    "p": 0.01472277226421449,
+    "p_95CI": [
+     0.008339604282481478,
+     0.022242004209289262
+    ],
+    "bootstrap_prob_p_below_bonferroni": 0.0,
+    "n_bootstrap": 2000
+   },
+   "subband_cross_check": {
+    "n_subbands": 32,
+    "n_draws": 256,
+    "median": 3.907930016517639,
+    "max": 15.838263511657715,
+    "n_ge_T_star": 0
+   },
+   "control_discrimination": {
+    "ring_max_p_against_local_null": 9.99990000099999e-06,
+    "n_of_512_controls_below_bonferroni_against_local_null": 411,
+    "note": "If the control ring itself clears the local null, the local null is not a spatial discriminator and the binding test remains the first-stage star-vs-control comparison."
+   },
+   "comparisons": {
+    "vs_stage1_floor_1_over_513": "local null not usable",
+    "vs_bonferroni_1p2e_4": "above Bonferroni (not survey-wide significant)"
+   },
+   "runtime_s": 1288.4,
+   "headline": {
+    "recommended_p": 0.01472277226421449,
+    "recommended_source": "null_B (GEV on the 512 real controls); null_A failed its self-validation and is not used",
+    "p_below_survey_wide_bonferroni_scale": false,
+    "astrophysical_disposition": "attributed to CO toward HD 48370",
+    "note": "This field reports the STATISTICAL result only. A p-value below the Bonferroni scale does not make a window a technosignature candidate: astrophysical disposition is a separate step, and for both beta Pic windows the small p-value is produced by known circumstellar CO, which is the expected and correct behaviour of a working statistic."
+   }
+  },
+  {
+   "label": "beta Pic, Band 3, 115.2605 GHz",
+   "target": "bet_Pic_B3",
+   "window": "A002_Xf5d76d_X32f1_spw3",
+   "band": 3,
+   "centre_GHz": 115.2605,
+   "files_used": {
+    "as_retained": {
+     "srcspec_path": "/data/SETI/targets/bet_Pic_B3/products/A002_Xf5d76d_X32f1_spw3_srcspec.npz",
+     "srcspec_bytes": 25633241,
+     "search_path": "/data/SETI/targets/bet_Pic_B3/products/A002_Xf5d76d_X32f1_spw3_search.npz",
+     "search_bytes": 4453651,
+     "I_star": [
+      200,
+      3840
+     ],
+     "I_control_sample": [
+      200,
+      8,
+      3840
+     ],
+     "W": [
+      200,
+      3840
+     ],
+     "times": [
+      200
+     ],
+     "freqs": [
+      3840
+     ],
+     "control_sample_names": [
+      "probe_0",
+      "probe_73",
+      "probe_146",
+      "probe_219",
+      "probe_292",
+      "probe_365",
+      "probe_438",
+      "probe_511"
+     ],
+     "chanw_Hz": 244140.625,
+     "sigma": [
+      200,
+      3534
+     ],
+     "best_src": [
+      135,
+      3534
+     ],
+     "ctrl_max": [
+      512
+     ]
+    },
+    "after_pipeline_edge_trim": {
+     "I_star": [
+      200,
+      3534
+     ],
+     "I_control_sample": [
+      200,
+      8,
+      3534
+     ],
+     "sigma": [
+      200,
+      3534
+     ],
+     "ctrl_max": [
+      512
+     ]
+    },
+    "note": "I_star/I_control_sample/W come from *_srcspec.npz; the all-probe robust noise map sigma[t,c], the per-channel best_src curve used for validation, and the 512 first-stage control maxima ctrl_max come from *_search.npz. Only 8 of the 512 control positions have full retained spectra (probe_0, 73, 146, ..., 511: a stride-73 subsample)."
+   },
+   "geometry": {
+    "n_int": 200,
+    "n_chan": 3534,
+    "n_drift": 31,
+    "n_search_cells": 109554,
+    "n_control_positions_retained_full_spectra": 8,
+    "n_control_positions_first_stage": 512
+   },
+   "reproduction": {
+    "T_star_published": 14.653992652893066,
+    "T_star_paper_table7": 14.65,
+    "T_star_reproduced": 14.653992652893066,
+    "abs_difference": 0.0,
+    "ring_max_published": 7.266029357910156,
+    "ring_max_paper_table7": 7.27,
+    "verdict": "EXACT (bit-identical float32)"
+   },
+   "stage1": {
+    "p": 0.001949317738791423,
+    "floor": 0.001949317738791423,
+    "note": "saturated at the floor: no control reaches the star"
+   },
+   "null_A": {
+    "draws": 100000,
+    "median": 4.262639284133911,
+    "p90": 4.71197361946106,
+    "p99": 5.208196983337398,
+    "p99_9": 5.644751301288608,
+    "p99_99": 6.032897937965114,
+    "max": 6.53531551361084,
+    "mean": 4.302081418800354,
+    "std": 0.30944206333155344,
+    "n_draws_ge_T_star": 0,
+    "p_local": 9.99990000099999e-06,
+    "p_is_upper_bound": true,
+    "p_rule_of_three_95UCL": 3e-05,
+    "z_lag1_autocorr": 0.6540299787830038,
+    "z_std": 1.0180710554122925,
+    "z_kurtosis": 3.109027862548828,
+    "n_eff_independent_trials": 68619.08692454765,
+    "self_validation": {
+     "null_median": 4.262639284133911,
+     "real512_median": 4.270426988601685,
+     "median_offset": -0.0077877044677734375,
+     "null_p99": 5.208196983337398,
+     "real512_p99": 5.221988754272461,
+     "null_max": 6.53531551361084,
+     "real512_max": 7.266029357910156,
+     "frac_real512_above_null_p99": 0.01171875,
+     "frac_real512_above_null_max": 0.001953125,
+     "ks_2samp": {
+      "stat": 0.03179937499999999,
+      "p": 0.669886370393187
+     },
+     "VERDICT": "PASS"
+    },
+    "p_local_usable": true
+   },
+   "null_B_real_controls_gev": {
+    "shape_c": -0.00045615693955698277,
+    "loc": 4.176611522983848,
+    "scale": 0.2562765347692953,
+    "goodness_of_fit_ks_p": 0.9967678894724084,
+    "p": 2.559896262807412e-18,
+    "p_95CI": [
+     0.0,
+     2.3358941927062865e-09
+    ],
+    "bootstrap_prob_p_below_bonferroni": 1.0,
+    "n_bootstrap": 2000
+   },
+   "subband_cross_check": {
+    "n_subbands": 32,
+    "n_draws": 256,
+    "median": 3.2901097536087036,
+    "max": 4.714325428009033,
+    "n_ge_T_star": 0
+   },
+   "control_discrimination": {
+    "ring_max_p_against_local_null": 9.99990000099999e-06,
+    "n_of_512_controls_below_bonferroni_against_local_null": 1,
+    "note": "If the control ring itself clears the local null, the local null is not a spatial discriminator and the binding test remains the first-stage star-vs-control comparison."
+   },
+   "comparisons": {
+    "vs_stage1_floor_1_over_513": "resolves below the floor",
+    "vs_bonferroni_1p2e_4": "below Bonferroni"
+   },
+   "runtime_s": 271.7,
+   "headline": {
+    "recommended_p": 9.99990000099999e-06,
+    "recommended_source": "null_A (integration-scramble)",
+    "p_below_survey_wide_bonferroni_scale": true,
+    "astrophysical_disposition": "attributed to circumstellar/foreground CO(1-0) toward beta Pic",
+    "note": "This field reports the STATISTICAL result only. A p-value below the Bonferroni scale does not make a window a technosignature candidate: astrophysical disposition is a separate step, and for both beta Pic windows the small p-value is produced by known circumstellar CO, which is the expected and correct behaviour of a working statistic."
+   }
+  },
+  {
+   "label": "beta Pic, Band 6, 230.5164 GHz",
+   "target": "bet_Pic_B6",
+   "window": "A002_Xd9668b_X3a90_spw5",
+   "band": 6,
+   "centre_GHz": 230.5164,
+   "files_used": {
+    "as_retained": {
+     "srcspec_path": "/data/SETI/targets/bet_Pic_B6/products/A002_Xd9668b_X3a90_spw5_srcspec.npz",
+     "srcspec_bytes": 49478943,
+     "search_path": "/data/SETI/targets/bet_Pic_B6/products/A002_Xd9668b_X3a90_spw5_search.npz",
+     "search_bytes": 7027501,
+     "I_star": [
+      385,
+      3840
+     ],
+     "I_control_sample": [
+      385,
+      8,
+      3840
+     ],
+     "W": [
+      385,
+      3840
+     ],
+     "times": [
+      385
+     ],
+     "freqs": [
+      3840
+     ],
+     "control_sample_names": [
+      "probe_0",
+      "probe_73",
+      "probe_146",
+      "probe_219",
+      "probe_292",
+      "probe_365",
+      "probe_438",
+      "probe_511"
+     ],
+     "chanw_Hz": 15258.7890625,
+     "sigma": [
+      385,
+      3534
+     ],
+     "best_src": [
+      135,
+      3534
+     ],
+     "ctrl_max": [
+      512
+     ]
+    },
+    "after_pipeline_edge_trim": {
+     "I_star": [
+      385,
+      3534
+     ],
+     "I_control_sample": [
+      385,
+      8,
+      3534
+     ],
+     "sigma": [
+      385,
+      3534
+     ],
+     "ctrl_max": [
+      512
+     ]
+    },
+    "note": "I_star/I_control_sample/W come from *_srcspec.npz; the all-probe robust noise map sigma[t,c], the per-channel best_src curve used for validation, and the 512 first-stage control maxima ctrl_max come from *_search.npz. Only 8 of the 512 control positions have full retained spectra (probe_0, 73, 146, ..., 511: a stride-73 subsample)."
+   },
+   "geometry": {
+    "n_int": 385,
+    "n_chan": 3534,
+    "n_drift": 1944,
+    "n_search_cells": 6870096,
+    "n_control_positions_retained_full_spectra": 8,
+    "n_control_positions_first_stage": 512
+   },
+   "reproduction": {
+    "T_star_published": 11.6809720993042,
+    "T_star_paper_table7": 11.68,
+    "T_star_reproduced": 11.6809720993042,
+    "abs_difference": 0.0,
+    "ring_max_published": 9.116724967956543,
+    "ring_max_paper_table7": 9.12,
+    "verdict": "EXACT (bit-identical float32)"
+   },
+   "stage1": {
+    "p": 0.001949317738791423,
+    "floor": 0.001949317738791423,
+    "note": "saturated at the floor: no control reaches the star"
+   },
+   "null_A": {
+    "draws": 20000,
+    "median": 5.1993653774261475,
+    "p90": 5.571206378936767,
+    "p99": 6.01037621974945,
+    "p99_9": 6.410442910671293,
+    "p99_99": 6.922925755977202,
+    "max": 7.225463390350342,
+    "mean": 5.234674637055397,
+    "std": 0.2558813560462781,
+    "n_draws_ge_T_star": 0,
+    "p_local": 4.999750012499375e-05,
+    "p_is_upper_bound": true,
+    "p_rule_of_three_95UCL": 0.00015,
+    "z_lag1_autocorr": 0.6558590503400404,
+    "z_std": 1.018656611442566,
+    "z_kurtosis": 3.106459379196167,
+    "n_eff_independent_trials": 6932507.9699326195,
+    "self_validation": {
+     "null_median": 5.1993653774261475,
+     "real512_median": 5.223605155944824,
+     "median_offset": -0.024239778518676758,
+     "null_p99": 6.01037621974945,
+     "real512_p99": 6.111221179962158,
+     "null_max": 7.225463390350342,
+     "real512_max": 9.116724967956543,
+     "frac_real512_above_null_p99": 0.013671875,
+     "frac_real512_above_null_max": 0.00390625,
+     "ks_2samp": {
+      "stat": 0.05058750000000001,
+      "p": 0.1502721045501053
+     },
+     "VERDICT": "PASS"
+    },
+    "p_local_usable": true
+   },
+   "null_B_real_controls_gev": {
+    "shape_c": -0.08114441466095024,
+    "loc": 5.13748811317476,
+    "scale": 0.20521237703248135,
+    "goodness_of_fit_ks_p": 0.7435022762191208,
+    "p": 1.455630873094273e-07,
+    "p_95CI": [
+     0.0,
+     1.0470413893804647e-05
+    ],
+    "bootstrap_prob_p_below_bonferroni": 1.0,
+    "n_bootstrap": 2000
+   },
+   "subband_cross_check": {
+    "n_subbands": 32,
+    "n_draws": 256,
+    "median": 4.470656633377075,
+    "max": 5.72979211807251,
+    "n_ge_T_star": 0
+   },
+   "control_discrimination": {
+    "ring_max_p_against_local_null": 4.999750012499375e-05,
+    "n_of_512_controls_below_bonferroni_against_local_null": 2,
+    "note": "If the control ring itself clears the local null, the local null is not a spatial discriminator and the binding test remains the first-stage star-vs-control comparison."
+   },
+   "comparisons": {
+    "vs_stage1_floor_1_over_513": "resolves below the floor",
+    "vs_bonferroni_1p2e_4": "below Bonferroni"
+   },
+   "runtime_s": 2707.9,
+   "headline": {
+    "recommended_p": 4.999750012499375e-05,
+    "recommended_source": "null_A (integration-scramble)",
+    "p_below_survey_wide_bonferroni_scale": true,
+    "astrophysical_disposition": "attributed to circumstellar/foreground CO(2-1) toward beta Pic",
+    "note": "This field reports the STATISTICAL result only. A p-value below the Bonferroni scale does not make a window a technosignature candidate: astrophysical disposition is a separate step, and for both beta Pic windows the small p-value is produced by known circumstellar CO, which is the expected and correct behaviour of a working statistic."
+   }
+  }
+ ],
+ "conclusions": [
+  "The reimplementation of the search statistic is exact for all four windows (bit-identical T_star, identical peak channel, per-channel curve to float32 epsilon), so the nulls are built on the published statistic.",
+  "The 1/513 within-window rank floor is removed: every window now has a second-stage p-value resolved below 1.95e-3.",
+  "CP-72 2713 Band 7, the only unclassified flag, has p = 1.6e-3 from the 10^5-draw scramble null (a RESOLVED value: 157 of 100000 draws exceed T_star, not an upper bound) and p = 1.2e-3 (95% CI 2.0e-4 to 3.2e-3) from the independent GEV fit to the 512 real controls. The two agree to within a factor 1.3. Both are about an order of magnitude ABOVE the survey-wide Bonferroni scale of 1.2e-4, and the bootstrap probability that the true value lies below that scale is 1.3%. CP-72 2713 therefore does not reach survey-wide significance, and the paper's conservative disposition is quantitatively confirmed rather than merely asserted.",
+  "HD 48370 Band 6 is the one window where the local null is NOT valid. Its pre-specified self-validation fails catastrophically: 375 of the 512 real control positions exceed the maximum of 100000 null draws, and the real control median (9.30) is more than four units above the null median (4.72). The field contains coherent structure that the scramble destroys, so a scrambled-noise p-value there would be fabricated significance and is not reported. The valid null for that window is the real control ensemble, which gives p = 1.5e-2 (95% CI 8.3e-3 to 2.2e-2), entirely unremarkable and consistent with the paper's attribution to extended CO.",
+  "The two beta Pic windows behave as positive controls: the known circumstellar CO gives p < 1e-5 (B3) and < 5e-5 (B6) empirically, and 2.6e-18 and 1.5e-7 against the real control ensemble. The procedure therefore does return very small p-values when a genuine localised astrophysical signal is present, which is the correct behaviour.",
+  "IMPORTANT INTERPRETIVE CAVEAT: the local null is NOT a spatial discriminator. In three of the four windows the control-ring maximum also clears the local null at p < 1e-5. A small local-null p-value means only that the feature exceeds local noise fluctuations; it does not mean the feature is localised to the star. The first-stage star-vs-control comparison remains the binding test for candidacy.",
+  "PARAMETRIC EXTRAPOLATION IS NOT USED FOR HEADLINE NUMBERS. For beta Pic B3 the GEV fit to the scramble null implies a bounded tail (p exactly 0), a Gumbel fit gives 1.9e-18 and a calibrated Gaussian-trials model gives 4.4e-44. These span 44 orders of magnitude, which is precisely why only the empirical bound is quoted for null A.",
+  "LIMITATION / RECOMMENDATION: the retained *_srcspec.npz keep the full dynamic spectrum for only 8 of the 512 control positions, so position-to-position heterogeneity in the null is sampled by 8 draws. That is what makes the local null fail for HD 48370. Retaining more control spectra (or the control-ring geometry, cf. referee B M3) in a future release would allow a valid local null even in structured fields."
+ ]
+}

@@ -1,0 +1,1083 @@
+{
+ "counts": {
+  "n_coarse_with_fcross": 1070,
+  "n_crossings": 56,
+  "n_crossings_attributed": 11,
+  "n_crossings_unattributed": 40,
+  "n_crossings_with_fcross": 51,
+  "n_fine_crossings": 47,
+  "n_rows": 1655,
+  "n_with_fcross": 1401
+ },
+ "ladder_MHz": [
+  1.0,
+  3.0,
+  10.0,
+  30.0,
+  100.0,
+  300.0
+ ],
+ "macros": {
+  "AppMBandHi": "230.723",
+  "AppMBandLo": "230.423",
+  "AppMBandN": "12",
+  "AppMBandNAttr": "9",
+  "AppMBandWidth": "300",
+  "AppMLadderHi": "300",
+  "AppMLadderLo": "1",
+  "AppMMaxMult": "4",
+  "AppMNCoarsePeaks": "1070",
+  "AppMNCross": "56",
+  "AppMNCrossF": "51",
+  "AppMNPeaks": "1401",
+  "AppMNullCont": "2.44",
+  "AppMNullGrid": "5.06",
+  "AppMPCont": "0.0095",
+  "AppMPGrid": "1.0000",
+  "AppMPowerNewSix": "10.5",
+  "AppMPowerNewWide": "100.0",
+  "AppMPowerOldNarrow": "100.0",
+  "AppMPowerOldWide": "8.8",
+  "AppMPowerOldWideK": "24",
+  "AppMScanNull": "7.34",
+  "AppMScanObs": "12",
+  "AppMScanP": "0.0042",
+  "AppMTubeNull": "4.8",
+  "AppMTubeObs": "11",
+  "AppMTubeP": "0.0010",
+  "AppMUnattrN": "40",
+  "AppMUnattrNull": "4.46",
+  "AppMUnattrObs": "6",
+  "AppMUnattrP": "0.107",
+  "AppMWideMHz": "156"
+ },
+ "mask_half_kms": 50.0,
+ "n_mc": 4000,
+ "n_mc_scan": 4000,
+ "n_power_trials": 600,
+ "one_mhz": {
+  "crowded_bins": [
+   {
+    "bin_MHz": 240133,
+    "members": [
+     {
+      "chanw_kHz": 15625.0,
+      "crossing": "False",
+      "eb": "A002_X106f040_X26c7",
+      "f": 240.132811,
+      "star": "Proxima Cen"
+     },
+     {
+      "chanw_kHz": 15625.0,
+      "crossing": "False",
+      "eb": "A002_Xfdc8ec_X4cec",
+      "f": 240.132811,
+      "star": "Wolf 359"
+     },
+     {
+      "chanw_kHz": 15625.0,
+      "crossing": "False",
+      "eb": "A002_Xc92fe3_X4af1",
+      "f": 240.132811,
+      "star": "BD05 1668"
+     },
+     {
+      "chanw_kHz": 15625.0,
+      "crossing": "False",
+      "eb": "A002_Xd1c06f_Xf769",
+      "f": 240.132811,
+      "star": "HD 33793"
+     }
+    ],
+    "n": 4
+   },
+   {
+    "bin_MHz": 224227,
+    "members": [
+     {
+      "chanw_kHz": 15625.0,
+      "crossing": "False",
+      "eb": "A002_Xdb7ab7_X140ee",
+      "f": 224.226564,
+      "star": "Proxima Cen"
+     },
+     {
+      "chanw_kHz": 15625.0,
+      "crossing": "False",
+      "eb": "A002_Xfe2e17_X282",
+      "f": 224.226564,
+      "star": "NAME Barnards star"
+     },
+     {
+      "chanw_kHz": 15625.0,
+      "crossing": "False",
+      "eb": "A002_X1093ae8_Xe18",
+      "f": 224.226564,
+      "star": "GJ 674"
+     },
+     {
+      "chanw_kHz": 15625.0,
+      "crossing": "False",
+      "eb": "A002_Xd248b5_X2fa",
+      "f": 224.226564,
+      "star": "GJ 581"
+     }
+    ],
+    "n": 4
+   },
+   {
+    "bin_MHz": 240164,
+    "members": [
+     {
+      "chanw_kHz": 15625.0,
+      "crossing": "False",
+      "eb": "A002_Xdb7ab7_X140ee",
+      "f": 240.164061,
+      "star": "Proxima Cen"
+     },
+     {
+      "chanw_kHz": 15625.0,
+      "crossing": "False",
+      "eb": "A002_Xcb8a93_X395",
+      "f": 240.164061,
+      "star": "BD05 1668"
+     },
+     {
+      "chanw_kHz": 15625.0,
+      "crossing": "False",
+      "eb": "A002_X1097a87_X1ba1",
+      "f": 240.164061,
+      "star": "GJ 674"
+     },
+     {
+      "chanw_kHz": 15625.0,
+      "crossing": "False",
+      "eb": "A002_X108c378_X331a",
+      "f": 240.164061,
+      "star": "GJ 674"
+     }
+    ],
+    "n": 4
+   },
+   {
+    "bin_MHz": 224055,
+    "members": [
+     {
+      "chanw_kHz": 15625.0,
+      "crossing": "False",
+      "eb": "A002_Xc99ad7_X1619",
+      "f": 224.054689,
+      "star": "BD05 1668"
+     },
+     {
+      "chanw_kHz": 15625.0,
+      "crossing": "False",
+      "eb": "A002_Xc83b78_X256c",
+      "f": 224.054689,
+      "star": "BD05 1668"
+     },
+     {
+      "chanw_kHz": 15625.0,
+      "crossing": "False",
+      "eb": "A002_X1097a87_X1ba1",
+      "f": 224.054689,
+      "star": "GJ 674"
+     },
+     {
+      "chanw_kHz": 15625.0,
+      "crossing": "False",
+      "eb": "A002_Xd1c06f_X9f4c",
+      "f": 224.054689,
+      "star": "GJ 581"
+     }
+    ],
+    "n": 4
+   }
+  ],
+  "falsifier": "PASS: the continuous null reproduces the shipped 2.44 / 0.0095",
+  "grid_worst_channel_fraction": 0.05542829003843508,
+  "n": 1401,
+  "null_continuous": {
+   "mean": 2.437,
+   "p": 0.0094976255936016
+  },
+  "null_grid": {
+   "mean": 5.057,
+   "p": 1.0
+  },
+  "observed": 4
+ },
+ "power": {
+  "crit_one_mhz": 2.0,
+  "crit_scan": 10.0,
+  "k": [
+   0,
+   2,
+   4,
+   6,
+   8,
+   12,
+   18,
+   24
+  ],
+  "one_mhz": {
+   "1": [
+    0.0016666666666666668,
+    0.0,
+    0.635,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "10": [
+    0.0,
+    0.0016666666666666668,
+    0.045,
+    0.15666666666666668,
+    0.37333333333333335,
+    0.7816666666666666,
+    0.9983333333333333,
+    1.0
+   ],
+   "100": [
+    0.0,
+    0.0016666666666666668,
+    0.0016666666666666668,
+    0.0033333333333333335,
+    0.006666666666666667,
+    0.016666666666666666,
+    0.06666666666666667,
+    0.18833333333333332
+   ],
+   "156": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.005,
+    0.013333333333333334,
+    0.028333333333333332,
+    0.08833333333333333
+   ],
+   "30": [
+    0.0,
+    0.0,
+    0.0033333333333333335,
+    0.013333333333333334,
+    0.06666666666666667,
+    0.175,
+    0.5483333333333333,
+    0.7866666666666666
+   ],
+   "300": [
+    0.0,
+    0.0,
+    0.0,
+    0.0033333333333333335,
+    0.0016666666666666668,
+    0.006666666666666667,
+    0.013333333333333334,
+    0.018333333333333333
+   ]
+  },
+  "scan": {
+   "1": [
+    0.01,
+    0.01,
+    0.006666666666666667,
+    0.08666666666666667,
+    0.58,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "10": [
+    0.015,
+    0.005,
+    0.013333333333333334,
+    0.1,
+    0.5433333333333333,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "100": [
+    0.025,
+    0.006666666666666667,
+    0.013333333333333334,
+    0.08333333333333333,
+    0.5133333333333333,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "156": [
+    0.018333333333333333,
+    0.006666666666666667,
+    0.013333333333333334,
+    0.105,
+    0.48333333333333334,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "30": [
+    0.01,
+    0.011666666666666667,
+    0.011666666666666667,
+    0.09666666666666666,
+    0.5,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "300": [
+    0.013333333333333334,
+    0.015,
+    0.013333333333333334,
+    0.06833333333333333,
+    0.37333333333333335,
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "widths_MHz": [
+   1.0,
+   10.0,
+   30.0,
+   100.0,
+   156.0,
+   300.0
+  ]
+ },
+ "scan": {
+  "all_window_peaks": {
+   "crit95": 41,
+   "max_band": {
+    "count": 43,
+    "hi_GHz": 230.78760699999998,
+    "lo_GHz": 230.487607,
+    "width_MHz": 300.0
+   },
+   "members": [
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_X1263402_Xb082",
+     "f": 230.487607,
+     "line": "CO(2-1)",
+     "star": "HD377"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_X1264cde_X2d40",
+     "f": 230.490151,
+     "line": "CO(2-1)",
+     "star": "HD 89452"
+    },
+    {
+     "attributed": true,
+     "dv": -46.7,
+     "eb": "A002_Xd98580_X3bf6",
+     "f": 230.502079,
+     "line": "CO(2-1)",
+     "star": "HD 285968"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_Xb25e1a_Xed74",
+     "f": 230.504935,
+     "line": "CO(2-1)",
+     "star": "WD 0407+179"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_Xe3da01_X4265",
+     "f": 230.50832,
+     "line": "CO(2-1)",
+     "star": "HD110411"
+    },
+    {
+     "attributed": true,
+     "dv": -36.4,
+     "eb": "A002_Xdb4b9a_X108f",
+     "f": 230.510022,
+     "line": "CO(2-1)",
+     "star": "HD 285968"
+    },
+    {
+     "attributed": true,
+     "dv": -34.4,
+     "eb": "A002_Xdb7ab7_X5b4e",
+     "f": 230.51157,
+     "line": "CO(2-1)",
+     "star": "HD 285968"
+    },
+    {
+     "attributed": true,
+     "dv": -34.2,
+     "eb": "A002_Xc26103_X155a",
+     "f": 230.511674,
+     "line": "CO(2-1)",
+     "star": "HD 48370"
+    },
+    {
+     "attributed": true,
+     "dv": -28.6,
+     "eb": "A002_Xd9668b_Xa9df",
+     "f": 230.516025,
+     "line": "CO(2-1)",
+     "star": "bet Pic"
+    },
+    {
+     "attributed": true,
+     "dv": -28.4,
+     "eb": "A002_Xd9668b_X3a90",
+     "f": 230.516128,
+     "line": "CO(2-1)",
+     "star": "bet Pic"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_Xc6fa08_X1053",
+     "f": 230.516209,
+     "line": "CO(2-1)",
+     "star": "HR 1010 Gaia DR3 4722135642226902656"
+    },
+    {
+     "attributed": true,
+     "dv": -20.6,
+     "eb": "A002_Xff0235_X8392",
+     "f": 230.522151,
+     "line": "CO(2-1)",
+     "star": "ALMA J153702653-33192492"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_X74fea5_Xd70",
+     "f": 230.523273,
+     "line": "CO(2-1)",
+     "star": "HD61005"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_X74c92c_X6d5",
+     "f": 230.524747,
+     "line": "CO(2-1)",
+     "star": "HIP 490"
+    },
+    {
+     "attributed": true,
+     "dv": -14.1,
+     "eb": "A002_X7116f1_X1785",
+     "f": 230.527185,
+     "line": "CO(2-1)",
+     "star": "bet Pic"
+    },
+    {
+     "attributed": true,
+     "dv": -12.5,
+     "eb": "A002_X6f1341_X1484",
+     "f": 230.528379,
+     "line": "CO(2-1)",
+     "star": "bet Pic"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_Xa68906_X1590",
+     "f": 230.529839,
+     "line": "CO(2-1)",
+     "star": "HD172555"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_Xa95c04_X14cd",
+     "f": 230.530196,
+     "line": "CO(2-1)",
+     "star": "HIP10679"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_X1015532_X20dc8",
+     "f": 230.533802,
+     "line": "CO(2-1)",
+     "star": "ALMA J153702653-33192492"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_Xcbb583_Xb78",
+     "f": 230.534908,
+     "line": "CO(2-1)",
+     "star": "HD 69830"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_Xcd97a1_X2377",
+     "f": 230.561565,
+     "line": "CO(2-1)",
+     "star": "HD161868"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_X1018459_X73b0",
+     "f": 230.574722,
+     "line": "CO(2-1)",
+     "star": "ALMA J153702653-33192492"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_X129754b_X70a9",
+     "f": 230.592353,
+     "line": "CO(2-1)",
+     "star": "HD 31392"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_X1020da2_X78cd",
+     "f": 230.597588,
+     "line": "CO(2-1)",
+     "star": "ALMA J153702653-33192492"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_X12754c1_X9b5",
+     "f": 230.604513,
+     "line": "CO(2-1)",
+     "star": "HD 45184"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_X12b3da5_X2f34",
+     "f": 230.617954,
+     "line": "CO(2-1)",
+     "star": "HD 31392"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_Xd09670_X23c5",
+     "f": 230.624194,
+     "line": "CO(2-1)",
+     "star": "HD14055"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_X10b0d7d_X323f",
+     "f": 230.631347,
+     "line": "CO(2-1)",
+     "star": "HD 23484 Gaia DR3 4856592239127350400"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_X12771d5_X9f13",
+     "f": 230.632132,
+     "line": "CO(2-1)",
+     "star": "HD 45184"
+    },
+    {
+     "attributed": false,
+     "dv": 126.7,
+     "eb": "A002_Xd9d7c7_X6fd2",
+     "f": 230.635464,
+     "line": "CO(2-1)",
+     "star": "LHS 1140"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_Xcca365_X3822",
+     "f": 230.647234,
+     "line": "CO(2-1)",
+     "star": "HD170773"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_X12771d5_X3b63",
+     "f": 230.647776,
+     "line": "CO(2-1)",
+     "star": "HD 45184"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_Xdd0d37_X17f99",
+     "f": 230.680759,
+     "line": "CO(2-1)",
+     "star": "GL 3379 Gaia DR3 3316364602541746048"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_Xc694dd_X3e5f",
+     "f": 230.681974,
+     "line": "CO(2-1)",
+     "star": "HR 1010 Gaia DR3 4722135642226902656"
+    },
+    {
+     "attributed": false,
+     "dv": 192.9,
+     "eb": "A002_Xa42f75_X319",
+     "f": 230.686369,
+     "line": "CO(2-1)",
+     "star": "AU Mic"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_Xe45e29_Xb7d4",
+     "f": 230.698048,
+     "line": "CO(2-1)",
+     "star": "HD110411"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_Xfe62c1_X398",
+     "f": 230.699679,
+     "line": "CO(2-1)",
+     "star": "ALMA J153702653-33192492"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_Xf8f6a9_X10359",
+     "f": 230.726669,
+     "line": "CO(2-1)",
+     "star": "ALMA J153702653-33192492"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_Xd64dca_X410",
+     "f": 230.728704,
+     "line": "CO(2-1)",
+     "star": "HD202628"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_Xc68b3e_X107b",
+     "f": 230.743619,
+     "line": "CO(2-1)",
+     "star": "HR 1010 Gaia DR3 4722135642226902656"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_X10b22d7_X1d34",
+     "f": 230.75244,
+     "line": "CO(2-1)",
+     "star": "HD 23484 Gaia DR3 4856592239127350400"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_Xb25e1a_Xed74",
+     "f": 230.762259,
+     "line": "CO(2-1)",
+     "star": "Wolf 219"
+    },
+    {
+     "attributed": null,
+     "dv": null,
+     "eb": "A002_X1009c59_X1ba4d",
+     "f": 230.767643,
+     "line": "CO(2-1)",
+     "star": "ALMA J153702653-33192492"
+    }
+   ],
+   "n": 1401,
+   "n_members_attributed": 9,
+   "null_mean": 35.61,
+   "null_p95": 41.0,
+   "observed": 43,
+   "p": 0.01324668832791802
+  },
+  "crossings": {
+   "crit95": 10,
+   "max_band": {
+    "count": 12,
+    "hi_GHz": 230.72261799999998,
+    "lo_GHz": 230.422618,
+    "width_MHz": 300.0
+   },
+   "members": [
+    {
+     "attributed": false,
+     "dv": -150.0,
+     "eb": "A002_Xc19d6f_X5706",
+     "f": 230.422618,
+     "line": "CO(2-1)",
+     "star": "HD 207129 Gaia DR3 6564091190988411520"
+    },
+    {
+     "attributed": true,
+     "dv": -46.7,
+     "eb": "A002_Xd98580_X3bf6",
+     "f": 230.502079,
+     "line": "CO(2-1)",
+     "star": "HD 285968"
+    },
+    {
+     "attributed": true,
+     "dv": -36.4,
+     "eb": "A002_Xdb4b9a_X108f",
+     "f": 230.510022,
+     "line": "CO(2-1)",
+     "star": "HD 285968"
+    },
+    {
+     "attributed": true,
+     "dv": -34.4,
+     "eb": "A002_Xdb7ab7_X5b4e",
+     "f": 230.51157,
+     "line": "CO(2-1)",
+     "star": "HD 285968"
+    },
+    {
+     "attributed": true,
+     "dv": -34.2,
+     "eb": "A002_Xc26103_X155a",
+     "f": 230.511674,
+     "line": "CO(2-1)",
+     "star": "HD 48370"
+    },
+    {
+     "attributed": true,
+     "dv": -28.6,
+     "eb": "A002_Xd9668b_Xa9df",
+     "f": 230.516025,
+     "line": "CO(2-1)",
+     "star": "bet Pic"
+    },
+    {
+     "attributed": true,
+     "dv": -28.4,
+     "eb": "A002_Xd9668b_X3a90",
+     "f": 230.516128,
+     "line": "CO(2-1)",
+     "star": "bet Pic"
+    },
+    {
+     "attributed": true,
+     "dv": -20.6,
+     "eb": "A002_Xff0235_X8392",
+     "f": 230.522151,
+     "line": "CO(2-1)",
+     "star": "ALMA J153702653-33192492"
+    },
+    {
+     "attributed": true,
+     "dv": -14.1,
+     "eb": "A002_X7116f1_X1785",
+     "f": 230.527185,
+     "line": "CO(2-1)",
+     "star": "bet Pic"
+    },
+    {
+     "attributed": true,
+     "dv": -12.5,
+     "eb": "A002_X6f1341_X1484",
+     "f": 230.528379,
+     "line": "CO(2-1)",
+     "star": "bet Pic"
+    },
+    {
+     "attributed": false,
+     "dv": 126.7,
+     "eb": "A002_Xd9d7c7_X6fd2",
+     "f": 230.635464,
+     "line": "CO(2-1)",
+     "star": "LHS 1140"
+    },
+    {
+     "attributed": false,
+     "dv": 192.9,
+     "eb": "A002_Xa42f75_X319",
+     "f": 230.686369,
+     "line": "CO(2-1)",
+     "star": "AU Mic"
+    }
+   ],
+   "n": 51,
+   "n_members_attributed": 9,
+   "null_mean": 7.33925,
+   "null_p95": 10.0,
+   "observed": 12,
+   "p": 0.00424893776555861
+  },
+  "crossings_fine": {
+   "crit95": 10,
+   "max_band": {
+    "count": 12,
+    "hi_GHz": 230.72261799999998,
+    "lo_GHz": 230.422618,
+    "width_MHz": 300.0
+   },
+   "members": [
+    {
+     "attributed": false,
+     "dv": -150.0,
+     "eb": "A002_Xc19d6f_X5706",
+     "f": 230.422618,
+     "line": "CO(2-1)",
+     "star": "HD 207129 Gaia DR3 6564091190988411520"
+    },
+    {
+     "attributed": true,
+     "dv": -46.7,
+     "eb": "A002_Xd98580_X3bf6",
+     "f": 230.502079,
+     "line": "CO(2-1)",
+     "star": "HD 285968"
+    },
+    {
+     "attributed": true,
+     "dv": -36.4,
+     "eb": "A002_Xdb4b9a_X108f",
+     "f": 230.510022,
+     "line": "CO(2-1)",
+     "star": "HD 285968"
+    },
+    {
+     "attributed": true,
+     "dv": -34.4,
+     "eb": "A002_Xdb7ab7_X5b4e",
+     "f": 230.51157,
+     "line": "CO(2-1)",
+     "star": "HD 285968"
+    },
+    {
+     "attributed": true,
+     "dv": -34.2,
+     "eb": "A002_Xc26103_X155a",
+     "f": 230.511674,
+     "line": "CO(2-1)",
+     "star": "HD 48370"
+    },
+    {
+     "attributed": true,
+     "dv": -28.6,
+     "eb": "A002_Xd9668b_Xa9df",
+     "f": 230.516025,
+     "line": "CO(2-1)",
+     "star": "bet Pic"
+    },
+    {
+     "attributed": true,
+     "dv": -28.4,
+     "eb": "A002_Xd9668b_X3a90",
+     "f": 230.516128,
+     "line": "CO(2-1)",
+     "star": "bet Pic"
+    },
+    {
+     "attributed": true,
+     "dv": -20.6,
+     "eb": "A002_Xff0235_X8392",
+     "f": 230.522151,
+     "line": "CO(2-1)",
+     "star": "ALMA J153702653-33192492"
+    },
+    {
+     "attributed": true,
+     "dv": -14.1,
+     "eb": "A002_X7116f1_X1785",
+     "f": 230.527185,
+     "line": "CO(2-1)",
+     "star": "bet Pic"
+    },
+    {
+     "attributed": true,
+     "dv": -12.5,
+     "eb": "A002_X6f1341_X1484",
+     "f": 230.528379,
+     "line": "CO(2-1)",
+     "star": "bet Pic"
+    },
+    {
+     "attributed": false,
+     "dv": 126.7,
+     "eb": "A002_Xd9d7c7_X6fd2",
+     "f": 230.635464,
+     "line": "CO(2-1)",
+     "star": "LHS 1140"
+    },
+    {
+     "attributed": false,
+     "dv": 192.9,
+     "eb": "A002_Xa42f75_X319",
+     "f": 230.686369,
+     "line": "CO(2-1)",
+     "star": "AU Mic"
+    }
+   ],
+   "n": 47,
+   "n_members_attributed": 9,
+   "null_mean": 7.33725,
+   "null_p95": 10.0,
+   "observed": 12,
+   "p": 0.003749062734316421
+  },
+  "crossings_fine_unattributed": {
+   "crit95": 6,
+   "max_band": {
+    "count": 6,
+    "hi_GHz": 230.935464,
+    "lo_GHz": 230.635464,
+    "width_MHz": 300.0
+   },
+   "members": [
+    {
+     "attributed": false,
+     "dv": 126.7,
+     "eb": "A002_Xd9d7c7_X6fd2",
+     "f": 230.635464,
+     "line": "CO(2-1)",
+     "star": "LHS 1140"
+    },
+    {
+     "attributed": false,
+     "dv": 192.9,
+     "eb": "A002_Xa42f75_X319",
+     "f": 230.686369,
+     "line": "CO(2-1)",
+     "star": "AU Mic"
+    },
+    {
+     "attributed": false,
+     "dv": 328.2,
+     "eb": "A002_X10b22d7_X2445",
+     "f": 230.790381,
+     "line": "CO(2-1)",
+     "star": "HD 23484 Gaia DR3 4856592239127350400"
+    },
+    {
+     "attributed": false,
+     "dv": 373.5,
+     "eb": "A002_X899169_X1838",
+     "f": 230.82523,
+     "line": "CO(2-1)",
+     "star": "AU Mic"
+    },
+    {
+     "attributed": false,
+     "dv": 385.9,
+     "eb": "A002_Xc66ce1_Xaa9",
+     "f": 230.834752,
+     "line": "CO(2-1)",
+     "star": "HR 1010 Gaia DR3 4722135642226902656"
+    },
+    {
+     "attributed": false,
+     "dv": 440.7,
+     "eb": "A002_Xd9668b_X841a",
+     "f": 230.87691,
+     "line": "CO(2-1)",
+     "star": "GJ 849"
+    }
+   ],
+   "n": 36,
+   "n_members_attributed": 0,
+   "null_mean": 4.4375,
+   "null_p95": 6.0,
+   "observed": 6,
+   "p": 0.10547363159210198
+  },
+  "crossings_unattributed": {
+   "crit95": 6,
+   "max_band": {
+    "count": 6,
+    "hi_GHz": 230.935464,
+    "lo_GHz": 230.635464,
+    "width_MHz": 300.0
+   },
+   "members": [
+    {
+     "attributed": false,
+     "dv": 126.7,
+     "eb": "A002_Xd9d7c7_X6fd2",
+     "f": 230.635464,
+     "line": "CO(2-1)",
+     "star": "LHS 1140"
+    },
+    {
+     "attributed": false,
+     "dv": 192.9,
+     "eb": "A002_Xa42f75_X319",
+     "f": 230.686369,
+     "line": "CO(2-1)",
+     "star": "AU Mic"
+    },
+    {
+     "attributed": false,
+     "dv": 328.2,
+     "eb": "A002_X10b22d7_X2445",
+     "f": 230.790381,
+     "line": "CO(2-1)",
+     "star": "HD 23484 Gaia DR3 4856592239127350400"
+    },
+    {
+     "attributed": false,
+     "dv": 373.5,
+     "eb": "A002_X899169_X1838",
+     "f": 230.82523,
+     "line": "CO(2-1)",
+     "star": "AU Mic"
+    },
+    {
+     "attributed": false,
+     "dv": 385.9,
+     "eb": "A002_Xc66ce1_Xaa9",
+     "f": 230.834752,
+     "line": "CO(2-1)",
+     "star": "HR 1010 Gaia DR3 4722135642226902656"
+    },
+    {
+     "attributed": false,
+     "dv": 440.7,
+     "eb": "A002_Xd9668b_X841a",
+     "f": 230.87691,
+     "line": "CO(2-1)",
+     "star": "GJ 849"
+    }
+   ],
+   "n": 40,
+   "n_members_attributed": 0,
+   "null_mean": 4.46275,
+   "null_p95": 6.0,
+   "observed": 6,
+   "p": 0.10697325668582855
+  }
+ },
+ "seed": 20260926,
+ "tube_occupancy": {
+  "n": 51,
+  "null_mean": 4.775,
+  "null_sd": 1.5481844205391035,
+  "observed": 11,
+  "p": 0.000999750062484379
+ }
+}

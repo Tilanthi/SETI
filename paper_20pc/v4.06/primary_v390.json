@@ -1,0 +1,47 @@
+{
+ "n_frozen": 13,
+ "n_corrected": 10,
+ "n_frozen_unattrib": 4,
+ "n_corrected_unattrib": 2,
+ "n_lost": 4,
+ "n_gained": 1,
+ "lost": [
+  [
+   "HD 23484 Gaia DR3 4856592239127350400",
+   "6"
+  ],
+  [
+   "HD14055",
+   "7"
+  ],
+  [
+   "HD 48370",
+   "6"
+  ],
+  [
+   "CP-72 2713",
+   "7"
+  ]
+ ],
+ "gained": [
+  [
+   "HD 207129 Gaia DR3 6564091190988411520",
+   "6"
+  ]
+ ],
+ "n_windows": 1614,
+ "n_eligible": 460,
+ "mean": 1.2576,
+ "p": 0.35655,
+ "p_lo": 0.49815,
+ "p_hi": 0.2931,
+ "tail": 1.4,
+ "tail_lo": 1.2,
+ "tail_hi": 1.9,
+ "frozen_p": 0.0396,
+ "frozen_mean": 1.25545,
+ "q95": [
+  0,
+  4
+ ]
+}
