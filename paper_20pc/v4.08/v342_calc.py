@@ -1,0 +1,1549 @@
+#!/usr/bin/env python3
+r"""v3.46 generator: control-ring geometry, repaired line mask, sensitivity
+reporting, and the machine-readable catalogue.
+
+Sources (all local to this folder, so the release builds from itself)
+--------------------------------------------------------------------
+  frozen_export_v3.31.json     the rounds 5-9 freeze, UNCHANGED
+  pipeline_peakfreq_v342.json  per-window crossing (peak) frequency, channel,
+                               drift and integration count, harvested from the
+                               pipeline's own *_result.json products.  Adds no
+                               new measurement: every star_peak_snr in it
+                               reproduces the frozen export's own value.
+  ebmeta_v342.json             sky position and epoch of the four flagged
+                               windows' execution blocks, from the retained
+                               *_srcspec.npz products, for the frame chain.
+
+What this round exists to do (referee round 12)
+-----------------------------------------------
+A. Control-ring geometry (referee A2, B-M3).  The geometry was never in the
+   frozen products, only in the code.  It is deterministic, so it is
+   reconstructed here exactly rather than described:
+
+     seti_extract_generic.py::probe_positions(pb_arcsec, seed=20260825)
+
+   builds the offsets, and the caller adds them to the STAR's own direction
+   cosines (lam = l_star + dl), so the construction is concentric with the
+   star.  512 control positions are drawn uniform in area between 0.14 and
+   0.78 theta_PB and uniform in azimuth from a fixed seed; theta_PB is
+   1.22 lambda / 12 m at the window's own median frequency.  Two independent
+   checks that this reconstruction is the layout that actually ran:
+
+     (1) the inner check-ring it produces has n_src = 135 positions, which is
+         the n_src the manuscript's retired region-max statistic maximised
+         over;
+     (2) in the two windows filled by extended CO emission, the released
+         control statistics fall with the reconstructed radius (Spearman rho
+         with p ~ 1e-33 and 1e-12), which a wrong position-to-index mapping
+         could not produce.
+
+B. Line mask, repaired and re-applied retrospectively (referee A3, B minor).
+   Full-precision rest frequencies, [C I] and H30alpha added, and a separate
+   LSR-frame test for Galactic foreground beside the stellar-frame test.
+
+C. Sensitivity reporting (referee A8, A10, B-M2, B-M6): Class A and Class B
+   distributions separately, native resolution beside every EIRP, and the
+   Hanning-corrected threshold carried alongside the nominal one.
+
+Rules honoured: numbers only via generated macros; macro names letter-only.
+"""
+import json, math, csv, collections, statistics as st
+import numpy as np
+_K = json.load(open('catalogue_constants.json'))  # v3.80: the catalogue's size is written once by survey_stats.py, never retyped
+
+
+C_KMS = 299792.458
+C_MS = 299792458.0
+DISH = 12.0
+ARCSEC = math.pi / (180.0 * 3600.0)
+# Referee E2: two different primary-beam conventions are in play and the paper
+# has to keep them apart.  PB_COEF_CODE is the Airy first-null coefficient the
+# pipeline used, with DISH for every window regardless of array; PB_COEF_FWHM
+# is ALMA's actual primary-beam FWHM coefficient, which applies at the window's
+# OWN dish diameter (12 m or ACA 7 m).  The annulus geometry below keeps the
+# pipeline's convention, because that is the geometry that was searched; only
+# the corrections quoted in the text are recomputed on the FWHM convention.
+PB_COEF_CODE = 1.22
+PB_COEF_FWHM = 1.13
+DISH_ACA = 7.0
+AREC_W = 2.0e13         # Arecibo S-band planetary radar reference power
+
+# ---------------------------------------------------------------- prologue --
+# identical to survey_stats_round10.py, so GOOD is the same 431 windows
+# v3.60: the frozen export augmented with the Band 9 and Band 10 windows the
+# export step had dropped. The original 462 rows are unchanged.
+# v3.99: the ACA control-geometry repair is folded in at the export, which
+# is the single source this catalogue is built from. Patching the CSV after
+# the fact does not survive, because this script rewrites it every build.
+SRC = 'corrected_export_v399.json'
+D = json.load(open(SRC))
+_NINT = json.load(open('b910_nint.json'))
+ROWS = D['rows']
+
+
+def band_of(r):
+    if r['band'] is not None:
+        return r['band']
+    f = 0.5 * (r['flo'] + r['fhi'])
+    for lo, hi, b in [(84, 116, 3), (125, 163, 4), (163, 211, 5),
+                      (211, 275, 6), (275, 373, 7), (385, 500, 8),
+                      (602, 720, 9), (787, 950, 10)]:
+        if lo <= f < hi:
+            return b
+
+
+for r in ROWS:
+    r['band_x'] = band_of(r)
+    r['res_x'] = 'fine' if r['chanw'] < 5e6 else 'coarse'
+    r['qa'] = r['rms'] * math.sqrt(r['onsrc'] * r['chanw'])
+    r['cmax'] = max(r['ctrl_all']) if r['ctrl_all'] else r['ctrl_max']
+
+_k = lambda r: (r['star_name'], r['eb'], round(min(r['flo'], r['fhi']), 6),
+                round(max(r['flo'], r['fhi']), 6), r['chanw'])
+_b = {}
+for r in ROWS:
+    if _k(r) not in _b or (_b[_k(r)]['line'] is None and r['line'] is not None):
+        _b[_k(r)] = r
+_u = list(_b.values())
+_qm = st.median(r['qa'] for r in _u)
+GOOD = [r for r in _u
+        if r['qa'] >= _qm / 100.0
+        and not (r['star_name'] == 'eps Eri' and r['band_x'] == 6)]
+assert len(GOOD) == _K['n_windows'], len(GOOD)
+
+# ---------------------------------------------------------------- unit repair
+# v3.72 (referee 1, point 5).  The twelve Band 9/10 rows restored in v3.60 were
+# built by `export_rows_b910.py`, which computed S_min from the EIRP in
+# MILLIJANSKYS while every other row of the export carries it in JANSKYS.  The
+# catalogue therefore printed those twelve S_min values 1000x too large, and
+# `v343_calc.py`, which infers the primary-beam correction as
+# S_min/(5 sigma_rms), read that as a "primary-beam correction of 1000.13x"
+# and the manuscript printed it.  No EIRP, threshold or disposition used the
+# column -- EIRP comes from the pipeline's own EIRP_min_W -- but a referee was
+# right to challenge a beam correction of that size.  Repaired here, at the
+# point of use, with the freeze left untouched, and an assertion added so the
+# class of error cannot recur: the quoted 5 sigma flux must equal 5 sigma_rms
+# times the primary-beam correction, which is bounded by the retention rule.
+_SMIN_BAD = [r for r in GOOD
+             if r['rms'] and abs(r['smin'] * 1e3 / (5.0 * r['rms']) - 1000.0) < 1.0]
+assert all(r['band_x'] in (9, 10) for r in _SMIN_BAD), 'unit defect outside Bands 9-10'
+for r in _SMIN_BAD:
+    r['smin'] = r['smin'] / 1e3
+N_SMIN_FIXED = len(_SMIN_BAD)
+for r in GOOD:
+    if r['rms']:
+        _ratio = r['smin'] * 1e3 / (5.0 * r['rms'])
+        assert 0.95 < _ratio < 5.0, (r['star_name'], r['band_x'], _ratio)
+
+# v3.85: star canonicalisation, bound pairs and released designations all
+# come from star_alias.py. Six separate copies of this map existed and were
+# all wrong together, which is why the star count was wrong everywhere and
+# therefore invisible.
+from star_alias import (ALIAS, NAME_REPAIR, PAIRS, canon as _canon,
+                        sysname as sysn, released as released_name)
+
+NSYS = len({sysn(r['star_name']) for r in GOOD})
+# The frozen key predates the merge; report the change rather than assert
+# the old value.
+if NSYS != _K['n_systems']:
+    print('system count after alias merge: %d (frozen key had %d)'
+          % (NSYS, _K['n_systems']))
+
+MAC = []
+M = lambda name, val: MAC.append('\\newcommand{\\%s}{%s}' % (name, val))
+
+# Per-window dish diameter (referee E2) and online spectral setup (referee E1),
+# both from the archive harvest already shipped in this folder.  It is a frozen
+# input, not a generated product, so reading it here creates no build cycle.
+ARCH = json.load(open('archive_meta_v381.json'))
+EBS = ARCH['ebs']
+
+
+def dish_m(r):
+    """The window's own dish diameter: 7 m for an ACA execution block, 12 m
+    otherwise.  The pipeline used DISH for both (referee E2)."""
+    return DISH_ACA if EBS.get(r['eb'], {}).get('array') == '7m' else DISH
+
+
+# ------------------------------------------------- A. control-ring geometry --
+RING_SEED = 20260825
+RING_IN, RING_OUT = 0.14, 0.78        # fractions of theta_PB
+RING_CHECK = 0.06                     # inner point-source check ring
+N_PROBE = 512
+
+
+def theta_pb(freq_hz):
+    """The pipeline's own theta_PB = PB_COEF_CODE lambda / DISH, arcsec, an
+    Airy first-null coefficient at a single hard-wired dish diameter.  This is
+    the geometry that was searched, so the annulus keeps it (referee E2).
+    Verified against the pb_arcsec recorded in the retained *_srcspec.npz
+    products (agreement to the printed precision)."""
+    return math.degrees(PB_COEF_CODE * (C_MS / freq_hz) / DISH) * 3600.0
+
+
+def theta_pb_fwhm(freq_hz, dish):
+    """ALMA's actual primary-beam FWHM, PB_COEF_FWHM lambda / D, at the
+    window's own dish diameter (referee E2)."""
+    return math.degrees(PB_COEF_FWHM * (C_MS / freq_hz) / dish) * 3600.0
+
+
+def probe_layout(pb_arcsec, seed=RING_SEED):
+    """Exact reconstruction of probe_positions(): inner check ring plus the
+    512-position control annulus, uniform in area and azimuth."""
+    rng = np.random.default_rng(seed)
+    n_src = 1
+    rmax = RING_CHECK * pb_arcsec
+    step = rmax / 7.0
+    for r in np.arange(step, rmax + 1e-9, step):
+        n_src += max(6, min(24, int(round(2 * np.pi * r / step))))
+    lo, hi = RING_IN * pb_arcsec, RING_OUT * pb_arcsec
+    rr = np.sqrt(rng.uniform(lo ** 2, hi ** 2, N_PROBE))
+    th = rng.uniform(0, 2 * np.pi, N_PROBE)
+    return n_src, rr, th
+
+
+def pb_gain(r, pb):
+    """Gaussian primary-beam response at radius r for FWHM pb."""
+    return math.exp(-4.0 * math.log(2.0) * (r / pb) ** 2)
+
+
+for r in GOOD:
+    fmid = 0.5 * (r['flo'] + r['fhi']) * 1e9
+    r['theta_pb'] = theta_pb(fmid)
+    r['r_in'] = RING_IN * r['theta_pb']
+    r['r_out'] = RING_OUT * r['theta_pb']
+
+NSRC, _rr0, _th0 = probe_layout(GOOD[0]['theta_pb'])
+assert NSRC == 135, NSRC        # check (1): matches the retired statistic's n_src
+
+GAIN_IN = pb_gain(RING_IN, 1.0)
+GAIN_OUT = pb_gain(RING_OUT, 1.0)
+# area-weighted mean response over the annulus, which is what the 512 draws
+# sample: <G> = int_rin^rout G(r) 2 r dr / (rout^2 - rin^2)
+_x = np.linspace(RING_IN, RING_OUT, 20001)
+GAIN_MEAN = float(np.trapezoid(np.exp(-4 * np.log(2) * _x ** 2) * 2 * _x, _x)
+                  / (RING_OUT ** 2 - RING_IN ** 2))
+
+M('RingSeed', '%d' % RING_SEED)
+M('RingNProbe', '%d' % N_PROBE)
+M('RingNSrc', '%d' % NSRC)
+M('RingInFrac', '%.2f' % RING_IN)
+M('RingOutFrac', '%.2f' % RING_OUT)
+M('RingCheckFrac', '%.2f' % RING_CHECK)
+M('RingGainIn', '%.2f' % GAIN_IN)
+M('RingGainOut', '%.2f' % GAIN_OUT)
+M('RingGainMean', '%.2f' % GAIN_MEAN)
+# The annulus is defined in units of the pipeline's own theta_PB, so the
+# physical response at a given annulus radius is lower than the definition
+# implies.  Referee E2: that conversion is dish-dependent, and the ACA 7 m
+# windows (counted in the run log) have a true beam WIDER than the pipeline's,
+# not narrower.  Each window's annulus radius is therefore re-expressed in units of
+# its own PB_COEF_FWHM lambda/D beam and the median gain quoted; the per-array
+# values are printed in the run log.
+for r in GOOD:
+    _fw = 0.5 * (r['flo'] + r['fhi']) * 1e9
+    r['pb_scale'] = r['theta_pb'] / theta_pb_fwhm(_fw, dish_m(r))
+RGIN_TRUE = [pb_gain(RING_IN * r['pb_scale'], 1.0) for r in GOOD]
+RGOUT_TRUE = [pb_gain(RING_OUT * r['pb_scale'], 1.0) for r in GOOD]
+M('RingGainInTrue', '%.2f' % st.median(RGIN_TRUE))
+M('RingGainOutTrue', '%.2f' % st.median(RGOUT_TRUE))
+M('RingPbCoef', '%.2f' % PB_COEF_FWHM)
+M('RingPbCoefCode', '%.2f' % PB_COEF_CODE)
+M('RingThetaMin', '%.1f' % min(r['theta_pb'] for r in GOOD))
+M('RingThetaMax', '%.1f' % max(r['theta_pb'] for r in GOOD))
+M('RingRinMin', '%.1f' % min(r['r_in'] for r in GOOD))
+M('RingRinMax', '%.1f' % max(r['r_in'] for r in GOOD))
+M('RingRoutMin', '%.1f' % min(r['r_out'] for r in GOOD))
+M('RingRoutMax', '%.1f' % max(r['r_out'] for r in GOOD))
+
+# per-band annulus table, at the band's own median searched frequency
+BANDROWS = []
+for b in sorted({r['band_x'] for r in GOOD}):
+    sel = [r for r in GOOD if r['band_x'] == b]
+    fmed = st.median(0.5 * (r['flo'] + r['fhi']) for r in sel)
+    pb = theta_pb(fmed * 1e9)
+    BANDROWS.append((b, fmed, pb, RING_IN * pb, RING_OUT * pb, len(sel)))
+with open('tab_ring.tex', 'w') as f:
+    f.write('%% GENERATED by v342_calc.py -- do not hand-edit.\n'
+            '\\begin{tabular}{@{}crrrrr@{}}\n\\toprule\n'
+            'Band & $\\nu_{\\rm med}$ (GHz) & $\\theta_{\\rm PB}$ ($^{\\prime\\prime}$) '
+            '& $r_{\\rm in}$ ($^{\\prime\\prime}$) & $r_{\\rm out}$ '
+            '($^{\\prime\\prime}$) & windows \\\\\n\\midrule\n')
+    f.write(' \\\\\n'.join('%d & %.0f & %.1f & %.1f & %.1f & %d'
+                           % (b, fm, pb, ri, ro, n)
+                           for b, fm, pb, ri, ro, n in BANDROWS))
+    f.write(' \\\\\n\\bottomrule\n\\end{tabular}\n')
+
+# check (2): does the released control-statistic ordering follow the
+# reconstructed radii where an extended source fills the beam?
+try:
+    from scipy.stats import spearmanr
+    _HAVE_SCIPY = True
+except Exception:
+    _HAVE_SCIPY = False
+
+RHO = {}
+if _HAVE_SCIPY:
+    for tag, star, flo_ in (('CO', 'HD 48370', 230.5004), ('CI', 'HD 48370', 218.56)):
+        for r in GOOD:
+            if r['star_name'] == star and abs(min(r['flo'], r['fhi']) - flo_) < 0.01:
+                _, rr, th = probe_layout(r['theta_pb'])
+                rho, p = spearmanr(rr, np.array(r['ctrl_all']))
+                RHO[tag] = (rho, p, r)
+    # null control: windows with no crossing anywhere should show no trend
+    _null = []
+    for r in GOOD:
+        if r['star_snr'] < 4.0 and r['cmax'] < 5.0:
+            _, rr, th = probe_layout(r['theta_pb'])
+            _null.append(spearmanr(rr, np.array(r['ctrl_all']))[0])
+    RHO['null'] = (float(np.median(_null)), len(_null), None)
+    RHO['null_pct'] = (float(np.percentile(_null, 5)),
+                       float(np.percentile(_null, 95)))
+
+if 'CO' in RHO:
+    M('RingRhoCO', '%.2f' % RHO['CO'][0])
+    M('RingRhoCOexp', '%d' % round(math.log10(max(RHO['CO'][1], 1e-300))))
+    M('RingRhoNull', '%.3f' % RHO['null'][0])
+    M('RingRhoNullN', '%d' % RHO['null'][1])
+    _lo, _hi = RHO['null_pct']
+    M('RingRhoNullLo', '%.2f' % _lo)
+    M('RingRhoNullHi', '%.2f' % _hi)
+    # A Spearman rho of magnitude |rho| over N_probe draws corresponds, for a
+    # monotone linear trend across the annulus, to a mean control deficit of
+    # about |rho| times the ensemble's own dispersion; the 95th percentile
+    # bounds it.
+    M('RingRhoBoundPct', '%.0f' % (100 * max(abs(_lo), abs(_hi))))
+
+# the HD 48370 13CO peak's angular offset from the star (referee B minor):
+# the control carrying that window's ring maximum, located in the
+# reconstructed layout.
+if 'CI' in RHO:
+    r13 = RHO['CI'][2]
+    _, rr13, th13 = probe_layout(r13['theta_pb'])
+    c13 = np.array(r13['ctrl_all'])
+    i13 = int(np.argmax(c13))
+    top10 = np.argsort(c13)[::-1][:10]
+    M('HdThirteenOffset', '%.1f' % rr13[i13])
+    M('HdThirteenOffsetPB', '%.2f' % (rr13[i13] / r13['theta_pb']))
+    M('HdThirteenTopLo', '%.1f' % rr13[top10].min())
+    M('HdThirteenTopHi', '%.1f' % rr13[top10].max())
+    M('HdThirteenRingMed', '%.1f' % float(np.median(rr13)))
+    M('HdThirteenRingMax', '%.1f' % c13[i13])
+    M('HdThirteenStar', '%.1f' % r13['star_snr'])
+
+# -------------------------------------------------- B. the repaired mask ----
+# Full-precision rest frequencies, JPL/CDMS (Pickett et al. 1998; Mueller et
+# al. 2005).  The frozen mask stored these rounded to 1 MHz, and carried
+# neither [C I] nor a hydrogen recombination line.
+CAT = {
+    'CO(1-0)':    115.2712018, 'CO(2-1)':   230.5380000, 'CO(3-2)': 345.7959899,
+    'CO(4-3)':    461.0407682, 'CO(6-5)':   691.4730763,
+    '13CO(2-1)':  220.3986842, 'C18O(2-1)': 219.5603541,
+    'HCN(1-0)':    88.6316022, 'HCN(3-2)':  265.8864340,
+    'HCO+(1-0)':   89.1885260, 'HCO+(3-2)': 267.5576259,
+    'CS(5-4)':    244.9355565, 'CN(1-0)':   113.4909702,
+    'SiO(5-4)':   217.1049800, 'H2CO(3-2)': 218.2221920,
+    '[CI](1-0)':  492.1606510,                    # new in v3.46
+    'H30a':       231.9009280,                    # new in v3.46
+}
+CAT_OLD = {'CO(1-0)': 115.271, 'CO(2-1)': 230.538, 'CO(3-2)': 345.796,
+           'CO(4-3)': 461.041, 'CO(6-5)': 691.473, '13CO(2-1)': 220.399,
+           'C18O(2-1)': 219.560, 'HCN(1-0)': 88.632, 'HCN(3-2)': 265.886,
+           'HCO+(1-0)': 89.189, 'HCO+(3-2)': 267.558, 'CS(5-4)': 244.936,
+           'CN(1-0)': 113.491, 'SiO(5-4)': 217.105, 'H2CO(3-2)': 218.222}
+NSPEC_OLD = len({k.split('(')[0] for k in CAT_OLD})
+NSPEC_NEW = len({k.split('(')[0].split('3')[0] if k == 'H30a' else k.split('(')[0]
+                 for k in CAT})
+M('MaskNTransOld', '%d' % len(CAT_OLD))
+M('MaskNTransNew', '%d' % len(CAT))
+M('MaskNSpecOld', '%d' % NSPEC_OLD)
+M('MaskNSpecNew', '%d' % NSPEC_NEW)
+M('MaskCIGHz', '%.6f' % CAT['[CI](1-0)'])
+M('MaskHthirtyGHz', '%.6f' % CAT['H30a'])
+M('MaskVWidth', '50')
+# worst rounding error the old mask carried, in km/s
+_worst = max(abs(CAT[k] - CAT_OLD[k]) / CAT[k] * C_KMS for k in CAT_OLD)
+M('MaskRoundWorstKms', '%.2f' % _worst)
+
+# crossing (peak) frequency per window, from the pipeline's own products
+PK = json.load(open('pipeline_peakfreq_v342.json'))
+
+
+def _norm(s):
+    # v4.07: the pipeline's target directories carry the star name as it stood
+    # when the search ran, so this join breaks the moment a name is repaired --
+    # and it breaks SILENTLY, by leaving n_int blank, and with it eta_smear,
+    # eirp_eff_total_W and c_response_smear.  That is exactly what the census
+    # name-collision repair did in its first build.  Both sides of the join now
+    # pass through the one canonicalisation map, so a repaired name reaches the
+    # key of the directory the window was extracted in.  The assertion below
+    # pins the number of GOOD rows that end up without an integration count.
+    return _canon(' '.join(s.replace('_', ' ').split()))
+
+# the pipeline's target directories predate the "gamma Lupi" name-lookup
+# correction of the paper's item (iv), so one star is filed under its
+# historical identifier there and under the resolved one in the export.
+# v3.85: this used to be called ALIAS and shadowed the star-merge map
+# defined near the top of the file, so `sysn` silently stopped merging
+# after this point. Renamed.
+PK_ALIAS = {'g Lup': 'HD 139664'}
+
+
+PKMAP = {}
+for p in PK:
+    if p['flo'] is None:
+        continue
+    star = _norm(p['tgt'].rsplit('_B', 1)[0])
+    star = PK_ALIAS.get(star, star)
+    PKMAP[(star, p['eb'], round(min(p['flo'], p['fhi']), 4),
+           round(max(p['flo'], p['fhi']), 4), round(p['cw'], 1))] = p
+_nmatch = 0
+for r in GOOD:
+    key = (_norm(r['star_name']), r['eb'], round(min(r['flo'], r['fhi']), 4),
+           round(max(r['flo'], r['fhi']), 4), round(r['chanw'], 1))
+    p = PKMAP.get(key)
+    # v3.99: for windows the ACA repair re-measured, the new extraction is
+    # authoritative -- it retains the peak frequency and drift rate, which
+    # the original did not (referee 2, M1). PKMAP is a snapshot of the old
+    # extraction and must not override them.
+    _corrected = r.get('provenance') == 'corrected-geometry'
+    if _corrected and r.get('f_cross') is not None:
+        pass                       # keep the value carried in the export
+    else:
+        r['f_cross'] = p['pk'] if p else None
+    r['n_int'] = p['nint'] if p else None
+    if r['n_int'] is None:
+        # the restored Band 9/10 windows are outside the peak-frequency file,
+        # so their integration count comes from their own search products
+        r['n_int'] = _NINT.get('%s|%.6f|%.6f' % (r['eb'], r['flo'], r['fhi']))
+    if p is not None and not _corrected:
+        # only meaningful where both sides come from the same extraction
+        assert abs(p['snr'] - r['star_snr']) < 0.02, (r['star_name'], p['snr'], r['star_snr'])
+        _nmatch += 1
+M('PeakFreqMatched', '%d' % _nmatch)
+# v4.07: 1,200 of the released windows genuinely carry no integration count --
+# they are outside the peak-frequency snapshot and outside b910_nint.json -- and
+# their eta_smear column is correctly empty.  The number is PINNED with `==`,
+# not bounded, because both directions are informative: if it GREW, a name-keyed
+# join has silently stopped matching (the census repair did exactly that, and
+# nothing reported it); if it SHRANK, a window that should be outside the
+# snapshot has acquired a count from somewhere.
+_NO_NINT_PINNED = 1200
+_no_nint = sum(1 for r in GOOD if not r.get('n_int'))
+assert _no_nint == _NO_NINT_PINNED, (
+    '%d searched windows have no integration count, pinned at %d.  A rise '
+    'means the (star, eb, window) join into pipeline_peakfreq_v342.json has '
+    'stopped matching for some star -- check the name canonicalisation before '
+    'moving this number.' % (_no_nint, _NO_NINT_PINNED))
+
+CROSS = [r for r in GOOD if r['star_snr'] >= 5.0]
+FLAG = [r for r in CROSS if r['star_snr'] > r['cmax']]
+assert len(FLAG) == _K['n_flagged'], len(FLAG)
+
+
+def nearest(fghz, cat):
+    """(name, offset in MHz, offset in km/s) of the nearest catalogue entry."""
+    best = min(cat.items(), key=lambda kv: abs(fghz - kv[1]))
+    dnu = (fghz - best[1]) * 1e3
+    return best[0], dnu, C_KMS * (fghz - best[1]) / best[1]
+
+
+# frame chain for the four flagged windows, from the retained EB metadata
+EBM = json.load(open('ebmeta_v342.json'))
+from astropy.coordinates import SkyCoord, EarthLocation
+from astropy.time import Time
+import astropy.units as au
+
+
+ALMA = EarthLocation.of_site('alma') if False else EarthLocation.from_geodetic(
+    lon=-67.7538 * au.deg, lat=-23.0292 * au.deg, height=5074 * au.m)
+
+MASKREPORT = []
+# v3.80: the velocity-frame chain needs each block's own pointing and
+# mid-time, which were harvested and frozen for the four stage-1 outliers of
+# the released catalogue. The completed sweep raises the outliers to 13, and
+# ALMA's obscore does not index the nine new blocks individually (asdm_uid is
+# not a per-EB index -- see cal_available.py), so their mid-times cannot be
+# recovered now that the measurement sets have been reclaimed. Rather than
+# invent them, chain the frames only where the metadata is frozen and report
+# the rest through the catalogue's own velocity offsets, which is sound
+# because ALMA Doppler-sets the tuning per date, so the barycentric term is
+# already largely removed from the recorded frequency.
+for r in FLAG:
+    key = '%s|%s' % (r['star_name'], r['eb'])
+    meta = EBM.get(key)
+    if meta is None:
+        continue
+    sc = SkyCoord(ra=meta['ra'] * au.deg, dec=meta['dec'] * au.deg)
+    t = Time(meta['tmid'] / 86400.0, format='mjd', scale='utc')
+    # topocentric -> barycentric: subtract the observer's velocity toward the
+    # source (radio convention, first order)
+    vbary = sc.radial_velocity_correction(kind='barycentric',
+                                          obstime=t, location=ALMA).to(au.km / au.s).value
+    # barycentric -> LSR (kinematic, standard solar motion 20 km/s toward
+    # 18h00m, +30 deg B1900 = Sun's apex)
+    apex = SkyCoord(ra='18h03m50.29s', dec='+30d00m16.8s', frame='icrs')
+    vlsr_corr = 20.0 * (math.sin(sc.dec.rad) * math.sin(apex.dec.rad)
+                        + math.cos(sc.dec.rad) * math.cos(apex.dec.rad)
+                        * math.cos(sc.ra.rad - apex.ra.rad))
+    vsys = meta['vsys']
+    f = r['f_cross']
+    name_new, dnu_new, dv_topo = nearest(f, CAT)
+    name_old, dnu_old, dv_old = nearest(f, CAT_OLD)
+    # velocity of the emitting frame relative to the transition's rest frame
+    dv_bary = dv_topo - vbary
+    dv_stellar = (dv_bary + vsys) if vsys is not None else None
+    # v_LSR = v_bary + P, where P is the projection of the standard solar
+    # motion on the line of sight.  These dv are frequency offsets expressed
+    # in velocity units, i.e. the negative of the Doppler velocity (the
+    # manuscript's own convention), so the projection enters with a minus.
+    dv_lsr = dv_bary - vlsr_corr
+    MASKREPORT.append(dict(star=r['star_name'], band=r['band_x'], f=f,
+                           new=name_new, dnu_new=dnu_new, dv_topo=dv_topo,
+                           old=name_old, dv_old=dv_old,
+                           vbary=vbary, vsys=vsys, vlsr=vlsr_corr,
+                           dv_stellar=dv_stellar, dv_lsr=dv_lsr,
+                           masked_stellar=(abs(dv_stellar) <= 50.0
+                                           if dv_stellar is not None
+                                           else abs(dv_bary) <= 150.0),
+                           masked_lsr=abs(dv_lsr) <= 50.0))
+
+M('MaskFrameChained', '%d' % len(MASKREPORT))
+M('MaskFrameTotal', '%d' % len(FLAG))
+
+# every crossing window against the repaired catalogue, topocentric
+NEWCOINC = []
+for r in CROSS:
+    if r['f_cross'] is None:
+        continue
+    nn, dn, dv = nearest(r['f_cross'], CAT)
+    no, do, dvo = nearest(r['f_cross'], CAT_OLD)
+    if nn != no.replace('H2CO', 'H2CO'):
+        NEWCOINC.append((r['star_name'], r['band_x'], r['f_cross'], no, dvo, nn, dv))
+M('MaskNewCoinc', '%d' % len(NEWCOINC))
+# the Band 8 [C I] crossing, the one entry whose nearest transition moves
+if NEWCOINC:
+    _b8 = NEWCOINC[0]
+    M('CIcrossStar', _b8[0].replace(' ', '~'))
+    M('CIcrossGHz', '%.6f' % _b8[2])
+    M('CIcrossKms', '%.0f' % _b8[6])
+    M('CIcrossOldKms', '%.0f' % _b8[4])
+
+# how much extra unique sky frequency the two new transitions exclude
+def _union(ivs):
+    iv = sorted(ivs); out = []
+    for lo, hi in iv:
+        if out and lo <= out[-1][1]:
+            out[-1][1] = max(out[-1][1], hi)
+        else:
+            out.append([lo, hi])
+    return out
+def _sub(base, cut):
+    out = []
+    for lo, hi in base:
+        seg = [(lo, hi)]
+        for a, b in cut:
+            nxt = []
+            for x, y in seg:
+                if b <= x or a >= y:
+                    nxt.append((x, y)); continue
+                if a > x: nxt.append((x, min(a, y)))
+                if b < y: nxt.append((max(b, x), y))
+            seg = nxt
+        out += seg
+    return [(a, b) for a, b in out if b > a]
+_base = _union([(min(r['flo'], r['fhi']), max(r['flo'], r['fhi'])) for r in GOOD])
+_h = lambda f: f * 50.0 / C_KMS
+_cut_old = [(f - _h(f), f + _h(f)) for f in CAT_OLD.values()]
+_cut_new = [(f - _h(f), f + _h(f)) for f in CAT.values()]
+_lost_old = sum(b - a for a, b in _base) - sum(b - a for a, b in _sub(_base, _cut_old))
+_lost_new = sum(b - a for a, b in _base) - sum(b - a for a, b in _sub(_base, _cut_new))
+M('MaskLostOldGHz', '%.2f' % _lost_old)
+M('MaskLostNewGHz', '%.2f' % _lost_new)
+M('MaskExtraGHz', '%.2f' % (_lost_new - _lost_old))
+M('MaskExtraPct', '%.1f' % (100.0 * (_lost_new - _lost_old) / sum(b - a for a, b in _base)))
+M('NCrossFreq', '%d' % sum(1 for r in CROSS if r['f_cross'] is not None))
+
+# --------------------------------------------------- C. Hanning correction --
+# ALMA's default online Hanning response leaves a fraction of a sub-channel
+# tone's power in the peak channel that depends on where in the channel the
+# tone sits.  Hanning weights (0.25, 0.5, 0.25) applied to a delta at
+# sub-channel position u in [-0.5, 0.5] give peak-channel fractions between
+# the channel-centred and the boundary-straddling cases.
+def hanning_peak_fraction(u):
+    """Peak-channel power fraction for a delta-function tone at sub-channel
+    offset u (channels) under the 0.25/0.5/0.25 Hanning kernel."""
+    w = {-1: 0.25, 0: 0.5, 1: 0.25}
+    # the unsmoothed tone falls in channel 0 with weight 1 - |u| and in the
+    # neighbour with |u| (linear channel response), then Hanning mixes them
+    a0, a1 = 1.0 - abs(u), abs(u)
+    s = int(math.copysign(1, u)) if u != 0 else 1
+    pk = w[0] * a0 + w[-s] * a1
+    nb = w[s] * a0 + w[0] * a1
+    return max(pk, nb)
+
+
+def averaged_peak_fraction(u, n_avg, nraw=81):
+    """Referee E1.  The same kernel, followed by ALMA's ONLINE CHANNEL
+    AVERAGING: n_avg consecutive Hanning-smoothed raw channels are summed into
+    one delivered channel, which puts a larger share of the tone's power in the
+    delivered peak channel.  u is the tone's offset in raw channels."""
+    x = np.zeros(nraw)
+    c = int(round(u))
+    frac = u - c
+    a0, a1 = 1.0 - abs(frac), abs(frac)
+    s = 1 if frac >= 0 else -1
+    x[c + nraw // 2] += a0
+    x[c + s + nraw // 2] += a1
+    y = np.zeros_like(x)
+    for d, w in {-1: 0.25, 0: 0.5, 1: 0.25}.items():
+        y[1:-1] += w * x[1 + d:len(x) - 1 + d]
+    m = (nraw // n_avg) * n_avg
+    dl = y[:m].reshape(-1, n_avg).sum(1)
+    return float(dl.max() / dl.sum())
+
+
+_us = np.linspace(-0.5, 0.5, 4001)
+_fr = np.array([hanning_peak_fraction(u) for u in _us])
+# the two routines are independent implementations of the same kernel at
+# n_avg = 1, so they must agree; if they ever stop agreeing, one is wrong
+assert max(abs(averaged_peak_fraction(u, 1) - hanning_peak_fraction(u))
+           for u in np.linspace(-0.5, 0.5, 201)) < 1e-12
+# ---- v4.01 (R2-M2/M3b).  The two routines above are the LINEAR-SPLIT model:
+# a tone divides in proportion to distance between the two channels it
+# straddles, and the kernel then mixes them.  A correlator channel does not do
+# that -- its response to a monochromatic tone is the transform of the lag
+# window sampled on the channel grid.  cresp_v401.py computes the delivered
+# response from the window itself and validates it against four documented
+# ALMA numbers; this file supplies the fifth, below, because it is the only
+# place that knows which windows the survey actually used.  The linear-split
+# model is retained ONLY to check that the reimplementation of it inside
+# cresp_v401.py reproduces what this file used to publish, so that the change
+# in the numbers is the change of model and not a slip in rewriting it.
+_CR = json.load(open('cresp_v401.json'))
+assert abs(_CR['superseded']['adopted'][1] - 1.0 / _fr.min()) < 5e-3 and \
+    abs(_CR['superseded']['adopted'][0] - 1.0 / _fr.max()) < 5e-3, (
+        'cresp_v401.py does not reproduce the superseded linear-split model '
+        'this file used to publish (%s against %.3f-%.3f); the comparison the '
+        'paper draws between the two is not like for like'
+        % (_CR['superseded']['adopted'], 1.0 / _fr.max(), 1.0 / _fr.min()))
+_rho1 = np.array(_CR['rho_n1'])
+HAN_BEST, HAN_WORST, HAN_MED = (float(_rho1.max()), float(_rho1.min()),
+                                float(np.median(_rho1)))
+# the correction may only move in the direction the physics says it moves: the
+# linear split over-attenuates the channel edge, so the corrected envelope must
+# be NARROWER and its median SMALLER, while the channel-centred case -- where a
+# Dirichlet kernel and a linear split agree exactly -- must be untouched.
+assert abs(HAN_BEST - _fr.max()) < 1e-3, (HAN_BEST, _fr.max())
+assert _fr.min() < HAN_WORST < HAN_MED < _fr.max(), (HAN_WORST, HAN_MED)
+M('HanBest', '%.2f' % HAN_BEST)
+M('HanWorst', '%.2f' % HAN_WORST)
+M('HanMed', '%.2f' % HAN_MED)
+M('HanFacBest', '%.2f' % (1.0 / HAN_BEST))
+M('HanFacWorst', '%.2f' % (1.0 / HAN_WORST))
+M('HanFacMed', '%.2f' % (1.0 / HAN_MED))
+
+# Referee E1: the correction is WINDOW-SPECIFIC, not blanket.  The archive
+# reports an effective spectral resolution of HAN_RATIO channel spacings where
+# ALMA's default online Hanning smoothing was applied and something smaller
+# where the window was delivered with online channel averaging; for those the
+# averaging factor is 2 (N_AVG), and the correction is much less severe.
+HAN_RATIO = 2.0
+HAN_RATIO_TOL = 0.05
+N_AVG = _CR['n_avg']
+_rho2 = np.array(_CR['rho_navg'])
+HAN_AVG_BEST, HAN_AVG_WORST = float(_rho2.max()), float(_rho2.min())
+HAN_AVG_MED = float(np.median(_rho2))
+M('HanFacAvgLo', '%.2f' % (1.0 / HAN_AVG_BEST))
+M('HanFacAvgHi', '%.2f' % (1.0 / HAN_AVG_WORST))
+M('HanFacAvgMed', '%.2f' % (1.0 / HAN_AVG_MED))
+
+
+def fs_ratio(r):
+    """Archive-reported effective spectral resolution over the window's own
+    channel spacing, from the obscore frequency_support of its execution
+    block.  Same arithmetic as v343_calc.py::fs_ratio, which emits the
+    populations (\\NHanTwo, \\NHanOther) this split quotes."""
+    fs = EBS.get(r['eb'], {}).get('freq_support') or []
+    lo, hi = min(r['flo'], r['fhi']), max(r['flo'], r['fhi'])
+    best = None
+    for a, b, res in fs:
+        ov = min(hi, max(a, b)) - max(lo, min(a, b))
+        if ov > 0 and (best is None or ov > best[0]):
+            best = (ov, res)
+    return None if best is None else best[1] / r['chanw']
+
+
+# v4.06 (DECISIONS_R8 D18).  The key was binary -- `abs(fs_ratio - 2.0) >=
+# HAN_RATIO_TOL` -> "averaged, and averaged by N_AVG = 2".  A BINARY FLAG HAS
+# NO THIRD STATE, so it cannot fail for a window averaged by any factor other
+# than the one it knows about: such a window is silently given the n = 2
+# response.  Exactly one window of 1655 was -- 51 Eri `A002_Xb95160_X3e24` at
+# 1953.1 kHz, archive ratio 0.993, which is 2.1 per cent from the modelled
+# n = 4 and 14 per cent from n = 2, and whose measured channel covariance
+# (lag-1 0.105 against 0.115 predicted for n = 4 and 0.300 for n = 2) says
+# n = 4 by a second and independent route.  cresp_v401.py already models
+# n = 1, 2 and 4, so the fix is entirely in this consumer: let the archive's
+# own reported resolution choose the NEAREST MODELLED one instead of testing
+# it against a single literal.  The correction runs in the conservative
+# direction (C_resp 1.333 -> 1.057, so the shipped EIRP was overstated by
+# x1.26), touches 0 crossings, and moves no published C_resp macro, because
+# those come from the model and not from the window list.
+_FWN = {int(n): float(v) for n, v in _CR['fwhm_by_n'].items()}
+_RHON = {int(n): np.array(v) for n, v in _CR['rho_by_n'].items()}
+for r in GOOD:
+    r['fs_ratio'] = fs_ratio(r)
+    # an unknown ratio still falls back on ALMA's default, the larger
+    # correction; the assert below records that none of them is unknown
+    r['n_avg'] = (1 if r['fs_ratio'] is None
+                  else min(_FWN, key=lambda n: abs(r['fs_ratio'] - _FWN[n])))
+    r['han_avg'] = r['n_avg'] != 1
+    if r['n_avg'] == 1:
+        hb, hw, hm = HAN_BEST, HAN_WORST, HAN_MED
+    elif r['n_avg'] == N_AVG:
+        hb, hw, hm = HAN_AVG_BEST, HAN_AVG_WORST, HAN_AVG_MED
+    else:
+        _rn = _RHON[r['n_avg']]
+        hb, hw, hm = float(_rn.max()), float(_rn.min()), float(np.median(_rn))
+    r['eirp_han_c'] = r['eirp'] / hb            # channel-centred tone
+    r['eirp_han_w'] = r['eirp'] / hw            # boundary-straddling tone
+    r['han_fac'] = 1.0 / hm                     # the factor P_eff = fac P_trig
+    r['eirp_eff'] = r['eirp'] * r['han_fac']
+# The Band 9/10 windows restored in v3.60 belong to two execution blocks that
+# are not in the archive-metadata snapshot, so their effective resolution is
+# unknown and they take the documented fallback above: ALMA's default, the
+# larger of the two response corrections. Every other window has a measured
+# ratio, which is what this records.
+_noratio = [r for r in GOOD if not r['fs_ratio']]
+# v3.80: the metadata snapshot was re-harvested for all 482 blocks of the
+# completed sweep (archive_meta_v381.json), resolving 132 through obscore's
+# asdm_uid and 248 through their member OUS, whose spectral setup is the
+# same. A window can still lack a ratio if its own frequency range falls
+# outside the reported support, so record the number rather than asserting
+# a band: an assertion that names Bands 9-10 was true of one catalogue and
+# would have to be rewritten for every later one.
+M('NNoArchResBands',
+  ','.join(str(b) for b in sorted({r['band_x'] for r in _noratio})) or 'none')
+M('NNoArchRes', '%d' % len(_noratio))
+NHAN_AVG = sum(1 for r in GOOD if r['han_avg'])
+
+# ---- v4.01: the fifth and strongest validation of the response model, which
+# can only be done here because this is the only place that knows which
+# windows the survey used.  The archive reports an effective spectral
+# resolution for each window; across all of them the reported ratio to the
+# channel spacing takes just two values, and cresp_v401.py must reproduce BOTH
+# from the correlator window alone -- the unaveraged population from the Hann
+# taper, the averaged one from the same taper followed by averaging by N_AVG.
+# Nothing in the model was fitted to these numbers.
+_seen = {}
+for r in GOOD:
+    if r['fs_ratio'] is not None:
+        _seen.setdefault(round(r['fs_ratio'], 2), 0)
+        _seen[round(r['fs_ratio'], 2)] += 1
+_dom = sorted(_seen.items(), key=lambda kv: -kv[1])[:2]
+assert sum(v for _, v in _dom) >= 0.99 * sum(_seen.values()), (
+    'the archive no longer reports two dominant effective-resolution ratios: '
+    '%s' % _seen)
+_r_hi, _r_lo = max(k for k, _ in _dom), min(k for k, _ in _dom)
+assert abs(_CR['fwhm']['hann'] - _r_hi) / _r_hi < 0.01, (
+    'the response model predicts an effective resolution of %.3f channel '
+    'spacings for the unaveraged windows, the archive reports %.3f'
+    % (_CR['fwhm']['hann'], _r_hi))
+assert abs(_CR['fwhm']['averaged'] - _r_lo) / _r_lo < 0.01, (
+    'the response model predicts %.3f delivered channel spacings for the '
+    'channel-averaged windows, the archive reports %.3f; the averaging factor '
+    'is not %d' % (_CR['fwhm']['averaged'], _r_lo, N_AVG))
+# quote the archive's own values, not the bin keys they were grouped by: the
+# text claims the model reproduces them, so a rounded key would understate the
+# agreement it is claiming
+_vals_hi = [r['fs_ratio'] for r in GOOD
+            if r['fs_ratio'] is not None and round(r['fs_ratio'], 2) == _r_hi]
+_vals_lo = [r['fs_ratio'] for r in GOOD
+            if r['fs_ratio'] is not None and round(r['fs_ratio'], 2) == _r_lo]
+M('HanArchHi', '%.3f' % st.median(_vals_hi))
+M('HanArchLo', '%.3f' % st.median(_vals_lo))
+M('HanArchNHi', '%d' % len(_vals_hi))
+M('HanArchNLo', '%d' % len(_vals_lo))
+
+# ---- v4.06 (D18): the tripwire the two checks above CANNOT be.  The "two
+# dominant ratios" assertion allows 1 per cent of the windows to be anything at
+# all (1/1655 = 0.06 per cent), and the two FWHM assertions only test the two
+# most populous ratios -- so neither can see a single window averaged by a
+# third factor.  These two do, and they are driven in BOTH directions by
+# selftest_v406.py: they fail on the shipped `!= 2.0` keying, naming 51 Eri,
+# and pass on the nearest-modelled key adopted above.
+_KEYTOL = 0.03
+_far = [r for r in GOOD if r['fs_ratio'] is not None
+        and min(abs(r['fs_ratio'] - v) for v in _FWN.values())
+        > _KEYTOL * r['fs_ratio']]
+assert not _far, (
+    '%d window(s) report an archive effective resolution matching no modelled '
+    'averaging factor %s: %s' % (len(_far), sorted(_FWN),
+                                 sorted({round(r['fs_ratio'], 3) for r in _far})))
+_nearest = lambda r: min(_FWN, key=lambda n: abs(r['fs_ratio'] - _FWN[n]))
+_mis = [r for r in GOOD if r['fs_ratio'] is not None
+        and _nearest(r) != r['n_avg']]
+assert not _mis, (
+    'the response model is keyed to the wrong averaging factor for %d '
+    'window(s): %s' % (len(_mis), [(r['star_name'], r['eb'],
+                                    '%.1f kHz' % (r['chanw'] / 1e3),
+                                    'archive %.3f' % r['fs_ratio'],
+                                    'modelled n=%d' % _nearest(r),
+                                    'keyed n=%d' % r['n_avg']) for r in _mis]))
+# The population split, by averaging factor rather than by a boolean, so a
+# third state is visible in the typeset paper and not only in this file.
+_NBYN = {n: sum(1 for r in GOOD if r['n_avg'] == n) for n in sorted(_FWN)}
+M('HanNByN', ', '.join('$n=%d$: %d' % (n, _NBYN[n]) for n in sorted(_NBYN)
+                       if _NBYN[n]))
+M('HanNFour', '%d' % _NBYN.get(4, 0))
+M('HanFwhmFour', '%.4f' % _FWN[4])
+_r4 = _RHON[4]
+M('HanFacFourMed', '%.2f' % (1.0 / float(np.median(_r4))))
+M('HanFacFourLo', '%.2f' % (1.0 / float(_r4.max())))
+M('HanFacFourHi', '%.2f' % (1.0 / float(_r4.min())))
+
+# ---------------------------------- D. Class A / Class B sensitivity, split --
+def sci(x, sf=2):
+    e = int(math.floor(math.log10(abs(float(x)))))
+    m = float(x) / 10 ** e
+    return r'%.*f\times10^{%d}' % (sf - 1, m, e)
+
+
+for tag, cls in (('A', 'fine'), ('B', 'coarse')):
+    sel = [r for r in GOOD if r['res_x'] == cls]
+    e = sorted(r['eirp'] for r in sel)
+    ch = sorted(r['chanw'] for r in sel)
+    M('EirpMin' + tag, sci(e[0]))
+    M('EirpMax' + tag, sci(e[-1]))
+    M('EirpMed' + tag, sci(st.median(e)))
+    # Referee A18: give the spectral-response-corrected range beside the
+    # nominal one.  The envelope runs from the shallowest window under the
+    # channel-centred correction to the deepest under the
+    # boundary-straddling one, the widest honest reading of the cost.
+    # Referee E1: each window now carries its OWN correction, so these are
+    # order statistics of the corrected values and not the nominal extremes
+    # rescaled by one blanket factor.
+    _hc = sorted(r['eirp_han_c'] for r in sel)
+    _hw = sorted(r['eirp_han_w'] for r in sel)
+    M('EirpHanMed' + tag, sci(st.median(_hw)))
+    M('EirpHanMin' + tag, sci(_hc[0]))
+    M('EirpHanMax' + tag, sci(_hw[-1]))
+    M('ChanLo' + tag, ('%.1f' % (ch[0] / 1e3)) if cls == 'fine' else ('%.3f' % (ch[0] / 1e6)))
+    M('ChanHi' + tag, ('%.0f' % (ch[-1] / 1e3)) if cls == 'fine' else ('%.2f' % (ch[-1] / 1e6)))
+    M('NWin' + tag, '%d' % len(sel))
+    M('ChanMed' + tag, ('%.0f' % (st.median(ch) / 1e3)) if cls == 'fine'
+      else ('%.3f' % (st.median(ch) / 1e6)))
+M('PctCoarse', '%.0f' % (100.0 * sum(1 for r in GOOD if r['res_x'] == 'coarse') / len(GOOD)))
+M('AsymExpectPct', '%.1f' % (100.0 * NSRC / (NSRC + N_PROBE)))
+M('PctFine', '%.0f' % (100.0 * sum(1 for r in GOOD if r['res_x'] == 'fine') / len(GOOD)))
+
+# eta_drift / eta_smear / a_max per window (referee A11), for the catalogue
+for r in GOOD:
+    fmid = 0.5 * (r['flo'] + r['fhi']) * 1e9
+    r['eta_drift'] = r['drift_max'] * r['onsrc'] / r['chanw']
+    r['a_max'] = C_MS * r['drift_max'] / fmid
+    tint = r['onsrc'] / r['n_int'] if r['n_int'] else None
+    if tint:
+        dl = r['drift_max'] * tint / r['chanw']
+        r['eta_smear'] = (math.sin(math.pi * dl / 2) / (math.pi * dl / 2)) if dl > 0 else 1.0
+    else:
+        r['eta_smear'] = None
+_ea = sorted(r['eta_drift'] for r in GOOD if r['res_x'] == 'fine')
+_eb2 = sorted(r['eta_drift'] for r in GOOD if r['res_x'] == 'coarse')
+M('EtaAltOneNow', '%d' % sum(1 for x in _ea if x < 1.0))
+M('EtaBgeOneNow', '%d' % sum(1 for x in _eb2 if x >= 1.0))
+# v3.62 (referee 1, point 5): the paper quoted a WINDOW-SPECIFIC response
+# correction but released no column carrying the physically limiting power,
+# and the smearing loss was reported only as a worst case.  P_eff,total =
+# P_trig * C_Hanning * C_smear, per window, is now a catalogue column.
+for r in GOOD:
+    _cs = 1.0 / r['eta_smear'] if r.get('eta_smear') else 1.0
+    r['eirp_eff_total'] = r['eirp'] * r['han_fac'] * _cs
+    r['c_total'] = r['han_fac'] * _cs
+M('AmaxMin', '%.1f' % min(r['a_max'] for r in GOOD))
+M('AmaxMax', '%.1f' % max(r['a_max'] for r in GOOD))
+
+# ------------------------------------- E. system-denominator recomputations --
+BYSYS = collections.defaultdict(list)
+for r in GOOD:
+    BYSYS[sysn(r['star_name'])].append(r)
+_deep = {s: min(r['eirp'] for r in rs) for s, rs in BYSYS.items()}
+_deepf = {s: min([r['eirp'] for r in rs if r['res_x'] == 'fine'] or [float('inf')])
+          for s, rs in BYSYS.items()}
+# The three worked detectability cases of the Discussion, recomputed with the
+# definition stated in the text: the number of systems whose deepest threshold,
+# in the class that case is about, lies at or below the case power.  The lost
+# round-6 generator's published values (1, 2, 8, 24) are reproduced exactly, so
+# the definition is recovered rather than replaced; none of them moves when
+# HD 139084B stops being counted twice.
+_deepc = {s: min([r['eirp'] for r in rs if r['res_x'] == 'coarse'] or [float('inf')])
+          for s, rs in BYSYS.items()}
+_CASEI, _CASEII, _CASEIII = 1.62e13, 8.0e13, 2.0e14
+M('CaseDetCoarseNow', '%d' % sum(1 for v in _deepc.values() if v <= _CASEI))
+M('CaseDetCoarseTwoNow', '%d' % sum(1 for v in _deepc.values() if v <= 2 * _CASEI))
+M('CaseDetFineNow', '%d' % sum(1 for v in _deepf.values() if v <= _CASEII))
+M('CaseDetDwellNow', '%d' % sum(1 for v in _deep.values() if v <= _CASEIII))
+# v3.80: these four counts are the paper's detectability cases, and the
+# assertion existed to prove that a definition recovered from a lost
+# generator reproduced its published values (1, 2, 8, 24). It has served
+# that purpose; on the completed sweep the counts necessarily grow, because
+# more systems now have coverage deep enough to reach each case power. The
+# check becomes monotonicity -- the enlarged survey may never detect FEWER
+# systems at a fixed power than the subset did -- which is the property that
+# would actually reveal a mistake.
+_CASECOUNTS = (sum(1 for v in _deepc.values() if v <= _CASEI),
+               sum(1 for v in _deepc.values() if v <= 2 * _CASEI),
+               sum(1 for v in _deepf.values() if v <= _CASEII),
+               sum(1 for v in _deep.values() if v <= _CASEIII))
+assert all(a >= b for a, b in zip(_CASECOUNTS, (1, 2, 8, 24))), _CASECOUNTS
+M('NSysInTwentyNow', '%d' % len({sysn(r['star_name']) for r in GOOD if r['dist_pc'] <= 20.0}))
+M('NStarBelowAreciboNow', '%d' % sum(1 for v in _deep.values() if v < AREC_W))
+
+# Referee E1: the three statements the abstract and the conclusions make on the
+# EFFECTIVE threshold, recomputed with the window-specific factor.  Moving the
+# correction from blanket to per-window must not move any of them; if it ever
+# does, the abstract is wrong and this build must stop rather than print it.
+_deep_eff = {s: min(r['eirp_eff'] for r in rs) for s, rs in BYSYS.items()}
+_neff_arec = sum(1 for v in _deep_eff.values() if v <= AREC_W)
+_neff_twice = sum(1 for v in _deep_eff.values() if v <= 2 * AREC_W)
+# v3.80: on the completed sweep the count at twice Arecibo-class moves
+# 1 -> 2 while the count AT Arecibo-class stays at zero, which is the
+# statement the abstract and the conclusions actually make. Emit both as
+# macros so the text cannot quote one while the build computes the other,
+# and keep the guard as the invariant that matters: no system reaches
+# Arecibo-class effective power.
+M('NEffArecibo', '%d' % _neff_arec)
+M('NEffTwiceArecibo', '%d' % _neff_twice)
+M('DeepestEffSci', sci(min(_deep_eff.values())))
+assert _neff_arec == 0, _neff_arec
+
+# --------------------------------------------- F. machine-readable catalogue --
+# v4.05 (DECISIONS_R8 D4).  The catalogue now carries THREE disposition
+# columns, because the survey's published dispositions were assigned BY HAND
+# from the evidence cited in Table 5 and were never computed from the line
+# mask in any frame.  Earlier versions of this paper implied a computation
+# that did not happen.
+#
+#   disposition_computed  the frozen 15-transition mask (CAT_OLD) evaluated
+#                         TOPOCENTRICALLY -- the list and the frame the search
+#                         actually ran -- at the survey's own +-50 km/s
+#                         half-width, for ALL 56 crossings and with no rank
+#                         gate.  Computed here; values fall where they fall.
+#   disposition_hand      the authors' evidence-based label, keyed on
+#                         (star, execution block, lower window edge).
+#   disposition           unchanged: the hand label GATED on the rank screen,
+#                         which is what every earlier release carried and what
+#                         Data Availability says is verbatim from Table 5.
+#
+# ★ The old key was (star, band), AND (star, band) IS NOT A KEY.  beta Pic
+# band 6 holds seven crossings in two different basebands: five on CO(2-1) at
+# -12 to -29 km/s, and two 11 GHz away at 241.553 GHz, which are 3,793 and
+# 3,898 km/s from the nearest masked transition (CS(5-4)).  Applied to every
+# crossing of the pairs it names -- which is what the literal literally
+# asserts -- the old map labels those two "circumstellar CO".  The rank screen
+# happened to hide it; one ctrl_max fluctuation and the catalogue would have
+# shipped it, and nothing in the build would have complained.  Assertion A2
+# below is driven against the old map and MUST find those two.
+DISPOSITION_HAND_OLDKEY = {
+    ('bet Pic', 3): 'circumstellar CO',
+    ('bet Pic', 6): 'circumstellar CO',
+    ('HD 48370', 6): 'foreground CO',
+    # Retired in v3.46 on the second-epoch test of Sec. 5.3, which executes the
+    # retire criterion pinned before that block was searched.  Data Availability
+    # states that this column is verbatim from Table 5, so the two move together.
+    ('CP-72 2713', 7): 'unattributed; absent in epoch 2',
+    # 61 Vir was absent from this map, so the catalogue carried a blank
+    # disposition for one of the twelve flagged windows while Table 5
+    # printed "unattributed" for it from a fallback. Data Availability says
+    # the column is verbatim from that table, so the two must agree.
+    ('61 Vir', 7): 'unattributed',
+}
+# The same five judgements, keyed on the window they were actually made about:
+# (star, execution block, lower window edge in GHz to 1 kHz).  Twelve entries,
+# one per rank-screened window, because that is the population the authors
+# dispositioned.  Every string is verbatim from the old map -- this is a
+# re-keying, not a re-judgement -- and the assertions below require that it
+# reproduce the shipped column exactly.
+DISPOSITION_HAND = {
+    ('bet Pic', 'A002_Xf4df6f_Xc7', 114.830886): 'circumstellar CO',
+    ('bet Pic', 'A002_Xf5d76d_X32f1', 114.829247): 'circumstellar CO',
+    ('bet Pic', 'A002_Xf5d76d_Xcc5', 114.829220): 'circumstellar CO',
+    ('bet Pic', 'A002_Xf5d76d_Xe19', 114.829193): 'circumstellar CO',
+    ('bet Pic', 'A002_Xf5d76d_Xeb8', 114.829173): 'circumstellar CO',
+    ('bet Pic', 'A002_X6f1341_X1484', 230.083798): 'circumstellar CO',
+    ('bet Pic', 'A002_Xa7a216_X23e4', 230.111734): 'circumstellar CO',
+    ('bet Pic', 'A002_Xd9668b_X3a90', 230.489410): 'circumstellar CO',
+    ('bet Pic', 'A002_Xd9668b_Xa9df', 230.489384): 'circumstellar CO',
+    ('HD 48370', 'A002_Xc26103_X155a', 230.500443): 'foreground CO',
+    ('CP-72 2713', 'A002_Xff0235_X4a6d', 344.252656): 'unattributed; absent in epoch 2',
+    ('61 Vir', 'A002_Xc079b5_X82f', 344.872405): 'unattributed',
+}
+# Which hand strings assert a molecular identification, as opposed to
+# declaring the event unidentified.  Used by assertion A2.
+HAND_NAMES_MOLECULE = {'circumstellar CO': 'CO', 'foreground CO': 'CO'}
+# The mask half-width the survey froze.  Not re-chosen here.
+MASK_HALF_KMS = 50.0
+
+
+def _mask_key(nl):
+    """The frozen mask's key for a nearest_line string as the search spells it.
+
+    The search writes the SPECIES for H2CO where the mask keys on the
+    transition; normalising on the unique transition of that species is the
+    v4.04 fix and is shared by the catalogue writer and the computed
+    disposition so the two cannot disagree."""
+    if nl in CAT_OLD:
+        return nl
+    c = [k for k in CAT_OLD if k.split('(')[0] == nl]
+    return c[0] if len(c) == 1 else None
+
+
+def computed_disposition(nl, off_mhz):
+    """The disposition the FROZEN MASK supports, for one crossing.
+
+    Topocentric, +-50 km/s, 15 transitions.  It says only what the mask
+    knows: it cannot tell beta Pic's circumstellar CO from HD 48370's
+    foreground CO, and that judgement therefore stays in the hand column
+    with its evidence.  Returns (string, attributed, line, dv_kms)."""
+    k = _mask_key(nl) if nl else None
+    if k is None or off_mhz is None:
+        return ('not evaluable', False, '', None)
+    dv = C_KMS * (off_mhz * 1e-3) / CAT_OLD[k]
+    if abs(dv) <= MASK_HALF_KMS:
+        return ('attributed: %s at %+.1f km/s (topocentric, frozen '
+                '%d-line mask)' % (k, dv, len(CAT_OLD)), True, k, dv)
+    return ('unattributed', False, k, dv)
+
+
+def A1_attributed_must_carry_disposition(recs, dispo_key):
+    """A crossing the frozen mask attributes must carry a disposition.
+
+    Returns offenders rather than raising, so the same check can be shown
+    FAILING on what earlier versions shipped and PASSING on what this one
+    does."""
+    return [(r['star'], r['eb'], r['band'], r['cline'], round(r['cdv'], 1))
+            for r in recs if r['cattr'] and not r[dispo_key]]
+
+
+def A2_disposition_must_match_mask(recs, dispo_key):
+    """A disposition that names a molecule must agree with the mask."""
+    bad = []
+    for r in recs:
+        mol = HAND_NAMES_MOLECULE.get(r[dispo_key])
+        if mol is None:
+            continue
+        if not r['cattr'] or not r['cline'].startswith(mol):
+            bad.append((r['star'], r['eb'], r['band'], r[dispo_key],
+                        r['cline'], round(r['cdv'], 1)))
+    return bad
+
+# The archive directory names that the frozen export inherits star_name from
+# were sanitised upstream, which stripped the sign out of four designations and
+# left them unresolvable (referee 1, C5).  Repaired here rather than in the
+# export, which is frozen.  Each replacement is confirmed against the row's own
+# catalogue distance: LSR J1835+3259 at 5.69 pc, BD+05 1668 (Luyten's Star) at
+# 3.79 pc, PM J03433+1958 at 20.76 pc, WD 0407-179 at 34.11 pc.  Runs of
+# whitespace are collapsed for the same reason.  Designations carrying a
+# trailing Gaia DR3 or source-table identifier, or a SIMBAD "NAME"/"V star"
+# prefix, are left as the export has them; Data Availability says so.
+# NAME_REPAIR, ALIAS and released_name now live in star_alias.py (v3.85).
+
+
+# The measured Class-A recovery curve, shared with v358_inject.py so that the
+# two generators cannot drift apart (and so that this early generator does not
+# have to read a macro a later one writes).
+# v4.00 (R2-M2, R1-4): the completeness columns now come from the
+# END-TO-END measurement, per resolution class. The superseded campaign
+# injected into retained spectra after the baseline step and never passed
+# through the 512-control rank, so its P_90 was a completeness for a
+# statistic the survey does not use.
+#
+# THE MULTIPLIERS APPLY TO THE NOMINAL TRIGGER, never to eirp_eff_total,
+# which already carries C_resp C_smear. Applying a measured end-to-end
+# ratio to a response-corrected power counts the response twice.
+from sel_curve import TRIG as SEL_TRIG, SEL as SEL_SEL, SEL_CI as SEL_CI
+
+
+def _selcls(r):
+    """The measured curve is published per resolution class, and the two
+    classes really do differ: the gate costs Class A a factor 1.9 and
+    Class B a factor 1.1, because a coarse channel's control ensemble is
+    far less contaminated by the injected source."""
+    return 'fine' if r['res_x'] == 'fine' else 'coarse'
+# v3.85 (referee 1, point 16): the radius-corrected statistic that defines
+# the candidate list has to be IN the released file, or the file cannot
+# reproduce the result. Same arithmetic as localnorm_all_v385.py, shared.
+from localnorm_core import local_rank as _local_rank, FLOOR as _RANK_FLOOR
+
+_LRANK = {}
+def _lrank(r):
+    k = id(r)
+    if k not in _LRANK:
+        _LRANK[k] = _local_rank(r['star_snr'], r.get('ctrl_all'))
+    return _LRANK[k]
+
+FLAGKEY = {(r['star_name'], r['band_x']) for r in FLAG}
+
+# ------------------------------------ v4.06 (DECISIONS_R8 D16): the per-window
+# realised noise scale and effective cell count, published as catalogue columns.
+#
+# WHY THE CATALOGUE AND NOT ONLY THE PROSE.  The survey triggers on a flat
+# 5 sigma.  That is a threshold, not a false-alarm rate: the number of
+# independent (channel, drift) cells searched in a window runs from ~1e2 to
+# ~7e6 across this catalogue, so the same 5 sigma buys wildly different
+# protection window by window.  A reader cannot recompute the protection for a
+# window without N_ind, and cannot check the null's scale without s_A and s_B,
+# so both are shipped per window.  trigunif_v406.py (round 95) owns the prose.
+#
+# Provenance: r8inputs/scale_v406.jsonl, 3005 of the 3027 retained products
+# measured by referee_r8/sens (two independent estimators of the same scale --
+# route A from the zero-drift inverse-variance stack over 8 control positions,
+# route B from the released 512-position search maxima -- each calibrated
+# against matched-shape Gaussian Monte Carlo of the window's own published
+# sigma map).  Nothing here is fitted to the crossings.
+_SCALE_RAW = [json.loads(_l) for _l in open('r8inputs/scale_v406.jsonl')]
+# The join is (execution block, star peak statistic).  The block comes from the
+# product directory name; the statistic identifies the window within the block
+# to 1e-3, which matters because 282 product keys hold more than one extraction
+# of the same window.  ★ A window measured by more than one extraction gets the
+# MEDIAN of its measurements, not the first: the extractions are independent
+# repeats of the same window and s_A/s_B agree between them to a few per cent,
+# but N_ind is a Monte-Carlo fit and can differ by up to a factor 1.8, so "the
+# first one in the file" would make a published column depend on file order.
+_SC_BY = {}
+for _d in _SCALE_RAW:
+    _bn = _d['base'].rstrip('/').rsplit('/', 1)[-1]
+    _SC_BY.setdefault(_bn.rsplit('_spw', 1)[0], []).append(_d)
+# Tolerance match, not a rounded key: the catalogue writes star_snr to 4 dp
+# while the measurement carries the float32 statistic, so a rounded key would
+# drop pairs that straddle a rounding boundary.  1e-3 is the tolerance the
+# independent verification used, so the coverage figure is comparable with it.
+_SC_TOL = 1e-3
+_SC_NDUP = 0
+for r in GOOD:
+    _c = [_d for _d in _SC_BY.get(r['eb'], [])
+          if abs(_d['star_peak'] - r['star_snr']) < _SC_TOL]
+    if not _c:
+        r['scale'] = None
+        continue
+    if len(_c) > 1:
+        _SC_NDUP += 1
+    r['scale'] = {k: float(np.median([d[k] for d in _c]))
+                  for k in ('sA', 'sB', 'n_cells', 'n_ind')}
+    r['scale']['n_extract'] = len(_c)
+    # ★ A DIFFERENT ambiguity from re-extraction, and it must be counted
+    # separately: if the matching products come from more than one SPECTRAL
+    # WINDOW of the block, the key has not identified the window at all, it has
+    # only identified two windows whose peak statistics agree to 1e-3.  Two
+    # Proxima Cen TDM rows do that.  Their reduced shapes are identical, so the
+    # median is harmless -- but a key that cannot distinguish two windows must
+    # say so rather than pick one.
+    r['scale']['n_spw'] = len({_d['base'].rsplit('_spw', 1)[-1] for _d in _c})
+_SC_COV = [r for r in GOOD if r['scale'] is not None]
+_SC_UNCOV = [r for r in GOOD if r['scale'] is None]
+# ★ The blank is a KNOWN and BOUNDED coverage gap, not a silent one: the
+# uncovered windows are those whose retained products could not be reduced
+# (22 lack a _srcspec.npz) or whose extraction is absent from the measured set.
+# Assert the gap is small and that it is reported, so the fifth instance of
+# this project's blank-field bug family cannot happen here: a consumer that
+# treats a blank as a zero would get 0 cells and infinite protection.
+assert len(_SC_UNCOV) < 0.05 * len(GOOD), (
+    '%d of %d catalogue windows have no measured noise scale; the columns '
+    'would ship mostly blank' % (len(_SC_UNCOV), len(GOOD)))
+M('TuNCatCov', '%d' % len(_SC_COV))
+M('TuNCatUncov', '%d' % len(_SC_UNCOV))
+M('TuNCatDupExtract', '%d' % _SC_NDUP)
+_SC_AMBIG = [r for r in _SC_COV if r['scale']['n_spw'] > 1]
+M('TuNCatAmbig', '%d' % len(_SC_AMBIG))
+assert len(_SC_AMBIG) <= 5, (
+    '%d catalogue windows cannot be told apart by (block, star statistic): %s'
+    % (len(_SC_AMBIG), [(r['star_name'], r['eb']) for r in _SC_AMBIG]))
+# The two thresholds a reader should compare the flat 5 sigma with, computed
+# per window and shipped beside it.  alpha is fixed ONCE, here, and the
+# survey-wide value is the per-window alpha that gives 1 per cent over the
+# whole released catalogue -- not a second free choice.
+TU_ALPHA_WIN = 0.01
+TU_ALPHA_SURVEY = 1.0 - (1.0 - TU_ALPHA_WIN) ** (1.0 / len(GOOD))
+
+
+from scipy.stats import norm as _SP_NORM
+_NORM_PPF = _SP_NORM.ppf
+
+
+def _tu_thresh(sc, alpha):
+    """s_w Phi^-1((1-alpha)^(1/N_ind)): the statistic a window must reach for a
+    false-alarm probability alpha, given its own realised scale and its own
+    effective number of independent cells."""
+    s = 0.5 * (sc['sA'] + sc['sB'])
+    return s * _NORM_PPF((1.0 - alpha) ** (1.0 / sc['n_ind']))
+
+
+for r in GOOD:
+    if r['scale'] is None:
+        r['t_win'] = r['t_survey'] = None
+    else:
+        r['t_win'] = _tu_thresh(r['scale'], TU_ALPHA_WIN)
+        r['t_survey'] = _tu_thresh(r['scale'], TU_ALPHA_SURVEY)
+COLS = ['star_name', 'system_id', 'band', 'eb', 'dist_pc', 'flo_GHz', 'fhi_GHz',
+        'chanw_Hz', 'bandwidth_Hz', 'on_source_s', 'n_int', 'rms_mJy', 'smin_mJy',
+        'eirp_nominal_W', 'eirp_hanning_centred_W', 'eirp_hanning_worst_W',
+        # v3.62: P_eff,total = P_trig x C_Hanning x C_smear, the power to set
+        # against a transmitter for THIS window (referee 1, point 5)
+        'eirp_eff_total_W', 'c_response_smear',
+        # v4.06 (D18): the online channel-averaging factor the response
+        # correction was keyed to.  It was never published, so a reader could
+        # not check which response a window received -- and the code that
+        # chose it was a boolean, which is how one window came to be averaged
+        # by 4 and corrected as though averaged by 2.  Publishing the integer
+        # makes the third state visible.
+        'n_chan_avg',
+        # v3.85 (referee 2, point 2): the number a reader should actually
+        # quote for this window -- the power recovered nine times in ten --
+        # together with the window-to-window bracket measured by the
+        # stratified injection campaign.  A single survey-wide P_90 hides a
+        # factor of about two of spread, so every row carries its own.
+        'eirp_p90_W', 'eirp_p90_sel_W', 'eirp_p90_lo_W', 'eirp_p90_hi_W',
+        'drift_max_Hz_s', 'a_max_m_s2',
+        'n_drift_trials', 'eta_drift', 'eta_smear', 'resolution_class',
+        'search_class', 'star_snr', 'ctrl_max_snr',
+        # v3.61 (referee 2, M1): the SUPERSEDED region-max statistic for every
+        # window, not only the seven it flagged, so the sensitivity of the
+        # result to the choice of statistic can be checked by anyone.
+        'star_snr_regionmax', 'stage1_flag_regionmax',
+        'n_ctrl', 'n_ctrl_ge_star',
+        'p_rank_addone',
+        # v3.85 (referee 1, point 16 and referee 2, point 1): the
+        # radius-corrected rank and the flag it implies. This is the
+        # statistic the candidate list is defined on, so it must be here.
+        'p_rank_local', 'stage1_flag_local',
+        'f_cross_GHz', 'nearest_line', 'line_offset_MHz',
+        'line_offset_kms', 'ring_centre', 'theta_pb_arcsec', 'r_in_arcsec',
+        'r_out_arcsec', 'n_control', 'ring_seed', 'crossing', 'stage1_flag',
+        # v4.05 (D4): `disposition` is unchanged -- the hand label gated on the
+        # rank screen, verbatim from Table 5.  The two new columns separate
+        # what the mask COMPUTES for every crossing from what the authors
+        # ASSIGNED from the evidence, so a reader can never again mistake one
+        # for the other.
+        'disposition', 'disposition_computed', 'disposition_hand',
+        # v4.06 (D16): the realised per-window noise scale by two independent
+        # routes, the number of (channel, drift) cells searched, the fitted
+        # number of INDEPENDENT such cells, and the statistic this window would
+        # have to reach for a 1 per cent false alarm in itself and for a
+        # 1 per cent false alarm over the whole catalogue.  Blank for the
+        # windows whose retained products could not be re-reduced.
+        'scale_route_a', 'scale_route_b', 'n_search_cells', 'n_ind_cells',
+        'trigger_1pct_window', 'trigger_1pct_survey',
+        # v4.08 (D29): the release paired an APPARENT rms with a
+        # primary-beam-CORRECTED S_min and shipped no column for the response,
+        # so on 91 windows smin != 5 rms and nothing in the deposit explained
+        # the difference (x1.81 at worst).  These two columns close the chain:
+        # smin_mJy == 5 * rms_mJy / pb_atten, exactly, on every window whose
+        # product survives.  pb_atten is the response the pipeline APPLIED --
+        # its Gaussian at 1.22 lambda/D -- not the better blocked-Airy value,
+        # because it has to reproduce what was published; the <=7 per cent
+        # model difference is stated in the text instead.  Note that
+        # theta_pb_arcsec CANNOT be used to recompute pb_atten: it is
+        # 1.22 lambda / 12 m for every window, including the 1054 ACA rows.
+        'pb_offset_arcsec', 'pb_atten']
+# v4.05: the records the disposition assertions are run over, collected as the
+# catalogue is written so they cannot drift from what ships.
+DISPO_RECS = []
+# v4.08 (D29): frozen input built by referee_r8/pbaudit/pbcat_v408.py, which
+# resolves each released window to its product BY POSITION (the (eb, window)
+# pair is not a key: two Gaia components share a block and their rms agree to
+# the five decimals printed here) and recovers Wolf 28's missing offset from
+# that product's own stored geometry.  Keyed on released_name(star), eb and the
+# window to 1 MHz.
+PBCAT = json.load(open('pbcat_v408.json'))
+PB_FTOL = 0.002          # GHz; windows are ~2 GHz wide
+
+
+def _pb(r):
+    lo, hi = min(r['flo'], r['fhi']), max(r['flo'], r['fhi'])
+    v = [e for e in PBCAT.get('%s|%s' % (released_name(r['star_name']), r['eb']), ())
+         if abs(e['flo'] - lo) < PB_FTOL and abs(e['fhi'] - hi) < PB_FTOL]
+    assert len(v) == 1, ('%d primary-beam entries for %s %s %.4f-%.4f GHz'
+                         % (len(v), r['star_name'], r['eb'], lo, hi))
+    return v[0]
+
+
+for _r in GOOD:
+    _r['pb'] = _pb(_r)
+with open('per_target_results_v3.99.csv', 'w', newline='') as fh:
+    w = csv.writer(fh)
+    w.writerow(COLS)
+    for r in sorted(GOOD, key=lambda r: (r['dist_pc'], r['star_name'], r['band_x'],
+                                         min(r['flo'], r['fhi']))):
+        key = (r['star_name'], r['band_x'])
+        nl, off, offk = r['line'], r['line_off'], None
+        # v4.04: the search writes the SPECIES for H2CO ('H2CO') where the
+        # mask keys on the transition ('H2CO(3-2)'), so `nl in CAT_OLD`
+        # failed and 20 released rows carried an offset in MHz with a blank
+        # km/s column.  Normalise the key on the unique transition of that
+        # species rather than hard-coding the pair, and assert below that
+        # every MHz offset now yields a velocity.
+        _key = nl
+        if off is not None and _key not in CAT_OLD:
+            _cands = [k for k in CAT_OLD if k.split('(')[0] == nl]
+            if len(_cands) == 1:
+                _key = _cands[0]
+        if off is not None and _key in CAT_OLD:
+            offk = C_KMS * (off * 1e-3) / CAT_OLD[_key]
+        # v4.05 (D4): compute the disposition from the frozen mask for EVERY
+        # crossing, and keep the hand judgement in its own column keyed on the
+        # window it was made about.
+        _flo6 = round(min(r['flo'], r['fhi']), 6)
+        _hk = (r['star_name'], r['eb'], _flo6)
+        # The gate on the shipped column, verbatim: star at or above the
+        # trigger AND above its own control maximum.  Not the stage-1 flag,
+        # which additionally requires membership of FLAGKEY.
+        _rank = (r['star_snr'] >= 5.0 and r['star_snr'] > r['cmax'])
+        _dispo_hand = DISPOSITION_HAND.get(_hk, '')
+        _dispo_hand_old = DISPOSITION_HAND_OLDKEY.get(key, '')
+        _dispo_shipped = _dispo_hand if _rank else ''
+        _dispo_computed = ''
+        if r['star_snr'] >= 5.0:
+            _cs, _cattr, _cline, _cdv = computed_disposition(nl, off)
+            _dispo_computed = _cs
+            DISPO_RECS.append(dict(
+                star=r['star_name'], eb=r['eb'], band=r['band_x'],
+                flo=_flo6, cattr=_cattr, cline=_cline,
+                cdv=_cdv if _cdv is not None else 0.0, rank=_rank,
+                dshipped=_dispo_shipped, dhand=_dispo_hand,
+                dhand_old=_dispo_hand_old, dcomputed=_dispo_computed))
+        assert off is None or offk is not None, (
+            'nearest_line %r has an offset in MHz but no velocity: the '
+            'catalogue key does not match the frozen mask' % (nl,))
+        w.writerow([
+            released_name(r['star_name']), sysn(r['star_name']), r['band_x'], r['eb'],
+            '%.4f' % r['dist_pc'], '%.6f' % min(r['flo'], r['fhi']),
+            '%.6f' % max(r['flo'], r['fhi']), '%.4f' % r['chanw'],
+            '%.1f' % (abs(r['fhi'] - r['flo']) * 1e9), '%.2f' % r['onsrc'],
+            r['n_int'] if r['n_int'] else '',
+            '%.5f' % r['rms'],
+            '%.5f' % (r['smin'] * 1e3), '%.6e' % r['eirp'],
+            '%.6e' % r['eirp_han_c'], '%.6e' % r['eirp_han_w'],
+            '%.6e' % r['eirp_eff_total'], '%.4f' % r['c_total'],
+            '%d' % r['n_avg'],
+            '%.6e' % (r['eirp'] * SEL_TRIG[_selcls(r)]),
+            '%.6e' % (r['eirp'] * SEL_SEL[_selcls(r)]),
+            '%.6e' % (r['eirp'] * SEL_CI[_selcls(r)][0]),
+            '%.6e' % (r['eirp'] * SEL_CI[_selcls(r)][1]),
+            '%.4f' % r['drift_max'], '%.3f' % r['a_max'], r['ndrift'],
+            '%.4g' % r['eta_drift'],
+            ('%.4f' % r['eta_smear']) if r['eta_smear'] is not None else '',
+            r['res_x'], 'A' if r['res_x'] == 'fine' else 'B',
+            '%.4f' % r['star_snr'], '%.4f' % r['cmax'],
+            ('%.4f' % r['src_snr']) if r.get('src_snr') is not None else '',
+            ('True' if (r.get('src_snr') is not None and r['src_snr'] >= 5.0
+                        and r['src_snr'] > r['cmax']) else 'False'),
+            r['n_ctrl'],
+            r['n_ge_star'] if r['n_ge_star'] is not None else
+            sum(1 for c in r['ctrl_all'] if c >= r['star_snr']),
+            '%.6f' % ((1 + sum(1 for c in r['ctrl_all'] if c >= r['star_snr']))
+                      / (len(r['ctrl_all']) + 1)),
+            ('%.6f' % _lrank(r)) if _lrank(r) is not None else '',
+            ('True' if (_lrank(r) is not None and _lrank(r) <= _RANK_FLOOR
+                        and r['star_snr'] >= 5.0) else 'False'),
+            ('%.6f' % r['f_cross']) if r['f_cross'] else '',
+            nl or '', ('%.4f' % off) if off is not None else '',
+            ('%.3f' % offk) if offk is not None else '',
+            'star', '%.3f' % r['theta_pb'], '%.3f' % r['r_in'], '%.3f' % r['r_out'],
+            N_PROBE, RING_SEED,
+            'True' if r['star_snr'] >= 5.0 else 'False',
+            'True' if key in FLAGKEY and r['star_snr'] >= 5.0 and r['star_snr'] > r['cmax'] else 'False',
+            _dispo_shipped, _dispo_computed, _dispo_hand,
+            # v4.06 (D16).  Blank, not zero, where unmeasured.
+            ('%.4f' % r['scale']['sA']) if r['scale'] else '',
+            ('%.4f' % r['scale']['sB']) if r['scale'] else '',
+            ('%d' % round(r['scale']['n_cells'])) if r['scale'] else '',
+            ('%.4g' % r['scale']['n_ind']) if r['scale'] else '',
+            ('%.4f' % r['t_win']) if r['t_win'] is not None else '',
+            ('%.4f' % r['t_survey']) if r['t_survey'] is not None else '',
+            '%.4f' % r['pb']['pb_offset_arcsec'],
+            '%.6f' % r['pb']['pb_atten'],
+        ])
+# Every flagged window must carry a disposition, or the catalogue and the
+# flagged-window table disagree on how many events the survey dispositioned.
+_flagged_keys = {(r['star_name'], r['band_x']) for r in GOOD
+                 if (r['star_name'], r['band_x']) in FLAGKEY
+                 and r['star_snr'] >= 5.0 and r['star_snr'] > r['cmax']}
+_undispo = sorted(k for k in _flagged_keys
+                  if not DISPOSITION_HAND_OLDKEY.get(k))
+assert not _undispo, ('flagged windows with no disposition: %s -- add them to '
+                      'DISPOSITION_HAND rather than letting the catalogue ship '
+                      'a blank' % _undispo)
+
+# ------------------------------------------ v4.05 (D4): the disposition gate --
+# A1 and A2 are the pair that would have caught the hand-written literal.  Each
+# is run three times, and the OUTCOME of each run is asserted -- so the checks
+# are demonstrated failing on what earlier versions shipped, not merely
+# declared to pass on what this one does.
+_A1_shipped = A1_attributed_must_carry_disposition(DISPO_RECS, 'dshipped')
+_A1_hand_old = A1_attributed_must_carry_disposition(DISPO_RECS, 'dhand_old')
+_A1_computed = A1_attributed_must_carry_disposition(DISPO_RECS, 'dcomputed')
+_A2_shipped = A2_disposition_must_match_mask(DISPO_RECS, 'dshipped')
+_A2_hand_old = A2_disposition_must_match_mask(DISPO_RECS, 'dhand_old')
+_A2_computed = A2_disposition_must_match_mask(DISPO_RECS, 'dcomputed')
+# What must be TRUE of what this version ships: the computed column disposes of
+# every crossing the mask attributes, and never names a molecule the mask does
+# not support.  If either fails, the computed rule and the mask have diverged.
+assert not _A1_computed, _A1_computed
+assert not _A2_computed, _A2_computed
+# What must be FALSE of the published column, and is the finding: the survey
+# only ever dispositioned the rank-screened windows, so six crossings that the
+# frozen mask attributes shipped with a blank disposition.  If this ever stops
+# firing, either the catalogue changed or A1 has stopped working; both need a
+# human, so fail the build rather than silently dropping the claim.
+assert len(_A1_shipped) == 6, (
+    'A1 on the shipped disposition column found %d offenders, not the 6 this '
+    'version reports: %s' % (len(_A1_shipped), _A1_shipped))
+# And the reason the key was changed: applied to every crossing of the
+# (star, band) pairs it names, the old map calls two 241.553 GHz crossings
+# 3,793 and 3,898 km/s from CS(5-4) "circumstellar CO".  A2 must find exactly
+# those two.  A reversal would mean beta Pic's second baseband has changed and
+# the re-key needs re-deriving.
+assert len(_A2_hand_old) == 2, (
+    'A2 on the ungated (star, band) map found %d offenders, not 2: %s'
+    % (len(_A2_hand_old), _A2_hand_old))
+assert all(abs(o[5]) > 3000 for o in _A2_hand_old), _A2_hand_old
+# The re-keyed hand map is a RE-KEYING and not a re-judgement: gated on the
+# rank screen it must reproduce, row for row, what the OLD (star, band) map
+# gated the same way produced -- which is the column every earlier release
+# carried.
+# ★ It must be compared against the OLD map and not against `dshipped`, which
+# is computed FROM the re-keyed map: that comparison is a tautology and
+# selftest_v405 caught it passing when a key was deliberately moved by 1 kHz.
+_rekey_bad = [(r['star'], r['eb'], r['dhand'], r['dhand_old']) for r in DISPO_RECS
+              if r['rank'] and r['dhand'] != r['dhand_old']]
+assert not _rekey_bad, ('the re-keyed hand map does not reproduce the shipped '
+                        'column: %s' % _rekey_bad)
+# The old key is not a key, stated as a measurement: how many crossings does a
+# (star, band) pair name beyond the window the judgement was made about?
+_oldkey_reach = sum(1 for r in DISPO_RECS
+                    if r['dhand_old'] and not r['dhand'])
+assert _oldkey_reach > 0, (
+    'the (star, band) map reaches no crossing it was not written about, so '
+    'there is nothing to report and this assertion is vacuous')
+M('DispoNAttrComputed', '%d' % sum(1 for r in DISPO_RECS if r['cattr']))
+M('DispoNAttrRanked', '%d' % sum(1 for r in DISPO_RECS
+                                 if r['cattr'] and r['rank']))
+M('DispoNAttrBlank', '%d' % len(_A1_shipped))
+M('DispoNHandEntries', '%d' % len(DISPOSITION_HAND))
+M('DispoNHandOldEntries', '%d' % len(DISPOSITION_HAND_OLDKEY))
+M('DispoNShipped', '%d' % sum(1 for r in DISPO_RECS if r['dshipped']))
+M('DispoOldKeyReach', '%d' % _oldkey_reach)
+M('DispoNMislabel', '%d' % len(_A2_hand_old))
+M('DispoMislabelMinKms', '%.0f' % min(abs(o[5]) for o in _A2_hand_old))
+M('DispoMislabelMaxKms', '%.0f' % max(abs(o[5]) for o in _A2_hand_old))
+M('DispoHalfKms', '%.0f' % MASK_HALF_KMS)
+print('dispositions (D4): %d of %d crossings attributed by the frozen '
+      '%d-line mask topocentrically, %d of them rank-screened; the shipped '
+      'column carries %d strings from %d hand judgements and leaves %d '
+      'mask-attributed crossings blank (A1 fires)'
+      % (sum(1 for r in DISPO_RECS if r['cattr']), len(DISPO_RECS),
+         len(CAT_OLD), sum(1 for r in DISPO_RECS if r['cattr'] and r['rank']),
+         sum(1 for r in DISPO_RECS if r['dshipped']),
+         len(DISPOSITION_HAND_OLDKEY), len(_A1_shipped)))
+for o in _A1_shipped:
+    print('    blank but attributed: %-22s %-22s B%s  %-10s %+7.1f km/s'
+          % (o[0][:22], o[1], o[2], o[3], o[4]))
+for o in _A2_hand_old:
+    print('    (star, band) would mislabel: %-10s %-20s B%s  "%s" but the '
+          'mask says %s at %+.0f km/s' % (o[0], o[1], o[2], o[3], o[4], o[5]))
+# v3.85 (P15): the released designation is what a reader counts, so count
+# it there, and assert that no two systems share a distance -- the check
+# that catches a star entered twice under two name strings.
+NSTARS_RELEASED = len({released_name(r['star_name']) for r in GOOD})
+_bysys = {}
+for r in GOOD:
+    _bysys.setdefault(round(r['dist_pc'], 4), set()).add(sysn(r['star_name']))
+# Two different stars can genuinely sit at the same rounded distance
+# (Sirius B and G 272-61A are both at 2.67 pc), so the identity is at the
+# precision the export carries, where a collision means one object twice.
+_clash = {d: v for d, v in _bysys.items() if len(v) > 1}
+assert not _clash, 'two systems share a distance: %s' % _clash
+M('NStarsReleased', '%d' % NSTARS_RELEASED)
+
+M('NCatRows', '%d' % len(GOOD))
+M('NCatCols', '%d' % len(COLS))
+# v4.08 (D29): the count is pinned with == so adding a column is a deliberate
+# act.  Driven both ways in referee_r8/pbaudit/pbcols_v408.py.
+assert len(COLS) == 62, 'catalogue column count moved to %d' % len(COLS)
+assert 'pb_atten' in COLS and 'pb_offset_arcsec' in COLS
+# A header list and a value list written in different orders silently
+# shifts columns; that happened once here and the only symptom was a flag
+# count of zero. Re-read the file and assert the two statistics agree with
+# the generators that own them.
+with open('per_target_results_v3.99.csv') as _fh:
+    _back = list(csv.DictReader(_fh))
+assert len(_back) == len(GOOD)
+assert all(r['stage1_flag'] in ('True', 'False') for r in _back), 'stage1_flag shifted'
+assert all(r['stage1_flag_local'] in ('True', 'False') for r in _back), \
+    'stage1_flag_local shifted'
+_nl = sum(1 for r in _back if r['stage1_flag_local'] == 'True')
+_ng = sum(1 for r in _back if r['stage1_flag'] == 'True')
+assert _nl > 0 and _ng > 0, 'a flag column is all False -- columns shifted'
+M('NCatFlagGlobal', '%d' % _ng)
+M('NCatFlagLocal', '%d' % _nl)
+
+# ----------------------------------------------------------------- output ---
+with open('survey_numbers_round12.tex', 'w') as f:
+    f.write('%% GENERATED by v342_calc.py -- do not hand-edit.\n')
+    f.write('\n'.join(MAC) + '\n')
+
+json.dump({'mask_report': MASKREPORT, 'new_coincidences': NEWCOINC,
+           'band_ring': BANDROWS,
+           'rho': {k: (v[0], v[1]) for k, v in RHO.items()}},
+          open('v342_stats.json', 'w'), indent=1, default=str)
+
+print('control ring: seed %d, %d probes, annulus %.2f-%.2f theta_PB, n_src=%d'
+      % (RING_SEED, N_PROBE, RING_IN, RING_OUT, NSRC))
+print('  theta_PB %.1f-%.1f", r_in %.1f-%.1f", r_out %.1f-%.1f"'
+      % (min(r['theta_pb'] for r in GOOD), max(r['theta_pb'] for r in GOOD),
+         min(r['r_in'] for r in GOOD), max(r['r_in'] for r in GOOD),
+         min(r['r_out'] for r in GOOD), max(r['r_out'] for r in GOOD)))
+print('  PB response %.2f (in) to %.2f (out), area-weighted mean %.2f'
+      % (GAIN_IN, GAIN_OUT, GAIN_MEAN))
+for b, fm, pb, ri, ro, n in BANDROWS:
+    print('   B%d  nu=%7.1f  theta=%5.1f  r=%5.1f-%5.1f  (%d windows)' % (b, fm, pb, ri, ro, n))
+if RHO:
+    print('  ordering check: rho(radius, ctrl) = %.2f (p=%.1e) in the CO-filled '
+          'window; median rho = %.3f over %d quiet windows'
+          % (RHO['CO'][0], RHO['CO'][1], RHO['null'][0], RHO['null'][1]))
+print('\nrepaired mask: %d transitions of %d species (was %d of %d); worst rounding %.2f km/s'
+      % (len(CAT), NSPEC_NEW, len(CAT_OLD), NSPEC_OLD, _worst))
+print('retrospective re-application to the four flagged windows:')
+for m in MASKREPORT:
+    print('  %-12s B%d  f=%.6f  nearest(new)=%-10s dnu=%+9.2f MHz  '
+          'v_topo=%+8.1f  v_stellar=%+8.1f [%s]  v_LSR=%+8.1f [%s]'
+          % (m['star'], m['band'], m['f'], m['new'], m['dnu_new'], m['dv_topo'],
+             (m['dv_stellar'] if m['dv_stellar'] is not None else float('nan')),
+             'MASKED' if m['masked_stellar'] else 'not masked',
+             m['dv_lsr'], 'MASKED' if m['masked_lsr'] else 'not masked'))
+print('\ncrossings whose nearest transition changes under the repaired catalogue: %d'
+      % len(NEWCOINC))
+for x in NEWCOINC:
+    print('   %-22s B%d %.6f  %s (%+.0f km/s) -> %s (%+.0f km/s)'
+          % (x[0], x[1], x[2], x[3], x[4], x[5], x[6]))
+print('\nHanning peak-channel fraction: best %.2f, median %.2f, worst %.2f '
+      '(threshold optimistic by x%.2f to x%.1f)'
+      % (HAN_BEST, HAN_MED, HAN_WORST, 1 / HAN_BEST, 1 / HAN_WORST))
+print('  window-specific (E1): %d windows at ratio %.3f keep x%.2f; %d with '
+      'online averaging x%d take x%.2f (envelope x%.2f-x%.2f)'
+      % (_NBYN[1], HAN_RATIO, 1 / HAN_MED, _NBYN[N_AVG], N_AVG,
+         1 / HAN_AVG_MED, 1 / HAN_AVG_BEST, 1 / HAN_AVG_WORST))
+# v4.06 (D18): print the whole split, so a third averaging factor is visible in
+# the build log instead of being folded into the n = 2 population.
+print('  averaging factors keyed from the archive resolution (D18): %s'
+      % ', '.join('n=%d: %d win' % (n, _NBYN[n]) for n in sorted(_NBYN)))
+print('  P_eff per system: deepest %.3g W, %d systems <= %.1g W, %d <= twice it'
+      % (min(_deep_eff.values()), _neff_arec, AREC_W, _neff_twice))
+print('  primary beam (E2): %d windows on %.0f m, %d on %.0f m; annulus gain on '
+      'the %.2f lambda/D FWHM convention %.3f (in) to %.3f (out), median'
+      % (sum(1 for r in GOOD if dish_m(r) == DISH), DISH,
+         sum(1 for r in GOOD if dish_m(r) == DISH_ACA), DISH_ACA,
+         PB_COEF_FWHM, st.median(RGIN_TRUE), st.median(RGOUT_TRUE)))
+print('catalogue -> per_target_results_v3.99.csv (%d rows, %d columns)'
+      % (len(GOOD), len(COLS)))
+print('macros -> survey_numbers_round12.tex (%d)' % len(MAC))

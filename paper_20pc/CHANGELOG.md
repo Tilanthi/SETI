@@ -6,6 +6,87 @@ Bump the **minor** number (1.00 → 1.01) for content edits/additions within
 the same broad draft stage; bump the **major** number (1.x → 2.00) once
 Paper II's actual results/discussion/conclusions sections are added.
 
+## v4.08 (2026-09-27)
+
+**The primary-beam audit lands as a result rather than a repair; the multi-epoch stack is
+corrected twice over; the AU Mic absolute-scale check is settled and softened.** 54 pp,
+main text 19.82 pp (cap deliberately broken; length deferred, D24).
+
+- **The primary-beam alarm was wrong, and the release is sound.** The star-to-phase-centre
+  offset is computed for every measurement set and the response applied exactly once:
+  `smin = 5 rms / A` closes on 1651 of 1651 released windows to 8.7e-5, and the detection
+  statistic, the control ranks and the attribution are ratios formed inside a single window
+  in which A cancels identically. Correcting the threshold alone is the COMPLETE correction;
+  no crossing, no rank and no disposition moves. Offsets: median 0.089", p99 7.43", max
+  8.13"; A from 0.999984 median to 0.5522, below 0.9 on 34 windows, none below 0.5.
+- **NCatCols 60 -> 62**: `pb_offset_arcsec` and `pb_atten` added, with 0 of 1651 rows
+  changing in any pre-existing column. They matter for a concrete reason: `theta_pb_arcsec`
+  is the pipeline's 1.22 lambda/D at D = 12 m for EVERY window, including all 1054 ACA rows,
+  so before these columns a reader could not have recomputed the attenuation at all.
+- **New gate `pbgate_v408.py`**, keyed on the position with no name comparison anywhere
+  (position identifies the star, rms identifies the extraction). Seven clauses, each
+  demonstrated firing, plus a regression against the catalogue without the new columns on
+  which the first clause fires on all 1651 rows. New App. A.1 reports it as a result.
+- **The stack now carries the primary beam** (the per-epoch division is a matched filter
+  across epochs, not a rescaling) **and is keyed on the canonical stellar identity**,
+  resolved by the release's own map, a live SIMBAD TAP query on the Gaia DR3 identifiers and
+  measured parallax -- never a string guess, and with eight pinned component pairs required
+  to stay separate. StkNStar 78 -> 69, StkNGroup 394 -> 368, hours 1454 -> 1484, median
+  deepening 1.39 -> 1.46, Proxima 5.15e12 -> 4.50e12 W over 66 blocks, HD 207129 better by
+  a factor 2.5 in flux. Survivors unchanged: the two beta Pic CO groups.
+- **Three published stack figures got WORSE and each is stated with its reason.** Proxima's
+  gain 3.97 -> 3.19 and N_eff 13.9 -> 7.9 WHILE its limit deepens, because the merge brought
+  in a much deeper single epoch (6.45 -> 4.53 mJy) and the ratio is taken against that. Beta
+  Pic's two-band agreement degrades 0.14 -> 0.46 km/s and CO(1-0)'s Z falls 56.3 -> 45.3 as
+  it gains an eighth epoch whose peak sits half a channel away. The control false-alarm rate
+  0.19 -> 0.21 per cent, still inside the 1 per cent ceiling.
+- **A macro-synonym defect in v4.07 found while fixing that**: the outcome sentence printed
+  `\StkRegCrossKms` -- the REGISTRATION standard's cross-width, 0.087 -- for the survivors'
+  two-band agreement, which was 0.14. One macro, two quantities, and the printed value was
+  neither. Now computed as `\StkBpCrossKms` and asserted below one channel of the coarser
+  line.
+- **One measured limit got worse and it is the honest direction.** 61 Vir 0.8095 -> 0.8717
+  mJy while its predicted depth improved, because its 7-epoch stack had madZ = 0.740 -- it
+  was under-estimating its own noise by 26 per cent. Generalised in the paper: madZ is a MAD
+  over a median of 127 channels, so every stacked limit carries a +-7 per cent realisation
+  term, measured here rather than assumed.
+- **The merge would have silently deleted nine macros.** Proxima was selected on the typed
+  literal `r['skey'] == 'proximacen'`, the search-time directory name; renaming the key
+  empties the selection and nine \StkProx* macros vanish, invisible to the generator's own
+  "0 empty, 0 nan" gate because an ABSENT macro is neither. Eighth instance of this family.
+  Both new generators now pin their macro count with `==`.
+- **AU Mic (Glenn's Letter carries no error; it is cited for method only).** The parallax
+  loss model has its FIRST on-sky validation: at 0.42 beams it predicts 0.717 and we measure
+  0.78 +- 0.03, i.e. it over-predicts the loss by 22 per cent. D7 softened accordingly --
+  geometry explains 45 per cent of the MacGregor Band 6 deficit, not 58, and the residual
+  absolute-scale term grows to 10-11 per cent (the typed bound of 10 was too small and is now
+  computed). A better check replaces it: the January configuration is geometry-free and our
+  extractor reproduces an independent reduction of the SAME visibilities to 0.994 +- 0.014 on
+  a 29.4 mJy Band 3 point source, bounding extractor scale alone at ~1 per cent.
+- **The injection campaign's blindness to the attenuation is EXACTLY zero bias**, proved: the
+  trigger flux is the apparent 5 rms on 40 of 40 units and the injector adds an unattenuated
+  amplitude, so A cancels identically from the completeness ratio, and D14's 5.70 -> 2.88 is
+  attenuation-free. No systematic is carried. Two real limitations are stated: the campaign
+  can never falsify the beam model, and 75 released windows lie beyond any injected offset
+  (to A = 0.552) so their completeness is interpolated.
+- **P90 refreshed to the finished campaign, and its unit count now closes.** 56 planned = 51
+  with a record + 5 truncated at rung 3 of 10 to release disk (scheduling, not data quality,
+  and named in the deposit); 51 = 47 scored + 1 search-base failure + 3 that failed their own
+  20x positive control. Those 3 were unaccounted for in v4.06 and v4.07. RsevNUnitScored
+  40 -> 47, RsevNTone 6107 -> 7064; RsevPNinetyA is UNCHANGED at 2.88.
+- **The provenance gap is disclosed, not reconciled**: four HD 285968 rows whose published
+  rms no surviving product reproduces, +0.88 to +1.32 per cent in the conservative direction,
+  with T* differing 3.9 per cent on a row that is a crossing. Two independent routes select
+  exactly those four. Declared gap 14 = 4 + 10 no-product windows. The attenuation columns
+  are unaffected.
+- Gates: latex 0/0/0/0, roundcollide 91/91, macrosyn 0, consistency 0, prosenum 0, macroleak
+  0, intsweep 81/81, audit_numbers 49 PASS / 0 FAIL, reproducer 22/0, selftests 20 / 46 / 60
+  / 65 / 29 / **33 (new selftest_v408)**, pbgate drive 0 PASS with drives 1-8 all firing,
+  clean regeneration **137/137 byte-identical**.
+- **Not in this version, deliberately**: the 57th crossing (HD 139084 B), the 44-block
+  re-extraction and its harvest, the CP-72 2713 refit, and the tau Ceti Letter's enabling
+  block. Those are v4.09, after the host campaign runs.
+
 ## v4.07 (2026-09-27)
 
 **The census name collision, and the star-blind overwrite behind it. One counted
