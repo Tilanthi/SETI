@@ -632,11 +632,19 @@ number in it is generated.
 4. `canon_names_v381.py` still reads the deleted `v3.72/` and cannot run; it is not in
    `make_all.sh`. `make_fig_sample.py` is still an orphan writing a figure nothing includes
    (8 such dead figures; `audit_numbers` warns).
-5. ★ **`push_paper.py` now HAS the retry loop** for the `POST /git/trees` 422 that needed a
-   manual retry on v3.93, v4.00, v4.04 and v4.07 (5 attempts, backoff, on 422/5xx, retried
-   inside `call()` so a partial push cannot be left behind). Added in this cycle's first
-   pass; this version's push is the first to have it. The earlier note that it was still
-   missing was wrong.
+5. ★★ **`push_paper.py`'s retry loop existed and did not cover the failure that actually
+   happened.** The first pass added retries on `HTTPError` (422/5xx) and `URLError`, which is
+   the `POST /git/trees` 422 that needed a manual retry on v3.93, v4.00, v4.04 and v4.07.
+   **This version's push then died after 237 of 722 blobs on a bare `TimeoutError` raised out
+   of `ssl.read()`** — a read timeout on an *established* TLS connection is neither of those,
+   and it sailed straight through. Now fixed at the same place: `TimeoutError` and `OSError`
+   are retried, the socket timeout is 600 s, and successful blob uploads are **cached on disk
+   by the file's own git object id** (computed locally and asserted equal to the sha GitHub
+   returns), so a retry **resumes** rather than re-uploading 237 blobs to find out whether the
+   238th works. The retried push then needed 3 attempts on `POST /git/trees` (HTTP 500),
+   handled automatically. **Fourth instance in this project of a validation or a safety net
+   that was not sensitive to the error it existed to catch** — and `push_paper.py` is not
+   inside the version directory, so this note is the only record of it.
 6. `\StkSminMed` (3.49 → **3.28 mJy**), called "the material one" in `PB_FIXES.md` §1, is
    **retired as unreferenced** — the paper quotes EIRP medians, not flux medians, in that
    subsection. It moves in the generator and is visible in `stack_v408.py`'s own output; it
