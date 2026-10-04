@@ -1,0 +1,21 @@
+[A002_X107376c_X4442] multi-field MS: field 0 phase centre offset from star = 0.04"
+[A002_X107376c_X4442] multi-field MS: field 1 phase centre offset from star = 22693.64"
+[A002_X107376c_X4442] multi-field MS: selecting field 0 (closest to star, 0.04")
+[A002_X107376c_X4442] 632610 rows, 639 integrations, 128 channels, chanwidth 15625.00 kHz, 341.9453-343.9296 GHz, primary beam FWHM 18.33"
+[A002_X107376c_X4442] phase centre  RA=281.362597 Dec=-64.872236
+[A002_X107376c_X4442] HD172555 (e2e injection test) at RA=281.362576 Dec=-64.872232 -> offset l=-0.033" m=+0.014"
+[A002_X107376c_X4442] WEIGHT_SPECTRUM present: False
+[A002_X107376c_X4442]   50/639 integrations (8 s)
+[A002_X107376c_X4442]   100/639 integrations (9 s)
+[A002_X107376c_X4442]   150/639 integrations (9 s)
+[A002_X107376c_X4442]   200/639 integrations (10 s)
+[A002_X107376c_X4442]   250/639 integrations (11 s)
+[A002_X107376c_X4442]   300/639 integrations (11 s)
+[A002_X107376c_X4442]   350/639 integrations (12 s)
+[A002_X107376c_X4442]   400/639 integrations (13 s)
+[A002_X107376c_X4442]   450/639 integrations (13 s)
+[A002_X107376c_X4442]   500/639 integrations (14 s)
+[A002_X107376c_X4442]   550/639 integrations (15 s)
+[A002_X107376c_X4442]   600/639 integrations (15 s)
+[A002_X107376c_X4442] EXTRACT COMPLETE in 24 s -> /data/SETI/injection_e2e/products/A002_X107376c_X4442_base_waterfall.npz (185 MB)
+[A002_X107376c_X4442] retained star-only raw spectrum for future ML/anomaly-detection follow-up -> /data/SETI/injection_e2e/products/A002_X107376c_X4442_base_srcspec.npz (2.6 MB, vs 185 MB for the full multi-control waterfall that will shortly be deleted)

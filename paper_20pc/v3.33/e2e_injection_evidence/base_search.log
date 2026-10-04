@@ -1,0 +1,68 @@
+[A002_X107376c_X4442] waterfall (639, 647, 128), 15625.00 kHz channels
+[A002_X107376c_X4442] 639 usable integrations, 118 channels after edge trim, 512 usable control probes
+[A002_X107376c_X4442] median empirical rms  = 8.753 mJy/beam per 15625.0 kHz channel per integration
+[A002_X107376c_X4442] median theoretical rms= 7.784 mJy/beam
+[A002_X107376c_X4442] drift max not overridden -- using frequency-scaled default 4115.2 Hz/s at 342.94 GHz
+[A002_X107376c_X4442] time span 4414 s -> 6 drift trials at 1770.0 Hz/s spacing
+[A002_X107376c_X4442]   drift 1/6 (5 s)
+[A002_X107376c_X4442] FAR: star peak 3.215; 104/512 controls >= star -> p=0.2047 (floor 0.001949); region max 4.067 vs matched null -> p=0.9154
+{
+ "eb": "A002_X107376c_X4442",
+ "n_int": 639,
+ "n_chan": 118,
+ "chanwidth_Hz": 15625000.0,
+ "freq_lo_GHz": 342.02338288585383,
+ "freq_hi_GHz": 343.85150788585383,
+ "bandwidth_Hz": 1843750000.0,
+ "time_span_s": 4413.7919998168945,
+ "on_source_s": 3864.6716051101685,
+ "n_drift_trials": 6,
+ "drift_step_Hz_s": 1770.0199738284225,
+ "drift_max_Hz_s": 4115.249344630246,
+ "rms_per_int_mJy": 8.752906799316406,
+ "rms_theory_per_int_mJy": 7.783882141113281,
+ "rms_combined_mJy": 0.38886131369508803,
+ "S_min_Jy": 0.0019443270598859458,
+ "S_min_measured_Jy": 0.0019443065684754401,
+ "primary_beam_offset_arcsec": 0.035741205540354495,
+ "primary_beam_fwhm_arcsec": 18.331985807898956,
+ "primary_beam_atten": 0.9999894609240758,
+ "primary_beam_corrected": true,
+ "distance_pc": 28.789014639652546,
+ "distance_pc_err": 0.0008288073639221286,
+ "EIRP_min_W": 3012686227182139.5,
+ "snr_threshold": 5.0,
+ "star_peak_snr": 3.215296983718872,
+ "star_peak_chan": 115,
+ "star_peak_freq_GHz": 343.82025788585383,
+ "star_peak_drift_Hz_s": 4734.8505859375,
+ "nearest_known_line": "CO(3-2)",
+ "nearest_known_line_offset_MHz": -1975.7421141461577,
+ "likely_line_contamination": false,
+ "n_hits_above_threshold": 0,
+ "hit_freqs_GHz": [],
+ "src_region_peak_snr": 4.066597938537598,
+ "control_peak_snr": 4.2967352867126465,
+ "n_control_ge_star": 104,
+ "p_star_empirical": 0.2046783625730994,
+ "p_value_floor": 0.001949317738791423,
+ "p_region_matched_null": 0.9154042297885105,
+ "p_region_matched_saturated": false,
+ "n_src_positions": 135,
+ "control_snr_percentiles_50_90_99_100": [
+  2.8434834480285645,
+  3.4377087593078617,
+  4.13291368484497,
+  4.2967352867126465
+ ],
+ "n_control": 512,
+ "n_control_dropped": 0,
+ "detection": false,
+ "credible_technosignature_candidate": false,
+ "legacy_src_gt_ctrl_flag": false,
+ "runtime_s": 5.5,
+ "resolution_class": "coarse (>5 MHz, continuum-mode -- weak technosignature constraint)",
+ "alma_band_inferred": 7
+}
+[A002_X107376c_X4442] removed consumed waterfall /data/SETI/injection_e2e/products/A002_X107376c_X4442_base_waterfall.npz (0.19 GB reclaimed)
+[A002_X107376c_X4442] STEP3 COMPLETE in 6 s

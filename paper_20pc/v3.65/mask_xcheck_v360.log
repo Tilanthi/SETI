@@ -1,0 +1,71 @@
+catalogue rows 443 | islands 45 | union 113.855 GHz
+     89.627-   91.362  rows  259  kept  214
+     91.565-   93.862  rows  217  kept  181
+     94.065-   95.862  rows  143  kept  117
+     96.065-   97.799  rows  200  kept  142
+    100.004-  105.862  rows  521  kept  372
+    106.127-  107.862  rows  205  kept  173
+    108.127-  109.862  rows  185  kept  130
+    112.004-  115.752  rows  208  kept  161
+    142.127-  143.862  rows  310  kept  237
+    144.065-  145.799  rows  143  kept  113
+    154.127-  155.862  rows  175  kept  139
+    156.127-  157.862  rows  156  kept  120
+    195.127-  196.862  rows    3  kept    3
+    197.065-  198.799  rows    5  kept    3
+    207.127-  208.862  rows   15  kept   15
+    209.127-  210.862  rows   34  kept   23
+    212.046-  220.638  rows  431  kept  337
+    223.078-  224.922  rows  195  kept  158
+    225.078-  234.935  rows  976  kept  763
+    239.078-  240.922  rows  201  kept  167
+    241.078-  248.386  rows  725  kept  525
+    321.167-  321.274  rows    1  kept    1
+    322.406-  322.514  rows    4  kept    3
+    330.351-  332.225  rows   50  kept   32
+    332.260-  337.409  rows  216  kept  135
+    337.518-  339.346  rows  194  kept  124
+    342.239-  349.409  rows  302  kept  215
+    349.581-  351.409  rows   46  kept   33
+    354.199-  358.737  rows  186  kept  116
+    479.260-  481.168  rows    0  kept    0
+    481.218-  483.063  rows    3  kept    3
+    491.657-  492.577  rows    7  kept    7
+    493.244-  495.126  rows   34  kept   18
+    675.127-  676.862  rows   47  kept   36
+    677.127-  678.862  rows   27  kept   21
+    679.127-  680.862  rows   27  kept   19
+    681.065-  682.799  rows   24  kept   17
+    849.408-  851.134  rows   13  kept    5
+    851.408-  853.134  rows   12  kept    8
+    853.366-  855.092  rows   10  kept    5
+    855.366-  857.092  rows   14  kept    8
+    865.408-  867.134  rows   35  kept   13
+    867.408-  869.134  rows   37  kept   21
+    869.366-  871.092  rows   36  kept   20
+    871.366-  873.092  rows   11  kept    5
+total kept 4958 | distinct carriers 233
+islands: common 33, new 12, dropped 0
+over the 33 v3.51 islands: v3.51 kept 4780, this harvest keeps 4780
+new islands contribute 178 transitions, 21 carriers
+      83  CH3OH vt = 0-2
+      23  Unidentified Transition
+      13  SO2 v = 0
+      12  CH3CH2CN v = 0
+       8  34SO2 v=0
+       7  13CH3OH vt = 0
+       7  HNCO v=0
+       5  CH3OCH3
+       4  CH3OCHO v=0
+       3  CN v = 0
+       2  NO
+       2  H2CO
+       1  34SO
+       1  30SiO v = 0
+       1  C33S v = 0
+       1  HCS+
+       1  33SO
+       1  NH2D
+       1  CH3OD v = 0
+       1  SiO v = 0
+       1  DCN v = 0

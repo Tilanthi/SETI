@@ -1,0 +1,58 @@
+paper v3.32: coarse-channel completeness measured, and the paper's central limitation withdrawn
+
+THE CLAIM THAT IS WITHDRAWN
+Every version since v3.24 stated that a per-channel temporal-median subtraction suppresses
+temporally persistent, frequency-stationary carriers, and that a classical continuous beacon
+therefore lies outside what this survey constrains. That is wrong. The pipeline performs no
+temporal-median subtraction. Its baseline step is a running median along FREQUENCY, 65
+channels, applied per integration -- which by construction cannot remove a feature confined to
+one or two channels, as its own docstring states -- and the de-drift step is an
+inverse-variance-weighted sum over integrations, which accumulates a persistent carrier
+coherently. The withdrawal is stated explicitly in the abstract, the introduction, the boxed
+reading rule, the limitations box, the injection appendix and the future-work list.
+
+MEASURED, TWO INDEPENDENT WAYS
+Dwell-fraction campaign: 3,888 trial-level injections across 12 real windows (six coarse, six
+fine, eleven targets), amplitudes 2-20 sigma per integration, dwell fractions 0.10-1.00, six
+realisations each. Recovery rises monotonically with dwell. Pooling amplitudes at or above 4
+sigma: coarse windows recover 100 per cent of continuous carriers, 100 per cent at dwell 0.25
+and 83 per cent at 0.10; fine windows give 100, 91 and 71 per cent.
+
+End-to-end through the unmodified released pipeline: a zero-drift, always-on tone injected into
+the calibrated visibilities of a coarse Band 7 window at 1, 3 and 10 times the per-integration
+rms returns T_star = 20.5, 65.3 and 217.7, recovered within one channel of the injected
+frequency and flagged as a detection in every case. For 639 integrations the ideal coherent
+gain is sqrt(639) = 25, so 20.5 at the per-integration noise level is essentially the
+theoretical maximum. Nothing is being suppressed.
+
+WHERE THE ORIGINAL "0 OF 500" CAME FROM
+That campaign's frozen recovery criterion required the recovered peak drift to lie within one
+grid step of the injected drift. On a coarse window every in-grid drift is sub-channel over the
+track, so the trial grid is degenerate and the reported peak drift is arbitrary; the clause
+fails even for a 200-sigma detection. A criterion artefact, read for four versions as physical
+suppression.
+
+CONSEQUENCES
+The completeness gap covering 73 per cent of the searched windows -- which both referee rounds
+identified as the survey's single biggest weakness -- is now filled: the coarse-channel
+majority has a measured C(A, f_dwell). The survey does constrain the classical continuous
+narrowband beacon. The genuine coarse-window limitation is narrower and still real: within the
+searched ceiling those windows carry no drift discrimination, though their amplitude
+sensitivity is full. That now heads both the limitations box and the next-release priorities,
+replacing the withdrawn item. Trial-level injection records ship with the release, which also
+answers the referees' standing request for per-injection provenance.
+
+OPERATIONAL NOTE
+While scoping this campaign the live survey was found deadlocked: the disk governor had been
+blocking the driver for hours at 149G free against a 150G floor, because the target being
+processed had accumulated 175G of per-spw split measurement sets in its own products directory.
+The search step reclaims its waterfall intermediate but never reclaimed the split MS. Freeing
+one completed spw's set unblocked the driver immediately, and the reclaim gap is now fixed in
+seti_drift_search_generic.py so it cannot recur. No data were downloaded for the end-to-end
+test: it reused a calibrated 2.2 GB coarse-window MS already on disk, and the test directory
+was reclaimed afterwards.
+
+VERIFICATION
+38 pages, unchanged. 0 undefined references, 0 undefined citations, 0 multiply-defined labels,
+0 LaTeX errors, 0 Type 3 fonts, every referenced label defined, every figure present, every
+citation keyed.
