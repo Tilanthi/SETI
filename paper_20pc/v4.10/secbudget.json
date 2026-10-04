@@ -1,0 +1,409 @@
+{
+ "sections": [
+  {
+   "title": "Introduction",
+   "file": "sections/01_intro.tex:1",
+   "page": 1,
+   "pages": 1.0306125661762553
+  },
+  {
+   "title": "Background",
+   "file": "sections/02_background.tex:1",
+   "page": 2,
+   "pages": 0.8635558554197669
+  },
+  {
+   "title": "Sample selection",
+   "file": "sections/03_sample.tex:1",
+   "page": 3,
+   "pages": 0.7122620279901002
+  },
+  {
+   "title": "Data and methodology",
+   "file": "sections/04_method.tex:1",
+   "page": 3,
+   "pages": 2.4160397118056802
+  },
+  {
+   "title": "Final candidate definition and statistical interpretation",
+   "file": "sections/04_method.tex:249",
+   "page": 6,
+   "pages": 1.9671757671392494
+  },
+  {
+   "title": "Ancillary and validation analyses",
+   "file": "sections/04_method.tex:538",
+   "page": 8,
+   "pages": 0.13138800472854434
+  },
+  {
+   "title": "The experiment in summary",
+   "file": "sections/04_method.tex:556",
+   "page": 8,
+   "pages": 0.19876139539914991
+  },
+  {
+   "title": "Results",
+   "file": "sections/05_results.tex:1",
+   "page": 8,
+   "pages": 0.16929417530718505
+  },
+  {
+   "title": "Barnard's Star and Wolf~359",
+   "file": "sections/05_results.tex:44",
+   "page": 8,
+   "pages": 0.10161717916022943
+  },
+  {
+   "title": "Technosignature search",
+   "file": "sections/05_results.tex:57",
+   "page": 8,
+   "pages": 7.068236477748224
+  },
+  {
+   "title": "A stellar-frame multi-epoch stacked search",
+   "file": "sections/05b_stack.tex:1",
+   "page": 15,
+   "pages": 1.6133266590829887
+  },
+  {
+   "title": "What this experiment excludes, and what it does not",
+   "file": "sections/05c_limits.tex:1",
+   "page": 17,
+   "pages": 2.372069989201933
+  },
+  {
+   "title": "Discussion",
+   "file": "sections/06_discussion.tex:1",
+   "page": 19,
+   "pages": 0.2079805476963085
+  },
+  {
+   "title": "What signals could ALMA archival data actually detect?",
+   "file": "sections/06_discussion.tex:12",
+   "page": 20,
+   "pages": 0.23080492060890317
+  },
+  {
+   "title": "What does the null result mean?",
+   "file": "sections/06_discussion.tex:46",
+   "page": 20,
+   "pages": 0.7295813451895092
+  },
+  {
+   "title": "The two array configurations",
+   "file": "sections/06_discussion.tex:149",
+   "page": 21,
+   "pages": 0.10109109402939989
+  },
+  {
+   "title": "The null result has not been checked against an independent\npipeline",
+   "file": "sections/06_discussion.tex:164",
+   "page": 21,
+   "pages": 0.16932756078109235
+  },
+  {
+   "title": "What this sample can and cannot speak for",
+   "file": "sections/06_discussion.tex:185",
+   "page": 21,
+   "pages": 0.5991238032957078
+  },
+  {
+   "title": "Conclusions",
+   "file": "sections/07_conclusions.tex:1",
+   "page": 21,
+   "pages": 1.656775401146483
+  },
+  {
+   "title": "APPENDIX",
+   "file": "technosignatures_40pc_v4.09.tex:193",
+   "page": 23,
+   "pages": 0.4870676154463524
+  },
+  {
+   "title": "Reproducibility and provenance",
+   "file": "sections/app_A_reproducibility.tex:1",
+   "page": 24,
+   "pages": 0.42343266988288514
+  },
+  {
+   "title": "The primary-beam response, and the two columns that let a reader\nrecompute it",
+   "file": "sections/app_A_reproducibility.tex:93",
+   "page": 24,
+   "pages": 1.8715098258156182
+  },
+  {
+   "title": "Extraction, control geometry and position-correlated\nsystematics",
+   "file": "sections/app_A_reproducibility.tex:257",
+   "page": 26,
+   "pages": 0.829408409754256
+  },
+  {
+   "title": "Statistical units and independence",
+   "file": "sections/app_A_reproducibility.tex:349",
+   "page": 27,
+   "pages": 0.21608239946670507
+  },
+  {
+   "title": "Data-quality exclusions and open items",
+   "file": "sections/app_A_reproducibility.tex:377",
+   "page": 27,
+   "pages": 0.9165998751919895
+  },
+  {
+   "title": "Sample bookkeeping: entry counts, coverage criteria and\npointed versus serendipitous",
+   "file": "sections/app_A_reproducibility.tex:492",
+   "page": 28,
+   "pages": 0.742966819888543
+  },
+  {
+   "title": "The conventional figure of merit",
+   "file": "sections/app_B_figofmerit.tex:1",
+   "page": 29,
+   "pages": 0.6716258141657041
+  },
+  {
+   "title": "The spatial normalisation: evidence and validation",
+   "file": "sections/app_C_spatialnorm.tex:1",
+   "page": 29,
+   "pages": 0.03991591892588822
+  },
+  {
+   "title": "Prospective validation of the radius correction",
+   "file": "sections/app_C_spatialnorm.tex:7",
+   "page": 29,
+   "pages": 0.9052757995552674
+  },
+  {
+   "title": "External checks and the positive control",
+   "file": "sections/app_D_externalchecks.tex:1",
+   "page": 30,
+   "pages": 0.017315756522052462
+  },
+  {
+   "title": "No independent pipeline check",
+   "file": "sections/app_D_externalchecks.tex:4",
+   "page": 30,
+   "pages": 0.13048138457644942
+  },
+  {
+   "title": "An end-to-end check of the absolute flux scale",
+   "file": "sections/app_D_externalchecks.tex:37",
+   "page": 30,
+   "pages": 3.373343693416239
+  },
+  {
+   "title": "Notation",
+   "file": "sections/app_E_notation.tex:1",
+   "page": 34,
+   "pages": 0.009592099710719046
+  },
+  {
+   "title": "Frequency conventions, linewidth reading, and smearing",
+   "file": "sections/app_F_freqconventions.tex:1",
+   "page": 34,
+   "pages": 0.017315756522052462
+  },
+  {
+   "title": "Frequency and velocity reference frames",
+   "file": "sections/app_F_freqconventions.tex:4",
+   "page": 34,
+   "pages": 2.9581237951318844
+  },
+  {
+   "title": "Injection-recovery sensitivity validation",
+   "file": "sections/app_G_injection.tex:1",
+   "page": 37,
+   "pages": 0.01131329903447274
+  },
+  {
+   "title": "Dwell-fraction completeness",
+   "file": "sections/app_G_injection.tex:4",
+   "page": 37,
+   "pages": 0.9559297229000376
+  },
+  {
+   "title": "Amplitude completeness from visibility-domain injections",
+   "file": "sections/app_G_injection.tex:155",
+   "page": 38,
+   "pages": 1.9973457668521104
+  },
+  {
+   "title": "Dwell campaign: end-to-end check, scope and representativeness",
+   "file": "sections/app_G_injection.tex:379",
+   "page": 40,
+   "pages": 0.2747402372604902
+  },
+  {
+   "title": "Per-target results",
+   "file": "sections/app_H_pertarget.tex:1",
+   "page": 40,
+   "pages": 0.4848364409124761
+  },
+  {
+   "title": "The velocity-space line mask",
+   "file": "sections/app_I_linemask.tex:1",
+   "page": 40,
+   "pages": 1.1376809114405053
+  },
+  {
+   "title": "False-alarm accounting",
+   "file": "sections/app_J_falsealarm.tex:1",
+   "page": 42,
+   "pages": 0.21154166711239278
+  },
+  {
+   "title": "What the expectation is conditioned on",
+   "file": "sections/app_J_falsealarm.tex:26",
+   "page": 42,
+   "pages": 0.5075821314328155
+  },
+  {
+   "title": "The control ensemble: its geometry, its calibration and its\nresolution",
+   "file": "sections/app_J_falsealarm.tex:88",
+   "page": 42,
+   "pages": 0.38627280100307765
+  },
+  {
+   "title": "Why no single window in this design can be significant",
+   "file": "sections/app_J_falsealarm.tex:144",
+   "page": 43,
+   "pages": 1.1963518702973535
+  },
+  {
+   "title": "Rank calibration and exchangeability",
+   "file": "sections/app_J_falsealarm.tex:340",
+   "page": 44,
+   "pages": 1.4986234540106353
+  },
+  {
+   "title": "Analysis provenance and robustness checks",
+   "file": "sections/app_K_provenance.tex:1",
+   "page": 45,
+   "pages": 0.01730687132346317
+  },
+  {
+   "title": "The $\\beta$~Pictoris frame audit",
+   "file": "sections/app_K_provenance.tex:103",
+   "page": 45,
+   "pages": 1.9469358345794927
+  },
+  {
+   "title": "Audit against a region-maximum statistic",
+   "file": "sections/app_K_provenance.tex:294",
+   "page": 47,
+   "pages": 1.154107829204169
+  },
+  {
+   "title": "Entries excluded from the released catalogue",
+   "file": "sections/app_K_provenance.tex:313",
+   "page": 49,
+   "pages": 0.34275362834562034
+  },
+  {
+   "title": "Validation checks in detail",
+   "file": "sections/app_K_provenance.tex:399",
+   "page": 49,
+   "pages": 2.9525360608863793
+  },
+  {
+   "title": "Additional robustness checks",
+   "file": "sections/app_K_provenance.tex:715",
+   "page": 52,
+   "pages": 1.704568812880812
+  },
+  {
+   "title": "Recommendations for a next-generation ALMA technosignature search",
+   "file": "sections/app_L_recommendations.tex:1",
+   "page": 54,
+   "pages": 0.6489063668711538
+  },
+  {
+   "title": "Sensitivity upgrades measured and declined",
+   "file": "sections/app_L_recommendations.tex:85",
+   "page": 54,
+   "pages": 0.7218669056720595
+  },
+  {
+   "title": "The repaired extraction, the archival tail, and three results\nre-derived on a corrected key",
+   "file": "sections/app_M_repaired.tex:1",
+   "page": 55,
+   "pages": 0.12936818135784905
+  },
+  {
+   "title": "The harvest, and the two checks that fired",
+   "file": "sections/app_M_repaired.tex:13",
+   "page": 55,
+   "pages": 0.16157327862561144
+  },
+  {
+   "title": "A prediction of ours, withdrawn in our own voice",
+   "file": "sections/app_M_repaired.tex:33",
+   "page": 55,
+   "pages": 0.20705576347115745
+  },
+  {
+   "title": "$\\eta$~Crv's crossing now has a recurrence test",
+   "file": "sections/app_M_repaired.tex:58",
+   "page": 55,
+   "pages": 0.3028815833867287
+  },
+  {
+   "title": "The archival tail: two new crossings, neither a candidate",
+   "file": "sections/app_M_repaired.tex:96",
+   "page": 56,
+   "pages": 0.6743815892984543
+  },
+  {
+   "title": "The survey's extent, as a sequence",
+   "file": "sections/app_M_repaired.tex:188",
+   "page": 56,
+   "pages": 0.2232632212282863
+  },
+  {
+   "title": "The block ledger closes, and the gap that remains is not ours",
+   "file": "sections/app_M_repaired.tex:215",
+   "page": 57,
+   "pages": 0.3753004186811142
+  },
+  {
+   "title": "Three results re-derived on a corrected analysis key",
+   "file": "sections/app_M_repaired.tex:262",
+   "page": 57,
+   "pages": 0.9081591564628266
+  },
+  {
+   "title": "Radio-frequency interference",
+   "file": "sections/app_N_rfi.tex:1",
+   "page": 58,
+   "pages": 2.1485054805664343
+  }
+ ],
+ "byfile": {
+  "sections/01_intro.tex": 1.0306125661762553,
+  "sections/02_background.tex": 0.8635558554197669,
+  "sections/03_sample.tex": 0.7122620279901002,
+  "sections/04_method.tex": 4.713364879072624,
+  "sections/05_results.tex": 7.339147832215638,
+  "sections/05b_stack.tex": 1.6133266590829887,
+  "sections/05c_limits.tex": 2.372069989201933,
+  "sections/06_discussion.tex": 2.037909271600921,
+  "sections/07_conclusions.tex": 1.656775401146483,
+  "technosignatures_40pc_v4.09.tex": 0.4870676154463524,
+  "sections/app_A_reproducibility.tex": 4.999999999999997,
+  "sections/app_B_figofmerit.tex": 0.6716258141657041,
+  "sections/app_C_spatialnorm.tex": 0.9451917184811556,
+  "sections/app_D_externalchecks.tex": 3.521140834514741,
+  "sections/app_E_notation.tex": 0.009592099710719046,
+  "sections/app_F_freqconventions.tex": 2.975439551653937,
+  "sections/app_G_injection.tex": 3.2393290260471113,
+  "sections/app_H_pertarget.tex": 0.4848364409124761,
+  "sections/app_I_linemask.tex": 1.1376809114405053,
+  "sections/app_J_falsealarm.tex": 3.800371923856275,
+  "sections/app_K_provenance.tex": 8.118209037219938,
+  "sections/app_L_recommendations.tex": 1.3707732725432131,
+  "sections/app_M_repaired.tex": 2.981983192512028,
+  "sections/app_N_rfi.tex": 2.1485054805664343
+ },
+ "total_pages": 60
+}

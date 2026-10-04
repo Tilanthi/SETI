@@ -1,0 +1,86 @@
+v4.08: referee 2's item 3 REVERSES on measurement; the primary beam as a result; the stack corrected twice; two external flux-scale checks
+
+55 pp, main text 20.23 pp. Gates: pdflatex 0/0/0/0, roundcollide 91/91, macrosyn 0,
+consistency 0, prosenum 0, macroleak 0, intsweep 81/81, audit_numbers 49 PASS / 0 FAIL,
+reproducer 22/0, census_dupcheck C1/C2/C3 pass, pbgate drive 0 PASS with drives 1-8 all
+firing, selftests 20 / 46 / 60 / 65 / 29 / 57, clean regeneration 137/137 byte-identical.
+Full notes in v4.08/BUILD_NOTES_V408.md.
+
+R2-3 REVERSES, and it is the most important change here (D32). The Re/sigma--T* relation is
+now measured over 2,141 recovered Class A tones and it does the opposite of what the paper
+concluded. The two estimators DO track for a real source at the star: the median Re/sigma per
+unit T* stays between 1.06 and 1.17 in all 7 recovered-T* bins over a factor of eight in
+amplitude, so the failure to track across the crossings is evidence about the crossings. At
+the events' own T* bin injected sources give 6.58 +- 1.97 over 283 fits, 0.986 reaching
+Re/sigma >= 4 and 0.977 passing all three clauses -- the power the paper had asserted without
+measuring. Applied to the events the relation does not exclude them: 30 of the 33 unattributed
+fitted crossings in the bin localise, the six deepest per star return +4.86 to +5.26 spanning
+percentiles 9-23, and the rank-flagged one, 61 Vir, sits at the 23rd. "Excluded at
+3.3-6.1 sigma" was not merely unsupported, it was backwards. The superseded-epoch values it
+rested on are not comparable: re-fitted at that epoch the same real sources return a median
+Re/sigma of 1.52 and a 16th percentile of -0.49, and 61 Vir's own superseded value is -0.93 --
+the referee's number, read out of the released ledger's own record of it. Both falsifiers are
+driven, and every transcribed percentile is asserted against the deposit's own 16th percentile
+and against the ledger's Re/sigma.
+
+And the structural reason the test cannot arbitrate authenticity is now stated outright: the
+trigger and the fit are not independent measurements. A noise maximum AT the star has flux at
+the star, so it too returns Re/sigma ~ T* ~ 5; the fit's power lies entirely in the two clauses
+that test displacement, and those reject almost nothing (|Im/sigma| < 3 for 0.992 of injected
+tones there). Nor is a 5 sigma crossing in a Class A window surprising: in the campaign's own
+uninjected passes 11 of 12 Class A windows already contain a CONTROL position reaching T = 5,
+median control maximum 5.99, against 1 of 28 for Class B. The discriminating evidence is the
+rank screen, recurrence and the stellar-frame line mask.
+
+R1-5: the claim that the window-to-window transfer term is the largest systematic in the P90
+budget is WITHDRAWN. It came from the predecessor campaign's x0.48-1.35, measured through the
+rank gate the analysis no longer applies; on the published criterion the 13 Class A windows
+injected directly spread over x0.94-1.09 of their own median, -6/+9 per cent, which makes it
+one of the smallest terms. The budget table's transfer row is now generated from the campaign,
+and the withdrawal is itself asserted. Behind it: \RsevNWinA was the typed literal 403 while
+\NWinA moved to 402 at v4.07 -- unreferenced, so no gate compared them and retire_macros.py
+dropped it before any gate could see it. Now counted from the catalogue and pinned with ==.
+
+The primary-beam audit ships as a RESULT, not a repair (D29). The offset is computed for every
+measurement set and the response applied exactly once; NCatCols 60 -> 62 (pb_offset_arcsec,
+pb_atten) with 0 of 1,651 pre-existing cells changing, because theta_pb_arcsec carries the 12 m
+beam on all 1,054 ACA rows and a reader could not previously have recomputed the attenuation.
+New gate pbgate_v408.py, keyed on position with no name comparison anywhere. And this version's
+own first pass had reported the closure count as 1,651 of 1,651 -- but on 10 rows A was
+back-solved from the release's own 5 sigma / smin, so there the identity closes by
+construction. The paper now gives 1,641 independent rows at 8.7e-5 against 10 arithmetic ones
+at 4.0e-7, with the separation asserted in both directions. Ninth instance of a check that
+cannot fail on part of its own sample.
+
+The stack, corrected twice (D29, D31): the primary-beam term added, then the star keys merged on
+canonical identity. StkNStar 78 -> 69, groups 394 -> 368, hours 1,454 -> 1,484, median deepening
+1.39 -> 1.46, Proxima 5.15e12 -> 4.50e12 W. Three published figures got WORSE and each is stated
+with its reason: Proxima's gain 3.97 -> 3.19 and N_eff 13.9 -> 7.9 while its limit deepens; beta
+Pic's two-band agreement 0.14 -> 0.46 km/s; the control false-alarm rate 0.19 -> 0.21 per cent.
+61 Vir's limit worsened because its 7-epoch stack was under-estimating its own noise by 26 per
+cent, which generalises: every stacked limit carries a +-7 per cent realisation term.
+
+P90 on 47 scored units: Class A 2.876 [2.838, 2.914] x P_trig, the 90 per cent point bracketed
+in 100 per cent of resamples, systems at 1e15 W 14 -> 25. The five truncated units are now
+NAMED in the paper, read from the campaign's own log (scheduling, not data quality), and the
+one search-stage failure has its cause printed: a kernel OOM at 141 GB in an unbounded DATA
+read plus a mask copy, 92 GB by construction for that window, which aborted the search although
+the routine's docstring promised it could not, because SIGKILL pre-empts the handler.
+
+AU Mic (D30): Glenn's Letter carries no flux-scale error and is cited for method only. D7 is
+softened to ~45 per cent, and the stronger pair replaces it -- the geometry-free January
+comparison at 0.994 +- 0.014 on a 29.4 mJy Band 3 point source, and (D33) epsilon Eridani's
+on-axis ACA blocks reproducing Burton et al. (2022)'s published quiescent flux to 1.10 +- 0.31x.
+Those are the paper's only two independent external tests of its absolute flux scale, one
+geometry-free in Band 3 on the 12 m array and one on axis in Band 6 on the ACA. The tau Ceti
+Letter is cancelled (D33) and nothing else from it enters the paper.
+
+The provenance gap is disclosed and not reconciled: four HD 285968 rows whose published rms no
+surviving product reproduces, +0.88 to +1.32 per cent in the conservative direction, with T*
+differing 3.9 per cent on a row that IS a crossing; two independent routes select exactly those
+four; declared gap 14 = 4 + 10 no-product windows. Plus the one window storing a single offset
+against two attenuations.
+
+NOT in this version, deliberately: the 57th crossing (HD 139084 B), the 44-block re-extraction
+and its harvest, the CP-72 2713 refit, and the archival sweep's never-attempted tail. Those are
+v4.09. Page length is deferred by standing instruction and was measured, not optimised.

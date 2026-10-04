@@ -1,0 +1,71 @@
+\section*{Author contributions}
+G.J.W.\ conceived the survey, defined the target sample and the selection
+criteria, and wrote the manuscript. R.D.\ built and operated the archival
+retrieval, calibration and search pipeline, implemented the spatial control
+statistic and the injection--recovery campaigns, and produced the released
+catalogue and its regeneration scripts. Both authors designed the candidate
+vetting procedure, carried out the statistical validation reported in
+\S\ref{sec:statistic} and Appendix~\ref{app:falsealarm}, and agreed the
+dispositions of Table~\ref{tab:ledger}.
+%% AUTHORS: confirm this division before submission, and see
+%% AUTHOR_ACTIONS.md item 6 for the affiliation statement this section
+%% should be read with.
+
+\section*{Funding}
+This work received no dedicated funding. It used public archival data and
+no observing time was awarded for it.
+%% AUTHORS: replace if any grant supported this work.
+
+\section*{Competing interests}
+The authors declare no competing interests. VBRL Holdings is a privately
+held company through which R.D.\ conducts independent research, named
+here solely as his affiliation; it had no role in the design of the
+survey, the selection of targets, the analysis, the decision to publish
+or the content of this paper, and provided no funding for the work.
+%% AUTHORS: confirm this wording, which is written to be accurate only if
+%% the company's involvement was indeed nil. See AUTHOR_ACTIONS.md item 6.
+
+\section*{Acknowledgements}
+This paper uses ALMA data from the public ALMA Science Archive. The \NEB{}
+execution blocks searched span 2013 October~6 to 2025 June~11 across
+\NProjCodes{} proposal codes, which in the standard
+ADS/JAO.ALMA\#\textit{code} form are:
+\input{tab_projcodes_v400}. Per-block epochs are in the machine-readable release. The
+archive metadata exposes no proposal code for \NProjCodeUnres{} of the
+\NEB{} blocks (\ProjCodeUnresList), which are therefore not represented in
+that list. ALMA is a partnership of ESO
+(representing its member states), NSF (USA) and NINS (Japan), together with NRC
+(Canada), NSTC and ASIAA (Taiwan), and KASI (Republic of Korea), in cooperation
+with the Republic of Chile. The Joint ALMA Observatory is operated by ESO,
+AUI/NRAO and NAOJ. This work has made use of data from the European Space
+Agency (ESA) mission {\it Gaia}, processed by the {\it Gaia} Data Processing and
+Analysis Consortium (DPAC). This research has made use of the SIMBAD
+database (CDS, Strasbourg, France).
+
+\section*{Data Availability}
+\label{sec:data}
+The release carries every reduced data product, the full
+target-selection and analysis pipeline, the \NWindows-row per-window
+catalogue, the injection records and the control statistics. Deposited
+beside the catalogue are the per-window search statistics, one row each,
+and the frozen inputs of every derived quantity in this paper: the
+archival harvest, the matched recurrence fits, the frequency-clustering
+computation, the block-by-block archival verdicts, and the ALMA delivery
+record for every block in scope that could not be searched. What has been
+demonstrated rather than claimed is narrower, and it is a measured number
+in both cases: \NRegenProducts{} generated products regenerate
+byte-identically from the frozen inputs, and \NReproChecks{} headline
+quantities are re-derived from the released catalogue alone, without the
+pipeline. \emph{The reference of record is the Zenodo deposit}, which is
+frozen, carries a DOI minted on acceptance, and is the version any
+reproduction should cite; the repository at
+\url{https://github.com/Tilanthi/SETI} is a working mirror and may move on.
+
+\section*{Software}
+The pipeline depends on CASA~6.7.6 \citep[casatools/casatasks
+6.7.6-14;][]{CASA2022}, Python~3 with astropy \citep{Astropy2022}, numpy
+\citep{Harris2020} and scipy \citep{Virtanen2020}, and the ALMA Science
+Archive and SIMBAD TAP interfaces through astroquery \citep{Ginsburg2019};
+all are free and open-source, with exact
+versions recorded in the frozen release.
+

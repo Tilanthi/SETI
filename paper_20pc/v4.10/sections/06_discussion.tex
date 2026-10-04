@@ -1,0 +1,328 @@
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{The search space this archive opens}
+\label{sec:newspace}
+
+The frequencies are what is new here. The windows searched span
+\UnionGHz\,GHz of unique sky frequency, of which \DnuA\,GHz carries channels
+fine enough to resolve a drifting carrier. Only \UnionBandThree\,GHz of that lies inside the 10\,MHz--115\,GHz
+interval \citet{Wright2018} take as the frequency axis of the search
+haystack, the ionospheric cutoff to the top of the Green Bank Telescope's
+instrumentation. The remaining \UnionBandsFourEight\,GHz in
+\UnionHiBandLabel{} has not been searched toward nearby stars before. The
+targets of the one prior search of ALMA archival data \citep{Mason2025} lie
+four orders of magnitude further away, so the comparison is best made in
+minimum detectable \emph{received} flux at a matched channel width. On that
+footing the windows here reach \FluxMatchBest\,W\,m$^{-2}$ at best, a
+factor \FluxBestRatio{} deeper, and \FluxMatchMed\,W\,m$^{-2}$ at the
+median, a factor \FluxMedRatio{} shallower.
+
+There are physical reasons to look at millimetre wavelengths rather than
+merely to accept them as an archival accident. A transmitter's directive gain rises as the square of frequency at fixed
+aperture, $G=\eta(\pi D\nu/c)^{2}$. A dish of modest size is therefore an
+extremely narrow, high-gain link in this regime: the \BenchDiam\,m aperture
+used as this paper's benchmark has $G=\BenchGain$ at \BenchFreqGHz\,GHz.
+The absolute bandwidth available also scales with carrier frequency, which
+is what a high-rate data link or a wideband radar needs. Hardware that beams
+energy, for power transmission or propulsion or ranging, radiates in the
+same regime. Propagation is favourable as well. Interstellar dispersion and
+scattering both fall steeply with frequency, so a millimetre carrier arrives
+with far less temporal smearing and frequency-dependent delay than a
+centimetre one. The narrow beams that come free at high frequency also waste
+little power on empty sky. None of this makes millimetre
+wavelengths the likeliest place to transmit. It makes them a plausible one
+that had not been examined.
+
+\subsection{What this experiment excludes, and what it does not}
+\label{sec:excludes}
+
+\noindent\emph{Excluded.} Consider a continuously transmitting,
+unresolved carrier that lies outside the molecular-line mask, inside the
+searched frequency range and inside the linear-drift grid, and that is
+present during one of the archival epochs. Such a carrier would have been
+found nine times in ten above the $\mathrm{EIRP}_{90}$ of
+\S\ref{sec:pninetysel}, a median of $\EirpNinetySysMedA$\,W per system on
+its best window. None is present toward any of the \NSystems{} systems
+searched.
+
+One benchmark carries the physical reading of that figure. A \BenchDiam\,m
+dish radiating \BenchPowerMW\,MW at \BenchFreqGHz\,GHz, at an aperture
+efficiency of \BenchEta, reaches an EIRP of $\BenchEirp$\,W, and the survey
+is sensitive to that depth for \BenchNSysA{} of the \NSysClassA{} Class~A
+systems. \emph{EIRP is not transmitter power.} The same megawatt radiated
+isotropically would be $10^{6}$\,W of EIRP, and it is the directivity, a
+factor $\BenchGain$ here, that lifts a modest transmitter into the range
+this survey probes. The exclusion therefore applies to beamed transmitters
+whose beam contains the Solar System, and says almost nothing about
+omnidirectional beacons.
+
+Four further axes bound the excluded population as sharply as power does.
+\emph{Frequency:} the coverage is sparse and inherited, \DnuA\,GHz of unique
+Class~A frequency in a window function set by other astronomers' science,
+and the median system is covered over only \SysUnionAMed\,GHz. \emph{Drift and acceleration:} the searched grid spans
+\DriftCeilLo--\DriftCeilHi\,Hz\,s$^{-1}$\,GHz$^{-1}$, a line-of-sight
+acceleration of \AccelCeilMed--\AccelCeilMax\,m\,s$^{-2}$. That contains
+the rotational and orbital accelerations of the \NExoPlanetsTab{} known
+planets of the \NExoHostsTab{} hosts in the sample, only TRAPPIST-1\,b
+reaching it in its edge-on worst case. A transmitter whose own oscillator
+drifts faster than that kinematic budget lies outside the grid.
+\emph{Persistence:} the carrier must be radiating during one of the archival
+observations, so these are limits on persistent emission.
+\emph{Spectral width:} the statistic is built for emission confined to one
+\ChanLoA--\ChanHiA\,kHz channel. A carrier broadened beyond a channel
+loses signal to its own width, and a signal broad enough to resemble
+continuum is removed with the spectral baseline.
+
+\noindent\emph{Not excluded.} A transmitter absent during the archival
+observation, or on for less than about a tenth of the time. At a duty cycle
+of one tenth, recovery falls to \DwellFineT{} per cent for the fine class
+and \DwellCoarseT{} per cent for the coarse, measured on the same injection
+ladder; those trials are undrifted, so the joint
+drifting-and-intermittent case is not measured at all. Emission inside
+the $\pm\MaskHalfKms$\,km\,s$^{-1}$ molecular-line mask, at any strength,
+which costs \MaskLostGHz\,GHz of coverage. Drift outside the searched grid,
+or drift curved enough to leave a channel within the track. Signals broad
+enough to be removed with the continuum baseline. Anything below a window's
+own completeness. And any emission from the \NGaiaCensus{} stars within
+40\,pc that ALMA has not observed, which is almost all of them.
+
+\subsubsection{The survey's on-source time, in both directions}
+\label{sec:exposure}
+
+Two bookkeeping biases of opposite sign affect the exposure, and neither may
+be quoted without the other. The extractor retained a single \texttt{FIELD} row per execution block.
+In \TruncNBlocks{} of the \ExpNBlocks{} released blocks --- \TruncNWin{}
+windows toward \TruncNStars{} stars --- further in-beam pointings on the
+same star were discarded, \TruncHoursLost\,h of real on-source time and
+\TruncPctSurvey{} per cent of the survey. Nothing published is thereby
+wrong, because every noise level was measured from the data actually used.
+But the \emph{achievable} sensitivity in those windows is understated by a
+median factor \TruncGainMed{} in flux density, and those blocks were
+re-extracted and re-searched. In the opposite direction, the released
+on-source time is the number of integrations times the median dump length
+rather than a sum of dump lengths, so short sub-scan boundary dumps are
+over-counted. The exact computation moves the survey total from \OcOldMax{}
+to \OcNewMax\,h. \emph{The first bias costs the survey time it
+had and the second credits it with time it never had}, and they offset to
+within \ExpNetLo--\ExpNetHi\,h.
+
+\subsubsection{The omitted annual parallax} \label{sec:parallax}
+
+The extraction phase-rotates the visibilities to each star's
+\emph{barycentric} direction while the visibilities see the apparent one, so
+annual parallax is omitted from the assumed phase centre. The resulting
+amplitude loss is the normalised dirty beam evaluated at the parallax
+displacement in units of the synthesised beam: parameter-free,
+multiplicative and shape-preserving. Over the \PxNWin{} windows carrying the
+astrometric keys it is \PxLossMedPct{} per cent in the median window and
+\PxLossMaxPct{} per cent at worst, with \PxNGtTen{} windows losing more than
+ten per cent. It is negligible throughout the ACA data that dominate this
+survey and matters only for nearby stars observed in long-baseline 12\,m
+configurations. \emph{We state it and do not apply it.} The sign is optimistic: every
+limit quoted here is too deep by $1/(1-{\rm loss})$ in its own window. The
+completeness campaign cannot see the term either, because its carriers are
+deposited at the same assumed position the estimator evaluates. Correcting
+it would leave the number of systems
+reaching $10^{15}$\,W unchanged at \PxNSysCorr, because a long-baseline
+block is never a system's most sensitive window.
+
+\subsubsection{Two blind spots}
+
+The search is Stokes~$I$ only. A fully polarised carrier is not missed, but
+the discrimination that polarisation would offer against unpolarised
+astrophysical emission is unavailable. ALMA's feeds are linear, so a per-hand search would help only a carrier
+aligned with one feed. A circularly polarised signal divides equally between
+XX and YY, and its circularity is in the cross-hands, which this analysis
+does not extract. The frequency coverage, finally, is the archive's and not
+a choice. None of the ``magic frequency'' arguments that have guided
+centimetre-band searches --- the 1420\,MHz line, its multiples, the water
+hole, or $\pi$ and $e$ times them --- falls in an ALMA band. A transmitter
+deliberately placed on one lies outside this experiment by construction, and
+its absence here is not evidence against it.
+
+\subsection{What the archival experiment taught us}
+\label{sec:lessons}
+
+\emph{Molecular-line confusion, and not interference or instrumental
+artefacts, is the dominant obstacle to a millimetre technosignature
+search.} The interference screens are in Appendix~\ref{app:rfi}, and no
+crossing in this survey is attributed to them. Catalogued molecular
+transitions, almost all of them carbon monoxide,
+account for \NAttributed{} of the \NCross{} threshold crossings, and \DiscFpWin{} of the \DiscFpOfFlags{} windows that
+reached the spatial stage are disc or foreground CO, arising in
+\DiscFpSys{} of the \NDebrisKwSys{} debris-disc systems searched --- one
+flagged system in \DiscFpOneIn. The remedy that works is a velocity-space
+mask evaluated in the stellar frame, and it is not free: it removes
+\MaskLostPct{} per cent of otherwise usable coverage. The spatial screen is weakest in the same place. A line that fills the
+primary beam raises the star and the control annulus together instead of
+cancelling, so the screen loses power exactly where circumstellar gas is
+brightest. A future millimetre search inherits that confusion rate. It
+should measure the continuum at each target before promoting a window,
+rather than lowering a threshold toward astrophysically interesting
+targets.
+
+\emph{Repeat epochs are what turn a crossing into a candidate, and an
+archive supplies them only incidentally.} Temporal sampling is the weakest
+axis of this experiment, and for close to half the sample it constrains an
+intermittent emitter hardly at all, whatever its power. Archival coverage is also incomplete at the level of whole observations.
+\FateDone{} of the \FateScope{} execution blocks in scope were searched.
+\FateNoCal{} carry no ALMA pipeline calibration at all, \FateCalFail{}
+failed calibration, \FateInfeas{} is infeasible at this data volume and
+\FateUnattempted{} were not attempted. For one of them the observatory
+delivered raw data it had never calibrated, so part of that gap lies in the
+delivery rather than in the processing.
+
+\emph{Completeness has to be measured rather than inferred from a threshold,
+and measuring it is expensive.} A nominal $5\sigma$ level is a property of the noise. It is not a
+statement about what a transmitter of a given power would do to a pipeline,
+and the two differ here by the factor $\EirpNinetyMultA$ in Class~A and
+$\EirpNinetyMultB$ in Class~B. The cost is that each injected window must be re-extracted and re-searched
+over its full drift grid once per amplitude. That is why the campaign covers
+a sample of windows and transfers its ratio to the others. Two limitations
+of a different kind should be read with every limit. The null result rests on
+internal validation alone: every check reported here tests this pipeline
+against itself. Because the only prior ALMA-archival search targets a
+disjoint sample, there is no external pipeline to compare against. And the
+threshold crossings are not concentrated toward window edges, and the one
+measurement that appeared to say otherwise is accounted for. Pooled over the
+searched windows the near-edge exceedance rate is
+$\times\VnEdgeRatio$ the interior rate, but \VnEdgeDomPct{} per cent of those
+exceedances are in a single window carrying resolved CO close to the band
+edge: drop that window and the ratio is $\times\VnEdgeNoDomRatio$
+($\pv{\VnEdgeNoDomP}$), mask the line and it is $\times\VnEdgeMaskRatio$
+($\pv{\VnEdgeMaskP}$), and on the half of the windows held out from that
+window's own stratum it is $\times\VnEdgeHalfCleanRatio$
+($\pv{\VnEdgeHalfCleanP}$). The excess is a property of one resolved disc and
+not of the band edges, so no edge correction is applied to any limit.
+
+\emph{Archival SETI buys sky and frequency cheaply and buys confirmation not
+at all.} This experiment reached \NSystems{} systems and \UnionGHz\,GHz without
+an allocation, at a sensitivity no targeted programme at these frequencies
+has matched. It did so on data selected by others. \PctDiscProposal{} per
+cent of the searched stars were observed for disc or planet-formation
+science, which puts circumstellar CO in a large fraction of the fields, and
+only \NMSearched{} of the \NMCensus{} catalogued M~dwarfs within 40\,pc
+have any coverage at all. The quantities above therefore describe
+\emph{these} stars, frequencies and epochs and nothing wider. The
+non-detection cannot be converted into an occurrence rate for transmitters
+within 40\,pc, which would need a denominator an archive-selected sample
+does not supply. On the conventional Continuous Waveform Transmitter Figure
+of Merit this survey is some four orders of magnitude less competitive than
+major centimetre-wave programmes. That figure measures the frequency regime
+and the archival temporal sampling rather than the design. Comparison is in
+general better made axis by axis, because this survey differs from
+centimetre-wave searches in frequency, spectral resolution, number of
+systems, completeness, drift range and temporal coverage at once, and those
+axes are coupled.
+
+\subsection{What a dedicated ALMA technosignature experiment should do
+differently}
+\label{sec:future}
+
+A purpose-built experiment on the same telescope would be a far stronger
+one, and the changes it needs follow from the limitations above.
+\emph{Channelise finely everywhere:} \NCoarse{} of the \NWindows{}
+windows searched here have channels so coarse that every in-grid drift is
+sub-channel over a track. They measure amplitude but cannot distinguish a
+drifting carrier from a stationary one. \emph{Choose the targets:} an
+archive weighted toward dusty discs is the worst case for molecular-line
+confusion, and the M~dwarfs that dominate the nearby habitable-zone planet
+census are the least covered. Both are decisions a proposal can simply
+reverse. \emph{Choose the frequencies:} windows placed deliberately away
+from the bright molecular transitions would recover most of the
+\MaskLostGHz\,GHz the mask costs. \emph{Repeat the epochs on purpose:} two
+or three visits separated by days and by years turn a crossing into a
+testable claim, and the separation is a scheduling constraint rather than
+extra sensitivity. \emph{Keep contemporaneous off-source controls:} full dynamic spectra
+survive for only \LNNRetained{} of the \NCtrl{} control positions here,
+which is what limits the second-stage null in a structured field. Retaining
+them all costs storage and nothing else. \emph{Record
+polarisation, including the cross-hands:} a per-hand search costs no
+sensitivity and buys discrimination against weakly polarised astrophysical
+emission, and only a cross-hand extraction can see a circularly polarised
+carrier. \emph{Retain the visibilities:} rotating the phase centre to the star
+leaves a genuine point source entirely in the real part of the visibility,
+with an imaginary part consistent with zero on every baseline. That asks
+whether the data contain a source \emph{where the star is}. It is a
+physically specific question, and a stronger one than any rank against
+neighbouring positions in an image.
+
+%% ---------------------------------------------------------------------
+%% REQUEST (stack-discussion owner -> integrator). Consequences of this
+%% pass. None of them is in a file I own.
+%%
+%% R1. 05c_limits.tex is folded in here under RULING_05c.md, absorbed from
+%%     handoff_05c_from_results.tex. DELETE its \input line from the main
+%%     file; sec:excludes, sec:exposure and sec:parallax now resolve here,
+%%     so 04_method:212 and app_G:142 are unaffected.
+%% R2. LABELS that were defined in the old 06 and are now gone. One site each:
+%%       sec:null       (02_background:52)             -> sec:excludes
+%%       sec:detectable (04_method:100,243; app_F:127)  -> sec:excludes
+%%       sec:bias       (01_intro:85, 03_sample:60, app_D:196, app_H:25)
+%%                      -> must now be DEFINED in 03_sample.tex, where the
+%%                         sample-bias statement has its other appearance.
+%%                         It is defined nowhere at present.
+%%       sec:nocross    (app_A:225, app_D:25) -> no longer a subsection; the
+%%                         statement is two sentences in sec:lessons.
+%%       sec:acalimit   (no external reference) -> deleted.
+%% R3. numbers_macros.tex (referee_r9/numbers/patch/) must be installed and
+%%     input by the manuscript. This file needs \EirpNinetyMultA,
+%%     \EirpNinetyMultB, \BenchPowerMW, \BenchFreqGHz, \BenchGain, \BenchEirp,
+%%     \BenchNSysA, \NCross, \NAttributed, \MaskHalfKms. Six names in that file
+%%     collide with definitions already in survey_numbers*.tex (\BenchDiam,
+%%     \BenchEta, \NWindows, \NRankFirst, \BudDominant and the Hz* family), so
+%%     it cannot simply be input alongside them. \EirpNinetySysMedA and
+%%     \DwellCoarseT do not exist anywhere yet; both are requested in
+%%     05_results.tex. Appendix label app:dwelldetail likewise does not exist.
+%% R3b. SIX MACROS THE STACK SUBSECTION NEEDS, none of which exists. Values are
+%%     from SENSITIVITY_AND_STACK.md section 2 (the injection calibration of the
+%%     stacked limit); the generator must compute them, not transcribe them:
+%%       \StkCalMult       3.84   P90 / nominal threshold, Proxima's stack
+%%       \StkCalMultTwo    3.56   the same ratio for the second calibrated group
+%%       \StkProxEirpCal   1.73\times10^{13}   calibrated stacked EIRP_90, W
+%%       \StkProxTolKms    20.9   km/s in one channel of Proxima's own stack
+%%       \StkProxBelowMed  130    ratio of the per-system median to that limit
+%%     \ChanBModeMHz already exists and is used for the coarse channel width.
+%%     * The nominal 4.50e12 W (\StkProxEirpCalMath) MAY NOT BE PRINTED: it is a
+%%     threshold, not a sensitivity, and it is a factor \StkCalMult optimistic.
+%%     If those macros cannot be supplied, delete the sentence carrying
+%%     \StkProxEirpCal in 05b_stack.tex and the second sentence of conclusion 5;
+%%     do not substitute the nominal value in either place.
+%%     * \StkEirpMed and \StkEirpSingleMed are nominal thresholds for all
+%%     \StkNGroup groups and are no longer cited in any file I own.
+%%     * 0.635 km/s (\StkProxTolKms) is one 488 kHz channel. It is the
+%%     fine-channel case and must NOT travel beside the Proxima number, whose
+%%     own channel is \ChanBModeMHz MHz: the two differ by a factor ~33.
+%% R3c. SIX MACROS retire_macros.py HAS ALREADY DELETED and that must come back,
+%%     because 05b_stack.tex cites every one of them again (see the retirement
+%%     list in the comment at survey_numbers_round96.tex:79):
+%%       \StkProxN  \StkProxHours  \StkProxSpanYr  \StkProxNeff  \StkProxGain
+%%       \StkNSurvive
+%%     They were dropped while an intermediate draft of this section did not
+%%     reference them. The build currently fails with five undefined control
+%%     sequences in 05b_stack.tex for exactly this reason.
+%%     Deliberately NOT restored, and not cited by me: \StkProxEirpCalMath (nominal),
+%%     \StkProxSminOne, \StkProxSminN, \StkProxZ, \StkEirpMed,
+%%     \StkEirpSingleMed, the \StkHonest* family, \StkNWorsePred,
+%%     \StkNWorseMeas, \StkCtrlFapRaw.
+%% R3d. UNREGISTERED LITERALS I introduced, both from the cited literature and
+%%     neither measured here: 10 MHz and 115 GHz, the ends of the frequency axis
+%%     \citet{Wright2018} section 3.2.2 adopts. Register them or declare them.
+%% R4. DUPLICATED LIMITATIONS, each of which must end up stated exactly once:
+%%     (a) the control-annulus failure mode on a beam-filling line is stated
+%%         here, in sec:lessons, and also in 04_method.tex:205--207. One must
+%%         go; the brief for this section puts it here.
+%%     (b) the weak temporal sampling is quantified in 05_results.tex:279--282
+%%         and interpreted here without repeating the numbers. That split is
+%%         deliberate; if the results statement moves, this one must grow.
+%%     (c) the archival-scope incompleteness (\FateDone ... \FateUnattempted)
+%%         is stated only here. The appendix triage proposed two sentences in
+%%         the sample section instead; either place is acceptable, one only.
+%% R5. tab:arraysplit and the two array configurations have no home in a
+%%     three-page discussion. The load-bearing fact -- the ACA windows are
+%%     screened on their own measured geometry, and the array configuration
+%%     does not enter the sensitivity -- belongs in one method sentence.
+%% R6. app_N_rfi.tex:187 also ends on "the null result resting on internal
+%%     validation alone", which is now stated in sec:lessons. Drop it there.
+%% ---------------------------------------------------------------------

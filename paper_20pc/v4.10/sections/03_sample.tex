@@ -1,0 +1,186 @@
+\section{Sample selection}
+\label{sec:sample}
+
+We searched \NWindows{} spectral windows toward \NStars{} stars in
+\NSystems{} independent systems within 40\,pc, drawn from \NEB{} public
+ALMA execution blocks and \TotalDataTB\,TB of raw data through one frozen
+pipeline. The sample is two experiments, not one. \NWinA{} windows toward
+\NSysClassA{} systems are fine-channel, called \emph{Class~A} throughout:
+these resolve a drifting carrier and are the primary experiment, and
+every sensitivity and every exclusion quoted in this paper refers to them
+unless stated otherwise. The remaining \NWinB{} windows are
+coarse-channel, \emph{Class~B}, and support a secondary search for
+unresolved spectral excess; they can register a spike but cannot
+distinguish a drifting signal from a stationary one. Table
+\ref{tab:searchspace} collects the survey as searched.
+
+The inclusion criteria are objective and were applied by query. A star
+enters if its Gaia~DR3 parallax is at least 25\,mas, measured to better
+than \PlxAdqlPct{} per cent. It must also have its proper-motion-corrected
+position at the observation epoch inside the quoted field of view of at
+least one public ALMA execution block. Distances are direct inversions,
+$d=1/\varpi$. The star need not sit at the pointing centre. Disc, planet
+and spectral type enter as descriptive metadata only, and no star or
+window was excluded by an unlisted criterion or for short integration.
+The query returns \NCensus{} work-list entries; the quoted field of view
+is optimistic, and only \NGenuinelyCovered{} of those stars are in fact
+contained by a public field, of which \NStars{} yielded a searchable
+window (Fig.~\ref{fig:funnel}). The complete per-star and per-window
+ledger, including the five-criterion decision tree and every edge case,
+is in the data release.
+
+\subsection{The archival selection}
+\label{sec:bias}
+
+This sample was not designed. It is whatever previous ALMA programmes
+happened to observe, for their own reasons, and
+\PctDiscProposal{} per cent of the stars searched were targeted under a
+debris-disc or planet-formation proposal. The consequence is a strong and
+measurable bias, tabulated against a volume-limited reference census in
+Table~\ref{tab:selfunc}: the sample is enriched in F and G stars and
+depleted in M~dwarfs. Only \NMSearched{} of the \NMCensus{} catalogued
+M~dwarfs within 40\,pc appear in it at all, and only \NClassAM{} have
+Class~A coverage, the only coverage that can resolve a drifting carrier. Coverage is also concentrated: \ConcThreeWin{} of the
+\NWindows{} windows come from \ConcThreeSys{} systems. Every statistical
+statement in this paper is therefore a statement about an
+archive-selected sample of nearby stars. None of them is an occurrence
+rate for the solar neighbourhood, and because M~dwarfs host most of the
+nearby habitable-zone planets, this survey cannot constrain transmitters
+around the kind of star most likely to have one. The systems a targeted
+search would itself have chosen are collected in
+Table~\ref{tab:interesting}.
+
+\input{tab_selection}
+
+\begin{figure} \centering
+\includegraphics[width=0.66\columnwidth]{figures/selection_funnel.pdf}
+\caption{The selection funnel, from the catalogued population within
+40\,pc to the stars with a searched window. The three quantities the text
+keeps apart are the \NCensus-entry work list the archive query returns,
+the \NGenuinelyCovered{} stars a public field genuinely contains, and the
+\NStars{} that yielded a searchable window. The chain applied to what
+comes out of the funnel is Fig.~\ref{fig:chain}.}
+\label{fig:funnel}
+\end{figure}
+
+\subsection{Frequency coverage and archival scope}
+\label{sec:coverage}
+
+The Class~A experiment covers $\Delta\nu_A=\DnuA$\,GHz of unique sky
+frequency, and that coverage is sparse: it is \DomAIslands{} disjoint
+islands scattered between \DomAFreqLo{} and \DomAFreqHi\,GHz, not a
+band. The endpoints are a range over which observations exist, never a
+range that was covered. Adding the coarse-channel windows brings the
+total archival coverage to \DnuAB\,GHz in \UnionIntervals{} intervals, of
+which \SearchedUnionGHz\,GHz survives the molecular-line mask of
+\S\ref{sec:method}. The distribution is shown in
+Fig.~\ref{fig:waterfall}; a transmitter at a frequency between the
+islands was never observable here, whatever its power.
+
+\begin{figure*}
+\centering
+\includegraphics[width=0.99\textwidth]{figures/coverage_waterfall.pdf}
+\caption{Where this survey searched. \emph{Lower panel:} each searched
+window is a horizontal segment on its host system's row, rows ordered by
+distance and labelled alternately on the left and right axes; heavy blue
+marks the fine-channel carrier search (Class~A) and light grey the
+coarse-channel spectral-excess search (Class~B). \emph{Upper panel:} the number
+of systems covering each gigahertz of sky frequency; the threshold
+distribution is Fig.~\ref{fig:context}(a). The coverage is narrow, clustered
+and repeatedly revisited: \UnionIntervals{} islands concentrated near 230
+and 345\,GHz, with summed window bandwidth $\GrossOverUnion\times$ the
+union. The union measures frequency coverage, the summed bandwidth
+integrated search effort.}
+\label{fig:waterfall}
+\end{figure*}
+
+Of the \FateScope{} execution blocks in scope for this search,
+\FateDone{} were calibrated and searched. The shortfall is accounted for
+rather than estimated. For \FateNoCal{} blocks, \FateNoCalGB\,GB in all,
+the archive holds only raw visibilities that were never
+pipeline-calibrated; this is the single largest gap, and no effort on our
+side would close it. A further \FateCalFail{} blocks failed calibration,
+\FateUnattempted{} were not attempted, and \FateInfeas{} needed more
+working disk than was available.
+
+\begin{table}
+\centering
+\scriptsize
+\caption{Systems of particular interest: every sample system within
+15\,pc hosting at least one confirmed planet, ordered by distance.
+$N_{\rm pl}$ is the confirmed-planet count, $N_{\rm A}$ the number of
+Class~A windows, EIRP$_{90}$ the deepest Class~A sensitivity reached, and
+$N_{\rm eb}$ the number of execution blocks covering the system, so
+$N_{\rm eb}>1$ means repeat epochs exist. Six of these systems have no
+Class~A coverage and so carry no drift-resolving limit --- the archival
+selection of \S\ref{sec:bias} acting on exactly the targets a
+transmitter search would choose. The full target list is in the data
+release.}
+\label{tab:interesting}
+\input{tab_interesting}
+\end{table}
+
+\begin{table}
+\centering
+\scriptsize
+\caption{The survey as searched. Every frequency union quoted here is an
+aggregate over clustered, repeatedly revisited coverage, whose
+distribution is Fig.~\ref{fig:waterfall}; no union should be read as
+continuous coverage between its endpoints. Powers and frequencies are
+given to two significant figures, except where a channel or sky frequency
+must be matched to the released catalogue and is given to the precision
+the grid supports.}
+\label{tab:searchspace}
+\begin{tabular}{@{}P{0.53\columnwidth}P{0.40\columnwidth}@{}}
+\hline
+Quantity & Value \\
+\hline
+Stars searched; independent systems & \NStars{}; \NSystems{} \\
+\quad work-list entries; genuinely covered & \NCensus{};
+\NGenuinelyCovered{} \\
+Execution blocks; distance range & \NEB{}; \DistMin--\DistMax\,pc \\
+Spectral windows searched & \NWindows{} \\
+\quad Class~A fine / Class~B coarse & \NWinA{} / \NWinB{}
+(\PctCoarse\% Class~B) \\
+\quad 12\,m array; ACA 7\,m & \NWinTwelveM{}; \NWinSevenM{} \\
+Native channel widths & 15.3\,kHz--31.25\,MHz; median
+\ChanMedianMHz\,MHz \\
+\emph{$\Delta\nu_A$, unique Class~A frequency union} (the
+drifting-carrier experiment) & $\mathbf{\DnuA}$\,GHz in
+\DomAIslands{} islands, \DomAFreqLo--\DomAFreqHi\,GHz \\
+\quad coverage Class~B adds & \DnuBonly\,GHz \\
+\quad total archival coverage & \DnuAB\,GHz (\UnionIntervals{} intervals)
+\\
+\quad usable after the molecular-line mask & \SearchedUnionGHz\,GHz \\
+Nominal trigger $P_{\rm trig}$, Class~A; Class~B &
+$\EirpMinA$--$\EirpMaxA$\,W; $\EirpMinB$--$\EirpMaxB$\,W \\
+Execution blocks in scope; searched & \FateScope{}; \FateDone{} \\
+\hline
+\end{tabular}
+\end{table}
+
+%% REQUEST (stack-discussion owner, sections/06_discussion.tex): your R3(d)
+%% is settled here. The block ledger's headline (\FateScope, \FateDone,
+%% \FateNoCal, \FateCalFail, \FateUnattempted, \FateInfeas) is now two
+%% sentences in \S\ref{sec:sample}, because it is a stated limitation and a
+%% stated limitation may not live only in the data release. Please cite
+%% \S\ref{sec:sample} and do not restate the counts. Your R1 is also
+%% settled: sec:bias is defined above.
+%% REQUEST (numbers owner): tab_interesting.tex is generated by
+%% referee_r9/sample/mk_interesting.py, which reads the released
+%% catalogue, the frozen census, the confirmed-planet table and
+%% \SelRatioRank out of the macro layer. It has eight assertions and five
+%% drives. Please adopt it into make_all.sh so the table regenerates with
+%% everything else. Two display defects in it are yours, not mine: the
+%% catalogue designation of Barnard's Star prints as a SIMBAD identifier
+%% with the "NAME" prefix stripped, and BD+05 1668 would read better with
+%% its GJ alias beside it. Both belong in star_alias.designation.
+%% REQUEST (numbers owner): the sensitivity rows have been removed from
+%% Table~\ref{tab:searchspace} rather than restated, because the
+%% multiplier they were computed on is not the one this paper adopts. When
+%% \EirpNinetyMultA and \EirpNinetyMultB exist, the fine- and
+%% coarse-channel EIRP$_{90}$ ranges should return to this table as two
+%% rows, per window and per system.
+%% REQUEST (method owner, sections/04_method.tex): \S\ref{sec:summary}
+%% duplicates part of Table~\ref{tab:searchspace}. One of the two should
+%% carry the survey summary; this table is the shorter.

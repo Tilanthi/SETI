@@ -1,0 +1,178 @@
+%% APPENDIX B -- the spatial screen: calibration, validation, and the one
+%% worked example of the vetting chain.  Owner: appendix-triage.
+%% Carries \label{app:radius} (cited by 04_method.tex) and
+%% \label{sec:heldout} (cited from the other appendices).
+\section{The spatial screen: calibration and validation}
+\label{app:radius}
+
+The spatial screen asks whether an excess sits at the star or anywhere in the
+field, and it removes most of the unattributed crossings. Everything the
+dispositions rest on therefore depends on how well that screen is
+calibrated, which is what this appendix measures. The answer is adverse to
+the screen and is stated as such: \rankstatus{}
+
+The star lies at the phase centre, inside the control annulus, and that
+asymmetry has a known instrumental mechanism. Images are corrected for the
+primary-beam response, so the true noise rises with distance from the
+pointing centre while the search divides every position by one scale
+estimated over the whole window; the control probes therefore sit at
+systematically different effective noise from the star. A radius-corrected
+normalisation removes that term: each control probe is standardised within
+its own radius bin, the probe radii being known from the fixed draw, with no
+free parameter.
+
+\emph{Applied out of sample, the correction does not repair the statistic.}
+It was frozen --- probe radii, bin edges and standardisation alike --- and
+applied unmodified to \RadValStarN{} windows that played no part in its
+construction. The uncorrected stellar rank has median \RadValStarRawMed{}
+against the exchangeable value of 0.5; after correction the median is
+\RadValStarCorMed, moving \RadValStarToward{} it, and the result holds
+separately in both out-of-sample partitions (hold-out
+\RadValStarHoRawMed$\to$\RadValStarHoCorMed, extension
+\RadValStarExtRawMed$\to$\RadValStarExtCorMed). Rescoring the whole survey
+with the gradient removed takes the rank-passing list from
+\LocStageGlobal{} windows to \LocStageLocal, losing \LocStageLost{} and
+gaining \LocStageGained, all marginal and all dispositioned on other
+grounds, and the median rank over the \LocAllWin{} windows that retain a
+control vector moves from \LocAllMedGlobal{} to \LocAllMedLocal, slightly
+further from 0.5.
+
+The interpretation is narrow and, we think, unavoidable. The radial gradient
+is real and is one mechanism behind the displacement, but removing it does
+not leave an exchangeable statistic, so the residual is not radial. Neither
+normalisation yields a calibrated tail probability. \textbf{We therefore
+retain the frozen screen as primary --- it has at least the virtue of having
+been fixed in advance --- use it only to decide which windows are examined,
+and rest every disposition on physical evidence or on recurrence rather than
+on either rank.} The radial correction, the region-maximum audit and the
+pseudo-star tests each leave every disposition unchanged.
+
+\subsection{The reserved hold-out, and what it calibrates}
+\label{sec:heldout}
+
+The statistic and the mask were settled on the searched sample and cannot
+also calibrate themselves, so a hold-out was reserved by a rule fixed and
+recorded before the archival search finished and before any reserved block
+was searched: a block is held out if and only if
+$\mathrm{sha256}(\textsc{uid})_{[:8]} \bmod 5 = 0$, subject to two guards
+that use identifiers alone --- a block on the pre-registered block list
+deposited with this paper stays in the survey, and no system loses every
+block --- so that the assignment can be recomputed from the UIDs and that
+list alone. The three choices that can manufacture a
+candidate were fixed before the hold-out rule itself: the detection statistic
+of Eq.~\ref{eq:tstar}, the promote and retire criteria, and then the
+reservation, with the first reserved block searched \HoLeadBlockDays{} days
+later. The diagnostics built afterwards --- the radius-corrected
+normalisation, the visibility-domain test, the drift-resolved injection
+analysis and the $P_{90}$ budget --- cannot promote a window.
+
+Of \NEbProcessedAll{} blocks processed, \NEbHeldOut{} are reserved
+(\HoPctHeld{} per cent), giving \HoWin{} windows toward \HoStars{} stars with
+no star and no system lost from the headline sample. Three quantities are
+calibrated on those blocks and on nothing else.
+
+First, the rank displacement. The stellar add-one rank out of sample has
+median \HoRankMed{} where 0.5 is expected, with a block-clustered 95 per cent
+interval of \HoRankMedLo--\HoRankMedHi{} over \HoWin{} windows, and
+\HOFracLoPct{} per cent of ranks below 0.1 against \HOFracHiPct{} per cent
+above 0.9, so the distribution is displaced rather than growing a tail.
+Clustering removes neither the shift nor its size: \HOBlockBelow{} of
+\HOBlockN{} blocks have a mean rank below 0.5, and a star-clustered bootstrap
+places the median at \HOBootMed{} (95 per cent \HOBootLo--\HOBootHi). The
+searched sample leans the same way without resolving it (median \SurvMedP,
+star-clustered 95 per cent \SurvBootLo--\SurvBootHi), and the two
+distributions are indistinguishable, so the in-sample checks were
+underpowered rather than contradicted. A displacement that survives a
+hold-out chosen before the data were seen is a property of the statistic and
+not of this sample, which is the quantitative reason the rank is a screen and
+never a significance.
+
+Second, the false-alarm tail factor --- the measured rate at which a
+no-signal position ranks first, divided by the rate exchangeability would
+give. It is \HoTailFactor{} on \HoPseudoTrials{} trials, with a bootstrap
+clustered over the \HoTailBlocks{} reserved blocks giving
+\HoTailLo--\HoTailHi. That factor and its width set the accuracy of every
+chance expectation in this paper. The reserved blocks contain \HoStageOne{}
+rank-passing crossings against \HoStageOneExp{} expected.
+
+Third, the radial behaviour of the control ensemble. The standardised
+control level runs \HoRadBins{} from the inner to the outer edge of the
+annulus, a mean per-window slope of $\HoRadSlope\pm\HoRadSlopeSe$: the
+displacement reproduces out of sample, but the steep inner-edge excess seen
+in sample does not --- which is why the radial term is one demonstrated
+mechanism for the displacement rather than the whole of it.
+
+A second out-of-sample set is used in this paper and must not be conflated
+with the hold-out. The \emph{external calibration sample} is \CampBlocks{}
+execution blocks toward \CampStars{} stars, reserved by a rule fixed before
+the archival search finished, and it is not a subset of the in-scope blocks
+of \S\ref{sec:sample}: it includes blocks toward stars outside the 40\,pc
+work list, so its block count cannot be placed inside that ledger and enters
+no count of the science sample. It is used only to calibrate the rank
+statistic, and it carries the repeat observations the hold-out does not. Over
+its \CampWindows{} windows the frozen pipeline returns \CampStageOne{}
+rank-passing crossings, of which \CampStageOneCO{} are $\beta$~Pictoris CO
+--- the positive control recovering on data it had never seen --- and
+\CampUnattrib{} are unattributed, against \CampExpUn{} expected at the
+measured tail rate.
+
+\subsection{One crossing through the whole chain}
+%% (subsection label retired: nothing cites it)
+
+CP$-$72~2713 is a worked example of the vetting chain rather than a result,
+and it is the clearest one the survey contains because every stage returns a
+verdict. At the chance expectation of Appendix~\ref{app:falsealarm},
+\ClustStageMean{} such events are expected over the Class~A windows and
+\NStageOneUnattrib{} are observed.
+
+In Band~7 the crossing reaches $T_\star=\VnCpT{}$ and outranks every one of
+the \NCtrl{} control positions, so it passes the spatial screen; it is
+channel \VnCpChan{} of its window; and no transition of the frozen mask lies
+within $\pm\MaskHalfKms$\,km\,s$^{-1}$ of it, so it is unattributed.
+CO($3{\to}2$) falls in this same window and is absent, below a $5\sigma$
+limit fainter than the crossing itself, and sulphur-bearing species are not
+in the mask and were not in it before the search. The drift-following
+visibility fit places the emission at the stellar position,
+${\rm Re}/\sigma=\VnCpReAdopted$ with ${\rm Im}/\sigma=\VnCpImAdopted$
+against a control-position maximum of \VnCpCtrlAdopted; by the argument of
+\S\ref{sec:vistest} that is a consistency check and not a promotion.
+
+\emph{What disposes of it is the repeat block.} That second block matches the
+first in tuning, channel width, channel count, integration count and
+on-source time, registers to \CpRecOffChan{} of a channel, and is the deeper
+of the two, so a persistent emitter at the first block's flux would have
+returned $T_\star=\CpRecExpT$. Pinned to the first block's own frequency and
+drift it returns \CpRecT, and read as two measurements of one constant
+amplitude the pair is inconsistent at $\CpRecExclPair\sigma$. The blocks are
+\CpSepH\,h apart, so this is a within-night test: it excludes a persistent
+emitter of that strength on that baseline and excludes nothing about an
+intermittent one. \textbf{The disposition rests on that recurrence test and
+not on the rank}, which is the chain this paper applies to every crossing it
+cannot attribute.
+
+%% ------------------------------------------------------------------
+%% REQUEST (appendix-triage -> results, 05_results.tex):
+%%   CP-72 2713 appears nowhere in the body.  It is one of the two
+%%   unattributed crossings that PASS the spatial screen, and the ledger's
+%%   own chain string for it is "unattributed; rank-flagged; tested and does
+%%   not recur".  It is quoted here as a worked example only.  If the results
+%%   section means to name the two rank-passing crossings -- and it should --
+%%   this is one of them, and the recurrence exclusion at \CpRecExclPair
+%%   sigma is the result, not the rank.
+%% NOTE (pre-existing contradiction, now fixed here):
+%%   this paragraph previously gave T_star = 5.81 against "a ring maximum of
+%%   5.68" and then concluded the crossing "still fails the rank screen".
+%%   5.81 < 5.68 is false and so was the conclusion: ledger_v403.csv has
+%%   rank_screen = True for this row.  The ring maximum had no macro, so the
+%%   statement is now made in the form the screen actually tests -- the star
+%%   outranks all \NCtrl controls -- and the six typed literals in the
+%%   paragraph (5.81, 5.68, the SO offset, the transitions per GHz, the
+%%   91 per cent coincidence rate and the 3-against-2 channel width) are
+%%   gone: \VnCpT replaces the first, and the sentences carrying the others
+%%   are deleted because no macro exists for them.
+%% REQUEST (appendix-triage -> numbers):
+%%   If the SO line-density argument is wanted back, it needs three macros:
+%%   transitions per GHz over this window, the coincidence probability at
+%%   +/- \MaskHalfKms km/s, and the feature's recovered width in channels
+%%   against the instrumental response.  Without them it cannot be typeset.
+%% ------------------------------------------------------------------

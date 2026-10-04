@@ -1,0 +1,96 @@
+\section{Introduction}
+\label{sec:intro}
+
+In plain terms, this paper asks whether any nearby star is transmitting a
+narrow radio signal that ALMA happened to record while observing
+something else. ALMA's public archive holds thousands of hours of
+millimetre and submillimetre observations taken for quite different
+reasons, mostly studies of dust discs and planet formation. Every one of
+them also contains a spectrum of the star at the centre of the field. A
+transmitter would appear in such a spectrum as a spike confined to one
+or two channels. It would sit at the star's position and nowhere else in
+the field, and reappear if the star were observed again. We searched the
+archive for exactly that, with one pipeline and no human intervention. Nothing of the kind survived.
+
+A technological civilisation may imprint the electromagnetic spectrum
+detectably whether or not it intends to, a \emph{technosignature}
+\citep{Sheikh2020,SETIreview2025}. Millimetre wavelengths are an
+attractive place to look for one. Interstellar scattering and dispersion
+fall steeply with frequency, so a high-frequency carrier arrives less
+distorted. A given aperture delivers higher gain, and so more radiated
+power per watt supplied to the transmitter. Coherent millimetre emission
+is also already engineered on Earth, for directional links, radar and
+beamed power.
+
+The band is correspondingly hard to search. The atmosphere transmits
+unevenly and adds phase noise, and receivers are noisier than at
+centimetre wavelengths. Archived correlator channels are thousands of
+times coarser than a dedicated narrowband backend, so a carrier is
+diluted within one channel and its drift can smear it across several.
+These bands are also crowded with molecular lines, a dense background of
+real astrophysical signals that a threshold search must separate from an
+artificial one.
+
+Six decades of radio searches have examined many thousands of stars, yet
+sample only \HaystackFrac{} of the space of transmitter frequency,
+bandwidth, power and duty cycle \citep{Wright2018}. Essentially all of
+that effort lies below ${\sim}30$\,GHz; above it we are aware of one
+published search, in ALMA Band~3 \citep{Mason2025}. Few searches at any
+frequency reprocess existing interferometric archives, although those
+archives already hold a spectrum of every target they have pointed at
+(\S\ref{sec:background}).
+
+This paper is an archival ALMA search of nearby stellar systems across
+that band, with its sensitivity and its selection measured rather than
+assumed. The signal class is an \emph{unresolved spectral carrier}:
+emission confined to a few channels, unresolved at the stellar position,
+and persistent enough to recur between epochs. Each qualifier is a real
+restriction. A carrier broader than the channel width would not be
+recovered here, nor one that fills the synthesised beam, nor one that
+appears once and never again. The fine channels used are
+\ChanLoA--\ChanHiA\,kHz wide, so ``narrowband'' here describes the
+assumed transmitter and never the resolving power of the data.
+Channelisation also divides the archive. Only \NWinA{} of the
+\NWindows{} searched windows support the fine-channel search; the rest
+register an unexplained spike but cannot tell a drifting signal from a
+stationary one.
+
+Every window follows the same four steps: a threshold crossing;
+attribution to a known line; comparison of the star with \NCtrl{}
+control positions in the same field; and a search for recurrence at
+another epoch. Figure~\ref{fig:funnel} is the roadmap. One
+worked case runs through the paper: a crossing toward $\beta$~Pictoris,
+the largest star-versus-control contrast here, attributed to the disc's
+known circumstellar CO in two transitions and \NStageOneBpicEb{}
+execution blocks (\S\ref{sec:technosearch}). Where this paper says
+``sensitivity'' it means $\mathrm{EIRP}_{90}$, the equivalent isotropic
+radiated power that the complete automated selection recovers nine times
+in ten. The internal trigger level $P_{\rm trig}$ is not a sensitivity.
+
+Three limits on interpretation hold throughout. The targets were chosen
+by archival disc and planet-formation programmes, not for this search.
+The sample is therefore enriched in F and G stars and depleted in M
+dwarfs: only \NMSearched{} of \NMCensus{} catalogued M~dwarfs within
+40\,pc appear in it. Every statistical statement here concerns the ALMA
+archive-selected stellar sample, not the solar neighbourhood. The survey
+cannot constrain the local habitable-zone planet population, which
+M~dwarfs dominate (\S\ref{sec:bias}). The search statistic and the
+line mask were defined on these data, so the rates quoted here are post
+hoc, and \S\ref{sec:method} sets out what was fixed when. And only
+\EpIndep{} of \EpTot{} systems were observed more than a day apart, so a
+non-detection constrains a persistent carrier far better than an
+intermittent one.
+
+%% REQUEST (appendix-triage owner): the plain-language opening now lives
+%% here, in the first paragraph. Please delete it from
+%% sections/app_00_overview.tex so it is not stated twice.
+%% REQUEST (background owner): three statements have moved up into this
+%% section and should now be cut from sections/02_background.tex, where
+%% they are duplicated -- (i) "There are physical reasons to go higher:
+%% interstellar scattering ... without forbidding it"; (ii) "Essentially
+%% all of that work lies below ~30 GHz, above which only Mason2025 has
+%% searched, in ALMA Band 3"; (iii) the haystack-fraction sentence if it
+%% recurs there. Section 2 should begin with the survey-by-survey
+%% review, not with the motivation.
+%% REQUEST (figures owner): \ref{fig:funnel} must survive as a body
+%% figure, or this paragraph loses its roadmap pointer.

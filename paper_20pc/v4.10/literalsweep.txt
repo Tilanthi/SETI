@@ -1,0 +1,30 @@
+literal sweep of technosignatures_40pc_v4.10.tex
+
+20 prose literals equal to a generated macro:
+  30         == CfgChanOut,EpWideLinesGHz,LgDMax,MaskFrameSys  d -- \,GHz; published work lies almost entirely below 30\,GHz. We searched the ALMA archiv
+  18         == CcNAgree,CcNMatched,EpAOne,FateNoCal        the MWA and single-dish C- and K-band work at 6 and 18\,GHz with the Sardinia Radio Telesc
+  30         == CfgChanOut,EpWideLinesGHz,LgDMax,MaskFrameSys  e field, which a single dish cannot make. Above about 30\,GHz the record is nearly empty, 
+  25         == BdNBlocks,BpSixGapD,MasonRmsLo,MaxSearchedEBStar  ry. A star enters if its Gaia~DR3 parallax is at least 25\,mas, measured to better than {}
+  0.99       == PxRossObsHi,RsevRankFracTwentyA             rvable here, whatever its power. {figure*} [width=0.99 ]{figures/coverage_waterfall.pdf} {
+  15         == MaskNTransOld,NBPWindows,SirNWin,VisDilUnattHi  ems of particular interest: every sample system within 15\,pc hosting at least one confirm
+  0.92       == ClustPoisRatio,PxAuMicPredCorr,RsevTransBLo  r.} { }{2pt} {table} {figure*} [width=0.92 ]{figures/classa_sensitivity.pdf} { {(a)}~C
+  0.88       == ClustLadderStelP,MaskLostNewGHz,MaskOwnLostGHz,PbGapPctLo  ell as demonstrating it (Fig.~ ). {figure} [width=0.88 ]{figures/bpic_control.pdf} {The ~P
+  6.7        == BpRecOffChan,TuQuantAlignPct                ay move on. *{Software} The pipeline depends on CASA~6.7.6 [casatools/casatasks 6.7.6-14;]
+  6.7        == BpRecOffChan,TuQuantAlignPct                e pipeline depends on CASA~6.7.6 [casatools/casatasks 6.7.6-14;][]{CASA2022}, Python~3 wit
+  14         == ClustMaxMed,ClustNObs,FaNFirst,HOFracLoPct  line depends on CASA~6.7.6 [casatools/casatasks 6.7.6-14;][]{CASA2022}, Python~3 with astr
+  0.94       == BpRecThreeGapD,RsevTransALo,RsevTransARangeLo  each of these corrections uses. {figure*} [width=0.94 ]{figures/hanning_response.pdf} {Why
+  350        == KsFineNoCrossN                              elativistic terms at the \,km\,s scale are \,kHz at 350\,GHz, below the finest native chan
+  1.10       == BootMeanA,BpRecThreeChan,CellsPerCrossExp,DriftKHzLo  rched drift rate across one integration, , is at most 1.10 channels across the {} windows 
+  0.001      == BpicBThreeAddOne,MaskFrameWorstMHz,VnXcPlxTol  s at most 1.10 channels across the {} windows (median 0.001, 90th percentile 0.06). A line
+  0.06       == CpContErrMjy,HOKsCrit,RingCheckFrac         across the {} windows (median 0.001, 90th percentile 0.06). A linear drift smeared by chan
+  0.64       == MaskLostOldGHz,SelTransFineLo,StratTransferLo  rgument would retain instead, giving 1.0 rather than 0.64 at , so the sinc form is the con
+  15.6       == DefectChanwMHz,DefectChanwMinMHz            larger and predicting {} such windows, contains . A 15.6--31.25\,MHz channel dilutes a nar
+  31.25      == ChanBMaxMHz,ChanHiB,DomBChanHi              r and predicting {} such windows, contains . A 15.6--31.25\,MHz channel dilutes a narrow c
+  19         == DutyTenth,EpAYears,EpNUnit,GridOutside      es active allocations throughout 90--275\,GHz, and WRC-19 identified parts of 275--450\,GH
+
+5 prose literals within 5 per cent of a macro (possible stale value):
+  230.5      ~ FobsHdFour=230.512,FobsBpicSix=230.516,FcenBpicSix=230.516  e controls. The crossing list is dominated by CO( ) at 230.5\,GHz toward disc hosts, and a
+  275        ~ VnKeyNFineEntries=274,ExpTotalMed=273.7,VnKeyNFineDistinct=273  ns Article~5 carries active allocations throughout 90--275\,GHz, and WRC-19 identified par
+  275        ~ VnKeyNFineEntries=274,ExpTotalMed=273.7,VnKeyNFineDistinct=273  hroughout 90--275\,GHz, and WRC-19 identified parts of 275--450\,GHz for land-mobile and f
+  450        ~ NSmearWin=451,SmearAllN=451,MrUnMin=449     hout 90--275\,GHz, and WRC-19 identified parts of 275--450\,GHz for land-mobile and fixed 
+  5000       ~ HoPseudoTrials=5040,MaskDbTrans=5114        ed with centimetre wavelengths, that the array sits at 5000\,m on a site chosen partly for

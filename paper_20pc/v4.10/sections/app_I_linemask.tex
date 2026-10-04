@@ -1,0 +1,92 @@
+%% APPENDIX C -- the velocity-space line mask and its cost.
+%% Owner: appendix-triage.  Carries \label{app:linemask} (cited by
+%% 04_method.tex) and \label{sec:linecost}.
+\section{The velocity-space line mask, and what it costs}
+\label{app:linemask}
+\input{tab_maskband}
+
+Attribution decides the candidate list, and the mask decides attribution, so
+the mask's definition and its price are both given here.
+
+\emph{Definition.} A one-channel coincidence test is too tight for
+circumstellar gas: a native channel spans a fraction of a km\,s$^{-1}$ while
+real emission is shifted by many channels. The tolerance is set by the
+kinematic budget of the gas rather than by the instrument --- Keplerian
+motion where these molecules survive ($\lesssim$13\,km\,s$^{-1}$ beyond
+10\,au) and linewidths $\lesssim$1\,km\,s$^{-1}$ --- and is
+$\pm\MaskHalfKms$\,km\,s$^{-1}$ around each catalogued transition. It is
+evaluated topocentrically, in the observed sky frame
+(Appendix~\ref{app:conventions}), which is wide enough to absorb the
+barycentric and systemic terms it does not apply. The result is empirically
+conservative: the largest attributed circumstellar component ($\beta$~Pic,
+within \BpicMaxAbsStel\,km\,s$^{-1}$ of systemic) sits at \BpicMaskPct{} per
+cent of the half-width.
+
+The mask holds \MaskNTransNew{} transitions of \MaskNSpecNew{} species at
+full JPL/CDMS precision \citep{Pickett1998,CDMS2005}. The species criterion
+is the one objective rule statable in advance: the transitions ALMA's band
+definitions are built around --- the CO isotopologues, HCN, HCO$^{+}$, CS,
+SiO, CN, H$_2$CO and [C\,\textsc{i}] --- which dominate the emission of
+disc-selected fields.
+
+\emph{The half-width cannot have been tuned to remove a candidate.}
+Reclassifying all \NCross{} crossings at $\pm20$ to $\pm100$\,km\,s$^{-1}$
+costs \MaskBWTwenty{} to \MaskBWHundred{} per cent of gross bandwidth, and
+every crossing that narrowing the mask releases as unattributed is an
+identified carbon monoxide line of this survey's own: the two rank-passing
+unattributed crossings are the same pair at every half-width in that range.
+Widening the mask cannot suppress anything further. The species list is
+equally robust: the alternative selection of every Splatalogue transition
+over the \UnionIntervals{} searched islands with $E_{\rm u}\le\MaskDbEuK$\,K
+and $\log A_{ij}\ge\MaskDbLogA$ --- \MaskDbTrans{} transitions of
+\MaskDbCarriers{} species --- masks \MaskDbPctUnion{} per cent of the union
+against \MaskUnionPct{} per cent here and changes no disposition, because no
+masked crossing exceeds its own control ensemble. ``Coincident with a known
+molecular line'' is therefore a statement about a catalogue rather than a
+binary property, and no plausible widening or narrowing of either the
+half-width or the species list moves a window.
+
+\subsection{The cost of the mask}
+\label{sec:linecost}
+
+Masking removes \MaskUnionPct{} per cent of the
+unique-frequency union and \MaskGrossPct{} per cent of window-summed gross
+bandwidth, CN and CO dominating. It is not uniform, so
+Table~\ref{tab:maskband} gives it band by band: it reaches \MaskWorstPct{}
+per cent in Band~\MaskWorstBand{} and stays below 1.5 per cent in
+Bands~3--5. Nor is it shared equally between the two experiments ---
+\MaskPctA{} per cent of the Class~A union against \MaskPctB{} per cent in
+Class~B --- so the fine-channel experiment pays \MaskPctRatioAB{} times the
+fractional price, its coverage being concentrated in the line-tuned windows a
+molecular mask is designed to remove. The two do not sum to the total because
+the classes overlap in frequency.
+
+\emph{The masked crossings are not near misses, and the unmasked ones are
+not near hits.} Of the \NCross{} windows carrying an on-star crossing,
+\NSpatial{} also beat their control ring, \MaskCrossInStageOne{} of those
+lying inside the mask and \MaskCrossOutStageOne{} outside it;
+\MaskCrossInNoFlag{} more lie inside the mask without beating their ring, of
+which \MaskRepN{} are on \MaskRepStar{} alone at \MaskRepVLo{} to
+\MaskRepVHi\,km\,s$^{-1}$ from CO\,$2{\to}1$, each already rejected by its
+own ring. The remaining \NonExcRingGe{} are ordinary noise crossings whose
+own control ring reaches or exceeds the stellar value (ring-maximum median
+\NonExcRingMed{} against a crossing median \NonExcHitMed). None of them sits
+close to the mask edge: the nearest lies \MaskNearestKms\,km\,s$^{-1}$ from
+any catalogued transition of a masked species (\MaskNearestStar,
+\MaskNearestMult{} times the adopted half-width), and \MaskNoLineN{} have no
+such transition in the window at all.
+
+\emph{Masking is a design selection effect, and it has a price we cannot
+buy off.} It separates discovery from classification: a carrier at a line
+frequency is as detectable as anywhere else, but it cannot be classified,
+because the astrophysical prior at a catalogued transition is overwhelming.
+Removing those frequencies from the searched domain is the conservative
+choice, at the cost that \emph{we place no constraint at all on artificial
+emission lying inside the masked regions, at any signal strength}. A better
+design searches every frequency and attaches a \emph{lower prior} to a
+line-coincident event instead, since these are exactly the frequencies a
+communicator wanting to be found near a natural reference might choose
+\citep{CocconiMorrison1959}. The released channels support that second
+search, and the released products keep a known-line-coincident list: every
+on-source threshold crossing inside the masked intervals, with its offset
+from each nearby transition.

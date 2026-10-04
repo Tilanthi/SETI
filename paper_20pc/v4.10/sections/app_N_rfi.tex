@@ -1,0 +1,130 @@
+%% APPENDIX E -- radio-frequency interference screening.
+%% Owner: appendix-triage.  Carries \label{app:rfi}.
+\section{Radio-frequency interference screening}
+\label{app:rfi}
+
+Interference is the first alternative explanation for an unattributed
+crossing, so the screening this survey has, and the coverage it does not
+have, are both set out here.
+
+Millimetre interferometry is an unusually poor environment for terrestrial
+interference, though not an empty one, and the searched range is not above
+all allocated services: ITU Radio Regulations Article~5 carries active
+allocations throughout 90--275\,GHz, and WRC-19 identified parts of
+275--450\,GHz for land-mobile and fixed use. The specific hazard in this band
+is the \RadarLo--\RadarHi\,GHz Earth exploration-satellite (active)
+allocation used by spaceborne cloud radar --- CloudSat and, since 2024,
+EarthCARE --- which is a documented contaminant of ALMA Band~3. \RadarNWin{}
+of the \RadarNTot{} searched windows overlaps that band, and it carries
+\RadarNCross{} threshold crossings and \RadarNStage{} rank-passing events, so
+no result here rests on it and no overpass timing needs to be checked. What
+does favour this band is that terrestrial transmitters are sparse compared
+with centimetre wavelengths, that the array sits at 5000\,m on a site chosen
+partly for radio quietness, and, decisively, that an interferometer is not a
+total-power detector: a signal that is not in the far field at the phase
+centre does not fringe-track, but acquires a rapidly varying geometric phase
+across the array and is suppressed in the correlation rather than imaged.
+
+\emph{What screening exists, stated with its coverage, because the coverage
+is uneven.} Two screens are computed for every searched window from the
+released catalogue and are reproducible from it: the
+\RadarLo--\RadarHi\,GHz allocation test above, and the sky-frequency and
+intermediate-frequency tests below. The \NCtrl-position rank screen asks
+whether an excess is at the star or everywhere in the field, which is an
+interference test as well as a prioritisation, and it covers every window.
+Recurrence at the same tuning in an independent epoch covers the crossings
+for which a covering repeat block exists. The visibility fit asks whether an
+excess has the phase signature of a source at the phase centre, which a
+near-field emitter would not have, but it is a consistency check rather than
+a filter. Finally, the correlator flagging is the observatory's own, replayed
+verbatim from each block's delivered calibration script; it is not recorded
+per window in the release and cannot be reconstructed from it. \emph{No
+per-channel interference flag of our own exists, and none can be recovered.}
+
+Four measurements support the reasoning, and each is a test the population
+could have failed.
+
+\emph{First, fixed sky frequency.} Interference is a property of the
+observatory and not of the star, so a terrestrial carrier should appear at
+the same sky frequency in every window that covers it. Of the
+\NStageOneUnattrib{} unattributed events, \RfiNTestable{}
+\RfiTestableVerb{} a released crossing frequency; \RfiOtherStars{} windows
+toward \RfiOtherStarsMin--\RfiOtherStarsMax{} other stars in
+\RfiOtherBlocks{} other blocks cover those frequencies, and \RfiSameChan{}
+of them carries a crossing in the same channel.\RfiNotTestableClause{}
+
+\emph{Second, residual clustering in sky frequency.} A scale-aware scan
+statistic --- the maximum count in any band of width \AppMLadderLo{} to
+\AppMLadderHi\,MHz, calibrated against a null in which each window's peak is
+drawn on its own ALMA channel grid, since two windows sharing a standard
+tuning share an identical grid --- is flat in cluster width and rejects
+\AppMPowerNewWide{} per cent of the time at twelve injected events. Applied
+to the \AppMNCrossF{} crossings with a released frequency it \emph{does} find
+clustering, at $\pv{\AppMScanP}$ (\AppMScanObs{} observed against
+\AppMScanNull{} expected), and the cluster is the survey's own molecular
+emission: its maximal band, \AppMBandLo--\AppMBandHi\,GHz, holds
+\AppMBandN{} crossings of which \AppMBandNAttr{} lie within
+\DispoHalfKms\,km\,s$^{-1}$ of CO($2{\to}1$), and removing the
+line-attributed crossings removes the clustering ($\pv{\AppMUnattrP}$ for the
+\AppMUnattrN{} unattributed). Equivalently, and with no choice of band or
+width at all, \AppMTubeObs{} of the \AppMNCrossF{} crossings lie inside the
+survey's own $\pm\DispoHalfKms$\,km\,s$^{-1}$ tube against \AppMTubeNull{}
+expected under the matched grid null, $\pv{\AppMTubeP}$. \emph{The crossing
+population is significantly concentrated on the masked transitions, and that
+concentration is the attribution rather than a residue left over after it.}
+
+\emph{Third, fixed intermediate frequency.} An artefact of the signal chain
+would sit at a fixed intermediate frequency rather than a fixed sky
+frequency, and the crossings do not: their fractional positions within their
+own windows have median \RfiFracMed{} and are uniform over \RfiNFrac{}
+crossings.
+
+\emph{Fourth, a cross-target occupancy screen over every searched window and
+not only the crossings.} A terrestrial carrier should recur at the same sky
+frequency toward \emph{unrelated} stars. Over all \RfiOccNWin{} searched
+windows toward \RfiOccNStars{} stars, with each window's peak randomised on
+its own channel grid, the number of cross-star coincidences within
+\RfiOccTol\,MHz is \RfiOccObs{} against
+\RfiOccNull$\,\pm\,$\RfiOccNullSd{} expected ($\pv{\RfiOccP}$); among the
+\RfiOccSigN{} windows whose peak exceeds $5\sigma$ it is \RfiOccSigObs{}
+against \RfiOccSigNull$\,\pm\,$\RfiOccSigNullSd, i.e.\ \emph{below} the
+null, and with the molecular-line mask applied \RfiOccMskObs{} against
+\RfiOccMskNull$\,\pm\,$\RfiOccMskNullSd. There is no excess to explain. The
+screen is keyed on the star rather than on the product directory, which
+matters: a star's own repeat observations are not different targets, and
+every persistent feature --- a real line most of all --- would otherwise
+enter as a cross-target coincidence. \RfiOccMaskN{} of those \RfiOccSigN{}
+windows sit on a masked transition (\RfiOccSpeciesList), which is the point:
+a CO line falls at almost the same \MaskFrameUsed{} frequency toward every
+nearby star, so cross-star frequency coincidence is exactly what real line
+emission produces, and the screen cannot distinguish it from interference
+unless the mask is applied first.
+
+One crossing \emph{is} rejected as instrumental on these grounds:
+\LgVerRejectStar, which appears in the same coarse channel toward unrelated
+stars and whose visibility fit places it far off the phase centre.
+
+\emph{None of this is a substitute for the ON/OFF cadence a dedicated search
+uses, and we do not present it as one.} Accordingly we claim only that
+\emph{no identified interference mechanism accounts for these events}:
+allocation tables cannot exclude harmonics, intermodulation products,
+unconventional emitters or near-field sources, and an archival dataset
+without a simultaneous off-source strategy cannot do better. What the four
+tests establish is that the crossing population as a whole carries none of
+the signatures interference leaves --- fixed sky frequency, fixed
+intermediate frequency, or presence in unrelated targets --- which is a
+statement about the population and not a clearance of any individual
+crossing.
+
+%% ------------------------------------------------------------------
+%% NOTE: per 06_discussion.tex's own R6, this appendix no longer ends on
+%% "the null result resting on internal validation alone" -- that statement
+%% now lives once, in the discussion's lessons subsection.
+%% REQUEST (appendix-triage -> integrator):
+%%   fig:appm (the power comparison of the per-channel multiplicity statistic
+%%   against the scan statistic) is deleted: it exists to compare our own two
+%%   statistics, and the paper now states only the one it uses.  The
+%%   \AppMPowerOld* and \RfiOcc{Prior,Dir,Stale}* macro families are no
+%%   longer referenced and will be retired.  figures/appm_power.pdf is no
+%%   longer included.
+%% ------------------------------------------------------------------
