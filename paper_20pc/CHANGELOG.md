@@ -6,6 +6,80 @@ Bump the **minor** number (1.00 → 1.01) for content edits/additions within
 the same broad draft stage; bump the **major** number (1.x → 2.00) once
 Paper II's actual results/discussion/conclusions sections are added.
 
+## v4.09 (2026-10-04)
+
+**The repaired extraction becomes the search statistic, so four released threshold
+crossings fall and one appears; referee 2's 345.5 GHz cluster dissolves and turns out to
+have been an artefact of our own field truncation; eta Crv's crossing gains a real
+recurrence test; and the block ledger closes permanently on a named block that ALMA never
+calibrated.** 60 pp, main text 22.07 pp (cap deliberately broken; length deferred, D24).
+Final version of referee round 8.
+
+- **The repaired T* is adopted as the search statistic (D35).** 157 windows in 39 blocks
+  re-extracted with the corrected field selection, on-source 40.05 -> 111.74 h, noise
+  x0.692. Published crossing by crossing: 4 fall below the trigger (tau Cet, eta Crv,
+  HR 1010 x2), 1 appears (HR 1010 at 3.77 -> 5.41 as its noise falls 81.89 -> 11.50 mJy),
+  1 is restored (HD 139084 B's own extraction, 5.7635), 2 arrive with the archival tail
+  (HD 14055). **56 - 4 + 1 + 1 + 2 = 56 -- a DIFFERENT 56**, said explicitly and asserted.
+  All eight fail the frozen 512-control rank screen; no disposition reverses.
+- **Legitimacy, as three measurements rather than an assurance**: the repair was recorded
+  in writing on 2026-09-27 before any re-extracted product existed, the trigger and the
+  drift grid are unchanged, it was applied uniformly, and it is unbiased in the median
+  (+0.072), a no-op where nothing was lost (0.057 on the windows that recovered no time)
+  and not a no-op on the crossings (0.11-1.64).
+- **Referee 2's 345.48-345.64 GHz group was substantially OUR OWN artefact.** Three of its
+  six members are among the four that fall and two of those are HR 1010, one of the two
+  worst field-truncated stars. On the repaired population the referee's own fixed band
+  gives p = 0.019 against 3.6e-4 as shipped, the position-free scan 0.82, the
+  position-and-width-free scan 0.78, and in the stellar frame 0.33 / 0.89 / 0.88. The
+  build asserts that the post-hoc band can never be printed as the result.
+- **eta Crv's crossing is now excluded as a persistent source at 11.57 sigma** by the one
+  other epoch in the archive that covers it -- 2.19x deeper -- measured at a single drift
+  and at the stellar-frame-matched channel, which moves the cell by 80 channels from a
+  naive sky match. N_eff = 4.79 equivalent discovery epochs from one block. And eta Crv
+  has ONE crossing in this version, not two.
+- **The block ledger closes and the remaining gap is not ours.** The one block the ledger
+  carried unnamed is `A002_X11e10bc_X23333`, eta Crv Band 7: ALMA shipped 67.24 GB of raw
+  ASDM it never pipeline-calibrated, verified against the delivery for its member OUS
+  (3 blocks offered, 2 carry calibration and are already in the survey, this one carries
+  none). `never_started` disappears from the ledger. Searched 144 / 1.7 TB, no calibration
+  18 / 237 GB, legacy failures 11, disk-infeasible 1 / 29.7 GB, unattempted 3 / 168 GB,
+  summing to the 177 in scope. Two published disk-infeasible labels are falsified by
+  measurement.
+- **Both withdrawn results survive a corrected analysis key.** The near-edge excess
+  reproduces at x2.464 but 59 per cent comes from one window, falls to x1.020 (p = 0.47)
+  without it, and a held-out half gives x1.181 (p = 0.24) -- D5's standing condition, met.
+  The occupancy excess is immune and shown to be. The aggregate exceedance rates are
+  re-derived on 1,641 re-profiled windows and the fixed key STRENGTHENS the contrast:
+  Class A 7.794 -> 8.099, all windows 6.400 -> 6.596; Class B identical to the last digit.
+- **The archival tail**: 8 of 12 reachable blocks searched, +32 windows, +22.69 h, two new
+  HD 14055 crossings excluded at 11.75 and 12.70 sigma over 31 covering epochs, with the
+  10 blocks fetched because they cover those frequencies kept in a separately labelled
+  follow-up stratum (40 windows, 35.33 h) rather than merged into the census.
+- **Table 11 is rebuilt.** The window-to-window transfer row referee 1's point 5 is about
+  reaches the table for the first time (-6/+9 per cent from 13 of 402 Class A windows):
+  it had been computed and then stripped as unreferenced for four versions, and the gate
+  now requires the manuscript to reference it. `PLX_WORST = 0.0248`, commented "the largest
+  fractional parallax error in the sample", was x1.51 too large -- measured over 77 stars
+  it is 1.65 per cent, towards gam Tri = HD 14055. The decorrelation bracket is declared an
+  external assumption. `\BudDominant` named a term that is not in the sum it belongs to.
+- **Three gates fired during the build and all three were right to**: both rank-flagged
+  unattributed crossings are now fitted (the CP-72 2713 visibility fit landed, Re/sigma
+  +5.10), so two assertions written to stop exactly that change stopped the build and
+  forced the two paragraphs to be rewritten; and a macro-count pin caught the three macros
+  that change added.
+- **CAVEAT, stated in the paper and in the notes**: the deposited catalogue remains the
+  1,651-row release. The 32 tail windows' and the restored companion's per-window content
+  is not in this deposit, and that count is the denominator of some forty statistics; the
+  v4.09 extent (1,687 windows / 417 A + 1,270 B / 90 stars / 56 crossings / 1,185.49 h) is
+  printed as a four-step sequence under its own macro namespace, and the repaired statistic
+  for every re-extracted window ships as `repaired_v409.csv`.
+- Gates: pdflatex 0/0/0/0, roundcollide 92/92, macrosyn 0, consistency 0, prosenum 0,
+  macroleak 0 (with a new clause for non-letter macro names), intsweep 83/83,
+  audit_numbers 49 PASS / 0 FAIL, reproducer 22/0, census C1-C3 pass, pbgate drive 0 PASS
+  + drives 1-8 fire, selftests 20 / 46 / 60 / 65 / 29 / 60 / 48, **cleanregen 144/144
+  byte-identical**.
+
 ## v4.08 (2026-09-27)
 
 **The primary-beam audit lands as a result rather than a repair; the multi-epoch stack is

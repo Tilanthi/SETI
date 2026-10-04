@@ -1,0 +1,38 @@
+{
+ "eb": "A002_X11e10bc_X23333",
+ "star": "eta Crv",
+ "band": "B7",
+ "gb": 67.240411136,
+ "mous": "uid://A001/X362b/Xc1d",
+ "rank": 96,
+ "priority": 2,
+ "dist_pc": 18.2437,
+ "n_unsearched_in_mous": 1,
+ "searched_siblings": [
+  "A002_X11e10bc_X12662",
+  "A002_X122b6ff_X1041e"
+ ],
+ "source": "/data/SETI/mine2026/worklist_mine2026.json (the 177-block scope list) + infeasible_blocks.json entry 2 of 4",
+ "why_unnamed": "blockfate_v400.json copied only 3 of the 4 names in infeasible_blocks.json",
+ "fate_counts": {
+  "Done": 144,
+  "NoCal": 18,
+  "CalFail": 11,
+  "DiskInfeas": 1,
+  "Unattempted": 3
+ },
+ "fate": {
+  "Done": "144",
+  "DoneTB": "1.7",
+  "NoCal": "18",
+  "NoCalGB": "237",
+  "CalFail": "11",
+  "Infeas": "1",
+  "InfeasGB": "30",
+  "Unattempted": "3",
+  "UnattemptedGB": "167",
+  "Scope": "177",
+  "NeverStarted": "0"
+ },
+ "correct_fate": "excluded_no_calibration_available"
+}
