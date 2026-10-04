@@ -1,5 +1,12 @@
 #!/bin/bash
 cd "$(dirname "$0")"
+# v4.09: pin the timestamp pdflatex stamps into the PDF (and writes into the
+# log), as make_all.sh already does for the figures.  Without this the PDF is
+# reproducible in content but not in bytes, so a gate re-run after a push left
+# the deposited PDF differing from the one in the repository for no reason at
+# all.  Same epoch as make_all.sh: 2020-01-01T00:00:00Z.
+export SOURCE_DATE_EPOCH=1577836800
+export FORCE_SOURCE_DATE=1
 V=technosignatures_40pc_v4.09
 for i in 1 2 3; do pdflatex -interaction=nonstopmode $V.tex > /dev/null 2>&1; done
 python3 - "$V" <<'PY'

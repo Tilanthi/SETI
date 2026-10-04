@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.8.25)  4 OCT 2026 03:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.8.25)  1 JAN 2020 00:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1385,7 +1385,7 @@ nged.
 Here is how much of TeX's memory you used:
  16289 strings out of 480247
  248461 string characters out of 5896151
- 633923 words of memory out of 5000000
+ 632923 words of memory out of 5000000
  33355 multiletter control sequences out of 15000+600000
  495926 words of font info for 93 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -1439,7 +1439,7 @@ sr/share/texmf/fonts/type1/public/cm-super/sfti0900.pfb></usr/share/texmf/fonts
 /type1/public/cm-super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-sup
 er/sftt0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></us
 r/share/texmf/fonts/type1/public/cm-super/sfxc0800.pfb>
-Output written on technosignatures_40pc_v4.09.pdf (60 pages, 1695336 bytes).
+Output written on technosignatures_40pc_v4.09.pdf (60 pages, 1694931 bytes).
 PDF statistics:
  1951 PDF objects out of 2073 (max. 8388607)
  1640 compressed objects within 17 object streams
