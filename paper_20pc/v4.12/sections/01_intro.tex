@@ -1,0 +1,45 @@
+\section{Introduction}
+\label{sec:intro}
+
+The public ALMA archive holds thousands of hours of millimetre and
+submillimetre observations taken for other reasons, mostly studies of dust
+discs and planet formation. Their visibilities allow a spectrum at the
+position of the star at the centre of each field, at a resolution and depth
+set by the original observer's correlator setup. This paper searches those
+spectra for a narrowband transmitter at the star's own position. Nothing of
+the kind survived.
+
+Searches for \emph{technosignatures} --- detectable imprints of technology on
+the electromagnetic spectrum, intended or not
+\citep{Sheikh2020,SETIreview2025} --- have examined many thousands of stars
+over six decades, yet sample only \HaystackFrac{} of the space of transmitter
+frequency, bandwidth, power and duty cycle \citep{Wright2018}, and
+essentially all of that effort lies below ${\sim}30$\,GHz. No published radio
+technosignature search above ${\sim}30$\,GHz has reached a star within
+40\,pc: the one published search in that range worked in ALMA Band~3 toward
+targets at \MasonNearKpc\,kpc and beyond \citep{Mason2025}, and few searches
+at any frequency reprocess existing interferometric archives
+\citep{White2026}. The band is attractive because a carrier arrives less
+distorted and a given aperture delivers more gain per watt supplied, and hard
+because archived correlator channels are thousands of times coarser than a
+dedicated narrowband backend and are crowded with molecular lines, a dense
+background of real astrophysical signals that a threshold search must
+separate from an artificial one
+(\S\ref{sec:background},~\S\ref{sec:mmdifferent}).
+
+The signal sought is an \emph{unresolved spectral carrier}, emission confined
+to a few channels, unresolved at the stellar position, and persistent enough
+to recur between epochs. Each qualifier is a restriction. A carrier broader
+than the channel width would not be recovered, nor one that fills the
+synthesised beam, nor one that appears once and never again --- and it is
+recurrence rather than brightness that separates an interesting event from a
+detection \citep{Sheikh2021}. The frequency is allowed to drift, as it must
+for a transmitter carried on a rotating, orbiting body, and the drift
+searched is bounded by a line-of-sight acceleration rather than by a
+frequency (\S\ref{sec:statistic}). The channels used are
+\ChanLoA--\ChanHiA\,kHz wide, fine only relative to this archival sample, so
+``narrowband'' here describes the assumed transmitter and never the resolving
+power of the data. The targets were chosen by archival disc and
+planet-formation programmes and not for this search, so every statistical
+statement that follows is about an archive-selected sample and not about the
+solar neighbourhood (\S\ref{sec:excludes}).

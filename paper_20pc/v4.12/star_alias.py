@@ -1,0 +1,240 @@
+#!/usr/bin/env python3
+"""Star-name canonicalisation and bound-pair systems, in one place.
+
+Three separate defects all reduce to the same thing -- one object reaching
+the export under more than one string -- and each was invisible because
+several generators carried their own copy of the map and were all wrong
+together:
+
+  * four stars appear under two punctuations of the same designation
+    (SIMBAD's name route and its position route disagree, and two entries
+    carry a leading "* "), which made 94 stars of 90 and 87 systems of 83
+    and reached the paper's title;
+  * TWA 3A reaches the export as two Gaia components, 37.05 and 37.13 pc,
+    and was in no bound pair, so it counted as two systems;
+  * one entry carries the ALMA field name rather than the star's: the
+    field of `j1256-1257` contains LP 736-15, whose Gaia parallax of
+    47.27 mas is the 21.154 pc the catalogue already records.
+
+The defence against a recurrence is an identity, not vigilance: no two
+systems may share a distance, asserted in v342_calc.py, and the star and
+system counts are re-derived from the released catalogue by
+reproduce_from_catalogue_v385.py.
+"""
+#: name strings that denote the same star under different punctuation
+ALIAS = {
+    'HD 207129 (Gaia DR3 6564091190988411520)':
+        'HD 207129 Gaia DR3 6564091190988411520',
+    'HD53143 (Gaia DR3 5479222240596469632)':
+        'HD53143 Gaia DR3 5479222240596469632',
+    '* g Lup': 'HD 139664',
+    '* eta Crv': 'eta Crv',
+    # v4.07 (referee_r8/CENSUS_DUPLICATES.md, corrected in BUILD_NOTES_V407):
+    # the two `HD 139084B nnnnnn` strings are NOT two names of one star.  They
+    # are the two components of V343 Nor, 10.3" apart, and the suffix came from
+    # a disambiguator applied to an ALMA FIELD name.  censusfix_v407.py renames
+    # them in the export at the source; these two entries make any surviving
+    # pre-repair string -- in a frozen input, a hand-keyed literal or an older
+    # catalogue read for comparison -- resolve to the repaired name instead of
+    # becoming an 83rd system.
+    'HD 139084B 921024': 'HD 139084',
+    'HD 139084B 805632': 'HD 139084B',
+}
+
+#: designation repairs applied on release
+NAME_REPAIR = {
+    'LSR J18353259': 'LSR J1835+3259',
+    'PM J034331958': 'PM J03433+1958',
+    'WD 0407179':    'WD 0407+179',
+    'BD05  1668':    'BD+05 1668',
+    'j1256-1257':    'LP 736-15',
+}
+
+#: physically bound pairs sharing one statistical unit. Each member has
+#: its own Gaia parallax, so these are components and not duplicate
+#: strings: LP 476-207 at 23.7525 and 23.7875 pc, V343 Nor (HD 139084 and
+#: HD 139084B) at 38.72 and 39.31, 2MASS J05241914 at 30.99 and 31.19,
+#: TWA 3A at 37.05 and 37.13. TWA 3A was missing from this list until v3.85
+#: and counted as two systems.
+#: v4.07: the V343 Nor entry is written with the repaired names. It remains a
+#: bound pair and therefore one system, which is why \NSystems does not move
+#: when the misnamed primary is renamed; the strings it used to carry are in
+#: ALIAS above, so canon() reaches the same system either way.
+PAIRS = [('2MASS J05241914-1601153 551040', '2MASS J05241914-1601153 717696'),
+         ('NAME AT Mic AB Gaia DR3 6792436799475128960', 'V AT Mic B'),
+         ('G 272-61A', 'G 272-61B'),
+         ('GJ 2006A', 'GJ 2006B'),
+         ('LP 476-207 384128', 'LP 476-207 783296'),
+         ('V star TX PsA', 'V star WW PsA'),
+         ('HD 139084', 'HD 139084B'),
+         ('TWA 3A 696000', 'TWA 3A [576064]')]
+
+
+def _squash(n):
+    return ' '.join(str(n).split())
+
+
+def canon(n):
+    """The star: whitespace collapsed, target-id suffix removed, aliases
+    merged."""
+    n = _squash(n)
+    return ALIAS.get(n, n)
+
+
+_SYSOF = {}
+for _a, _b in PAIRS:
+    _SYSOF[_squash(_a)] = _squash(_a)
+    _SYSOF[_squash(_b)] = _squash(_a)
+
+
+def sysname(n):
+    """The statistical unit: canonical star, then collapsed onto its pair."""
+    n = canon(n)
+    return _SYSOF.get(n, n)
+
+
+def released(n):
+    """The designation as released."""
+    n = canon(n)
+    return _squash(NAME_REPAIR.get(n, n))
+
+
+if __name__ == '__main__':
+    import csv, collections, sys
+    R = list(csv.DictReader(open('per_target_results_v3.99.csv')))
+    st = {released(r['star_name']) for r in R}
+    sy = {sysname(r['star_name']) for r in R}
+    print('stars %d, systems %d, star-bands %d'
+          % (len(st), len(sy),
+             len({(canon(r['star_name']), r['band']) for r in R})))
+    d = collections.defaultdict(set)
+    for r in R:
+        d[round(float(r['dist_pc']), 2)].add(sysname(r['star_name']))
+    bad = {k: v for k, v in d.items() if len(v) > 1}
+    print('distances shared by two systems:', bad or 'none')
+
+
+#: Suffixes appended by the target-resolution step that are not part of any
+#: catalogue designation. They must be stripped for display but NOT for
+#: identity, because PAIRS distinguishes components by exactly these digits.
+_DISPLAY_SUFFIX = ('696000', '805632', '384128', '783296', '921024',
+                   '717696', '551040', '576064', '[576064]')
+
+#: Designations whose case is mangled in the export.
+_DISPLAY_CASE = {
+    'hd92945': 'HD 92945',
+    'j1256-1257': 'LP 736-15',
+    'Barta 161 12': 'Barta 161 12',
+}
+
+
+def display(n):
+    """Printable designation: repairs applied, target-id suffix removed,
+    case normalised. Use for figure labels and table rows only -- `canon`
+    remains the identity function, since PAIRS relies on the suffixes."""
+    raw = str(n)
+    # NAME_REPAIR keys carry the export's own (sometimes doubled) spacing,
+    # so try the raw string before the squashed one
+    n = NAME_REPAIR.get(raw, NAME_REPAIR.get(_squash(raw), raw))
+    n = _squash(n)
+    for suf in _DISPLAY_SUFFIX:
+        if n.endswith(' ' + suf):
+            n = n[: -(len(suf) + 1)].strip()
+    if n in _DISPLAY_CASE:
+        return _DISPLAY_CASE[n]
+    if n.lower().startswith('hd') and not n.startswith('HD'):
+        rest = n[2:].strip()
+        return 'HD ' + rest
+    return n
+
+
+# ---------------------------------------------------------------- v4.01
+# Referee 2, typography: SIMBAD-style designations. `display` had a guard
+# `not n.startswith('HD')`, so it repaired "hd 14055" but left "HD14055"
+# exactly as it was -- the missing space is the commonest defect in the
+# export and the one the referee lists first.
+_GREEK = {'alf': 'alpha', 'bet': 'beta', 'gam': 'gamma', 'del': 'delta',
+          'eps': 'epsilon', 'zet': 'zeta', 'eta': 'eta', 'tet': 'theta',
+          'iot': 'iota', 'kap': 'kappa', 'lam': 'lambda', 'mu.': 'mu',
+          'nu.': 'nu', 'xi.': 'xi', 'omi': 'omicron', 'pi.': 'pi',
+          'rho': 'rho', 'sig': 'sigma', 'tau': 'tau', 'ups': 'upsilon',
+          'phi': 'phi', 'chi': 'chi', 'psi': 'psi', 'ome': 'omega'}
+# catalogues whose designation carries a sign that the export dropped
+_SIGNED = {'BD05 1668': 'BD+05 1668'}
+
+
+# SIMBAD exports a star's common name with a "NAME " prefix, which is a
+# catalogue marker and not part of the name.  Stripping it is necessary but
+# not sufficient: the export also drops the apostrophe and lower-cases the
+# generic word, so "NAME Barnards star" has to become "Barnard's Star".
+#
+# A hand table of the stars that carry the marker was the obvious thing to
+# write and is the wrong thing: it fires on every star the catalogue adds,
+# and the failure is a missing entry rather than a wrong name, so it would be
+# discovered by a build break in someone else's generator.  The marker is
+# stripped mechanically instead, with one rule for the possessive, and
+# `_COMMON` is left as an override for a name no rule can reach.
+_COMMON = {}
+# Two designations for one star, where the literature uses the second.  The
+# catalogue name is kept, because it is the key a reader joins on; a caller
+# that wants the alias beside it asks with alias=True.
+_ALSO = {'BD+05 1668': 'GJ 273'}
+
+
+def designation(n, tex=True, alias=False):
+    """SIMBAD-style printable designation, for tables and figure labels.
+
+    `tex=True` renders Bayer letters as LaTeX (\beta~Pic); `tex=False`
+    spells them out, for matplotlib labels.  `alias=False` suppresses the
+    second designation.  `alias=True` adds it.
+
+    ★ The alias is OFF by default on purpose.  `audit_numbers` compares every
+    star string in the manuscript against this function, so turning the alias
+    on by default makes every correct occurrence of the catalogue name a
+    failure -- the printable form a table wants and the canonical form an
+    audit compares are not the same string, and conflating them turns one
+    editorial request into a few hundred false failures.
+    """
+    import re as _re
+    import re as _re0
+    n = display(n)
+    # the export appends a Gaia DR3 source id to some designations; it is a
+    # cross-identification, not part of the name
+    n = _re0.sub(r'\s+Gaia\s+DR[23]\s+\d+$', '', n).strip()
+    n = _SIGNED.get(n, n)
+    # HD/HR/HIP/GJ catalogue numbers always carry one space
+    n = _re.sub(r'^(HD|HR|HIP|GJ|LP|LHS|TYC)\s*(\d)', r'\1 \2', n)
+    n = _re.sub(r'^GL\s*', 'GJ ', n)
+    n = _re.sub(r'^[Ll][Pp]\s*', 'LP ', n)
+    head = n.split(' ')[0].lower()
+    if head in _GREEK and ' ' in n:
+        rest = n.split(' ', 1)[1]
+        g = _GREEK[head]
+        n = ('$\\%s$~%s' % (g, rest)) if tex else ('%s %s' % (g, rest))
+    # v4.01, referee 2 S5: a zone catalogue's negative declination band takes
+    # a minus sign, not a hyphen.  The prose already set CP$-$72 2713 while
+    # every generated table printed CP-72 2713, because each generator had
+    # its own idea of the printable form.  Done here, once.
+    if tex:
+        n = _re.sub(r'^(BD|CD|CP|BPM)-', r'\1$-$', n)
+    # the SIMBAD common-name marker
+    if n.upper().startswith('NAME '):
+        body = n[5:].strip()
+        key = body.lower()
+        if key in _COMMON:
+            n = _COMMON[key]
+        else:
+            # "Barnards star" -> "Barnard's Star"; "Teegarden's Star" and
+            # "AT Mic AB" are already right and are left alone.
+            body = _re.sub(r'\b([A-Z][a-z]+)s(\s+[Ss]tar)\b',
+                           r"\1's\2", body)
+            body = _re.sub(r'\bstar\b', 'Star', body)
+            n = body
+        assert not n.upper().startswith('NAME '), (
+            'designation(%r) would print the SIMBAD "NAME " marker' % n)
+    bare = _re.sub(r'\$-\$', '-', n)
+    if alias and bare in _ALSO:
+        n = '%s (%s)' % (n, _ALSO[bare])
+    elif alias and n in _ALSO:
+        n = '%s (%s)' % (n, _ALSO[n])
+    return n

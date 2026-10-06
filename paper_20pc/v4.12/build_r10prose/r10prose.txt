@@ -1,0 +1,346 @@
+Version October 4, 2026
+Preprint typeset using LATEX style openjournal v. 09/06/15
+
+PROBE BUILD OF THE PROSE FILES
+Probe1
+Version October 4, 2026
+
+ABSTRACT
+Could a nearby star be running a narrowband millimetre transmitter bright enough that ALMA
+has already recorded it? Almost nothing above 30 GHz has been searched, and no search there has
+reached stars this close. We have therefore searched the public ALMA archive at each star’s own
+position for an unresolved carrier whose frequency drifts: 402 spectral windows toward 60 stellar
+systems within 40 pc, with channels fine enough to follow a drift, covering 47.7 GHz of sky frequency
+in disconnected intervals from 90 to 873 GHz. Of the 56 threshold crossings, 19 fall on catalogued
+molecular transitions, including the β Pictoris disc, recovered blind; the rest are no more numerous
+than each field’s own control positions predict, though those positions are not a perfect null. Only 1
+unattributed crossing is brighter at its star than at any control, and it is absent at the next observation
+of that frequency. No carrier both passed the selection and recurred in an independent observation.
+Sensitivity is measured by injecting carriers into the calibrated visibilities and recovering them through
+the whole selection: the median system’s best window reaches 1.77 × 1015 W, the power at which nine
+carriers in ten survive every stage — a recovery fraction, not a detection probability. Coarser windows
+add a supplementary limit on unresolved spectral excess. What limits such a search is line confusion
+and how often the archive revisits a star at one frequency, not sensitivity; and because ALMA chose
+these stars, the result describes them, not the solar neighbourhood.
+Subject headings: extraterrestrial intelligence, radio lines: stars, submillimetre: stars, surveys, astrobiology
+1. INTRODUCTION
+
+This paper asks whether any nearby star is transmitting a narrow radio signal that ALMA happened
+to record while observing something else. The public
+archive holds thousands of hours of millimetre and submillimetre observations taken for quite different reasons,
+mostly studies of dust discs and planet formation, and
+every one of them also contains a spectrum of the star
+at the centre of the field. A transmitter would appear in
+such a spectrum as a spike confined to one or two channels. It would sit at the star’s position and nowhere else
+in the field, and reappear if the star were observed again.
+We searched the archive for exactly that. Nothing of the
+kind survived.
+A technological civilisation may imprint the electromagnetic spectrum detectably whether or not it intends
+to, a technosignature (Sheikh 2020; Vidal et al. 2026),
+and millimetre wavelengths are an attractive place to
+look for one. Interstellar scattering and dispersion fall
+steeply with frequency, so a high-frequency carrier arrives less distorted; a given aperture delivers higher gain,
+and so more radiated power per watt supplied to the
+transmitter; and coherent millimetre emission is already
+engineered on Earth, for directional links, radar and
+beamed power. The band is correspondingly hard to
+search. The atmosphere transmits unevenly and adds
+phase noise, receivers are noisier than at centimetre wavelengths, and archived correlator channels are thousands
+of times coarser than a dedicated narrowband backend,
+so a carrier is diluted within one channel and its drift can
+smear it across several. These bands are also crowded
+with molecular lines, a dense background of real astro1 probe
+
+physical signals that a threshold search must separate
+from an artificial one.
+Six decades of radio searches have examined many
+thousands of stars, yet sample only 6×10−18 of the space
+of transmitter frequency, bandwidth, power and duty cycle (Wright et al. 2018). Essentially all of that effort lies
+below ∼30 GHz. Above it we are aware of one published
+search, in ALMA Band 3 (Mason et al. 2025), whose targets lie at 1.01 kpc and beyond; no search above ∼30 GHz
+has yet reached a star within 40 pc at all. Few searches at
+any frequency reprocess existing interferometric archives,
+although those archives already hold a spectrum of every
+target they have ever pointed at (§1). That is the regime
+this paper enters.
+The signal sought here is an unresolved spectral carrier.
+It is emission confined to a few channels, unresolved at
+the stellar position, and persistent enough to recur between epochs. Each qualifier is a real restriction. A
+carrier broader than the channel width would not be recovered, nor one that fills the synthesised beam, nor one
+that appears once and never again. Its frequency is allowed to drift, as it must for a transmitter carried on a
+rotating, orbiting body, and the drift searched is bounded
+by a line-of-sight acceleration rather than by a frequency
+(§1). The fine channels used are 15.3–1953 kHz wide,
+so “narrowband” here describes the assumed transmitter
+and never the resolving power of the data.
+One limit on interpretation holds throughout. The targets were chosen by archival disc and planet-formation
+programmes, not for this search, and the sample inherits
+their preferences in distance and in spectral type (§1).
+Every statistical statement here is therefore about the
+ALMA archive-selected stellar sample and not about the
+solar neighbourhood.
+
+2
+
+White & Dey
+STUBS
+
+2. CONCLUSIONS
+
+1. ALMA’s public archive opens a region of search space
+unexamined toward nearby stars. No search above
+about 30 GHz has reached a star within 40 pc, and the
+one previous Band 3 search targeted stars at 1.01 kpc
+and beyond. Of the 118.1 GHz of unique sky frequency searched here in either class, 20.6 GHz lies
+inside the frequency axis of the Wright et al. (2018)
+search haystack, which defines a parameter space and
+not coverage by any telescope.
+2. The primary experiment is 402 fine-channel windows toward 60 stellar systems, covering 47.7 GHz of
+unique frequency in disconnected intervals, searched
+for an unresolved carrier whose frequency drifts. A
+secondary coarse-channel search for an unresolved
+spectral excess adds 70.4 GHz in 1249 windows, with
+no drift discrimination. Both come from one uniform
+reduction of 404 public execution blocks, 4.1 TB of
+raw data.
+3. Sensitivity is a measured completeness, not a threshold. Carriers injected into the real calibrated visibilities are recovered through the unchanged selection, the spatial ranking included, and EIRP90 is
+the power at which nine in ten come back. It
+is quoted per window: 3.45 Ptrig where the control
+ring is noise, a bound where resolved disc emission raises it. The median system’s best window
+reaches 1.77 × 1015 W, with a spread across systems
+of 7.74 × 1013 –5.79 × 1016 W.
+4. All 56 threshold crossings are reported with their
+dispositions. Of these, 19 coincide with a catalogued molecular transition, almost all of them carbon monoxide. Of the remaining 37, 36 have repeat
+coverage at the same frequency and were tested for
+recurrence in the star’s own frame: none is present
+again, the largest statistic at any predicted cell being 4.71 against Ttrig = 5, and the weakest exclusion
+5.0σ. The one untested crossing had not retained its
+discovery spectrum. Exactly 1 of them outranks all
+512 control positions, which is a prioritisation and
+not a confirmation.
+5. What this survey could search and what it could
+confirm are different extents and must not be read
+as one statement. The search covered 60 systems,
+of which only 30, carrying 44 per cent of the finechannel coverage, were observed again at the same
+frequency more than a day apart, and 11 beyond a
+year. A transmitter is persistent here if it would be
+detectable above the quoted power in every independent observation covering its frequency.
+6. Combining each star’s epochs in its own rest frame
+deepens the flux limit by a median factor 1.46. For
+Proxima Centauri the stacked limit, measured by injection into the stack, is 3.19× deeper than that star’s
+own best single epoch and reaches 1.73 × 1013 W in
+15.625 MHz channels — a Class B limit on an unresolved excess, carrying no drift discrimination — for
+an emitter steady in the stellar frame to 20.9 km s−1
+across 6.3 yr.
+7. These results constrain persistent, unresolved carriers
+
+within the frequency, drift, duty-cycle and sensitivity
+domain actually searched, toward the stars ALMA
+happened to observe, and not the solar neighbourhood. The more transferable result is what such a
+search runs into. Thermal sensitivity does not bind
+it — ALMA supplies more than the experiment can
+use — but molecular-line confusion, a channelisation
+chosen by other observers for other purposes, and
+how often the archive happened to look twice.
+AUTHOR CONTRIBUTIONS
+
+G.J.W. conceived the survey, defined the target sample and the selection criteria, and wrote the manuscript.
+R.D. built and operated the archival retrieval, calibration and search pipeline, implemented the spatial control
+statistic and the injection–recovery campaigns, and produced the released catalogue and its regeneration scripts.
+Both authors designed the candidate vetting procedure,
+chose the masked species, carried out the statistical validation reported in §1 and Appendix 1, and agreed the
+dispositions of Table 1.
+FUNDING
+
+This work received no dedicated funding. It used public archival data and no observing time was awarded for
+it.
+COMPETING INTERESTS
+
+The authors declare no competing interests. VBRL
+Holdings is a privately held company through which R.D.
+conducts independent research, named here solely as his
+affiliation; it had no role in the design of the survey, the
+selection of targets, the analysis, the decision to publish
+or the content of this paper, and provided no funding for
+the work.
+ACKNOWLEDGEMENTS
+
+This paper uses ALMA data from the public ALMA
+Science Archive. The 404 primary-census execution
+blocks searched span 2013 October 6 to 2025 June 11
+across 63 proposal codes, which in the standard
+ADS/JAO.ALMA#code form are:
+2012.1.00142.S,
+2012.1.00198.S,
+2012.1.00268.S,
+2012.1.00385.S,
+2012.1.00437.S,
+2012.1.00993.S,
+2013.1.00359.S,
+2013.1.00588.S,
+2013.1.01147.S,
+2013.1.01214.S,
+2015.1.00307.S,
+2015.1.00633.S,
+2015.1.00783.S,
+2015.1.01015.S,
+2015.1.01260.S,
+2016.1.00104.S,
+2016.1.00358.S,
+2016.1.00515.S,
+2016.1.00637.S,
+2016.1.00803.S,
+2016.1.00817.S,
+2016.1.00880.S,
+2016.2.00015.S,
+2016.2.00200.S,
+2016.A.00013.S,
+2017.1.00167.S,
+2017.1.00200.S,
+2017.1.00215.S,
+2017.1.00561.S,
+2017.1.00698.S,
+2017.1.00704.S,
+2017.1.00786.S,
+2017.1.00986.S,
+2017.1.01583.S,
+2017.1.01644.S,
+2018.1.00045.S,
+2018.1.00072.S,
+2018.1.00126.S,
+2018.1.00461.S,
+2018.1.00470.S,
+2018.1.00947.S,
+2018.1.01149.S,
+2018.1.01545.S,
+2018.1.01833.S,
+2019.1.00189.S,
+2019.1.01443.T,
+2019.1.01517.S,
+2019.1.01603.S,
+2019.1.01681.S,
+2019.2.00208.S,
+2021.1.00485.S,
+2021.1.01209.S,
+2021.2.00097.S,
+2022.1.00134.S,
+2022.1.00338.L,
+2022.1.00793.S,
+2022.1.01163.S,
+2023.1.00390.S,
+2024.1.00165.S,
+2024.1.00595.S,
+2024.1.00722.S,
+2024.1.01095.S, 2024.A.00040.S .
+Per-block epochs
+
+An ALMA Archival Technosignature Search within 40 pc
+are in the machine-readable release. The archive metadata exposes no proposal code for 2 of the 404 blocks
+(A002_X11d9ce7_X5257, A002_Xbf792a_X26ec), which
+are therefore not represented in that list. ALMA is a
+partnership of ESO (representing its member states),
+NSF (USA) and NINS (Japan), together with NRC
+(Canada), NSTC and ASIAA (Taiwan), and KASI
+(Republic of Korea), in cooperation with the Republic
+of Chile. The Joint ALMA Observatory is operated
+by ESO, AUI/NRAO and NAOJ. This work has made
+use of data from the European Space Agency (ESA)
+mission Gaia (Gaia Collaboration et al. 2023), processed
+by the Gaia Data Processing and Analysis Consortium
+(DPAC). This research has made use of the SIMBAD
+database (CDS, Strasbourg, France).
+DATA AVAILABILITY
+
+The reference of record is a single permanent Zenodo
+deposit, cited by its DOI. It carries every number in this
+paper and the code that produced them, and contains:
+the 89-star target catalogue with its selection function;
+one row for each of the 1651 searched windows, carrying
+the ALMA project code and execution-block identifier,
+frequency limits, native channel width, trial-drift grid,
+trigger statistic at the stellar position, control statistics
+of the 512-position ring and the window’s EIRP90 ; all
+56 threshold crossings with their stellar-frame frequencies, line classifications, recurrence measurements and
+dispositions; the injection–recovery records; the blockby-block archival verdicts and the ALMA delivery record
+
+3
+
+for every block in scope that could not be searched; and
+the full pipeline with the commit that produced the deposited products. What has been demonstrated rather
+than claimed is narrower, and it is a measured number
+in both cases: 120 generated products regenerate byteidentically from the frozen inputs, and 41 headline quantities are re-derived from the released catalogue alone,
+without the pipeline.
+The choices that could manufacture a candidate were
+fixed in advance, and two of them can be checked
+without the deposit: the calibration hold-out rule of
+Appendix 1 and the block list its first guard depends on were committed to the project repository as
+c75069040eab52ec1336376a4dae62114bb281a3 on 2026
+September 14 at 07:10 UTC, 3 days before the first reserved block was searched. The frozen search statistic
+and the frozen line list are deposited with the data release, which is the identifier for both. The repository at
+https://github.com/Tilanthi/SETI is a working mirror and may move on.
+SOFTWARE
+
+The
+pipeline
+depends
+on
+CASA
+6.7.6
+(casatools/casatasks 6.7.6-14; CASA Team et al.
+2022), Python 3 with astropy (Astropy Collaboration et
+al. 2022), numpy (Harris et al. 2020) and scipy (Virtanen et al. 2020), and the ALMA Science Archive and
+SIMBAD TAP interfaces through astroquery (Ginsburg
+et al. 2019); all are free and open-source, with exact
+versions recorded in the frozen release.
+
+REFERENCES
+Astudillo-Defru N., et al., 2017, A&A, 602, A88
+Astropy Collab., 2022, ApJ, 935, 167
+Backus P. R., et al., 2002, BAAS, 34, 1173
+Blomme R., et al., 2023, A&A, 674, A7
+CASA Team, 2022, PASP, 134, 114501
+Burton K., MacGregor M. A., Osten R. A., 2022, ApJL, 939, L6
+Burton K., 2024, PhD thesis, Univ. Colorado Boulder, ch. 4
+Cataldi G., et al., 2023, ApJ, 951, 111
+Choza C., et al., 2024, AJ, 168, 254
+Cocconi G., Morrison P., 1959, Nature, 184, 844
+Czech D. J., et al., 2021, PASP, 133, 064502
+Dent W. R. F., et al., 2014, Science, 343, 1490
+Drake F. D., 1961, Physics Today, 14(4), 40
+Drake F. D., 1974, in Sagan C., ed., CETI. MIT Press
+Enriquez J. E., et al., 2017, ApJ, 849, 104
+Gaia Collab., Vallenari A., et al., 2023, A&A, 674, A1
+Garrett M. A., et al., 2026, MNRAS, in press (arXiv:2605.10212)
+Gentile Fusillo N. P., et al., 2021, MNRAS, 508, 3877
+Ginsburg A., et al., 2019, AJ, 157, 98
+Harris C. R., et al., 2020, Nature, 585, 357
+Huang B.-L., et al., 2026, ApJ, 1006, 9
+Jacobson-Bell K., et al., 2025, AJ, 169, 233
+Johnson O. A., et al., 2023, AJ, 166, 193
+Li J.-K., et al., 2026, arXiv:2603.19023 (preprint)
+Ma P. X., et al., 2023, NatAs, 7, 492
+MacGregor M. A., et al., 2020, ApJ, 891, 80
+
+Manunza L., et al., 2025, AcAau, 233, 155
+Margot J.-L., et al., 2023, AJ, 166, 206
+Mason L. A., Garrett M. A., Wandia K., Siemion A. P. V., 2025,
+MNRAS, 536, 2127 (arXiv:2411.19827)
+Matrà L., et al., 2017, MNRAS, 464, 1415
+Morrison I. S., et al., 2023, PASA, 40, e038
+Müller H. S. P., et al., 2005, JMoSt, 742, 215
+Ortiz Ceballos K., et al., 2026, arXiv:2609.16720 (preprint)
+Pickett H. M., et al., 1998, JQSRT, 60, 883
+Poznanski D., et al., 2025, AJ, in press (arXiv:2505.03927)
+Price D. C., et al., 2020, AJ, 159, 86
+Sheikh S. Z., et al., 2025, AJ, 169, 118
+Sheikh S. Z., 2020, IJAsB, 19, 237
+Sheikh S. Z., et al., 2021, Nature Astronomy, 5, 1153
+SpaceX, 2024, FCC IBFS SAT-MOD-20230207-00021
+Tarter J., 2001, ARA&A, 39, 511
+Tremblay C. D., et al., 2024, PASA, 41, e004
+Vidal C., et al., 2026, arXiv:2605.21093 (preprint)
+Virtanen P., et al., 2020, NatMe, 17, 261
+White G. J., et al., 2026, MNRAS, submitted
+Wright J. T., et al., 2018, AJ, 156, 260
+Zhang Z.-S., et al., 2020, ApJ, 891, 174
+

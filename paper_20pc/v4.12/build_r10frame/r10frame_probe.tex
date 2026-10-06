@@ -1,0 +1,288 @@
+\documentclass[twocolumn,twocolappendix]{openjournal}
+
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{array}
+
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage{booktabs}
+% suppress the class's end-of-document template advertisement;
+% delete this block to restore it
+\makeatletter
+\renewenvironment{bottompar}{\setbox\z@\vbox\bgroup}{\egroup}
+\makeatother
+
+% ---------------------------------------------------------------
+% \pv{\Macro} -- print a probability with its relational symbol.
+% Generated p-value macros are of two kinds: an ordinary value such as
+% 0.186, and a bound such as <10^{-4} for a probability too small for the
+% ensemble to resolve. Writing "$p=\Macro$" at the use site is right for
+% the first and produces "p =< 10^-4" for the second; writing "$p\Macro$"
+% is right for the second and produces "p0.186" for the first. Both
+% mistakes were in the manuscript. The relation therefore belongs with
+% the value, decided once, here: \pv inspects the first token of the
+% expanded macro and supplies "=" unless the value already carries its
+% own relational symbol.
+\makeatletter
+\def\@pvlt{<}\def\@pvgt{>}\def\@pveq{=}
+\def\@pvfirst#1#2\@nil{%
+  \def\@pvA{#1}%
+  \ifx\@pvA\@pvlt <#2%
+  \else\ifx\@pvA\@pvgt >#2%
+  \else\ifx\@pvA\@pveq =#2%
+  \else =#1#2\fi\fi\fi}
+\DeclareRobustCommand{\pv}[1]{p\,\expandafter\@pvfirst#1\@nil}
+\makeatother
+% ---------------------------------------------------------------
+% \rankstatus -- the status of the star-versus-control rank, in ONE
+% formulation used verbatim wherever the question arises (referee 1, item 1).
+% Earlier versions stated this in several incompatible ways: the main text
+% denied exchangeability while Appendix A asserted that star and controls
+% "remain exchangeable in signal-to-noise ratio", and a table caption called
+% the ensemble a "calibrated screen".  A macro makes the use sites identical
+% by construction rather than by proof-reading.
+\DeclareRobustCommand{\rankstatus}{The star-versus-control rank is an
+empirically useful candidate-prioritisation statistic, but the stellar and
+control positions are not demonstrably exchangeable under the null. The rank
+therefore has no calibrated per-window false-alarm probability and is not
+used as evidence for detection.}
+% ---------------------------------------------------------------
+\shorttitle{An ALMA Archival Technosignature Search within 40\,pc}
+\shortauthors{White \& Dey}
+
+\input{survey_numbers}
+\input{survey_numbers_round8}
+\input{survey_numbers_round9}
+\input{survey_numbers_round10}
+\input{survey_numbers_round11}
+\input{survey_numbers_round12}
+\input{survey_numbers_round13}
+\input{survey_numbers_pointing}
+\input{survey_numbers_round15}
+\input{survey_numbers_round16}
+\input{survey_numbers_round17}
+\input{survey_numbers_recurrence}
+\input{survey_numbers_round14}
+\input{survey_numbers_localnull}
+\input{survey_numbers_round18}
+\input{survey_numbers_round19}
+\input{survey_numbers_round20}
+\input{survey_numbers_round21}
+\input{survey_numbers_round22}
+\input{survey_numbers_round23}
+\input{survey_numbers_round24}
+\input{survey_numbers_round25}
+\input{survey_numbers_round26}
+\input{survey_numbers_hd23484}
+\input{survey_numbers_bpicctrl}
+\input{survey_numbers_round27}
+\input{survey_numbers_round28}
+\input{survey_numbers_round29}
+\input{survey_numbers_round30}
+\input{survey_numbers_round31}
+\input{survey_numbers_round32}
+\input{survey_numbers_round33}
+\input{survey_numbers_round34}
+\input{survey_numbers_round35}
+\input{survey_numbers_round36}
+\input{survey_numbers_round37}
+\input{survey_numbers_round38}
+\input{survey_numbers_round39}
+\input{survey_numbers_round40}
+\input{survey_numbers_round41}
+\input{survey_numbers_round42}
+\input{survey_numbers_round43}
+\input{survey_numbers_round44}
+\input{survey_numbers_round45}
+\input{survey_numbers_round46}
+\input{survey_numbers_round47}
+\input{survey_numbers_round48}
+\input{survey_numbers_round49}
+\input{survey_numbers_round50}
+\input{survey_numbers_round51}
+\input{survey_numbers_round52}
+\input{survey_numbers_round53}
+\input{survey_numbers_round54}
+\input{survey_numbers_round55}
+\input{survey_numbers_round56}
+\input{survey_numbers_round57}
+\input{survey_numbers_round58}
+\input{survey_numbers_round59}
+\input{survey_numbers_round60}
+\input{survey_numbers_round61}
+\input{survey_numbers_round62}
+\input{survey_numbers_round63}
+\input{survey_numbers_round64}
+\input{survey_numbers_round75}
+\input{survey_numbers_round80}
+\input{survey_numbers_round81}
+\input{ledger_legend_v403}
+\input{survey_numbers_round77}
+\input{survey_numbers_round78}
+\input{survey_numbers_round79}
+\input{survey_numbers_round66}
+\input{survey_numbers_round67}
+\input{survey_numbers_round68}
+\input{survey_numbers_round69}
+\input{survey_numbers_round70}
+\input{survey_numbers_round71}
+\input{survey_numbers_round73}
+\input{survey_numbers_round74}
+% R2-4 (v3.99): a visually distinct symbol for tail quantities computed
+% against the screen's own exchangeability-violating null, so they cannot
+% be read as calibrated significance levels. p stays for genuine tests.
+\input{peff_range_v372}
+\input{survey_numbers_round82}
+\input{survey_numbers_round83}
+\input{survey_numbers_round84}
+\input{survey_numbers_round85}
+\input{survey_numbers_round86}
+\input{survey_numbers_round87}
+\input{survey_numbers_round88}
+\input{survey_numbers_round89}
+\input{survey_numbers_round90}
+\input{survey_numbers_round91}
+\input{survey_numbers_round92}
+\input{survey_numbers_round93}
+\input{survey_numbers_round94}
+% v4.06 (DECISIONS_R8 D16/D17/D18 and the v4.05 residue)
+\input{survey_numbers_round95}
+\input{survey_numbers_round96}
+\input{survey_numbers_round97}
+\input{survey_numbers_round98}
+\input{survey_numbers_round99}
+\input{survey_numbers_round100}
+\input{survey_numbers_round101}
+\input{survey_numbers_round102}
+\input{regen_count}
+%% round 104 (figures owner): the quantities the beta Pic positive-control
+%% figure draws, emitted by its own generator so the figure and the caption
+%% cannot disagree.  Before round 103, which must stay last.
+\input{survey_numbers_round104}
+%% round 65 (sensitivity owner): what the injected carriers deposit, and the
+%% completeness measured separately for the windows whose control ring is
+%% noise and for the few whose ring carries resolved emission.  Before round
+%% 103, which reads the strata record and must stay last.
+\input{survey_numbers_round65}
+%% round 72 (sensitivity owner): the omitted annual parallax, applied -- the
+%% shallower limits it gives and the corrected per-window trigger.  Before
+%% round 103.
+\input{survey_numbers_round72}
+%% round 105 (integrator): what the spatial screen costs -- the
+%% quantitative counterpart to charging the completeness for it.  Read
+%% from the same frozen record as the multiplier, so the cost and the
+%% multiplier cannot come from two analyses.  Before round 103, which
+%% must stay last.
+\input{survey_numbers_round105}
+\input{survey_numbers_round110}
+\input{survey_numbers_round111}
+\input{survey_numbers_round120}
+\input{survey_numbers_round130}
+\input{survey_numbers_round135}
+\input{survey_numbers_round140}
+\input{survey_numbers_round160}
+%% round 103 (numbers owner): the adopted sensitivity, the stellar-frame
+%% attribution counts, the one benchmark, the one uncertainty interval, and
+%% the retirement of every superseded synonym.  MUST be the last macro
+%% input: its \renewcommands are what make a superseded value unreachable.
+\input{survey_numbers_round103}
+
+%% Two-column measure (v3.61): the narrow column cannot always justify a line
+%% of technical text, so allow the paragraph builder a last-resort stretch
+%% rather than shipping underfull boxes.
+\setlength{\emergencystretch}{1.2em}
+
+%% Reference-list leading, tightened so the list does not spill a page.
+\setlength{\bibbaselineskip}{2.52mm}
+
+\usepackage{enumitem}
+\begin{document}
+
+%% Title scope (round 9 ruling): the title states what the ARCHIVE search
+%% covered -- \NSystems{} stellar systems over the full \SurvFreqLo--\SurvFreqHi\,GHz
+%% range harvested -- and the abstract names the primary carrier experiment
+%% (\NWinA{} Class~A windows over \NSysClassA{} systems) inside it.  The
+%% previous title quoted the primary experiment's \NSysClassA{} and
+%% \SurvFreqLoA--\SurvFreqHiA, which understated the archival scope.
+\title{An Archival ALMA Search for Unresolved Spectral-Carrier
+Technosignatures toward \NSystems{} Stellar Systems within 40\,pc
+at \SurvFreqLo--\SurvFreqHi\,GHz}
+
+\author{Glenn J. White\altaffilmark{1,2} and Robin Dey\altaffilmark{3}}
+\altaffiltext{1}{School of Physical Sciences, The Open University, Walton Hall, Milton Keynes, MK7 6AA, UK; glenn.white@open.ac.uk}
+\altaffiltext{2}{RAL Space, STFC Rutherford Appleton Laboratory, Harwell Campus, Didcot, OX11 0QX, UK}
+\altaffiltext{3}{VBRL Holdings, 50/5 Huay Kaew Road, Chang Phueak, Chiang Mai, Thailand}
+
+\input{sections/abstract}%
+\enlargethispage{0\baselineskip}
+\input{sections/01_intro}%
+\input{sections/02_background}%
+\input{sections/03_sample}%
+\input{sections/04_method}%
+\input{sections/05_results}%
+\input{sections/05b_stack}%
+\input{sections/06_discussion}%
+\input{sections/07_conclusions}%
+\input{sections/08_backmatter}%
+\appendix
+
+\input{sections/app_A_reproducibility}%
+\input{sections/app_C_spatialnorm}%
+\input{sections/app_I_linemask}%
+\input{sections/app_J_falsealarm}%
+\input{sections/app_N_rfi}%
+\begin{thebibliography}{99}
+\bibitem[Astudillo-Defru et al.(2017)]{AstudilloDefru2017} Astudillo-Defru N., et al., 2017, A\&A, 602, A88
+\bibitem[Astropy Collaboration et al.(2022)]{Astropy2022} Astropy Collab., 2022, ApJ, 935, 167
+\bibitem[Backus \& Project Phoenix Team(2002)]{Backus2002} Backus P.~R., et al., 2002, BAAS, 34, 1173
+\bibitem[Blomme et al.(2023)]{Blomme2023} Blomme R., et al., 2023, A\&A, 674, A7
+\bibitem[CASA Team et al.(2022)]{CASA2022} CASA Team, 2022, PASP, 134, 114501
+\bibitem[Burton et al.(2022)]{Burton2022} Burton K., MacGregor M. A., Osten R. A., 2022, ApJL, 939, L6
+\bibitem[Burton(2024)]{Burton2024} Burton K., 2024, PhD thesis, Univ. Colorado Boulder, ch. 4
+\bibitem[Cataldi et al.(2023)]{Cataldi2023} Cataldi G., et al., 2023, ApJ, 951, 111
+\bibitem[Choza et al.(2024)]{Choza2024} Choza C., et al., 2024, AJ, 168, 254
+\bibitem[Cocconi \& Morrison(1959)]{CocconiMorrison1959} Cocconi G., Morrison P., 1959, Nature, 184, 844
+\bibitem[Czech et al.(2021)]{Czech2021} Czech D.~J., et al., 2021, PASP, 133, 064502
+\bibitem[Dent et al.(2014)]{Dent2014} Dent W. R. F., et al., 2014, Science, 343, 1490
+\bibitem[Drake(1961)]{Drake1960} Drake F.~D., 1961, Physics Today, 14(4), 40
+\bibitem[Drake(1974)]{Drake1974} Drake F.~D., 1974, in Sagan C., ed., CETI. MIT Press
+\bibitem[Enriquez et al.(2017)]{Enriquez2017} Enriquez J.~E., et al., 2017, ApJ, 849, 104
+\bibitem[Gaia Collaboration et al.(2023)]{GaiaDR3} Gaia Collab., Vallenari A., et al., 2023, A\&A, 674, A1
+\bibitem[Garrett et al.(2026)]{BRaTs2026} Garrett M.~A., et al., 2026, MNRAS, in press (arXiv:2605.10212)
+\bibitem[Gentile Fusillo et al.(2021)]{GentileFusillo2021} Gentile Fusillo N.~P., et al., 2021, MNRAS, 508, 3877
+\bibitem[Ginsburg et al.(2019)]{Ginsburg2019} Ginsburg A., et al., 2019, AJ, 157, 98
+\bibitem[Harris et al.(2020)]{Harris2020} Harris C.~R., et al., 2020, Nature, 585, 357
+\bibitem[Huang et al.(2026)]{PollutedWD2026} Huang B.-L., et al., 2026, ApJ, 1006, 9
+\bibitem[Jacobson-Bell et al.(2025)]{GLOBULAR2025} Jacobson-Bell K., et al., 2025, AJ, 169, 233
+\bibitem[Johnson et al.(2023)]{LOFARdualsite2023} Johnson O.~A., et al., 2023, AJ, 166, 193
+\bibitem[Li et al.(2026)]{FAST3IATLAS2025} Li J.-K., et al., 2026, arXiv:2603.19023 (preprint)
+\bibitem[Ma et al.(2023)]{Ma2023} Ma P.~X., et al., 2023, NatAs, 7, 492
+\bibitem[MacGregor et al.(2020)]{MacGregor2020} MacGregor M.~A., et al., 2020, ApJ, 891, 80
+\bibitem[Manunza et al.(2025)]{SRT2025} Manunza L., et al., 2025, AcAau, 233, 155
+\bibitem[Margot et al.(2023)]{Margot2023} Margot J.-L., et al., 2023, AJ, 166, 206
+\bibitem[Mason et al.(2025)]{Mason2025} Mason L.~A., Garrett M.~A., Wandia K., Siemion A.~P.~V., 2025, MNRAS, 536, 2127 (arXiv:2411.19827)
+\bibitem[Matrà et al.(2017)]{Matra2017} Matrà L., et al., 2017, MNRAS, 464, 1415
+\bibitem[Morrison et al.(2023)]{Morrison2023} Morrison I.~S., et al., 2023, PASA, 40, e038
+\bibitem[M\"uller et al.(2005)]{CDMS2005} M\"uller H.~S.~P., et al., 2005, JMoSt, 742, 215
+\bibitem[Ortiz Ceballos et al.(2026)]{BpicbRadio2026} Ortiz Ceballos K., et al., 2026, arXiv:2609.16720 (preprint)
+\bibitem[Pickett et al.(1998)]{Pickett1998} Pickett H.~M., et al., 1998, JQSRT, 60, 883
+\bibitem[Poznanski et al.(2025)]{AnomalyParkesGBT2025} Poznanski D., et al., 2025, AJ, in press (arXiv:2505.03927)
+\bibitem[Price et al.(2020)]{Price2020} Price D.~C., et al., 2020, AJ, 159, 86
+\bibitem[Sheikh et al.(2025)]{EarthDetectingEarth2025} Sheikh S.~Z., et al., 2025, AJ, 169, 118
+\bibitem[Sheikh(2020)]{Sheikh2020} Sheikh S.~Z., 2020, IJAsB, 19, 237
+\bibitem[Sheikh et al.(2021)]{Sheikh2021} Sheikh S.~Z., et al., 2021, Nature Astronomy, 5, 1153
+\bibitem[SpaceX(2024)]{Starlink2024} SpaceX, 2024, FCC IBFS SAT-MOD-20230207-00021
+\bibitem[Tarter(2001)]{Tarter2001} Tarter J., 2001, ARA\&A, 39, 511
+\bibitem[Tremblay et al.(2024)]{Tremblay2024} Tremblay C.~D., et al., 2024, PASA, 41, e004
+\bibitem[Vidal et al.(2026)]{SETIreview2025} Vidal C., et al., 2026, arXiv:2605.21093 (preprint)
+\bibitem[Virtanen et al.(2020)]{Virtanen2020} Virtanen P., et al., 2020, NatMe, 17, 261
+\bibitem[White et al.(2026)]{White2026} White G.~J., et al., 2026, MNRAS, submitted
+\bibitem[Wright et al.(2018)]{Wright2018} Wright J.~T., et al., 2018, AJ, 156, 260
+\bibitem[Zhang et al.(2020)]{Zhang2020} Zhang Z.-S., et al., 2020, ApJ, 891, 174
+\end{thebibliography}
+
+\end{document}
+
+

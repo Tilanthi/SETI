@@ -1,0 +1,42 @@
+\begin{abstract}
+The millimetre and submillimetre sky has never been searched for narrowband
+transmitters toward nearby stars. Public ALMA observations taken for other
+purposes record a spectrum of the star at each field centre, so we searched
+them: \NWinA{} spectral windows toward \NSysClassA{} archive-selected stellar
+systems within 40\,pc, channels fine enough to follow a drift, covering
+\CvUnionA\,GHz of union bandwidth in disconnected intervals between
+\SurvFreqLoA{} and \SurvFreqHiA\,GHz. Of the \NCross{} threshold crossings,
+\NAttributed{} coincide with a catalogued molecular transition --- among them
+carbon monoxide in the $\beta$~Pictoris disc, which the search recovered
+without being told where to look --- and the remainder are no more numerous
+than chance predicts. Each of the \NUnattributed{} unattributed crossings a
+later observation covered was tested for recurrence at its predicted stellar-frame frequency and
+drift, and no event satisfied the pre-defined independent-recurrence
+confirmation criterion. The null has a limit: only \RcConfSysDay{} of the
+\NSysClassA{} systems were observed again at the same frequency more than a
+day apart, over \CvConfGHzDay\,GHz of the union searched, so the searched
+extent is about \PrConfFactor{} the confirmable one. Depth is measured by injecting carriers into the calibrated
+visibilities and recovering them: the median system's best window returns nine
+in ten at $\EirpNinetySysMedA$\,W, a recovery fraction and not a detection
+probability. The same data's coarser windows limit an unresolved spectral
+excess. For classifying a crossing in the present archival data set,
+molecular-line confusion and sparse repeat coverage are more immediate
+limitations than thermal sensitivity.
+\end{abstract}
+
+\keywords{extraterrestrial intelligence, radio lines: stars, submillimetre: stars, surveys, astrobiology}
+
+%% One paragraph.  MNRAS allows 250 words, so the length must be MEASURED on
+%% the built page and not asserted here: `abswords.py` counts the words
+%% between ABSTRACT and the subject headings in the PDF itself and fails the
+%% build above 250.  A comment claiming a word count is not a word count --
+%% an earlier one said 245 while the typeset paragraph held 253.
+%% Every quantity is a macro.  The band is \SurvFreqLoA--\SurvFreqHiA, the
+%% CLASS A span, because this sentence describes the \NWinA{} fine windows;
+%% the wider \SurvFreqLo--\SurvFreqHi is the archival harvest across both
+%% classes and belongs to the title and to \S\ref{sec:coverage}.
+%% \PrConfFactor is generated from \CvUnionA/\CvConfGHzDay (prose_v412.py,
+%% check P3), so the word "twice" cannot survive a change in either.
+%% The spatial rank is deliberately absent: it decides no disposition, so
+%% the abstract must not promote it (check P4 enforces that, and P7 the
+%% "union bandwidth" label).  Measure before adding anything.

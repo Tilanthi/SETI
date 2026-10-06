@@ -1,0 +1,33 @@
+{
+ "CWTFM_survey_median_eirp": 13393.875649386307,
+ "CWTFM_survey_worst_eirp": 315126.36590327974,
+ "CWTFM_sys_median_eirp": 347453.276293755,
+ "Margot2023_CWTFM_computed_here": {
+  "CWTFM": 0.10628247520075577,
+  "N": 11680.0,
+  "eirp": 10000000000000.0,
+  "nu_hi": 1.73,
+  "nu_lo": 1.15,
+  "nu_rel": 0.40277777777777785
+ },
+ "TR_survey": 0.17230411763502387,
+ "TR_sys": 4.469776467869229,
+ "dnu_survey_GHz": 47.74043000000026,
+ "dnu_sys_median_GHz": 1.8403319999999894,
+ "eirp_psel_best_W": 68023570804480.6,
+ "eirp_psel_median_W": 1554678533888242.2,
+ "eirp_psel_worst_W": 3.657792631175341e+16,
+ "f_upper_95": 0.05,
+ "f_upper_naive": 0.016666666666666666,
+ "literature_CWTFM": {
+  "Enriquez2017": 0.85,
+  "Phoenix": 49.0,
+  "Price2020_GBT": 0.11,
+  "Price2020_Parkes": 8.21
+ },
+ "n_systems_A": 60,
+ "nu_mid_GHz": 493.55236,
+ "nu_rel_survey": 0.09672819718661715,
+ "nu_rel_sys": 0.0037287472397052046,
+ "zeta_AO": 5e-11
+}

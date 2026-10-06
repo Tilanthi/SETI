@@ -1,0 +1,1267 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./_r10recur_probe.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-01-21> (./openjournal.cls
+Document Class: openjournal 
+(/usr/share/texlive/texmf-dist/tex/latex/revtex4-1/revtex4-1.cls
+Document Class: revtex4-1 2020/09/30 4.1s (http://publish.aps.org/revtex4/ for 
+documentation)
+ltxutil[2020/09/30 4.1s utilities package (portions licensed from W. E. Baxter 
+web at superscript.com)]
+ltxfront[2020/09/30 4.1s frontmatter package (AO,DPC)]
+ltxgrid[2020/09/30 4.1s page grid package (portions licensed from W. E. Baxter 
+web at superscript.com)]
+(/usr/share/texlive/texmf-dist/tex/latex/revtex4-1/aps4-1.rtx)
+(/usr/share/texlive/texmf-dist/tex/latex/revtex4-1/aps10pt4-1.rtx)
+(/usr/share/texlive/texmf-dist/tex/latex/textcase/textcase.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/revtex4-1/revsymb4-1.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/latexsym.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty) (./epsf.sty
+This is `epsf.tex' v2.7.3 <23 July 2005>
+)) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty))
+(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(./survey_numbers.tex) (./survey_numbers_round8.tex)
+(./survey_numbers_round9.tex) (./survey_numbers_round10.tex)
+(./survey_numbers_round11.tex) (./survey_numbers_round12.tex)
+(./survey_numbers_round13.tex) (./survey_numbers_pointing.tex)
+(./survey_numbers_round15.tex) (./survey_numbers_round16.tex)
+(./survey_numbers_round17.tex) (./survey_numbers_recurrence.tex)
+(./survey_numbers_round14.tex) (./survey_numbers_localnull.tex)
+(./survey_numbers_round18.tex) (./survey_numbers_round19.tex)
+(./survey_numbers_round20.tex) (./survey_numbers_round21.tex)
+(./survey_numbers_round22.tex) (./survey_numbers_round23.tex)
+(./survey_numbers_round24.tex) (./survey_numbers_round25.tex)
+(./survey_numbers_round26.tex) (./survey_numbers_hd23484.tex)
+(./survey_numbers_bpicctrl.tex) (./survey_numbers_round27.tex)
+(./survey_numbers_round28.tex) (./survey_numbers_round29.tex)
+(./survey_numbers_round30.tex) (./survey_numbers_round31.tex)
+(./survey_numbers_round32.tex) (./survey_numbers_round33.tex)
+(./survey_numbers_round34.tex) (./survey_numbers_round35.tex)
+(./survey_numbers_round36.tex) (./survey_numbers_round37.tex)
+(./survey_numbers_round38.tex) (./survey_numbers_round39.tex)
+(./survey_numbers_round40.tex) (./survey_numbers_round41.tex)
+(./survey_numbers_round42.tex) (./survey_numbers_round43.tex)
+(./survey_numbers_round44.tex) (./survey_numbers_round45.tex)
+(./survey_numbers_round46.tex) (./survey_numbers_round47.tex)
+(./survey_numbers_round48.tex) (./survey_numbers_round49.tex)
+(./survey_numbers_round50.tex) (./survey_numbers_round51.tex)
+(./survey_numbers_round52.tex) (./survey_numbers_round53.tex)
+(./survey_numbers_round54.tex) (./survey_numbers_round55.tex)
+(./survey_numbers_round56.tex) (./survey_numbers_round57.tex)
+(./survey_numbers_round58.tex) (./survey_numbers_round59.tex)
+(./survey_numbers_round60.tex) (./survey_numbers_round61.tex)
+(./survey_numbers_round62.tex) (./survey_numbers_round63.tex)
+(./survey_numbers_round64.tex) (./survey_numbers_round75.tex)
+(./survey_numbers_round80.tex) (./survey_numbers_round81.tex)
+(./ledger_legend_v403.tex) (./survey_numbers_round77.tex)
+(./survey_numbers_round78.tex) (./survey_numbers_round79.tex)
+(./survey_numbers_round66.tex) (./survey_numbers_round67.tex)
+(./survey_numbers_round68.tex) (./survey_numbers_round69.tex)
+(./survey_numbers_round70.tex) (./survey_numbers_round71.tex)
+(./survey_numbers_round73.tex) (./survey_numbers_round74.tex)
+(./peff_range_v372.tex) (./survey_numbers_round82.tex)
+(./survey_numbers_round83.tex) (./survey_numbers_round84.tex)
+(./survey_numbers_round85.tex) (./survey_numbers_round86.tex)
+(./survey_numbers_round87.tex) (./survey_numbers_round88.tex)
+(./survey_numbers_round89.tex) (./survey_numbers_round90.tex)
+(./survey_numbers_round91.tex) (./survey_numbers_round92.tex)
+(./survey_numbers_round93.tex) (./survey_numbers_round94.tex)
+(./survey_numbers_round95.tex) (./survey_numbers_round96.tex)
+(./survey_numbers_round97.tex) (./survey_numbers_round98.tex)
+(./survey_numbers_round99.tex) (./survey_numbers_round100.tex)
+(./survey_numbers_round101.tex) (./survey_numbers_round102.tex)
+(./regen_count.tex) (./survey_numbers_round104.tex)
+(./survey_numbers_round65.tex) (./survey_numbers_round72.tex)
+(./survey_numbers_round105.tex) (./survey_numbers_round120.tex)
+(./survey_numbers_round103.tex)
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(build_r10recur/r10recur-probe.aux)
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty))
+(build_r10recur/r10recur-probe.out) (build_r10recur/r10recur-probe.out)
+(./sections/abstract.tex (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd))
+(./sections/01_intro.tex
+
+Class revtex4-1 Warning: Assuming \noaffiliation for authors.
+
+
+Package natbib Warning: Citation `Sheikh2020' on page 1 undefined on input line
+ 17.
+
+
+Package natbib Warning: Citation `SETIreview2025' on page 1 undefined on input 
+line 17.
+
+
+Package natbib Warning: Citation `Wright2018' on page 1 undefined on input line
+ 36.
+
+
+Package natbib Warning: Citation `Mason2025' on page 1 undefined on input line 
+38.
+
+
+LaTeX Warning: Reference `sec:background' on page 1 undefined on input line 41.
+
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Reference `fig:funnel' on page 2 undefined on input line 61.
+
+
+LaTeX Warning: Reference `sec:technosearch' on page 2 undefined on input line 6
+5.
+
+
+LaTeX Warning: Reference `sec:bias' on page 2 undefined on input line 77.
+
+
+LaTeX Warning: Reference `sec:method' on page 2 undefined on input line 79.
+
+) (./sections/02_background.tex
+
+Package natbib Warning: Citation `CocconiMorrison1959' on page 2 undefined on i
+nput line 6.
+
+
+Package natbib Warning: Citation `Drake1960' on page 2 undefined on input line 
+6.
+
+
+Package natbib Warning: Citation `Tarter2001' on page 2 undefined on input line
+ 7.
+
+
+Package natbib Warning: Citation `Backus2002' on page 2 undefined on input line
+ 7.
+
+
+Package natbib Warning: Citation `Zhang2020' on page 2 undefined on input line 
+10.
+
+
+Package natbib Warning: Citation `Czech2021' on page 2 undefined on input line 
+10.
+
+
+Package natbib Warning: Citation `Morrison2023' on page 2 undefined on input li
+ne 10.
+
+
+Package natbib Warning: Citation `FAST3IATLAS2025' on page 2 undefined on input
+ line 10.
+
+
+Package natbib Warning: Citation `LOFARdualsite2023' on page 2 undefined on inp
+ut line 10.
+
+
+Package natbib Warning: Citation `Tremblay2024' on page 2 undefined on input li
+ne 11.
+
+
+Package natbib Warning: Citation `SRT2025' on page 2 undefined on input line 13
+.
+
+
+Package natbib Warning: Citation `Ma2023' on page 2 undefined on input line 15.
+
+
+
+Package natbib Warning: Citation `Choza2024' on page 2 undefined on input line 
+15.
+
+
+Package natbib Warning: Citation `GLOBULAR2025' on page 2 undefined on input li
+ne 15.
+
+
+Package natbib Warning: Citation `AnomalyParkesGBT2025' on page 2 undefined on 
+input line 15.
+
+
+Package natbib Warning: Citation `BRaTs2026' on page 2 undefined on input line 
+15.
+
+
+Package natbib Warning: Citation `Drake1974' on page 2 undefined on input line 
+26.
+
+
+Package natbib Warning: Citation `EarthDetectingEarth2025' on page 2 undefined 
+on input line 26.
+
+
+LaTeX Warning: Reference `sec:excludes' on page 2 undefined on input line 28.
+
+
+Package natbib Warning: Citation `Mason2025' on page 2 undefined on input line 
+32.
+
+
+LaTeX Warning: Reference `sec:method' on page 2 undefined on input line 58.
+
+
+LaTeX Warning: Reference `fig:context' on page 2 undefined on input line 61.
+
+
+Underfull \hbox (badness 1270) in paragraph at lines 61--79
+[]\T1/cmr/m/n/10 Figure [](a) places this sur-vey among pub-lished
+
+Package natbib Warning: Citation `Enriquez2017' on page 2 undefined on input li
+ne 103.
+
+
+Package natbib Warning: Citation `Margot2023' on page 2 undefined on input line
+ 103.
+
+
+Package natbib Warning: Citation `Mason2025' on page 2 undefined on input line 
+103.
+
+
+Package natbib Warning: Citation `Price2020' on page 2 undefined on input line 
+103.
+
+
+LaTeX Warning: Reference `sec:excludes' on page 2 undefined on input line 103.
+
+
+Package natbib Warning: Citation `Wright2018' on page 2 undefined on input line
+ 108.
+
+
+Package natbib Warning: Citation `Margot2023' on page 2 undefined on input line
+ 109.
+
+
+Package natbib Warning: Citation `EarthDetectingEarth2025' on page 2 undefined 
+on input line 110.
+
+
+LaTeX Warning: Reference `sec:sample' on page 2 undefined on input line 114.
+
+) (./sections/03_sample.tex
+! Undefined control sequence.
+l.7 frozen pipeline, \LdgCensusHours
+                                    \,h on source. We call that set the
+
+LaTeX Warning: Reference `tab:blockledger' on page 2 undefined on input line 14
+.
+
+[2]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 18.
+
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 18.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+! Undefined control sequence.
+l.26 \LdgClassAStars
+                    {} stars in \NSysClassA{} systems are fine-channel, called
+! Undefined control sequence.
+l.43 \SfPlxWorstPct
+                   {} per cent, an order of magnitude inside it. The query r...
+
+
+LaTeX Warning: Reference `fig:funnel' on page 3 undefined on input line 47.
+
+
+LaTeX Warning: Reference `tab:selfunc' on page 3 undefined on input line 57.
+
+! Undefined control sequence.
+l.61 over-represented by a factor \SfTopRatio
+                                             , and the enhancement falls
+! Undefined control sequence.
+l.64 about \SfARatio
+                    {} and F and G stars by factors of two to three, because...
+
+! Undefined control sequence.
+l.66 \SfMSearched
+                 {} of the \SfNStar{} searched stars are M~dwarfs, a factor
+! Undefined control sequence.
+l.66 \SfMSearched{} of the \SfNStar
+                                   {} searched stars are M~dwarfs, a factor
+! Undefined control sequence.
+l.67 \SfMRatio
+              {} of their share of the reference census, and only
+! Undefined control sequence.
+l.68 \SfMClassAStars
+                    {} of them carry the fine-channel coverage that can reso...
+
+
+LaTeX Warning: Reference `tab:interesting' on page 3 undefined on input line 79
+.
+
+[3 <./figures/eirp_context_a.pdf> <./figures/eirp_context_b.pdf>]
+(./tab_selection.tex (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd)
+
+LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
+(Font)              using `T1/cmr/m/it' instead on input line 6.
+
+)
+
+LaTeX Warning: Reference `fig:chain' on page 4 undefined on input line 90.
+
+
+LaTeX Warning: Reference `sec:method' on page 4 undefined on input line 103.
+
+
+LaTeX Warning: Reference `fig:waterfall' on page 4 undefined on input line 104.
+
+
+! Undefined control sequence.
+l.108 rather than estimated. \LdgExtScope
+                                         {} further blocks lie inside the same
+
+LaTeX Warning: Reference `tab:blockledger' on page 4 undefined on input line 11
+0.
+
+! Undefined control sequence.
+l.110 ...ives what became of each. \LdgExtSearched
+                                                  {} of
+
+LaTeX Warning: Reference `fig:context' on page 4 undefined on input line 129.
+
+! Undefined control sequence.
+<argument> ...are taken from the \SfHostCatalogue 
+                                                  {} \SfHostTable {} table, ...
+l.142 \SfHostTable{} table, accessed \SfHostDate.}
+                                                  
+! Undefined control sequence.
+<argument> ...he \SfHostCatalogue {} \SfHostTable 
+                                                  {} table, accessed \SfHost...
+l.142 \SfHostTable{} table, accessed \SfHostDate.}
+                                                  
+! Undefined control sequence.
+<argument> ...able {} table, accessed \SfHostDate 
+                                                  .}}{\thepage }{\@currentHr...
+l.142 \SfHostTable{} table, accessed \SfHostDate.}
+                                                  
+
+LaTeX Warning: Reference `tab:interesting' on page 4 undefined on input line 14
+2.
+
+! Undefined control sequence.
+<argument> ...are taken from the \SfHostCatalogue 
+                                                  {} \SfHostTable {} table, ...
+l.142 \SfHostTable{} table, accessed \SfHostDate.}
+                                                  
+! Undefined control sequence.
+<argument> ...he \SfHostCatalogue {} \SfHostTable 
+                                                  {} table, accessed \SfHost...
+l.142 \SfHostTable{} table, accessed \SfHostDate.}
+                                                  
+! Undefined control sequence.
+<argument> ...able {} table, accessed \SfHostDate 
+                                                  .\fi 
+l.142 \SfHostTable{} table, accessed \SfHostDate.}
+                                                  
+(./tab_blockledger.tex
+Underfull \hbox (badness 2302) in paragraph at lines 8--9
+[]|\T1/cmr/m/n/7 every limit, the cross-ing list, ev-ery
+)
+
+LaTeX Warning: Reference `sec:bias' on page 4 undefined on input line 159.
+
+(./tab_interesting.tex)
+
+LaTeX Warning: Reference `tab:blockledger' on page 4 undefined on input line 17
+1.
+
+
+LaTeX Warning: Reference `fig:waterfall' on page 4 undefined on input line 171.
+
+
+) (./sections/04_method.tex
+
+LaTeX Warning: Reference `eq:tstar' on page 4 undefined on input line 27.
+
+[4 <./figures/selection_funnel.pdf>]
+
+LaTeX Warning: Reference `app:conventions' on page 5 undefined on input line 55
+.
+
+[5 <./figures/coverage_waterfall.pdf>]
+
+LaTeX Warning: Reference `sec:summary' on page 6 undefined on input line 76.
+
+
+LaTeX Warning: Reference `tab:p90budget' on page 6 undefined on input line 88.
+
+
+Package natbib Warning: Citation `Burton2022' on page 6 undefined on input line
+ 93.
+
+[6]
+
+Package natbib Warning: Citation `Mason2025' on page 7 undefined on input line 
+103.
+
+
+LaTeX Warning: Reference `fig:accel' on page 7 undefined on input line 114.
+
+
+LaTeX Warning: Reference `fig:chain' on page 7 undefined on input line 168.
+
+
+LaTeX Warning: Reference `eq:tstar' on page 7 undefined on input line 175.
+
+
+LaTeX Warning: Reference `app:linemask' on page 7 undefined on input line 198.
+
+
+LaTeX Warning: Reference `app:radius' on page 7 undefined on input line 218.
+
+[7 <./figures/drift_acceleration.pdf>]
+
+LaTeX Warning: Reference `sec:statistic' on page 8 undefined on input line 222.
+
+
+
+LaTeX Warning: Reference `app:falsealarm' on page 8 undefined on input line 235
+.
+
+
+LaTeX Warning: Reference `app:radius' on page 8 undefined on input line 243.
+
+
+LaTeX Warning: Reference `sec:vistest' on page 8 undefined on input line 257.
+
+
+LaTeX Warning: Reference `sec:bpicval' on page 8 undefined on input line 262.
+
+) (./sections/05_results.tex
+
+LaTeX Warning: Reference `fig:classasens' on page 8 undefined on input line 49.
+
+
+
+LaTeX Warning: Reference `sec:discussion' on page 8 undefined on input line 50.
+
+
+
+LaTeX Warning: Reference `tab:p90budget' on page 8 undefined on input line 64.
+
+[8]
+
+LaTeX Warning: Reference `fig:strata' on page 9 undefined on input line 70.
+
+(./tab_budget.tex)
+
+LaTeX Warning: Reference `tab:p90budget' on page 9 undefined on input line 136.
+
+
+
+Package natbib Warning: Citation `Enriquez2017' on page 9 undefined on input li
+ne 146.
+
+
+Package natbib Warning: Citation `Price2020' on page 9 undefined on input line 
+146.
+
+
+Package natbib Warning: Citation `Margot2023' on page 9 undefined on input line
+ 147.
+
+
+LaTeX Warning: Reference `sec:pninetysel' on page 9 undefined on input line 152
+.
+
+
+LaTeX Warning: Reference `fig:chain' on page 9 undefined on input line 172.
+
+
+LaTeX Warning: Reference `tab:ledgersum' on page 9 undefined on input line 173.
+
+
+
+LaTeX Warning: Reference `tab:ledger' on page 9 undefined on input line 174.
+
+
+LaTeX Warning: Reference `tab:ledger' on page 9 undefined on input line 183.
+
+(./tab_ledgersum.tex)
+
+LaTeX Warning: Reference `tab:maskrobust' on page 9 undefined on input line 191
+.
+
+! Undefined control sequence.
+l.193 $\pm\FrLadderLo
+                     $ to $\pm\FrLadderHi$\,km\,s$^{-1}$: the number outranking
+
+! Undefined control sequence.
+l.193 $\pm\FrLadderLo$ to $\pm\FrLadderHi
+                                         $\,km\,s$^{-1}$: the number outranking
+
+[9]
+
+Package natbib Warning: Citation `MacGregor2020' on page 10 undefined on input 
+line 245.
+
+[10 <./figures/sens_strata.pdf> <./figures/classa_sensitivity.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 252.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\beta' on input line 252.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 252.
+
+
+Package natbib Warning: Citation `Dent2014' on page 11 undefined on input line 
+266.
+
+
+Package natbib Warning: Citation `Matra2017' on page 11 undefined on input line
+ 266.
+
+
+LaTeX Warning: Reference `sec:etacrv' on page 11 undefined on input line 273.
+
+
+LaTeX Warning: Reference `fig:bpiccontrol' on page 11 undefined on input line 2
+90.
+
+
+LaTeX Warning: Reference `sec:bpicval' on page 11 undefined on input line 323.
+
+
+Package natbib Warning: Citation `Cataldi2023' on page 11 undefined on input li
+ne 330.
+
+! Undefined control sequence.
+l.340 ...e mask that removes them costs \FrMaskPct
+                                                  {} per
+! Undefined control sequence.
+l.341 ... the unique-frequency union over \FrNSpec
+                                                  {} species, and it is
+
+LaTeX Warning: Reference `app:linemask' on page 11 undefined on input line 344.
+
+
+
+LaTeX Warning: Reference `tab:cand' on page 11 undefined on input line 355.
+
+[11 <./figures/bpic_control.pdf>]
+
+LaTeX Warning: Reference `tab:visfit' on page 12 undefined on input line 374.
+
+
+LaTeX Warning: Reference `tab:ledger' on page 12 undefined on input line 405.
+
+
+LaTeX Warning: Reference `sec:coverage' on page 12 undefined on input line 416.
+
+
+(./tab_recurcand_v411.tex) (./tab_visfit_v411.tex)
+Overfull \hbox (17.56038pt too wide) in paragraph at lines 2--470
+ []$[]$ 
+(./tab_ledger.tex)
+
+LaTeX Warning: Reference `tab:ledger' on page 12 undefined on input line 502.
+
+) (./sections/05b_stack.tex [12]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 13.
+
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 13.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+! Undefined control sequence.
+l.37 ...sibility weights reaching \StkBadWeightMax
+                                                  {} against a survey
+! Undefined control sequence.
+l.38 median of \StkBadWeightMed
+                               , a factor \StkBadWeightRatio, while their own
+! Undefined control sequence.
+l.38 ...kBadWeightMed, a factor \StkBadWeightRatio
+                                                  , while their own
+! Undefined control sequence.
+l.42 \StkBadGroupDrop
+                     {} two-epoch groups, which fall below the
+
+Underfull \hbox (badness 1852) in paragraph at lines 56--65
+[]\T1/cmr/m/it/10 Registration is ver-i-fied on real lines be-fore it is
+
+Underfull \hbox (badness 1226) in paragraph at lines 66--80
+[]\T1/cmr/m/it/10 The gain is $[]$ and not $[]$\T1/cmr/m/n/10 , where $\OML/cmm
+/m/it/10 N[] \OT1/cmr/m/n/10 =
+! Undefined control sequence.
+<recently read> \StkProxEirpSingle 
+                                   
+l.90 best single epoch reaches $\StkProxEirpSingle
+                                                  $\,W and the stack
+! Undefined control sequence.
+l.94 drift above \StkProxDriftHzS
+                                 \,Hz\,s$^{-1}$. The gain, not the absolute
+! Undefined control sequence.
+l.95 ...is what stacking bought: at \StkProxDistPc
+                                                  \,pc the depth is mostly
+[13 <./figures/chain_v411.pdf>]
+
+LaTeX Warning: Reference `sec:etacrv' on page 14 undefined on input line 108.
+
+! Undefined control sequence.
+l.120 ...RefChanKHz\,kHz channel is \StkTolFineKms
+                                                  \,km\,s$^{-1}$, so the
+! Undefined control sequence.
+l.124 \StkReflexChanCoarse
+                          {} channels of a \ChanBModeMHz\,MHz window, which ...
+
+
+LaTeX Warning: Reference `sec:excludes' on page 14 undefined on input line 132.
+
+
+) (./sections/06_discussion.tex [14]
+
+LaTeX Warning: Reference `app:rfi' on page 15 undefined on input line 18.
+
+
+LaTeX Warning: Reference `fig:context' on page 15 undefined on input line 47.
+
+
+Package natbib Warning: Citation `Mason2025' on page 15 undefined on input line
+ 83.
+
+
+Package natbib Warning: Citation `Wright2018' on page 15 undefined on input lin
+e 86.
+
+
+LaTeX Warning: Reference `fig:covmap' on page 15 undefined on input line 91.
+
+! Undefined control sequence.
+<recently read> \CovEirpRefTex 
+                               
+l.95 EIRP of $\CovEirpRefTex
+                            $\,W the covered frequency falls to
+! Undefined control sequence.
+l.96 \CovUnionAtRef
+                   \,GHz, \CovFracAtRef{} per cent of the union, reaching
+! Undefined control sequence.
+l.96 \CovUnionAtRef\,GHz, \CovFracAtRef
+                                       {} per cent of the union, reaching
+! Undefined control sequence.
+l.97 \CovNSysAtRef
+                  {} systems in all and \CovNMaxAtRef{} at the best-covered
+! Undefined control sequence.
+l.97 ...ysAtRef{} systems in all and \CovNMaxAtRef
+                                                  {} at the best-covered
+! Undefined control sequence.
+l.98 frequency near \CovNuMaxAtRef
+                                  \,GHz. With no limit on power that same
+! Undefined control sequence.
+l.99 frequency reaches \CovNMaxFull
+                                   {} of the \NSysClassA{} systems, and half...
+
+! Undefined control sequence.
+<recently read> \CovEirpHalf 
+                             
+l.100 sample is reached only above $\CovEirpHalf
+                                                $\,W.
+! Undefined control sequence.
+<argument> ...of Class~A coverage is \CovNIslands 
+                                                  {} disjoint islands spread...
+l.115 experiment was sensitive.}
+                                
+! Undefined control sequence.
+<argument> ... The dashed line is $\CovEirpRefTex 
+                                                  $\,W, at which \CovUnionAt...
+l.115 experiment was sensitive.}
+                                
+! Undefined control sequence.
+<argument> ...efTex $\,W, at which \CovUnionAtRef 
+                                                  \,GHz of the union survive...
+l.115 experiment was sensitive.}
+                                
+! Undefined control sequence.
+<argument> ...of Class~A coverage is \CovNIslands 
+                                                  {} disjoint islands spread...
+l.115 experiment was sensitive.}
+                                
+! Undefined control sequence.
+<recently read> \CovEirpRefTex 
+                               
+l.115 experiment was sensitive.}
+                                
+! Undefined control sequence.
+<argument> ...efTex $\,W, at which \CovUnionAtRef 
+                                                  \,GHz of the union survive...
+l.115 experiment was sensitive.}
+                                
+
+LaTeX Warning: Reference `fig:waterfall' on page 15 undefined on input line 115
+.
+
+[15 <./figures/completeness_map.pdf>]
+
+Package natbib Warning: Citation `Enriquez2017' on page 16 undefined on input l
+ine 130.
+
+
+Package natbib Warning: Citation `Enriquez2017' on page 16 undefined on input l
+ine 139.
+
+
+Package natbib Warning: Citation `Margot2023' on page 16 undefined on input lin
+e 140.
+
+
+LaTeX Warning: Reference `sec:pninetysel' on page 16 undefined on input line 15
+7.
+
+
+LaTeX Warning: Reference `fig:covmap' on page 16 undefined on input line 163.
+
+
+LaTeX Warning: Reference `fig:accel' on page 16 undefined on input line 167.
+
+) (./sections/07_conclusions.tex [16]) (./sections/08_backmatter.tex
+
+LaTeX Warning: Reference `sec:statistic' on page 17 undefined on input line 8.
+
+
+LaTeX Warning: Reference `app:falsealarm' on page 17 undefined on input line 8.
+
+
+
+LaTeX Warning: Reference `tab:ledger' on page 17 undefined on input line 9.
+
+(./tab_projcodes_v400.tex)
+Underfull \hbox (badness 1394) in paragraph at lines 29--44
+\T1/cmr/m/n/10 are: [], [], [],
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--44
+[]\T1/cmr/m/n/10 , [], [],
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--44
+[]\T1/cmr/m/n/10 , [], [],
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--44
+[]\T1/cmr/m/n/10 , [], [],
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--44
+[]\T1/cmr/m/n/10 , [], [],
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--44
+[]\T1/cmr/m/n/10 , [], [],
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--44
+[]\T1/cmr/m/n/10 , [], [],
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--44
+[]\T1/cmr/m/n/10 , [], [],
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--44
+[]\T1/cmr/m/n/10 , [], [],
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--44
+[]\T1/cmr/m/n/10 , [], [],
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--44
+[]\T1/cmr/m/n/10 , [], [],
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--44
+[]\T1/cmr/m/n/10 , [], [],
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--44
+[]\T1/cmr/m/n/10 , [], [],
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--44
+[]\T1/cmr/m/n/10 , [], [],
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--44
+[]\T1/cmr/m/n/10 , [], [],
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--44
+[]\T1/cmr/m/n/10 , [], [],
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--44
+[]\T1/cmr/m/n/10 , [], [],
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--44
+[]\T1/cmr/m/n/10 , [], [],
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--44
+[]\T1/cmr/m/n/10 , [], [],
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--44
+[]\T1/cmr/m/n/10 , [], [],
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--44
+[]\T1/cmr/m/n/10 , [], [] .
+
+Underfull \hbox (badness 3179) in paragraph at lines 29--44
+\T1/cmr/m/n/10 Per-block epochs are in the machine-readable re-
+
+Underfull \hbox (badness 1275) in paragraph at lines 29--44
+\T1/cmr/m/n/10 lease. The archive meta-data ex-poses no pro-posal
+
+Underfull \hbox (badness 1038) in paragraph at lines 29--44
+\T1/cmr/m/n/10 (Japan), to-gether with NRC (Canada), NSTC and
+[17]
+
+Package natbib Warning: Citation `CASA2022' on page 18 undefined on input line 
+66.
+
+
+Package natbib Warning: Citation `Astropy2022' on page 18 undefined on input li
+ne 66.
+
+
+Package natbib Warning: Citation `Harris2020' on page 18 undefined on input lin
+e 67.
+
+
+Package natbib Warning: Citation `Virtanen2020' on page 18 undefined on input l
+ine 67.
+
+
+Package natbib Warning: Citation `Ginsburg2019' on page 18 undefined on input l
+ine 68.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--71
+[]\T1/cmr/m/n/10 The pipeline de-pends on CASA 6.7.6
+
+Underfull \hbox (badness 6252) in paragraph at lines 65--71
+\T1/cmr/m/n/10 (casatools/casatasks 6.7.6-14; \T1/cmr/bx/n/10 ?\T1/cmr/m/n/10 )
+, Python 3 with
+) (./sections/app_A_reproducibility.tex
+
+LaTeX Warning: Reference `app:linemask' on page 18 undefined on input line 40.
+
+
+LaTeX Warning: Reference `fig:context' on page 18 undefined on input line 56.
+
+
+LaTeX Warning: Reference `fig:hanning' on page 18 undefined on input line 72.
+
+
+LaTeX Warning: Reference `sec:method' on page 18 undefined on input line 78.
+
+
+LaTeX Warning: Reference `app:falsealarm' on page 18 undefined on input line 11
+4.
+
+[18]
+
+LaTeX Warning: Reference `sec:statistic' on page 19 undefined on input line 124
+.
+
+
+LaTeX Warning: Reference `eq:tstar' on page 19 undefined on input line 194.
+
+
+Underfull \hbox (badness 4391) in paragraph at lines 199--212
+[]\T1/cmr/m/n/10 Two cat-a-logue columns, \T1/cmtt/m/n/10 pb_offset_arcsec \T1/
+cmr/m/n/10 and
+[19 <./figures/hanning_response.pdf>]) (./sections/app_C_spatialnorm.tex
+
+LaTeX Warning: Reference `app:conventions' on page 20 undefined on input line 1
+8.
+
+
+LaTeX Warning: Reference `eq:tstar' on page 20 undefined on input line 62.
+
+! Undefined control sequence.
+l.72 two noises agree. Over the \NsrNWin
+                                        {} windows carrying no threshold cro...
+
+! Undefined control sequence.
+l.73 its median is \NsrMed
+                          , with a star-clustered 95 per cent interval of
+! Undefined control sequence.
+l.74 \NsrLo
+           --\NsrHi. It does not climb with the brightness of the emission i...
+
+! Undefined control sequence.
+l.74 \NsrLo--\NsrHi
+                   . It does not climb with the brightness of the emission i...
+
+! Undefined control sequence.
+l.75 ...cative error would scale with: \NsrFifthLo
+                                                  {}
+! Undefined control sequence.
+l.77 \NsrFifthHi
+                {} in the brightest fifth, and \NsrBrightMed{} over the
+! Undefined control sequence.
+l.77 ... in the brightest fifth, and \NsrBrightMed
+                                                  {} over the
+! Undefined control sequence.
+l.78 \NsrBrightN
+                {} windows whose ring exceeds \NsrBrightSig$\sigma$ and is
+! Undefined control sequence.
+l.78 ...} windows whose ring exceeds \NsrBrightSig
+                                                  $\sigma$ and is
+! Undefined control sequence.
+l.80 rise at all is shown by the \NsrCrossN
+                                           {} windows that do carry a crossing,
+
+! Undefined control sequence.
+l.81 where it is \NsrCrossMed
+                             . Part of the reason it does not rise otherwise is
+
+[20]
+
+LaTeX Warning: Reference `eq:tstar' on page 21 undefined on input line 100.
+
+! Undefined control sequence.
+l.118 ...ranks all \NCtrl{} probes in \NsrFirstObs
+                                                  {} of
+! Undefined control sequence.
+l.119 the survey's windows against \NsrFirstExp
+                                               {} if the positions were
+
+LaTeX Warning: Reference `app:falsealarm' on page 21 undefined on input line 12
+2.
+
+
+LaTeX Warning: Reference `sec:vistest' on page 21 undefined on input line 172.
+
+) (./sections/app_I_linemask.tex [21]
+! Undefined control sequence.
+l.23 runs from \FrBaryLo
+                        {} to \FrBaryHi\,km\,s$^{-1}$ across the survey, so a
+! Undefined control sequence.
+l.23 runs from \FrBaryLo{} to \FrBaryHi
+                                       \,km\,s$^{-1}$ across the survey, so a
+! Undefined control sequence.
+l.25 \FrBarySwing
+                 \,km\,s$^{-1}$ of a $\pm\MaskHalfKms$\,km\,s$^{-1}$ budget on
+! Undefined control sequence.
+l.28 \FrEpochNEpoch
+                   {} \FrEpochStar{} epochs show the transform working in the
+! Undefined control sequence.
+l.28 \FrEpochNEpoch{} \FrEpochStar
+                                  {} epochs show the transform working in the
+! Undefined control sequence.
+l.29 only way that can be checked: \FrEpochTopoKms
+                                                  \,km\,s$^{-1}$ apart in the
+! Undefined control sequence.
+l.30 observed frame, they agree to \FrEpochStelKms
+                                                  \,km\,s$^{-1}$ in the star's.
+
+! Undefined control sequence.
+l.32 The mask holds \FrNTrans
+                             {} transitions of \FrNSpec{} species at full
+! Undefined control sequence.
+l.32 ... holds \FrNTrans{} transitions of \FrNSpec
+                                                  {} species at full
+
+Package natbib Warning: Citation `Pickett1998' on page 22 undefined on input li
+ne 33.
+
+
+Package natbib Warning: Citation `CDMS2005' on page 22 undefined on input line 
+33.
+
+! Undefined control sequence.
+l.38 carbon monosulphide does: \FrNSOWord
+                                         {} of its transitions fall in the
+! Undefined control sequence.
+l.43 \FrCpStar
+              {} at $T_\star=\FrCpT$, lies \FrCpSODv\,km\,s$^{-1}$ from
+! Undefined control sequence.
+l.43 \FrCpStar{} at $T_\star=\FrCpT
+                                   $, lies \FrCpSODv\,km\,s$^{-1}$ from
+! Undefined control sequence.
+l.43 ...Star{} at $T_\star=\FrCpT$, lies \FrCpSODv
+                                                  \,km\,s$^{-1}$ from
+! Undefined control sequence.
+l.44 \FrSOName
+              {} in its own star's frame (\S\ref{sec:chaingap}).
+
+LaTeX Warning: Reference `sec:chaingap' on page 22 undefined on input line 44.
+
+
+Underfull \hbox (badness 1436) in paragraph at lines 32--45
+[]\T1/cmr/m/n/10 The mask holds  tran-si-tions of  species at full
+
+LaTeX Warning: Reference `tab:maskrobust' on page 22 undefined on input line 47
+.
+
+! Undefined control sequence.
+l.48 ... chain at half-widths from $\pm\FrLadderLo
+                                                  $ to
+! Undefined control sequence.
+l.49 $\pm\FrLadderHi
+                    $\,km\,s$^{-1}$. One count moves, and it is worth naming:
+! Undefined control sequence.
+l.50 narrowing to $\pm\FrLadderLo
+                                 $\,km\,s$^{-1}$ releases \FrNarrowMoveStar{}
+! Undefined control sequence.
+l.50 ...$\,km\,s$^{-1}$ releases \FrNarrowMoveStar
+                                                  {}
+! Undefined control sequence.
+l.51 from attribution at \FrNarrowMoveDv
+                                        \,km\,s$^{-1}$ from
+! Undefined control sequence.
+l.52 \FrNarrowMoveLine
+                      {} --- a crossing that does not outrank its own control
+! Undefined control sequence.
+l.53 ... the result turns on is flat: \FrNRankPass
+                                                  {}
+! Undefined control sequence.
+l.56 mask removes rises from \FrMaskPctLo
+                                         {} to \FrMaskPctHi{} per cent. Wide...
+
+! Undefined control sequence.
+l.56 ... rises from \FrMaskPctLo{} to \FrMaskPctHi
+                                                  {} per cent. Widening
+
+LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
+(Font)              using `T1/cmr/m/it' instead on input line 68.
+
+(./tab_maskrobust_v411.tex)
+! Undefined control sequence.
+l.78 against \FrMaskPct
+                       {} per cent here, and it does not leave the dispositions
+
+! Undefined control sequence.
+l.79 alone. \FrFullNFlip
+                        {} of the \NCross{} crossings change side under it,
+! Undefined control sequence.
+l.80 \FrFullNFlipRankWord
+                         {} of them a crossing that outranks every control:
+! Undefined control sequence.
+l.81 \FrFullFlipRankStar
+                        {} falls \FrFullFlipRankDv\,km\,s$^{-1}$ from a
+! Undefined control sequence.
+l.81 \FrFullFlipRankStar{} falls \FrFullFlipRankDv
+                                                  \,km\,s$^{-1}$ from a
+! Undefined control sequence.
+l.82 vibrationally excited \FrFullFlipRankChem
+                                              {} transition, which nobody would
+
+! Undefined control sequence.
+l.94 Masking removes \FrMaskLostGHz
+                                   \,GHz, \FrMaskPct{} per cent of the
+! Undefined control sequence.
+l.94 ...ng removes \FrMaskLostGHz\,GHz, \FrMaskPct
+                                                  {} per cent of the
+! Undefined control sequence.
+l.95 \FrMaskUnionGHz
+                    \,GHz unique-frequency union, CN, CO and SO dominating. It
+! Undefined control sequence.
+l.96 ... uniform: the loss reaches \FrMaskWorstPct
+                                                  {} per cent in
+! Undefined control sequence.
+l.97 Band~\FrMaskWorstBand
+                          {} and stays below 2\,per cent in Bands~3--5, and it
+
+LaTeX Warning: Reference `sec:excludes' on page 22 undefined on input line 106.
+
+
+
+Package natbib Warning: Citation `CocconiMorrison1959' on page 22 undefined on 
+input line 108.
+
+
+LaTeX Warning: Reference `sec:future' on page 22 undefined on input line 108.
+
+) (./sections/app_J_falsealarm.tex [22]
+
+LaTeX Warning: Reference `app:radius' on page 23 undefined on input line 64.
+
+
+LaTeX Warning: Reference `app:radius' on page 23 undefined on input line 70.
+
+
+LaTeX Warning: Reference `sec:statistic' on page 23 undefined on input line 79.
+
+
+
+LaTeX Warning: Reference `eq:bonf' on page 23 undefined on input line 120.
+
+
+Underfull \hbox (badness 1406) in paragraph at lines 110--126
+\T1/cmr/m/n/10 it: neigh-bour-ing con-trols are cor-re-lated be-low the
+[23]) (./sections/app_N_rfi.tex
+! Undefined control sequence.
+l.69 ...e releases a peak frequency --- \IfPopNWin
+                                                  {} of them, of which only
+! Undefined control sequence.
+l.70 \IfPopNCross
+                 {} carry a threshold crossing --- because such an artefact ...
+
+[24]
+! Undefined control sequence.
+l.97 rather than as a carrier.} Its \DqBlockNCross
+                                                  {} crossings toward
+! Undefined control sequence.
+l.101 median running \DqBlockRingLo
+                                   --\DqBlockRingHi{} against a survey media...
+
+! Undefined control sequence.
+l.101 ...an running \DqBlockRingLo--\DqBlockRingHi
+                                                  {} against a survey median of
+
+! Undefined control sequence.
+l.102 \DqSurvMed
+                , so the window contains no null against which anything coul...
+
+! Undefined control sequence.
+l.104 ...way from the phase centre; \DqBlockIfMult
+                                                  {} of the
+! Undefined control sequence.
+l.105 \DqBlockNCross
+                    {} sit at the identical channel of two different spectral
+! Undefined control sequence.
+l.110 frequencies is covered by \DqOtherWinLo
+                                             --\DqOtherWinHi{} further windows
+! Undefined control sequence.
+l.110 ...s covered by \DqOtherWinLo--\DqOtherWinHi
+                                                  {} further windows
+! Undefined control sequence.
+l.111 toward \DqOtherStarLo
+                           --\DqOtherStarHi{} other stars, and \DqOtherSame{...
+
+! Undefined control sequence.
+l.111 toward \DqOtherStarLo--\DqOtherStarHi
+                                           {} other stars, and \DqOtherSame{...
+
+! Undefined control sequence.
+l.111 ...herStarHi{} other stars, and \DqOtherSame
+                                                  {} of
+
+LaTeX Warning: Reference `sec:bdblock' on page 25 undefined on input line 114.
+
+! Undefined control sequence.
+l.116 control ensemble exceeds \DqFactor
+                                        {} the survey median of that quantit...
+
+! Undefined control sequence.
+l.117 \DqNWin
+             {} of the \NWindows{} windows are flagged, toward \DqNStar{} stars
+
+! Undefined control sequence.
+l.117 ...ws{} windows are flagged, toward \DqNStar
+                                                  {} stars
+! Undefined control sequence.
+l.118 (\DqStars
+               ), the remaining one being a resolved disc rather than a defect.
+
+)
+No file r10recur-probe.bbl.
+
+Package natbib Warning: There were undefined citations.
+
+[25] (build_r10recur/r10recur-probe.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `r10recur-probe.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information){/usr/share/texmf/fonts/enc
+/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texm
+f/fonts/type1/public/cm-super/sfbx0700.pfb></usr/share/texmf/fonts/type1/public
+/cm-super/sfbx0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.p
+fb></usr/share/texmf/fonts/type1/public/cm-super/sfcc0600.pfb></usr/share/texmf
+/fonts/type1/public/cm-super/sfcc0800.pfb></usr/share/texmf/fonts/type1/public/
+cm-super/sfcc0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1000.pf
+b></usr/share/texmf/fonts/type1/public/cm-super/sfrm0500.pfb></usr/share/texmf/
+fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf/fonts/type1/public/c
+m-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb
+></usr/share/texmf/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf/f
+onts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm
+-super/sftc0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti0500.pfb>
+</usr/share/texmf/fonts/type1/public/cm-super/sfti0700.pfb></usr/share/texmf/fo
+nts/type1/public/cm-super/sfti0800.pfb></usr/share/texmf/fonts/type1/public/cm-
+super/sfti0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb><
+/usr/share/texmf/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/texmf/fon
+ts/type1/public/cm-super/sftt1000.pfb></usr/share/texmf/fonts/type1/public/cm-s
+uper/sfxc0800.pfb>
+Output written on build_r10recur/r10recur-probe.pdf (25 pages, 1155490 bytes).
+Transcript written on build_r10recur/r10recur-probe.log.

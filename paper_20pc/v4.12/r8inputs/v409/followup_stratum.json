@@ -1,0 +1,39 @@
+{
+ "n_blocks": 10,
+ "n_windows": 40,
+ "hours": 35.332,
+ "blocks": [
+  "A002_X105e6e0_X7c5e",
+  "A002_X107376c_X6126",
+  "A002_X117d38c_X1663b",
+  "A002_X117d38c_X16916",
+  "A002_X117d38c_X17039",
+  "A002_X117d38c_X214ad",
+  "A002_X117d38c_X21f3c",
+  "A002_X11adad7_X1ef23",
+  "A002_X11adad7_X2518",
+  "A002_Xfffde1_X2b1a"
+ ],
+ "census_blocks_also_covering": [
+  "A002_X1190de8_Xd526",
+  "A002_X11adad7_X25c5e",
+  "A002_X11adad7_X25dc7"
+ ],
+ "n_fine": 20,
+ "n_coarse": 20,
+ "n_informative": 9,
+ "n_informative_census": 2,
+ "n_informative_followup": 7,
+ "informative_blocks": [
+  "A002_X117d38c_X1663b",
+  "A002_X117d38c_X16916",
+  "A002_X117d38c_X17039",
+  "A002_X117d38c_X214ad",
+  "A002_X117d38c_X21f3c",
+  "A002_X11adad7_X1ef23",
+  "A002_X11adad7_X2518",
+  "A002_X11adad7_X25c5e",
+  "A002_X11adad7_X25dc7"
+ ],
+ "note": "selected BECAUSE they cover a crossing frequency; D35 decision 2 keeps them out of the primary census"
+}

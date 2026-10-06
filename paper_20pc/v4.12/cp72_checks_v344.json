@@ -1,0 +1,17 @@
+{
+  "_doc": "Measurements made on the retained per-integration dynamic spectrum of the CP-72 2713 Band 7 window (A002_Xff0235_X4a6d_spw3_srcspec.npz, shape I_star = [495, 3840]; see localnull_code/shapes.json). The .npz products themselves are held on the processing host and are not in this release folder, so these values are recorded here as a frozen input rather than recomputed by make_all.sh. Provenance: cycle-1 verification run e4cac251, /data/SETI/work/v343_checks/checks.json, summarised in /shared/ASTRA/reviews/CYCLE2_PRIORITY_ARCHIVE_FINDINGS.md section 6. The v3.44 revision did not re-derive them; see BUILD_NOTES.md and REFEREE_RESPONSE_CYCLE2.md.",
+  "target": "CP-72_2713_B7",
+  "n_int": 495,
+  "var_ratio_star_over_control_median": 1.006,
+  "local_null_p_star_own_residual": 0.0020,
+  "local_null_p_control": 0.0016,
+  "split_half_T_first": 3.08,
+  "split_half_T_second": 5.12,
+  "split_half_T_expected": 4.11,
+  "split_half_sigma_difference": 1.4,
+  "continuum_per_int_mJy": 0.07,
+  "continuum_per_int_err_mJy": 0.06,
+  "continuum_three_sigma_mJy": 0.17,
+  "aumic_flare_mJy": [6.1, 16.8],
+  "bandpass_epsilon_required": 70
+}

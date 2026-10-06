@@ -1,0 +1,52 @@
+[
+ {
+  "stage": "0 v4.09 as shipped",
+  "pages": 60,
+  "main": 23,
+  "appx": 37,
+  "latex_errors": 0,
+  "cum_delta_pages": 0,
+  "cum_delta_main": 0,
+  "cum_delta_appx": 0
+ },
+ {
+  "stage": "1 + the 19 floats on R2 cut list",
+  "pages": 55,
+  "main": 22,
+  "appx": 33,
+  "latex_errors": 0,
+  "cum_delta_pages": 5,
+  "cum_delta_main": 1,
+  "cum_delta_appx": 4
+ },
+ {
+  "stage": "2 + Appendix M deleted",
+  "pages": 53,
+  "main": 22,
+  "appx": 31,
+  "latex_errors": 0,
+  "cum_delta_pages": 7,
+  "cum_delta_main": 1,
+  "cum_delta_appx": 6
+ },
+ {
+  "stage": "3 + Appendices A and B deleted",
+  "pages": 47,
+  "main": 22,
+  "appx": 25,
+  "latex_errors": 0,
+  "cum_delta_pages": 13,
+  "cum_delta_main": 1,
+  "cum_delta_appx": 12
+ },
+ {
+  "stage": "4 + the revision history purged",
+  "pages": 44,
+  "main": 20,
+  "appx": 24,
+  "latex_errors": 0,
+  "cum_delta_pages": 16,
+  "cum_delta_main": 3,
+  "cum_delta_appx": 13
+ }
+]

@@ -1,0 +1,18 @@
+{
+ "n_windows": 1651,
+ "n_fine": 402,
+ "n_coarse": 1249,
+ "n_stars": 89,
+ "n_systems": 82,
+ "n_eb": 404,
+ "n_starbands": 112,
+ "n_withheld": 12,
+ "n_defect": 13,
+ "n_dup": 45,
+ "n_flagged": 12,
+ "n_flagged_old": 18,
+ "n_src": 135,
+ "n_ctrl": 512,
+ "source": "corrected_export_v399.json",
+ "snapshot": "2026-09-20T06:36Z"
+}

@@ -1,0 +1,237 @@
+%% APPENDIX D -- the false-alarm expectation, the control ensemble, and the
+%% execution-block quality criterion.  Owner: r11-chain.  Carries
+%% \label{app:falsealarm} (04_method.tex, 08_backmatter.tex) and
+%% \label{sec:blockquality} (04_method.tex).
+\section{The false-alarm expectation and the control ensemble}
+\label{app:falsealarm}
+
+The paper's central claim is that the number of unattributed crossings is the
+number chance predicts. This appendix gives that expectation, what it is
+conditioned on, and what the control ensemble calibrating it can support.
+
+\subsection{What the expectation is conditioned on}
+%% (subsection label retired: nothing cites it)
+
+The expectation is built from the control statistics themselves, which are
+the only empirical null the data provide, and it imposes the condition an
+event must actually satisfy: to reach the trigger, and to fall outside the
+attribution windows. Summed window by window over the \NWinA{} Class~A
+windows, each window's own effective cell count against its own realised null
+scale, \RsevChanceTrigA{} are expected to trigger by chance; the attribution
+windows occupy \RsevChanceOccPct{} per cent of the searched band; and the
+product is \RsevChanceExp{} expected unattributed Class~A crossings.
+
+That figure assumes the star's own tail matches its controls', and
+Appendix~\ref{app:radius} measures that it does not: a no-signal stellar
+position reaches the top of its own ensemble \HoTailFactor{} times as often
+as exchangeability would give, with a bootstrap interval
+\HoTailLo--\HoTailHi{} clustered over the reserved blocks. Folding that in,
+the expectation is \textbf{about \ChnChanceMid{} unattributed Class~A
+crossings, in a range \ChnChanceLo--\ChnChanceHi, against \ChnUnattrA{}
+observed}. The range comes almost entirely from the width on that factor and
+is far wider than the difference between the two numbers, so what the
+comparison establishes is that the observed population needs no explanation
+beyond chance --- not that chance predicts it to within one crossing.
+
+The classes divide as \ChnXrossA{} Class~A crossings and \ChnXrossB{}
+Class~B, of which \ChnAttrA{} and \ChnAttrB{} respectively are attributed; so
+every Class~B crossing is unattributed, and all of them come from the one
+execution block of \S\ref{sec:blockquality}.
+
+\emph{One conditioning is reported only as a diagnostic.} An expectation
+conditioned on the rank predicts a different quantity --- the number of
+windows in which a no-signal position would rank first, \ClustStageMean{}
+against the \ClustStageNObs{} observed --- and that is a statement about the
+pipeline and not about the crossings. It also explains why every crossing
+outranking all its controls is Class~A: only \StageNullEligible{} of the
+\StageNullAllWin{} windows retaining a control vector have an ensemble
+maximum reaching $T_{\rm trig}=\StageNullTrig$ at all, and
+\StageNullEligibleA{} of those are Class~A.
+
+\emph{One trade is not available to us, and it should be stated plainly.} An
+excess of this size needs only a small unmodelled tail in the control
+ensemble, and Appendix~\ref{app:radius} shows that one exists --- but the
+same noise model sets the injection recovery fractions, so a tail large
+enough to remove the excess would make the quoted completeness optimistic by
+about the same factor. Neither correction has been applied.
+
+\subsection{Execution-block quality}
+\label{sec:blockquality}
+
+The comparison with the control positions assumes each block's ensemble
+behaves like noise, and one block makes that assumption plainly false: every
+one of its \NCtrl{} probes exceeds the trigger, the smallest at
+\BqFailCtrlMin. A criterion for the condition was therefore fixed and applied
+to every block, rather than recognised on the block that prompted it.
+
+The statistic is the one this paper already uses as a diagnostic: the median
+of a window's control ensemble, which is what separates a field with a source
+in it from a field that is no null at all. That median is a maximum over the
+window's own channel$\times$drift grid, so its level rises with the cell
+count; it is therefore scaled by the median of the same quantity over the
+windows of its own search class, and one threshold then means the same thing
+in both. A block's statistic is the median of that ratio over its windows,
+and \textbf{a block fails when it exceeds \BqFactor{} the scale of its
+class} --- the factor already carried by the window-level data-quality flag,
+fixed before that flag was applied to anything.
+
+Applied to all \BqNBlocks{} blocks of the primary census, where the median
+block sits at \BqQMed, the criterion fails \BqNFail: \BqFailBlock{} toward
+\BqFailStar, at \BqFailQ{} where the next worst block is \BqNextQ. Nothing
+else is close, and the unscaled form of the rule fails the same
+\BqRawNFail{} block. \textbf{The complete Class~A results are identical with
+the failing block and without it} --- \BqWinA{} windows, \BqXrossA{}
+crossings, \BqUnattrA{} unattributed, \BqRankA{} outranking all \NCtrl{}
+controls --- because its \BqFailNWin{} windows are all coarse-channel ones.
+What it does carry is \BqFailNCross{} of the survey's \NCross{} crossings,
+the entire Class~B crossing population.
+
+\subsection{The control ensemble: its calibration, and its resolution}
+%% (subsection label retired: nothing cites it)
+
+The ring geometry is set in \S\ref{sec:statistic}; its calibration and its
+resolution are the subject here. Under that geometry the stellar ranks are
+consistent with the uniform distribution exchangeability implies, in both
+array strata --- \VerTwmAfterN{} 12\,m windows and \VerAcaAfterN{} ACA
+windows, the latter with median rank \VerAcaAfterMed{} against the one half
+expected --- over the \VerNTested{} of \NWindows{} windows that retain a
+control vector. The ACA windows are measured on the geometry of each
+observation's own antenna table and baselines rather than on a 12\,m beam.
+Two cautions keep this from being a proof of exchangeability: a shift of less
+than about \VerKsPowerAca{} in the rank distribution could not have been seen
+at all in samples of this size, so the strata are consistent with uniform
+rather than demonstrably uniform; and the diagnostic most sensitive to
+contamination of the inner controls, the excess of the innermost control bin
+over the outer annulus, is \VerAcaAfterExc{} with an interval
+\VerAcaAfterExcLo{} to \VerAcaAfterExcHi{} that spans zero.
+
+\emph{The rank is not a significance test, and the reason is structural.}
+Ranking the star against \NCtrl{} control positions drawn from the same field
+is a good way to decide which windows deserve examination, but
+$1/(\NCtrl+1)=\RankFloorVal$ is the \emph{resolution} of the ensemble --- the
+smallest rank it can express --- and not the probability that noise produced
+the window. Against a survey-wide Bonferroni scale
+%
+\begin{equation}
+\alpha_{\rm survey}=\frac{0.05}{\NWindows}=\BonfScaleCalc,
+\qquad
+\frac{\RankFloorVal}{\alpha_{\rm survey}}=\BonfRankRatio,
+\label{eq:bonf}
+\end{equation}
+%
+that floor is \BonfRankRatio{} times too coarse, and correlation widens it:
+neighbouring controls are correlated below the synthesised-beam scale, so a
+window's annulus carries only $N_{\rm eff}\simeq30$--$43$ independent spatial
+trials and the ensemble resolves no better than \RankEffLo--\RankEffHi.
+Drawing more controls does not rescue it, the primary beam bounding how many
+independent positions a single pointing contains. \textbf{The floor of
+Eq.~\ref{eq:bonf} is the design's central limitation: no single window in
+this survey can be significant on the rank alone, which is why confirmation
+here requires independent recurrence.}
+
+\subsection{The trials budget}
+
+A window holds \CellsWinMin--\CellsWinMax{} channel$\times$drift cells
+(median \CellsWinMed), the survey \CellsTotal{} in total, and they are not
+independent trials: channel smoothing and a drift grid oversampled two to
+one together over-count them by \FaOverCount. The control ensembles
+calibrate that budget without a Gaussian assumption. The same arithmetic
+predicts \NCtrlWinExp{} of the \NWindows{} windows carrying a control above
+$T_{\rm trig}$ and \NCtrlWinObs{} do, agreeing to \CtrlWinAgreePct{} per
+cent; corrected for the over-count, the observed control maxima sit
+$+\FaExcessFine$ and $+\FaExcessCoarse$ per cent above prediction in the
+fine and coarse classes independently. Departures of that size are why the
+operative statement is the empirical rate and not a Gaussian budget.
+
+\emph{The residual on-star excess is not zero, and it is reported as an open
+systematic rather than explained away.} Correlation cannot move the expected
+\emph{number} above the trigger, only its clumping, so the excess over an
+independent-Gaussian budget divides in two: the cells within one crossing
+window, a factor \CellsPerCrossRatio{} that the frequency-axis over-count
+predicts because one real excursion is counted about three times, and the
+number of crossing windows, a factor \CrossWinRatio{} with a one-sided
+Poisson probability of \CrossWinPoisson. The residual runs one way and
+carries the same sign at the controls, so a residual excess of chance
+crossings at the tens-of-per-cent level cannot be excluded.
+
+\emph{One stratum departs from uniformity and it is the one that matters.}
+The fine-channel windows' ranks are not uniform over $n=\NFine$ windows:
+\NStageOneFine{} of them contain an on-star peak above their own control
+maximum against \ExpStageOneFine{} expected, while the coarse stratum, three
+times larger and predicting \ExpStageOneCoarse{} such windows, contains
+\NStageOneCoarse. A coarse channel dilutes a narrow circumstellar line, so
+the class that can resolve one is the class that finds it --- and by the same
+reasoning a genuine unresolved carrier would appear in Class~A first. The
+departure survives removal of every fine window carrying a stellar crossing,
+so fine-window rank probabilities are optimistic for the class as a whole and
+not only where a crossing sits.
+
+\emph{What is left is bounded, and the bounds are null.} Treating each
+control as a pseudo-star and ranking it against the other \NCtrl-1 gives
+\NPseudo{} ranks that are uniform to the resolution the ensemble can
+express, and the real stellar ranks agree with them at $\pv{\StarPseudoP}$.
+Any systematic radial suppression of the controls is below
+\RingRhoBoundPct{} per cent in the mean, and the star's own residual
+variance equals the controls' to better than a per cent in the rank-passing
+windows. Scrambling each window so that nothing coherent survives along a
+drift track carries \LNNWindows{} windows past the rank floor and changes no
+disposition; it fails only on HD~48370 Band~6, whose extended emission and
+imaging residuals are coherent across integrations and are destroyed by the
+scramble itself, so no scrambled-noise probability is quoted there.
+
+%% ------------------------------------------------------------------
+%% NOTE (r11-chain, round 11).  THE QUESTION THE PREVIOUS NOTE ASKED IS
+%%   ANSWERED AND THE ANSWER IS THE OTHER WAY ROUND.  This appendix now
+%%   leads with the expectation for the chain actually applied -- trigger
+%%   plus attribution, no rank -- carries the measured tail factor on it, and
+%%   quotes the result as ONE range (\ChnChanceMid, \ChnChanceLo-\ChnChanceHi
+%%   against \ChnUnattrA).  The rank-conditioned expectation (\ClustStageMean
+%%   against \ClustStageNObs) is kept as a pipeline diagnostic and is no
+%%   longer reachable as "the" expectation.  \RsevChanceFracLoc and
+%%   \RsevChanceObsAUnattr are no longer cited here: the first belonged to a
+%%   localisation clause the chain no longer has, and the second is the
+%%   RELEASED CATALOGUE's unattributed count, which disagrees with the
+%%   ledger's (see INTEGRATION_QUEUE entry 2).
+%% REQUEST (appendix-triage -> integrator):
+%%   Floats deleted from this appendix and moved to the data release:
+%%   tab:ctrlsep (control separations), tab:excess (the cell-excess
+%%   decomposition), tab:arraysplit (the array split) and fig:ctrldiag
+%%   (control diagnostics).  None is cited from the body.  tab_ctrlsep_v400,
+%%   tab_falsealarm_v399 and the control_diagnostics figure are now
+%%   uninputted; retire_macros will strip their macros.
+%% ------------------------------------------------------------------
+
+%% ★ tab:ledger MOVED HERE from Sec. 5 in the v4.12 length pass: the
+%% crossing-by-crossing ledger belongs beside the false-alarm accounting that
+%% explains how many of its rows are expected.  0.72 pp off the main text.
+\begin{table*}
+\centering
+\caption{\textbf{The crossing ledger, from which every disposition in this
+paper can be reproduced.} Every one of the \NCross{} threshold crossings:
+the star, its execution block, the ALMA band, the crossing frequency as the
+correlator delivered it, the same frequency in the star's rest frame, the
+search statistic $T_\star$, the largest statistic $T_{\rm ctrl}$ among the
+window's \NCtrl{} control positions, the nearest masked transition and the
+stellar-frame offset $\Delta v_\star$ from it, and then the recurrence
+test: $n_{\rm rep}$ covering repeat blocks spanning $\Delta t$ days, the
+statistic $T_{\rm pers}$ a carrier persisting at the discovery flux would
+have produced at the predicted stellar-frame cell, the statistic
+$T_{\rm rep}$ measured there at the matched drift, and the exclusion.
+$T_{\rm ctrl}$ is a diagnostic and gates nothing: it says which crossing was
+examined first. The drift-maximised reading of the same cell is in
+Table~\ref{tab:cand} for the two leading events and in the data release for
+all of them. One execution block fails the quality criterion of
+\S\ref{sec:bdblock}, and the two quantities that would inherit its
+discovery amplitude --- $T_{\rm pers}$ and the exclusion --- are withheld
+on its four rows rather than printed from data the paper calls defective.
+A crossing is attributed where $|\Delta v_\star|\le\MaskHalfKms$\,km\,s$^{-1}$;
+the transition named is the nearest in that frame, so far from every
+transition it is the magnitude and not the name that carries information.
+$\nu_\star$ follows from $\nu_{\rm topo}$ by the barycentric term of that
+block's epoch and the star's systemic velocity and nothing else, so the last
+column is reproducible from the two before it. Block identifiers omit the
+constant \texttt{A002\_} prefix.}
+\label{tab:ledger}
+\tiny
+\input{tab_ledger}
+\end{table*}
