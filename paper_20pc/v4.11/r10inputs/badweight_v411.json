@@ -1,0 +1,13 @@
+{
+  "_what": "The visibility-weight pathology in 27 of the 2838 retained source spectra, measured where the products live (/data/SETI, not mounted in this tree). Frozen so the paper's sentence about it is generated and not typed.",
+  "_source": "referee_r8/MULTIEPOCH_STACK.md section 4.1 item 3, measured on the products during the multi-epoch stacking run of 2026-09-26; the product list itself is stack_v408/badweight.json, which this record must agree with on the count.",
+  "n_products_flagged": 27,
+  "n_products_retained": 2838,
+  "weight_max": 1.04e11,
+  "weight_median_survey": 343.0,
+  "spectrum_peak_to_peak_nJy": 5.0,
+  "symptom_star": "HR 1010",
+  "symptom_smin_nominal_ujy": 7.0,
+  "_signature": "time-averaged spectra numerically zero to within a few nJy carrying visibility weights orders of magnitude above the survey median; under inverse-variance weighting one such epoch takes essentially all of the weight, which is how it was found (largest control excursions in the first pass, and a nominal single-block ACA sensitivity of 7 uJy, which is not physically reachable).",
+  "_cause": "a fault in the archived products' WEIGHT column against near-zero data, not in the stacking: the stack reads the weights it is given."
+}

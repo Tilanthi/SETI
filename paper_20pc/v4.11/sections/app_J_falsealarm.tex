@@ -1,0 +1,194 @@
+%% APPENDIX D -- the false-alarm expectation and the control ensemble.
+%% Owner: appendix-triage.  Carries \label{app:falsealarm}, cited by
+%% 04_method.tex and 08_backmatter.tex.
+\section{The false-alarm expectation and the control ensemble}
+\label{app:falsealarm}
+
+The paper's central claim is that the number of unattributed crossings is the
+number chance predicts. This appendix gives the expectation that claim rests
+on, what it is conditioned on, and what the control ensemble that calibrates
+it can and cannot support.
+
+\subsection{What the expectation is conditioned on}
+%% (subsection label retired: nothing cites it)
+
+The expectation is built from the control statistics themselves, which are
+the only empirical null the data provide, and it imposes the condition an
+event must actually satisfy. Under the disposition chain this paper applies,
+that condition is to reach the trigger \emph{and} outrank every control.
+Drawing one control index per execution block --- so that windows sharing
+weather, calibration and correlator setup are not treated as independent
+trials --- and resampling blocks, the expectation over the \NWinA{} Class~A
+windows is \ClustStageMean{} unattributed rank-passing crossings against the
+\ClustStageNObs{} observed, and the probability of that count or more is
+$P(\geq\ClustStageNObs)=\ClustStagePobs$. Clustering changes the number
+little, because the \emph{position} of a block's control maximum is not
+shared across its windows.
+
+\emph{The conditioning is restrictive, and that is what makes it
+informative.} Exactly one probe per window is the ensemble maximum, so the
+probability that the stellar position would have been that maximum, treated
+as exchangeable with the probes, is $1/(\NCtrl+1)$ in windows whose control
+maximum reaches $T_{\rm trig}=\StageNullTrig$ and zero in the rest. Only
+\StageNullEligible{} of the \StageNullAllWin{} windows that retain a control
+vector have a control maximum reaching the trigger at all, and
+\StageNullEligibleA{} of those are Class~A. \emph{This is why every
+rank-passing crossing in the survey is Class~A}, and why the choice of
+reference class largely dissolves once the trigger condition is imposed. An
+expectation conditioned on the rank alone predicts a different quantity ---
+the number of windows in which a no-signal position would rank first --- and
+is a pipeline diagnostic rather than a statement about candidates.
+
+A second conditioning is reported beside it, on the same control ensemble,
+and it is the one the body quotes: \emph{without} the rank clause ---
+trigger, localisation and attribution only --- \RsevChanceTrigA{} Class~A
+windows are expected to trigger by chance, the visibility fit localises
+\RsevChanceFracLoc{} of events at the trigger, and the mask occupies
+\RsevChanceOccPct{} per cent of the searched band, giving
+\emph{\RsevChanceExp{} expected unattributed Class~A crossings against
+\RsevChanceObsAUnattr{} observed}. The two are not competing readings of one
+quantity but the expectations for two different chains, the rank clause
+being a further one-in-$(\NCtrl+1)$ filter; the observed population is
+accounted for on either.
+
+The screen's rank bias runs against us and not for us: it places the star
+\emph{high} in its own control distribution, so it inflates star-first
+outcomes rather than suppressing them. Folding that measured factor in
+raises the expectation to \PriMean{} and leaves the observed count the
+expected one.
+
+\emph{One trade is not available to us, and it should be stated plainly.} An
+excess of this size needs only a small unmodelled tail in the control
+ensemble, and Appendix~\ref{app:radius} shows that one exists. But the same
+noise model sets the injection recovery fractions, so a tail large enough to
+remove the excess would make the quoted completeness optimistic by roughly
+the same factor. The two cannot be traded independently, and neither
+correction has been applied.
+
+\subsection{The control ensemble: its calibration, and its resolution}
+%% (subsection label retired: nothing cites it)
+
+The screen's geometry is set in \S\ref{sec:statistic}; its calibration and
+its resolution are the subject here. Under that geometry the stellar ranks
+are consistent with the uniform distribution exchangeability implies, in
+both array strata --- \VerTwmAfterN{} 12\,m windows and \VerAcaAfterN{} ACA
+windows, the latter with median rank \VerAcaAfterMed{} against the one half
+expected --- over the \VerNTested{} of \NWindows{} windows that retain a
+control vector, the remaining \VerNUnmatched{} having none. The ACA windows are screened on the
+geometry measured from each observation's own antenna table and baselines
+rather than on a 12\,m beam, and the array configuration does not enter the
+sensitivity. Two cautions keep this from being a proof of exchangeability.
+With samples of this size a shift of less than about \VerKsPowerAca{} in
+the rank distribution could not have been seen at all, so these strata are
+consistent with uniform rather than demonstrably uniform;
+and the diagnostic most directly sensitive to contamination of the inner
+controls, the excess of the innermost control bin over the outer annulus, is
+\VerAcaAfterExc, with an interval of \VerAcaAfterExcLo{} to
+\VerAcaAfterExcHi{} that spans zero and therefore neither confirms nor
+excludes a residual effect.
+
+\emph{Neither form is a significance test, and the reason is structural.}
+Ranking the star against \NCtrl{} control positions drawn from the same field
+is a powerful way to decide which windows deserve examination, but
+$1/(\NCtrl+1)=\RankFloorVal$ is the \emph{resolution} of the ensemble --- the
+smallest rank it can express --- and not the probability that noise produced
+the window. Against a survey-wide Bonferroni scale
+%
+\begin{equation}
+\alpha_{\rm survey}=\frac{0.05}{\NWindows}=\BonfScaleCalc,
+\qquad
+\frac{\RankFloorVal}{\alpha_{\rm survey}}=\BonfRankRatio,
+\label{eq:bonf}
+\end{equation}
+%
+that floor is \BonfRankRatio{} times too coarse, and correlation widens it:
+neighbouring controls are correlated below the synthesised-beam scale, so a
+window's annulus carries only $N_{\rm eff}\simeq30$--$43$ independent spatial
+trials and the ensemble resolves no better than \RankEffLo--\RankEffHi.
+Drawing more controls does not rescue it, the primary beam bounding how many
+independent positions a single pointing contains. \textbf{The floor of
+Eq.~\ref{eq:bonf} is the design's central limitation: no single window in this survey can be
+significant on the rank alone, which is why a technosignature claim here
+requires independent recurrence or independent astrophysical confirmation.}
+What a visibility-domain statistic buys instead is measurable on this survey's
+own data: in the image plane every rank-passing window sits at rank 1 of
+$\NCtrl+1$ with no dynamic range left to separate them, whereas the
+visibility fit separates the same windows by \VgSep$\sigma$ and its strongest
+reaches \VgVisMax$\sigma$.
+
+\subsection{The trials budget}
+
+A window holds \CellsWinMin--\CellsWinMax{} channel$\times$drift cells
+(median \CellsWinMed), the survey \CellsTotal{} in total, and they are not
+independent trials: channel smoothing and a drift grid oversampled two to
+one together over-count them by \FaOverCount. The control ensembles
+calibrate that budget without a Gaussian assumption. The same arithmetic
+predicts \NCtrlWinExp{} of the \NWindows{} windows carrying a control above
+$T_{\rm trig}$ and \NCtrlWinObs{} do, agreeing to \CtrlWinAgreePct{} per
+cent; corrected for the over-count, the observed control maxima sit
+$+\FaExcessFine$ and $+\FaExcessCoarse$ per cent above prediction in the
+fine and coarse classes independently. Non-Gaussianity of that size is why
+the operative statement is the empirical rank and not the Gaussian
+budget.
+
+\emph{The residual on-star excess is not zero, and it is reported as an open
+systematic rather than explained away.} Correlation cannot move the expected
+\emph{number} above the trigger, only its clumping, so the excess over an
+iid-Gaussian budget divides in two: the cells within one crossing window, a
+factor \CellsPerCrossRatio{} that the frequency-axis over-count predicts
+because one real excursion is counted about three times, and the number of
+crossing windows, a factor \CrossWinRatio{} with a one-sided Poisson
+probability of \CrossWinPoisson. The residual runs one way and carries the
+same sign at the controls. The crossing list is dominated by
+CO($2{\to}1$) at 230.5\,GHz
+toward disc hosts, and a residual excess of chance crossings at the
+tens-of-per-cent level cannot be excluded.
+
+\emph{One stratum departs from uniformity and it is the one that matters.}
+The fine-channel windows' ranks are not uniform, at $\pv{\KsFineP}$ over
+$n=\NFine$ windows, because \NStageOneFine{} of them contain an on-star peak
+above their own control maximum against \ExpStageOneFine{} expected; the coarse
+stratum, three times larger and predicting \ExpStageOneCoarse{} such windows,
+contains \NStageOneCoarse. A 15.6--31.25\,MHz channel dilutes a narrow
+circumstellar line, so the class that can resolve one is the class that finds
+it, and the same reasoning says a genuine unresolved carrier would appear in
+Class~A first. The departure is nonetheless genuine and survives removal of
+every fine window carrying a stellar crossing, so fine-window rank
+probabilities are optimistic for the class as a whole and not only where a
+crossing sits.
+
+\emph{What is left is bounded, and the bounds are null.} Treating each
+control as a pseudo-star and ranking it against the other \NCtrl-1 gives
+\NPseudo{} ranks that are uniform to the resolution the ensemble can
+express, and the real stellar ranks agree with them at $\pv{\StarPseudoP}$.
+Any systematic radial suppression of the controls is below
+\RingRhoBoundPct{} per cent in the mean, and the star's own residual
+variance equals the controls' to better than a per cent in the rank-passing
+windows. Scrambling each window so that nothing coherent survives along a
+drift track carries \LNNWindows{} windows past the rank floor and changes no
+disposition; it fails outright only on HD~48370 Band~6, whose extended
+emission and imaging residuals are coherent across integrations and are
+destroyed by the scramble itself, so no scrambled-noise probability is
+quoted there. The remaining stratifications --- by per-control noise and by
+gain --- cannot be made at all, because neither is kept in the retained
+products.
+
+%% ------------------------------------------------------------------
+%% REQUEST (appendix-triage -> numbers):
+%%   This appendix now leads with the TRIGGER + RANK expectation
+%%   (\ClustStageMean against \ClustStageNObs) because that is the chain the
+%%   revision adopts, and reports the trigger+localisation+attribution
+%%   expectation (\RsevChanceExp against \RsevChanceObsAUnattr) second, as a
+%%   different conditioning rather than a superseded one.  If the \Rsev
+%%   family is being retired with the x2.88 sensitivity (integration queue
+%%   item 3), say so and this paragraph goes; if it survives, it must not be
+%%   reachable as "the" sensitivity.  One of the two has to be chosen, and it
+%%   is not an appendix decision.
+%% REQUEST (appendix-triage -> integrator):
+%%   Floats deleted from this appendix and moved to the data release:
+%%   tab:ctrlsep (control separations), tab:excess (the cell-excess
+%%   decomposition), tab:arraysplit (the array split) and fig:ctrldiag
+%%   (control diagnostics).  None is cited from the body.  tab_ctrlsep_v400,
+%%   tab_falsealarm_v399 and the control_diagnostics figure are now
+%%   uninputted; retire_macros will strip their macros.
+%% ------------------------------------------------------------------

@@ -1,0 +1,60 @@
+\section{Introduction}
+\label{sec:intro}
+
+This paper asks whether any nearby star is transmitting a narrow radio
+signal that ALMA happened to record while observing something else. The
+public archive holds thousands of hours of millimetre and submillimetre
+observations taken for quite different reasons, mostly studies of dust
+discs and planet formation, and every one of them also contains a spectrum
+of the star at the centre of the field. A transmitter would appear in such
+a spectrum as a spike confined to one or two channels. It would sit at the
+star's position and nowhere else in the field, and reappear if the star
+were observed again. We searched the archive for exactly that. Nothing of
+the kind survived.
+
+A technological civilisation may imprint the electromagnetic spectrum
+detectably whether or not it intends to, a \emph{technosignature}
+\citep{Sheikh2020,SETIreview2025}, and millimetre wavelengths are an
+attractive place to look for one. Interstellar scattering and dispersion
+fall steeply with frequency, so a high-frequency carrier arrives less
+distorted; a given aperture delivers higher gain, and so more radiated
+power per watt supplied to the transmitter; and coherent millimetre
+emission is already engineered on Earth, for directional links, radar and
+beamed power. The band is correspondingly hard to search. The atmosphere
+transmits unevenly and adds phase noise, receivers are noisier than at
+centimetre wavelengths, and archived correlator channels are thousands of
+times coarser than a dedicated narrowband backend, so a carrier is diluted
+within one channel and its drift can smear it across several. These bands
+are also crowded with molecular lines, a dense background of real
+astrophysical signals that a threshold search must separate from an
+artificial one.
+
+Six decades of radio searches have examined many thousands of stars, yet
+sample only \HaystackFrac{} of the space of transmitter frequency,
+bandwidth, power and duty cycle \citep{Wright2018}. Essentially all of that
+effort lies below ${\sim}30$\,GHz. Above it we are aware of one published
+search, in ALMA Band~3 \citep{Mason2025}, whose targets lie at
+\MasonNearKpc\,kpc and beyond; no search above ${\sim}30$\,GHz has yet
+reached a star within 40\,pc at all. Few searches at any frequency
+reprocess existing interferometric archives, although those archives
+already hold a spectrum of every target they have ever pointed at
+(\S\ref{sec:background}). That is the regime this paper enters.
+
+The signal sought here is an \emph{unresolved spectral carrier}. It is
+emission confined to a few channels, unresolved at the stellar position,
+and persistent enough to recur between epochs. Each qualifier is a real
+restriction. A carrier broader than the channel width would not be
+recovered, nor one that fills the synthesised beam, nor one that appears
+once and never again. Its frequency is allowed to drift, as it must for a
+transmitter carried on a rotating, orbiting body, and the drift searched is
+bounded by a line-of-sight acceleration rather than by a frequency
+(\S\ref{sec:statistic}). The fine channels used are
+\ChanLoA--\ChanHiA\,kHz wide, so ``narrowband'' here describes the assumed
+transmitter and never the resolving power of the data.
+
+One limit on interpretation holds throughout. The targets were chosen by
+archival disc and planet-formation programmes, not for this search, and
+the sample inherits their preferences in distance and in spectral type
+(\S\ref{sec:sample}). Every statistical statement here is therefore about
+the ALMA archive-selected stellar sample and not about the solar
+neighbourhood.

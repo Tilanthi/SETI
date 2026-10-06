@@ -1,0 +1,33 @@
+literal sweep of technosignatures_40pc_v4.11.tex
+
+23 prose literals equal to a generated macro:
+  30         == AccelNPlBelowAxis,CfgChanOut,CovNHalf,EpWideLinesGHz  hat ALMA has already recorded it? Almost nothing above 30\,GHz has been searched, and neve
+  18         == CcNAgree,CcNMatched,CovNSysAtRef,EpAOne     the MWA and single-dish C- and K-band work at 6 and 18\,GHz with the Sardinia Radio Telesc
+  30         == AccelNPlBelowAxis,CfgChanOut,CovNHalf,EpWideLinesGHz  e field, which a single dish cannot make. Above about 30\,GHz the record is nearly empty, 
+  25         == BdNBlocks,BpSixGapD,MasonRmsLo,MaxSearchedEBStar  ry. A star enters if its Gaia~DR3 parallax is at least 25\,mas, measured to better than {}
+  30         == AccelNPlBelowAxis,CfgChanOut,CovNHalf,EpWideLinesGHz  ance to a factor of two {under}-representation beyond 30\,pc. Spectral type comes second: 
+  0.99       == PxRossObsHi,RsevRankFracTwentyA             fort on our side would close it. {figure*} [width=0.99 ]{figures/coverage_waterfall.pdf} {
+  15         == MaskNTransOld,NBPWindows,SirNWin,VisDilUnattHi  ems of particular interest: every sample system within 15\,pc hosting at least one confirm
+  0.94       == BpRecThreeGapD,RsevTransALo,RsevTransARangeLo  twice.} { }{2pt} {table} {figure*} [width=0.94 ]{figures/sens_strata.pdf} {Why the complet
+  200        == NEbEpochExact,NEbPolKnown                   ols the compact array, a cross a channel narrower than 200\,kHz, and arrows the three wind
+  0.92       == ClustPoisRatio,PxAuMicPredCorr,RsevTransBLo  op of one another.} {figure*} {figure*} [width=0.92 ]{figures/classa_sensitivity.pdf} { {(
+  0.88       == ClustLadderStelP,MaskLostNewGHz,MaskOwnLostGHz,PbGapPctLo  ell as demonstrating it (Fig.~ ). {figure} [width=0.88 ]{figures/bpic_control.pdf} {The ~P
+  30         == AccelNPlBelowAxis,CfgChanOut,CovNHalf,EpWideLinesGHz  oward stars within 40\,pc at any frequency above about 30\,GHz. One previous search has wo
+  30         == AccelNPlBelowAxis,CfgChanOut,CovNHalf,EpWideLinesGHz  unexamined toward nearby stars. No search above about 30\,GHz has reached a star within 40
+  14         == ClustMaxMed,ClustNObs,FaNFirst,HOFracLoPct  9040eab52ec1336376a4dae62114bb281a3} on 2026 September~14 at 07:10~UTC, {} days before the
+  6.7        == BpRecOffChan,TuQuantAlignPct                *{Software} The pipeline depends on CASA~6.7.6 [casatools/casatasks 6.7.6-14;][]{CASA202
+  6.7        == BpRecOffChan,TuQuantAlignPct                e pipeline depends on CASA~6.7.6 [casatools/casatasks 6.7.6-14;][]{CASA2022}, Python~3 wit
+  14         == ClustMaxMed,ClustNObs,FaNFirst,HOFracLoPct  line depends on CASA~6.7.6 [casatools/casatasks 6.7.6-14;][]{CASA2022}, Python~3 with astr
+  0.94       == BpRecThreeGapD,RsevTransALo,RsevTransARangeLo  each of these corrections uses. {figure*} [width=0.94 ]{figures/hanning_response.pdf} {Why
+  350        == KsFineNoCrossN                              elativistic terms at the \,km\,s scale are \,kHz at 350\,GHz, below the finest native chan
+  1.10       == BootMeanA,BpRecThreeChan,CellsPerCrossExp,DriftKHzLo  searched drift rate across one integration is at most 1.10 channels over the {} windows, a
+  15.6       == DefectChanwMHz,DefectChanwMinMHz            larger and predicting {} such windows, contains . A 15.6--31.25\,MHz channel dilutes a nar
+  31.25      == ChanBMaxMHz,ChanHiB,DomBChanHi              r and predicting {} such windows, contains . A 15.6--31.25\,MHz channel dilutes a narrow c
+  19         == DutyTenth,EpAYears,EpNUnit,FrAttrWFifty     es active allocations throughout 90--275\,GHz, and WRC-19 identified parts of 275--450\,GH
+
+5 prose literals within 5 per cent of a macro (possible stale value):
+  230.5      ~ FobsHdFour=230.512,FobsBpicSix=230.516,FcenBpicSix=230.516  e controls. The crossing list is dominated by CO( ) at 230.5\,GHz toward disc hosts, and a
+  275        ~ VnKeyNFineEntries=274,ExpTotalMed=273.7,VnKeyNFineDistinct=273  ns Article~5 carries active allocations throughout 90--275\,GHz, and WRC-19 identified par
+  275        ~ VnKeyNFineEntries=274,ExpTotalMed=273.7,VnKeyNFineDistinct=273  hroughout 90--275\,GHz, and WRC-19 identified parts of 275--450\,GHz for land-mobile and f
+  450        ~ MrUnMin=449,FixDvVir=449,SmearAllN=451      hout 90--275\,GHz, and WRC-19 identified parts of 275--450\,GHz for land-mobile and fixed 
+  5000       ~ HoPseudoTrials=5040,MaskDbTrans=5114        ed with centimetre wavelengths, that the array sits at 5000\,m on a site chosen partly for

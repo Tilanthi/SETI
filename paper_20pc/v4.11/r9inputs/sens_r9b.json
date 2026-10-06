@@ -1,0 +1,355 @@
+{
+ "match": {
+  "n_matched": 21,
+  "unmatched": [],
+  "worst_ctrl_diff": 0.007331857299803346,
+  "rows": {
+   "A002_X10a341d_Xdc45_spw2": {
+    "ctrl_cat": 4.9332,
+    "ctrl_camp": 4.93426513671875,
+    "star": "HD53143 Gaia DR3 5479222240596469632",
+    "nchan": 1885,
+    "eirp_nominal_W": 5372680000000000.0
+   },
+   "A002_X12209f7_X16edb_spw1": {
+    "ctrl_cat": 5.617,
+    "ctrl_camp": 5.616693496704102,
+    "star": "HD 69830",
+    "nchan": 441,
+    "eirp_nominal_W": 61651510000000.0
+   },
+   "A002_X12209f7_X16edb_spw2": {
+    "ctrl_cat": 5.4247,
+    "ctrl_camp": 5.425261497497559,
+    "star": "HD 69830",
+    "nchan": 441,
+    "eirp_nominal_W": 78992060000000.0
+   },
+   "A002_X12209f7_X16edb_spw3": {
+    "ctrl_cat": 5.6561,
+    "ctrl_camp": 5.655285358428955,
+    "star": "HD 69830",
+    "nchan": 441,
+    "eirp_nominal_W": 49131460000000.0
+   },
+   "A002_X128b034_X11ca9_spw3": {
+    "ctrl_cat": 6.0694,
+    "ctrl_camp": 6.067264556884766,
+    "star": "eta Crv",
+    "nchan": 883,
+    "eirp_nominal_W": 2261380000000000.0
+   },
+   "A002_X7116f1_X1785_spw0": {
+    "ctrl_cat": 14.1324,
+    "ctrl_camp": 14.138361930847168,
+    "star": "bet Pic",
+    "nchan": 3769,
+    "eirp_nominal_W": 1720564000000000.0
+   },
+   "A002_X7116f1_X1785_spw3": {
+    "ctrl_cat": 6.0249,
+    "ctrl_camp": 6.024044513702393,
+    "star": "bet Pic",
+    "nchan": 3533,
+    "eirp_nominal_W": 2428888000000000.0
+   },
+   "A002_X74c92c_X6d5_spw0": {
+    "ctrl_cat": 6.0366,
+    "ctrl_camp": 6.0366387367248535,
+    "star": "HIP 490",
+    "nchan": 3533,
+    "eirp_nominal_W": 436131500000000.0
+   },
+   "A002_X75bfbf_X1430_spw2": {
+    "ctrl_cat": 5.6759,
+    "ctrl_camp": 5.675899505615234,
+    "star": "eta Crv",
+    "nchan": 3533,
+    "eirp_nominal_W": 627372100000000.0
+   },
+   "A002_X75bfbf_Xace_spw0": {
+    "ctrl_cat": 18.3104,
+    "ctrl_camp": 18.317731857299805,
+    "star": "bet Pic",
+    "nchan": 3533,
+    "eirp_nominal_W": 295662600000000.0
+   },
+   "A002_X75bfbf_Xace_spw3": {
+    "ctrl_cat": 5.2783,
+    "ctrl_camp": 5.278314113616943,
+    "star": "bet Pic",
+    "nchan": 3533,
+    "eirp_nominal_W": 399049300000000.0
+   },
+   "A002_Xb999fd_X148_spw16": {
+    "ctrl_cat": 5.4535,
+    "ctrl_camp": 5.4591522216796875,
+    "star": "hd107146",
+    "nchan": 1885,
+    "eirp_nominal_W": 1.167708e+16
+   },
+   "A002_Xb999fd_X148_spw20": {
+    "ctrl_cat": 5.7175,
+    "ctrl_camp": 5.717477798461914,
+    "star": "hd107146",
+    "nchan": 3769,
+    "eirp_nominal_W": 7341854000000000.0
+   },
+   "A002_Xc26103_X155a_spw16": {
+    "ctrl_cat": 18.3574,
+    "ctrl_camp": 18.357208251953125,
+    "star": "HD 48370",
+    "nchan": 3769,
+    "eirp_nominal_W": 2894967000000000.0
+   },
+   "A002_Xc26103_X155a_spw22": {
+    "ctrl_cat": 10.8229,
+    "ctrl_camp": 10.820850372314453,
+    "star": "HD 48370",
+    "nchan": 3769,
+    "eirp_nominal_W": 4971300000000000.0
+   },
+   "A002_Xc6a3db_X7b5b_spw0": {
+    "ctrl_cat": 5.7014,
+    "ctrl_camp": 5.701080799102783,
+    "star": "HR 1010 Gaia DR3 4722135642226902656",
+    "nchan": 1885,
+    "eirp_nominal_W": 1840573000000000.0
+   },
+   "A002_Xd40be0_X749c_spw2": {
+    "ctrl_cat": 6.4368,
+    "ctrl_camp": 6.436633110046387,
+    "star": "TWA 3A 696000",
+    "nchan": 1767,
+    "eirp_nominal_W": 247327400000000.0
+   },
+   "A002_Xd40be0_X749c_spw3": {
+    "ctrl_cat": 6.4846,
+    "ctrl_camp": 6.482768535614014,
+    "star": "TWA 3A 696000",
+    "nchan": 1767,
+    "eirp_nominal_W": 268298800000000.0
+   },
+   "A002_Xe48598_Xff51_spw3": {
+    "ctrl_cat": 5.5322,
+    "ctrl_camp": 5.5322465896606445,
+    "star": "kap CrB",
+    "nchan": 1767,
+    "eirp_nominal_W": 639559800000000.0
+   },
+   "A002_Xe4f0a6_X3658_spw3": {
+    "ctrl_cat": 6.0548,
+    "ctrl_camp": 6.054912090301514,
+    "star": "HD61005",
+    "nchan": 1767,
+    "eirp_nominal_W": 3912187000000000.0
+   },
+   "A002_Xf05a48_X269c_spw0": {
+    "ctrl_cat": 5.7673,
+    "ctrl_camp": 5.7699360847473145,
+    "star": "HD 48370",
+    "nchan": 1885,
+    "eirp_nominal_W": 5.704226e+16
+   }
+  }
+ },
+ "stratified": {
+  "bins": [
+   0.0,
+   6.0,
+   10.0,
+   14.0,
+   1000000000.0
+  ],
+  "n_cat": [
+   308,
+   82,
+   8,
+   4
+  ],
+  "n_inj": [
+   11,
+   6,
+   1,
+   3
+  ],
+  "curve": [
+   [
+    0.75,
+    0.0
+   ],
+   [
+    1.0,
+    0.0
+   ],
+   [
+    1.25,
+    0.014101272777218204
+   ],
+   [
+    1.5,
+    0.023358815677709015
+   ],
+   [
+    1.75,
+    0.06886494427052507
+   ],
+   [
+    2.0,
+    0.13825720299600897
+   ],
+   [
+    2.5,
+    0.4152002045317971
+   ],
+   [
+    3.0,
+    0.7314314416926357
+   ],
+   [
+    3.5,
+    0.8899548454462057
+   ],
+   [
+    4.0,
+    0.8728975108720755
+   ],
+   [
+    5.0,
+    0.9381664144479791
+   ],
+   [
+    6.0,
+    0.9768362488632109
+   ],
+   [
+    8.0,
+    0.9933665008291873
+   ]
+  ],
+  "p90": 4.4152435178630824,
+  "p75": 3.0585672458062714,
+  "p50": 2.634078777652621,
+  "top_frac": 0.9933665008291873,
+  "per_bin_p90": [
+   3.367592098238121,
+   3.816666666666667,
+   7.4,
+   null
+  ],
+  "boot": {
+   "med": 4.171094066915432,
+   "lo": 3.456066412124385,
+   "hi": 4.761680848874108,
+   "undef_frac": 0.0
+  }
+ },
+ "analytic": {
+  "trigger_only_p90": 3.0590148479849164,
+  "screen_cost_med": 1.15421,
+  "screen_cost_p84": 1.2190623999999999,
+  "screen_cost_max": 3.6777,
+  "predicted_p90": 3.53074552769267,
+  "ctrl_med": 5.771050000000001,
+  "n_ge10": 12,
+  "n_ge14": 4,
+  "blind_windows": [
+   {
+    "star": "bet Pic",
+    "eb": "A002_X7116f1_X1785",
+    "band": "6",
+    "ctrl": 14.1324,
+    "chanw_kHz": 244.140625
+   },
+   {
+    "star": "bet Pic",
+    "eb": "A002_X75bfbf_Xace",
+    "band": "6",
+    "ctrl": 18.3104,
+    "chanw_kHz": 244.140625
+   },
+   {
+    "star": "HD 48370",
+    "eb": "A002_Xc26103_X155a",
+    "band": "6",
+    "ctrl": 18.3574,
+    "chanw_kHz": 122.0703125
+   },
+   {
+    "star": "HD 139084",
+    "eb": "A002_Xcd8029_Xb6b0",
+    "band": "7",
+    "ctrl": 18.3885,
+    "chanw_kHz": 488.28125
+   }
+  ]
+ },
+ "headline": {
+  "adopted": {
+   "mult": 4.4152435178630824,
+   "win_med": 4128086676045710.5,
+   "sys_med": 2251339734148014.2,
+   "sys_lo": 98606163313658.36,
+   "sys_hi": 5.332249859331584e+16,
+   "n_sys": 60,
+   "n_sys_e15": 18,
+   "n_sys_e16": 53
+  },
+  "pooled_all": {
+   "mult": 7.991182197496524,
+   "win_med": 7471454886208624.0,
+   "sys_med": 4074716588394994.0,
+   "sys_lo": 178468030958553.56,
+   "sys_hi": 9.650878819276774e+16,
+   "n_sys": 60,
+   "n_sys_e15": 12,
+   "n_sys_e16": 52
+  },
+  "published_18u": {
+   "mult": 5.700000000000001,
+   "win_med": 5329285680000001.0,
+   "sys_med": 2906439120000000.5,
+   "sys_lo": 127298784000000.03,
+   "sys_hi": 6.883838700000002e+16,
+   "n_sys": 60,
+   "n_sys_e15": 14,
+   "n_sys_e16": 53
+  },
+  "trigger_plus_loc": {
+   "mult": 2.8761,
+   "win_med": 2689045358640000.0,
+   "sys_med": 1466527991760000.0,
+   "sys_lo": 64232286432000.0,
+   "sys_hi": 3.4734400851e+16,
+   "n_sys": 60,
+   "n_sys_e15": 25,
+   "n_sys_e16": 57
+  },
+  "nominal": {
+   "mult": 1.0,
+   "win_med": 934962400000000.0,
+   "sys_med": 509901600000000.0,
+   "sys_lo": 22333120000000.0,
+   "sys_hi": 1.207691e+16,
+   "n_sys": 60,
+   "n_sys_e15": 46,
+   "n_sys_e16": 59
+  }
+ },
+ "eff_threshold_win_med": 1771614500000000.0,
+ "combined": {
+  "campaign_transfer_lo": 0.21724217517291688,
+  "campaign_transfer_hi": 0.07846392381516853,
+  "instrumental": 0.08737178784113707,
+  "instrumental_worst": 0.2076293290509464,
+  "comb_lo": 0.23415377849698896,
+  "comb_hi": 0.11743260471874598,
+  "factor_lo": 0.7658462215030111,
+  "factor_hi": 1.117432604718746,
+  "decorrelation_declared": [
+   -0.12438328424153167,
+   0.16683704409598876
+  ],
+  "note": "the bootstrap over injected windows IS the transfer term; the paper quotes the same quantity twice (x0.64-1.04 \"calibration\" and -36/+4 per cent \"campaign\") and a separate transfer bracket measured on the superseded round-7 campaign"
+ }
+}

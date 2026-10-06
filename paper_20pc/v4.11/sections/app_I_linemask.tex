@@ -1,0 +1,109 @@
+%% APPENDIX C -- the velocity-space line mask and its cost.
+%% Owner: r10-frame.  Carries \label{app:linemask} (cited by
+%% 04_method.tex) and \label{sec:linecost}.
+\section{The velocity-space line mask, and what it costs}
+\label{app:linemask}
+
+Attribution decides the candidate list and the mask decides attribution, so
+the mask's definition and its price are both given here.
+
+\emph{Definition.} A one-channel coincidence test is too tight for
+circumstellar gas: a native channel spans a fraction of a km\,s$^{-1}$ while
+real emission is shifted by many channels. The tolerance follows from the
+kinematic budget of the gas rather than from the instrument --- Keplerian
+motion where these molecules survive ($\lesssim$13\,km\,s$^{-1}$ beyond
+10\,au) and linewidths $\lesssim$1\,km\,s$^{-1}$ --- and is
+$\pm\MaskHalfKms$\,km\,s$^{-1}$ around each catalogued transition.
+
+\emph{The frame, which is the star's own.} Searched frequencies are
+topocentric as the correlator delivers them. Before any transition is
+compared with a crossing, that crossing's frequency is carried to the
+barycentre using its own block's pointing and mid-time and then to the
+stellar rest frame using the star's systemic velocity. The barycentric term
+runs from \FrBaryLo{} to \FrBaryHi\,km\,s$^{-1}$ across the survey, so a
+tolerance applied in the observed frame would spend
+\FrBarySwing\,km\,s$^{-1}$ of a $\pm\MaskHalfKms$\,km\,s$^{-1}$ budget on
+the Earth's motion, and the offsets of individual crossings differ between
+the two frames by up to \MaskFrameShiftKms\,km\,s$^{-1}$. The
+\FrEpochNEpoch{} \FrEpochStar{} epochs show the transform working in the
+only way that can be checked: \FrEpochTopoKms\,km\,s$^{-1}$ apart in the
+observed frame, they agree to \FrEpochStelKms\,km\,s$^{-1}$ in the star's.
+
+The mask holds \FrNTrans{} transitions of \FrNSpec{} species at full
+JPL/CDMS precision \citep{Pickett1998,CDMS2005}. The species criterion is
+the one objective rule statable in advance: the transitions ALMA's band
+definitions are built around --- the CO isotopologues, HCN, HCO$^{+}$, CS,
+SiO, CN, H$_2$CO, SO and [C\,\textsc{i}] --- which dominate the emission of
+disc-selected fields. Sulphur monoxide belongs there for the same reason
+carbon monosulphide does: \FrNSOWord{} of its transitions fall in the
+intervals searched, it is a routine component of the Band~6 and Band~7
+setups these fields were observed with, and sulphur bearing molecules are
+expected wherever the carbon bearing ones already masked are. It is not a
+formality --- the strongest crossing that passes the spatial screen,
+\FrCpStar{} at $T_\star=\VnCpT$, lies \FrCpSODv\,km\,s$^{-1}$ from
+\FrSOName{} in its own star's frame (\S\ref{sec:chaingap}).
+
+\emph{The half-width is not a tuned parameter, and the counts rather than
+the argument say so.} Table~\ref{tab:maskrobust} carries the whole
+disposition chain at half-widths from $\pm\FrLadderLo$ to
+$\pm\FrLadderHi$\,km\,s$^{-1}$. One count moves, and it is worth naming:
+narrowing to $\pm\FrLadderLo$\,km\,s$^{-1}$ releases \FrNarrowMoveStar{}
+from attribution at \FrNarrowMoveDv\,km\,s$^{-1}$ from
+\FrNarrowMoveLine{} --- a crossing that does not outrank its own control
+ring either way. Everything the result turns on is flat: \FrNRankPass{}
+crossing outranks every control at every half-width in that range, and it is
+the same crossing each time, while the fraction of searched bandwidth the
+mask removes rises from \FrMaskPctLo{} to \FrMaskPctHi{} per cent. Widening
+the tube therefore buys nothing and costs coverage, and narrowing it
+releases an identified carbon monoxide line of this survey's own.
+
+\begin{table}
+\centering
+\footnotesize
+\caption{The disposition chain against the mask half-width, in the stellar
+rest frame. All \NCross{} crossings are classified at every half-width: the
+second column is what the mask costs in searched bandwidth and the rest is
+what it decides, ending in how many unattributed crossings outrank all
+\NCtrl{} controls and how many of \emph{those} recur at a later epoch.
+Adopted half-width in bold.}
+\label{tab:maskrobust}
+\input{tab_maskrobust_v411}
+\end{table}
+
+\emph{The species list is a choice, and widening it is not free.} The
+alternative selection --- every Splatalogue transition over the
+\UnionIntervals{} searched islands with $E_{\rm u}\le\MaskDbEuK$\,K and
+$\log A_{ij}\ge\MaskDbLogA$, which is \MaskDbTrans{} transitions of
+\MaskDbCarriers{} species --- masks \MaskDbPctUnion{} per cent of the union
+against \FrMaskPct{} per cent here, and it does not leave the dispositions
+alone. \FrFullNFlip{} of the \NCross{} crossings change side under it,
+\FrFullNFlipRankWord{} of them a crossing that outranks every control:
+\FrFullFlipRankStar{} falls \FrFullFlipRankDv\,km\,s$^{-1}$ from a
+vibrationally excited \FrFullFlipRankChem{} transition, which nobody would
+predict toward a quiet main-sequence G star. That is the calibration and not
+a defect in either list: at these frequencies a uniformly random frequency
+in one of these windows lies within $\pm\MaskHalfKms$\,km\,s$^{-1}$ of
+something in the wide harvest most of the time. ``Coincident with a known
+molecular line'' is a statement about a catalogue rather than a property of
+a frequency, and a survey quoting one should quote the occupancy of the list
+it used.
+
+\subsection{The cost of the mask}
+\label{sec:linecost}
+
+Masking removes \FrMaskLostGHz\,GHz, \FrMaskPct{} per cent of the
+\FrMaskUnionGHz\,GHz unique-frequency union, CN, CO and SO dominating. It
+is not uniform: the loss reaches \FrMaskWorstPct{} per cent in
+Band~\FrMaskWorstBand{} and stays below 2\,per cent in Bands~3--5, and it
+is tabulated band by band in the data release. The fine-channel experiment
+pays the larger fractional price, its coverage being concentrated in the
+line-tuned windows.
+
+What masking buys is classification rather than detection: a carrier at a
+line frequency is as detectable as anywhere else but cannot be told from the
+line, because the astrophysical prior at a catalogued transition is
+overwhelming. The consequences for the limits are in
+\S\ref{sec:excludes}, and a design that searches every frequency and
+attaches a \emph{lower} prior to a line-coincident event
+\citep{CocconiMorrison1959} is in \S\ref{sec:future}; the released
+channels support that second search.
