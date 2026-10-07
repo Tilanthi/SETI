@@ -1,0 +1,2378 @@
+{
+ "_doc": "THE DECORRELATION TERM, MEASURED.  An artificial carrier is added to visibilities that the ALMA pipeline has already phase- and amplitude-calibrated, so it carries no atmospheric coherence loss at all, while a real carrier carries the loss of the block that recorded it.  The quantity at issue is therefore the coherence of a point source at the phase centre, and that is what the observatory measures in every block on its phase calibrator.  This record carries, per execution block, the residual path-length fluctuation (micron) measured on the phase calibrator after the WVR correction, read from the block's own QA0 report.  Expressed as a path length it is frequency-independent, so the phase rms of any window follows from the window's own sky frequency and the band dependence is a consequence rather than an assumption.",
+ "_relation": "phi_rms[deg] = 360 * dL[micron] / lambda[micron]; coherence = exp(-phi_rms[rad]**2 / 2) for a Gaussian phase error over the interval stacked.  ALMA Memo 620 (Richards et al. 2022) Eqs. 3 and 6; Thompson, Moran & Swenson (2017) Ch. 7.2.8.  The limit must be divided by the coherence, so it is optimistic by 1/coherence - 1.",
+ "_direction": "ONE-SIDED, and the sign is not a choice: a negative branch would assert that a real carrier is recovered better than an injected one, which the injection route cannot produce.",
+ "_caveat": "Measured on the phase calibrator itself, so it does not include the interpolation of the solution onto the target or the calibrator-target separation; the loss a target suffers is at least this large.  ALMA Technical Handbook Sec. 10.4.11.",
+ "_source": "ALMA science archive, per-execution-block QA0 reports, harvested 2026-10-07; one file per block, named in each entry.  The three scripts that produced it are deposited beside it in r13inputs/decor_harvest/: harvest_links.py asks the archive which small per-block quality files each member OUS exposes individually, fetch_qa0.py downloads each report and keeps only the summary lines, build_record.py writes this file.  parse_qa2.py is deposited with them for the negative result described below.",
+ "_rejected": "The QA2 report of a member OUS also carries a per-block column headed \"Mean Phase RMS (deg)\", footnoted as a WVR-corrected value averaged over all basebands and scans, and it is NOT the same quantity: over the 225 blocks where both exist the ratio of the two runs from 0.07 to 5.7, and the QA2 column gives 57-137 degrees for compact-array blocks whose longest baseline is 49 m, which is not physical.  It is therefore not used.  The QA0 figure used here is self-validating -- the report prints the same number in microns and in degrees and the two agree through the wavelength -- and it behaves like a tropospheric quantity, rising with baseline length.",
+ "measured_here": true,
+ "superseded_declaration": {
+  "_was": "a two-sided -12/+17 per cent bracket from a superseded campaign record, then a one-sided +0/+20 per cent declared with no reference at all",
+  "declared_one_sided": [
+   0.05,
+   0.2
+  ],
+  "declared_two_sided": [
+   -0.12438328424153167,
+   0.16683704409598876
+  ]
+ },
+ "blocks": {
+  "A002_X1001fdc_X2085": {
+   "path_rms_um": 8.745,
+   "qa0_report": "uid___A002_X1001fdc_X2085.qa0_report.pdf",
+   "repr_freq_ghz": 345.139,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1001fdc_X29ae": {
+   "path_rms_um": 12.442,
+   "qa0_report": "uid___A002_X1001fdc_X29ae.qa0_report.pdf",
+   "repr_freq_ghz": 345.139,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1001fdc_Xc06e": {
+   "path_rms_um": 24.611,
+   "qa0_report": "uid___A002_X1001fdc_Xc06e.qa0_report.pdf",
+   "repr_freq_ghz": 345.139,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1003af4_X14e08": {
+   "path_rms_um": 12.756,
+   "qa0_report": "uid___A002_X1003af4_X14e08.qa0_report.pdf",
+   "repr_freq_ghz": 345.139,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1003af4_X3a2c": {
+   "path_rms_um": 8.331,
+   "qa0_report": "uid___A002_X1003af4_X3a2c.qa0_report.pdf",
+   "repr_freq_ghz": 345.139,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1006d51_X228e": {
+   "path_rms_um": 10.604,
+   "qa0_report": "uid___A002_X1006d51_X228e.qa0_report.pdf",
+   "repr_freq_ghz": 345.139,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1009c59_X1ba4d": {
+   "path_rms_um": 107.55,
+   "qa0_report": "uid___A002_X1009c59_X1ba4d.qa0_report.pdf",
+   "repr_freq_ghz": 230.543,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X101088d_Xbf80": {
+   "path_rms_um": 33.84,
+   "qa0_report": "uid___A002_X101088d_Xbf80.qa0_report.pdf",
+   "repr_freq_ghz": 345.139,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1015532_X20dc8": {
+   "path_rms_um": 31.363,
+   "qa0_report": "uid___A002_X1015532_X20dc8.qa0_report.pdf",
+   "repr_freq_ghz": 230.543,
+   "bl_min_m": 8.0,
+   "bl_max_m": 44.0,
+   "array_m": 7.0
+  },
+  "A002_X1018459_X73b0": {
+   "path_rms_um": 48.752,
+   "qa0_report": "uid___A002_X1018459_X73b0.qa0_report.pdf",
+   "repr_freq_ghz": 230.543,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1020da2_X78cd": {
+   "path_rms_um": 11.369,
+   "qa0_report": "uid___A002_X1020da2_X78cd.qa0_report.pdf",
+   "repr_freq_ghz": 230.543,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X10228b9_X423": {
+   "path_rms_um": 191.648,
+   "qa0_report": "uid___A002_X10228b9_X423.qa0_report.pdf",
+   "repr_freq_ghz": 345.169,
+   "bl_min_m": 15.0,
+   "bl_max_m": 740.0,
+   "array_m": 12.0
+  },
+  "A002_X1066403_Xbbde": {
+   "path_rms_um": 136.65,
+   "qa0_report": "uid___A002_X1066403_Xbbde.qa0_report.pdf",
+   "repr_freq_ghz": 345.124,
+   "bl_min_m": 15.0,
+   "bl_max_m": 2516.0,
+   "array_m": 12.0
+  },
+  "A002_X106a1f1_X6a0c": {
+   "path_rms_um": 14.551,
+   "qa0_report": "uid___A002_X106a1f1_X6a0c.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 47.0,
+   "array_m": 7.0
+  },
+  "A002_X106b646_X1295": {
+   "path_rms_um": 16.181,
+   "qa0_report": "uid___A002_X106b646_X1295.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 47.0,
+   "array_m": 7.0
+  },
+  "A002_X106b646_X19c5": {
+   "path_rms_um": 30.99,
+   "qa0_report": "uid___A002_X106b646_X19c5.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 47.0,
+   "array_m": 7.0
+  },
+  "A002_X106ccd1_X1a38": {
+   "path_rms_um": 17.636,
+   "qa0_report": "uid___A002_X106ccd1_X1a38.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 44.0,
+   "array_m": 7.0
+  },
+  "A002_X106ccd1_Xbe52": {
+   "path_rms_um": 13.613,
+   "qa0_report": "uid___A002_X106ccd1_Xbe52.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 44.0,
+   "array_m": 7.0
+  },
+  "A002_X106ccd1_Xc4a6": {
+   "path_rms_um": 12.365,
+   "qa0_report": "uid___A002_X106ccd1_Xc4a6.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 44.0,
+   "array_m": 7.0
+  },
+  "A002_X106f040_X13932": {
+   "path_rms_um": 19.786,
+   "qa0_report": "uid___A002_X106f040_X13932.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X106f040_X148f3": {
+   "path_rms_um": 48.288,
+   "qa0_report": "uid___A002_X106f040_X148f3.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X106f040_X26c7": {
+   "path_rms_um": 11.532,
+   "qa0_report": "uid___A002_X106f040_X26c7.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 47.0,
+   "array_m": 7.0
+  },
+  "A002_X106f040_X2b06": {
+   "path_rms_um": 13.222,
+   "qa0_report": "uid___A002_X106f040_X2b06.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 47.0,
+   "array_m": 7.0
+  },
+  "A002_X106f040_X2e59": {
+   "path_rms_um": 18.71,
+   "qa0_report": "uid___A002_X106f040_X2e59.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 47.0,
+   "array_m": 7.0
+  },
+  "A002_X107376c_X12b9": {
+   "path_rms_um": 24.892,
+   "qa0_report": "uid___A002_X107376c_X12b9.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X107376c_X4442": {
+   "path_rms_um": 207.543,
+   "qa0_report": "uid___A002_X107376c_X4442.qa0_report.pdf",
+   "repr_freq_ghz": 340.9,
+   "bl_min_m": 27.0,
+   "bl_max_m": 2953.0,
+   "array_m": 12.0
+  },
+  "A002_X1074d99_X167": {
+   "path_rms_um": 12.567,
+   "qa0_report": "uid___A002_X1074d99_X167.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1074d99_X74e": {
+   "path_rms_um": 17.154,
+   "qa0_report": "uid___A002_X1074d99_X74e.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1076174_X11cc": {
+   "path_rms_um": 19.875,
+   "qa0_report": "uid___A002_X1076174_X11cc.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X107649f_X868f": {
+   "path_rms_um": 17.529,
+   "qa0_report": "uid___A002_X107649f_X868f.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X107649f_X8f30": {
+   "path_rms_um": 27.235,
+   "qa0_report": "uid___A002_X107649f_X8f30.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1077d5b_X9976": {
+   "path_rms_um": 19.727,
+   "qa0_report": "uid___A002_X1077d5b_X9976.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1077d5b_Xa63d": {
+   "path_rms_um": 17.774,
+   "qa0_report": "uid___A002_X1077d5b_Xa63d.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X107fa96_X150f6": {
+   "path_rms_um": 31.342,
+   "qa0_report": "uid___A002_X107fa96_X150f6.qa0_report.pdf",
+   "repr_freq_ghz": 345.139,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X107fa96_X9a88": {
+   "path_rms_um": 17.445,
+   "qa0_report": "uid___A002_X107fa96_X9a88.qa0_report.pdf",
+   "repr_freq_ghz": 345.139,
+   "bl_min_m": 8.0,
+   "bl_max_m": 47.0,
+   "array_m": 7.0
+  },
+  "A002_X107fa96_Xce38": {
+   "path_rms_um": 13.995,
+   "qa0_report": "uid___A002_X107fa96_Xce38.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 47.0,
+   "array_m": 7.0
+  },
+  "A002_X10854a6_X3ac1": {
+   "path_rms_um": 13.396,
+   "qa0_report": "uid___A002_X10854a6_X3ac1.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1086384_X10bc1": {
+   "path_rms_um": 23.018,
+   "qa0_report": "uid___A002_X1086384_X10bc1.qa0_report.pdf",
+   "repr_freq_ghz": 345.139,
+   "bl_min_m": 8.0,
+   "bl_max_m": 91.0,
+   "array_m": 7.0
+  },
+  "A002_X1086384_Xdeeb": {
+   "path_rms_um": 14.488,
+   "qa0_report": "uid___A002_X1086384_Xdeeb.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 47.0,
+   "array_m": 7.0
+  },
+  "A002_X1088045_X3c7b": {
+   "path_rms_um": 13.604,
+   "qa0_report": "uid___A002_X1088045_X3c7b.qa0_report.pdf",
+   "repr_freq_ghz": 345.139,
+   "bl_min_m": 8.0,
+   "bl_max_m": 47.0,
+   "array_m": 7.0
+  },
+  "A002_X1088045_X4ebc": {
+   "path_rms_um": 7.308,
+   "qa0_report": "uid___A002_X1088045_X4ebc.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 47.0,
+   "array_m": 7.0
+  },
+  "A002_X1088045_X51df": {
+   "path_rms_um": 8.064,
+   "qa0_report": "uid___A002_X1088045_X51df.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 47.0,
+   "array_m": 7.0
+  },
+  "A002_X1088045_X5c31": {
+   "path_rms_um": 20.118,
+   "qa0_report": "uid___A002_X1088045_X5c31.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 47.0,
+   "array_m": 7.0
+  },
+  "A002_X108c378_X1ced": {
+   "path_rms_um": 12.301,
+   "qa0_report": "uid___A002_X108c378_X1ced.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X108c378_X26b3": {
+   "path_rms_um": 12.457,
+   "qa0_report": "uid___A002_X108c378_X26b3.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X108c378_X2a0f": {
+   "path_rms_um": 11.769,
+   "qa0_report": "uid___A002_X108c378_X2a0f.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X108c378_X331a": {
+   "path_rms_um": 17.498,
+   "qa0_report": "uid___A002_X108c378_X331a.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X108c378_X3ab4": {
+   "path_rms_um": 20.256,
+   "qa0_report": "uid___A002_X108c378_X3ab4.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1093ae8_X14a7": {
+   "path_rms_um": 12.287,
+   "qa0_report": "uid___A002_X1093ae8_X14a7.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1093ae8_X1c39": {
+   "path_rms_um": 10.561,
+   "qa0_report": "uid___A002_X1093ae8_X1c39.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1093ae8_X2228": {
+   "path_rms_um": 12.879,
+   "qa0_report": "uid___A002_X1093ae8_X2228.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1093ae8_Xe18": {
+   "path_rms_um": 15.628,
+   "qa0_report": "uid___A002_X1093ae8_Xe18.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1097a87_X1ba1": {
+   "path_rms_um": 9.319,
+   "qa0_report": "uid___A002_X1097a87_X1ba1.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1097a87_X1e64": {
+   "path_rms_um": 14.04,
+   "qa0_report": "uid___A002_X1097a87_X1e64.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1097a87_X22ab": {
+   "path_rms_um": 15.06,
+   "qa0_report": "uid___A002_X1097a87_X22ab.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1097a87_X75ae": {
+   "path_rms_um": 11.691,
+   "qa0_report": "uid___A002_X1097a87_X75ae.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1097a87_X795f": {
+   "path_rms_um": 7.256,
+   "qa0_report": "uid___A002_X1097a87_X795f.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X10a341d_X82d2": {
+   "path_rms_um": 24.06,
+   "qa0_report": "uid___A002_X10a341d_X82d2.qa0_report.pdf",
+   "repr_freq_ghz": 217.484,
+   "bl_min_m": 8.0,
+   "bl_max_m": 44.0,
+   "array_m": 7.0
+  },
+  "A002_X10a341d_Xdc45": {
+   "path_rms_um": 16.058,
+   "qa0_report": "uid___A002_X10a341d_Xdc45.qa0_report.pdf",
+   "repr_freq_ghz": 217.484,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X10a513c_X389e": {
+   "path_rms_um": 33.145,
+   "qa0_report": "uid___A002_X10a513c_X389e.qa0_report.pdf",
+   "repr_freq_ghz": 217.484,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X10a513c_X3b99": {
+   "path_rms_um": 48.85,
+   "qa0_report": "uid___A002_X10a513c_X3b99.qa0_report.pdf",
+   "repr_freq_ghz": 217.484,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X10b0d7d_X323f": {
+   "path_rms_um": 15.117,
+   "qa0_report": "uid___A002_X10b0d7d_X323f.qa0_report.pdf",
+   "repr_freq_ghz": 217.478,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X10b22d7_X1d34": {
+   "path_rms_um": 7.523,
+   "qa0_report": "uid___A002_X10b22d7_X1d34.qa0_report.pdf",
+   "repr_freq_ghz": 217.478,
+   "stated_phasecal_deg": 2.0,
+   "stated_bandpass_deg": 5.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X10b22d7_X2445": {
+   "path_rms_um": 16.228,
+   "qa0_report": "uid___A002_X10b22d7_X2445.qa0_report.pdf",
+   "repr_freq_ghz": 217.478,
+   "stated_phasecal_deg": 4.2,
+   "stated_bandpass_deg": 7.8,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X10b33b1_X1ca0": {
+   "path_rms_um": 15.379,
+   "qa0_report": "uid___A002_X10b33b1_X1ca0.qa0_report.pdf",
+   "repr_freq_ghz": 217.484,
+   "stated_phasecal_deg": 4.0,
+   "stated_bandpass_deg": 7.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X10b33b1_Xf94": {
+   "path_rms_um": 11.437,
+   "qa0_report": "uid___A002_X10b33b1_Xf94.qa0_report.pdf",
+   "repr_freq_ghz": 217.478,
+   "stated_phasecal_deg": 3.0,
+   "stated_bandpass_deg": 3.3,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X10b6f7c_X850c": {
+   "path_rms_um": 47.318,
+   "qa0_report": "uid___A002_X10b6f7c_X850c.qa0_report.pdf",
+   "repr_freq_ghz": 217.499,
+   "stated_phasecal_deg": 12.3,
+   "stated_bandpass_deg": 23.3,
+   "bl_min_m": 8.0,
+   "bl_max_m": 44.0,
+   "array_m": 7.0
+  },
+  "A002_X1171dca_X5df0": {
+   "path_rms_um": 52.662,
+   "qa0_report": "uid___A002_X1171dca_X5df0.qa0_report.pdf",
+   "repr_freq_ghz": 345.118,
+   "stated_phasecal_deg": 21.8,
+   "stated_bandpass_deg": 42.5,
+   "bl_min_m": 15.0,
+   "bl_max_m": 696.0,
+   "array_m": 12.0
+  },
+  "A002_X11d9ce7_X5257": {
+   "path_rms_um": 27.594,
+   "qa0_report": "uid___A002_X11d9ce7_X5257.qa0_report.pdf",
+   "repr_freq_ghz": 872.25,
+   "stated_phasecal_deg": 28.9,
+   "stated_bandpass_deg": 23.7,
+   "bl_min_m": 14.0,
+   "bl_max_m": 483.0,
+   "array_m": 12.0
+  },
+  "A002_X11e10bc_X12662": {
+   "path_rms_um": 96.409,
+   "qa0_report": "uid___A002_X11e10bc_X12662.qa0_report.pdf",
+   "repr_freq_ghz": 345.799,
+   "stated_phasecal_deg": 40.0,
+   "stated_bandpass_deg": 48.9,
+   "bl_min_m": 14.0,
+   "bl_max_m": 499.0,
+   "array_m": 12.0
+  },
+  "A002_X1207c39_X9417": {
+   "path_rms_um": 39.224,
+   "qa0_report": "uid___A002_X1207c39_X9417.qa0_report.pdf",
+   "repr_freq_ghz": 321.193,
+   "stated_phasecal_deg": 15.1,
+   "stated_bandpass_deg": 16.7,
+   "bl_min_m": 14.0,
+   "bl_max_m": 313.0,
+   "array_m": 12.0
+  },
+  "A002_X12209f7_X163ba": {
+   "path_rms_um": 18.503,
+   "qa0_report": "uid___A002_X12209f7_X163ba.qa0_report.pdf",
+   "repr_freq_ghz": 321.193,
+   "stated_phasecal_deg": 7.1,
+   "stated_bandpass_deg": 7.0,
+   "bl_min_m": 14.0,
+   "bl_max_m": 332.0,
+   "array_m": 12.0
+  },
+  "A002_X12209f7_X16edb": {
+   "path_rms_um": 14.334,
+   "qa0_report": "uid___A002_X12209f7_X16edb.qa0_report.pdf",
+   "repr_freq_ghz": 321.193,
+   "stated_phasecal_deg": 5.5,
+   "stated_bandpass_deg": 10.6,
+   "bl_min_m": 14.0,
+   "bl_max_m": 332.0,
+   "array_m": 12.0
+  },
+  "A002_X12235df_X7876": {
+   "path_rms_um": 12.963,
+   "qa0_report": "uid___A002_X12235df_X7876.qa0_report.pdf",
+   "repr_freq_ghz": 321.193,
+   "stated_phasecal_deg": 5.0,
+   "stated_bandpass_deg": 7.1,
+   "bl_min_m": 14.0,
+   "bl_max_m": 332.0,
+   "array_m": 12.0
+  },
+  "A002_X12235df_X8337": {
+   "path_rms_um": 21.134,
+   "qa0_report": "uid___A002_X12235df_X8337.qa0_report.pdf",
+   "repr_freq_ghz": 321.193,
+   "stated_phasecal_deg": 8.1,
+   "stated_bandpass_deg": 9.9,
+   "bl_min_m": 14.0,
+   "bl_max_m": 332.0,
+   "array_m": 12.0
+  },
+  "A002_X12277ed_X178c6": {
+   "path_rms_um": 29.808,
+   "qa0_report": "uid___A002_X12277ed_X178c6.qa0_report.pdf",
+   "repr_freq_ghz": 321.193,
+   "stated_phasecal_deg": 11.5,
+   "stated_bandpass_deg": 16.6,
+   "bl_min_m": 14.0,
+   "bl_max_m": 499.0,
+   "array_m": 12.0
+  },
+  "A002_X12277ed_X22e53": {
+   "path_rms_um": 23.161,
+   "qa0_report": "uid___A002_X12277ed_X22e53.qa0_report.pdf",
+   "repr_freq_ghz": 492.165,
+   "stated_phasecal_deg": 13.7,
+   "stated_bandpass_deg": 34.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 89.0,
+   "array_m": 7.0
+  },
+  "A002_X122b6ff_X1041e": {
+   "path_rms_um": 44.169,
+   "qa0_report": "uid___A002_X122b6ff_X1041e.qa0_report.pdf",
+   "repr_freq_ghz": 345.799,
+   "stated_phasecal_deg": 18.3,
+   "stated_bandpass_deg": 22.6,
+   "bl_min_m": 15.0,
+   "bl_max_m": 499.0,
+   "array_m": 12.0
+  },
+  "A002_X122b6ff_X18e15": {
+   "path_rms_um": 53.449,
+   "qa0_report": "uid___A002_X122b6ff_X18e15.qa0_report.pdf",
+   "repr_freq_ghz": 492.165,
+   "stated_phasecal_deg": 31.6,
+   "stated_bandpass_deg": 14.3,
+   "bl_min_m": 8.0,
+   "bl_max_m": 89.0,
+   "array_m": 7.0
+  },
+  "A002_X1237e23_Xdb0": {
+   "path_rms_um": 435.93,
+   "qa0_report": "uid___A002_X1237e23_Xdb0.qa0_report.pdf",
+   "repr_freq_ghz": 112.9,
+   "stated_phasecal_deg": 59.1,
+   "stated_bandpass_deg": 95.1,
+   "bl_min_m": 15.0,
+   "bl_max_m": 649.0,
+   "array_m": 12.0
+  },
+  "A002_X1239f8e_Xa43b": {
+   "path_rms_um": 37.225,
+   "qa0_report": "uid___A002_X1239f8e_Xa43b.qa0_report.pdf",
+   "repr_freq_ghz": 232.999,
+   "stated_phasecal_deg": 10.4,
+   "stated_bandpass_deg": 28.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1240efd_X13b03": {
+   "path_rms_um": 228.927,
+   "qa0_report": "uid___A002_X1240efd_X13b03.qa0_report.pdf",
+   "repr_freq_ghz": 112.9,
+   "stated_phasecal_deg": 31.0,
+   "stated_bandpass_deg": 73.9,
+   "bl_min_m": 15.0,
+   "bl_max_m": 783.0,
+   "array_m": 12.0
+  },
+  "A002_X1240efd_X14140": {
+   "path_rms_um": 152.213,
+   "qa0_report": "uid___A002_X1240efd_X14140.qa0_report.pdf",
+   "repr_freq_ghz": 112.9,
+   "stated_phasecal_deg": 20.6,
+   "stated_bandpass_deg": 60.6,
+   "bl_min_m": 15.0,
+   "bl_max_m": 783.0,
+   "array_m": 12.0
+  },
+  "A002_X1240efd_X14e83": {
+   "path_rms_um": 101.834,
+   "qa0_report": "uid___A002_X1240efd_X14e83.qa0_report.pdf",
+   "repr_freq_ghz": 112.9,
+   "stated_phasecal_deg": 13.8,
+   "stated_bandpass_deg": 33.5,
+   "bl_min_m": 15.0,
+   "bl_max_m": 783.0,
+   "array_m": 12.0
+  },
+  "A002_X1263402_X816f": {
+   "path_rms_um": 34.476,
+   "qa0_report": "uid___A002_X1263402_X816f.qa0_report.pdf",
+   "repr_freq_ghz": 230.537,
+   "stated_phasecal_deg": 9.5,
+   "stated_bandpass_deg": 10.2,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1263402_X856c": {
+   "path_rms_um": 24.723,
+   "qa0_report": "uid___A002_X1263402_X856c.qa0_report.pdf",
+   "repr_freq_ghz": 230.537,
+   "stated_phasecal_deg": 6.8,
+   "stated_bandpass_deg": 15.5,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1263402_Xb082": {
+   "path_rms_um": 210.346,
+   "qa0_report": "uid___A002_X1263402_Xb082.qa0_report.pdf",
+   "repr_freq_ghz": 232.999,
+   "stated_phasecal_deg": 58.8,
+   "stated_bandpass_deg": 45.7,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1264cde_X258b": {
+   "path_rms_um": 12.046,
+   "qa0_report": "uid___A002_X1264cde_X258b.qa0_report.pdf",
+   "repr_freq_ghz": 230.537,
+   "stated_phasecal_deg": 3.3,
+   "stated_bandpass_deg": 5.3,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1264cde_X2d40": {
+   "path_rms_um": 9.584,
+   "qa0_report": "uid___A002_X1264cde_X2d40.qa0_report.pdf",
+   "repr_freq_ghz": 230.537,
+   "stated_phasecal_deg": 2.7,
+   "stated_bandpass_deg": 9.4,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X126787e_X1170": {
+   "path_rms_um": 34.904,
+   "qa0_report": "uid___A002_X126787e_X1170.qa0_report.pdf",
+   "repr_freq_ghz": 230.537,
+   "stated_phasecal_deg": 9.7,
+   "stated_bandpass_deg": 14.6,
+   "bl_min_m": 8.0,
+   "bl_max_m": 44.0,
+   "array_m": 7.0
+  },
+  "A002_X126787e_X1c15": {
+   "path_rms_um": 11.753,
+   "qa0_report": "uid___A002_X126787e_X1c15.qa0_report.pdf",
+   "repr_freq_ghz": 230.537,
+   "stated_phasecal_deg": 3.3,
+   "stated_bandpass_deg": 4.9,
+   "bl_min_m": 8.0,
+   "bl_max_m": 44.0,
+   "array_m": 7.0
+  },
+  "A002_X126787e_X227e": {
+   "path_rms_um": 11.01,
+   "qa0_report": "uid___A002_X126787e_X227e.qa0_report.pdf",
+   "repr_freq_ghz": 230.537,
+   "stated_phasecal_deg": 3.0,
+   "stated_bandpass_deg": 3.5,
+   "bl_min_m": 8.0,
+   "bl_max_m": 44.0,
+   "array_m": 7.0
+  },
+  "A002_X12694b3_Xab7": {
+   "path_rms_um": 19.107,
+   "qa0_report": "uid___A002_X12694b3_Xab7.qa0_report.pdf",
+   "repr_freq_ghz": 230.537,
+   "stated_phasecal_deg": 5.3,
+   "stated_bandpass_deg": 7.8,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X126c7ed_Xe9d": {
+   "path_rms_um": 39.709,
+   "qa0_report": "uid___A002_X126c7ed_Xe9d.qa0_report.pdf",
+   "repr_freq_ghz": 230.541,
+   "stated_phasecal_deg": 11.0,
+   "stated_bandpass_deg": 25.6,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X126fc6d_Xc894": {
+   "path_rms_um": 40.305,
+   "qa0_report": "uid___A002_X126fc6d_Xc894.qa0_report.pdf",
+   "repr_freq_ghz": 230.541,
+   "stated_phasecal_deg": 11.2,
+   "stated_bandpass_deg": 6.3,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X12754c1_X9b5": {
+   "path_rms_um": 26.883,
+   "qa0_report": "uid___A002_X12754c1_X9b5.qa0_report.pdf",
+   "repr_freq_ghz": 230.541,
+   "stated_phasecal_deg": 7.4,
+   "stated_bandpass_deg": 5.7,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1275eb2_Xe05": {
+   "path_rms_um": 11.016,
+   "qa0_report": "uid___A002_X1275eb2_Xe05.qa0_report.pdf",
+   "repr_freq_ghz": 230.541,
+   "stated_phasecal_deg": 3.0,
+   "stated_bandpass_deg": 6.7,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X12771d5_X10e06": {
+   "path_rms_um": 34.026,
+   "qa0_report": "uid___A002_X12771d5_X10e06.qa0_report.pdf",
+   "repr_freq_ghz": 230.541,
+   "stated_phasecal_deg": 9.4,
+   "stated_bandpass_deg": 20.4,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X12771d5_X3b63": {
+   "path_rms_um": 108.112,
+   "qa0_report": "uid___A002_X12771d5_X3b63.qa0_report.pdf",
+   "repr_freq_ghz": 230.541,
+   "stated_phasecal_deg": 29.9,
+   "stated_bandpass_deg": 31.9,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X12771d5_X9f13": {
+   "path_rms_um": 29.076,
+   "qa0_report": "uid___A002_X12771d5_X9f13.qa0_report.pdf",
+   "repr_freq_ghz": 230.541,
+   "stated_phasecal_deg": 8.0,
+   "stated_bandpass_deg": 5.2,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X128b034_X11ca9": {
+   "path_rms_um": 21.237,
+   "qa0_report": "uid___A002_X128b034_X11ca9.qa0_report.pdf",
+   "repr_freq_ghz": 492.165,
+   "stated_phasecal_deg": 12.5,
+   "stated_bandpass_deg": 14.4,
+   "bl_min_m": 8.0,
+   "bl_max_m": 89.0,
+   "array_m": 7.0
+  },
+  "A002_X128b034_X187cc": {
+   "path_rms_um": 100.878,
+   "qa0_report": "uid___A002_X128b034_X187cc.qa0_report.pdf",
+   "repr_freq_ghz": 230.515,
+   "stated_phasecal_deg": 27.9,
+   "stated_bandpass_deg": 22.8,
+   "bl_min_m": 10.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X12925a3_Xa4b1": {
+   "path_rms_um": 36.078,
+   "qa0_report": "uid___A002_X12925a3_Xa4b1.qa0_report.pdf",
+   "repr_freq_ghz": 112.9,
+   "stated_phasecal_deg": 4.9,
+   "stated_bandpass_deg": 5.0,
+   "bl_min_m": 15.0,
+   "bl_max_m": 2516.0,
+   "array_m": 12.0
+  },
+  "A002_X1294347_X1af7f": {
+   "path_rms_um": 40.187,
+   "qa0_report": "uid___A002_X1294347_X1af7f.qa0_report.pdf",
+   "repr_freq_ghz": 230.515,
+   "stated_phasecal_deg": 11.1,
+   "stated_bandpass_deg": 23.8,
+   "bl_min_m": 10.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1294347_X1b730": {
+   "path_rms_um": 38.377,
+   "qa0_report": "uid___A002_X1294347_X1b730.qa0_report.pdf",
+   "repr_freq_ghz": 230.515,
+   "stated_phasecal_deg": 10.6,
+   "stated_bandpass_deg": 24.4,
+   "bl_min_m": 10.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X1294347_X5c2e": {
+   "path_rms_um": 28.109,
+   "qa0_report": "uid___A002_X1294347_X5c2e.qa0_report.pdf",
+   "repr_freq_ghz": 230.515,
+   "stated_phasecal_deg": 7.8,
+   "stated_bandpass_deg": 15.3,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X129691d_X6985": {
+   "path_rms_um": 58.959,
+   "qa0_report": "uid___A002_X129691d_X6985.qa0_report.pdf",
+   "repr_freq_ghz": 230.515,
+   "stated_phasecal_deg": 16.3,
+   "stated_bandpass_deg": 24.2,
+   "bl_min_m": 10.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X129754b_X1a931": {
+   "path_rms_um": 37.501,
+   "qa0_report": "uid___A002_X129754b_X1a931.qa0_report.pdf",
+   "repr_freq_ghz": 112.9,
+   "stated_phasecal_deg": 5.1,
+   "stated_bandpass_deg": 3.5,
+   "bl_min_m": 15.0,
+   "bl_max_m": 3083.0,
+   "array_m": 12.0
+  },
+  "A002_X129754b_X2363e": {
+   "path_rms_um": 40.535,
+   "qa0_report": "uid___A002_X129754b_X2363e.qa0_report.pdf",
+   "repr_freq_ghz": 112.9,
+   "stated_phasecal_deg": 5.5,
+   "stated_bandpass_deg": 7.5,
+   "bl_min_m": 15.0,
+   "bl_max_m": 3083.0,
+   "array_m": 12.0
+  },
+  "A002_X129754b_X23b68": {
+   "path_rms_um": 93.021,
+   "qa0_report": "uid___A002_X129754b_X23b68.qa0_report.pdf",
+   "repr_freq_ghz": 112.9,
+   "stated_phasecal_deg": 12.6,
+   "stated_bandpass_deg": 14.0,
+   "bl_min_m": 44.0,
+   "bl_max_m": 3083.0,
+   "array_m": 12.0
+  },
+  "A002_X129754b_X2b51b": {
+   "path_rms_um": 86.97,
+   "qa0_report": "uid___A002_X129754b_X2b51b.qa0_report.pdf",
+   "repr_freq_ghz": 112.9,
+   "stated_phasecal_deg": 11.8,
+   "stated_bandpass_deg": 16.2,
+   "bl_min_m": 41.0,
+   "bl_max_m": 3637.0,
+   "array_m": 12.0
+  },
+  "A002_X129754b_X6946": {
+   "path_rms_um": 74.71,
+   "qa0_report": "uid___A002_X129754b_X6946.qa0_report.pdf",
+   "repr_freq_ghz": 230.515,
+   "stated_phasecal_deg": 20.7,
+   "stated_bandpass_deg": 40.3,
+   "bl_min_m": 10.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X129754b_X70a9": {
+   "path_rms_um": 71.924,
+   "qa0_report": "uid___A002_X129754b_X70a9.qa0_report.pdf",
+   "repr_freq_ghz": 230.515,
+   "stated_phasecal_deg": 19.9,
+   "stated_bandpass_deg": 22.1,
+   "bl_min_m": 10.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X12a079b_X22389": {
+   "path_rms_um": 9.266,
+   "qa0_report": "uid___A002_X12a079b_X22389.qa0_report.pdf",
+   "repr_freq_ghz": 242.0,
+   "stated_phasecal_deg": 2.7,
+   "stated_bandpass_deg": 4.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X12a079b_Xf640": {
+   "path_rms_um": 31.818,
+   "qa0_report": "uid___A002_X12a079b_Xf640.qa0_report.pdf",
+   "repr_freq_ghz": 112.9,
+   "stated_phasecal_deg": 4.3,
+   "stated_bandpass_deg": 3.7,
+   "bl_min_m": 64.0,
+   "bl_max_m": 3637.0,
+   "array_m": 12.0
+  },
+  "A002_X12a8fc8_X10b8": {
+   "path_rms_um": 10.609,
+   "qa0_report": "uid___A002_X12a8fc8_X10b8.qa0_report.pdf",
+   "repr_freq_ghz": 242.0,
+   "stated_phasecal_deg": 3.1,
+   "stated_bandpass_deg": 4.3,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X12a8fc8_X1980": {
+   "path_rms_um": 11.371,
+   "qa0_report": "uid___A002_X12a8fc8_X1980.qa0_report.pdf",
+   "repr_freq_ghz": 242.0,
+   "stated_phasecal_deg": 3.3,
+   "stated_bandpass_deg": 5.4,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X12a8fc8_X2201": {
+   "path_rms_um": 15.281,
+   "qa0_report": "uid___A002_X12a8fc8_X2201.qa0_report.pdf",
+   "repr_freq_ghz": 242.0,
+   "stated_phasecal_deg": 4.4,
+   "stated_bandpass_deg": 4.3,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X12a8fc8_Xb82": {
+   "path_rms_um": 9.553,
+   "qa0_report": "uid___A002_X12a8fc8_Xb82.qa0_report.pdf",
+   "repr_freq_ghz": 242.0,
+   "stated_phasecal_deg": 2.8,
+   "stated_bandpass_deg": 5.7,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X12ac5b5_X14ae": {
+   "path_rms_um": 9.109,
+   "qa0_report": "uid___A002_X12ac5b5_X14ae.qa0_report.pdf",
+   "repr_freq_ghz": 242.0,
+   "stated_phasecal_deg": 2.6,
+   "stated_bandpass_deg": 2.8,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_X12b3da5_X2f34": {
+   "path_rms_um": 11.535,
+   "qa0_report": "uid___A002_X12b3da5_X2f34.qa0_report.pdf",
+   "repr_freq_ghz": 230.515,
+   "stated_phasecal_deg": 3.2,
+   "stated_bandpass_deg": 4.2,
+   "bl_min_m": 8.0,
+   "bl_max_m": 47.0,
+   "array_m": 7.0
+  },
+  "A002_X12b3da5_X4411": {
+   "path_rms_um": 20.386,
+   "qa0_report": "uid___A002_X12b3da5_X4411.qa0_report.pdf",
+   "repr_freq_ghz": 230.515,
+   "stated_phasecal_deg": 5.6,
+   "stated_bandpass_deg": 5.6,
+   "bl_min_m": 8.0,
+   "bl_max_m": 47.0,
+   "array_m": 7.0
+  },
+  "A002_X12b487b_X386a": {
+   "path_rms_um": 10.618,
+   "qa0_report": "uid___A002_X12b487b_X386a.qa0_report.pdf",
+   "repr_freq_ghz": 242.0,
+   "stated_phasecal_deg": 3.1,
+   "stated_bandpass_deg": 2.9,
+   "bl_min_m": 8.0,
+   "bl_max_m": 47.0,
+   "array_m": 7.0
+  },
+  "A002_X12b966a_X38de": {
+   "path_rms_um": 12.24,
+   "qa0_report": "uid___A002_X12b966a_X38de.qa0_report.pdf",
+   "repr_freq_ghz": 242.0,
+   "stated_phasecal_deg": 3.6,
+   "stated_bandpass_deg": 2.7,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc6141c_X3af0": {
+   "path_rms_um": 13.124,
+   "qa0_report": "uid___A002_Xc6141c_X3af0.qa0_report.pdf",
+   "repr_freq_ghz": 347.987,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc66ce1_X1345": {
+   "path_rms_um": 11.029,
+   "qa0_report": "uid___A002_Xc66ce1_X1345.qa0_report.pdf",
+   "repr_freq_ghz": 347.987,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc66ce1_Xaa9": {
+   "path_rms_um": 34.531,
+   "qa0_report": "uid___A002_Xc66ce1_Xaa9.qa0_report.pdf",
+   "repr_freq_ghz": 232.491,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc67b7e_X1f16": {
+   "path_rms_um": 28.14,
+   "qa0_report": "uid___A002_Xc67b7e_X1f16.qa0_report.pdf",
+   "repr_freq_ghz": 232.491,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc68b3e_X107b": {
+   "path_rms_um": 11.442,
+   "qa0_report": "uid___A002_Xc68b3e_X107b.qa0_report.pdf",
+   "repr_freq_ghz": 232.491,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc694dd_X3e5f": {
+   "path_rms_um": 13.416,
+   "qa0_report": "uid___A002_Xc694dd_X3e5f.qa0_report.pdf",
+   "repr_freq_ghz": 232.491,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc694dd_X41ca": {
+   "path_rms_um": 8.305,
+   "qa0_report": "uid___A002_Xc694dd_X41ca.qa0_report.pdf",
+   "repr_freq_ghz": 232.491,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc6a3db_X7b5b": {
+   "path_rms_um": 15.442,
+   "qa0_report": "uid___A002_Xc6a3db_X7b5b.qa0_report.pdf",
+   "repr_freq_ghz": 347.987,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc6b674_X28f5": {
+   "path_rms_um": 21.326,
+   "qa0_report": "uid___A002_Xc6b674_X28f5.qa0_report.pdf",
+   "repr_freq_ghz": 232.491,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc6c0d5_X121e": {
+   "path_rms_um": 16.427,
+   "qa0_report": "uid___A002_Xc6c0d5_X121e.qa0_report.pdf",
+   "repr_freq_ghz": 347.987,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc6d2f9_X7060": {
+   "path_rms_um": 37.3,
+   "qa0_report": "uid___A002_Xc6d2f9_X7060.qa0_report.pdf",
+   "repr_freq_ghz": 232.491,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc6e968_X1339": {
+   "path_rms_um": 33.823,
+   "qa0_report": "uid___A002_Xc6e968_X1339.qa0_report.pdf",
+   "repr_freq_ghz": 232.491,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc6fa08_X1053": {
+   "path_rms_um": 14.861,
+   "qa0_report": "uid___A002_Xc6fa08_X1053.qa0_report.pdf",
+   "repr_freq_ghz": 232.491,
+   "bl_min_m": 8.0,
+   "bl_max_m": 47.0,
+   "array_m": 7.0
+  },
+  "A002_Xc7111c_X61dc": {
+   "path_rms_um": 10.373,
+   "qa0_report": "uid___A002_Xc7111c_X61dc.qa0_report.pdf",
+   "repr_freq_ghz": 347.987,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc74b5b_X7c16": {
+   "path_rms_um": 11.029,
+   "qa0_report": "uid___A002_Xc74b5b_X7c16.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc77d4f_X6247": {
+   "path_rms_um": 37.753,
+   "qa0_report": "uid___A002_Xc77d4f_X6247.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc7a409_X5de8": {
+   "path_rms_um": 9.799,
+   "qa0_report": "uid___A002_Xc7a409_X5de8.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc7b4ea_X2729": {
+   "path_rms_um": 18.739,
+   "qa0_report": "uid___A002_Xc7b4ea_X2729.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc7e4e4_X683a": {
+   "path_rms_um": 14.512,
+   "qa0_report": "uid___A002_Xc7e4e4_X683a.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc7fa6f_X28a8": {
+   "path_rms_um": 39.479,
+   "qa0_report": "uid___A002_Xc7fa6f_X28a8.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc805c1_X1ab2": {
+   "path_rms_um": 21.122,
+   "qa0_report": "uid___A002_Xc805c1_X1ab2.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc83b78_X256c": {
+   "path_rms_um": 19.664,
+   "qa0_report": "uid___A002_Xc83b78_X256c.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc8592e_Xd319": {
+   "path_rms_um": 68.317,
+   "qa0_report": "uid___A002_Xc8592e_Xd319.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc8b2b0_X9c35": {
+   "path_rms_um": 18.185,
+   "qa0_report": "uid___A002_Xc8b2b0_X9c35.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc8ed16_Xafd5": {
+   "path_rms_um": 22.62,
+   "qa0_report": "uid___A002_Xc8ed16_Xafd5.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc92012_X6a6f": {
+   "path_rms_um": 31.947,
+   "qa0_report": "uid___A002_Xc92012_X6a6f.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc92fe3_X255d": {
+   "path_rms_um": 26.131,
+   "qa0_report": "uid___A002_Xc92fe3_X255d.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc92fe3_X4af1": {
+   "path_rms_um": 83.514,
+   "qa0_report": "uid___A002_Xc92fe3_X4af1.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc92fe3_X9313": {
+   "path_rms_um": 47.923,
+   "qa0_report": "uid___A002_Xc92fe3_X9313.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc92fe3_Xa1eb": {
+   "path_rms_um": 17.343,
+   "qa0_report": "uid___A002_Xc92fe3_Xa1eb.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc92fe3_Xaa2f": {
+   "path_rms_um": 18.241,
+   "qa0_report": "uid___A002_Xc92fe3_Xaa2f.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc94c38_X1923": {
+   "path_rms_um": 42.844,
+   "qa0_report": "uid___A002_Xc94c38_X1923.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc94c38_Xa4bc": {
+   "path_rms_um": 52.022,
+   "qa0_report": "uid___A002_Xc94c38_Xa4bc.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc94c38_Xad7a": {
+   "path_rms_um": 46.133,
+   "qa0_report": "uid___A002_Xc94c38_Xad7a.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc94c38_Xb5c5": {
+   "path_rms_um": 35.375,
+   "qa0_report": "uid___A002_Xc94c38_Xb5c5.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc94c38_Xc003": {
+   "path_rms_um": 25.902,
+   "qa0_report": "uid___A002_Xc94c38_Xc003.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc96463_X164e": {
+   "path_rms_um": 62.195,
+   "qa0_report": "uid___A002_Xc96463_X164e.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc96463_X1d7a": {
+   "path_rms_um": 27.499,
+   "qa0_report": "uid___A002_Xc96463_X1d7a.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc96463_X281c": {
+   "path_rms_um": 39.552,
+   "qa0_report": "uid___A002_Xc96463_X281c.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc96f17_X2a84": {
+   "path_rms_um": 33.732,
+   "qa0_report": "uid___A002_Xc96f17_X2a84.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc9831a_X13c7": {
+   "path_rms_um": 28.685,
+   "qa0_report": "uid___A002_Xc9831a_X13c7.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc9831a_X443": {
+   "path_rms_um": 603.862,
+   "qa0_report": "uid___A002_Xc9831a_X443.qa0_report.pdf",
+   "repr_freq_ghz": 102.5,
+   "bl_min_m": 15.0,
+   "bl_max_m": 1398.0,
+   "array_m": 12.0
+  },
+  "A002_Xc9831a_Xa0b7": {
+   "path_rms_um": 29.963,
+   "qa0_report": "uid___A002_Xc9831a_Xa0b7.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc9831a_Xe79": {
+   "path_rms_um": 48.598,
+   "qa0_report": "uid___A002_Xc9831a_Xe79.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc99ad7_X1619": {
+   "path_rms_um": 30.942,
+   "qa0_report": "uid___A002_Xc99ad7_X1619.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc99ad7_X2cc": {
+   "path_rms_um": 64.839,
+   "qa0_report": "uid___A002_Xc99ad7_X2cc.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc99ad7_X348": {
+   "path_rms_um": 251.012,
+   "qa0_report": "uid___A002_Xc99ad7_X348.qa0_report.pdf",
+   "repr_freq_ghz": 95.0,
+   "bl_min_m": 15.0,
+   "bl_max_m": 1398.0,
+   "array_m": 12.0
+  },
+  "A002_Xc99ad7_X623d": {
+   "path_rms_um": 196.924,
+   "qa0_report": "uid___A002_Xc99ad7_X623d.qa0_report.pdf",
+   "repr_freq_ghz": 102.5,
+   "bl_min_m": 15.0,
+   "bl_max_m": 1398.0,
+   "array_m": 12.0
+  },
+  "A002_Xc99ad7_X67ff": {
+   "path_rms_um": 169.016,
+   "qa0_report": "uid___A002_Xc99ad7_X67ff.qa0_report.pdf",
+   "repr_freq_ghz": 102.5,
+   "bl_min_m": 15.0,
+   "bl_max_m": 1398.0,
+   "array_m": 12.0
+  },
+  "A002_Xc99ad7_Xe20": {
+   "path_rms_um": 36.342,
+   "qa0_report": "uid___A002_Xc99ad7_Xe20.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xc9c531_X632d": {
+   "path_rms_um": 446.841,
+   "qa0_report": "uid___A002_Xc9c531_X632d.qa0_report.pdf",
+   "repr_freq_ghz": 102.5,
+   "bl_min_m": 14.0,
+   "bl_max_m": 1398.0,
+   "array_m": 12.0
+  },
+  "A002_Xc9c531_X67a0": {
+   "path_rms_um": 398.879,
+   "qa0_report": "uid___A002_Xc9c531_X67a0.qa0_report.pdf",
+   "repr_freq_ghz": 102.5,
+   "bl_min_m": 14.0,
+   "bl_max_m": 1398.0,
+   "array_m": 12.0
+  },
+  "A002_Xca464b_Xebf": {
+   "path_rms_um": 20.386,
+   "qa0_report": "uid___A002_Xca464b_Xebf.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xcb8a93_X395": {
+   "path_rms_um": 19.387,
+   "qa0_report": "uid___A002_Xcb8a93_X395.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xcb8a93_X7bee": {
+   "path_rms_um": 54.724,
+   "qa0_report": "uid___A002_Xcb8a93_X7bee.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xcbb583_Xb78": {
+   "path_rms_um": 35.387,
+   "qa0_report": "uid___A002_Xcbb583_Xb78.qa0_report.pdf",
+   "repr_freq_ghz": 230.075,
+   "bl_min_m": 14.0,
+   "bl_max_m": 484.0,
+   "array_m": 12.0
+  },
+  "A002_Xcbc47c_X2d9": {
+   "path_rms_um": 13.874,
+   "qa0_report": "uid___A002_Xcbc47c_X2d9.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xcbc47c_Xd4": {
+   "path_rms_um": 35.386,
+   "qa0_report": "uid___A002_Xcbc47c_Xd4.qa0_report.pdf",
+   "repr_freq_ghz": 230.075,
+   "bl_min_m": 14.0,
+   "bl_max_m": 484.0,
+   "array_m": 12.0
+  },
+  "A002_Xcc3ae3_X12e7": {
+   "path_rms_um": 38.903,
+   "qa0_report": "uid___A002_Xcc3ae3_X12e7.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xcc3ae3_Xcea0": {
+   "path_rms_um": 81.018,
+   "qa0_report": "uid___A002_Xcc3ae3_Xcea0.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xcc626d_X579": {
+   "path_rms_um": 90.659,
+   "qa0_report": "uid___A002_Xcc626d_X579.qa0_report.pdf",
+   "repr_freq_ghz": 157.0,
+   "bl_min_m": 14.0,
+   "bl_max_m": 500.0,
+   "array_m": 12.0
+  },
+  "A002_Xcca365_X3822": {
+   "path_rms_um": 23.329,
+   "qa0_report": "uid___A002_Xcca365_X3822.qa0_report.pdf",
+   "repr_freq_ghz": 230.119,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xcccc19_X4dfa": {
+   "path_rms_um": 59.45,
+   "qa0_report": "uid___A002_Xcccc19_X4dfa.qa0_report.pdf",
+   "repr_freq_ghz": 348.465,
+   "bl_min_m": 14.0,
+   "bl_max_m": 500.0,
+   "array_m": 12.0
+  },
+  "A002_Xcccc19_X5564": {
+   "path_rms_um": 39.054,
+   "qa0_report": "uid___A002_Xcccc19_X5564.qa0_report.pdf",
+   "repr_freq_ghz": 348.465,
+   "bl_min_m": 14.0,
+   "bl_max_m": 500.0,
+   "array_m": 12.0
+  },
+  "A002_Xccea8d_X2ff5": {
+   "path_rms_um": 116.769,
+   "qa0_report": "uid___A002_Xccea8d_X2ff5.qa0_report.pdf",
+   "repr_freq_ghz": 333.997,
+   "bl_min_m": 14.0,
+   "bl_max_m": 500.0,
+   "array_m": 12.0
+  },
+  "A002_Xcd2acd_X6125": {
+   "path_rms_um": 50.728,
+   "qa0_report": "uid___A002_Xcd2acd_X6125.qa0_report.pdf",
+   "repr_freq_ghz": 333.998,
+   "bl_min_m": 14.0,
+   "bl_max_m": 455.0,
+   "array_m": 12.0
+  },
+  "A002_Xcd64ec_X21c9": {
+   "path_rms_um": 21.455,
+   "qa0_report": "uid___A002_Xcd64ec_X21c9.qa0_report.pdf",
+   "repr_freq_ghz": 334.0,
+   "bl_min_m": 14.0,
+   "bl_max_m": 313.0,
+   "array_m": 12.0
+  },
+  "A002_Xcd64ec_X9149": {
+   "path_rms_um": 77.004,
+   "qa0_report": "uid___A002_Xcd64ec_X9149.qa0_report.pdf",
+   "repr_freq_ghz": 350.5,
+   "bl_min_m": 14.0,
+   "bl_max_m": 313.0,
+   "array_m": 12.0
+  },
+  "A002_Xcd8029_Xb6b0": {
+   "path_rms_um": 35.655,
+   "qa0_report": "uid___A002_Xcd8029_Xb6b0.qa0_report.pdf",
+   "repr_freq_ghz": 334.0,
+   "bl_min_m": 14.0,
+   "bl_max_m": 313.0,
+   "array_m": 12.0
+  },
+  "A002_Xcd97a1_X2377": {
+   "path_rms_um": 13.525,
+   "qa0_report": "uid___A002_Xcd97a1_X2377.qa0_report.pdf",
+   "repr_freq_ghz": 230.106,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xcd97a1_X2b1e": {
+   "path_rms_um": 15.25,
+   "qa0_report": "uid___A002_Xcd97a1_X2b1e.qa0_report.pdf",
+   "repr_freq_ghz": 230.106,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xcd97a1_X3f1e": {
+   "path_rms_um": 31.759,
+   "qa0_report": "uid___A002_Xcd97a1_X3f1e.qa0_report.pdf",
+   "repr_freq_ghz": 334.006,
+   "bl_min_m": 14.0,
+   "bl_max_m": 313.0,
+   "array_m": 12.0
+  },
+  "A002_Xcda49e_Xdebb": {
+   "path_rms_um": 31.982,
+   "qa0_report": "uid___A002_Xcda49e_Xdebb.qa0_report.pdf",
+   "repr_freq_ghz": 333.796,
+   "bl_min_m": 14.0,
+   "bl_max_m": 313.0,
+   "array_m": 12.0
+  },
+  "A002_Xcdb7b8_Xfb16": {
+   "path_rms_um": 19.936,
+   "qa0_report": "uid___A002_Xcdb7b8_Xfb16.qa0_report.pdf",
+   "repr_freq_ghz": 333.989,
+   "bl_min_m": 14.0,
+   "bl_max_m": 313.0,
+   "array_m": 12.0
+  },
+  "A002_Xcdd033_X85ff": {
+   "path_rms_um": 61.658,
+   "qa0_report": "uid___A002_Xcdd033_X85ff.qa0_report.pdf",
+   "repr_freq_ghz": 333.973,
+   "bl_min_m": 14.0,
+   "bl_max_m": 313.0,
+   "array_m": 12.0
+  },
+  "A002_Xce0587_Xe4d0": {
+   "path_rms_um": 18.615,
+   "qa0_report": "uid___A002_Xce0587_Xe4d0.qa0_report.pdf",
+   "repr_freq_ghz": 333.796,
+   "bl_min_m": 14.0,
+   "bl_max_m": 313.0,
+   "array_m": 12.0
+  },
+  "A002_Xce1e34_X7be": {
+   "path_rms_um": 66.527,
+   "qa0_report": "uid___A002_Xce1e34_X7be.qa0_report.pdf",
+   "repr_freq_ghz": 230.106,
+   "bl_min_m": 14.0,
+   "bl_max_m": 313.0,
+   "array_m": 12.0
+  },
+  "A002_Xcf0c6b_X6513": {
+   "path_rms_um": 38.429,
+   "qa0_report": "uid___A002_Xcf0c6b_X6513.qa0_report.pdf",
+   "repr_freq_ghz": 345.767,
+   "bl_min_m": 14.0,
+   "bl_max_m": 312.0,
+   "array_m": 12.0
+  },
+  "A002_Xcf196f_Xabc5": {
+   "path_rms_um": 103.557,
+   "qa0_report": "uid___A002_Xcf196f_Xabc5.qa0_report.pdf",
+   "repr_freq_ghz": 230.098,
+   "bl_min_m": 14.0,
+   "bl_max_m": 313.0,
+   "array_m": 12.0
+  },
+  "A002_Xcf525f_X5aa4": {
+   "path_rms_um": 84.043,
+   "qa0_report": "uid___A002_Xcf525f_X5aa4.qa0_report.pdf",
+   "repr_freq_ghz": 333.978,
+   "bl_min_m": 14.0,
+   "bl_max_m": 313.0,
+   "array_m": 12.0
+  },
+  "A002_Xcf749a_X36e0": {
+   "path_rms_um": 17.938,
+   "qa0_report": "uid___A002_Xcf749a_X36e0.qa0_report.pdf",
+   "repr_freq_ghz": 345.767,
+   "bl_min_m": 14.0,
+   "bl_max_m": 313.0,
+   "array_m": 12.0
+  },
+  "A002_Xcf749a_X4871": {
+   "path_rms_um": 57.594,
+   "qa0_report": "uid___A002_Xcf749a_X4871.qa0_report.pdf",
+   "repr_freq_ghz": 333.981,
+   "bl_min_m": 14.0,
+   "bl_max_m": 313.0,
+   "array_m": 12.0
+  },
+  "A002_Xd09670_X1d79": {
+   "path_rms_um": 124.055,
+   "qa0_report": "uid___A002_Xd09670_X1d79.qa0_report.pdf",
+   "repr_freq_ghz": 230.098,
+   "bl_min_m": 14.0,
+   "bl_max_m": 440.0,
+   "array_m": 12.0
+  },
+  "A002_Xd09670_X23c5": {
+   "path_rms_um": 50.586,
+   "qa0_report": "uid___A002_Xd09670_X23c5.qa0_report.pdf",
+   "repr_freq_ghz": 230.092,
+   "bl_min_m": 14.0,
+   "bl_max_m": 440.0,
+   "array_m": 12.0
+  },
+  "A002_Xd0e450_X1e19": {
+   "path_rms_um": 42.011,
+   "qa0_report": "uid___A002_Xd0e450_X1e19.qa0_report.pdf",
+   "repr_freq_ghz": 348.465,
+   "bl_min_m": 14.0,
+   "bl_max_m": 483.0,
+   "array_m": 12.0
+  },
+  "A002_Xd0e450_Xc008": {
+   "path_rms_um": 54.668,
+   "qa0_report": "uid___A002_Xd0e450_Xc008.qa0_report.pdf",
+   "repr_freq_ghz": 348.465,
+   "bl_min_m": 14.0,
+   "bl_max_m": 483.0,
+   "array_m": 12.0
+  },
+  "A002_Xd0fb35_X90dc": {
+   "path_rms_um": 35.992,
+   "qa0_report": "uid___A002_Xd0fb35_X90dc.qa0_report.pdf",
+   "repr_freq_ghz": 210.0,
+   "bl_min_m": 14.0,
+   "bl_max_m": 457.0,
+   "array_m": 12.0
+  },
+  "A002_Xd10f82_X2635": {
+   "path_rms_um": 36.233,
+   "qa0_report": "uid___A002_Xd10f82_X2635.qa0_report.pdf",
+   "repr_freq_ghz": 333.983,
+   "bl_min_m": 15.0,
+   "bl_max_m": 500.0,
+   "array_m": 12.0
+  },
+  "A002_Xd10f82_X706f": {
+   "path_rms_um": 79.313,
+   "qa0_report": "uid___A002_Xd10f82_X706f.qa0_report.pdf",
+   "repr_freq_ghz": 333.988,
+   "bl_min_m": 14.0,
+   "bl_max_m": 500.0,
+   "array_m": 12.0
+  },
+  "A002_Xd10f82_X7829": {
+   "path_rms_um": 93.347,
+   "qa0_report": "uid___A002_Xd10f82_X7829.qa0_report.pdf",
+   "repr_freq_ghz": 333.988,
+   "bl_min_m": 14.0,
+   "bl_max_m": 500.0,
+   "array_m": 12.0
+  },
+  "A002_Xd12f5c_X5deb": {
+   "path_rms_um": 13.255,
+   "qa0_report": "uid___A002_Xd12f5c_X5deb.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 47.0,
+   "array_m": 7.0
+  },
+  "A002_Xd12f5c_Xd7c6": {
+   "path_rms_um": 39.162,
+   "qa0_report": "uid___A002_Xd12f5c_Xd7c6.qa0_report.pdf",
+   "repr_freq_ghz": 334.0,
+   "bl_min_m": 14.0,
+   "bl_max_m": 781.0,
+   "array_m": 12.0
+  },
+  "A002_Xd16a1e_X8d4": {
+   "path_rms_um": 14.664,
+   "qa0_report": "uid___A002_Xd16a1e_X8d4.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 47.0,
+   "array_m": 7.0
+  },
+  "A002_Xd16a1e_Xf0d": {
+   "path_rms_um": 20.449,
+   "qa0_report": "uid___A002_Xd16a1e_Xf0d.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 47.0,
+   "array_m": 7.0
+  },
+  "A002_Xd189ef_X867b": {
+   "path_rms_um": 42.894,
+   "qa0_report": "uid___A002_Xd189ef_X867b.qa0_report.pdf",
+   "repr_freq_ghz": 334.0,
+   "bl_min_m": 14.0,
+   "bl_max_m": 783.0,
+   "array_m": 12.0
+  },
+  "A002_Xd1b0f3_X2f3": {
+   "path_rms_um": 29.574,
+   "qa0_report": "uid___A002_Xd1b0f3_X2f3.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 47.0,
+   "array_m": 7.0
+  },
+  "A002_Xd1b0f3_Xb67": {
+   "path_rms_um": 10.503,
+   "qa0_report": "uid___A002_Xd1b0f3_Xb67.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 47.0,
+   "array_m": 7.0
+  },
+  "A002_Xd1c06f_X4a7": {
+   "path_rms_um": 43.15,
+   "qa0_report": "uid___A002_Xd1c06f_X4a7.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 9.0,
+   "bl_max_m": 47.0,
+   "array_m": 7.0
+  },
+  "A002_Xd1c06f_X9f4c": {
+   "path_rms_um": 32.728,
+   "qa0_report": "uid___A002_Xd1c06f_X9f4c.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xd1c06f_Xf04b": {
+   "path_rms_um": 19.063,
+   "qa0_report": "uid___A002_Xd1c06f_Xf04b.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xd1c06f_Xf769": {
+   "path_rms_um": 20.816,
+   "qa0_report": "uid___A002_Xd1c06f_Xf769.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xd1daeb_X282": {
+   "path_rms_um": 35.622,
+   "qa0_report": "uid___A002_Xd1daeb_X282.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xd1f23d_X53b2": {
+   "path_rms_um": 16.071,
+   "qa0_report": "uid___A002_Xd1f23d_X53b2.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xd21a3a_X8a5a": {
+   "path_rms_um": 39.887,
+   "qa0_report": "uid___A002_Xd21a3a_X8a5a.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xd248b5_X2fa": {
+   "path_rms_um": 27.103,
+   "qa0_report": "uid___A002_Xd248b5_X2fa.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xd248b5_X5186": {
+   "path_rms_um": 74.818,
+   "qa0_report": "uid___A002_Xd248b5_X5186.qa0_report.pdf",
+   "repr_freq_ghz": 350.5,
+   "bl_min_m": 14.0,
+   "bl_max_m": 1397.0,
+   "array_m": 12.0
+  },
+  "A002_Xd28a9e_Xb92f": {
+   "path_rms_um": 7.001,
+   "qa0_report": "uid___A002_Xd28a9e_Xb92f.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xd28a9e_Xbb59": {
+   "path_rms_um": 13.917,
+   "qa0_report": "uid___A002_Xd28a9e_Xbb59.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xd28a9e_Xbcdf": {
+   "path_rms_um": 38.084,
+   "qa0_report": "uid___A002_Xd28a9e_Xbcdf.qa0_report.pdf",
+   "repr_freq_ghz": 242.0,
+   "bl_min_m": 14.0,
+   "bl_max_m": 1397.0,
+   "array_m": 12.0
+  },
+  "A002_Xd28a9e_Xbd84": {
+   "path_rms_um": 11.144,
+   "qa0_report": "uid___A002_Xd28a9e_Xbd84.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xd29c1f_X445c": {
+   "path_rms_um": 13.352,
+   "qa0_report": "uid___A002_Xd29c1f_X445c.qa0_report.pdf",
+   "repr_freq_ghz": 226.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xe64b7b_X1704c": {
+   "path_rms_um": 16.953,
+   "qa0_report": "uid___A002_Xe64b7b_X1704c.qa0_report.pdf",
+   "repr_freq_ghz": 492.122,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xeba1ac_Xbc74": {
+   "path_rms_um": 23.418,
+   "qa0_report": "uid___A002_Xeba1ac_Xbc74.qa0_report.pdf",
+   "repr_freq_ghz": 338.5,
+   "bl_min_m": 15.0,
+   "bl_max_m": 1397.0,
+   "array_m": 12.0
+  },
+  "A002_Xf4df6f_Xc7": {
+   "path_rms_um": 61.52,
+   "qa0_report": "uid___A002_Xf4df6f_Xc7.qa0_report.pdf",
+   "repr_freq_ghz": 115.264,
+   "bl_min_m": 14.0,
+   "bl_max_m": 783.0,
+   "array_m": 12.0
+  },
+  "A002_Xf5d76d_X32f1": {
+   "path_rms_um": 199.208,
+   "qa0_report": "uid___A002_Xf5d76d_X32f1.qa0_report.pdf",
+   "repr_freq_ghz": 115.264,
+   "bl_min_m": 14.0,
+   "bl_max_m": 284.0,
+   "array_m": 12.0
+  },
+  "A002_Xf5d76d_Xcc5": {
+   "path_rms_um": 192.323,
+   "qa0_report": "uid___A002_Xf5d76d_Xcc5.qa0_report.pdf",
+   "repr_freq_ghz": 115.264,
+   "bl_min_m": 14.0,
+   "bl_max_m": 284.0,
+   "array_m": 12.0
+  },
+  "A002_Xf5d76d_Xe19": {
+   "path_rms_um": 163.411,
+   "qa0_report": "uid___A002_Xf5d76d_Xe19.qa0_report.pdf",
+   "repr_freq_ghz": 115.264,
+   "bl_min_m": 14.0,
+   "bl_max_m": 284.0,
+   "array_m": 12.0
+  },
+  "A002_Xf5d76d_Xeb8": {
+   "path_rms_um": 29.698,
+   "qa0_report": "uid___A002_Xf5d76d_Xeb8.qa0_report.pdf",
+   "repr_freq_ghz": 115.264,
+   "bl_min_m": 14.0,
+   "bl_max_m": 284.0,
+   "array_m": 12.0
+  },
+  "A002_Xf8f6a9_X10359": {
+   "path_rms_um": 7.88,
+   "qa0_report": "uid___A002_Xf8f6a9_X10359.qa0_report.pdf",
+   "repr_freq_ghz": 230.543,
+   "bl_min_m": 8.0,
+   "bl_max_m": 44.0,
+   "array_m": 7.0
+  },
+  "A002_Xfdb69b_X667a": {
+   "path_rms_um": 35.868,
+   "qa0_report": "uid___A002_Xfdb69b_X667a.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xfdc8ec_X4cec": {
+   "path_rms_um": 65.186,
+   "qa0_report": "uid___A002_Xfdc8ec_X4cec.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xfddca6_Xcf25": {
+   "path_rms_um": 20.506,
+   "qa0_report": "uid___A002_Xfddca6_Xcf25.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xfdf45f_X478e": {
+   "path_rms_um": 20.971,
+   "qa0_report": "uid___A002_Xfdf45f_X478e.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xfe2e17_X282": {
+   "path_rms_um": 26.229,
+   "qa0_report": "uid___A002_Xfe2e17_X282.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xfe3986_X5c7e": {
+   "path_rms_um": 36.792,
+   "qa0_report": "uid___A002_Xfe3986_X5c7e.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xfe62c1_X398": {
+   "path_rms_um": 14.678,
+   "qa0_report": "uid___A002_Xfe62c1_X398.qa0_report.pdf",
+   "repr_freq_ghz": 230.543,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xfeb5e6_X13ee": {
+   "path_rms_um": 15.055,
+   "qa0_report": "uid___A002_Xfeb5e6_X13ee.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xfec857_X11fd": {
+   "path_rms_um": 15.124,
+   "qa0_report": "uid___A002_Xfec857_X11fd.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xfec857_X6b2": {
+   "path_rms_um": 20.596,
+   "qa0_report": "uid___A002_Xfec857_X6b2.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xfee03e_X82ee": {
+   "path_rms_um": 25.825,
+   "qa0_report": "uid___A002_Xfee03e_X82ee.qa0_report.pdf",
+   "repr_freq_ghz": 224.0,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xff0235_X26e3": {
+   "path_rms_um": 23.663,
+   "qa0_report": "uid___A002_Xff0235_X26e3.qa0_report.pdf",
+   "repr_freq_ghz": 345.124,
+   "bl_min_m": 15.0,
+   "bl_max_m": 483.0,
+   "array_m": 12.0
+  },
+  "A002_Xff0235_X4a6d": {
+   "path_rms_um": 54.127,
+   "qa0_report": "uid___A002_Xff0235_X4a6d.qa0_report.pdf",
+   "repr_freq_ghz": 345.141,
+   "bl_min_m": 15.0,
+   "bl_max_m": 500.0,
+   "array_m": 12.0
+  },
+  "A002_Xff0235_X502d": {
+   "path_rms_um": 137.581,
+   "qa0_report": "uid___A002_Xff0235_X502d.qa0_report.pdf",
+   "repr_freq_ghz": 345.141,
+   "bl_min_m": 15.0,
+   "bl_max_m": 500.0,
+   "array_m": 12.0
+  },
+  "A002_Xff0235_X8392": {
+   "path_rms_um": 36.235,
+   "qa0_report": "uid___A002_Xff0235_X8392.qa0_report.pdf",
+   "repr_freq_ghz": 230.543,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xff0235_X8c42": {
+   "path_rms_um": 20.039,
+   "qa0_report": "uid___A002_Xff0235_X8c42.qa0_report.pdf",
+   "repr_freq_ghz": 345.169,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xff294f_X2db6": {
+   "path_rms_um": 8.825,
+   "qa0_report": "uid___A002_Xff294f_X2db6.qa0_report.pdf",
+   "repr_freq_ghz": 345.118,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xff294f_X7bf4": {
+   "path_rms_um": 14.928,
+   "qa0_report": "uid___A002_Xff294f_X7bf4.qa0_report.pdf",
+   "repr_freq_ghz": 345.159,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xff294f_X812c": {
+   "path_rms_um": 11.831,
+   "qa0_report": "uid___A002_Xff294f_X812c.qa0_report.pdf",
+   "repr_freq_ghz": 345.159,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xff294f_Xaf70": {
+   "path_rms_um": 10.065,
+   "qa0_report": "uid___A002_Xff294f_Xaf70.qa0_report.pdf",
+   "repr_freq_ghz": 345.118,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xff294f_Xc10b": {
+   "path_rms_um": 7.314,
+   "qa0_report": "uid___A002_Xff294f_Xc10b.qa0_report.pdf",
+   "repr_freq_ghz": 345.118,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xff45a6_X107fe": {
+   "path_rms_um": 13.934,
+   "qa0_report": "uid___A002_Xff45a6_X107fe.qa0_report.pdf",
+   "repr_freq_ghz": 345.159,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xff45a6_X10ca8": {
+   "path_rms_um": 13.552,
+   "qa0_report": "uid___A002_Xff45a6_X10ca8.qa0_report.pdf",
+   "repr_freq_ghz": 345.159,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xff45a6_X111c3": {
+   "path_rms_um": 16.537,
+   "qa0_report": "uid___A002_Xff45a6_X111c3.qa0_report.pdf",
+   "repr_freq_ghz": 345.159,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xff45a6_X8474": {
+   "path_rms_um": 25.685,
+   "qa0_report": "uid___A002_Xff45a6_X8474.qa0_report.pdf",
+   "repr_freq_ghz": 345.159,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xff699e_X7543": {
+   "path_rms_um": 25.836,
+   "qa0_report": "uid___A002_Xff699e_X7543.qa0_report.pdf",
+   "repr_freq_ghz": 345.159,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xff699e_Xd7": {
+   "path_rms_um": 16.397,
+   "qa0_report": "uid___A002_Xff699e_Xd7.qa0_report.pdf",
+   "repr_freq_ghz": 345.159,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xff81e8_X734e": {
+   "path_rms_um": 80.752,
+   "qa0_report": "uid___A002_Xff81e8_X734e.qa0_report.pdf",
+   "repr_freq_ghz": 345.159,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xff99e1_X1b0c4": {
+   "path_rms_um": 12.58,
+   "qa0_report": "uid___A002_Xff99e1_X1b0c4.qa0_report.pdf",
+   "repr_freq_ghz": 345.139,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xff99e1_X24be0": {
+   "path_rms_um": 17.631,
+   "qa0_report": "uid___A002_Xff99e1_X24be0.qa0_report.pdf",
+   "repr_freq_ghz": 345.139,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xff99e1_X2b2ee": {
+   "path_rms_um": 20.551,
+   "qa0_report": "uid___A002_Xff99e1_X2b2ee.qa0_report.pdf",
+   "repr_freq_ghz": 345.139,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xff99e1_X2c3bb": {
+   "path_rms_um": 12.348,
+   "qa0_report": "uid___A002_Xff99e1_X2c3bb.qa0_report.pdf",
+   "repr_freq_ghz": 345.139,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xfff3d8_Xd46": {
+   "path_rms_um": 13.711,
+   "qa0_report": "uid___A002_Xfff3d8_Xd46.qa0_report.pdf",
+   "repr_freq_ghz": 345.139,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xfffde1_X3835": {
+   "path_rms_um": 11.827,
+   "qa0_report": "uid___A002_Xfffde1_X3835.qa0_report.pdf",
+   "repr_freq_ghz": 345.139,
+   "bl_min_m": 8.0,
+   "bl_max_m": 48.0,
+   "array_m": 7.0
+  },
+  "A002_Xfffde1_X9bd6": {
+   "path_rms_um": 25.587,
+   "qa0_report": "uid___A002_Xfffde1_X9bd6.qa0_report.pdf",
+   "repr_freq_ghz": 345.139,
+   "bl_min_m": 8.0,
+   "bl_max_m": 91.0,
+   "array_m": 7.0
+  },
+  "A002_Xfffde1_Xffdf": {
+   "path_rms_um": 33.114,
+   "qa0_report": "uid___A002_Xfffde1_Xffdf.qa0_report.pdf",
+   "repr_freq_ghz": 345.118,
+   "bl_min_m": 14.0,
+   "bl_max_m": 368.0,
+   "array_m": 12.0
+  }
+ }
+}

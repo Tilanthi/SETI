@@ -1,0 +1,74 @@
+paper v3.90 -- the radius correction fails its own validation; the frozen
+screen returns as primary and disposition rests on physics
+
+Two referee reports. Both treat the same question as a condition for
+acceptance: which statistic is primary, and can it be justified?
+
+1. REFEREE 2 WAS RIGHT: THE PAPER CONTRADICTED ITSELF.
+   S4.2 said the radius-corrected statistic was primary; Appendix G.10.2
+   said in terms that it was not. v3.89 changed the front of the paper and
+   left the back stating the opposite. Separately, the conclusions printed
+   the FROZEN CO count (9) beside the CORRECTED totals (10 stage-1, 2
+   unattributed), so 9 + 2 = 11 did not equal 10. Both fixed. New gate
+   consistency_v390.py now asserts that both count identities close, that
+   the text does not simultaneously adopt and reject the corrected
+   statistic, and that the abstract's counts come from whichever statistic
+   is declared primary. Nothing in gate.sh could see any of this before.
+
+2. REFEREE 1'S CONDITION: THE CORRECTION FAILS OUT OF SAMPLE.
+   New radval_v390.py freezes the correction and applies it unmodified to
+   778 windows it played no part in building -- the pre-registered hold-out
+   and the prospective extension -- at a level fixed in advance (p >= 0.05).
+
+        stellar rank, out of sample   median      D        p
+        uncorrected                    0.409    0.105   <1e-4
+        radius-corrected               0.407    0.097   <1e-4
+
+   The departure from uniformity is essentially undiminished and the median
+   moves FURTHER FROM 0.5, not toward it. Holds in each sample separately.
+
+   Methodological note: the pseudo-star test does NOT discriminate.
+   Probe-against-probe ranks are near-uniform with or without the
+   correction (uncorrected p = 0.16 pooled) because every probe is drawn
+   from the same radial distribution. The star is at the phase centre,
+   inside the annulus, so only the STELLAR rank tests the asymmetry the
+   correction exists to repair. Both are reported; the verdict rests on the
+   discriminating one.
+
+3. WHAT FOLLOWS. Per referee 1's own instruction, the corrected statistic
+   is therefore not primary. The frozen screen returns as the primary
+   candidate-generation device -- it at least was fixed in advance --
+   described consistently as a prioritisation and never as a significance
+   test, and every disposition now rests on physical evidence: visibility
+   localisation, stellar-frame line coincidence, and recurrence. Counts are
+   consistent throughout at 13 flagged / 9 CO / 4 unattributed, with the
+   corrected 10 / 8 / 2 as a documented robustness comparison. Appendix
+   G.10.2's position, which v3.89 had overridden, was correct; its
+   justification is now empirical rather than procedural.
+
+   v3.89 over-corrected on the previous round's instruction. The validation
+   this round's referee 1 demanded has settled it.
+
+4. ABSTRACT REWRITTEN TO SPECIFICATION. Referee 1 asked for four things in
+   order and for the P~0.04 vs P~0.4 discussion removed; referee 2 asked
+   for plain self-contained language with one headline number and one
+   headline result. It now gives the sample and method, the single
+   sensitivity (P90sel per system, median 1.5e15 W, with the dominant
+   transfer uncertainty), the single result, and the representativeness
+   caveat, with R1-11 ("narrowband" = narrow relative to an ALMA channel,
+   15.3-1953 kHz) and R1-7 ("the ALMA archive-selected stellar sample
+   within 40 pc") folded in. The tail probabilities are gone from it.
+
+Gates: 47 pages, 0 errors / 0 undefined / 0 multiply-defined / 0 overfull
+/ 0 Type 3, 1173 macros 0 unused, abstract 1910/1920 both counters, clean
+regeneration 92/92 byte-identical, number audit 49/49, consistency gate 0
+problems, roundcollide 48/48, xrefcheck 0 misplaced.
+REFEREE_VERIFICATION_v390.txt ships the verbatim output of every check.
+
+Still open: the presentational programme both reports ask for (cutting
+20-25 per cent of main-text prose, Appendix G consolidation, Table 1
+relocation, restructuring around Figure 3, figure moves), plus the
+stratified end-to-end injection through the selection gate, the
+effective-exposure occurrence likelihood, the time-domain completeness
+figure, and per-hand polarisation. The two needing the pipeline host are
+queued behind the archive-mining campaign.

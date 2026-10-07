@@ -1,0 +1,12 @@
+{
+ "_doc": "THE DECORRELATION TERM IS ONE-SIDED, AND THE DIRECTION IS FIXED BY HOW THE COMPLETENESS IS MEASURED.  A synthetic carrier is added to visibilities that have already been through the ALMA pipeline's phase and amplitude calibration, so it carries no atmospheric or instrumental coherence loss at all.  A real carrier does.  The measured completeness is therefore optimistic by the coherence loss of the array that recorded the window, and by nothing in the other direction: a negative branch would mean a real carrier is recovered MORE efficiently than an injected one, which the injection route cannot produce.  The term is a declared external assumption -- no measurement of it exists in this work -- and it enters as an upper bound on the optimism, not as an error bar.",
+ "_provenance": "Two records in this build declare a magnitude for it and they disagree: r9inputs/sens_r9b.json gives combined.decorrelation_declared = [-0.1244, +0.1668], a two-sided bracket; p90_budget_v409.py declares E_DECOR_LO, E_DECOR_HI = 0.05, 0.20 one-directionally with the source string 'DECLARED EXTERNAL ASSUMPTION -- no measurement exists in this work'.  The adopted term is the LARGER of the two upper bounds, so it is at least as conservative as either declaration, and the lower bound is zero because the sign is fixed by the argument above.",
+ "declared_two_sided_record": "r9inputs/sens_r9b.json",
+ "declared_two_sided": [-0.12438328424153167, 0.16683704409598876],
+ "declared_one_sided_record": "p90_budget_v409.py",
+ "declared_one_sided": [0.05, 0.20],
+ "adopted_lo": 0.0,
+ "adopted_hi": 0.20,
+ "adopted_direction": "the limits are optimistic: a real carrier needs up to this much more power than the completeness implies",
+ "measured_here": false
+}

@@ -1,0 +1,30 @@
+{
+ "bet Pic|A002_Xf5d76d_X32f1": {
+  "ra": 86.821249,
+  "dec": -51.065992,
+  "tmid": 5153061607.5,
+  "vsys": 16.84,
+  "vsys_src": "Gaia DR3"
+ },
+ "bet Pic|A002_Xd9668b_X3a90": {
+  "ra": 86.821242,
+  "dec": -51.066062,
+  "tmid": 5059068237.75,
+  "vsys": 16.84,
+  "vsys_src": "Gaia DR3"
+ },
+ "HD 48370|A002_Xc26103_X155a": {
+  "ra": 100.754337,
+  "dec": -2.889046,
+  "tmid": 5007286139.15,
+  "vsys": 23.6,
+  "vsys_src": "Cataldi et al. 2023"
+ },
+ "CP-72 2713|A002_Xff0235_X4a6d": {
+  "ra": 340.705801,
+  "dec": -71.70622,
+  "tmid": 5171389876.3,
+  "vsys": null,
+  "vsys_src": "not used: the offset exceeds 1300 km/s in every frame"
+ }
+}
