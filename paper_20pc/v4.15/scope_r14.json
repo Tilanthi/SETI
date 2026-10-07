@@ -1,0 +1,42 @@
+{
+ "all_survey": {
+  "days": 19,
+  "months": 8,
+  "one": 27,
+  "sameday": 5,
+  "years": 23
+ },
+ "class_a": {
+  "days": 14,
+  "months": 6,
+  "one": 18,
+  "sameday": 3,
+  "years": 19
+ },
+ "class_a_indep": 39,
+ "class_a_noconf": 21,
+ "class_a_total": 60,
+ "confirmable_day": 37,
+ "drive": null,
+ "generated_by": "scope_r14.py",
+ "resample": {
+  "base_median_W": 1554678533888242.2,
+  "base_n": 25,
+  "count_hi": 25,
+  "count_lo": 24,
+  "count_max": 27,
+  "count_min": 22,
+  "factor": 3.0287487703190146,
+  "level_W": 1000000000000000.0,
+  "median_hi_pct": 5.284366128944251,
+  "median_lo_pct": -9.096254433012408,
+  "median_shift_pct": -2.5114982751181403,
+  "n_pool": 49,
+  "n_trial": 4000,
+  "seed": 410011,
+  "sys_hi_pct": 9.343911924376979,
+  "sys_lo_pct": -17.33930661855392
+ },
+ "round": 410,
+ "sep_days": 1.0
+}

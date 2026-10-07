@@ -1,0 +1,1101 @@
+{
+ "_doc": "re-extraction at the apparent position, and the injected measurement of the retained amplitude",
+ "reext": [
+  {
+   "unit": {
+    "tag": "A002_X9707f1_Xa89_spw0",
+    "eb": "A002_X9707f1_Xa89",
+    "spw": 0,
+    "target_ms": "/data/SETI/r11sens/t/A002_X9707f1_Xa89/products/A002_X9707f1_Xa89_target.ms",
+    "target_dir": "/data/SETI/r11sens/t/A002_X9707f1_Xa89",
+    "star_name": "tau Cet",
+    "star": "tau Cet",
+    "ra": 26.009055057160104,
+    "dec": -15.933680200693857,
+    "pmra": -1721.7277944720731,
+    "pmdec": 854.9631570589582,
+    "parallax": 273.80974511859966,
+    "rv_km_s": -16.597,
+    "epoch": 2016.0,
+    "drift_coeff": 12.0,
+    "beams": 0.24875516295371025,
+    "retained": 0.8893861090638173,
+    "dpar": 0.24841440853938418,
+    "syn": 0.9995323162682799,
+    "band": "6",
+    "reext_rank": 17,
+    "search_class": "B",
+    "cat_flo_GHz": 223.128906,
+    "cat_fhi_GHz": 224.871094,
+    "cat_chanw_Hz": 7812500.0,
+    "cat_rms_mJy": 0.46425,
+    "cat_smin_mJy": 2.32124,
+    "cat_star_snr": 3.0323,
+    "cat_ctrl_max": 4.7729,
+    "cat_crossing": "False",
+    "cat_f_cross_GHz": null
+   },
+   "started": "2026-10-06T09:10:19Z",
+   "passes": {
+    "apparent": {
+     "status": "ok",
+     "l_m": [
+      -1.0615744726260326e-06,
+      -6.301206996739417e-07
+     ],
+     "offset_arcsec": 0.25463408769623747,
+     "S_trig_Jy": 0.002320492931175977,
+     "n_int": 1185,
+     "t_star_max": 3.070775270462036,
+     "f_star_max_GHz": 224.65234375,
+     "drift_at_max": -2688.0,
+     "ctrl_max": 4.787113666534424,
+     "n_ctrl": 512,
+     "n_ctrl_ge_star": 243,
+     "crosses": false,
+     "n_chan_searched": 224
+    },
+    "barycentric": {
+     "status": "ok",
+     "l_m": [
+      -6.707898292520407e-08,
+      4.93842163273861e-08
+     ],
+     "offset_arcsec": 0.017181240263711636,
+     "S_trig_Jy": 0.0023212406085804105,
+     "n_int": 1185,
+     "t_star_max": 3.0323433876037598,
+     "f_star_max_GHz": 224.65234375,
+     "drift_at_max": -2688.0,
+     "ctrl_max": 4.772959232330322,
+     "n_ctrl": 512,
+     "n_ctrl_ge_star": 261,
+     "crosses": false,
+     "n_chan_searched": 224
+    }
+   },
+   "measured_ratio_tstar": 0.9874846319012808,
+   "predicted_retained": 0.8893861090638173,
+   "beams": 0.24875516295371025,
+   "delta_offset_arcsec": 0.23745284743252582,
+   "crossing_changed": false,
+   "rank_change": 18,
+   "noise_ratio": 1.0003222062840134,
+   "status": "ok",
+   "finished": "2026-10-06T09:13:09Z"
+  },
+  {
+   "unit": {
+    "tag": "A002_X9707f1_Xa89_spw1",
+    "eb": "A002_X9707f1_Xa89",
+    "spw": 1,
+    "target_ms": "/data/SETI/r11sens/t/A002_X9707f1_Xa89/products/A002_X9707f1_Xa89_target.ms",
+    "target_dir": "/data/SETI/r11sens/t/A002_X9707f1_Xa89",
+    "star_name": "tau Cet",
+    "star": "tau Cet",
+    "ra": 26.009055057160104,
+    "dec": -15.933680200693857,
+    "pmra": -1721.7277944720731,
+    "pmdec": 854.9631570589582,
+    "parallax": 273.80974511859966,
+    "rv_km_s": -16.597,
+    "epoch": 2016.0,
+    "drift_coeff": 12.0,
+    "beams": 0.24875516295371025,
+    "retained": 0.8893861090638173,
+    "dpar": 0.24841440853938418,
+    "syn": 0.9995323162682799,
+    "band": "6",
+    "reext_rank": 17,
+    "search_class": "B",
+    "cat_flo_GHz": 225.128906,
+    "cat_fhi_GHz": 226.871094,
+    "cat_chanw_Hz": 7812500.0,
+    "cat_rms_mJy": 0.42271,
+    "cat_smin_mJy": 2.11355,
+    "cat_star_snr": 2.492,
+    "cat_ctrl_max": 4.7826,
+    "cat_crossing": "False",
+    "cat_f_cross_GHz": null
+   },
+   "started": "2026-10-06T09:10:20Z",
+   "passes": {
+    "apparent": {
+     "status": "ok",
+     "l_m": [
+      -1.0615744726260326e-06,
+      -6.301206996739417e-07
+     ],
+     "offset_arcsec": 0.25463408769623747,
+     "S_trig_Jy": 0.0021121036843396723,
+     "n_int": 1185,
+     "t_star_max": 2.45084285736084,
+     "f_star_max_GHz": 225.82421875,
+     "drift_at_max": 2627.470703125,
+     "ctrl_max": 4.895058631896973,
+     "n_ctrl": 512,
+     "n_ctrl_ge_star": 497,
+     "crosses": false,
+     "n_chan_searched": 224
+    },
+    "barycentric": {
+     "status": "ok",
+     "l_m": [
+      -6.707898292520407e-08,
+      4.93842163273861e-08
+     ],
+     "offset_arcsec": 0.017181240263711636,
+     "S_trig_Jy": 0.0021135524730198085,
+     "n_int": 1185,
+     "t_star_max": 2.4920027256011963,
+     "f_star_max_GHz": 225.86328125,
+     "drift_at_max": -2712.0,
+     "ctrl_max": 4.782626152038574,
+     "n_ctrl": 512,
+     "n_ctrl_ge_star": 492,
+     "crosses": false,
+     "n_chan_searched": 224
+    }
+   },
+   "measured_ratio_tstar": 1.0167941686333488,
+   "predicted_retained": 0.8893861090638173,
+   "beams": 0.24875516295371025,
+   "delta_offset_arcsec": 0.23745284743252582,
+   "crossing_changed": false,
+   "rank_change": -5,
+   "noise_ratio": 1.0006859458135877,
+   "status": "ok",
+   "finished": "2026-10-06T09:13:11Z"
+  },
+  {
+   "unit": {
+    "tag": "A002_X9707f1_Xa89_spw2",
+    "eb": "A002_X9707f1_Xa89",
+    "spw": 2,
+    "target_ms": "/data/SETI/r11sens/t/A002_X9707f1_Xa89/products/A002_X9707f1_Xa89_target.ms",
+    "target_dir": "/data/SETI/r11sens/t/A002_X9707f1_Xa89",
+    "star_name": "tau Cet",
+    "star": "tau Cet",
+    "ra": 26.009055057160104,
+    "dec": -15.933680200693857,
+    "pmra": -1721.7277944720731,
+    "pmdec": 854.9631570589582,
+    "parallax": 273.80974511859966,
+    "rv_km_s": -16.597,
+    "epoch": 2016.0,
+    "drift_coeff": 12.0,
+    "beams": 0.24875516295371025,
+    "retained": 0.8893861090638173,
+    "dpar": 0.24841440853938418,
+    "syn": 0.9995323162682799,
+    "band": "6",
+    "reext_rank": 17,
+    "search_class": "B",
+    "cat_flo_GHz": 239.128906,
+    "cat_fhi_GHz": 240.871094,
+    "cat_chanw_Hz": 7812500.0,
+    "cat_rms_mJy": 0.47535,
+    "cat_smin_mJy": 2.37678,
+    "cat_star_snr": 3.6163,
+    "cat_ctrl_max": 5.0521,
+    "cat_crossing": "False",
+    "cat_f_cross_GHz": null
+   },
+   "started": "2026-10-06T09:10:21Z",
+   "passes": {
+    "apparent": {
+     "status": "ok",
+     "l_m": [
+      -1.0615744726260326e-06,
+      -6.301206996739417e-07
+     ],
+     "offset_arcsec": 0.25463408769623747,
+     "S_trig_Jy": 0.00238056862144731,
+     "n_int": 1185,
+     "t_star_max": 4.167660713195801,
+     "f_star_max_GHz": 240.57421875019998,
+     "drift_at_max": -210.26463317871094,
+     "ctrl_max": 4.8585638999938965,
+     "n_ctrl": 512,
+     "n_ctrl_ge_star": 10,
+     "crosses": false,
+     "n_chan_searched": 224
+    },
+    "barycentric": {
+     "status": "ok",
+     "l_m": [
+      -6.707898292520407e-08,
+      4.93842163273861e-08
+     ],
+     "offset_arcsec": 0.017181240263711636,
+     "S_trig_Jy": 0.00237677464610897,
+     "n_int": 1185,
+     "t_star_max": 3.616332769393921,
+     "f_star_max_GHz": 240.57421875019998,
+     "drift_at_max": -1545.13232421875,
+     "ctrl_max": 5.052080154418945,
+     "n_ctrl": 512,
+     "n_ctrl_ge_star": 57,
+     "crosses": false,
+     "n_chan_searched": 224
+    }
+   },
+   "measured_ratio_tstar": 0.8677128533864945,
+   "predicted_retained": 0.8893861090638173,
+   "beams": 0.24875516295371025,
+   "delta_offset_arcsec": 0.23745284743252582,
+   "crossing_changed": false,
+   "rank_change": 47,
+   "noise_ratio": 0.9984062734826635,
+   "status": "ok",
+   "finished": "2026-10-06T09:13:06Z"
+  },
+  {
+   "unit": {
+    "tag": "A002_X9707f1_Xa89_spw3",
+    "eb": "A002_X9707f1_Xa89",
+    "spw": 3,
+    "target_ms": "/data/SETI/r11sens/t/A002_X9707f1_Xa89/products/A002_X9707f1_Xa89_target.ms",
+    "target_dir": "/data/SETI/r11sens/t/A002_X9707f1_Xa89",
+    "star_name": "tau Cet",
+    "star": "tau Cet",
+    "ra": 26.009055057160104,
+    "dec": -15.933680200693857,
+    "pmra": -1721.7277944720731,
+    "pmdec": 854.9631570589582,
+    "parallax": 273.80974511859966,
+    "rv_km_s": -16.597,
+    "epoch": 2016.0,
+    "drift_coeff": 12.0,
+    "beams": 0.24875516295371025,
+    "retained": 0.8893861090638173,
+    "dpar": 0.24841440853938418,
+    "syn": 0.9995323162682799,
+    "band": "6",
+    "reext_rank": 17,
+    "search_class": "B",
+    "cat_flo_GHz": 241.128906,
+    "cat_fhi_GHz": 242.871094,
+    "cat_chanw_Hz": 7812500.0,
+    "cat_rms_mJy": 0.53031,
+    "cat_smin_mJy": 2.65157,
+    "cat_star_snr": 2.6541,
+    "cat_ctrl_max": 4.9804,
+    "cat_crossing": "False",
+    "cat_f_cross_GHz": null
+   },
+   "started": "2026-10-06T09:10:22Z",
+   "passes": {
+    "apparent": {
+     "status": "ok",
+     "l_m": [
+      -1.0615744726260326e-06,
+      -6.301206996739417e-07
+     ],
+     "offset_arcsec": 0.25463408769623747,
+     "S_trig_Jy": 0.002653494302649051,
+     "n_int": 1185,
+     "t_star_max": 2.5967187881469727,
+     "f_star_max_GHz": 242.63671875000003,
+     "drift_at_max": -234.26463317871094,
+     "ctrl_max": 4.604404926300049,
+     "n_ctrl": 512,
+     "n_ctrl_ge_star": 462,
+     "crosses": false,
+     "n_chan_searched": 224
+    },
+    "barycentric": {
+     "status": "ok",
+     "l_m": [
+      -6.707898292520407e-08,
+      4.93842163273861e-08
+     ],
+     "offset_arcsec": 0.017181240263711636,
+     "S_trig_Jy": 0.00265156093519181,
+     "n_int": 1185,
+     "t_star_max": 2.6540865898132324,
+     "f_star_max_GHz": 242.62890625000003,
+     "drift_at_max": 2435.470703125,
+     "ctrl_max": 4.980345249176025,
+     "n_ctrl": 512,
+     "n_ctrl_ge_star": 452,
+     "crosses": false,
+     "n_chan_searched": 224
+    }
+   },
+   "measured_ratio_tstar": 1.022092419836958,
+   "predicted_retained": 0.8893861090638173,
+   "beams": 0.24875516295371025,
+   "delta_offset_arcsec": 0.23745284743252582,
+   "crossing_changed": false,
+   "rank_change": -10,
+   "noise_ratio": 0.9992713881257214,
+   "status": "ok",
+   "finished": "2026-10-06T09:13:10Z"
+  },
+  {
+   "unit": {
+    "tag": "A002_Xd248b5_X5186_spw0",
+    "eb": "A002_Xd248b5_X5186",
+    "spw": 0,
+    "target_ms": "/data/SETI/r11sens/t/A002_Xd248b5_X5186/products/A002_Xd248b5_X5186_target.ms",
+    "target_dir": "/data/SETI/r11sens/t/A002_Xd248b5_X5186",
+    "star_name": "gam Lep",
+    "star": "gam Lep",
+    "ra": 86.11439118442938,
+    "dec": -22.450023380582696,
+    "pmra": -291.757,
+    "pmdec": -368.521,
+    "parallax": 112.296,
+    "rv_km_s": -9.199,
+    "epoch": 2016.0,
+    "drift_coeff": 12.0,
+    "beams": 0.6661454989247715,
+    "retained": 0.4852870225697653,
+    "dpar": 0.11252105837977959,
+    "syn": 0.16894988949597542,
+    "band": "7",
+    "reext_rank": 1,
+    "search_class": "B",
+    "cat_flo_GHz": 335.627387,
+    "cat_fhi_GHz": 337.361762,
+    "cat_chanw_Hz": 15625000.0,
+    "cat_rms_mJy": 0.38519,
+    "cat_smin_mJy": 1.92615,
+    "cat_star_snr": 2.5138,
+    "cat_ctrl_max": 4.182,
+    "cat_crossing": "False",
+    "cat_f_cross_GHz": 336.736762
+   },
+   "started": "2026-10-06T09:09:10Z",
+   "passes": {
+    "apparent": {
+     "status": "ok",
+     "l_m": [
+      -2.5510511949163335e-08,
+      6.452426148939594e-09
+     ],
+     "offset_arcsec": 0.00542762635043466,
+     "S_trig_Jy": 0.001926594995893538,
+     "n_int": 582,
+     "t_star_max": 3.2414536476135254,
+     "f_star_max_GHz": 336.7367625,
+     "drift_at_max": 7546.02392578125,
+     "ctrl_max": 4.332151412963867,
+     "n_ctrl": 512,
+     "n_ctrl_ge_star": 59,
+     "crosses": false,
+     "n_chan_searched": 112
+    },
+    "barycentric": {
+     "status": "ok",
+     "l_m": [
+      -5.709122572904084e-07,
+      1.758654671890625e-08
+     ],
+     "offset_arcsec": 0.11781496394624047,
+     "S_trig_Jy": 0.0019259196415077895,
+     "n_int": 582,
+     "t_star_max": 2.51259446144104,
+     "f_star_max_GHz": 336.7367625,
+     "drift_at_max": -4037.934814453125,
+     "ctrl_max": 4.177825927734375,
+     "n_ctrl": 512,
+     "n_ctrl_ge_star": 317,
+     "crosses": false,
+     "n_chan_searched": 112
+    }
+   },
+   "measured_ratio_tstar": 0.7751443440478941,
+   "predicted_retained": 0.4852870225697653,
+   "beams": 0.6661454989247715,
+   "delta_offset_arcsec": -0.11238733759580581,
+   "crossing_changed": false,
+   "rank_change": 258,
+   "noise_ratio": 0.9996494570020228,
+   "status": "ok",
+   "finished": "2026-10-06T09:10:17Z"
+  },
+  {
+   "unit": {
+    "tag": "A002_Xd248b5_X5186_spw1",
+    "eb": "A002_Xd248b5_X5186",
+    "spw": 1,
+    "target_ms": "/data/SETI/r11sens/t/A002_Xd248b5_X5186/products/A002_Xd248b5_X5186_target.ms",
+    "target_dir": "/data/SETI/r11sens/t/A002_Xd248b5_X5186",
+    "star_name": "gam Lep",
+    "star": "gam Lep",
+    "ra": 86.11439118442938,
+    "dec": -22.450023380582696,
+    "pmra": -291.757,
+    "pmdec": -368.521,
+    "parallax": 112.296,
+    "rv_km_s": -9.199,
+    "epoch": 2016.0,
+    "drift_coeff": 12.0,
+    "beams": 0.6661454989247715,
+    "retained": 0.4852870225697653,
+    "dpar": 0.11252105837977959,
+    "syn": 0.16894988949597542,
+    "band": "7",
+    "reext_rank": 1,
+    "search_class": "B",
+    "cat_flo_GHz": 337.564887,
+    "cat_fhi_GHz": 339.299262,
+    "cat_chanw_Hz": 15625000.0,
+    "cat_rms_mJy": 0.31892,
+    "cat_smin_mJy": 1.5948,
+    "cat_star_snr": 2.1399,
+    "cat_ctrl_max": 4.1198,
+    "cat_crossing": "False",
+    "cat_f_cross_GHz": 339.268012
+   },
+   "started": "2026-10-06T09:09:11Z",
+   "passes": {
+    "apparent": {
+     "status": "ok",
+     "l_m": [
+      -2.5510511949163335e-08,
+      6.452426148939594e-09
+     ],
+     "offset_arcsec": 0.00542762635043466,
+     "S_trig_Jy": 0.001595563953742385,
+     "n_int": 582,
+     "t_star_max": 2.3430137634277344,
+     "f_star_max_GHz": 339.2680125,
+     "drift_at_max": -4061.184814453125,
+     "ctrl_max": 4.748162269592285,
+     "n_ctrl": 512,
+     "n_ctrl_ge_star": 380,
+     "crosses": false,
+     "n_chan_searched": 112
+    },
+    "barycentric": {
+     "status": "ok",
+     "l_m": [
+      -5.709122572904084e-07,
+      1.758654671890625e-08
+     ],
+     "offset_arcsec": 0.11781496394624047,
+     "S_trig_Jy": 0.0015945393533911556,
+     "n_int": 582,
+     "t_star_max": 2.1334877014160156,
+     "f_star_max_GHz": 339.2680125,
+     "drift_at_max": -4061.184814453125,
+     "ctrl_max": 4.1187968254089355,
+     "n_ctrl": 512,
+     "n_ctrl_ge_star": 458,
+     "crosses": false,
+     "n_chan_searched": 112
+    }
+   },
+   "measured_ratio_tstar": 0.9105741224049873,
+   "predicted_retained": 0.4852870225697653,
+   "beams": 0.6661454989247715,
+   "delta_offset_arcsec": -0.11238733759580581,
+   "crossing_changed": false,
+   "rank_change": 78,
+   "noise_ratio": 0.999357844385475,
+   "status": "ok",
+   "finished": "2026-10-06T09:10:20Z"
+  },
+  {
+   "unit": {
+    "tag": "A002_Xd248b5_X5186_spw2",
+    "eb": "A002_Xd248b5_X5186",
+    "spw": 2,
+    "target_ms": "/data/SETI/r11sens/t/A002_Xd248b5_X5186/products/A002_Xd248b5_X5186_target.ms",
+    "target_dir": "/data/SETI/r11sens/t/A002_Xd248b5_X5186",
+    "star_name": "gam Lep",
+    "star": "gam Lep",
+    "ra": 86.11439118442938,
+    "dec": -22.450023380582696,
+    "pmra": -291.757,
+    "pmdec": -368.521,
+    "parallax": 112.296,
+    "rv_km_s": -9.199,
+    "epoch": 2016.0,
+    "drift_coeff": 12.0,
+    "beams": 0.6661454989247715,
+    "retained": 0.4852870225697653,
+    "dpar": 0.11252105837977959,
+    "syn": 0.16894988949597542,
+    "band": "7",
+    "reext_rank": 1,
+    "search_class": "B",
+    "cat_flo_GHz": 347.627387,
+    "cat_fhi_GHz": 349.361762,
+    "cat_chanw_Hz": 15625000.0,
+    "cat_rms_mJy": 0.35793,
+    "cat_smin_mJy": 1.78984,
+    "cat_star_snr": 2.7957,
+    "cat_ctrl_max": 4.5111,
+    "cat_crossing": "False",
+    "cat_f_cross_GHz": 348.705512
+   },
+   "started": "2026-10-06T09:09:12Z",
+   "passes": {
+    "apparent": {
+     "status": "ok",
+     "l_m": [
+      -2.5510511949163335e-08,
+      6.452426148939594e-09
+     ],
+     "offset_arcsec": 0.00542762635043466,
+     "S_trig_Jy": 0.0017931332695297897,
+     "n_int": 582,
+     "t_star_max": 2.897212266921997,
+     "f_star_max_GHz": 349.1742625,
+     "drift_at_max": 7402.02392578125,
+     "ctrl_max": 4.6893768310546875,
+     "n_ctrl": 512,
+     "n_ctrl_ge_star": 141,
+     "crosses": false,
+     "n_chan_searched": 112
+    },
+    "barycentric": {
+     "status": "ok",
+     "l_m": [
+      -5.709122572904084e-07,
+      1.758654671890625e-08
+     ],
+     "offset_arcsec": 0.11781496394624047,
+     "S_trig_Jy": 0.0017895011114887893,
+     "n_int": 582,
+     "t_star_max": 2.799330234527588,
+     "f_star_max_GHz": 348.7055125,
+     "drift_at_max": -4181.93505859375,
+     "ctrl_max": 4.510233402252197,
+     "n_ctrl": 512,
+     "n_ctrl_ge_star": 194,
+     "crosses": false,
+     "n_chan_searched": 112
+    }
+   },
+   "measured_ratio_tstar": 0.9662150980402968,
+   "predicted_retained": 0.4852870225697653,
+   "beams": 0.6661454989247715,
+   "delta_offset_arcsec": -0.11238733759580581,
+   "crossing_changed": false,
+   "rank_change": 53,
+   "noise_ratio": 0.997974407088017,
+   "status": "ok",
+   "finished": "2026-10-06T09:10:19Z"
+  },
+  {
+   "unit": {
+    "tag": "A002_Xd248b5_X5186_spw3",
+    "eb": "A002_Xd248b5_X5186",
+    "spw": 3,
+    "target_ms": "/data/SETI/r11sens/t/A002_Xd248b5_X5186/products/A002_Xd248b5_X5186_target.ms",
+    "target_dir": "/data/SETI/r11sens/t/A002_Xd248b5_X5186",
+    "star_name": "gam Lep",
+    "star": "gam Lep",
+    "ra": 86.11439118442938,
+    "dec": -22.450023380582696,
+    "pmra": -291.757,
+    "pmdec": -368.521,
+    "parallax": 112.296,
+    "rv_km_s": -9.199,
+    "epoch": 2016.0,
+    "drift_coeff": 12.0,
+    "beams": 0.6661454989247715,
+    "retained": 0.4852870225697653,
+    "dpar": 0.11252105837977959,
+    "syn": 0.16894988949597542,
+    "band": "7",
+    "reext_rank": 1,
+    "search_class": "B",
+    "cat_flo_GHz": 349.627387,
+    "cat_fhi_GHz": 351.361762,
+    "cat_chanw_Hz": 15625000.0,
+    "cat_rms_mJy": 0.42401,
+    "cat_smin_mJy": 2.12029,
+    "cat_star_snr": 3.0592,
+    "cat_ctrl_max": 4.0613,
+    "cat_crossing": "False",
+    "cat_f_cross_GHz": 350.814887
+   },
+   "started": "2026-10-06T09:09:13Z",
+   "passes": {
+    "apparent": {
+     "status": "ok",
+     "l_m": [
+      -2.5510511949163335e-08,
+      6.452426148939594e-09
+     ],
+     "offset_arcsec": 0.00542762635043466,
+     "S_trig_Jy": 0.002119492564816028,
+     "n_int": 582,
+     "t_star_max": 2.637516498565674,
+     "f_star_max_GHz": 349.7367625,
+     "drift_at_max": -4205.93505859375,
+     "ctrl_max": 4.6582465171813965,
+     "n_ctrl": 512,
+     "n_ctrl_ge_star": 251,
+     "crosses": false,
+     "n_chan_searched": 112
+    },
+    "barycentric": {
+     "status": "ok",
+     "l_m": [
+      -5.709122572904084e-07,
+      1.758654671890625e-08
+     ],
+     "offset_arcsec": 0.11781496394624047,
+     "S_trig_Jy": 0.0021202028437983245,
+     "n_int": 582,
+     "t_star_max": 3.0427675247192383,
+     "f_star_max_GHz": 350.8148875,
+     "drift_at_max": -4205.93505859375,
+     "ctrl_max": 4.05528450012207,
+     "n_ctrl": 512,
+     "n_ctrl_ge_star": 98,
+     "crosses": false,
+     "n_chan_searched": 112
+    }
+   },
+   "measured_ratio_tstar": 1.1536487170313234,
+   "predicted_retained": 0.4852870225697653,
+   "beams": 0.6661454989247715,
+   "delta_offset_arcsec": -0.11238733759580581,
+   "crossing_changed": false,
+   "rank_change": -153,
+   "noise_ratio": 1.0003351174682504,
+   "status": "ok",
+   "finished": "2026-10-06T09:10:20Z"
+  }
+ ],
+ "pxtest": [
+  {
+   "unit": {
+    "tag": "A002_X9707f1_Xa89_spw0",
+    "eb": "A002_X9707f1_Xa89",
+    "spw": 0,
+    "target_ms": "/data/SETI/r11sens/t/A002_X9707f1_Xa89/products/A002_X9707f1_Xa89_target.ms",
+    "target_dir": "/data/SETI/r11sens/t/A002_X9707f1_Xa89",
+    "star_name": "tau Cet",
+    "star": "tau Cet",
+    "ra": 26.009055057160104,
+    "dec": -15.933680200693857,
+    "pmra": -1721.7277944720731,
+    "pmdec": 854.9631570589582,
+    "parallax": 273.80974511859966,
+    "rv_km_s": -16.597,
+    "epoch": 2016.0,
+    "drift_coeff": 12.0,
+    "beams": 0.24875516295371025,
+    "retained": 0.8893861090638173,
+    "dpar": 0.24841440853938418,
+    "syn": 0.9995323162682799,
+    "band": "6",
+    "reext_rank": 17,
+    "search_class": "B",
+    "cat_flo_GHz": 223.128906,
+    "cat_fhi_GHz": 224.871094,
+    "cat_chanw_Hz": 7812500.0,
+    "cat_rms_mJy": 0.46425,
+    "cat_smin_mJy": 2.32124,
+    "cat_star_snr": 3.0323,
+    "cat_ctrl_max": 4.7729,
+    "cat_crossing": "False",
+    "cat_f_cross_GHz": null
+   },
+   "started": "2026-10-06T09:21:41Z",
+   "amp_over_trig": 12.0,
+   "n_tone": 12,
+   "seed": 180301,
+   "S_trig_Jy": 0.002320492931175977,
+   "l_apparent": -1.0615744726260326e-06,
+   "m_apparent": -6.301206996739417e-07,
+   "drift_max_Hz_s": 2688.0,
+   "passes": {
+    "apparent": {
+     "status": "ok",
+     "n_recovered": 12,
+     "snr": [
+      22.68692970275879,
+      26.533145904541016,
+      21.34172248840332,
+      20.287809371948242,
+      24.152982711791992,
+      23.756546020507812,
+      18.723892211914062,
+      22.455049514770508,
+      24.826169967651367,
+      23.175907135009766,
+      21.842313766479492,
+      24.914352416992188
+     ],
+     "tones": [
+      {
+       "freq_GHz": 224.742532343689,
+       "snr": 22.68692970275879,
+       "subchan": 0.45586000780944935
+      },
+      {
+       "freq_GHz": 224.62199180729385,
+       "snr": 26.533145904541016,
+       "subchan": -0.11495133361229548
+      },
+      {
+       "freq_GHz": 224.49552188713884,
+       "snr": 21.34172248840332,
+       "subchan": 0.07319844623053551
+      },
+      {
+       "freq_GHz": 224.3704705905106,
+       "snr": 20.287809371948242,
+       "subchan": 0.07976441464568107
+      },
+      {
+       "freq_GHz": 224.24847661358487,
+       "snr": 24.152982711791992,
+       "subchan": -0.3050065388643096
+      },
+      {
+       "freq_GHz": 224.11807355799692,
+       "snr": 23.756546020507812,
+       "subchan": 0.38658457639301547
+      },
+      {
+       "freq_GHz": 223.9926878469906,
+       "snr": 18.723892211914062,
+       "subchan": 0.4359555852035292
+      },
+      {
+       "freq_GHz": 223.8713449337746,
+       "snr": 22.455049514770508,
+       "subchan": -0.03215152314717118
+      },
+      {
+       "freq_GHz": 223.74808195269355,
+       "snr": 24.826169967651367,
+       "subchan": -0.2544899447734722
+      },
+      {
+       "freq_GHz": 223.62444874962398,
+       "snr": 23.175907135009766,
+       "subchan": -0.4294399518707759
+      },
+      {
+       "freq_GHz": 223.49496318679306,
+       "snr": 21.842313766479492,
+       "subchan": 0.14471209048638156
+      },
+      {
+       "freq_GHz": 223.37235455025913,
+       "snr": 24.914352416992188,
+       "subchan": -0.16138243316859902
+      }
+     ],
+     "snr_median": 22.931418418884277
+    },
+    "barycentric": {
+     "status": "ok",
+     "n_recovered": 12,
+     "snr": [
+      20.30736541748047,
+      23.61106300354004,
+      19.868242263793945,
+      18.567378997802734,
+      22.82943344116211,
+      22.184547424316406,
+      17.074031829833984,
+      20.42059326171875,
+      22.780540466308594,
+      21.361047744750977,
+      20.374038696289062,
+      23.54536247253418
+     ],
+     "tones": [
+      {
+       "freq_GHz": 224.742532343689,
+       "snr": 20.30736541748047,
+       "subchan": 0.45586000780944935
+      },
+      {
+       "freq_GHz": 224.62199180729385,
+       "snr": 23.61106300354004,
+       "subchan": -0.11495133361229548
+      },
+      {
+       "freq_GHz": 224.49552188713884,
+       "snr": 19.868242263793945,
+       "subchan": 0.07319844623053551
+      },
+      {
+       "freq_GHz": 224.3704705905106,
+       "snr": 18.567378997802734,
+       "subchan": 0.07976441464568107
+      },
+      {
+       "freq_GHz": 224.24847661358487,
+       "snr": 22.82943344116211,
+       "subchan": -0.3050065388643096
+      },
+      {
+       "freq_GHz": 224.11807355799692,
+       "snr": 22.184547424316406,
+       "subchan": 0.38658457639301547
+      },
+      {
+       "freq_GHz": 223.9926878469906,
+       "snr": 17.074031829833984,
+       "subchan": 0.4359555852035292
+      },
+      {
+       "freq_GHz": 223.8713449337746,
+       "snr": 20.42059326171875,
+       "subchan": -0.03215152314717118
+      },
+      {
+       "freq_GHz": 223.74808195269355,
+       "snr": 22.780540466308594,
+       "subchan": -0.2544899447734722
+      },
+      {
+       "freq_GHz": 223.62444874962398,
+       "snr": 21.361047744750977,
+       "subchan": -0.4294399518707759
+      },
+      {
+       "freq_GHz": 223.49496318679306,
+       "snr": 20.374038696289062,
+       "subchan": 0.14471209048638156
+      },
+      {
+       "freq_GHz": 223.37235455025913,
+       "snr": 23.54536247253418,
+       "subchan": -0.16138243316859902
+      }
+     ],
+     "snr_median": 20.890820503234863
+    }
+   },
+   "n_paired": 12,
+   "measured_retained_median": 0.9196469348463794,
+   "measured_retained_lo": 0.9059701433060569,
+   "measured_retained_hi": 0.9365224234670484,
+   "predicted_retained": 0.8893861090638173,
+   "beams": 0.24875516295371025,
+   "status": "ok",
+   "finished": "2026-10-06T09:26:08Z"
+  },
+  {
+   "unit": {
+    "tag": "A002_Xd248b5_X5186_spw0",
+    "eb": "A002_Xd248b5_X5186",
+    "spw": 0,
+    "target_ms": "/data/SETI/r11sens/t/A002_Xd248b5_X5186/products/A002_Xd248b5_X5186_target.ms",
+    "target_dir": "/data/SETI/r11sens/t/A002_Xd248b5_X5186",
+    "star_name": "gam Lep",
+    "star": "gam Lep",
+    "ra": 86.11439118442938,
+    "dec": -22.450023380582696,
+    "pmra": -291.757,
+    "pmdec": -368.521,
+    "parallax": 112.296,
+    "rv_km_s": -9.199,
+    "epoch": 2016.0,
+    "drift_coeff": 12.0,
+    "beams": 0.6661454989247715,
+    "retained": 0.4852870225697653,
+    "dpar": 0.11252105837977959,
+    "syn": 0.16894988949597542,
+    "band": "7",
+    "reext_rank": 1,
+    "search_class": "B",
+    "cat_flo_GHz": 335.627387,
+    "cat_fhi_GHz": 337.361762,
+    "cat_chanw_Hz": 15625000.0,
+    "cat_rms_mJy": 0.38519,
+    "cat_smin_mJy": 1.92615,
+    "cat_star_snr": 2.5138,
+    "cat_ctrl_max": 4.182,
+    "cat_crossing": "False",
+    "cat_f_cross_GHz": 336.736762
+   },
+   "started": "2026-10-06T09:21:40Z",
+   "amp_over_trig": 12.0,
+   "n_tone": 12,
+   "seed": 180301,
+   "S_trig_Jy": 0.001926594995893538,
+   "l_apparent": -2.5510511949163335e-08,
+   "m_apparent": 6.452426148939594e-09,
+   "drift_max_Hz_s": 4037.9349,
+   "passes": {
+    "apparent": {
+     "status": "ok",
+     "n_recovered": 12,
+     "snr": [
+      21.70796012878418,
+      23.30512809753418,
+      24.64552116394043,
+      21.767963409423828,
+      22.94283676147461,
+      19.756954193115234,
+      16.695680618286133,
+      18.90725326538086,
+      19.841909408569336,
+      18.73775863647461,
+      20.840869903564453,
+      23.236328125
+     ],
+     "tones": [
+      {
+       "freq_GHz": 337.229639687378,
+       "snr": 21.70796012878418,
+       "subchan": 0.45586000780944935
+      },
+      {
+       "freq_GHz": 337.1135586145877,
+       "snr": 23.30512809753418,
+       "subchan": -0.11495133361229548
+      },
+      {
+       "freq_GHz": 336.98561877427767,
+       "snr": 24.64552116394043,
+       "subchan": 0.07319844623053551
+      },
+      {
+       "freq_GHz": 336.8605161810212,
+       "snr": 21.767963409423828,
+       "subchan": 0.07976441464568107
+      },
+      {
+       "freq_GHz": 336.74152822716974,
+       "snr": 22.94283676147461,
+       "subchan": -0.3050065388643096
+      },
+      {
+       "freq_GHz": 336.60572211599384,
+       "snr": 19.756954193115234,
+       "subchan": 0.38658457639301547
+      },
+      {
+       "freq_GHz": 336.4799506939812,
+       "snr": 16.695680618286133,
+       "subchan": 0.4359555852035292
+      },
+      {
+       "freq_GHz": 336.3622648675492,
+       "snr": 18.90725326538086,
+       "subchan": -0.03215152314717118
+      },
+      {
+       "freq_GHz": 336.2407389053871,
+       "snr": 19.841909408569336,
+       "subchan": -0.2544899447734722
+      },
+      {
+       "freq_GHz": 336.118472499248,
+       "snr": 18.73775863647461,
+       "subchan": -0.4294399518707759
+      },
+      {
+       "freq_GHz": 335.9845013735861,
+       "snr": 20.840869903564453,
+       "subchan": 0.14471209048638156
+      },
+      {
+       "freq_GHz": 335.86428410051826,
+       "snr": 23.236328125,
+       "subchan": -0.16138243316859902
+      }
+     ],
+     "snr_median": 21.274415016174316
+    },
+    "barycentric": {
+     "status": "ok",
+     "n_recovered": 12,
+     "snr": [
+      13.572418212890625,
+      11.845755577087402,
+      14.343149185180664,
+      12.084737777709961,
+      13.885795593261719,
+      11.54438591003418,
+      9.770331382751465,
+      9.652078628540039,
+      10.865364074707031,
+      10.927652359008789,
+      13.080504417419434,
+      13.542926788330078
+     ],
+     "tones": [
+      {
+       "freq_GHz": 337.229639687378,
+       "snr": 13.572418212890625,
+       "subchan": 0.45586000780944935
+      },
+      {
+       "freq_GHz": 337.1135586145877,
+       "snr": 11.845755577087402,
+       "subchan": -0.11495133361229548
+      },
+      {
+       "freq_GHz": 336.98561877427767,
+       "snr": 14.343149185180664,
+       "subchan": 0.07319844623053551
+      },
+      {
+       "freq_GHz": 336.8605161810212,
+       "snr": 12.084737777709961,
+       "subchan": 0.07976441464568107
+      },
+      {
+       "freq_GHz": 336.74152822716974,
+       "snr": 13.885795593261719,
+       "subchan": -0.3050065388643096
+      },
+      {
+       "freq_GHz": 336.60572211599384,
+       "snr": 11.54438591003418,
+       "subchan": 0.38658457639301547
+      },
+      {
+       "freq_GHz": 336.4799506939812,
+       "snr": 9.770331382751465,
+       "subchan": 0.4359555852035292
+      },
+      {
+       "freq_GHz": 336.3622648675492,
+       "snr": 9.652078628540039,
+       "subchan": -0.03215152314717118
+      },
+      {
+       "freq_GHz": 336.2407389053871,
+       "snr": 10.865364074707031,
+       "subchan": -0.2544899447734722
+      },
+      {
+       "freq_GHz": 336.118472499248,
+       "snr": 10.927652359008789,
+       "subchan": -0.4294399518707759
+      },
+      {
+       "freq_GHz": 335.9845013735861,
+       "snr": 13.080504417419434,
+       "subchan": 0.14471209048638156
+      },
+      {
+       "freq_GHz": 335.86428410051826,
+       "snr": 13.542926788330078,
+       "subchan": -0.16138243316859902
+      }
+     ],
+     "snr_median": 11.965246677398682
+    }
+   },
+   "n_paired": 12,
+   "measured_retained_median": 0.5830115385669886,
+   "measured_retained_lo": 0.5386925491047755,
+   "measured_retained_hi": 0.6100328459405966,
+   "predicted_retained": 0.4852870225697653,
+   "beams": 0.6661454989247715,
+   "status": "ok",
+   "finished": "2026-10-06T09:23:40Z"
+  }
+ ]
+}

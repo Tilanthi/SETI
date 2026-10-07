@@ -1,0 +1,148 @@
+%% The line mask, reported in two layers: the frequency coincidence, which is
+%% a velocity criterion and nothing else, and the one species we do not read
+%% as emission, which is an argument and is set out as one.
+%% Owner: r14-mask.  Carries \label{app:linemask} (cited by 04_method.tex and
+%% app_C_spatialnorm.tex) and \label{tab:masklines}.
+\section{The line mask}
+\label{app:linemask}
+
+A crossing that falls on a known molecular transition has an astrophysical
+explanation to hand, and the mask exists to say which crossings those are. It
+reports a frequency coincidence first and an astrophysical judgement about
+the coinciding species separately, so that the reproducible part can be
+recomputed and the arguable part argued with.
+
+\emph{The list, and when it was made.} The mask holds every transition of the
+\FrNSpec{} species these spectral setups cover --- the three CO isotopologues,
+HCN, HCO$^{+}$, CS, CN, SiO, H$_2$CO, SO, [C\,\textsc{i}] and hydrogen
+recombination --- that falls inside one of the \McNIsland{} searched frequency
+intervals with an upper-state energy below \McEuMax\,K. That rule is the whole
+of it, and it admits \FrNTrans{} transitions (Table~\ref{tab:masklines}).
+No strength cut is applied across species, since any threshold admitting the
+strong lines of HCN would discard the brightest lines in these fields; within
+a species the main hyperfine components are kept and the weak satellites
+dropped. The list is a single Splatalogue query of CDMS and
+JPL \citep{Pickett1998,CDMS2005} made on \MkListDate{}, after the disposition
+criteria were fixed on \MkCritDate, and frozen with the data release, so it
+is reproducible as a file rather than as a description. It is built from what
+the setups cover and not from what each system is thought able to carry.
+
+\emph{The frame is the star's own, and the sign is not the usual one.} A
+crossing's frequency is carried from the topocentric value to the barycentre
+using its own block's pointing and mid-time, and then to the stellar rest
+frame using the star's systemic velocity. The barycentric term alone spans
+\FrBarySwing\,km\,s$^{-1}$ across the survey, so a tolerance applied in the
+observed frame would spend most of its budget on the Earth's motion. The
+\FrEpochNEpoch{} \FrEpochStar{} epochs show
+the transform working in the only way that can be checked:
+\FrEpochTopoKms\,km\,s$^{-1}$ apart as observed, they agree to
+\FrEpochStelKms\,km\,s$^{-1}$ in the star's frame. One row looks as though no
+transform had been applied, and the reason is arithmetic: toward
+\MkCancStar{} the barycentric term is \MkCancVBary\,km\,s$^{-1}$ and the
+systemic velocity \MkCancVSys\,km\,s$^{-1}$, so each moves the frequency by
+\MkCancBaryMHz\,MHz and the two nearly cancel, leaving \MkCancNetkHz\,kHz;
+its coincidence, \MkCancDv\,km\,s$^{-1}$ from \MkCancLine, is unaffected.
+Throughout, $\Delta v_\star = c\,(\nu_\star-\nu_0)/\nu_0$, so a positive
+offset means the crossing lies \emph{above} the transition in frequency ---
+the opposite sign to the velocity convention of a spectral line.
+
+\begin{table}
+\centering
+\footnotesize
+\caption{The line mask, by species: the number of transitions $N$ it holds,
+the frequency range they span inside the searched intervals and their
+upper-state energies. Hydrogen recombination lines carry no tabulated
+$E_{\rm u}$. The transition-by-transition list is in the data release.}
+\label{tab:masklines}
+\input{tab_maskspecies_v414}
+\end{table}
+
+\emph{The coincidences, and the one species we do not read as emission.} Of
+the \NCross{} crossings, \MkNCoinc{} fall within
+$\pm\MaskHalfKms$\,km\,s$^{-1}$ of a transition of the list in their own
+star's frame; that count is the first layer and all the velocity criterion
+decides. Coincidences with sulphur monoxide account for \MkNSODecide{} ---
+\MkSOStars, at \MkSODvList\,km\,s$^{-1}$ from transitions of upper-state
+energy \MkSOEuLo--\MkSOEuHi\,K, each inside a Band~7 window that also covers
+CO($3\to2$) --- and two things argue against reading those as emission.
+Sulphur monoxide has not been reported in a debris disc, where the
+second-generation gas is CO, C and O; and toward \FrCpStar{} the CO($3\to2$)
+line falls in the same window and is absent to \FrCpCoLimMJy\,mJy in a
+\FrCpCoChanKms\,km\,s$^{-1}$ channel while the crossing itself is
+\FrCpFluxMJy\,mJy, so an SO line there would have to outshine an undetected
+CO($3\to2$) line in the same data. Both arguments are about the species and
+neither about any one crossing, so all \MkNSODecide{} are treated alike: the
+offset is printed beside each in Table~\ref{tab:ledger}, where a dagger marks
+the rows this applies to, and disposes of none of them, giving
+\MkAttr{} attributed against \MkUnattr{} unattributed, of
+which \MkRankLeadWord{} outrank every control position in their own windows.
+Reading them as attributions instead gives \MkAttrAlt{} and \MkUnattrAlt,
+and \MkRankLeadAlt{} such crossing; the recurrence test excludes a persisting
+carrier for all \MkNSODecide{} either way, at
+\MkAttrExclLo--\MkAttrExclHi$\sigma$, so the choice moves counts and no
+conclusion. The reserved hold-out holds \HoNCoinc{} coincidences,
+\HoNNoted{} of them the same species and treated the same way, leaving
+\HoNAttr{} attributed and \HoNUnattr{} unattributed there
+(\S\ref{sec:holdoutsearch}).
+
+\emph{The half-width, and what it costs.} A one-channel test is too tight for
+circumstellar gas, whose emission is shifted by many channels: the width
+follows from Keplerian motion where these molecules survive,
+$\lesssim$13\,km\,s$^{-1}$ beyond 10\,au, and is
+$\pm\MaskHalfKms$\,km\,s$^{-1}$. At that width the mask removes
+\MkMaskAGHz\,GHz of the \CvUnionA\,GHz Class~A union, \MkMaskAPct{} per cent
+of it, against \FrMaskLostGHz\,GHz of the \FrMaskUnionGHz\,GHz both classes
+cover, \FrMaskPct{} per cent: the cost falls on the primary experiment,
+because its windows are the line-tuned ones. Between $\pm\FrLadderLo$ and
+$\pm\FrLadderHi$\,km\,s$^{-1}$ the mask labels \FrAttrWTwenty{} to
+\FrAttrWHundred{} of the crossings, and the \FrNRankPass{} that outrank all
+\NCtrl{} control positions of their own windows are the same two at every
+width.
+
+\emph{A bright line costs its whole window, and the windows were therefore
+searched again.} Because the search records one statistic per window, a
+weaker carrier in a window whose largest value is a molecular line could not
+have been recorded at all (\S\ref{sec:technosearch}), so the price of line
+confusion is the window and not the masked channels in it: \MkNCoinc{}
+Class~A windows spanning \MkLineDomGHz\,GHz of unique frequency,
+\MkLineDomPct{} per cent of the Class~A union. Most of that is recoverable,
+because the per-channel statistic those maxima were taken from is retained:
+removing the masked channels and taking the largest value of what is left
+re-searches \MkNResearch{} of them, leaving only the \MkNWholly{} fine
+windows that are narrower than the mask itself and whose \MkWhollyGHz\,GHz,
+\MkWhollyPct{} per cent of the Class~A union, is lost outright. The surviving
+maxima run \MkResidLo{} to \MkResidHi, so \MkNResidTrigWord{} of them
+reaches the trigger: \MkSurvStar{} at \MkSurvFreq\,GHz,
+\MkSurvDv\,km\,s$^{-1}$ from the nearest transition. It is what noise gives
+at this threshold, since \MkNCtrlTrig{} of the \MkNCtrlPos{} control
+positions of the same windows
+reach it outside the mask as well, in \MkNWinCtrlTrig{} of them; and it does
+not recur, the \MkSurvNRep{} other blocks covering that cell reading
+$T_\star=\MkSurvTRepLo$ to \MkSurvTRepHi.
+
+\emph{The labelled crossings are tested for recurrence too.} Of the
+\MkAttr{} attributed crossings, \MkAttrTested{} have a later block covering
+the predicted cell and \MkAttrRecur{} are present again, toward
+\MkAttrRecurStars{} at $T_\star=\MkAttrRecurTLo$ to \MkAttrRecurTHi{} --- the
+test working in the positive direction on emission that is certainly real,
+and no exclusion is formed for those rows, because what it would exclude has
+just been observed. For the \MkAttrExcl{} not recovered a repeat window's own
+largest statistic bounds the predicted cell from above, and
+Table~\ref{tab:ledger} prints the row as a bound; \MkAttrUntest{} have no
+covering block at all (\MkAttrUntestNames).
+
+\emph{Image-sideband leakage accounts for no crossing.} The mask holds
+signal-sideband frequencies, and the \MkImgN{} unattributed crossings that
+share a block with a CO($2\to1$) crossing in the opposite sideband would need
+a first local oscillator outside the range their own block's spectral windows
+permit, \MkImgLOLo--\MkImgLOHi\,GHz; their image frequencies fall at least
+\MkImgDvMin\,km\,s$^{-1}$ from every masked transition.
+
+\emph{A longer list is not a better one.} Every Splatalogue transition over
+these intervals with an Einstein coefficient above $10^{-5}$\,s$^{-1}$ ---
+\MaskDbTrans{} transitions of \MaskDbCarriers{} species --- would mask
+\MaskDbPctUnion{} per cent of the union and move \FrFullNFlip{} crossings
+across the line, \FrFullNFlipRankWord{} of them rank-leading. At these
+frequencies almost anything lies within $\pm\MaskHalfKms$\,km\,s$^{-1}$ of
+something in such a list, which is why the species are restricted to what
+these setups cover and why the outcome is a label rather than a verdict.

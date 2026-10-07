@@ -1,0 +1,27 @@
+literal sweep of technosignatures_40pc_v4.15.tex
+
+19 prose literals equal to a generated macro:
+  30         == CfgChanOut,CovNHalf,EpWideLinesGHz,LgDMax   t} No star within 40\,pc has been searched above about 30\,GHz for a narrowband transmitte
+  18         == CcNAgree,CcNMatched,ChnAttrA,CnAttr         the MWA and single-dish C- and K-band work at 6 and 18\,GHz with the Sardinia Radio Telesc
+  30         == CfgChanOut,CovNHalf,EpWideLinesGHz,LgDMax   leakage is outside it by construction. Above about 30\,GHz the record is nearly empty, and
+  25         == BdNBlocks,BpSixGapD,CovNSysAtRef,MasonDistRatioFar  ry. A star enters if its Gaia~DR3 parallax is at least 25\,mas, measured to better than {}
+  30         == CfgChanOut,CovNHalf,EpWideLinesGHz,LgDMax   ance to a factor of two {under}-representation beyond 30\,pc. Spectral type comes second: 
+  15         == CeNFullMask,CeNWinTail,CsIntNRow,CtCritNEmpty  ed search would pick: of the {} sample systems within 15\,pc with a confirmed planet, list
+  0.99       == PxRossObsHi,RsevRankFracTwentyA             fort on our side would close it. {figure*} [width=0.99 ]{figures/coverage_waterfall.pdf} {
+  10.4       == EpGapD,TruncPctWin,VisStarMJy               re which loses coherence exactly as a carrier would [ 10.4.9]{ALMAHandbook}, through the s
+  0.96       == CtrlWinRatio,EvBTMatched,PStageOneUnattrib,RcCpTObsMatched  e rest.} { }{2pt} {table} {figure} [width=0.96 ]{figures/sens_ring.pdf} {Why one completen
+  0.92       == ClustPoisRatio,PxAuMicPredCorr,RsevTransBLo,SensPxSmallMeas  rather than noise.} {figure} {figure*} [width=0.92 ]{figures/classa_sensitivity.pdf} { {Th
+  30         == CfgChanOut,CovNHalf,EpWideLinesGHz,LgDMax   echnosignatures toward stars within 40\,pc above about 30\,GHz, and the one earlier millim
+  30         == CfgChanOut,CovNHalf,EpWideLinesGHz,LgDMax   No published radio technosignature search above about 30\,GHz has reached a star within 40
+  14         == BudNHiWin,ClustMaxMed,ClustNObs,CsBrightSigma  9040eab52ec1336376a4dae62114bb281a3} on 2026 September~14 at 07:10~UTC, {} days before the
+  6.7        == BpRecOffChan,TuQuantAlignPct                *{Software} The pipeline depends on CASA~6.7.6 [casatools/casatasks 6.7.6-14;][]{CASA202
+  6.7        == BpRecOffChan,TuQuantAlignPct                e pipeline depends on CASA~6.7.6 [casatools/casatasks 6.7.6-14;][]{CASA2022}, Python~3 wit
+  14         == BudNHiWin,ClustMaxMed,ClustNObs,CsBrightSigma  line depends on CASA~6.7.6 [casatools/casatasks 6.7.6-14;][]{CASA2022}, Python~3 with astr
+  350        == KsFineNoCrossN                              elativistic terms at the \,km\,s scale are \,kHz at 350\,GHz, below the finest native chan
+  0.88       == ClustLadderStelP,MaskLostNewGHz,MaskOwnLostGHz,PbGapPctLo  heir crossing's drift implies. {figure} [width=0.88 ]{figures/bpic_control.pdf} {The ~Pict
+  19         == CeAddBlind,DutyTenth,EpAYears,EpDays        ies active allocations throughout 90--275\,GHz and WRC-19 identified parts of 275--450\,GH
+
+3 prose literals within 5 per cent of a macro (possible stale value):
+  275        ~ StTelHoursCoarse=276,VnKeyNFineEntries=274,ExpTotalMed=273.7  Article~5 carries active allocations throughout 90--275\,GHz and WRC-19 identified parts o
+  275        ~ StTelHoursCoarse=276,VnKeyNFineEntries=274,ExpTotalMed=273.7  throughout 90--275\,GHz and WRC-19 identified parts of 275--450\,GHz for land-mobile and f
+  450        ~ CsNDumpWin=451,SmearNEta=451,FixDvVir=449   ghout 90--275\,GHz and WRC-19 identified parts of 275--450\,GHz for land-mobile and fixed 

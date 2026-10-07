@@ -1,0 +1,23 @@
+{
+ "_doc": "Per-execution-block ALMA project codes for the blocks whose harvested obscore metadata carries no member OUS, so neither the direct route nor the member-OUS route in projcodes_v400.py can resolve them. Resolved by querying the ALMA Science Archive TAP service for the block's own ASDM UID, which answers for both of them; the earlier note that the service 'would not answer for them' was wrong. Both are ordinary science blocks of accepted proposals, which is what referee 2's minor point 9 asks us to establish.",
+ "_source": "https://almascience.eso.org/tap/sync  (ivoa.obscore, SELECT DISTINCT proposal_id, member_ous_uid, obs_title WHERE asdm_uid LIKE '%<block>%'), cross-checked against the NRAO and NAOJ mirrors",
+ "_queried": "2026-10-06",
+ "blocks": {
+  "A002_X11d9ce7_X5257": {
+   "project": "2023.1.00487.S",
+   "member_ous": "uid://A001/X3733/X18a",
+   "band": 10,
+   "target": "HD 61005",
+   "obs_title": "Vertical structure and planetary system dynamics",
+   "note": "science block; the harvested snapshot recorded member_ous as null"
+  },
+  "A002_Xbf792a_X26ec": {
+   "project": "2016.1.00878.S",
+   "member_ous": "uid://A001/X87d/X7a4",
+   "band": 9,
+   "target": "AU Mic",
+   "obs_title": "Who Stirs the Pot? Resolving the Vertical Thickness of Debris Disks",
+   "note": "science block; the harvested snapshot recorded member_ous as null"
+  }
+ }
+}

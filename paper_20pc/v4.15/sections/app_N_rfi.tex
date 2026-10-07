@@ -1,0 +1,149 @@
+%% APPENDIX E -- radio-frequency interference screening.
+%% Owner: appendix-triage.  Carries \label{app:rfi}.
+\section{Radio-frequency interference screening}
+\label{app:rfi}
+
+Interference is the first alternative explanation for an unattributed
+crossing, so the screening this survey has, and the coverage it does not
+have, are both set out here. Millimetre interferometry is an unusually poor
+environment for terrestrial interference, though not an empty one: ITU Radio
+Regulations Article~5 \citep{ITU2024} carries active allocations throughout
+90--275\,GHz and WRC-19 identified parts of 275--450\,GHz for land-mobile and
+fixed use. The specific hazard is the \RadarLo--\RadarHi\,GHz Earth
+exploration-satellite allocation used by spaceborne cloud radar
+\citep{CloudSat2002,EarthCARE2023}, a documented contaminant of ALMA Band~3;
+\RadarNWin{} of the \RadarNTot{} census windows overlaps it, carrying
+\RadarNCross{} threshold crossings and \RadarNStage{} rank-passing events, so
+no result here rests on it. What favours this band is that terrestrial
+transmitters are sparse compared with centimetre wavelengths and, decisively,
+that an interferometer is not a total-power detector: a signal not in the far
+field at the phase centre does not fringe-track but acquires a rapidly
+varying geometric phase across the array, and is suppressed in the
+correlation rather than imaged.
+
+\emph{The coverage of the screening is uneven, and that is stated rather than
+smoothed over.} The allocation test above and the sky- and
+intermediate-frequency tests below are computed for every searched window
+from the released catalogue, as is the \NCtrl-position rank screen, which
+asks whether an excess is at the star or everywhere in the field. Recurrence
+reaches only the crossings with a covering repeat block, and the visibility
+fit is a consistency check rather than a filter. The correlator flagging is
+the observatory's own, replayed from each block's delivered calibration
+script, but it is not recorded per window in the release. \emph{No
+per-channel interference flag of our own exists, and none can be recovered.}
+Three measurements follow, and each is a test the population could have
+failed.
+
+\emph{First, clustering in sky frequency.} If interference dominated the
+crossing population, the crossings would pile up at particular sky
+frequencies. They do cluster --- but on the survey's own molecular lines.
+The test needs a measured peak frequency in the frame in which an interfering
+carrier would stand still, so it runs topocentrically over the
+\AppMNCrossF{} of the \EvNCrossRaw{} crossings for which the release records
+one, against the transitions the search was tuned to. For the other
+\CsNCrossNoFreq, all \CsCrossNoFreqStar{} carbon-monoxide crossings, the
+release gives the velocity offset from the line instead, and a frequency
+reconstructed from a line offset cannot be used to ask whether frequencies
+crowd onto lines. Of the \AppMNCrossF, \AppMTubeObs{} fall within
+$\pm\DispoHalfKms$\,km\,s$^{-1}$ of a searched transition against
+\AppMTubeNull{} expected if each window's peak fell anywhere on that
+window's own channel grid, $\pv{\AppMTubeP}$. The densest band,
+\AppMBandLo--\AppMBandHi\,GHz, holds \AppMBandN{} of them, \AppMBandNAttr{}
+within that velocity window of CO($2{\to}1$); and once the line-attributed
+crossings are set aside, the \AppMUnattrN{} that remain show no clustering at
+all ($\pv{\AppMUnattrP}$). \emph{The concentration is the attribution, not a
+residue left over after it.} Table~\ref{tab:ledger} counts the same band as
+\EvTubeLedgerN{} crossings with \EvTubeLedgerAttr{} attributed, a different
+test over a different set --- all \EvNCrossRaw, each attributed in its own
+star's rest frame --- and the \EvTubeExtra{} it adds are the ones whose peak
+frequency this test has no measurement of.
+
+\emph{Second, fixed intermediate frequency.} An artefact of the signal chain
+would sit at a fixed position within the spectral window rather than at a
+fixed sky frequency. This test is run over every window for which the
+catalogue releases a peak frequency --- \IfPopNWin{} of the \NWindows{}, of
+which only \IfPopNCross{} carry a threshold crossing --- because such an artefact would
+occupy the same intermediate frequency in all of them and not only where the
+trigger fires. It does not: the peaks' fractional positions within their own
+windows have median \RfiFracMed{} and are uniform.
+
+\emph{Third, a cross-target occupancy screen over every window the pipeline
+extracted, and not only the crossings.} That set is wider than the census:
+\RfiOccNWin{} windows toward \RfiOccNStars{} stars, being the census
+together with the rows its audit removed, the reserved hold-out, the archival
+extension, the out-of-sample control, and \OqOtherWin{} windows in
+\OqOtherEb{} blocks that entered none of them. Interference belongs to the
+observatory and not to the star, so a terrestrial carrier should recur at the
+same sky frequency toward \emph{unrelated} stars. It does not even for the leading event:
+\RfiEventLead; \RfiOtherWin{} further windows, toward \RfiOtherStarsRange{}
+other stars in \RfiOtherBlocksRange{} other blocks, cover \RfiFreqThem, and
+\RfiSameChanClause.\RfiNotTestableClause{} With each window's peak randomised
+on its own channel grid, the number of cross-star coincidences within
+\RfiOccTol\,MHz is \RfiOccObs{} against
+\RfiOccNull$\,\pm\,$\RfiOccNullSd{} expected ($\pv{\RfiOccP}$); among the
+\RfiOccSigN{} windows whose peak exceeds the trigger it is \RfiOccSigObs{}
+against \RfiOccSigNull$\,\pm\,$\RfiOccSigNullSd, i.e.\ \emph{below} the
+null, and with the molecular-line mask applied \RfiOccMskObs{} against
+\RfiOccMskNull$\,\pm\,$\RfiOccMskNullSd. There is no excess to explain. The
+mask has to be applied first, because \RfiOccMaskN{} of those \RfiOccSigN{}
+windows sit on a masked transition (\RfiOccSpeciesList), and a carbon
+monoxide line falls at nearly the same sky frequency toward every nearby
+star --- exactly the coincidence the screen is looking for.
+
+\emph{One execution block fails these tests, and it fails them as a block
+rather than as a carrier.} Its \DqBlockNCross{} crossings toward
+\LgVerRejectStar{} are the highest statistics in the survey outside
+$\beta$~Pictoris and HD~48370, and the field statistics that identify the
+failure are in \S\ref{sec:bdblock}. What belongs here is whether
+interference accounts for it, and three readings say not. The visibility fit
+returns a large imaginary part, placing the emission away from the phase
+centre. The block's \BdNSibling{} sibling executions of the same field, with
+the same array and the same spectral setup, produce no crossing at all. And
+it is not a carrier at a fixed sky frequency: each of the four frequencies is
+covered by \DqOtherWinLo--\DqOtherWinHi{} further windows toward
+\DqOtherStarLo--\DqOtherStarHi{} other stars, and \DqOtherSame{} of them
+carries a crossing in the same channel.
+
+\emph{One reading does point at a mechanism, and it can be tested across the
+survey.} \DqBlockIfMult{} of the \DqBlockNCross{} sit at the identical
+channel of two different spectral windows, which is the signature of a fixed
+intermediate frequency --- and a feature with no geometric fringe phase, a
+spur common to every antenna being the obvious case, does not fringe-track,
+so it gathers at the phase centre rather than at the star. Here the two are a
+twentieth of an arcsecond apart, so the block cannot test its own hypothesis;
+the survey can, because the star lies \EvPcOffLo--\EvPcOffHi\,arcsec from the
+phase centre in \EvPcNWin{} windows whose control annulus brackets it,
+putting a median of \EvPcNNear{} probes within two synthesised beams of the
+phase centre and the star well outside. Against the probes at the same
+distance from the star but elsewhere in azimuth --- matching the radius
+matters, or a centrally concentrated disc would imitate the effect --- those
+probes are higher by $\EvPcDiff\pm\EvPcErr$ in the statistic, consistent with
+zero and bounded by \EvPcBound, smaller by a factor of about \EvPcFactor{}
+than the \EvPcNeed{} by which this block's ring is raised. \emph{The phase
+centre is not where the excess lives.}
+The evidence supports a
+data-quality failure of one execution block, and that is how these
+\EvNCrossFlag{} crossings are dispositioned (\S\ref{sec:bdblock}). Two
+criteria are involved and they are not the same one
+(Appendix~\ref{sec:blockquality}): the window-level flag, which fires on
+\DqNWin{} of the \NWindows{} windows toward \DqNStar{} stars (\DqStars),
+the second of them a resolved disc rather than a defect; and the block
+criterion built from it, which fails \BqNFail{} block of the \BqNBlocks{}
+searched. It is the block criterion that disposes of these crossings.
+
+\emph{None of this is a substitute for the ON/OFF cadence a dedicated search
+uses, and we do not present it as one.} We claim only that \emph{no
+identified interference mechanism accounts for the unattributed events}:
+allocation tables cannot exclude harmonics, intermodulation products,
+unconventional emitters or near-field sources, and archival data without a
+simultaneous off-source strategy cannot do better. The three tests establish
+that the crossing population as a whole carries none of the signatures
+interference leaves, which is a statement about the population and not a
+clearance of any individual crossing.
+
+%% This appendix no longer ends on "the null result resting on internal
+%% validation alone": that statement lives once, in the discussion's lessons
+%% subsection.  fig:appm is deleted -- it compared our own two statistics and
+%% the paper states only the one it uses -- so figures/appm_power.pdf is not
+%% included and the \AppMPowerOld* and \RfiOcc{Prior,Dir,Stale}* families
+%% will be retired.

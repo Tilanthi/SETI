@@ -1,0 +1,243 @@
+{
+ "seed": 20260926,
+ "n_windows": 3027,
+ "n_target_dirs": 749,
+ "n_base_keys": 137,
+ "n_stars": 133,
+ "n_naive_keys": 80,
+ "n_dirs_with_eb": 2529,
+ "n_coarse": 2294,
+ "n_fine": 719,
+ "n_medium": 5,
+ "n_unlabelled_rescls": 9,
+ "median_peak_snr": 2.91,
+ "grid_worst_channel": 1.2079226507921703e-12,
+ "tol_MHz": 5.0,
+ "n_draws": 400,
+ "sig_threshold": 5.0,
+ "mask_half_kms": 50.0,
+ "stale_report": {
+  "n_windows": 144,
+  "n_clusters": 0,
+  "date": "2026-09-01"
+ },
+ "shipped_dirkey": {
+  "observed": 680,
+  "null_mean": 630.6,
+  "null_sd": 14.3,
+  "z": 3.5
+ },
+ "n_sig": 109,
+ "n_sig_line_masked": 35,
+ "sig_line_species": {
+  "CO(2-1)": 17,
+  "CO(3-2)": 4,
+  "CO(1-0)": 10,
+  "13CO(2-1)": 3,
+  "SiO(5-4)": 1
+ },
+ "subsets": {
+  "all_windows": {
+   "n": 3027,
+   "key": "star",
+   "continuous_null": {
+    "greedy_mean": 578.3,
+    "greedy_sd": 13.1,
+    "greedy_z": -0.71,
+    "coincident_mean": 1428.7,
+    "coincident_sd": 28.6,
+    "coincident_z": 2.98
+   },
+   "greedy": {
+    "observed": 569,
+    "null_mean": 554.4,
+    "null_sd": 13.3,
+    "z": 1.09,
+    "p_ge_obs": 0.145,
+    "excess_pct": 2.6
+   },
+   "coincident": {
+    "observed": 1514,
+    "null_mean": 1425.2,
+    "null_sd": 28.1,
+    "z": 3.16,
+    "p_ge_obs": 0.0,
+    "excess_pct": 6.2
+   }
+  },
+  "peak_gt_5sigma": {
+   "n": 109,
+   "key": "star",
+   "continuous_null": {
+    "greedy_mean": 4.8,
+    "greedy_sd": 1.8,
+    "greedy_z": -0.48,
+    "coincident_mean": 10.4,
+    "coincident_sd": 3.8,
+    "coincident_z": 3.87
+   },
+   "greedy": {
+    "observed": 4,
+    "null_mean": 5.2,
+    "null_sd": 1.9,
+    "z": -0.6,
+    "p_ge_obs": 0.8075,
+    "excess_pct": -22.7
+   },
+   "coincident": {
+    "observed": 25,
+    "null_mean": 11.0,
+    "null_sd": 4.1,
+    "z": 3.41,
+    "p_ge_obs": 0.0025,
+    "excess_pct": 126.5
+   }
+  },
+  "peak_gt_5sigma_line_removed": {
+   "n": 74,
+   "key": "star",
+   "continuous_null": {
+    "greedy_mean": 2.3,
+    "greedy_sd": 1.4,
+    "greedy_z": -0.94,
+    "coincident_mean": 4.7,
+    "coincident_sd": 2.8,
+    "coincident_z": -0.95
+   },
+   "greedy": {
+    "observed": 1,
+    "null_mean": 2.1,
+    "null_sd": 1.3,
+    "z": -0.8,
+    "p_ge_obs": 0.885,
+    "excess_pct": -51.6
+   },
+   "coincident": {
+    "observed": 2,
+    "null_mean": 4.2,
+    "null_sd": 2.7,
+    "z": -0.81,
+    "p_ge_obs": 0.885,
+    "excess_pct": -52.3
+   }
+  },
+  "all_windows_line_removed": {
+   "n": 2947,
+   "key": "star",
+   "continuous_null": {
+    "greedy_mean": 554.7,
+    "greedy_sd": 13.6,
+    "greedy_z": -0.2,
+    "coincident_mean": 1361.9,
+    "coincident_sd": 28.3,
+    "coincident_z": 3.04
+   },
+   "greedy": {
+    "observed": 552,
+    "null_mean": 531.3,
+    "null_sd": 12.8,
+    "z": 1.62,
+    "p_ge_obs": 0.0675,
+    "excess_pct": 3.9
+   },
+   "coincident": {
+    "observed": 1448,
+    "null_mean": 1360.3,
+    "null_sd": 27.9,
+    "z": 3.15,
+    "p_ge_obs": 0.0025,
+    "excess_pct": 6.4
+   }
+  },
+  "all_windows_dirkey": {
+   "n": 3027,
+   "key": "dir",
+   "continuous_null": {
+    "greedy_mean": 630.7,
+    "greedy_sd": 13.3,
+    "greedy_z": 3.72,
+    "coincident_mean": 1528.1,
+    "coincident_sd": 26.7,
+    "coincident_z": 7.81
+   },
+   "greedy": {
+    "observed": 680,
+    "null_mean": 625.0,
+    "null_sd": 12.8,
+    "z": 4.28,
+    "p_ge_obs": 0.0,
+    "excess_pct": 8.8
+   },
+   "coincident": {
+    "observed": 1737,
+    "null_mean": 1572.6,
+    "null_sd": 26.0,
+    "z": 6.32,
+    "p_ge_obs": 0.0,
+    "excess_pct": 10.5
+   }
+  }
+ },
+ "macros": {
+  "RfiOccCoNull": "1425",
+  "RfiOccCoNullSd": "28",
+  "RfiOccCoObs": "1514",
+  "RfiOccCoZ": "3.2",
+  "RfiOccDirCoObs": "1737",
+  "RfiOccDirCoZ": "6.3",
+  "RfiOccDirNull": "625.0",
+  "RfiOccDirNullSd": "12.8",
+  "RfiOccDirObs": "680",
+  "RfiOccDirZ": "4.3",
+  "RfiOccExcessPct": "2.6",
+  "RfiOccFineMaxMHz": "1",
+  "RfiOccMaskHalf": "50",
+  "RfiOccMaskN": "35",
+  "RfiOccMedSnr": "2.9",
+  "RfiOccMskCoNull": "4.2",
+  "RfiOccMskCoNullSd": "2.7",
+  "RfiOccMskCoObs": "2",
+  "RfiOccMskCoZ": "$-0.8$",
+  "RfiOccMskN": "74",
+  "RfiOccMskNull": "2.1",
+  "RfiOccMskNullSd": "1.3",
+  "RfiOccMskObs": "1",
+  "RfiOccMskZ": "$-0.8$",
+  "RfiOccNCoarse": "2294",
+  "RfiOccNCoarseDerived": "2301",
+  "RfiOccNDirs": "749",
+  "RfiOccNDraw": "400",
+  "RfiOccNEbDirs": "2529",
+  "RfiOccNFine": "719",
+  "RfiOccNFineDerived": "726",
+  "RfiOccNFineLabel": "719",
+  "RfiOccNMedium": "5",
+  "RfiOccNRelabelled": "7",
+  "RfiOccNStars": "133",
+  "RfiOccNUnlabelled": "9",
+  "RfiOccNWin": "3027",
+  "RfiOccNaiveStars": "80",
+  "RfiOccNull": "554",
+  "RfiOccNullSd": "13",
+  "RfiOccObs": "569",
+  "RfiOccP": "0.15",
+  "RfiOccPriorZ": "3.5",
+  "RfiOccSigCoNull": "11.0",
+  "RfiOccSigCoNullSd": "4.1",
+  "RfiOccSigCoObs": "25",
+  "RfiOccSigCoZ": "3.4",
+  "RfiOccSigN": "109",
+  "RfiOccSigNull": "5.2",
+  "RfiOccSigNullSd": "1.9",
+  "RfiOccSigObs": "4",
+  "RfiOccSigP": "0.81",
+  "RfiOccSigZ": "$-0.6$",
+  "RfiOccSpeciesList": "CO(2--1) $\\times$17, CO(1--0) $\\times$10, CO(3--2) $\\times$4, $^{13}$CO(2--1) $\\times$3, SiO(5--4) $\\times$1",
+  "RfiOccStaleClusters": "0",
+  "RfiOccStaleDate": "2026-09-01",
+  "RfiOccStaleN": "144",
+  "RfiOccTol": "5",
+  "RfiOccZ": "1.1"
+ },
+ "verdict": "Corrected, the cross-target frequency-occupancy screen supports NO interference claim and the prior z = 3.5 is withdrawn. The directory key reproduces it (680 vs 625.0 +- 12.8, z = 4.28); the STAR key, over the same 3027 windows toward 133 stars with the same grid null, gives 569 vs 554.4 +- 13.3 (z = 1.09). Among the 109 windows with a peak above 5 sigma the corrected count is 4 against 5.2 +- 1.9 (z = -0.60), below the null; 35 of those sit on a masked transition, and with the mask applied the order-independent count is 2 against 4.2 +- 2.7 (z = -0.81). The residual 2.6 per cent over all windows is not significant and those peaks are noise (median peak SNR 2.9)."
+}

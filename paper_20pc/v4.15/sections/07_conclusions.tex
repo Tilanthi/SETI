@@ -1,0 +1,103 @@
+\section{Conclusions}
+\label{sec:conclusions}
+
+\begin{enumerate}[leftmargin=1.6em,itemsep=4pt,topsep=4pt,parsep=0pt]
+
+\item No published radio technosignature search above about 30\,GHz has
+reached a star within 40\,pc (\S\ref{sec:background}), and an archive
+assembled for other science is at present the only way to reach one. The one
+ALMA band below those searched that holds any data on these stars is
+proprietary until \SbBoneRelYear{} and channelised far too coarsely to carry
+a carrier search.
+
+\item The primary experiment is \NWinA{} fine-channel windows toward
+\NSysClassA{} stellar systems, covering \CvUnionA\,GHz of union bandwidth in
+disconnected intervals, searched for an unresolved carrier whose frequency
+drifts. A supplementary coarse-channel search for an unresolved spectral
+excess adds \NWinB{} windows toward \PrSysClassB{} systems and
+\CvUnionB\,GHz of union bandwidth, with no drift discrimination. Both come
+from one uniform reduction of \NEB{} public execution blocks,
+\TotalDataTB\,TB of raw data, and between them they span
+\SurvFreqLo--\SurvFreqHi\,GHz.
+
+\item Sensitivity is a measured completeness of one epoch and not a
+threshold: $\mathrm{EIRP}_{90}$ is the power at which nine of ten carriers
+injected into the real calibrated visibilities come back through the
+unchanged trigger and localisation at the star, inside a single execution
+block. It is the power at which a carrier would have produced a crossing,
+not the power at which one would have been confirmed. The median system's
+best window reaches $\EirpNinetySysMedA$\,W, with a spread across systems of
+$\EirpNinetySysLoA$--$\EirpNinetySysHiA$\,W; carriers were injected into
+\SensNInj{} of the \NWinA{} windows and the rest carry the class-average
+factor, whose measured dispersion moves that median by \ScRsMedShiftPct{} per
+cent. One bias runs one way only and is outside that calibration: an injected
+carrier suffers no atmospheric decorrelation where a real one would, which
+leaves the median limit optimistic by \SensDecorPct{} per cent and the
+windows above \SensDecorHiGHz\,GHz by \SensDecorHiPct{} per cent.
+
+\item All \EvNCrossRaw{} threshold crossings are reported with their
+dispositions, \PrFlagXrossWord{} of them in the one execution block that
+fails the data-quality criterion of Appendix~\ref{sec:blockquality} and
+reported apart from the \EvNCrossQp{} in quality-passing data. Of the
+\EvNCrossRaw, \MkNCoinc{} fall within $\pm\MaskHalfKms$\,km\,s$^{-1}$ of a
+catalogued transition at the star's own velocity, a coincidence that is
+reproducible and involves no judgement. Of those, \MkNSODecideWord{} are
+with sulphur monoxide, reported and not acted on for a reason about the
+species; acting on them instead would make the split \MkAttrAlt{} to
+\MkUnattrAlt{} rather than \MkAttr{} to \MkUnattr. The mask costs
+\MkMaskAPct{} per cent of the Class~A union bandwidth, and re-searching the
+line-dominated windows with its channels removed adds no crossing. Chance,
+measured from each window's own control positions and channel grid, predicts
+\CeExp{} unattributed Class~A crossings over the census against the \CeObs{}
+found there, or \CeExpX{} with the measured star-to-control transfer applied,
+and resampling the execution blocks allows \CeLo--\CeHi. The count is
+consistent with chance, and the width of that range is the limit of the
+statement: an added population of as many as \CeAddBlind{} crossings would
+sit inside it unremarked.
+
+\item Every unattributed crossing was tested for recurrence in the star's
+own frame, over the whole of each further window covering the event frequency
+and at every drift searched, because an accelerating carrier need not return
+to one channel. None was found
+again: the largest statistic at any predicted cell is \RcTMax{}
+against $T_{\rm trig}=\StageNullTrig$. Of the \TjNPair{} pairs of crossings
+lying close enough in frequency to be each other's repeat, the two fitted
+drifts and the elapsed time resolve the question for \TjNPower{} of them, and
+a single carrier is excluded in every one; over the longer baselines they
+resolve none, and there the criterion tests the population rather than the
+pair. The same test
+accepts the one set of crossings that is present again, \TjCtlStar's two
+carbon monoxide crossings. Of the \RcNExcl{} crossings
+that carry an exclusion, the repeat coverage rules out a carrier at a median
+\RcFracMed{} of the discovery amplitude with individual limits from
+\RcFracMin{} to \RcFracMax, so the median is not a bound on the set;
+combining every covering block assumes a carrier that returns to one
+stellar-frame channel at the start of each, and where the repeat is shallow
+the criterion has little power and its silence is not an exclusion:
+\RcNPowerLo{} of these crossings are untested rather than excluded. What
+these tests exclude is a carrier that holds its frequency inside the window
+searched and radiates through both observations, and not a persistent
+transmitter of any kind.
+
+\item What this survey could search and what it could confirm are different
+extents. Of the \NSysClassA{} systems the carrier search covered,
+\ScSysIndep{} were observed in at least two independently separated epochs;
+for the other \ScSysNoConf, observed once or only within a single day,
+confirmation was beyond reach at any sensitivity, and about those systems the
+null reported here says nothing at all.
+
+\item Combining each surveyed star's epochs in its own rest frame deepens
+the flux limit by a median factor \SyStkGainMed. For Proxima~Centauri the
+stacked limit, measured by injection into the stack, reaches
+$\SzProxEirpCensus$\,W over the primary census alone and
+$\StkProxEirpCal$\,W once the rest of the archive is added, in
+\ChanBModeMHz\,MHz channels --- a Class~B limit on an unresolved excess,
+carrying no drift discrimination --- for an emitter steady in the stellar
+frame to within one channel across \StkProxSpanYr\,yr.
+
+\item These results constrain unresolved carriers only within the domain
+actually searched (\S\ref{sec:excludes}); what transfers beyond it is the
+obstacle, that channelisation chosen by other observers, and not
+collecting area, decides which kind of search is possible at all.
+
+\end{enumerate}
