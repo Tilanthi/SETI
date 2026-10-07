@@ -1,0 +1,278 @@
+{
+ "attributed_recurrence": [
+  {
+   "eb": "A002_Xf5d76d_Xeb8",
+   "freq_GHz": 115.26032550000001,
+   "n_repeat": 4,
+   "n_second_epoch": 4,
+   "second_epoch_T": 27.68,
+   "star": "$\\beta$~Pic",
+   "tstar": 30.7648,
+   "verdict": "recovered"
+  },
+  {
+   "eb": "A002_Xf5d76d_Xe19",
+   "freq_GHz": 115.2603454,
+   "n_repeat": 4,
+   "n_second_epoch": 4,
+   "second_epoch_T": 30.76,
+   "star": "$\\beta$~Pic",
+   "tstar": 27.6845,
+   "verdict": "recovered"
+  },
+  {
+   "eb": "A002_Xf5d76d_Xcc5",
+   "freq_GHz": 115.2603721,
+   "n_repeat": 4,
+   "n_second_epoch": 4,
+   "second_epoch_T": 30.76,
+   "star": "$\\beta$~Pic",
+   "tstar": 17.2885,
+   "verdict": "recovered"
+  },
+  {
+   "eb": "A002_Xf5d76d_X32f1",
+   "freq_GHz": 115.2606437,
+   "n_repeat": 4,
+   "n_second_epoch": 4,
+   "second_epoch_T": 30.76,
+   "star": "$\\beta$~Pic",
+   "tstar": 14.654,
+   "verdict": "recovered"
+  },
+  {
+   "eb": "A002_Xf4df6f_Xc7",
+   "freq_GHz": 115.2620386,
+   "n_repeat": 4,
+   "n_second_epoch": 4,
+   "second_epoch_T": 30.76,
+   "star": "$\\beta$~Pic",
+   "tstar": 17.9065,
+   "verdict": "recovered"
+  },
+  {
+   "eb": "A002_Xd9668b_Xa9df",
+   "freq_GHz": 230.51602540000002,
+   "n_repeat": 5,
+   "n_second_epoch": 4,
+   "second_epoch_T": 11.68,
+   "star": "$\\beta$~Pic",
+   "tstar": 8.9476,
+   "verdict": "recovered"
+  },
+  {
+   "eb": "A002_Xd9668b_X3a90",
+   "freq_GHz": 230.51612790000001,
+   "n_repeat": 5,
+   "n_second_epoch": 4,
+   "second_epoch_T": 9.83,
+   "star": "$\\beta$~Pic",
+   "tstar": 11.681,
+   "verdict": "recovered"
+  },
+  {
+   "eb": "A002_X7116f1_X1785",
+   "freq_GHz": 230.527185,
+   "n_repeat": 5,
+   "n_second_epoch": 4,
+   "second_epoch_T": 11.68,
+   "star": "$\\beta$~Pic",
+   "tstar": 9.6773,
+   "verdict": "recovered"
+  },
+  {
+   "eb": "A002_Xa7a216_X23e4",
+   "freq_GHz": 230.5272612,
+   "n_repeat": 5,
+   "n_second_epoch": 4,
+   "second_epoch_T": 11.68,
+   "star": "$\\beta$~Pic",
+   "tstar": 7.9879,
+   "verdict": "recovered"
+  },
+  {
+   "eb": "A002_X6f1341_X1484",
+   "freq_GHz": 230.5283785,
+   "n_repeat": 5,
+   "n_second_epoch": 4,
+   "second_epoch_T": 11.68,
+   "star": "$\\beta$~Pic",
+   "tstar": 9.832,
+   "verdict": "recovered"
+  },
+  {
+   "T_bound": 4.15,
+   "T_pers": 6.22,
+   "deepest_eb": "A002_Xfe62c1_X398",
+   "eb": "A002_Xff0235_X8392",
+   "freq_GHz": 230.5221514,
+   "n_repeat": 6,
+   "star": "ALMA J153702653-33192492",
+   "tstar": 5.405,
+   "verdict": "excluded"
+  },
+  {
+   "T_pers": 6.0,
+   "T_rep": -0.27,
+   "eb": "A002_Xcf525f_X5aa4",
+   "excl": 4.1,
+   "freq_GHz": 346.50989599999997,
+   "n_repeat": 0,
+   "n_repeat_measured": 1,
+   "star": "CD$-$57 1054",
+   "tstar": 5.1083,
+   "verdict": "measured"
+  },
+  {
+   "T_pers": 6.3,
+   "T_rep": -0.82,
+   "eb": "A002_Xff0235_X4a6d",
+   "excl": 4.8,
+   "freq_GHz": 344.2697461,
+   "n_repeat": 1,
+   "n_repeat_measured": 5,
+   "star": "CP$-$72 2713",
+   "tstar": 5.8089,
+   "verdict": "measured"
+  },
+  {
+   "T_pers": 92.2,
+   "T_rep": 0.24,
+   "eb": "A002_Xff45a6_X10ca8",
+   "excl": 5.5,
+   "freq_GHz": 345.6338357,
+   "n_repeat": 8,
+   "n_repeat_measured": 13,
+   "star": "HD 161868",
+   "tstar": 5.4812,
+   "verdict": "measured"
+  },
+  {
+   "eb": "A002_Xd98580_X3bf6",
+   "freq_GHz": 230.5020791,
+   "n_repeat": 3,
+   "n_second_epoch": 2,
+   "second_epoch_T": 5.87,
+   "star": "HD 285968",
+   "tstar": 5.9557,
+   "verdict": "recovered"
+  },
+  {
+   "eb": "A002_Xdb4b9a_X108f",
+   "freq_GHz": 230.51002160000002,
+   "n_repeat": 3,
+   "n_second_epoch": 2,
+   "second_epoch_T": 5.96,
+   "star": "HD 285968",
+   "tstar": 5.835,
+   "verdict": "recovered"
+  },
+  {
+   "eb": "A002_Xdb7ab7_X5b4e",
+   "freq_GHz": 230.5115699,
+   "n_repeat": 3,
+   "n_second_epoch": 2,
+   "second_epoch_T": 5.96,
+   "star": "HD 285968",
+   "tstar": 5.8682,
+   "verdict": "recovered"
+  },
+  {
+   "eb": "A002_Xc26103_X155a",
+   "freq_GHz": 230.51167370000002,
+   "n_repeat": 0,
+   "star": "HD 48370",
+   "tstar": 26.8342,
+   "verdict": "untested",
+   "why": "no Class A window of another block covers the predicted cell"
+  },
+  {
+   "eb": "A002_Xcd8029_Xb6b0",
+   "freq_GHz": 345.824056,
+   "n_repeat": 0,
+   "star": "HD~139084~B",
+   "tstar": 5.7635,
+   "verdict": "untested",
+   "why": "no Class A window of another block covers the predicted cell"
+  },
+  {
+   "eb": "A002_Xa95c04_X14cd",
+   "freq_GHz": 220.4185118,
+   "n_repeat": 0,
+   "star": "HIP 10679",
+   "tstar": 5.4561,
+   "verdict": "untested",
+   "why": "no Class A window of another block covers the predicted cell"
+  },
+  {
+   "T_bound": 4.6,
+   "T_pers": 60.05,
+   "deepest_eb": "A002_Xc6e968_X1339",
+   "eb": "A002_Xc6fa08_X1053",
+   "freq_GHz": 230.51328,
+   "n_repeat": 7,
+   "star": "HR~1010",
+   "tstar": 5.4097,
+   "verdict": "excluded"
+  }
+ ],
+ "drive": 0,
+ "generator": "maskrecur_v413.py",
+ "image_sideband": [
+  {
+   "band": 6,
+   "eb": "A002_Xd9668b_Xa9df",
+   "freq_GHz": 241.8366585,
+   "if_max": 10.0,
+   "if_required": 10.5,
+   "image_GHz": [
+    228.196,
+    229.516
+   ],
+   "lo_permitted": [
+    235.016,
+    235.677
+   ],
+   "lo_required": 236.176,
+   "nearest_masked_kms": 1353.0,
+   "partner_GHz": 230.51602540000002,
+   "star": "$\\beta$~Pic"
+  },
+  {
+   "band": 6,
+   "eb": "A002_Xd9668b_X3a90",
+   "freq_GHz": 241.7512355,
+   "if_max": 10.0,
+   "if_required": 10.457,
+   "image_GHz": [
+    228.281,
+    229.602
+   ],
+   "lo_permitted": [
+    235.016,
+    235.677
+   ],
+   "lo_required": 236.134,
+   "nearest_masked_kms": 1466.0,
+   "partner_GHz": 230.51612790000001,
+   "star": "$\\beta$~Pic"
+  }
+ ],
+ "so": {
+  "attributed_with_SO": 21,
+  "attributed_without_SO": 18,
+  "criteria_fixed": "2026-09-11",
+  "decided": [
+   "CD$-$57 1054",
+   "HD 161868",
+   "CP$-$72 2713"
+  ],
+  "first_reserved_searched": "2026-09-17",
+  "holdout_fixed": "2026-09-14",
+  "rank_flagged_with_SO": 1,
+  "rank_flagged_without_SO": 2,
+  "species_list_queried": "2026-10-06T05:54:41Z",
+  "unattributed_with_SO": 35,
+  "unattributed_without_SO": 38
+ }
+}

@@ -1,0 +1,109 @@
+\section*{Author contributions}
+G.J.W.\ conceived the survey, defined the target sample and the selection
+criteria, and wrote the manuscript. R.D.\ built and operated the archival
+retrieval, calibration and search pipeline, implemented the spatial control
+statistic and the injection--recovery campaigns, and produced the released
+catalogue and its regeneration scripts. Both authors designed the vetting
+procedure, chose the masked species, carried out the statistical
+validation reported in \S\ref{sec:statistic} and
+Appendix~\ref{app:falsealarm}, and agreed the dispositions of
+Table~\ref{tab:ledger}.
+%% AUTHORS: confirm this division before submission, and see
+%% AUTHOR_ACTIONS.md item 6 for the affiliation statement this section
+%% should be read with.
+
+\section*{Funding}
+This work received no dedicated funding. It used public archival data and
+no observing time was awarded for it.
+%% AUTHORS: replace if any grant supported this work.
+
+\section*{Competing interests}
+The authors declare no competing interests. VBRL Holdings is a privately
+held company through which R.D.\ conducts independent research, named
+here solely as his affiliation; it had no role in the design of the
+survey, the selection of targets, the analysis, the decision to publish
+or the content of this paper, and provided no funding for the work.
+%% AUTHORS: confirm this wording, which is written to be accurate only if
+%% the company's involvement was indeed nil. See AUTHOR_ACTIONS.md item 6.
+
+\section*{Acknowledgements}
+This paper uses ALMA data from the public ALMA Science Archive. The \NEB{}
+primary-census execution blocks searched span 2013 October~6 to 2025
+June~11 and belong to \NProjCodes{} ALMA proposals, whose codes, in the
+standard ADS/JAO.ALMA\#\textit{code} form, are recorded block by block in
+the data release together with each block's
+epoch.\ProjCodeUnresClause{} ALMA is a partnership of ESO
+(representing its member states), NSF (USA) and NINS (Japan), together with NRC
+(Canada), NSTC and ASIAA (Taiwan), and KASI (Republic of Korea), in cooperation
+with the Republic of Chile. The Joint ALMA Observatory is operated by ESO,
+AUI/NRAO and NAOJ. This work has made use of data from the European Space
+Agency (ESA) mission {\it Gaia} \citep{GaiaDR3}, processed by the {\it Gaia}
+Data Processing and Analysis Consortium (DPAC). This research has made use
+of the SIMBAD database (CDS, Strasbourg, France), of the NASA Exoplanet
+Archive \citep{NEA2013}, and of the Splatalogue spectral-line database
+\citep{Splatalogue2007}.
+
+\section*{Data Availability}
+\label{sec:data}
+The reference of record is a single permanent Zenodo deposit, cited by its
+DOI. It carries every number in this paper and the code that produced them,
+and contains: the \NStars-star target catalogue with its selection
+function; one row for each of the \NWindows{} searched windows, carrying
+its execution-block identifier, frequency limits,
+native channel width, trial-drift grid, trigger statistic at the stellar
+position, control statistics of the \NCtrl-position ring and the window's
+$\mathrm{EIRP}_{90}$; the ALMA proposal code and epoch of every execution
+block, so that each of those rows resolves to the programme that took it;
+all \EvNCrossRaw{} threshold crossings with their
+stellar-frame frequencies, line classifications, recurrence measurements
+and dispositions; the search statistic and the molecular-line list as files
+in their own right; the injection--recovery records; the block-by-block
+archival verdicts and the ALMA delivery record for every block in scope
+that could not be searched; the diagnostic figures the printed paper refers
+to but does not reproduce, among them the per-system coverage waterfall and
+the selection funnel (\texttt{coverage\_waterfall\_full.pdf},
+\texttt{selection\_funnel.pdf}); the illustrative table of sample systems
+within 15\,pc with a confirmed planet; and the full pipeline with the
+commit that produced the deposited products. Two properties of the deposit are
+measured rather than claimed: \NRegenProducts{} generated products
+regenerate byte-identically from the frozen inputs, and \NReproChecks{}
+headline quantities are re-derived from the released catalogue alone,
+without the pipeline.
+
+Three of the choices that could create or remove an unattributed crossing
+carry an identifier that can be checked independently of the deposit. The
+calibration hold-out rule of Appendix~\ref{sec:heldout} and the block list
+its first guard depends on were committed to the project repository as
+\texttt{c75069040eab52ec1336376a4dae62114bb281a3} on 2026 September~14 at
+07:10~UTC, \HoLeadBlockDays{} days before the first reserved block was
+searched. The molecular-line list is a single dated query of a public line
+catalogue (\McQueryDate) deposited as a file, so it is reproducible rather
+than described; it post-dates the fixing of the disposition criteria on
+\MkCritDate{} (\texttt{f5f52e7804f1baad99515ea2d46ddd7e4e4cd546}), and so
+does every species in it, which is why the same rule is applied to all of
+them and no species is withheld from one coincidence and allowed in another
+(Appendix~\ref{app:linemask}). The repository at
+\url{https://github.com/Tilanthi/SETI} is a working mirror and may move on.
+%% AUTHORS -- THREE BLOCKERS, in AUTHOR_ACTIONS.md items 1, 2 and 10.
+%% (1) Reserve the Zenodo DOI and insert it in the first sentence above.
+%%     `python3 doigate.py` FAILS until a real, non-placeholder DOI is
+%%     there, and it also fails if the inventory above is lost; run it
+%%     before submission.  It is deliberately NOT in make_all.sh, because
+%%     a gate that blocks every build gets switched off.
+%% (2) Create a Zenodo private reviewer link and put it in the cover
+%%     letter: a DOI minted at acceptance cannot be checked during review.
+%%     It is not promised in the text above, because the text may not
+%%     claim it before it exists.
+%% (3) Tag the submitted commit and name the tag in the deposit, so "the
+%%     commit that produced the deposited products" resolves.
+%% Item 10 also records what a dated timeline of the fixed choices would
+%% need before it could be printed: three of the four rows now carry a
+%% verifiable identifier, the search statistic still does not.
+
+\section*{Software}
+The pipeline depends on CASA~6.7.6 \citep[casatools/casatasks
+6.7.6-14;][]{CASA2022}, Python~3 with astropy \citep{Astropy2022}, numpy
+\citep{Harris2020} and scipy \citep{Virtanen2020}, and the ALMA Science
+Archive and SIMBAD TAP interfaces through astroquery \citep{Ginsburg2019};
+all are free and open-source, with exact
+versions recorded in the frozen release.

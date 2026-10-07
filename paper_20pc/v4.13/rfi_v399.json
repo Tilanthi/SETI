@@ -1,0 +1,33 @@
+{
+ "bin_MHz": 1.0,
+ "edge_channels": {
+  "A002_Xc079b5_X82f": 817.0004480000352
+ },
+ "frac_ks_D": 0.02228829787884906,
+ "frac_ks_p": 0.48714355834016215,
+ "frac_median": 0.5042735042735043,
+ "max_multiplicity": 4,
+ "n_crossings_with_freq": 1397,
+ "n_frac": 1397,
+ "n_occupied_bins": 1215,
+ "null_max_mean": 2.433,
+ "null_max_p95": 3.0,
+ "p_maxmult": 0.01,
+ "per_event": {
+  "A002_Xc079b5_X82f": {
+   "band": "7",
+   "f_cross_GHz": 346.313811,
+   "fhi": 346.712737,
+   "flo": 344.872405,
+   "n_other_blocks": 32,
+   "n_other_crossings": 2,
+   "n_other_stars": 24,
+   "n_overlap_windows": 40,
+   "n_same_channel_other_stars": 0,
+   "same_channel": [],
+   "star": "61 Vir"
+  }
+ },
+ "total_other_crossings": 2,
+ "total_other_stars": 24
+}

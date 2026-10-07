@@ -1,0 +1,46 @@
+{
+ "failblock": "A002_Xc7fa6f_X28a8",
+ "flagged": {
+  "n_ge_star": [
+   217,
+   421,
+   1,
+   386
+  ],
+  "outranking": 0,
+  "star_over_ring": [
+   0.5768,
+   0.5479,
+   0.9827,
+   0.4753
+  ],
+  "unattributed": 4
+ },
+ "n_flag": 4,
+ "n_qp": 52,
+ "n_raw": 56,
+ "phase_centre": {
+  "block_ring_excess": 8.4389,
+  "near_beams": 2.0,
+  "off_min_arcsec": 4.0,
+  "radius_matched": {
+   "mean": 0.09349680414555818,
+   "n": 75,
+   "n_comp_med": 149,
+   "n_near_med": 15,
+   "se": 0.08144907603617156
+  },
+  "unmatched": {
+   "mean": 0.10670022005170016,
+   "n": 75,
+   "n_comp_med": 497,
+   "n_near_med": 15,
+   "se": 0.0782225415975296
+  }
+ },
+ "qp": {
+  "attributed": 21,
+  "outranking": 1,
+  "unattributed": 31
+ }
+}

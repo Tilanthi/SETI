@@ -1,0 +1,85 @@
+\section{Conclusions}
+\label{sec:conclusions}
+
+\begin{enumerate}[leftmargin=1.6em,itemsep=4pt,topsep=4pt,parsep=0pt]
+
+\item The frequency range is what makes this experiment new: no published
+radio technosignature search above about 30\,GHz has reached a star within
+40\,pc (\S\ref{sec:background}), and an archive assembled for other science
+is at present the only way to reach one.
+
+\item The primary experiment is \NWinA{} fine-channel windows toward
+\NSysClassA{} stellar systems, covering \CvUnionA\,GHz of union bandwidth in
+disconnected intervals, searched for an unresolved carrier whose frequency
+drifts. A supplementary coarse-channel search for an unresolved spectral
+excess adds \NWinB{} windows toward \PrSysClassB{} systems and
+\CvUnionB\,GHz of union bandwidth, with no drift discrimination. Both come
+from one uniform reduction of \NEB{} public execution blocks,
+\TotalDataTB\,TB of raw data, and between them they span
+\SurvFreqLo--\SurvFreqHi\,GHz.
+
+\item Sensitivity is a measured completeness, not a threshold. Carriers
+injected into the real calibrated visibilities are recovered through the
+unchanged selection --- the trigger, and localisation at the star --- and
+$\mathrm{EIRP}_{90}$ is the power at which nine in ten come back. The median
+system's best window reaches $\EirpNinetySysMedA$\,W, with a spread across
+systems of $\EirpNinetySysLoA$--$\EirpNinetySysHiA$\,W. The rank and the
+visibility fit decide nothing, so neither is charged to that limit. One bias
+runs one way only and is not inside the quoted calibration: an injected
+carrier suffers no atmospheric decorrelation where a real one would, so
+every limit here is optimistic by up to \SensDecorPct{} per cent.
+
+\item All \EvNCrossRaw{} threshold crossings are reported with their
+dispositions, \PrFlagXrossWord{} of them in the one execution block
+that fails the data-quality criterion of
+Appendix~\ref{sec:blockquality} and reported apart from the
+\EvNCrossQp{} in quality-passing data; of those, \EvNAttrQp{} coincide with
+a catalogued molecular transition, almost all of them carbon monoxide ---
+including the $\beta$~Pictoris disc, which the search recovered without
+being told where to look --- and \EvNUnattrQp{} do not.
+
+\item Every unattributed crossing was tested for recurrence in the star's
+own frame, in each further execution block covering the event frequency and
+over the whole of each such window at every drift searched, because a
+carrier on an accelerating platform need not return to one channel. None is
+present again: the largest statistic at any predicted cell is \RcTMax{}
+against $T_{\rm trig}=\StageNullTrig$, and the exceedances found anywhere in
+those windows are no more than chance predicts for trials of that size.
+Where a discovery amplitude survives, the repeat coverage rules out a
+carrier of that amplitude in \RcNExcl{} cases, and one of half that
+amplitude or less in \RcNFracHalf{} of them; taken instead as a
+disagreement between two measurements of the same amplitude, discovery and
+repeat differ by \RcExclMin{} to \RcExclMax$\sigma$, median
+\RcExclMed$\sigma$, which is as much as the pair can say when the discovery
+amplitude is itself a five-sigma measurement. Nor did \PrRankClause{}
+return. What these tests exclude is a carrier that holds its frequency
+inside the window searched and radiates through both observations, and not a
+persistent transmitter of any kind.
+
+\item What this survey could search and what it could confirm are different
+extents. The carrier search covered
+\RcSearchSys{} systems, of which only \RcConfSysDay{} --- carrying
+\CvConfPctDay{} per cent of the searched union bandwidth --- were observed
+again at the same frequency more than a day apart, and \RcConfSysYr{} beyond
+a year. Across both classes, \RcNoRepSysAll{} of the \RcSearchSysAll{}
+systems have no second block covering a frequency the first one covered, and
+toward those the null reported here says nothing at any strength.
+
+\item Combining each surveyed star's epochs in its own rest frame deepens
+the flux limit by a median factor \SyStkGainMed. For Proxima~Centauri,
+where $\sqrt{N_{\rm eff}}=\SxProxSqrtNeff$ is what combining the epochs
+buys, the stacked limit measured by injection into the stack reaches
+$\SzProxEirpCensus$\,W over the primary census alone and
+$\StkProxEirpCal$\,W once the rest of the archive is added, in
+\ChanBModeMHz\,MHz channels --- a Class~B limit on an unresolved excess,
+carrying no drift discrimination --- for an emitter steady in the stellar
+frame to within one channel, \StkProxTolKms\,km\,s$^{-1}$ peak to peak,
+across \StkProxSpanYr\,yr.
+
+\item These results constrain unresolved carriers only within the domain
+actually searched and only toward this archive-selected sample
+(\S\ref{sec:excludes}). What transfers beyond it is the obstacle: a
+channelisation chosen by other observers for other purposes, and not
+collecting area, is what decides which kind of search is possible at all.
+
+\end{enumerate}

@@ -1,0 +1,21 @@
+{
+ "simbad": {
+  "service": "SIMBAD TAP (CDS), table basic",
+  "url": "https://simbad.cds.unistra.fr/simbad/sim-tap/sync",
+  "query": "select main_id, ra, dec, pmra, pmdec, sp_type, otype_txt, plx_value, plx_err from basic where plx_value > 23 and ra is not null",
+  "accessed": "2026-10-04",
+  "file": "r10inputs/simbad_plx23_v411.csv",
+  "n_rows": 28967,
+  "sha256_16": "593891633675681d"
+ },
+ "nea": {
+  "service": "NASA Exoplanet Archive TAP, table pscomppars (Planetary Systems Composite Parameters; one row per confirmed planet)",
+  "url": "https://exoplanetarchive.ipac.caltech.edu/TAP/sync",
+  "query": "select hostname,pl_name,ra,dec,sy_dist,sy_pnum,pl_bmasse,pl_bmassprov,st_spectype from pscomppars where sy_dist < 60",
+  "accessed": "2026-10-04",
+  "file": "r10inputs/nea_pscomppars_60pc_v411.csv",
+  "n_rows": 1122,
+  "sha256_16": "3b68bd428acd5251",
+  "definition": "a confirmed planet is a row of pscomppars, i.e. an object the archive lists as a confirmed planet on the access date"
+ }
+}
