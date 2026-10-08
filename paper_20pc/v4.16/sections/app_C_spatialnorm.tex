@@ -1,0 +1,232 @@
+%% APPENDIX B -- the spatial rank as a diagnostic: what it can and cannot
+%% support, and the reserved hold-out that calibrates it.
+%% Owner: r11-chain.  Carries \label{app:radius} (cited by 04_method.tex)
+%% and \label{sec:heldout} (cited from the other appendices).
+\section{The spatial rank, and what it can support}
+\label{app:radius}
+
+The spatial rank asks whether an excess sits at the star or anywhere else in
+the field. It is a diagnostic, no disposition rests on it, and this appendix
+is the measurement that settles why: \rankstatus{}
+
+The star lies at the phase centre, inside the control annulus, and the
+asymmetry is real. \emph{It is not a primary-beam effect.} Spectra are
+extracted from phase-rotated visibilities in apparent flux and are never
+corrected for the primary-beam response (Appendix~\ref{app:conventions}), so
+the familiar rise of image noise with distance from the pointing centre
+cannot operate here; and were it operating, it would make the control probes
+noisier than the star and place the stellar rank \emph{above} one half, the
+opposite of what is measured. No mechanism for the displacement is
+established, and the one that would predict its sign is excluded below. What
+the control ensemble does show is
+a weak rise of its own level with radius, and the obvious repair is to remove
+it: each probe is standardised within its own radius bin, the radii being
+known from the fixed draw, with no free parameter.
+
+\emph{Applied out of sample, the correction does not repair the statistic.}
+Frozen --- probe radii, bin edges and standardisation alike --- and applied
+unmodified to \RadValStarN{} windows that played no part in its construction,
+it moves the median stellar rank from \RadValStarRawMed{} to
+\RadValStarCorMed{} against the exchangeable one half, \RadValStarToward{}
+it, in both out-of-sample partitions separately. Rescoring the whole survey
+with the gradient removed moves the list of crossings outranking all their
+controls from \LocStageGlobal{} windows to \LocStageLocal, losing
+\LocStageLost{} and gaining \LocStageGained, and leaves the survey median
+rank slightly further from one half than before.
+
+The radial gradient is real, but removing it leaves the median no closer to
+one half, so the residual is not radial and neither normalisation yields a
+calibrated tail probability. We therefore keep the frozen rank, read
+it only as an indication of which crossing to examine first, and rest every
+disposition on physical evidence or on recurrence. Because the rank gates
+nothing, none of this enters a sensitivity limit.
+
+\emph{A calibration error that varied with frequency would explain the
+displacement, and the usual argument does not exclude one.} A gain error that
+is the same in every channel is removed exactly by the per-integration median
+along frequency; a channel-dependent one is not, and two ordinary errors are
+channel-dependent --- a residual in the bandpass, and a system temperature
+measured in the coarse correlator mode and interpolated onto the science
+channels, which near a telluric line leaves a narrow feature behind
+\citep{ALMATsys2018}. Both multiply the continuum, so both are present at the
+star and absent on empty sky, both stand still in topocentric frequency, and
+both are coherent between integrations: they would stack at near-zero drift
+and put the stellar rank \emph{below} one half, which is the sign observed.
+
+\emph{They are excluded by the continuum these stars actually have.} Each
+star's $2.2\,\mu$m flux extrapolated to each window as a blackbody at the
+star's own $V-K$ colour temperature gives a photospheric continuum spanning
+\CdContDecades{} decades over the \CdNWin{} windows of the census and the
+hold-out whose stars have both colours, and nowhere more than \CdCnrMax{}
+times the single-channel noise (median \CdCnrMed). A fractional error
+$\epsilon$ deposits $\epsilon S_{\rm c}$ at the star, so a crossing at the
+trigger needs $\epsilon=5\sigma/S_{\rm c}$: \CdEpsMin{} at the most
+favourable window of either sample and \CdEpsMed{} at the median, against a
+nominal bandpass accuracy of \CdSpecBp{} per cent \citep{ALMATechNote15} and
+the \CdSpecTsysLo--\CdSpecTsysHi{} per cent a coarse system temperature
+leaves at an ozone line. \textbf{No window of this survey would admit the
+mechanism even were the error as large as the continuum it multiplies}, the
+shortfall being a factor of \CdMarginTsys{} at best and \CdMarginTsysMed{}
+typically. Nor does the rank
+follow the continuum-to-noise ratio the error would scale with: $r=\CdRCen$
+(\CdRCenLo{} to \CdRCenHi) over \CdNStarCen{} census stars and $\CdRHo$
+(\CdRHoLo{} to \CdRHoHi) over \CdNStarHo{} hold-out stars, with $T_\star$
+equally flat over the \CdNTstar{} crossings. Against continuum \emph{flux}
+the hold-out does lean, $r=\CdRFluxHo$, but its continuum-brightest stars are
+also its most deeply observed ($\CdRDepthHo$ against the noise alone). The
+same arithmetic settles the other question the shared noise scale raises:
+over the \NsrNWin{} windows carrying no crossing the stellar statistic
+divided by the median of the \NCtrl{} control statistics --- which \emph{is}
+the ratio of the two noises --- has median \NsrMed{} (star-clustered 95 per
+cent \NsrLo--\NsrHi), so a stellar-position noise denominator would move no
+statistic here either.
+
+\subsection{The reserved hold-out, and what it calibrates}
+\label{sec:heldout}
+
+The statistic and the mask were settled on the searched sample and cannot also
+calibrate themselves, so a hold-out was reserved by a rule fixed and recorded
+before any reserved block was searched: a block is held out if and only if
+$\mathrm{sha256}(\textsc{uid})_{[:8]} \bmod 5 = 0$, subject to two guards that
+use identifiers alone --- a block on the pre-registered list stays in the
+survey, and no system loses every block --- so that the assignment follows
+from the UIDs and that list alone. The
+statistic, the trigger and the recurrence criterion were all fixed before the
+rule itself, and the first reserved block was searched \HoLeadBlockDays{} days
+later, so every diagnostic built afterwards is incapable of promoting a
+window. Of \NEbProcessedAll{} blocks processed, \NEbHeldOut{} are reserved
+(\HoPctHeld{} per cent), giving \HoWin{} windows toward \HoStars{} stars with
+no star and no system lost from the headline sample. Three quantities are
+calibrated on those blocks and on nothing else.
+
+First, the rank displacement. Out of sample the stellar rank has median
+\HoRankMed{} where one half is expected, with a block-clustered 95 per cent
+interval of \HoRankMedLo--\HoRankMedHi{} over \HoWin{} windows, and
+\HOFracLoPct{} per cent of ranks below 0.1 against \HOFracHiPct{} per cent
+above 0.9, so the distribution is displaced rather than growing a tail. The
+displacement runs the way that matters: a rank below one half places the star
+high, and the star in fact outranks all \NCtrl{} probes in \NsrFirstObs{} of
+the survey's windows against \NsrFirstExp{} if the positions were
+interchangeable. The direction therefore inflates star-first outcomes rather
+than suppressing them, which is why the chance expectations of
+Appendix~\ref{app:falsealarm} are calibrated on the measured rate.
+Clustering removes neither the shift nor its size: \HOBlockBelow{} of
+\HOBlockN{} blocks of the epoch-extension campaign have a mean rank below
+0.5, and a star-clustered bootstrap
+places the median at \HOBootMed{} (95 per cent \HOBootLo--\HOBootHi). The
+searched sample leans the same way but by less (median \SurvMedP,
+star-clustered 95 per cent \SurvBootLo--\SurvBootHi), and the two
+intervals do not overlap, so the displacement is a property of these
+reserved blocks and is not reproduced in sample. Either way it runs in the
+direction that inflates star-first outcomes, which is the quantitative
+reason the rank is read as a diagnostic and never as a significance.
+
+Second, the false-alarm tail factor --- the measured rate at which a
+no-signal position ranks first, divided by the rate exchangeability would
+give. It is \HoTailFactor{} on \HoPseudoTrials{} trials, with a bootstrap
+clustered over the \HoTailBlocks{} reserved blocks giving
+\HoTailLo--\HoTailHi. It is a statement about the rank and not about the
+trigger, so it is reported as a diagnostic; the quantity the chance
+expectations need is the exceedance rate at the stellar position, measured
+on the same blocks in Appendix~\ref{app:falsealarm}.
+
+Third, the radial behaviour of the control ensemble: the standardised level
+runs \HoRadBins{} across the annulus, a mean per-window slope of
+$\HoRadSlope\pm\HoRadSlopeSe$, small and of the wrong sign to account for the
+displacement.
+
+The \emph{external calibration sample} must not be confused with the
+hold-out, and it is not an out-of-sample set. Its \CampBlocks{} execution
+blocks were reserved to calibrate the rank and to supply repeats the hold-out
+does not have, and \CalNCensus{} of them are primary-census blocks and
+\CalNHoldout{} hold-out blocks, with \CalNOutside{} outside both: it enters no
+count of the science sample because its blocks are already counted there, not
+because it is external. Over its \CampWindows{} windows the frozen pipeline
+returns \CampStageOne{} crossings outranking all their controls ---
+\CampStageOneCO{} of them $\beta$~Pictoris CO --- and \CampUnattrib{}
+unattributed against \CampExpUn{} expected at the measured tail rate.
+
+\subsection{What the recurrence statistic reads when nothing is there}
+
+The exclusion in Table~\ref{tab:ledger} is one formula. Writing $S$ and
+$\sigma_{\rm d}$ for the discovery amplitude and its error, and $\bar{a}$ and
+$\bar{\sigma}=(\sum_i\sigma_i^{-2})^{-1/2}$ for the inverse-variance
+combination of the repeat readings at the predicted channel,
+\begin{equation}
+\sigma_{\rm excl}=\frac{S-\bar{a}}
+{\sqrt{\sigma_{\rm d}^{2}+\bar{\sigma}^{2}}}
+=\frac{T_{\rm pers}-T_{\rm rep}}{\sqrt{1+(T_{\rm pers}/T_\star)^{2}}},
+\label{eq:excl}
+\end{equation}
+with $T_{\rm pers}=S/\bar{\sigma}$ and $T_{\rm rep}=\bar{a}/\bar{\sigma}$, so
+every exclusion follows from three columns of that table and nothing else.
+$T_{\rm rep}$ is read at the carried drift and at one cell; the largest value
+over every drift trial at the same cell is tabulated beside it, and because it
+is a maximum over of order $10^{2}$ trials it is positive on average whatever
+is there and is never the quantity $T_{\rm pers}$ is compared with. Because the
+discovery amplitude carries its own error, no exclusion can exceed the strength
+of the discovery it is built from --- and that is also why it is not the
+strongest statement available. An amplitude selected as the largest of
+$10^{2}$ to $10^{6}$ cells at $T_\star\simeq5$ is biased high, so a real
+carrier would be fainter than measured, and the quantity that survives the
+bias is the limit $(T_{\rm rep}+5)/T_{\rm pers}$: the fraction of the
+discovery amplitude still ruled out at the trigger.
+
+\emph{The same three numbers say where the test has power and where it has
+none.} The criterion asks the repeat to reach the trigger, and the reading
+there is centred on zero with unit scatter, so a carrier radiating through
+both observations at the discovery amplitude satisfies it with probability
+$\Phi(T_{\rm pers}-5)$, and at the trigger amplitude $5S/T_\star$ ---
+the faintest carrier that could have produced the crossing at all ---
+with $\Phi(5T_{\rm pers}/T_\star-5)$. Both follow from columns
+Table~\ref{tab:ledger} already prints, and both are tabulated for the two
+events of Table~\ref{tab:cand}. Where
+they are small the crossing is untested rather than excluded, and it is
+reported that way.
+
+\emph{The statistic read at the predicted channel is centred on zero and
+scatters by one, measured and not merely designed.} Over \NuNullN{}
+single-cell readings of every repeat block in the census and the hold-out its
+mean is \NuNullMean{} and its scatter \NuNullSd; at the neighbouring channels
+of the \WdBandNCross{} crossings whose repeat spectra survive --- random
+cells, same registration, same drift --- \NuBandMean{} and \NuBandSd{} over
+\NuBandN{} cells, with \WdBandMax{} the largest value anywhere within
+$\pm$\WdBandKms\,km\,s$^{-1}$ of their predicted channels; and at the control
+positions of the discovery windows \NuDiscCtrlMean{} and \NuDiscCtrlSd. The
+largest of the \NuCtrlRet{} retained control probes of each repeat block
+averages \NuCtrlMean{} against the \NuCtrlPred{} expected for a maximum of
+\NuCtrlRet, which is the point: \textbf{a maximum is positive on average
+whatever is there.} The largest of the $n_{\rm rep}$ per-block readings
+averages \NuColMean{} over the crossings carrying exclusions, where the null
+above predicts \NuColPred{} for the same $n_{\rm rep}$, while the combined
+$T_{\rm rep}$ of Eq.~\ref{eq:excl} averages \NuRepMean. Widening the window
+costs trials and not calibration: the exceedances of \S\ref{sec:etacrv} match
+what the same accounting predicts, and \WdOrbShortStar's windows are the only
+ones too narrow for the excursion their crossing's drift implies.
+
+%% ★ fig:bpiccontrol MOVED HERE from Sec. 5 in the v4.12 length pass: this
+%% appendix is where the spatial statistic is characterised, and the figure is
+%% the bound on its reach.  0.36 pp off the main text.
+\begin{figure}
+\centering
+\includegraphics[width=0.88\columnwidth]{figures/bpic_control.pdf}
+\caption{The $\beta$~Pictoris positive control, in both directions. Both
+panels draw the same \BpicPanelNDrawn{} of the \NCross{} crossings, the
+remainder being crossings for which no control ring was retained.
+\emph{(a)}~The spatial screen: the stellar statistic against the maximum
+over that window's \NCtrl{} control positions. Filled symbols are the
+blocks in which the blind search recovers circumstellar carbon monoxide at
+$\beta$~Pictoris, \NStageOneBpicEb{} of them with the star above every
+control and one with the ring above it, that one being block
+\texttt{\BpCtrlBlock}, Band~\BpCtrlBand, where the ring reaches
+\BpCtrlRingMax{} against \BpCtrlStar{} at the star
+(\S\ref{sec:bpicval}). \emph{(b)}~The same crossings by velocity offset
+from the nearest masked transition \emph{in their own star's rest frame},
+with the adopted $\pm\MaskHalfKms$\,km\,s$^{-1}$ half-width marked. The
+\BpicPanelNCo{} $\beta$~Pictoris carbon-monoxide crossings land
+\BpicDvCoLo--\BpicDvCoHi\,km\,s$^{-1}$ from CO; its \BpicPanelNCs{}
+CS($5{\to}4$) crossings sit \BpicDvCsLo--\BpicDvCsHi\,km\,s$^{-1}$ from
+anything catalogued. \BpicPanelNOther{} further crossings are drawn in
+grey, with HD~48370 marked.}
+\label{fig:bpiccontrol}
+\end{figure}

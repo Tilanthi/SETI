@@ -1,0 +1,81 @@
+\begin{abstract}
+Searches for narrowband transmitters above about 30\,GHz have reached a single
+spectral line toward a few nearby stars. Uniformly re-reduced, \NEB{} ALMA execution blocks toward
+\NSysClassA{} systems give \NWinA{} fine-channel windows with
+\ChanLoA--\ChanHiA\,kHz channels, covering \CvUnionA\,GHz of union bandwidth
+in \CovNIslands{} disjoint intervals between \SurvFreqLoA{} and
+\SurvFreqHiA\,GHz; \NWinB{} coarser windows carry no drift discrimination.
+Windows are filtered for an unresolved carrier drifting linearly in the
+stellar frame; crossings are tested against catalogued transitions at the
+stellar velocity, and unattributed ones sought again in later blocks. Depth
+is a measured recovery fraction: for a carrier narrower than the instrumental
+channel, nine injections in ten return at
+$\EirpNinetySysMedA$\,W for the median system,
+$\EirpNinetySysLoA$--$\EirpNinetySysHiA$\,W across systems. The drift ceiling
+is \DriftCeilLo\,nHz, \AccelSheikhPct{} per cent of the \citet{Sheikh2019}
+range. Of the \EvNCrossRaw{} crossings, \MkAttr{} fall on a catalogued
+transition and \MkUnattr{} do not; \PrFlagXrossWord{} are in one
+block failing a quality criterion applied post-inspection. None of the
+unattributed crossings recurred, including \PrRankClause, while
+\MkAttrRecur{} attributed to circumstellar or foreground carbon monoxide do
+recur, as expected. That excludes a carrier holding its stellar-frame
+frequency to within $\pm\RqDvMed$\,km\,s$^{-1}$, radiating through both
+observations, not a persistent transmitter of any kind; the remainder is
+consistent with chance to the control positions' accuracy. Line
+confusion costs \MkMaskAPct{} per cent of the coverage and \ScSysNoConf{}
+systems have no confirmation epoch; these, not sensitivity, limit the search.
+\end{abstract}
+
+\keywords{extraterrestrial intelligence, radio lines: stars, submillimetre: stars, surveys, astrobiology}
+
+%% One paragraph, in the conventional order: aim; data (blocks, systems,
+%% windows, frequency range, channel widths); method (de-drifted matched
+%% filter, attribution, recurrence); sensitivity (median and range of
+%% EIRP_90, and the drift ceiling); result (crossings, attributed,
+%% unattributed, none recurring); the two principal limitations (line
+%% confusion, repeat coverage).  Nothing else belongs here, and nothing
+%% here may be the only place a number appears.
+%%
+%% MNRAS allows 250 words, so the length must be MEASURED on the built page
+%% and not asserted here: `abswords.py` counts the words between ABSTRACT
+%% and the subject headings in the PDF itself and fails the build above 250.
+%% A comment claiming a word count is not a word count -- an earlier one
+%% said 245 while the typeset paragraph held 253.
+%%
+%% THE SENSITIVITY STATEMENT IS CONDITIONAL IN TWO WAYS AND BOTH ARE LOAD
+%% BEARING.  EIRP_90 holds for a carrier narrower than the instrumental
+%% channel -- the channel widths here span two orders of magnitude, so a
+%% carrier spread over many channels meets a different threshold entirely --
+%% and the drift reach is a ceiling, stated in the literature's own units
+%% (one Hz per second per GHz is one nanohertz) and as a fraction of the
+%% general recommendation, so that a reader can see how restricted it is.
+%% \DriftCeilLo is round 13's and is NOT republished at round 590; round 590
+%% publishes only the comparison, and asserts that recomputing the ceiling
+%% from the catalogue reproduces round 13 to the printed digit.
+%%
+%% ONLY THE SIX HEADLINE FIGURES OF THE EXPERIMENT ARE SET IN TYPE HERE:
+%% \NEB, \NSysClassA and \NWinA (its size), \CvUnionA with \CovNIslands and
+%% the band edges (its extent, which must never be read as continuous
+%% coverage), \EirpNinetySysMedA with its range (its depth), and the
+%% crossing partition.  \ScSysNoConf is the MEASURED count of systems
+%% observed once or within a single day; the published 27-and-13 split is
+%% over all \NSystems{} surveyed systems and not the \NSysClassA{} of the
+%% carrier experiment, and the stored block epochs it rests on are wrong for
+%% most of the blocks the archive does not index by asdm_uid.  Never write
+%% "40 of 60" in this paragraph.  \PrFlagXrossWord and \PrRankClause are
+%% generated English, not figures, and neither may open a sentence.
+%% Everything else is in the body: the union over which a repeat exists, the
+%% attributed share by species, the control-ring size, and the coarse
+%% search's lower edge, which is conclusion 2's.
+%%
+%% Five things this paragraph must keep saying, each gated by prose_r15.py or
+%% prose_v412.py: the crossing total is never given without the subset in the
+%% block that fails the quality criterion (P9, and Referee 1 asks for that
+%% disclosure here explicitly); the recurrence result names the class of
+%% transmitter it excludes, now with the width of the frequency interval the
+%% test permits, and claims no generic one (P4); the spatial rank is named
+%% only inside the sentence that says nothing recurred, never as a result of
+%% its own (P4); the chance comparison is stated as a consistency, with no
+%% floor and no second construction (P10); and the bandwidth is labelled a
+%% union bandwidth (P7).
+%% Measure before adding anything.

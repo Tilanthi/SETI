@@ -1,0 +1,251 @@
+{
+ "figures": [
+  "/workspace/SETI/paper_20pc/v4.16/figures/eirp_context_a.pdf",
+  "/workspace/SETI/paper_20pc/v4.16/figures/eirp_context_b.pdf"
+ ],
+ "numbers": {
+  "catalogue": "per_target_results_v3.99.csv",
+  "multiplier_source": "m3a_result_v400.json",
+  "multipliers": {
+   "campaign_pooled_A": 5.700000000000001,
+   "campaign_pooled_B": 4.553571428571429,
+   "adopted_A": 3.03,
+   "adopted_B": 4.17,
+   "note": "adopted = control-maximum-stratified (numbers_v410.py), not the campaign's own pooled 90 per cent point"
+  },
+  "thresholds": {
+   "common_snr": 5.0,
+   "n_rescaled": 3,
+   "programmes": {
+    "enriquez2017": {
+     "snr": 25.0,
+     "snr_src": "Enriquez et al. 2017, ApJ 849, 104, sec. 4: 'For the A stars, we only consider hits with an S/N greater than 25.  We reserve the S/N range between 20 and 25 for RFI signals'; and sec. 5.1: 'the minimum detectable flux density for a five-minute L-band observation with the GBT, at 3 Hz resolution for an S/N of at least 25 is 17 Jy'.  The pipeline trigger was 20; the limit is quoted at 25.",
+     "scale_to_common": 0.2,
+     "chan_Hz": 2.79,
+     "pts_published": [
+      [
+       50.0,
+       10000000000000.0
+      ]
+     ],
+     "pts_common": [
+      [
+       50.0,
+       2000000000000.0
+      ]
+     ]
+    },
+    "margot2023": {
+     "snr": 10.0,
+     "snr_src": "Margot et al. 2023, AJ 166, 206, sec. 3.6: 'Our usual detection threshold is set at S/N=10, such that signals with flux Sdet = 11.3 x 10^-26 W/m2 are detectable ... transmitters located 326 ly (100 pc) away are detectable with 0.62 Arecibos (EIRP=1.35 x 10^13 W)'.  The two plotted limits are quoted in that same sentence, so they carry that threshold.",
+     "scale_to_common": 0.5,
+     "chan_Hz": 2.98,
+     "pts_published": [
+      [
+       100.0,
+       13500000000000.0
+      ],
+      [
+       6135.0,
+       5.08e+16
+      ]
+     ],
+     "pts_common": [
+      [
+       100.0,
+       6750000000000.0
+      ],
+      [
+       6135.0,
+       2.54e+16
+      ]
+     ]
+    },
+    "price2020": {
+     "snr": 10.0,
+     "snr_src": "Price et al. 2020, AJ 159, 86, sec. 3: 'we searched ... for narrowband signals with a S/N >=10'; and sec. 5.4: 'using a lower S/N cutoff (10 vs. 25).  The result is that our sensitivity is better by a factor of 2.5x' -- which is 25/10, so the limit is linear in the threshold in their own arithmetic.",
+     "scale_to_common": 0.5,
+     "chan_Hz": 2.79,
+     "pts_published": [
+      [
+       null,
+       2000000000000.0
+      ],
+      [
+       null,
+       9000000000000.0
+      ]
+     ],
+     "pts_common": [
+      [
+       null,
+       1000000000000.0
+      ],
+      [
+       null,
+       4500000000000.0
+      ]
+     ]
+    },
+    "mason2024": {
+     "snr": 5.0,
+     "snr_src": "Mason et al. 2025, MNRAS 536, 2127, sec. 4: 'We assumed a Gaussian distribution for a pixel across all frequency channels and used SNR > 5 as our detection threshold ... We estimated the minimum detectable flux density, Smin, as the SNR threshold multiplied by the r.m.s measured within the field of view of each calibrator.'  This is the one comparison programme already on the common basis.",
+     "scale_to_common": 1.0,
+     "chan_Hz": 30520.0,
+     "pts_published": [
+      [
+       1010.0,
+       6.91e+17
+      ]
+     ],
+     "pts_common": [
+      [
+       1010.0,
+       6.91e+17
+      ]
+     ]
+    }
+   }
+  },
+  "panel_a": {
+   "quantity": "filled: bare 5 sigma eirp_nominal_W; open: adopted EIRP_90",
+   "mult_A": 3.03,
+   "mult_B": 4.17,
+   "n_stars": 89,
+   "deepest_star": "Proxima Cen",
+   "trig_min_W": 16158990000000.0,
+   "trig_max_W": 1.207691e+16,
+   "trig_median_W": 406639700000000.0,
+   "e90_over_trig_min": 3.0290367632835298,
+   "e90_over_trig_median": 3.075036966714539,
+   "e90_over_trig_max": 6.339526736902079,
+   "n_stars_trig_below_benchmark": 53,
+   "eirp90_min_W": 85157780292643.97,
+   "eirp90_max_W": 3.658140501089251e+16,
+   "eirp90_median_W": 1252650155217965.0,
+   "n_stars_below_benchmark": 28,
+   "benchmark_W": 590000000000000.0,
+   "benchmark_label": "12\\,m dish, 1\\,MW, 230\\,GHz",
+   "class_A_window_median_W": 2877585588787373.0,
+   "class_A_system_median_W": 1555615201475617.8,
+   "arecibo_drawn": false
+  },
+  "panel_b": {
+   "n_windows": 1651,
+   "n_class_A": 402,
+   "n_class_B": 1249,
+   "chanw_min_Hz": 15258.7891,
+   "chanw_max_Hz": 31250000.0,
+   "chanw_median_Hz": 15625000.0,
+   "literature_channel_Hz": {
+    "enriquez2017": 2.79,
+    "margot2023": 2.98,
+    "mason2024": 30520.0,
+    "price2020": 2.79
+   },
+   "span_decades": 7.05,
+   "span_narrow_Hz": 2.79,
+   "span_wide_Hz": 31250000.0
+  }
+ },
+ "literature": {
+  "enriquez2017": {
+   "pts": [
+    [
+     50.0,
+     10000000000000.0
+    ]
+   ],
+   "src": "Enriquez et al. 2017, ApJ 849, 104, abstract: 'none of the observed systems host high-duty-cycle radio transmitters ... with an Equivalent Isotropic Radiated Power of ~10^13 W ... fewer than ~0.1% of the stellar systems within 50 pc'.",
+   "chan_src": "Enriquez et al. 2017 abstract: 'channelized into narrowband (3 Hz) channels'; the BL high-spectral-resolution product is 2.79 Hz (Lebofsky et al. 2019, Table 4).",
+   "freq_src": "Enriquez et al. 2017, title: '1.1-1.9 GHz Observations of 692 Stars'.",
+   "snr": 25.0,
+   "snr_src": "Enriquez et al. 2017, ApJ 849, 104, sec. 4: 'For the A stars, we only consider hits with an S/N greater than 25.  We reserve the S/N range between 20 and 25 for RFI signals'; and sec. 5.1: 'the minimum detectable flux density for a five-minute L-band observation with the GBT, at 3 Hz resolution for an S/N of at least 25 is 17 Jy'.  The pipeline trigger was 20; the limit is quoted at 25.",
+   "scale_to_common": 0.2,
+   "pts_common": [
+    [
+     50.0,
+     2000000000000.0
+    ]
+   ]
+  },
+  "margot2023": {
+   "pts": [
+    [
+     100.0,
+     13500000000000.0
+    ],
+    [
+     6135.0,
+     5.08e+16
+    ]
+   ],
+   "src": "Margot et al. 2023, AJ 166, 206, sec. 6: 'fewer than 6.6% of the 331,312 stars within 100 pc host a transmitter that is detectable in our survey (EIRP > 1.35 x 10^13 W) ... For stars located within 20,000 ly, ... (EIRP > 5.08 x 10^16 W)'.  20,000 ly = 6135 pc.",
+   "chan_src": "Margot et al. 2023, sec. 3.6: 'For the UCLA SETI program at the GBT, we have ... Delta f ~= 3 Hz'; sec. 3.1 gives the 3.125 MHz VEGAS coarse channel, so with the 2^20 transform the resolution is 3.125e6 / 2^20 = 2.98 Hz.",
+   "freq_src": "Margot et al. 2023, title: '... with the Green Bank Telescope at 1.15-1.73 GHz'.",
+   "snr": 10.0,
+   "snr_src": "Margot et al. 2023, AJ 166, 206, sec. 3.6: 'Our usual detection threshold is set at S/N=10, such that signals with flux Sdet = 11.3 x 10^-26 W/m2 are detectable ... transmitters located 326 ly (100 pc) away are detectable with 0.62 Arecibos (EIRP=1.35 x 10^13 W)'.  The two plotted limits are quoted in that same sentence, so they carry that threshold.",
+   "scale_to_common": 0.5,
+   "pts_common": [
+    [
+     100.0,
+     6750000000000.0
+    ],
+    [
+     6135.0,
+     2.54e+16
+    ]
+   ]
+  },
+  "mason2024": {
+   "pts": [
+    [
+     1010.0,
+     6.91e+17
+    ]
+   ],
+   "src": "Mason et al. 2024, MNRAS 536, 2127, sec. 4: 'the smallest minimum detectable power ... is 6.91 x 10^17 W for the closest target star'; that star's distance in their Table 2 is 1.010 kpc.",
+   "chan_src": "Mason et al. 2024, sec. 3: 'The data were correlated with 3840 frequency points, each channel being 30.52 kHz wide'.",
+   "freq_src": "Mason et al. 2024: ALMA Band 3 (84-116 GHz), delta-nu < 35 kHz.",
+   "snr": 5.0,
+   "snr_src": "Mason et al. 2025, MNRAS 536, 2127, sec. 4: 'We assumed a Gaussian distribution for a pixel across all frequency channels and used SNR > 5 as our detection threshold ... We estimated the minimum detectable flux density, Smin, as the SNR threshold multiplied by the r.m.s measured within the field of view of each calibrator.'  This is the one comparison programme already on the common basis.",
+   "scale_to_common": 1.0,
+   "pts_common": [
+    [
+     1010.0,
+     6.91e+17
+    ]
+   ]
+  },
+  "price2020": {
+   "pts": [
+    [
+     null,
+     2000000000000.0
+    ],
+    [
+     null,
+     9000000000000.0
+    ]
+   ],
+   "src": "Price et al. 2020, AJ 159, 86, abstract: 'an upper limit on the power of potential radio transmitters at these frequencies at 2x10^12 W, and 9x10^12 W for GBT and Parkes respectively'.  Deepest per-target limits, not a single sample distance, so drawn as left-edge ticks.",
+   "chan_src": "Price et al. 2020, sec. 3: 'our high-resolution (~2.79 Hz) Stokes-I data'.",
+   "freq_src": "Price et al. 2020, title: 'Observations of 1327 Nearby Stars Over 1.10-3.45 GHz'.",
+   "snr": 10.0,
+   "snr_src": "Price et al. 2020, AJ 159, 86, sec. 3: 'we searched ... for narrowband signals with a S/N >=10'; and sec. 5.4: 'using a lower S/N cutoff (10 vs. 25).  The result is that our sensitivity is better by a factor of 2.5x' -- which is 25/10, so the limit is linear in the threshold in their own arithmetic.",
+   "scale_to_common": 0.5,
+   "pts_common": [
+    [
+     null,
+     1000000000000.0
+    ],
+    [
+     null,
+     4500000000000.0
+    ]
+   ]
+  }
+ },
+ "common_snr": 5.0,
+ "d2_guide_norm_W_at_1pc": 4000000000000.0
+}

@@ -1,0 +1,23 @@
+{
+ "class_a": {
+  "days": 14,
+  "independent": 39,
+  "months": 6,
+  "no_confirm": 21,
+  "one": 18,
+  "same_day": 3,
+  "sameday": 3,
+  "total": 60,
+  "years": 19
+ },
+ "days": 19,
+ "epoch_source": "epochs_r14: measurement set where one survives, the calibrated barycentric witness otherwise, the stored stamp last and never where two blocks share it",
+ "independent": 50,
+ "months": 8,
+ "one": 27,
+ "one_sided": "the witness can show separation and never simultaneity, so same_day is an upper bound and independent a lower bound",
+ "same_day": 5,
+ "sep_days": 1.0,
+ "total": 82,
+ "years": 23
+}

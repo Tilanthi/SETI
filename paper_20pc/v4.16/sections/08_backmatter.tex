@@ -1,0 +1,98 @@
+\section*{Author contributions}
+G.J.W.\ conceived the survey, defined the target sample and the selection
+criteria, and wrote the manuscript. R.D.\ built and operated the archival
+retrieval, calibration and search pipeline, implemented the spatial control
+statistic and the injection--recovery campaigns, and produced the per-window
+catalogue and its regeneration scripts. Both authors designed the vetting
+procedure, chose the masked species, carried out the statistical
+validation reported in \S\ref{sec:statistic} and
+Appendix~\ref{app:falsealarm}, and agreed the dispositions of
+Table~\ref{tab:ledger}.
+%% AUTHORS: confirm this division before submission, and see
+%% AUTHOR_ACTIONS.md item 6 for the affiliation statement this section
+%% should be read with.
+
+\section*{Funding}
+This work received no dedicated funding. It used public archival data and
+no observing time was awarded for it.
+%% AUTHORS: replace if any grant supported this work.
+
+\section*{Competing interests}
+The authors declare no competing interests. VBRL Holdings is a privately
+held company through which R.D.\ conducts independent research, named
+here solely as his affiliation; it had no role in the design of the
+survey, the selection of targets, the analysis, the decision to publish
+or the content of this paper, and provided no funding for the work.
+%% AUTHORS: confirm this wording, which is written to be accurate only if
+%% the company's involvement was indeed nil. See AUTHOR_ACTIONS.md item 6.
+
+\section*{Acknowledgements}
+This paper uses ALMA data from the public ALMA Science Archive. The \NEB{}
+primary-census execution blocks searched span \PrEbDateFirst{} to
+\PrEbDateLast{} and belong to \NProjCodes{} ALMA proposals, listed in
+Table~\ref{tab:projcodes}, whose principal investigators and teams we
+thank.\ProjCodeUnresClause{} ALMA is a partnership of ESO
+(representing its member states), NSF (USA) and NINS (Japan), together with NRC
+(Canada), NSTC and ASIAA (Taiwan), and KASI (Republic of Korea), in cooperation
+with the Republic of Chile. The Joint ALMA Observatory is operated by ESO,
+AUI/NRAO and NAOJ. This work has made use of data from the European Space
+Agency (ESA) mission {\it Gaia} \citep{GaiaDR3}, processed by the {\it Gaia}
+Data Processing and Analysis Consortium (DPAC). This research has made use
+of the SIMBAD database \citep{SIMBAD2000} (CDS, Strasbourg, France), of the NASA Exoplanet
+Archive \citep{NEA2013}, and of the Splatalogue spectral-line database
+\citep{Splatalogue2007}.
+
+\section*{Data Availability}
+\label{sec:data}
+Every observation this paper rests on is public. The \NEB{} primary-census
+execution blocks and the blocks of every other set named in
+Table~\ref{tab:blockledger} are held in the ALMA Science Archive and are
+retrieved there by the execution-block identifier, which
+Tables~\ref{tab:ledger} and~\ref{tab:ledgercont} give for every one of the
+\EvNCrossRaw{} threshold crossings. The ancillary catalogues are public in the
+same sense: Gaia~DR3 for the astrometry and the colours, the NASA Exoplanet
+Archive for the planet counts, and the CDMS and JPL line catalogues through
+Splatalogue for the mask, queried once on \McQueryDate.
+
+The derived results are in the paper. Table~\ref{tab:blockledger} partitions
+the blocks, windows, stars, systems and hours of every set the search defines;
+Table~\ref{tab:counts} carries every headline count, the five fates of the
+unprocessed blocks and the crossing partition; Tables~\ref{tab:ledger}
+and~\ref{tab:ledgercont} list all \EvNCrossRaw{} crossings with their
+frequencies in both frames, the stellar and control statistics, the nearest
+masked transition and the recurrence test; Table~\ref{tab:cand} gives the two
+leading events in full; and Table~\ref{tab:holdout} does the same for the
+reserved hold-out. The method is set out in enough detail to be
+reimplemented, and no separate data deposit accompanies the paper.
+
+Three choices that could create or remove an unattributed crossing carry an
+identifier anyone can check. The
+calibration hold-out rule of Appendix~\ref{sec:heldout} and the block list
+its first guard depends on were committed to the project repository as
+\texttt{c75069040eab52ec1336376a4dae62114bb281a3} on 2026 September~14 at
+07:10~UTC, \HoLeadBlockDays{} days before the first reserved block was
+searched. The molecular-line list is a single dated query of a public line
+catalogue (\McQueryDate), so it is specified rather than
+described, and it post-dates the fixing of the disposition criteria on
+\MkCritDate{} (\texttt{f5f52e7804f1baad99515ea2d46ddd7e4e4cd546}), as does
+every species in it, so no species in the list was recognised late or early
+with respect to them. The repository at
+\url{https://github.com/Tilanthi/SETI} is a working mirror and may move on.
+%% r15-deposit, 2026-10-08.  GLENN'S DECISION, VERBATIM: "For the Zenodo
+%% deposit, remove all traces of this offer from the paper, I will not be
+%% doing it."  This statement therefore promises nothing.  It names only what
+%% a reader can actually obtain: the ALMA archive, the public ancillary
+%% catalogues, the tables in this paper, and the two commits -- both of which
+%% resolve publicly (checked 2026-10-08; an all-zero control SHA 404s).
+%% `doigate.py` is INVERTED: it now FAILS if an unfulfilled promise of a
+%% deposit reappears anywhere in the manuscript.  Do not reintroduce
+%% "available on request" or "will be deposited" without the author's word.
+%% Referee 2's minor 14 ("insert the DOI") is DECLINED on the author's
+%% instruction, and the response letter must say so plainly.
+
+\section*{Software}
+The pipeline depends on CASA~6.7.6 \citep[casatools/casatasks
+6.7.6-14;][]{CASA2022}, Python~3 with astropy \citep{Astropy2022}, numpy
+\citep{Harris2020} and scipy \citep{Virtanen2020}, and the ALMA Science
+Archive and SIMBAD TAP interfaces through astroquery \citep{Ginsburg2019};
+all are free and open-source, at the versions cited.

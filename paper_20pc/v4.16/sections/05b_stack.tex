@@ -1,0 +1,107 @@
+\subsection{A stellar-frame multi-epoch stacked search}
+\label{sec:stack}
+
+Combining the epochs of a star in that star's own rest frame deepens the
+limit. \EpMulti{} of the \NSystems{} surveyed systems hold more than one
+searched execution block, and \SxStkStarCensus{} of the surveyed stars can be
+stacked, \SttNStkOneEb{} of them from blocks beyond the census. Over
+\SyStkNGroup{} stacked groups, \SyStkNEpochComb{} epoch-windows and
+\SyStkHours\,h, the flux limit improves by a median factor \SyStkGainMed{}
+over each star's best single epoch and \SyStkGainMax{} at most.
+\SxStkStarOutside{} further stars stack too --- \SyStkStarOos{} control stars
+beyond 40\,pc and \SyStkStarOther{} covered only by archival blocks --- and are
+excluded from those figures; over all \StkNStar{} stacked stars, whose stacks
+are mostly shallow two-epoch ones, the median gain is \StkLimitGainMed. Every
+stacked limit is measured by injection into the stack itself and never read
+off a stacked spectrum as a threshold.
+
+\emph{A fixed stellar-frame frequency is not a fixed observed frequency, so
+the epochs are registered before they are added.} The barycentric term alone
+swings by a median \StkVcorrSwingMed\,km\,s$^{-1}$ between the epochs of one
+star and by as much as \StkVcorrSwingMax{} --- many channels at the
+\StkRefChanKHz\,kHz Class~A width --- so epochs added as observed would dilute
+rather than reinforce. Each epoch is transformed to the stellar rest frame,
+divided by its own primary-beam response and combined by inverse variance
+over the channels of common stellar-frame coverage, keyed on the star's
+catalogued identity rather than the directory the search ran in. Spectra with
+pathological archived visibility weights are excluded first
+(\StkBadWeight{} of \StkNProd, which would otherwise dominate the sum). The transform is verified on a real line: HD~285968's molecular
+line collapses from a \StkRegTopoChan-channel topocentric spread to
+\StkRegStellarChan{} channels over \StkRegNEpoch{} epochs spanning
+\StkRegSpanD\,d.
+
+The criterion was fixed before any stellar position was examined: a stacked
+$Z\ge\StkZmin$ above every stacked control maximum, no epoch supplying more
+than \StkDomMax{} of the weighted sum, and at least \StkJkMin{} of the signal
+surviving removal of the strongest epoch. Controls are stacked identically
+and every clause evaluated at them, measuring the whole test's
+false-alarm rate at \StkCtrlFap{} per cent against a \StkFapCeil{} per cent
+ceiling fixed in advance.
+
+\emph{The gain is $\sqrt{N_{\rm eff}}$ and not $\sqrt{N}$}, where
+$N_{\rm eff}=\sigma_{\min}^{2}\sum_e\sigma_e^{-2}$ is the equivalent number of
+equal-depth epochs and the median $N_{\rm eff}/N$ is \StkNeffFrac. What a
+stack realises is $\sqrt{N_{\rm eff}}$ divided by the measured noise of its
+own stacked spectrum, and that noise follows the inverse-variance prediction
+to \StkGainVsNeff{} in the median, with a per-stack scatter of
+\StkMadZScatterPct{} per cent and nine stacks in ten between \SzNoiseLo{} and
+\SzNoiseHi. Against $\sqrt{N}$ the realised gain is \StkGainVsN, the
+shortfall being unequal epoch depth, so an epoch count alone misleads.
+\StkWorstStar{} stacks \StkWorstN{} epochs for a gain of only \StkWorstGain:
+its $N_{\rm eff}$ is \StkWorstNeff, so $\sqrt{N_{\rm eff}}$ is
+\SzWorstSqrtNeff, and its stacked spectrum came out \SzWorstNoise{} times as
+noisy as predicted.
+
+\emph{The deepest stacked limit is Proxima Centauri's, and it is a Class~B
+limit.} Proxima is covered by \StkProxN{} blocks over \StkProxHours\,h
+spanning \StkProxSpanYr\,yr, all of them coarse \ChanBModeMHz\,MHz windows,
+so the stack constrains an unresolved spectral excess and discriminates no
+drift. \SxProxEbCensus{} of those blocks belong to the primary census,
+\SzProxEbSearched{} were searched afterwards from the same public archive and
+\SzProxEbHold{} come from the reserved hold-out, all observed over the census
+blocks' own years. Stacking the census blocks alone, the set every
+other limit here uses, gives
+$\mathrm{EIRP}_{90}=\SzProxEirpCensus$\,W; adding the rest of the
+archive deepens that by \SzProxDeepen{} to $\StkProxEirpCal$\,W, against
+$\StkProxEirpSingle$\,W for the best single epoch on the same
+injection-calibrated convention. Its $N_{\rm eff}$ is only \StkProxNeff, so
+$\sqrt{N_{\rm eff}}=\SxProxSqrtNeff$ of the measured \StkProxGain{} is what
+combining the epochs buys, the rest being this spectrum's own noise. The limit
+holds for an emitter steady in the stellar frame to within one
+\ChanBModeMHz\,MHz channel,
+\StkProxTolKms\,km\,s$^{-1}$ peak to peak, with no inter-epoch drift above
+\StkProxDriftHzS\,Hz\,s$^{-1}$. At \StkProxDistPc\,pc that depth is mostly
+geometry; the gain is what stacking bought.
+
+\emph{\StkNSurvive{} groups pass the full criterion and both are known
+lines.} They are $\beta$~Pictoris' CO $J=1\!-\!0$ at
+\StkBpCoOneOff\,km\,s$^{-1}$ over \StkBpCoOneN{} epochs ($Z=\StkBpCoOneZ$)
+and its $J=2\!-\!1$ at \StkBpCoTwoOff\,km\,s$^{-1}$ ($Z=\StkBpCoTwoZ$),
+agreeing to \StkBpCrossKms\,km\,s$^{-1}$ or \StkBpCrossChan{} of a CO(1--0)
+channel: the astrophysical positive control passing in the stack. The
+survey's own $\pm\StkAttrKms$\,km\,s$^{-1}$ mask leaves
+\StkNUnattributedComputed{} of them unattributed. \StkPersistLineStar{} reaches
+$Z=\StkPersistLineZ$ on the line used above as the registration standard and is
+rejected by its own controls at \StkPersistLineCtrl: the emission is extended,
+as a cloud is and a transmitter is not.
+
+Every stacked limit above holds only for a carrier that stays inside one
+channel. At CO(2--1) one \StkRefChanKHz\,kHz channel spans
+\StkTolFineKms\,km\,s$^{-1}$, the whole excursion a stacked carrier is
+allowed, peak to peak. A transmitter on a short-period giant planet, its
+line-of-sight velocity swinging by
+$\pm\StkReflexAmpKms$\,km\,s$^{-1}$, crosses \SzReflexPPChanFine{} of those
+channels peak to peak and de-registers completely, against
+\SzReflexPPChanCoarse{} of a \ChanBModeMHz\,MHz window: the coarse
+stacks buy reflex tolerance with bandwidth. Drift divides the same way, a
+stack in \StkRefChanKHz\,kHz channels being confined to
+\StkDriftTolHzS\,Hz\,s$^{-1}$ over the median inter-epoch span of
+\StkSpanMedD\,d. No crossing of \S\ref{sec:etacrv} drifts that slowly: the
+slowest measured is \SttDriftMinHzS\,Hz\,s$^{-1}$, which leaves one channel in
+\SttDriftMinMin{} minutes, and in \SttNIncDisc{} of \NUnattributed{} cases the
+stack covering a crossing contains its discovery block. Toward the
+\SttNHostStar{} stars carrying them the stack is a deeper limit on a
+non-drifting carrier, not a test of these events. Each
+stacked limit therefore constrains only emitters stable in the stellar frame to
+within its own channel; the single-epoch limits of \S\ref{sec:excludes} apply
+generally.

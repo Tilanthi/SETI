@@ -1,0 +1,46 @@
+{
+ "CWTFM_survey_median_eirp": 13401.94523349431,
+ "CWTFM_survey_worst_eirp": 315156.33561256377,
+ "CWTFM_sys_median_eirp": 347662.6110307683,
+ "Margot2023_CWTFM_computed_here": {
+  "CWTFM": 0.10628247520075577,
+  "CWTFM_five": 0.05314123760037789,
+  "N": 11680.0,
+  "eirp": 10000000000000.0,
+  "nu_hi": 1.73,
+  "nu_lo": 1.15,
+  "nu_rel": 0.40277777777777785
+ },
+ "TR_survey": 0.17230411763502387,
+ "TR_sys": 4.469776467869229,
+ "cwtfm_ratio_enriquez_at_five": 78834.97196173124,
+ "cwtfm_ratio_enriquez_published": 15766.994392346249,
+ "dnu_survey_GHz": 47.74043000000026,
+ "dnu_sys_median_GHz": 1.8403319999999894,
+ "eirp_psel_best_W": 86667348219545.36,
+ "eirp_psel_median_W": 1555615201475617.8,
+ "eirp_psel_worst_W": 3.658140501089251e+16,
+ "f_upper_95": 0.05,
+ "f_upper_naive": 0.016666666666666666,
+ "literature_CWTFM": {
+  "Enriquez2017": 0.85,
+  "Phoenix": 49.0,
+  "Price2020_GBT": 0.11,
+  "Price2020_Parkes": 8.21
+ },
+ "literature_CWTFM_at_five_sigma": {
+  "Enriquez2017": 0.17,
+  "Margot2023": 0.05314123760037789,
+  "Price2020_GBT": 0.055,
+  "scale": {
+   "Enriquez2017": 0.2,
+   "Margot2023": 0.5,
+   "Price2020_GBT": 0.5
+  }
+ },
+ "n_systems_A": 60,
+ "nu_mid_GHz": 493.55236,
+ "nu_rel_survey": 0.09672819718661715,
+ "nu_rel_sys": 0.0037287472397052046,
+ "zeta_AO": 5e-11
+}

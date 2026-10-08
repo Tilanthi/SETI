@@ -1,0 +1,548 @@
+%% ★★★ v4.16: `numberedappendix` AND `appendixfloats` ADDED (referee 2, minor 2).
+%% Without `numberedappendix` the class sets
+%% `\AppendixApjSectionMarkInTitle#1{\relax}`, so an appendix heading prints
+%% its title and NO LETTER -- while the body cites "Appendix~D.2" and
+%% "\S D.2", which is exactly the referee's complaint: the reader is sent to a
+%% label that is nowhere on the page.  The letters and the subsection numbers
+%% were always in `\thesection`/`\thesubsection` and were simply not typeset.
+%% `appendixfloats` makes the appendix floats carry their appendix's letter
+%% (A1, B1, D1, D2, E1) and restart at one in each.  That is required rather
+%% than cosmetic for two reasons: it resolves the one numbering defect the
+%% figures owner flagged and could not fix from their own files -- an appendix
+%% figure cited seventh from the main text printed as "Figure 10", so the
+%% main-text sequence looked wrong when it was not -- and it is what lets the
+%% appendices be moved into separate Supporting Information without two
+%% documents claiming the same float numbers.  Every reference is a \ref, so
+%% nothing in the prose is typed.
+\documentclass[twocolumn,twocolappendix,numberedappendix,appendixfloats]{openjournal}
+
+%% ★★★★ AND THE DEFECT THE OPTION ABOVE CREATED, FOUND BY `labelcheck` F7 AND
+%% NOT BY pdflatex.  `appendixfloats` resets the float counters in each
+%% appendix, so the PRINTED numbers are right -- A1, C1, D1, D2 -- while the
+%% HYPERREF ANCHOR is built from the bare counter and is `table.1` for all
+%% four of the appendix tables at once.  Every body hyperlink to Table D1 then
+%% lands on Table 1, which is the fifth defect of this project that the log
+%% cannot see and a reader can.  `\theH...` is hyperref's own hook for exactly
+%% this: it must carry whatever makes the number unique, which here is the
+%% appendix letter.
+\makeatletter
+\AtBeginDocument{%
+  \renewcommand{\theHtable}{\thesection.\arabic{table}}%
+  \renewcommand{\theHfigure}{\thesection.\arabic{figure}}%
+  \renewcommand{\theHequation}{\thesection.\arabic{equation}}%
+}
+\makeatother
+
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{array}
+
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage{booktabs}
+
+%% ★★★ v4.11: SUPPRESS THE CLASS'S PREPRINT VERSION STAMP (referee 2, first
+%% minor).  `openjournal.cls` sets `\submitted{Version \today}` and then
+%% `\journalinfo{\@submitted}`, so the line is typeset twice -- once as the
+%% title-page slug and once in the journal-info header -- and it was the
+%% first thing on page 1.  The build pins SOURCE_DATE_EPOCH so that the
+%% figures and the PDF are byte-identical run to run, which means `\today`
+%% reads "January 1, 2020" and would read that for ever.
+%%
+%% The date is therefore NOT unfrozen: a reproducible build is worth more
+%% than a date, and a date that must never change should not be printed at
+%% all.  A journal submission does not want a preprint version stamp
+%% either.  Both are emptied here rather than in the class, which is a
+%% third-party template the journal may replace.  `abswords.py` and the
+%% LaTeX-log gate both read page 1, so a regression shows up there.
+\submitted{}
+\journalinfo{}
+% suppress the class's end-of-document template advertisement;
+% delete this block to restore it
+\makeatletter
+\renewenvironment{bottompar}{\setbox\z@\vbox\bgroup}{\egroup}
+%% ★ v4.16: AND THE SAME ADVERTISEMENT AT THE TOP OF PAGE 1, which the
+%% end-of-document suppression above did not reach.  "Preprint typeset using
+%% LaTeX style openjournal v. 09/06/15" was the first line of the paper --
+%% above the title -- and it is a property of the template, not of the work.
+%% Referee 2's first minor point was about exactly this kind of slug printed
+%% where a reader looks first; \submitted and \journalinfo were emptied for it
+%% and this line was left.  The \vspace that follows it is kept, so the title
+%% block does not move and no page count changes.
+\long\def\frontmatter@title@above{%
+  \vspace*{-\headsep}\vspace*{\headheight}%
+  \footnotesize
+  {\footnotesize\textsc{\@journalinfo}}\par
+  \par\vspace*{-\baselineskip}\vspace*{0.625in}%
+}%
+\makeatother
+
+% ---------------------------------------------------------------
+% \pv{\Macro} -- print a probability with its relational symbol.
+% Generated p-value macros are of two kinds: an ordinary value such as
+% 0.186, and a bound such as <10^{-4} for a probability too small for the
+% ensemble to resolve. Writing "$p=\Macro$" at the use site is right for
+% the first and produces "p =< 10^-4" for the second; writing "$p\Macro$"
+% is right for the second and produces "p0.186" for the first. Both
+% mistakes were in the manuscript. The relation therefore belongs with
+% the value, decided once, here: \pv inspects the first token of the
+% expanded macro and supplies "=" unless the value already carries its
+% own relational symbol.
+\makeatletter
+\def\@pvlt{<}\def\@pvgt{>}\def\@pveq{=}
+\def\@pvfirst#1#2\@nil{%
+  \def\@pvA{#1}%
+  \ifx\@pvA\@pvlt <#2%
+  \else\ifx\@pvA\@pvgt >#2%
+  \else\ifx\@pvA\@pveq =#2%
+  \else =#1#2\fi\fi\fi}
+\DeclareRobustCommand{\pv}[1]{p\,\expandafter\@pvfirst#1\@nil}
+\makeatother
+% ---------------------------------------------------------------
+% \rankstatus -- the status of the star-versus-control rank, in ONE
+% formulation used verbatim wherever the question arises (referee 1, item 1).
+% Earlier versions stated this in several incompatible ways: the main text
+% denied exchangeability while Appendix A asserted that star and controls
+% "remain exchangeable in signal-to-noise ratio", and a table caption called
+% the ensemble a "calibrated screen".  A macro makes the use sites identical
+% by construction rather than by proof-reading.
+\DeclareRobustCommand{\rankstatus}{The star-versus-control rank is an
+empirically useful way of deciding which crossing to examine first, but the
+stellar and control positions are not demonstrably exchangeable under the
+null. The rank therefore has no calibrated per-window false-alarm probability
+and is not used as evidence for detection.}
+% ---------------------------------------------------------------
+\shorttitle{An ALMA Archival Technosignature Search within 40\,pc}
+\shortauthors{White \& Dey}
+
+\input{survey_numbers}
+\input{survey_numbers_round8}
+\input{survey_numbers_round9}
+\input{survey_numbers_round10}
+\input{survey_numbers_round11}
+\input{survey_numbers_round12}
+\input{survey_numbers_round13}
+\input{survey_numbers_pointing}
+\input{survey_numbers_round15}
+\input{survey_numbers_round16}
+\input{survey_numbers_round17}
+\input{survey_numbers_recurrence}
+\input{survey_numbers_round14}
+\input{survey_numbers_localnull}
+\input{survey_numbers_round18}
+\input{survey_numbers_round19}
+\input{survey_numbers_round20}
+\input{survey_numbers_round21}
+\input{survey_numbers_round22}
+\input{survey_numbers_round23}
+\input{survey_numbers_round24}
+\input{survey_numbers_round25}
+\input{survey_numbers_round26}
+\input{survey_numbers_hd23484}
+\input{survey_numbers_bpicctrl}
+\input{survey_numbers_round27}
+\input{survey_numbers_round28}
+\input{survey_numbers_round29}
+\input{survey_numbers_round30}
+\input{survey_numbers_round31}
+\input{survey_numbers_round32}
+\input{survey_numbers_round33}
+\input{survey_numbers_round34}
+\input{survey_numbers_round35}
+\input{survey_numbers_round36}
+\input{survey_numbers_round37}
+\input{survey_numbers_round38}
+\input{survey_numbers_round39}
+\input{survey_numbers_round40}
+\input{survey_numbers_round41}
+\input{survey_numbers_round42}
+\input{survey_numbers_round43}
+\input{survey_numbers_round44}
+\input{survey_numbers_round45}
+\input{survey_numbers_round46}
+\input{survey_numbers_round47}
+\input{survey_numbers_round48}
+\input{survey_numbers_round49}
+\input{survey_numbers_round50}
+\input{survey_numbers_round51}
+\input{survey_numbers_round52}
+\input{survey_numbers_round53}
+\input{survey_numbers_round54}
+\input{survey_numbers_round55}
+\input{survey_numbers_round56}
+\input{survey_numbers_round57}
+\input{survey_numbers_round58}
+\input{survey_numbers_round59}
+\input{survey_numbers_round60}
+\input{survey_numbers_round61}
+\input{survey_numbers_round62}
+\input{survey_numbers_round63}
+\input{survey_numbers_round64}
+\input{survey_numbers_round75}
+\input{survey_numbers_round80}
+\input{survey_numbers_round81}
+\input{ledger_legend_v403}
+\input{survey_numbers_round77}
+\input{survey_numbers_round78}
+\input{survey_numbers_round79}
+\input{survey_numbers_round66}
+\input{survey_numbers_round67}
+\input{survey_numbers_round68}
+\input{survey_numbers_round69}
+\input{survey_numbers_round70}
+\input{survey_numbers_round71}
+\input{survey_numbers_round73}
+\input{survey_numbers_round74}
+% R2-4 (v3.99): a visually distinct symbol for tail quantities computed
+% against the screen's own exchangeability-violating null, so they cannot
+% be read as calibrated significance levels. p stays for genuine tests.
+\input{peff_range_v372}
+\input{survey_numbers_round82}
+\input{survey_numbers_round83}
+\input{survey_numbers_round84}
+\input{survey_numbers_round85}
+\input{survey_numbers_round86}
+\input{survey_numbers_round87}
+%% round 88 RETIRED (v4.11): maskframe_v404.py existed to PROVE the line mask
+%% was evaluated topocentrically, which is the defect R2-M3 asks us to fix and
+%% not a result.  The mask is evaluated in each star own rest frame by
+%% maskframe_v411.py (round 160) and \MaskNOffsetsMHz goes with the claim.
+\input{survey_numbers_round89}
+\input{survey_numbers_round90}
+\input{survey_numbers_round91}
+\input{survey_numbers_round92}
+%% round 93 RETIRED (v4.11): ladder_v405.py emitted a two-frame mask ladder
+%% nothing inputs.  The single-frame ladder and the robustness table are
+%% maskframe_v411.py (Table maskrobust, tab_maskrobust_v411.tex).
+\input{survey_numbers_round94}
+% v4.06 (DECISIONS_R8 D16/D17/D18 and the v4.05 residue)
+\input{survey_numbers_round95}
+\input{survey_numbers_round96}
+\input{survey_numbers_round97}
+\input{survey_numbers_round98}
+\input{survey_numbers_round99}
+\input{survey_numbers_round100}
+\input{survey_numbers_round101}
+\input{survey_numbers_round102}
+\input{regen_count}
+%% round 104 (figures owner): the quantities the beta Pic positive-control
+%% figure draws, emitted by its own generator so the figure and the caption
+%% cannot disagree.  Before round 103, which must stay last.
+\input{survey_numbers_round104}
+%% round 65 (sensitivity owner): what the injected carriers deposit -- the
+%% correlator's three-point channel response at random sub-channel phase.  The
+%% two-stratum completeness it also measured is SUPERSEDED by round 180: with
+%% the rank out of the chain there is nothing to stratify on.  Before 103.
+\input{survey_numbers_round65}
+%% round 72 (sensitivity owner): the omitted annual parallax, applied -- the
+%% shallower limits it gives and the corrected per-window trigger.  Before
+%% round 103.
+\input{survey_numbers_round72}
+%% round 105 RETIRED with screencost_v410.py: Ruling 1 takes the spatial rank
+%% out of the disposition chain, so the completeness is not charged for it and
+%% there is no screen cost to publish.  The like-for-like rank cost that
+%% survives is sens_r11.py's, measured over the same injected windows as the
+%% completeness itself (round 180, cited as \SensCostLike in Sec. 5.1).
+%% round 110 (ledger owner): the block and window ledger -- every set of
+%% execution blocks the paper uses, in rows that sum, each count asserted
+%% equal to the macro the rest of the paper already uses for it.  Before 103.
+\input{survey_numbers_round110}
+%% round 111 (ledger owner): the selection function on one parallax cut, every
+%% searched star classified, confirmed planets from a dated catalogue.
+\input{survey_numbers_round111}
+%% round 120 (recurrence owner): the stellar-frame recurrence test applied to
+%% every unattributed crossing, and the separation of what the survey could
+%% search from what it could confirm.  Before round 103.
+\input{survey_numbers_round120}
+%% round 130 (statistics owner): the on-star noise ratio, the direction of the
+%% spatial rank and the data-quality disposition.  Before round 103.
+\input{survey_numbers_round130}
+%% round 135 (cover owner): the survey-completeness map N*(nu, EIRP), Fig. covmap.
+\input{survey_numbers_round135}
+%% round 140 (stack owner): every stack tolerance computed from that stack's
+%% own channel width, paired with the width macro so the two can never be
+%% printed apart, plus the stacking weight pathology.  Before round 103.
+\input{survey_numbers_round140}
+%% round 170 (line-mask owner): the line list itself -- the catalogue query,
+%% its rule, and the rest frequencies the mask table prints.  Before 160,
+%% which measures attribution against it.
+\input{survey_numbers_round170}
+%% round 160 (line-mask and frame owner): the mask evaluated in each star's
+%% own rest frame -- the frame chain, what the mask costs, and the one line
+%% coincidence reported as a note rather than as a disposition.  Before 103.
+\input{survey_numbers_round160}
+%% round 175 (detection-chain owner): the execution-block quality criterion,
+%% the class decomposition of the crossings, and the chance expectation with
+%% its measured tail factor.  Before 103.
+\input{survey_numbers_round175}
+%% Round 11.  One generator per file, each in its own reserved block:
+%% 180 sensitivity, 185 coverage, 190/191 events, 195 consistency, 200 prose,
+%% 205 the crossing census, 210 the stack.  Each must be input or its macros
+%% are undefined.
+%% ★ These go BEFORE round 103, not after.  Round 103 is the retirement pass
+%% and its \renewcommands are what make a superseded value unreachable; a
+%% macro file input after it can silently restore a name 103 exists to kill.
+%% I put them after it first, and only the comment below stopped me.
+\input{survey_numbers_round180}
+\input{survey_numbers_round185}
+\input{survey_numbers_round190}
+\input{survey_numbers_round191}
+\input{survey_numbers_round195}
+\input{survey_numbers_round200}
+\input{survey_numbers_round205}
+\input{survey_numbers_round210}
+%% Round 12.  One generator per file, each in its own reserved block:
+%% 220 the measured recurrence null and the widened window
+%% (recurnull_v413.py), 230 the quality-passing/flagged crossing split
+%% (events_r12.py), 240 the uniform species rule and the recurrence test on
+%% the attributed crossings (maskrecur_v413.py), 250 the intermittency
+%% campaign and the drift-grid relation (sens_r12.py), 260 the chance
+%% comparison over one stated population (stats_v413.py), 270 the
+%% census-only stacked limit (stackfix_v413.py), 300 the census closure
+%% (census_r12.py).
+%% ★ Same rule as the round-11 block above, and it matters more with seven
+%% files: every one of these is input BEFORE round 103, because round 103 is
+%% the retirement pass and a macro file read after it can silently restore a
+%% name 103 exists to kill.
+\input{survey_numbers_round220}
+\input{survey_numbers_round230}
+\input{survey_numbers_round330}
+\input{survey_numbers_round250}
+\input{survey_numbers_round260}
+\input{survey_numbers_round270}
+\input{survey_numbers_round300}
+\input{survey_numbers_round310}
+\input{survey_numbers_round340}
+\input{survey_numbers_round350}
+%% round 14.  These five go here, ABOVE round 103, because round 103's
+%% \renewcommands are the retirement pass and must see every definition.
+\input{survey_numbers_round410}
+\input{survey_numbers_round420}
+\input{survey_numbers_round421}
+\input{survey_numbers_round440}
+\input{survey_numbers_round450}
+\input{survey_numbers_round460}
+%% round 510 (r15-cells): every above-trigger cell of every window, the chance
+%% expectation at the same grain, and the recurrence test run on each cell the
+%% attribution leaves unattributed.
+\input{survey_numbers_round510}
+%% round 520 (r15-lsr): the LSR evaluation of the line mask.  This \input was
+%% missing, which left roundcollide failing on an orphan round file and every
+%% \Ls... macro undefined; added by r15-recur because \S5.6 cites two of them.
+%% Rounds 530 (r15-calib) and 540 (r15-smear) were missing their \input lines
+%% too, and \S5.3.1 and \S5.1 already cite \Cd... and \Sm... macros, so the
+%% build stopped on an undefined control sequence rather than on a warning.
+%% All three added here by r15-recur; each owner should confirm the placement.
+\input{survey_numbers_round520}
+\input{survey_numbers_round530}
+\input{survey_numbers_round540}
+%% round 550 (r15-recur): what the recurrence test permits, the four recovery
+%% probabilities singly, and the two attributed crossings not recovered.
+\input{survey_numbers_round550}
+%% round 560 (counts owner): the master count table.  Every value in it is
+%% read out of the macro layer, so this input adds arithmetic between the
+%% published counts and the per-system decomposition of the chance
+%% expectation, and no count of its own except the Class A crossing total.
+\input{survey_numbers_round560}
+%% round 570 (figures owner): the comparison programmes of Figure 1 -- each
+%% one's own published detection threshold, the factor that puts it on the
+%% common 5 sigma basis, and its channel width.  Table~\ref{tab:litthresh}
+%% and the figure are generated together from this, so they cannot disagree.
+\input{survey_numbers_round570}
+%% round 600 (integrator): the two published searches above 30 GHz that
+%% reached nearby stars, read out of the sentence of each paper that
+%% states each number.  Section 1 typed five of their values; a number
+%% typed into LaTeX is checked by nothing, and this round has already
+%% been caught mis-attributing two external constants.  Before 103.
+\input{survey_numbers_round600}
+%% round 103 (numbers owner): the adopted sensitivity, the stellar-frame
+%% attribution counts, the one benchmark, the one uncertainty interval, and
+%% the retirement of every superseded synonym.  MUST be the last macro
+%% input: its \renewcommands are what make a superseded value unreachable.
+\input{survey_numbers_round103}
+
+%% Two-column measure (v3.61): the narrow column cannot always justify a line
+%% of technical text, so allow the paragraph builder a last-resort stretch
+%% rather than shipping underfull boxes.
+\setlength{\emergencystretch}{1.2em}
+
+%% Reference-list leading, tightened so the list does not spill a page.
+\setlength{\bibbaselineskip}{2.52mm}
+
+\usepackage{enumitem}
+
+%% ========================================================================
+%% ★★★★ THE SUPPORTING-INFORMATION SWITCH.  ONE SOURCE, THREE BUILDS.
+%%
+%% The paper is 31 pp against an instruction to reach 25, every page of it is
+%% required by one referee or the other, and no measurement is going to be
+%% deleted to reach a page count.  The route that satisfies both constraints
+%% is the journal's own: the appendices become online Supporting Information,
+%% where they stay citable, stay lettered A--E and stay numbered, while the
+%% printed paper falls to the main text alone.
+%%
+%% This is a SWITCH, not a rewrite.  Nothing is duplicated and no appendix
+%% text is touched: the five appendix files are \input by exactly one of the
+%% two documents, chosen by a macro defined on the command line.
+%%
+%%   pdflatex technosignatures_40pc_v4.16.tex
+%%       the paper as it stands, appendices inline.  THE DEFAULT, and the
+%%       build every gate reads -- no \ifdefined below is true, so this path
+%%       is byte-for-byte the document that existed before the switch.
+%%
+%%   pdflatex -jobname=si_appendices "\def\SIAPPX{}\input{technosignatures_40pc_v4.16}"
+%%       the Supporting Information document: title block, the five
+%%       appendices, the bibliography.
+%%
+%%   pdflatex -jobname=paper_si "\def\SIPAPER{}\input{technosignatures_40pc_v4.16}"
+%%       the printed paper without them, carrying the Supporting Information
+%%       notice instead.
+%%
+%% `make_si.sh` runs the last two to convergence and reports both page counts.
+%% Each cites the other's labels through `xr`, which reads the other
+%% document's .aux, so "Appendix~\ref{app:linemask}" in the paper still
+%% prints "C" and "\S\ref{sec:technosearch}" in an appendix still prints its
+%% section number.  `xr` is loaded only in the two split modes; the default
+%% build loads nothing new.
+\ifdefined\SIPAPER \usepackage{xr}\externaldocument{si_labels}\fi
+\ifdefined\SIAPPX  \usepackage{xr}\externaldocument{paper_labels}\fi
+%% ========================================================================
+
+\begin{document}
+
+%% ★★★ v4.11 TITLE SCOPE.  The round-9 ruling put \NSystems{} stellar
+%% systems in the title, on the argument that the title should state what the
+%% ARCHIVE search covered while the abstract names the carrier experiment
+%% inside it.  That argument was defensible and it is now superseded: R1-5
+%% forbids the \NSystems{} figure from being the first number a reader
+%% meets, because the carrier experiment -- which is the paper's result --
+%% covers \NSysClassA{} systems, and a title contradicted by the abstract
+%% immediately below it is the easiest point a referee can make.  No count
+%% leads the title at all now.  The frequency range is the CARRIER search's
+%% own range, \SurvFreqLoA--\SurvFreqHiA: a title that quoted the archival
+%% harvest \SurvFreqLo--\SurvFreqHi{} would promise a carrier search over a
+%% band whose lower end carries only the coarse-channel spectral-excess
+%% experiment, which cannot discriminate a carrier at all, and the abstract
+%% immediately below would then contradict it.  The coarse experiment's
+%% wider reach is stated where it is described, not in the title.
+%% ★ The title is defined ONCE and used in both documents: the Supporting
+%% Information must carry the paper's title and a copy of it would be a
+%% second place to correct.
+\newcommand{\PaperTitle}{An Archival ALMA Search for Unresolved
+Spectral-Carrier Technosignatures toward Stars within 40\,pc
+at \SurvFreqLoA--\SurvFreqHiA\,GHz}
+\ifdefined\SIAPPX
+  \title{Supporting Information for: \PaperTitle}
+\else
+  \title{\PaperTitle}
+\fi
+
+\author{Glenn J. White\altaffilmark{1,2} and Robin Dey\altaffilmark{3}}
+\altaffiltext{1}{School of Physical Sciences, The Open University, Walton Hall, Milton Keynes, MK7 6AA, UK; glenn.white@open.ac.uk}
+\altaffiltext{2}{RAL Space, STFC Rutherford Appleton Laboratory, Harwell Campus, Didcot, OX11 0QX, UK}
+\altaffiltext{3}{VBRL Holdings, 50/5 Huay Kaew Road, Chang Phueak, Chiang Mai, Thailand}
+
+%% THE BODY.  Suppressed in the Supporting Information document, which
+%% carries the appendices and the reference list and nothing else.
+\ifdefined\SIAPPX\else
+\input{sections/abstract}%
+\enlargethispage{0\baselineskip}
+\input{sections/01_intro}%
+\input{sections/02_background}%
+\input{sections/03_sample}%
+\input{sections/04_method}%
+\input{sections/05_results}%
+\input{sections/05b_stack}%
+\input{sections/06_discussion}%
+\input{sections/07_conclusions}%
+\input{sections/08_backmatter}%
+\fi
+
+%% THE APPENDICES.  Suppressed in the printed-paper-with-SI document, which
+%% carries the notice below in their place.  In every other mode -- including
+%% the default -- they are typeset here exactly as before.
+\ifdefined\SIPAPER
+\input{sections/si_notice}%
+\else
+%% ★ The class triggers \maketitle from the FIRST \section, and \appendix
+%% replaces \section with a definition carrying no such trigger -- so the
+%% Supporting Information document, whose first sectioning command is an
+%% appendix heading, printed its appendices with no title block at all.
+%% Called explicitly here, in that mode only.
+\ifdefined\SIAPPX \maketitle \fi
+\appendix
+%% ★ gate.sh printed "appendix starts p. None" for four versions, because it
+%% looked for a \newlabel{page:appstart} nobody had ever written.  A \label
+%% here would be one `labelcheck` F4 fails on -- never referenced, which is
+%% right, since no sentence should cite it -- so the gate now LOCATES the
+%% class's own "APPENDIX" divider in the rendered PDF instead.  Nothing to
+%% declare in the source; see gate.sh.
+
+\input{sections/app_A_reproducibility}%
+\input{sections/app_C_spatialnorm}%
+\input{sections/app_I_linemask}%
+\input{sections/app_J_falsealarm}%
+\input{sections/app_N_rfi}%
+\fi
+\begin{thebibliography}{99}
+\bibitem[Akeson et al.(2013)]{NEA2013} Akeson R.~L., et al., 2013, PASP, 125, 989
+\bibitem[Astropy Collaboration et al.(2022)]{Astropy2022} Astropy Collab., 2022, ApJ, 935, 167
+\bibitem[Backus \& Project Phoenix Team(2002)]{Backus2002} Backus P.~R., Project Phoenix Team, 2002, in Stanimirovi\'{c} S., Altschuler D., Goldsmith P., Salter C., eds, ASP Conf. Ser. Vol. 278, Single-Dish Radio Astronomy: Techniques and Applications. Astron. Soc. Pac., San Francisco, p.~525
+\bibitem[Burton et al.(2022)]{Burton2022} Burton K., MacGregor M. A., Osten R. A., 2022, ApJL, 939, L6
+\bibitem[CASA Team et al.(2022)]{CASA2022} CASA Team, 2022, PASP, 134, 114501
+\bibitem[Cataldi et al.(2023)]{Cataldi2023} Cataldi G., et al., 2023, ApJ, 951, 111
+\bibitem[Choza et al.(2024)]{Choza2024} Choza C., et al., 2024, AJ, 167, 10
+\bibitem[Cocconi \& Morrison(1959)]{CocconiMorrison1959} Cocconi G., Morrison P., 1959, Nature, 184, 844
+\bibitem[Cortes et al.(2026)]{ALMAHandbook} Cortes P.~C., et al., 2026, ALMA Cycle~13 Technical Handbook, ALMA Doc. 13.3, ver. 1.0, doi:10.5281/zenodo.18793803
+\bibitem[Czech et al.(2021)]{Czech2021} Czech D.~J., et al., 2021, PASP, 133, 064502
+\bibitem[Dame et al.(2001)]{Dame2001} Dame T.~M., Hartmann D., Thaddeus P., 2001, ApJ, 547, 792
+\bibitem[Dame \& Thaddeus(2022)]{DameThaddeus2022} Dame T.~M., Thaddeus P., 2022, ApJS, 262, 5
+\bibitem[Dent et al.(2014)]{Dent2014} Dent W. R. F., et al., 2014, Science, 343, 1490
+\bibitem[Drake(1961)]{Drake1960} Drake F.~D., 1961, Physics Today, 14(4), 40
+\bibitem[Enriquez et al.(2017)]{Enriquez2017} Enriquez J.~E., et al., 2017, ApJ, 849, 104
+\bibitem[Gaia Collaboration et al.(2023)]{GaiaDR3} Gaia Collab., Vallenari A., et al., 2023, A\&A, 674, A1
+\bibitem[Garrett(2026)]{BRaTs2026} Garrett M.~A., 2026, MNRAS, in press (arXiv:2605.10212)
+\bibitem[Ginsburg et al.(2019)]{Ginsburg2019} Ginsburg A., et al., 2019, AJ, 157, 98
+\bibitem[Harris et al.(2020)]{Harris2020} Harris C.~R., et al., 2020, Nature, 585, 357
+\bibitem[Hunter et al.(2018)]{ALMATsys2018} Hunter T.~R., Phillips N.~M., Brogui\`{e}re D., Gonz\'{a}lez J., 2018, Improving the Calibration of Atmospheric Spectral Features in ALMA Data. NA ALMA 2016 Development Study Final Report, 2018 March 2
+\bibitem[International Telecommunication Union(2024)]{ITU2024} International Telecommunication Union, 2024, Radio Regulations, Edition of 2024. ITU, Geneva
+\bibitem[Jacobson-Bell et al.(2025)]{GLOBULAR2025} Jacobson-Bell B., et al., 2025, AJ, 169, 206
+\bibitem[Johnson et al.(2023)]{LOFARdualsite2023} Johnson O.~A., et al., 2023, AJ, 166, 193
+\bibitem[Kameno(2014)]{ALMATechNote15} Kameno S., 2014, ALMA Cross Correlation Bandpass Stability. ALMA Technical Note 15 (draft), 2014 December 17
+\bibitem[Li et al.(2026)]{FAST3IATLAS2025} Li J.-K., Tao Z.-Z., Zhang T.-J., 2026, ApJ, 1006, 163
+\bibitem[Ma et al.(2023)]{Ma2023} Ma P.~X., et al., 2023, NatAs, 7, 492
+\bibitem[MacGregor et al.(2020)]{MacGregor2020} MacGregor M.~A., et al., 2020, ApJ, 891, 80
+\bibitem[Manunza et al.(2025)]{SRT2025} Manunza L., et al., 2025, AcAau, 233, 155
+\bibitem[Margot et al.(2023)]{Margot2023} Margot J.-L., et al., 2023, AJ, 166, 206
+\bibitem[Mason et al.(2025)]{Mason2025} Mason L.~A., Garrett M.~A., Wandia K., Siemion A.~P.~V., 2025, MNRAS, 536, 2127
+\bibitem[Mauersberger et al.(1996)]{Mauersberger1996} Mauersberger R., Wilson T.~L., Rood R.~T., Bania T.~M., Hein H., Linhart A., 1996, A\&A, 306, 141
+\bibitem[Matrà et al.(2017)]{Matra2017} Matrà L., et al., 2017, MNRAS, 464, 1415
+\bibitem[Morrison et al.(2023)]{Morrison2023} Morrison I.~S., et al., 2023, PASA, 40, e019
+\bibitem[M\"uller et al.(2005)]{CDMS2005} M\"uller H.~S.~P., et al., 2005, JMoSt, 742, 215
+\bibitem[Pardo et al.(2025)]{AnomalyParkesGBT2025} Pardo S., et al., 2025, AJ, 170, 12
+\bibitem[Pickett et al.(1998)]{Pickett1998} Pickett H.~M., et al., 1998, JQSRT, 60, 883
+\bibitem[Planck Collaboration et al.(2016)]{PlanckCO2016} Planck Collab., Adam R., et al., 2016, A\&A, 594, A10
+\bibitem[Price et al.(2020)]{Price2020} Price D.~C., et al., 2020, AJ, 159, 86
+\bibitem[Privon et al.(2026)]{ALMAPropGuide} Privon G., et al., 2026, ALMA Cycle~13 Proposer's Guide, ALMA Doc. 13.2, ver. 1.0, doi:10.5281/zenodo.18793859
+\bibitem[Remijan et al.(2007)]{Splatalogue2007} Remijan A.~J., Markwick-Kemper A., ALMA Working Group on Spectral Line Frequencies, 2007, in American Astronomical Society Meeting Abstracts 211, 132.11
+\bibitem[Richards et al.(2022)]{Richards2022} Richards A.~M.~S., et al., 2022, Self-calibration and improving image fidelity for ALMA and other radio interferometers, ALMA Memo 620
+\bibitem[Sheikh et al.(2019)]{Sheikh2019} Sheikh S.~Z., Wright J.~T., Siemion A.~P.~V., Enriquez J.~E., 2019, ApJ, 884, 14
+\bibitem[Sheikh(2020)]{Sheikh2020} Sheikh S.~Z., 2020, IJAsB, 19, 237
+\bibitem[Sheikh et al.(2021)]{Sheikh2021} Sheikh S.~Z., et al., 2021, Nature Astronomy, 5, 1153
+\bibitem[Sheikh et al.(2025)]{EarthDetectingEarth2025} Sheikh S.~Z., et al., 2025, AJ, 169, 118
+\bibitem[Steffes \& DeBoer(1994)]{Steffes1994} Steffes P.~G., DeBoer D.~R., 1994, Icarus, 107, 215
+\bibitem[Stephens et al.(2002)]{CloudSat2002} Stephens G.~L., et al., 2002, Bull. Am. Meteorol. Soc., 83, 1771
+\bibitem[Tarter(2001)]{Tarter2001} Tarter J., 2001, ARA\&A, 39, 511
+\bibitem[Tremblay \& Tingay(2024)]{Tremblay2024} Tremblay C.~D., Tingay S.~J., 2024, ApJ, 972, 76
+\bibitem[Vidal et al.(2026)]{SETIreview2025} Vidal C., et al., 2026, arXiv:2605.21093 (preprint)
+\bibitem[Virtanen et al.(2020)]{Virtanen2020} Virtanen P., et al., 2020, NatMe, 17, 261
+\bibitem[Wehr et al.(2023)]{EarthCARE2023} Wehr T., et al., 2023, Atmos. Meas. Tech., 16, 3581
+\bibitem[Wenger et al.(2000)]{SIMBAD2000} Wenger M., et al., 2000, A\&AS, 143, 9
+\bibitem[Wright et al.(2018)]{Wright2018} Wright J.~T., et al., 2018, AJ, 156, 260
+\bibitem[Zhang et al.(2020)]{Zhang2020} Zhang Z.-S., et al., 2020, ApJ, 891, 174
+\end{thebibliography}
+
+\end{document}
+
+

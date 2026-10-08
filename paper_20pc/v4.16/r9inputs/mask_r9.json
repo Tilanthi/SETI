@@ -1,0 +1,526 @@
+{
+ "F3": {
+  "got": [
+   11,
+   10,
+   3,
+   2,
+   2
+  ],
+  "want": [
+   11,
+   10,
+   3,
+   2,
+   2
+  ],
+  "attributed_50": 16,
+  "unattributed_50": 40,
+  "n53": 53,
+  "unattributed_50_on53": 37,
+  "attributed_50_on53": 16
+ },
+ "F4": {
+  "n": 44,
+  "attributed_50": 14,
+  "unattributed_50": 30,
+  "rank_flagged_50": 2
+ },
+ "F5": {
+  "n_overlap": 1474,
+  "max_diff": 0.002183977719603547,
+  "med_diff": 1.5754815230195618e-06,
+  "n_multistar_blocks_skipped": 127
+ },
+ "stellar_all56": {
+  "13": {
+   "attributed": 15,
+   "unattributed": 41,
+   "rank_flagged_unattributed": 3,
+   "names": [
+    [
+     "61 Vir",
+     "A002_Xc079b5_X82f",
+     457.1
+    ],
+    [
+     "CP-72 2713",
+     "A002_Xff0235_X4a6d",
+     -1299.9
+    ],
+    [
+     "HD 48370",
+     "A002_Xc26103_X155a",
+     -17.8
+    ]
+   ]
+  },
+  "20": {
+   "attributed": 16,
+   "unattributed": 40,
+   "rank_flagged_unattributed": 2,
+   "names": [
+    [
+     "61 Vir",
+     "A002_Xc079b5_X82f",
+     457.1
+    ],
+    [
+     "CP-72 2713",
+     "A002_Xff0235_X4a6d",
+     -1299.9
+    ]
+   ]
+  },
+  "30": {
+   "attributed": 16,
+   "unattributed": 40,
+   "rank_flagged_unattributed": 2,
+   "names": [
+    [
+     "61 Vir",
+     "A002_Xc079b5_X82f",
+     457.1
+    ],
+    [
+     "CP-72 2713",
+     "A002_Xff0235_X4a6d",
+     -1299.9
+    ]
+   ]
+  },
+  "50": {
+   "attributed": 16,
+   "unattributed": 40,
+   "rank_flagged_unattributed": 2,
+   "names": [
+    [
+     "61 Vir",
+     "A002_Xc079b5_X82f",
+     457.1
+    ],
+    [
+     "CP-72 2713",
+     "A002_Xff0235_X4a6d",
+     -1299.9
+    ]
+   ]
+  },
+  "100": {
+   "attributed": 16,
+   "unattributed": 40,
+   "rank_flagged_unattributed": 2,
+   "names": [
+    [
+     "61 Vir",
+     "A002_Xc079b5_X82f",
+     457.1
+    ],
+    [
+     "CP-72 2713",
+     "A002_Xff0235_X4a6d",
+     -1299.9
+    ]
+   ]
+  }
+ },
+ "sky_all56": {
+  "13": {
+   "attributed": 1,
+   "unattributed": 55,
+   "rank_flagged_unattributed": 11,
+   "names": [
+    [
+     "61 Vir",
+     "A002_Xc079b5_X82f",
+     448.9
+    ],
+    [
+     "CP-72 2713",
+     "A002_Xff0235_X4a6d",
+     -1323.2
+    ],
+    [
+     "HD 48370",
+     "A002_Xc26103_X155a",
+     -34.2
+    ],
+    [
+     "bet Pic",
+     "A002_Xa7a216_X23e4",
+     -14.0
+    ],
+    [
+     "bet Pic",
+     "A002_Xd9668b_X3a90",
+     -28.4
+    ],
+    [
+     "bet Pic",
+     "A002_Xd9668b_Xa9df",
+     -28.6
+    ],
+    [
+     "bet Pic",
+     "A002_Xf4df6f_Xc7",
+     -23.3
+    ],
+    [
+     "bet Pic",
+     "A002_Xf5d76d_X32f1",
+     -26.9
+    ],
+    [
+     "bet Pic",
+     "A002_Xf5d76d_Xcc5",
+     -27.6
+    ],
+    [
+     "bet Pic",
+     "A002_Xf5d76d_Xe19",
+     -27.7
+    ],
+    [
+     "bet Pic",
+     "A002_Xf5d76d_Xeb8",
+     -27.8
+    ]
+   ]
+  },
+  "20": {
+   "attributed": 3,
+   "unattributed": 53,
+   "rank_flagged_unattributed": 10,
+   "names": [
+    [
+     "61 Vir",
+     "A002_Xc079b5_X82f",
+     448.9
+    ],
+    [
+     "CP-72 2713",
+     "A002_Xff0235_X4a6d",
+     -1323.2
+    ],
+    [
+     "HD 48370",
+     "A002_Xc26103_X155a",
+     -34.2
+    ],
+    [
+     "bet Pic",
+     "A002_Xd9668b_X3a90",
+     -28.4
+    ],
+    [
+     "bet Pic",
+     "A002_Xd9668b_Xa9df",
+     -28.6
+    ],
+    [
+     "bet Pic",
+     "A002_Xf4df6f_Xc7",
+     -23.3
+    ],
+    [
+     "bet Pic",
+     "A002_Xf5d76d_X32f1",
+     -26.9
+    ],
+    [
+     "bet Pic",
+     "A002_Xf5d76d_Xcc5",
+     -27.6
+    ],
+    [
+     "bet Pic",
+     "A002_Xf5d76d_Xe19",
+     -27.7
+    ],
+    [
+     "bet Pic",
+     "A002_Xf5d76d_Xeb8",
+     -27.8
+    ]
+   ]
+  },
+  "30": {
+   "attributed": 12,
+   "unattributed": 44,
+   "rank_flagged_unattributed": 3,
+   "names": [
+    [
+     "61 Vir",
+     "A002_Xc079b5_X82f",
+     448.9
+    ],
+    [
+     "CP-72 2713",
+     "A002_Xff0235_X4a6d",
+     -1323.2
+    ],
+    [
+     "HD 48370",
+     "A002_Xc26103_X155a",
+     -34.2
+    ]
+   ]
+  },
+  "50": {
+   "attributed": 16,
+   "unattributed": 40,
+   "rank_flagged_unattributed": 2,
+   "names": [
+    [
+     "61 Vir",
+     "A002_Xc079b5_X82f",
+     448.9
+    ],
+    [
+     "CP-72 2713",
+     "A002_Xff0235_X4a6d",
+     -1323.2
+    ]
+   ]
+  },
+  "100": {
+   "attributed": 16,
+   "unattributed": 40,
+   "rank_flagged_unattributed": 2,
+   "names": [
+    [
+     "61 Vir",
+     "A002_Xc079b5_X82f",
+     448.9
+    ],
+    [
+     "CP-72 2713",
+     "A002_Xff0235_X4a6d",
+     -1323.2
+    ]
+   ]
+  }
+ },
+ "newly_evaluable": [
+  {
+   "star": "BD05 1668",
+   "eb": "A002_Xc7fa6f_X28a8",
+   "dv_sky": 5907.7,
+   "dv_stellar": 5912.5,
+   "line": "13CO(2-1)",
+   "v_corr": 13.546,
+   "v_sys": 18.36,
+   "v_corr_src": "bary.json",
+   "v_sys_src": "SIMBAD 2018MNRAS.475.1960F",
+   "attributed": false,
+   "bound": false
+  },
+  {
+   "star": "BD05 1668",
+   "eb": "A002_Xc7fa6f_X28a8",
+   "dv_sky": -4936.1,
+   "dv_stellar": -4931.3,
+   "line": "CO(2-1)",
+   "v_corr": 13.546,
+   "v_sys": 18.36,
+   "v_corr_src": "windows.json (this block, this star)",
+   "v_sys_src": "SIMBAD 2018MNRAS.475.1960F",
+   "attributed": false,
+   "bound": false
+  },
+  {
+   "star": "BD05 1668",
+   "eb": "A002_Xc7fa6f_X28a8",
+   "dv_sky": -5917.2,
+   "dv_stellar": -5912.4,
+   "line": "CS(5-4)",
+   "v_corr": 13.546,
+   "v_sys": 18.36,
+   "v_corr_src": "windows.json (this block, this star)",
+   "v_sys_src": "SIMBAD 2018MNRAS.475.1960F",
+   "attributed": false,
+   "bound": false
+  },
+  {
+   "star": "BD05 1668",
+   "eb": "A002_Xc7fa6f_X28a8",
+   "dv_sky": -3354.5,
+   "dv_stellar": -3349.7,
+   "line": "CS(5-4)",
+   "v_corr": 13.546,
+   "v_sys": 18.36,
+   "v_corr_src": "windows.json (this block, this star)",
+   "v_sys_src": "SIMBAD 2018MNRAS.475.1960F",
+   "attributed": false,
+   "bound": false
+  },
+  {
+   "star": "HD 285968",
+   "eb": "A002_Xd98580_X3bf6",
+   "dv_sky": -46.7,
+   "dv_stellar": 8.7,
+   "line": "CO(2-1)",
+   "v_corr": -29.191,
+   "v_sys": 26.236,
+   "v_corr_src": "windows.json (this block, this star)",
+   "v_sys_src": "starrv_v399",
+   "attributed": true,
+   "bound": false
+  },
+  {
+   "star": "ALMA J153702653-33192492",
+   "eb": "A002_Xfe62c1_X398",
+   "dv_sky": -1271.2,
+   "dv_stellar": -1244.6,
+   "line": "SiO(5-4)",
+   "v_corr": -26.532,
+   "v_sys": 0.0,
+   "v_corr_src": "bary.json",
+   "v_sys_src": "none (background source); bound only",
+   "attributed": false,
+   "bound": true
+  },
+  {
+   "star": "ALMA J153702653-33192492",
+   "eb": "A002_Xf8f6a9_X10359",
+   "dv_sky": -676.9,
+   "dv_stellar": -680.2,
+   "line": "H2CO(3-2)",
+   "v_corr": 3.272,
+   "v_sys": 0.0,
+   "v_corr_src": "bary.json",
+   "v_sys_src": "none (background source); bound only",
+   "attributed": false,
+   "bound": true
+  },
+  {
+   "star": "ALMA J153702653-33192492",
+   "eb": "A002_Xfe62c1_X398",
+   "dv_sky": 894.2,
+   "dv_stellar": 920.7,
+   "line": "H2CO(3-2)",
+   "v_corr": -26.532,
+   "v_sys": 0.0,
+   "v_corr_src": "bary.json",
+   "v_sys_src": "none (background source); bound only",
+   "attributed": false,
+   "bound": true
+  },
+  {
+   "star": "ALMA J153702653-33192492",
+   "eb": "A002_Xf8f6a9_X10359",
+   "dv_sky": 617.0,
+   "dv_stellar": 613.8,
+   "line": "H2CO(3-2)",
+   "v_corr": 3.272,
+   "v_sys": 0.0,
+   "v_corr_src": "bary.json",
+   "v_sys_src": "none (background source); bound only",
+   "attributed": false,
+   "bound": true
+  },
+  {
+   "star": "ALMA J153702653-33192492",
+   "eb": "A002_Xff0235_X8392",
+   "dv_sky": -20.6,
+   "dv_stellar": 1.6,
+   "line": "CO(2-1)",
+   "v_corr": -22.161,
+   "v_sys": 0.0,
+   "v_corr_src": "bary.json",
+   "v_sys_src": "none (background source); bound only",
+   "attributed": true,
+   "bound": true
+  },
+  {
+   "star": "ALMA J153702653-33192492",
+   "eb": "A002_Xd9d7c7_Xbb64",
+   "dv_sky": 1232.8,
+   "dv_stellar": 1207.8,
+   "line": "CO(3-2)",
+   "v_corr": 24.96,
+   "v_sys": 0.0,
+   "v_corr_src": "bary.json",
+   "v_sys_src": "none (background source); bound only",
+   "attributed": false,
+   "bound": true
+  },
+  {
+   "star": "HD14055",
+   "eb": "A002_X1001fdc_X29ae",
+   "dv_sky": -12692.5,
+   "dv_stellar": -12693.6,
+   "line": "CO(3-2)",
+   "v_corr": 6.269,
+   "v_sys": 5.11,
+   "v_corr_src": "windows.json (this block, this star)",
+   "v_sys_src": "starrv_v399",
+   "attributed": false,
+   "bound": false
+  }
+ ],
+ "v409": {
+  "n_fell": 4,
+  "n_rose": 1,
+  "fell_unattributed_in_stellar": 4,
+  "fell_detail": [
+   {
+    "star": "tau Cet",
+    "eb": "A002_Xba460f_X7e6",
+    "dv_stellar": 640.4,
+    "line": "CO(2-1)"
+   },
+   {
+    "star": "HR 1010 Gaia DR3 4722135642226902656",
+    "eb": "A002_Xc6a3db_X7b5b",
+    "dv_stellar": -256.1,
+    "line": "CO(3-2)"
+   },
+   {
+    "star": "HR 1010 Gaia DR3 4722135642226902656",
+    "eb": "A002_Xc66ce1_X1345",
+    "dv_stellar": -133.3,
+    "line": "CO(3-2)"
+   },
+   {
+    "star": "eta Crv",
+    "eb": "A002_X75bfbf_X1430",
+    "dv_stellar": -249.0,
+    "line": "CO(3-2)"
+   }
+  ],
+  "risen_attributed": [
+   {
+    "star": "HR 1010 Gaia DR3 4722135642226902656",
+    "eb": "A002_Xc6fa08_X1053"
+   }
+  ],
+  "restored_attributed": [
+   [
+    "HD 139084 B",
+    345.824056,
+    24.3
+   ]
+  ],
+  "hd14055_unattributed": [
+   [
+    "HD14055",
+    344.467647,
+    -1165.6
+   ],
+   [
+    "HD14055",
+    345.456382,
+    -317.1
+   ]
+  ],
+  "n_crossings": 56
+ },
+ "adopted": {
+  "n_crossings": 56,
+  "unattributed": 38,
+  "attributed": 18,
+  "rank_flagged_unattributed": 2,
+  "note": "stellar frame, +-50 km/s, per-block barycentric term, all crossings evaluable"
+ }
+}

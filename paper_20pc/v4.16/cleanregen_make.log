@@ -1,0 +1,79 @@
+prodident: 927 record(s) naming a product; 579 under the released tree and in the catalogue, 575 of those reproducing its published statistic; 64 under the re-extraction tree, which must not; 907 reached under a per-block stem
+prodident: 3 window(s) named by a record and absent from the deposited catalogue (the declared archival tail): [('A002_X1190de8_Xd526', 3), ('A002_X11adad7_X25c5e', 3), ('A002_Xc6b674_X28f5', 0)]
+prodident: 0 FAIL
+ledgergate: tab_ledger.tex, tab_ledger_cont.tex -- 56 data rows against 56 adopted crossings
+ledgergate: 0 FAIL
+fragstale: 12 generated fragments the manuscript inputs, 7 spine inputs
+fragstale: 0 FAIL
+included (11):
+    bpic_control.pdf
+    chain_v412.pdf
+    classa_sensitivity.pdf
+    completeness_map.pdf
+    confcoverage.pdf
+    coverage_waterfall.pdf
+    drift_acceleration.pdf
+    eirp_context_a.pdf
+    eirp_context_b.pdf
+    event_crossings.pdf
+    sens_ring.pdf
+orphaned (8):
+    appm_power.pdf                 appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge.
+    calib_cont.pdf                 calibration (calib_r15.py, round 530) 2026-10-08: built but not a figure of the paper; Ruling 3 asked for a coefficient and a sentence and Appendix B carries both.  It is not distributed anywhere -- see AUTHOR_ACTIONS.md item 1.
+    control_diagnostics.pdf        appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge.
+    ledger_vis_v403.pdf            appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge; already uncited before it.
+    rank_cdf.pdf                   appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge.
+    selection_bias.pdf             appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge; fig:selbias was already uncited before it.
+    sensitivity_2d.pdf             appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge; fig:sens2d was already uncited before it.
+    stratified_completeness.pdf    appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge.
+note: 4 .png sibling(s) in figures/ that LaTeX does not use: appm_power.png, calib_cont.png, chain_v412.png, ledger_vis_v403.png
+figorphan: 11 included, 8 pending, 0 unexpected orphans, 0 missing files
+labelcheck: 173 files, 61 labels, 50 distinct \ref targets, 26 floats/maths environments, 62 aux entries
+  note: F4 (not a failure) 11 unreferenced sectioning label(s); F4 fires only on floats, equations and appendices
+  note: F6 (unreferenced) sec:data is on a starred section
+  note: F6 (unreferenced) sec:si is on a starred section
+labelcheck: 0 FAIL
+wordcase: 31 prose sources, 142 macro-layer files
+  W1  no lower-case macro value opens a sentence                   PASS  none
+  W2  the sweep found, and searched for, every such macro          PASS  88 lower-case-valued macros in the layer, 22 of them cited; not searched: none
+  W3  every prose source the manuscript inputs was read            PASS  31 prose sources swept, 142 macro-layer files read
+wordcase: 88 lower-case-valued macros, 22 cited, 0 FAIL
+citegate: 173 source files
+  G1   every bibitem is cited somewhere                               PASS  none
+  G2   every citation has a bibitem                                   PASS  none
+  G3   no key is declared twice                                       PASS  none
+  G4   the comparison was not vacuous                                 PASS  55 bibitems, 55 cited keys, 173 source files
+citegate: 55 bibitems, 55 cited keys, 0 FAIL
+retired: the superseded column is deposited as eirp_p90_superseded_rankgated_W; the old name eirp_p90_sel_W is indexed in 0 live line(s)
+retired: 2 generator(s) read the retired catalogue column eirp_p90_superseded_rankgated_W; 0 of them emit a macro the manuscript still cites
+retired: 5 generator-declared supersession(s): BudPlxWorstPct->SfPlxWorstPct, BudPlxWorstStar->SfPlxWorstStar, NClassAM->SfMClassAStars, NMCensus->SfMCensus, NMSearched->SfMSearched
+retired: 56 retired names, 51 of them aliased to a replacement, 0 uses in the manuscript
+synmacro: 1149 cited macros with a numeric value, 15 same-stem group(s) of two or more, 13 differing
+  declared  cvunion                \CvUnionA = 47.7; \CvUnionB = 90.5
+            reason: union bandwidth of each search class.  The two classes do not cover the same frequencies, so a frequency with coarse but no fine coverage carries no drift-resolving limit; conclusion 2 quotes both side by side so the primary search is not read as the larger one
+  declared  fracmax                \HoFracMax = 0.47; \RcFracMax = 1
+            reason: the largest fraction of the discovery amplitude the repeat coverage still excludes, in the pre-registered hold-out search against the primary census.  Two populations, and the difference is the point: every hold-out crossing is excluded at 0.47 of its amplitude or less, while in the census the individual limits run all the way to 1.00, which is why the census median is reported as a median and never as a bound on the set
+  declared  fracmed                \RcFracMed = 0.43; \RfiFracMed = 0.5
+            reason: TWO DIFFERENT FRACTIONS OF TWO DIFFERENT THINGS, and only the word "frac" is shared.  RcFracMed is the median fraction of the DISCOVERY AMPLITUDE that the repeat coverage excludes, over the crossings that carry an exclusion.  RfiFracMed is the median fractional POSITION of a released peak inside its own spectral window, which is the fixed-intermediate-frequency test of the interference appendix and is 0.50 because the positions are uniform.  Neither is a bound and they are not the same quantity in any sense
+  declared  ninetymult             \EirpNinetyMultA = 3.03; \EirpNinetyMultB = 4.17
+            reason: the completeness multiplier measured separately per class, which is the whole point of measuring it per class
+  declared  nstar                  \DqNStar = 2; \HoNStar = 36; \MasonNStar = 28; \SfNStar = 89; \StkNStar = 69
+            reason: stars carrying a data-quality flag; Mason et al.'s sample; the searched sample; the stars with a stellar-frame stack -- four sets, four counts
+  declared  ntested                \HoNTested = 7; \RcNTested = 38; \VerNTested = 1645
+            reason: unattributed crossings tested for recurrence against windows matched to an ACA geometry-verification record -- different things counted, as queue entry 31 sets out
+  declared  nwin                   \DqNWin = 5; \HoNWin = 315; \PbNWin = 1651
+            reason: windows flagged by the data-quality rule; the reserved hold-out's windows; and the windows of the primary-beam audit, which is the whole release -- three sets, three counts.  'ScrNWinA' and 'PxaNWin' left this group when Ruling 1 removed the screen cost from the paper and the parallax row from the budget
+  declared  sbpriornstar           \SbPriorNStarA = 40; \SbPriorNStarB = 17
+            reason: the star counts of the TWO PUBLISHED SEARCHES above 30 GHz, not of two classes of this one: Steffes & DeBoer's 40 solar-type stars within 23 pc and Mauersberger et al.'s 17 Vega-like and solar-type targets.  The A/B suffix here distinguishes two other people's papers, which is the one case where the class heuristic means something else
+  declared  stars                  \HoStars = 36; \NStars = 89
+            reason: stars reached by the pre-registered hold-out against stars in the primary census.  ★ The two are disjoint in EXECUTION BLOCKS and not in stars -- H4 proves no shared block, and 27 of the 36 hold-out stars are census stars -- so neither count is a subset of the other and the out-of-sample claim the paper makes is about windows the pipeline had never seen, never about unseen stars
+  declared  survfreqlo             \SurvFreqLo = 90; \SurvFreqLoA = 114
+            reason: the ARCHIVAL frequency extent, which the title states, against the Class A extent, which the abstract states inside it (R1-5)
+  declared  tmax                   \HoTMax = 8.64; \RcTMax = 4.71
+            reason: the largest stellar statistic reached in the hold-out against the largest reached at a predicted recurrence cell in the census: one is a search maximum over all windows, the other a single predicted channel, and they are not comparable numbers
+  declared  win                    \HoWin = 315; \NWinA = 402; \NWinB = 1249
+            reason: the window count split by channelisation class: A fine enough to resolve a drift, B not
+  declared  windows                \CampWindows = 1322; \NWindows = 1651
+            reason: windows the injection campaign spans against windows in the primary census
+synmacro: 0 FAIL
+generators OK

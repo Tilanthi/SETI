@@ -1,0 +1,54 @@
+{
+  "_what": "The two published star-targeted technosignature searches above 30 GHz, with the sentence of each paper that states each number. Frozen input to priorsearch_r15.py (round 600). Nothing here is computed; everything here is QUOTED, and the generator asserts that every value it publishes appears as a number inside the quotation it is attributed to.",
+  "_why": "Section 1 typed five numbers that belong to other people's papers (40, 23, 203, 17, 35). This project has mis-attributed an external constant twice in this round alone -- the 0.2 per cent bandpass accuracy that is nowhere in ALMA Technical Note 15, and the Band 8 flux accuracy the Proposer's Guide does not state -- and in both cases the provenance string named a document and no page. A number typed into LaTeX is checked by nothing; a number read out of a quotation, with the quotation asserted to contain it, is checked at every build.",
+  "_searched_by": "r15-refs, 2026-10-08, Technosearch Radio List (121 searches, 1960-present) plus an arXiv metadata sweep (332 records, 187 since 2022-01-01). Evidence: /workspace/SETI/referee_r15/refs/REFS_EVIDENCE_R15.md section 3; raw results in refs/technosearch_radio_2026-10-08.json and refs/arxiv_seti_sweep_2026-10-08.json.",
+  "n_searches": 2,
+  "searches": [
+    {
+      "key": "Steffes1994",
+      "ref": "Steffes P. G., DeBoer D. R., 1994, Icarus, 107, 215",
+      "doi": "10.1006/icar.1994.1019",
+      "title": "A SETI Search of Nearby Solar-Type Stars at the 203-GHz Positronium Hyperfine Resonance",
+      "facility": "NRAO 12 m, April 1993",
+      "values": {
+        "n_star": {
+          "value": 40,
+          "where": "abstract",
+          "quote": "A total of 40 solar-type stars within 23 parsecs were observed with the NRAO 12-m telescope at Kitt Peak during April 1993. No detections were made at the detection threshold of 2.3 x 10^-19 W/m^2."
+        },
+        "dist_pc": {
+          "value": 23,
+          "where": "abstract",
+          "quote": "A total of 40 solar-type stars within 23 parsecs were observed with the NRAO 12-m telescope at Kitt Peak during April 1993."
+        },
+        "freq_GHz": {
+          "value": 203,
+          "where": "title",
+          "quote": "A SETI Search of Nearby Solar-Type Stars at the 203-GHz Positronium Hyperfine Resonance"
+        }
+      }
+    },
+    {
+      "key": "Mauersberger1996",
+      "ref": "Mauersberger R., Wilson T. L., Rood R. T., Bania T. M., Hein H., Linhart A., 1996, A&A, 306, 141",
+      "title": "SETI at the spin-flip line frequency of positronium",
+      "facility": "IRAM 30 m, June 1994",
+      "values": {
+        "n_star": {
+          "value": 17,
+          "where": "section 2, target list",
+          "quote": "We have observed a total of 17 targets, selected from the Vega-like infrared-excess stars of Backman & Paresce, of which the prototype is Vega (alpha Lyrae), together with nearby solar-type stars including tau Cet and eps Eri."
+        },
+        "band_MHz": {
+          "value": 35,
+          "where": "section 2, instrumental setup",
+          "quote": "The autocorrelator was split to cover a total bandwidth of 35 MHz at a resolution of 9.7 kHz, centred on the 203.385 GHz spin-flip line of positronium."
+        }
+      },
+      "our_stars_named": ["tau Cet", "eps Eri"],
+      "our_stars_note": "The target list also excludes beta Pic as young, which is a third star of this sample; only the two NAMED as observed are counted here, because an excluded star was not searched."
+    }
+  ],
+  "line_width_MHz": 35,
+  "line_width_note": "The widest of the two single-line coverages, and the one Section 1 quotes as 'about 35 MHz wide': Steffes & DeBoer's 32 Hz channels span far less, so 35 MHz is the generous figure and the comparison with this survey's union bandwidth is conservative in the direction that favours the earlier work."
+}
