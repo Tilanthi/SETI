@@ -1,0 +1,100 @@
+{
+ "macros": {
+  "MxNRankWord": "two",
+  "MxRankStars": "61~Vir and CP$-$72~2713",
+  "MxRankFreqs": "346.314 and 344.270",
+  "MxOtherWinRange": "36 and 42",
+  "MxOtherStarsRange": "24 and 8",
+  "MxOtherBlocksRange": "32 and 42",
+  "MxSameChanClause": "none of them carries a crossing in the same channel",
+  "MxExtraWord": "two",
+  "MxExtraClause": "one whose peak frequency the release records only as an offset from the line and one whose window the release does not record as a crossing at all",
+  "MxBpNCoWord": "ten",
+  "MxBpNoFreqClause": "four in CO($1$--$0$) and one in CO($2$--$1$)"
+ },
+ "diagnostics": {
+  "MxRankTStar": [
+   5.9583,
+   5.8089
+  ],
+  "MxRankBlocks": [
+   "A002_Xc079b5_X82f",
+   "A002_Xff0235_X4a6d"
+  ]
+ },
+ "failed": [],
+ "events": [
+  {
+   "star": "61 Vir",
+   "eb": "A002_Xc079b5_X82f",
+   "freq": 346.313811,
+   "n_win": 36,
+   "n_star": 24,
+   "n_block": 32,
+   "n_same": 0,
+   "same": []
+  },
+  {
+   "star": "CP-72 2713",
+   "eb": "A002_Xff0235_X4a6d",
+   "freq": 344.269746,
+   "n_win": 42,
+   "n_star": 8,
+   "n_block": 42,
+   "n_same": 0,
+   "same": []
+  }
+ ],
+ "band": {
+  "lo_GHz": 230.422,
+  "hi_GHz": 230.723,
+  "n_members": 12,
+  "n_ledger": 14,
+  "extra": [
+   {
+    "star": "$\\beta$~Pic",
+    "eb": "A002_Xa7a216_X23e4",
+    "freq": 230.5272612,
+    "reason": "recovered from the released offset"
+   },
+   {
+    "star": "HR~1010",
+    "eb": "A002_Xc6fa08_X1053",
+    "freq": 230.51328,
+    "reason": "adopted list"
+   }
+  ]
+ },
+ "nofreq": [
+  {
+   "star": "$\\beta$~Pic",
+   "eb": "A002_Xf5d76d_Xeb8",
+   "freq": 115.26032550000001,
+   "line": "CO(1-0)"
+  },
+  {
+   "star": "$\\beta$~Pic",
+   "eb": "A002_Xf5d76d_Xe19",
+   "freq": 115.2603454,
+   "line": "CO(1-0)"
+  },
+  {
+   "star": "$\\beta$~Pic",
+   "eb": "A002_Xf5d76d_Xcc5",
+   "freq": 115.2603721,
+   "line": "CO(1-0)"
+  },
+  {
+   "star": "$\\beta$~Pic",
+   "eb": "A002_Xf4df6f_Xc7",
+   "freq": 115.2620386,
+   "line": "CO(1-0)"
+  },
+  {
+   "star": "$\\beta$~Pic",
+   "eb": "A002_Xa7a216_X23e4",
+   "freq": 230.5272612,
+   "line": "CO(2-1)"
+  }
+ ]
+}

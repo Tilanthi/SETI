@@ -1,0 +1,54 @@
+{
+ "generated_by": "sens_r12.py",
+ "round": 250,
+ "drive": null,
+ "duty": {
+  "n_win": 12,
+  "n_star": 10,
+  "n_trial": 3888,
+  "cycles": [
+   0.1,
+   0.25,
+   0.4,
+   0.5,
+   0.75,
+   1.0
+  ],
+  "attenuation_median": {
+   "1.0": 1.0,
+   "0.75": 0.7518343752559961,
+   "0.5": 0.49723421972795506,
+   "0.4": 0.3981640050822504,
+   "0.25": 0.24741069314543346,
+   "0.1": 0.09969708136757756
+  },
+  "attenuation_worst_dev": 0.010357227418266168,
+  "amp_over_trigger": [
+   1.833030277982336,
+   18.49316295278859,
+   144.99655168313487
+  ],
+  "power_penalty_at_min_cycle": 10.0,
+  "undrifted": true,
+  "n_peak_at_injected": 3719
+ },
+ "drift": {
+  "worst_rel_dev": 0.00013637445357783662,
+  "n_win": 402,
+  "inverted_min_m_s2": 2.247319753126981e+16,
+  "relation": "a_los = c nudot / nu"
+ },
+ "epseri": {
+  "n_withheld": 12,
+  "n_off_axis": 8,
+  "n_on_axis": 4,
+  "worst_correction": 3.5174763649287515,
+  "check": {
+   "array": "ACA 7 m",
+   "n_blocks": 4,
+   "band": "6",
+   "on_source_h": 0.22
+  }
+ },
+ "failures": []
+}

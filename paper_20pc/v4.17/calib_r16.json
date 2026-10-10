@@ -1,0 +1,447 @@
+{
+ "_provenance": {
+  "continuum_provenance": {
+   "_doc": "PROVENANCE of the measured continuum at the extraction position. The seven *_continuum.json files beside this one are verbatim copies of the per-target products written by bin/continuum_map_generic.py during the epoch-extension campaign (retrieved 2026-10-09 from ext2030/, pipeline run 2026-09-04). Nothing in them is recomputed here.",
+   "aumic_january": {
+    "note": "AU Mic's Band 3 continuum at its own extraction position, measured by this paper's own extractor and already deposited in r8inputs/aumic_scale_v408.json ('january'). It is read from that file, not restated here. The epoch is not one of the census blocks, so it bounds what the continuum at that position can be rather than giving its value in those windows."
+   },
+   "band_rule": "A map is used only on windows of its own ALMA band, so no frequency extrapolation and no assumed dust spectral index enters anywhere. The band is read from the '[Bn]' tag the pipeline writes into star_name; a file without one is matched by band only if exactly one band is present among that star's windows.",
+   "how_it_is_used": "The map maximum is adopted as the continuum at the extraction position wherever the maximum lies within one pixel of the image centre AND the star's own offset from the pointing centre (pb_offset_arcsec, from the catalogue) is below the same pixel, so that the star and the maximum occupy the same pixel. Taking the MAXIMUM of the map is deliberately generous: it is an upper bound on the amplitude at any single position, so it makes the calibration mechanism as easy to admit as these data allow. Where the map yields no detection the five-sigma upper limit of the map is used instead, which is generous in the same direction.",
+   "known_defects_in_the_source_products": [
+    "peak_offset_arcsec is measured from the IMAGE CENTRE (the phase centre), not from the propagated stellar position, so it is the star's offset only when the star is at the phase centre. This is why the star's own pb_offset_arcsec is required here as well.",
+    "The per-epoch 'variability' block of these files is computed from a single-position DFT whose phase factor carries the sign exp(+2i.pi.(ul+vm)) rather than exp(-2i.pi.(ul+vm)), so it samples the mirror position -l,-m. For a star at the phase centre the two coincide; for L 836-122, 0.257 arcsec off centre in an extended configuration, that block reports 0.032 +/- 0.042 mJy against a 66-sigma map maximum of 63.07 mJy at the centre pixel. The variability block is therefore NOT used here, and the defect is reported to the integrator.",
+    "HD 107146 is not a star of this survey and is read only to be counted and discarded."
+   ],
+   "noise_used": {
+    "definition": "sigma_comb = median over channels of (sum_t 1/sigma_t^2)^(-1/2), the inverse-variance combination over integrations that the search statistic itself divides by; the per-integration channel noise is larger by roughly the square root of the number of integrations and is NOT the quantity used.",
+    "name": "the noise of the de-drifted, execution-block-combined spectrum",
+    "where_it_is_published": "rms_mJy of per_target_results_v3.99.csv and rms of holdout_export_v381.json, both of which satisfy smin = 5 sigma_comb -- asserted in the generator, in the units each file uses."
+   },
+   "quantity": "image_peak_mJy is the maximum of a naturally weighted, line-excluded DIRTY image (tclean specmode='mfs', niter=0, pbcor=False, imsize=256, cell=0.5 arcsec) of the full available bandwidth, in mJy/beam. peak_offset_arcsec is the offset of that maximum from the image centre, i.e. from the FIELD::PHASE_DIR of the observation.",
+   "why_this_is_the_right_quantity": "The search extracts a spectrum by a direct discrete Fourier transform of the phase-rotated visibilities at a single sky position, in apparent flux, with no primary-beam correction. A dirty-map amplitude at that position is therefore the same estimator, and it includes any dust emission inside the synthesised beam. A photospheric extrapolation is not that quantity and for a disc host it is a lower bound on it by orders of magnitude."
+  },
+  "drive": 0,
+  "eps_cap": 0.2,
+  "generator": "calib_r16.py",
+  "round": 630,
+  "specs": {
+   "_doc": "EXTERNAL SPECIFICATIONS for the channel-dependent calibration terms. Nothing here is measured in this work. Every entry names a SECTION, CHAPTER, TABLE, FIGURE or PAGE of its source, per the rule p90_budget_v409.py's B14 enforces: a source nobody can follow to a page is not a citation.",
+   "bandpass_amp_accuracy": 0.002,
+   "bandpass_amp_accuracy_source": "ALMA Knowledgebase, 'What is the tested capability of ALMA for bandpass calibration precision?' (General ALMA Queries), quoting the 2013-2014 bandpass-stability campaign of ALMA Technical Note 15 over Bands 3, 4, 6, 7, 8, 9 and 10 with 21-35 antennas: 'The nominal bandpass accuracy is <0.2% and <0.5 deg over the spectral resolution requested.' Amplitude variation <0.1 per cent for Bands 3, 4 and 6 and <1 per cent for the others.",
+   "bandpass_amp_worst_band": 0.01,
+   "bandpass_amp_worst_band_source": "Same article: 'The amplitude variation is estimated to be <0.1% for Bands 3, 4, and 6, and <1% for the other Bands.' The 1 per cent figure is adopted for Bands 7 and above.",
+   "jpl_catalogue_source": "Pickett et al. 1998, JQSRT 60, 883 -- the JPL Submillimeter, Millimeter and Microwave Spectral Line Catalog. Entries 048004 (O3), 018003 (H2O) and 032001 (O2) and the partition-function table catdir.cat are frozen verbatim in this directory as jpl_c0*.cat and jpl_catdir.cat, retrieved 2026-10-08 from https://spec.jpl.nasa.gov/ftp/pub/catalog/ . Intensities are scaled from the catalogue's 300 K reference to 220 K with the catalogue's own partition functions, by the standard catalogue relation given in Sec. 3 of that paper.",
+   "lambda_Ks_um": 2.159,
+   "lambda_V_um": 0.545,
+   "t_atmosphere_K": 220.0,
+   "t_atmosphere_source": "A single representative temperature for the ozone layer and the lower troposphere, used only to rank the catalogued transitions; the selection is insensitive to it over 200-260 K (verified by the generator's D7 clause).",
+   "tsys_residual_frac_hi": 0.2,
+   "tsys_residual_frac_lo": 0.05,
+   "tsys_residual_source": "Hunter, Phillips, Broguiere & Gonzalez, 'Improving the calibration of atmospheric spectral features in ALMA data', NA ALMA 2016 Development Study Final Report, 2018 March 2, Sec. 'Outline of the problem' and Fig. 1: ozone lines are calibrated in the coarse (TDM) spectral mode, so 'after this Tsys calibration is applied, the subsequent antenna-based bandpass calibration solutions for the FDM spws still show significant features at the frequencies of the ozone lines' -- 'narrow residual dips (~5-20%)', with a worked Band 7 example showing a 20 per cent drop at the centre of the 364.45 GHz ozone line (Fig. 1, top right panel).",
+   "tsys_resolution_MHz": 31.25,
+   "tsys_resolution_source": "Same report, Fig. 1 caption: 'TDM Tsys spectra recorded with the standard 31 MHz resolution'; the TDM correlator mode is 128 channels of 15.625 MHz across a 2 GHz baseband (ALMA Technical Handbook, Ch. 5, 'The Correlators'), and the Hann-windowed effective resolution is twice the channel spacing.",
+   "zp_Ks_Jy": 666.7,
+   "zp_Ks_source": "Cohen, Wheaton & Megeath 2003, AJ 126, 1090, Table 2: the 2MASS Ks isophotal zero-magnitude flux density, 666.7 Jy at an isophotal wavelength of 2.159 micron.",
+   "zp_V_Jy": 3636.0,
+   "zp_V_source": "Bessell, Castelli & Plez 1998, A&A 333, 231, Table A2: the Johnson V zero-magnitude flux density, 3636 Jy at 545 nm."
+  }
+ },
+ "admitting": [
+  {
+   "band": 7,
+   "chanw_MHz": 15.625,
+   "crossing": false,
+   "ctrlmax": 4.59,
+   "eb": "A002_Xcd64ec_X21c9",
+   "eps": 0.037633933416963646,
+   "ghz": 335.8955035,
+   "rank": 0.22417153996101363,
+   "rms_mJy": 0.47471,
+   "s_meas_mJy": 63.069410622119904,
+   "sample": "census",
+   "star": "L 836-122",
+   "tstar": 2.9811
+  },
+  {
+   "band": 7,
+   "chanw_MHz": 15.625,
+   "crossing": false,
+   "ctrlmax": 4.6272,
+   "eb": "A002_Xcd64ec_X21c9",
+   "eps": 0.04350762077737913,
+   "ghz": 334.0000035,
+   "rank": 0.5536062378167641,
+   "rms_mJy": 0.5488,
+   "s_meas_mJy": 63.069410622119904,
+   "sample": "census",
+   "star": "L 836-122",
+   "tstar": 2.6041
+  },
+  {
+   "band": 7,
+   "chanw_MHz": 15.625,
+   "crossing": false,
+   "ctrlmax": 4.1802,
+   "eb": "A002_Xcd64ec_X21c9",
+   "eps": 0.043641600148942125,
+   "ghz": 347.8955035,
+   "rank": 0.8635477582846004,
+   "rms_mJy": 0.55049,
+   "s_meas_mJy": 63.069410622119904,
+   "sample": "census",
+   "star": "L 836-122",
+   "tstar": 2.1853
+  },
+  {
+   "band": 7,
+   "chanw_MHz": 15.625,
+   "crossing": false,
+   "ctrlmax": 5.015895366668701,
+   "eb": "A002_Xd09670_X3077",
+   "eps": 0.09433918975995452,
+   "ghz": 335.88250509502683,
+   "rank": 0.1442495126705653,
+   "rms_mJy": 0.47869328409433365,
+   "s_meas_mJy": 25.37086047232151,
+   "sample": "holdout",
+   "star": "CD-57 1054",
+   "tstar": 3.1107003688812256
+  },
+  {
+   "band": 7,
+   "chanw_MHz": 15.625,
+   "crossing": false,
+   "ctrlmax": 4.35199499130249,
+   "eb": "A002_Xd09670_X3077",
+   "eps": 0.10857870513770883,
+   "ghz": 333.98700509502686,
+   "rank": 0.7758284600389863,
+   "rms_mJy": 0.5509470356628299,
+   "s_meas_mJy": 25.37086047232151,
+   "sample": "holdout",
+   "star": "CD-57 1054",
+   "tstar": 2.3137261867523193
+  },
+  {
+   "band": 7,
+   "chanw_MHz": 15.625,
+   "crossing": false,
+   "ctrlmax": 5.366927146911621,
+   "eb": "A002_Xd09670_X3077",
+   "eps": 0.11205542234908956,
+   "ghz": 347.88250509502683,
+   "rank": 0.7699805068226121,
+   "rms_mJy": 0.5685884971171618,
+   "s_meas_mJy": 25.37086047232151,
+   "sample": "holdout",
+   "star": "CD-57 1054",
+   "tstar": 2.3271849155426025
+  },
+  {
+   "band": 7,
+   "chanw_MHz": 15.625,
+   "crossing": false,
+   "ctrlmax": 4.0836,
+   "eb": "A002_Xcf525f_X5aa4",
+   "eps": 0.11478325708255056,
+   "ghz": 335.8812265,
+   "rank": 0.3469785575048733,
+   "rms_mJy": 0.58243,
+   "s_meas_mJy": 25.37086047232151,
+   "sample": "census",
+   "star": "CD-57 1054",
+   "tstar": 2.8196
+  },
+  {
+   "band": 7,
+   "chanw_MHz": 15.625,
+   "crossing": false,
+   "ctrlmax": 4.8887,
+   "eb": "A002_Xcf525f_X5aa4",
+   "eps": 0.13235065494381895,
+   "ghz": 347.8812265,
+   "rank": 0.6140350877192983,
+   "rms_mJy": 0.67157,
+   "s_meas_mJy": 25.37086047232151,
+   "sample": "census",
+   "star": "CD-57 1054",
+   "tstar": 2.481
+  },
+  {
+   "band": 7,
+   "chanw_MHz": 15.625,
+   "crossing": false,
+   "ctrlmax": 4.3846,
+   "eb": "A002_Xcf525f_X5aa4",
+   "eps": 0.1328256092723545,
+   "ghz": 333.9857265,
+   "rank": 0.7348927875243665,
+   "rms_mJy": 0.67398,
+   "s_meas_mJy": 25.37086047232151,
+   "sample": "census",
+   "star": "CD-57 1054",
+   "tstar": 2.3442
+  }
+ ],
+ "aumic": {
+  "eps_min": 0.014113620807665983,
+  "n_window": 48,
+  "ours_mJy": 29.22,
+  "tstar_max": 4.4974
+ },
+ "bandpass_margin": {
+  "eps_min": 0.037633933416963646,
+  "nominal": 18.81696670848182,
+  "worst_band": 3.7633933416963643
+ },
+ "continuum": [
+  {
+   "band": 7,
+   "detected": true,
+   "file": "CD-57_1054__Gaia_DR3_4764027962957023104__B7_continuum.json",
+   "offset": 0.0,
+   "raw": "CD-57 1054 (Gaia DR3 4764027962957023104) [B7]",
+   "s_mjy": 25.37086047232151,
+   "snr": 73.43189239501953
+  },
+  {
+   "band": null,
+   "detected": false,
+   "file": "HD_107146__Gaia_DR3_3946438125929224320__continuum.json",
+   "offset": 6.363961030678928,
+   "raw": "HD 107146 (Gaia DR3 3946438125929224320)",
+   "s_mjy": 0.025733784241310786,
+   "snr": 3.808466911315918
+  },
+  {
+   "band": 6,
+   "detected": false,
+   "file": "HD_31392__Gaia_DR3_4824866896260056448__B6_continuum.json",
+   "offset": 2.1213203435596424,
+   "raw": "HD 31392 (Gaia DR3 4824866896260056448) [B6]",
+   "s_mjy": 0.705116763128899,
+   "snr": 4.640146255493164
+  },
+  {
+   "band": null,
+   "detected": false,
+   "file": "HD_45184_continuum.json",
+   "offset": 3.605551275463989,
+   "raw": "HD_45184",
+   "s_mjy": 0.597411381022539,
+   "snr": 3.480428333091476
+  },
+  {
+   "band": 7,
+   "detected": true,
+   "file": "LP_476-207__Gaia_DR3_3291643148740384128__B7_continuum.json",
+   "offset": 0.0,
+   "raw": "LP 476-207 (Gaia DR3 3291643148740384128) [B7]",
+   "s_mjy": 22.054508328437805,
+   "snr": 59.53459930419922
+  },
+  {
+   "band": 7,
+   "detected": true,
+   "file": "L_836-122__Gaia_DR3_6298167942962279680__B7_continuum.json",
+   "offset": 0.0,
+   "raw": "L 836-122 (Gaia DR3 6298167942962279680) [B7]",
+   "s_mjy": 63.069410622119904,
+   "snr": 65.93080139160156
+  },
+  {
+   "band": 7,
+   "detected": true,
+   "file": "hd92945__Gaia_DR3_5455707157211784832__B7_continuum.json",
+   "offset": 0.0,
+   "raw": "hd92945 (Gaia DR3 5455707157211784832) [B7]",
+   "s_mjy": 2.2007590159773827,
+   "snr": 6.484207630157471
+  }
+ ],
+ "continuum_identities": {
+  "CD-57_1054__Gaia_DR3_4764027962957023104__B7_continuum.json": [
+   "CD-57 1054"
+  ],
+  "HD_107146__Gaia_DR3_3946438125929224320__continuum.json": [],
+  "HD_31392__Gaia_DR3_4824866896260056448__B6_continuum.json": [
+   "HD 31392"
+  ],
+  "HD_45184_continuum.json": [
+   "HD 45184"
+  ],
+  "LP_476-207__Gaia_DR3_3291643148740384128__B7_continuum.json": [
+   "LP 476-207 384128"
+  ],
+  "L_836-122__Gaia_DR3_6298167942962279680__B7_continuum.json": [
+   "L 836-122"
+  ],
+  "hd92945__Gaia_DR3_5455707157211784832__B7_continuum.json": [
+   "hd92945"
+  ]
+ },
+ "crossing_requirement": {
+  "hi": 4114.97895186,
+  "lo": 36.082071,
+  "median": 383.539950325,
+  "n": 52,
+  "n_below_brightest": 6
+ },
+ "macros": {
+  "CxAdmitChanMHz": "15.6",
+  "CxAdmitCtrlHi": "5.4",
+  "CxAdmitNCross": "0",
+  "CxAdmitNCrossWord": "none",
+  "CxAdmitRankMed": "0.61",
+  "CxAdmitTstarHi": "3.1",
+  "CxAuContMJy": "29.2",
+  "CxAuEpsPct": "1.4",
+  "CxAuGHz": "106",
+  "CxAuNWin": "48",
+  "CxAuStar": "AU~Mic",
+  "CxAuTstarHi": "4.5",
+  "CxContMax": "63",
+  "CxContMaxSnr": "66",
+  "CxContMaxStar": "L 836-122",
+  "CxCrossNeedBelowStars": "AU Mic, CP-72 2713, HD110411, bet Pic",
+  "CxCrossNeedHi": "4115",
+  "CxCrossNeedLo": "36",
+  "CxCrossNeedMed": "384",
+  "CxCrossNeedNBelow": "6",
+  "CxEpsAdmitHiPct": "13",
+  "CxEpsAdmitLoPct": "3.8",
+  "CxEpsCapPct": "20",
+  "CxMarginBp": "4",
+  "CxMarginBpNom": "19",
+  "CxNAdmit": "9",
+  "CxNAdmitFine": "0",
+  "CxNAdmitStar": "2",
+  "CxNAdmitStarWord": "two",
+  "CxNAdmitWord": "nine",
+  "CxNCrossFine": "52",
+  "CxNCrossWin": "56",
+  "CxNEbChecked": "2",
+  "CxNMap": "7",
+  "CxNMapDet": "4",
+  "CxNMapStar": "6",
+  "CxNMapWin": "28",
+  "CxNoiseNWin": "1964",
+  "CxOneStar": "CD-57 1054",
+  "CxOneStarAdmitChanMHz": "15.6",
+  "CxOneStarCrossChanMHz": "0.49",
+  "CxOneStarCrossEpsPct": "71",
+  "CxOneStarEpsHiPct": "13",
+  "CxOneStarEpsLoPct": "9",
+  "CxOneStarNAdmit": "6",
+  "CxOneStarTstarHi": "3.1",
+  "CxRatioHi": "1.3\\times10^{4}",
+  "CxRatioHiStar": "L 836-122",
+  "CxRatioMed": "651",
+  "CxResidBestPct": "1.9",
+  "CxResidBestSameBlock": "yes",
+  "CxResidBestStar": "L 836-122",
+  "CxResidHiPct": "6.6"
+ },
+ "measured_over_photospheric": {
+  "CD-57 1054": 651.0076392208797,
+  "L 836-122": 12916.374693945017,
+  "hd92945": 44.71597695014095
+ },
+ "noise_identity": {
+  "census": {
+   "frac_within_one_pct": 0.9448818897637795,
+   "hi": 1.8109282673613318,
+   "lo": 0.9999576001695994,
+   "median": 1.0000168542482069,
+   "n": 1651
+  },
+  "holdout": {
+   "frac_within_one_pct": 0.9456869009584664,
+   "hi": 1.1348259447146811,
+   "lo": 1.0000000214978109,
+   "median": 1.0000418917113594,
+   "n": 313
+  }
+ },
+ "one_star": {
+  "n_admit": 6,
+  "rows": [
+   {
+    "chanw_MHz": 15.625,
+    "crossing": false,
+    "eps": 0.09433918975995452,
+    "ghz": 335.88250509502683,
+    "tstar": 3.1107003688812256
+   },
+   {
+    "chanw_MHz": 15.625,
+    "crossing": false,
+    "eps": 0.10857870513770883,
+    "ghz": 333.98700509502686,
+    "tstar": 2.3137261867523193
+   },
+   {
+    "chanw_MHz": 15.625,
+    "crossing": false,
+    "eps": 0.11205542234908956,
+    "ghz": 347.88250509502683,
+    "tstar": 2.3271849155426025
+   },
+   {
+    "chanw_MHz": 15.625,
+    "crossing": false,
+    "eps": 0.11478325708255056,
+    "ghz": 335.8812265,
+    "tstar": 2.8196
+   },
+   {
+    "chanw_MHz": 15.625,
+    "crossing": false,
+    "eps": 0.13235065494381895,
+    "ghz": 347.8812265,
+    "tstar": 2.481
+   },
+   {
+    "chanw_MHz": 15.625,
+    "crossing": false,
+    "eps": 0.1328256092723545,
+    "ghz": 333.9857265,
+    "tstar": 2.3442
+   },
+   {
+    "chanw_MHz": 0.48828125,
+    "crossing": false,
+    "eps": 0.6073181814944809,
+    "ghz": 345.98700509502686,
+    "tstar": 4.2905755043029785
+   },
+   {
+    "chanw_MHz": 0.48828125,
+    "crossing": true,
+    "eps": 0.7126344815827057,
+    "ghz": 345.985726,
+    "tstar": 5.1083
+   }
+  ],
+  "star": "CD-57 1054"
+ },
+ "one_star_candidates": [
+  [
+   6,
+   "CD-57 1054"
+  ]
+ ],
+ "photospheric_source": "calib_r15.s_continuum",
+ "ratio_hi_value": 12916.374693945017,
+ "residual_bound": {
+  "best": 0.019073997761096643,
+  "best_eb": "A002_Xcd64ec_X21c9",
+  "best_map": "L_836-122__Gaia_DR3_6298167942962279680__B7_continuum.json",
+  "best_star": "L 836-122",
+  "map_blocks": [
+   "A002_Xcd64ec_X21c9"
+  ],
+  "median": 0.05215473771911133,
+  "worst": 0.06567239498312297
+ }
+}

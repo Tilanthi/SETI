@@ -1,0 +1,128 @@
+\section{Conclusions}
+\label{sec:conclusions}
+
+\begin{enumerate}[leftmargin=1.6em,itemsep=4pt,topsep=4pt,parsep=0pt]
+
+\item The two earlier searches to reach nearby stars above 30\,GHz each
+covered a single line, over no more than \SbPriorBandMHz\,MHz, and neither
+used its repeats as a test of persistence (\S\ref{sec:background}). What is
+new here is the bandwidth, at least \SbPriorRatio{} times theirs, a grid of
+drift rates rather than a fixed frequency, and a test for recurrence; and an
+archive assembled for other science is at present the only way to reach that
+combination. The one
+ALMA band below those searched that holds any data on these stars is
+proprietary until \SbBoneRelYear{} and channelised far too coarsely to carry
+a carrier search.
+
+\item The primary experiment is \NWinA{} fine-channel windows toward
+\NSysClassA{} stellar systems, covering \CvUnionA\,GHz of union bandwidth in
+\CovNIslands{} disjoint intervals, searched for an unresolved carrier whose
+frequency drifts. A supplementary coarse-channel search for an unresolved spectral
+excess adds \NWinB{} windows toward \PrSysClassB{} systems and
+\CvUnionB\,GHz of union bandwidth, with no drift discrimination. Both come
+from one uniform search of \NEB{} public execution blocks,
+\TotalDataTB\,TB of raw data, and between them they span
+\SurvFreqLo--\SurvFreqHi\,GHz.
+
+\item $\mathrm{EIRP}_{90}$ is a measured completeness of one epoch and not a
+threshold: the power at which nine of ten carriers
+injected into the real calibrated visibilities come back through the
+unchanged trigger and localisation at the star, inside a single execution
+block, for a carrier narrower than that window's own channel; one spread over
+many channels meets a different limit entirely. The median
+system's best window reaches $\EirpNinetySysMedA$\,W, with a spread across
+systems of $\EirpNinetySysLoA$--$\EirpNinetySysHiA$\,W, and
+\NSysEfifteen{} systems reach $10^{15}$\,W; carriers were injected into
+\SensNInj{} of the \NWinA{} windows and the rest carry the class-average
+factor, whose measured dispersion moves that median by \ScRsMedShiftPct{} per
+cent, so a single window's value is an estimate. One bias runs one way only
+and is outside that calibration: an injected carrier suffers no atmospheric
+decorrelation where a real one would, which leaves the median limit
+optimistic by \SensDecorPct{} per cent and the windows above
+\SensDecorHiGHz\,GHz by \SensDecorHiPct{} per cent. No limit quoted here
+carries that correction, and for the \RpDecNUn{} blocks whose phase stability
+cannot be measured it is conditional on their own calibration performance.
+
+\item All \EvNCrossRaw{} threshold crossings are reported with their
+dispositions, \PrFlagXrossWord{} of them in the one execution block that
+fails the data-quality criterion of Appendix~\ref{sec:blockquality} and
+reported apart from the \EvNCrossQp{} in quality-passing data. Of the
+\EvNCrossRaw, \MkNCoinc{} fall within $\pm\MaskHalfKms$\,km\,s$^{-1}$ of a
+catalogued transition at the star's own velocity, a coincidence that is
+reproducible and involves no judgement. Of those, \MkNSODecideWord{} are with
+a species no debris disc has been shown to carry and are reported rather than
+acted on, leaving \MkAttr{} attributed and \MkUnattr{} not. The mask costs
+\MkMaskAPct{} per cent of the Class~A union bandwidth. Recording every cell
+above the trigger, rather than each window's strongest, adds \CkNSecondary{}
+more: \CkNSecUnattrWord{} survive attribution and \CkNRecurWord{} recurs, so
+no disposition changes. Chance,
+measured from each window's own control positions and channel grid, predicts
+\CeExp{} unattributed Class~A crossings over the census against the \CeObs{}
+found there, or \CeExpX{} with the measured star-to-control transfer applied,
+and resampling the execution blocks allows \CeLo--\CeHi. The count is
+compatible with that empirical control expectation, which is a weaker
+statement than a demonstration that the crossings are noise: the width of the
+range is its limit, and an added population of as many as \CeAddBlind{}
+crossings would sit inside it unremarked. The one instrumental mechanism that
+could raise the statistic at the star and not at its controls is a
+calibration residual varying with frequency, and against the continuum the
+pipeline records at the extraction position --- dust inside the beam included
+--- \CxNAdmitWord{} windows toward \CxNAdmitStarWord{} stars would admit one at
+\CxEpsAdmitLoPct--\CxEpsAdmitHiPct{} per cent, inside the documented range.
+In every one of them the largest statistic at any channel and drift is
+\CxAdmitTstarHi{} and none holds a crossing, which puts such a residual below
+\CxResidHiPct{} per cent: the mechanism is available to those windows and is
+measured not to be acting in them.
+
+\item Every unattributed crossing was tested for recurrence in the star's
+own frame, over the whole of each further window covering the event frequency
+and at every drift searched, because an accelerating carrier need not return
+to one channel. None was found again: the largest statistic at any predicted
+cell is \RcTMax{} against $T_{\rm trig}=\StageNullTrig$. The same criterion
+recovers \MkAttrRecur{} of the \MkAttrTested{} line-attributed crossings
+tested, which is the positive control of the stage.
+Of the \RcNExcl{} crossings
+that carry an exclusion, the repeat coverage rules out a carrier at a median
+\RcFracMed{} of the discovery amplitude with individual limits from
+\RcFracMin{} to \RcFracMax, so the median is not a bound on the set;
+combining every covering block assumes a carrier that returns to one
+stellar-frame channel at the start of each, and where the repeat is shallow
+the criterion has little power and its silence is not an exclusion. Judged at
+the trigger amplitude rather than at the discovery amplitude,
+\RcNPowerLoTrig{} of these crossings are untested rather than excluded, among
+them one of \PrRankClause. What
+these tests exclude is a carrier that holds its stellar-frame frequency to
+within $\pm\RqDvLo$--$\pm\RqDvHi$\,km\,s$^{-1}$ of the first epoch's and
+radiates through both observations --- an interval orbital motion alone can
+carry a transmitter out of (\S\ref{sec:etacrv}). The conclusion
+this supports is that no unresolved spectral carrier satisfying the adopted
+recurrence criterion was confirmed, and not that persistent transmitters are
+excluded above a power threshold.
+
+\item What this survey could search and what it could confirm are different
+extents. Of the \NSysClassA{} systems the carrier search covered,
+\RcConfSysDay{} were observed again more than \EpSep{} day later at a
+frequency the first block covered; for the other \RcNoRepSys{} confirmation
+was beyond reach at any sensitivity, and about those systems the null
+reported here says nothing at all.
+
+\item Combining each surveyed star's epochs in its own rest frame deepens
+the flux limit by a median factor \SyStkGainMed. For Proxima~Centauri the
+stacked limit, measured by injection into the stack, reaches
+$\SzProxEirpCensus$\,W over the primary census alone and
+$\StkProxEirpCal$\,W once the rest of the archive is added, in
+\ChanBModeMHz\,MHz channels --- a Class~B limit on an unresolved excess,
+carrying no drift discrimination --- for an emitter steady in the stellar
+frame to within one channel across \StkProxSpanYr\,yr.
+
+\item These results constrain unresolved carriers only within the domain
+actually searched (\S\ref{sec:excludes}). The drift reach is part of that
+domain: the grid stops at \DriftCeilLo\,nHz by default, \AccelSheikhPct{} per cent of
+the range recommended for a general carrier search \citep{Sheikh2019}, so an
+unbound transmitter, one on a rapidly rotating body, or one whose combined
+orbital and rotational acceleration exceeds that ceiling is not constrained
+here at all. What transfers beyond the domain is the
+obstacle, that channelisation chosen by other observers, and not
+collecting area, decides which kind of search is possible at all.
+
+\end{enumerate}

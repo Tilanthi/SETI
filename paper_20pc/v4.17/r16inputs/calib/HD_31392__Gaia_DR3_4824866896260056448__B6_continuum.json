@@ -1,0 +1,10 @@
+{
+ "star_name": "HD 31392 (Gaia DR3 4824866896260056448) [B6]",
+ "image_rms_mJy": 0.1410233526257798,
+ "image_peak_mJy": 0.6543689523823559,
+ "peak_snr": 4.640146255493164,
+ "peak_offset_arcsec": 2.1213203435596424,
+ "continuum_source_detected": false,
+ "sig_threshold": 5.0,
+ "pos_tol_arcsec": 3.0
+}

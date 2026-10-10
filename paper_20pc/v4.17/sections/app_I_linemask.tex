@@ -1,0 +1,196 @@
+%% The line mask, reported in two layers: the frequency coincidence, which is
+%% a velocity criterion and nothing else, and the one species we do not read
+%% as emission, which is an argument and is set out as one.
+%% Owner: r16-mask.  Carries \label{app:linemask} (cited by 04_method.tex and
+%% app_C_spatialnorm.tex) and \label{tab:masklines}.
+%%
+%% ★ THIS APPENDIX IS THE PAPER'S ONLY DEFINITION OF THE ATTRIBUTION RULE.
+%% It owns the species list, the half-width and the FRAME.  The rule is the
+%% star's own rest frame; the local standard of rest is evaluated as a check
+%% and changes no disposition (masklsr_v520.py, L10).  Sec. 5.3 states the
+%% rule in one clause and Appendix D points here; nothing else in the paper
+%% may name a frame of its own, or there are two rules again.
+\section{The line mask}
+\label{app:linemask}
+
+A crossing that falls on a known molecular transition has an astrophysical
+explanation to hand, and the mask exists to say which crossings those are. It
+reports the frequency coincidence and the judgement about the coinciding
+species separately, so the reproducible part can be recomputed and the
+arguable part argued with.
+
+\emph{The list, and when it was made.} The mask holds every transition of the
+\FrNSpec{} species these spectral setups cover --- the three CO isotopologues,
+HCN, HCO$^{+}$, CS, CN, SiO, H$_2$CO, SO, [C\,\textsc{i}] and hydrogen
+recombination --- that falls inside one of the \McNIsland{} searched frequency
+intervals with an upper-state energy below \McEuMax\,K. That rule is the whole
+of it, and it admits \FrNTrans{} transitions (Table~\ref{tab:masklines}).
+No strength cut is applied across species: any threshold admitting HCN's
+strong lines would discard the brightest lines in these fields. Within a
+species the main hyperfine components are kept and the satellites
+dropped. The list is a single Splatalogue query of CDMS and
+JPL \citep{Pickett1998,CDMS2005} made on \MkListDate{}, after the disposition
+criteria were fixed on \MkCritDate, and frozen before any crossing was
+compared with it.
+
+\emph{Attribution is decided in the star's own rest frame, and the sign is
+not the usual one.} A crossing's frequency is carried from the topocentric
+value to the barycentre using its own block's pointing and mid-time, and then
+to the stellar rest frame using the star's systemic velocity. That frame, and
+no other, is where a coincidence is judged.
+The barycentric term alone spans \FrBarySwing\,km\,s$^{-1}$ across the
+survey, so a tolerance applied in the observed frame would spend most of its
+budget on the Earth's motion. The \FrEpochNEpoch{} \FrEpochStar{} epochs show
+the transform working in the only way that can be checked:
+\FrEpochTopoKms\,km\,s$^{-1}$ apart as observed, they agree to
+\FrEpochStelKms\,km\,s$^{-1}$ in the star's frame.
+Throughout, $\Delta v_\star = c\,(\nu_\star-\nu_0)/\nu_0$, so a positive
+offset means the crossing lies \emph{above} the transition in frequency ---
+the opposite sign to the velocity convention of a spectral line.
+
+\emph{The local standard of rest is read as well, as a check.} Gas along the
+line of sight is at rest in that frame rather than in the star's, so for a
+star with a large LSR velocity a foreground line could fall outside a
+stellar-frame mask by construction. Every crossing is therefore carried one
+further step, the projection of the standard solar motion, and read there
+too. The two offsets differ by the star's own LSR velocity and by nothing
+else, which here runs \LsVLsrLo--\LsVLsrHi\,km\,s$^{-1}$ about a median of
+\LsVLsrMed. The check moves nothing: \LsNMoveWord{} crossing is attributed
+there that the star's frame does not attribute already, and nor
+could one have been, since the unattributed crossing nearest a transition lies
+\LsNearestUnattr\,km\,s$^{-1}$ from one, \LsGapKms\,km\,s$^{-1}$ beyond the
+mask and twice the largest of those velocities. One coincidence runs the
+other way and exists only in the star's frame, \LsLeaveStar's
+\LsLeaveDvStar\,km\,s$^{-1}$ from \LsLeaveLine{} against \LsLeaveDvLsr{} in
+the local standard of rest, which is a further reason to decide in the frame
+circumstellar gas shares.
+
+\emph{What the second reading establishes is which coincidences are
+foreground.} Of the \LsNLos{} stars carrying crossings, the composite
+CO($1\to0$) survey of \citet{DameThaddeus2022}, which contains
+\citet{Dame2001}, covers \LsNLosCov{} and holds emission toward \LsNLosDet{}
+of them, between \LsCoVLo{} and \LsCoVHi\,km\,s$^{-1}$; the all-sky Planck CO
+map \citep{PlanckCO2016} stays below \LsPlanckMax\,K\,km\,s$^{-1}$ toward
+every other, including the \LsNLosOut{} outside the CfA footprint. Toward
+\LsCloudStars{} the CO spectrum is non-zero at the crossing's own LSR
+velocity, within \LsCloudDvMax\,km\,s$^{-1}$ of its own peak and at
+\LsCloudTMin\,K or brighter against a \LsCoRms\,K channel: \LsNCloud{} of the
+\MkNCoinc{} coincidences are foreground gas and not circumstellar.
+Two are worth naming. \BkAlmaName{} is a serendipitous field star toward the
+Lupus clouds, at \BkAlmaDistPc\,pc with the clouds far behind it, and its
+CO($2\to1$) crossing lies \LsLupDv\,km\,s$^{-1}$ from a
+\LsLupWco\,K\,km\,s$^{-1}$ cloud line at \LsLupVco\,km\,s$^{-1}$: the field
+is a molecular sightline and not a disc. The velocity says so and the field
+does not: its brightest control position stands above the star in all
+\LsLupNRingLeadWord{} of its windows, but so it does in \LsRingLeadA{} of the
+\NWinA{} Class~A windows of the survey, so that comparison
+distinguishes nothing. Its other
+\LsLupNFar{} crossings lie at least \LsLupFarMin\,km\,s$^{-1}$ from every
+transition of the list, and the mask disposes of none of them. HD~48370 is
+the case where the two readings part: its coincidence lies
+\LsHdDvStar\,km\,s$^{-1}$ from the star's own CO($2\to1$), while in the local
+standard of rest it sits at \LsHdVfeat\,km\,s$^{-1}$, on a catalogued cloud
+line peaking at \LsHdVco. The offset follows the foreground gas and not the
+star, so that window's extended emission is foreground cloud and not a
+resolved disc.
+
+
+\begin{table}
+\centering
+\footnotesize
+\caption{The line mask, by species: the number of transitions $N$ it holds,
+the frequency range they span inside the searched intervals and their
+upper-state energies. Hydrogen recombination lines carry no tabulated
+$E_{\rm u}$. The criterion and the dated query above define the list
+exactly, so the individual transitions can be recovered from the line
+catalogues themselves.}
+\label{tab:masklines}
+\input{tab_maskspecies_v414}
+\end{table}
+
+\emph{The coincidences, and the one species we do not read as emission.} Of
+the \NCross{} crossings, \MkNCoinc{} fall within
+$\pm\MaskHalfKms$\,km\,s$^{-1}$ of a transition of the list in their own
+star's frame; that count is the first layer and all the velocity criterion
+decides. Coincidences with sulphur monoxide account for \MkNSODecide{} ---
+\MkSOStars, at \MkSODvList\,km\,s$^{-1}$ from transitions of upper-state
+energy \MkSOEuLo--\MkSOEuHi\,K, each inside a Band~7 window that also covers
+CO($3\to2$) --- and two things argue against reading those as emission.
+Sulphur monoxide has not been reported in a debris disc, where the
+second-generation gas is CO, C and O; and toward \FrCpStar{} the CO($3\to2$)
+line falls in the same window and is absent to \FrCpCoLimMJy\,mJy in a
+\FrCpCoChanKms\,km\,s$^{-1}$ channel while the crossing's fitted amplitude is
+$\RcCpFlux\pm\RcCpFluxErr$\,mJy, so an SO line there would have to be at
+least as bright as an undetected CO($3\to2$) line in the same data --- but
+by only \RqAmpSigmaCp{} of the fitted error, so it is the species and not
+this margin that carries the weight. Both arguments are about the species and
+not about any one crossing, so all \MkNSODecide{} are treated alike:
+Table~\ref{tab:ledger} prints the offset beside each with a dagger and
+disposes of none of them, giving \MkAttr{} attributed against \MkUnattr{}
+unattributed, of which \MkRankLeadWord{} outrank every control position in
+their own windows.
+Reading them as attributions instead gives \MkAttrAlt{} and \MkUnattrAlt,
+and \MkRankLeadAlt{} such crossing; not one of the \MkNSODecide{} is present
+again in any block covering it, and none is confirmed, so the choice moves
+counts and no disposition. Table~\ref{tab:ledger} forms the exclusion of
+Eq.~\ref{eq:excl} for each of them, at
+\MkAttrExclLo--\MkAttrExclHi$\sigma$, but that significance is built on the
+discovery amplitude; read at the trigger amplitude instead, a crossing whose
+repeat leaves the criterion without power is reported in
+\S\ref{sec:etacrv} as untested rather than excluded, and that applies to
+these as to any other. The reserved hold-out is treated identically, leaving \HoNAttr{}
+attributed and \HoNUnattr{} unattributed there (\S\ref{sec:holdoutsearch}).
+
+\emph{The half-width, and what it costs.} A one-channel test is too tight for
+circumstellar gas, whose emission is shifted by many channels: the width
+follows from Keplerian motion where these molecules survive,
+$\lesssim$13\,km\,s$^{-1}$ beyond 10\,au, and is
+$\pm\MaskHalfKms$\,km\,s$^{-1}$. At that width the mask removes
+\MkMaskAGHz\,GHz of the \CvUnionA\,GHz Class~A union, \MkMaskAPct{} per cent
+of it, against \FrMaskLostGHz\,GHz of the \FrMaskUnionGHz\,GHz both classes
+cover, \FrMaskPct{} per cent: the cost falls on the primary experiment,
+because its windows are the line-tuned ones. \MkMaskAPct{} per cent is the
+cost of the mask this paper applies, and is the figure quoted elsewhere.
+Attributing on either frame instead would mask the union of two tubes
+separated by the star's LSR velocity, \LsMaskTwoGHz\,GHz or
+\LsMaskTwoPct{} per cent of the Class~A union --- \LsMaskAddPct{} per cent
+more bandwidth for no further attribution, which is the measurement behind
+deciding in one frame. Between $\pm\FrLadderLo$ and
+$\pm\FrLadderHi$\,km\,s$^{-1}$ the mask attributes \FrAttrWTwenty{} to
+\FrAttrWHundred{} of the crossings, and the \FrNRankPass{} that outrank all
+\NCtrl{} control positions of their own windows are the same two at every
+width.
+
+\emph{What a bright line costs is its channels, and nothing beyond them.}
+Because every above-trigger cell of a window is recorded
+(\S\ref{sec:technosearch}), a weaker carrier beside a molecular line is
+recorded too, and the price of line confusion is the masked channels and not
+the windows holding them. Only the \MkNWholly{} fine windows narrower than
+the mask itself are lost outright, \MkWhollyGHz\,GHz, \MkWhollyPct{} per
+cent of the Class~A union; the one masked window that still holds a
+trigger-level cell outside the mask, \MkSurvStar{} at \MkSurvFreq\,GHz, does
+not recur in the \MkSurvNRep{} other blocks covering that cell.
+
+\emph{The labelled crossings are tested for recurrence too.} \MkAttrTested{}
+of the \MkAttr{} attributed crossings have a later block covering the
+predicted cell, and the \MkAttrRecur{} that are present again, toward
+\MkAttrRecurStars, are the positive control of that stage. For the
+\MkAttrExcl{} not recovered a repeat window's own largest statistic bounds
+the predicted cell from above and Table~\ref{tab:ledger} prints the row as a
+bound; \MkAttrUntest{} have no covering block at all
+(\MkAttrUntestNames).
+
+\emph{Image-sideband leakage accounts for no crossing, and a longer list
+would not be a better one.} The mask holds signal-sideband frequencies, and
+the \MkImgN{} unattributed crossings that share a block with a CO($2\to1$)
+crossing in the opposite sideband would need a first local oscillator outside
+the range their own block's spectral windows permit,
+\MkImgLOLo--\MkImgLOHi\,GHz. In the other direction, every Splatalogue
+transition over these intervals with an Einstein coefficient above
+$10^{-5}$\,s$^{-1}$ --- \MaskDbTrans{} transitions of \MaskDbCarriers{}
+species --- would mask \MaskDbPctUnion{} per cent of the union and move
+\FrFullNFlip{} crossings across the line, \FrFullNFlipRankWord{} of them
+rank-leading. At these frequencies almost anything lies within
+$\pm\MaskHalfKms$\,km\,s$^{-1}$ of something in such a list, which is why the
+species are restricted to what these setups cover and why the outcome is a
+label rather than a verdict.

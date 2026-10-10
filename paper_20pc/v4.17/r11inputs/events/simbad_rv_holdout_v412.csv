@@ -1,0 +1,12 @@
+# SIMBAD TAP, systemic (heliocentric) radial velocities for the
+# hold-out stars carrying a threshold crossing.  Queried 2026-10-06T06:07Z.
+# Five of the seven are already in the paper's own resolver and reproduce
+# its values exactly; the two that are not are HD 172555 and TRAPPIST-1.
+query_id,main_id,rvz_radvel,rvz_err,rvz_bibcode,rvz_qual
+"HD  10647","* q01 Eri",27.662,4.0E-4,"2018A&A...616A...7S",A
+"HD  14055","* gam Tri",5.11,1.74,"2022yCat.1355....0G",B
+"HD 170773","HD 170773",-16.55,0.95,"2018yCat.1345....0G",B
+"HD 172555","HD 172555",2.8,0.24,"2022yCat.1355....0G",A
+"HD 285968","HD 285968",26.236,7.0E-4,"2018A&A...616A...7S",A
+"HR  1010","* zet02 Ret",11.953,2.0E-4,"2018A&A...616A...7S",A
+"TRAPPIST-1","TRAPPIST-1",-52.003101,0.134416,"2020AJ....160..120J",A

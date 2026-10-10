@@ -1,0 +1,10 @@
+{
+ "star_name": "CD-57 1054 (Gaia DR3 4764027962957023104) [B7]",
+ "image_rms_mJy": 0.3455019323155284,
+ "image_peak_mJy": 25.37086047232151,
+ "peak_snr": 73.43189239501953,
+ "peak_offset_arcsec": 0.0,
+ "continuum_source_detected": true,
+ "sig_threshold": 5.0,
+ "pos_tol_arcsec": 3.0
+}

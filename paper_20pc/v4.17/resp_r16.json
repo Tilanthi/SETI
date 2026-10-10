@@ -1,0 +1,163 @@
+{
+ "beamwidth": {
+  "a_min": 0.50048,
+  "n_sys_1e15": [
+   24,
+   24
+  ],
+  "sys_shift": 0.0002051097402870905,
+  "win_shift": 5.035334080139009e-06
+ },
+ "decorrelation": {
+  "bl_med_measured": 46.0,
+  "bl_med_unmeasured": 278.7996085386624,
+  "n_measured": 279,
+  "n_unmeasured": 125,
+  "opt_hi_matched": 0.21419272439220172,
+  "opt_med_matched": 0.01865038862747248,
+  "opt_med_measured": 0.009279250938267092
+ },
+ "drive": null,
+ "failures": [],
+ "generated_by": "resp_r16.py",
+ "parallax": {
+  "median_limit_shift": 0.015345837733600431,
+  "median_loss_classA": 0.0,
+  "median_loss_released": 0.0012777187705244053,
+  "n_big": 14,
+  "n_none": 216
+ },
+ "representativeness": {
+  "axes": {
+   "the channel width": {
+    "covers_central": true,
+    "inj_med": 488281.25,
+    "inj_range": [
+     61035.1562,
+     976562.5
+    ],
+    "pop_med": 488281.25,
+    "pop_range": [
+     15258.7891,
+     1953125.0
+    ],
+    "ratio": 1.0
+   },
+   "the control-ring maximum": {
+    "covers_central": true,
+    "inj_med": 5.7542,
+    "inj_range": [
+     4.9332,
+     18.3574
+    ],
+    "pop_med": 5.771050000000001,
+    "pop_range": [
+     4.8161,
+     18.3885
+    ],
+    "ratio": 0.9970802540265635
+   },
+   "the de-drifting burden": {
+    "covers_central": true,
+    "inj_med": 14.7,
+    "inj_range": [
+     1.129,
+     199.0
+    ],
+    "pop_med": 14.86,
+    "pop_range": [
+     0.1713,
+     422.1
+    ],
+    "ratio": 0.9892328398384926
+   },
+   "the integration time": {
+    "covers_central": true,
+    "inj_med": 2237.76,
+    "inj_range": [
+     211.68,
+     2993.76
+    ],
+    "pop_med": 2388.96,
+    "pop_range": [
+     60.48,
+     3265.92
+    ],
+    "ratio": 0.9367088607594938
+   },
+   "the noise level": {
+    "covers_central": true,
+    "inj_med": 18.96467,
+    "inj_range": [
+     1.21707,
+     261.77609
+    ],
+    "pop_med": 10.97326,
+    "pop_range": [
+     0.84705,
+     261.77609
+    ],
+    "ratio": 1.7282621572805166
+   },
+   "the smearing retention": {
+    "covers_central": true,
+    "inj_med": 0.9984792525,
+    "inj_range": [
+     0.8926595343,
+     0.9999049135
+    ],
+    "pop_med": 0.9989486688,
+    "pop_range": [
+     0.6535022142,
+     0.9999973757
+    ],
+    "ratio": 0.9995300896686075
+   }
+  },
+  "n_cover": 6,
+  "split": {
+   "the channel width": {
+    "lower": 2.8819444444444446,
+    "shift": 0.2680555555555557,
+    "upper": 3.1500000000000004
+   },
+   "the control-ring maximum": {
+    "lower": 2.9125,
+    "shift": 0.0625,
+    "upper": 2.975
+   },
+   "the de-drifting burden": {
+    "lower": 3.1,
+    "shift": 0.19999999999999973,
+    "upper": 2.9000000000000004
+   },
+   "the integration time": {
+    "lower": 3.1500000000000004,
+    "shift": 0.25,
+    "upper": 2.9000000000000004
+   },
+   "the noise level": {
+    "lower": 2.9,
+    "shift": 0.25000000000000044,
+    "upper": 3.1500000000000004
+   },
+   "the smearing retention": {
+    "lower": 2.9352272727272726,
+    "shift": 0.16477272727272751,
+    "upper": 3.1
+   }
+  },
+  "worst": "the noise level"
+ },
+ "response": {
+  "deposited_phase_mean": 0.4375,
+  "envelope": [
+   2.0,
+   2.356194490189736
+  ],
+  "margin": 1.3250775870145688,
+  "p90": 3.0287487703190146,
+  "response_factor": 2.2857142857142856
+ },
+ "round": 620
+}

@@ -1,0 +1,1972 @@
+[
+ {
+  "eb": "A002_Xd98580_X3bf6",
+  "star": "HD 285968",
+  "display": "HD 285968",
+  "freq": 230.5020791,
+  "tstar": 5.9557,
+  "v_bary": -29.191,
+  "v_sys": 26.236,
+  "f_stellar": 230.54469734219387,
+  "line": "CO(2-1)",
+  "dv": 8.709248273015131,
+  "band": "6",
+  "screen": false,
+  "dq": false,
+  "n_candidate_profiles": 1,
+  "candidates": [
+   {
+    "rel": 0.03910988904827875,
+    "dir": "r14mask",
+    "file": "HD_285968_B6__A002_Xd98580_X3bf6_spw3_r8prof.npz",
+    "pub": 6.188626766204834
+   }
+  ],
+  "profile": "HD_285968_B6__A002_Xd98580_X3bf6_spw3_r8prof.npz",
+  "profile_dir": "r14mask",
+  "n_profile_sets": 0,
+  "nchan": 3770,
+  "nctrl": 8,
+  "chanw_Hz": 488281.25,
+  "nint": 279,
+  "n_drift": 77,
+  "win_lo": 229.03723532787612,
+  "win_hi": 230.87756735912612,
+  "win_bw_GHz": 1.84033203125,
+  "star_peak_pub": 6.188626766204834,
+  "star_peak_prof": 6.188626766204834,
+  "gate_rel": 0.03910988904827875,
+  "gate": false,
+  "lines_in_window": [
+   {
+    "line": "CO(2-1)",
+    "nchan": 158,
+    "dv_at_peak": 8.70921949771207
+   }
+  ],
+  "n_masked_chan": 158,
+  "masked_frac": 0.04190981432360743,
+  "peak_is_masked": true,
+  "dv_at_peak": 8.70921949771207,
+  "peak_chan": 3000,
+  "f_peak_topo": 230.50207907787612,
+  "f_peak_stellar": 230.5446973200659,
+  "peak_offset_chan": -4.530971636995673e-05,
+  "bw_masked_GHz": 0.0771484375,
+  "n_keep_chan": 3612,
+  "bw_keep_GHz": 1.763671875,
+  "T_resid": 4.370006561279297,
+  "resid_chan": 2477,
+  "f_resid_topo": 230.24670798412612,
+  "f_resid_stellar": 230.28927900996467,
+  "resid_drift": 828.5230102539062,
+  "resid_nearest": "CO(2-1)",
+  "resid_dv": -323.43768471526346,
+  "T_resid_ctrl_max": 5.140556335449219,
+  "n_ctrl_above_resid": 6,
+  "second_crossing": false,
+  "status": "ok"
+ },
+ {
+  "eb": "A002_Xdb4b9a_X108f",
+  "star": "HD 285968",
+  "display": "HD 285968",
+  "freq": 230.51002160000002,
+  "tstar": 5.835,
+  "v_bary": -18.828854902178715,
+  "v_sys": 26.236,
+  "f_stellar": 230.54467317388347,
+  "line": "CO(2-1)",
+  "dv": 8.677819713811816,
+  "band": "6",
+  "screen": false,
+  "dq": false,
+  "n_candidate_profiles": 5,
+  "candidates": [
+   {
+    "rel": 3.9977504334638125e-06,
+    "dir": "prof",
+    "file": "A002_Xdb4b9a_X108f_spw3_r8prof.npz",
+    "pub": 5.834976673126221
+   },
+   {
+    "rel": 3.9977504334638125e-06,
+    "dir": "prof_v409",
+    "file": "HD_285968_B6_EB_X108f__A002_Xdb4b9a_X108f_spw3_r8prof.npz",
+    "pub": 5.834976673126221
+   },
+   {
+    "rel": 3.9977504334638125e-06,
+    "dir": "prof_v409r",
+    "file": "HD_285968_B6_EB_X108f__A002_Xdb4b9a_X108f_spw3_r8prof.npz",
+    "pub": 5.834976673126221
+   },
+   {
+    "rel": 3.9977504334638125e-06,
+    "dir": "profall",
+    "file": "A002_Xdb4b9a_X108f_spw3_r8prof.npz",
+    "pub": 5.834976673126221
+   },
+   {
+    "rel": 3.9977504334638125e-06,
+    "dir": "profall_v409",
+    "file": "HD_285968_B6_EB_X108f__A002_Xdb4b9a_X108f_spw3_r8prof.npz",
+    "pub": 5.834976673126221
+   }
+  ],
+  "profile": "A002_Xdb4b9a_X108f_spw3_r8prof.npz",
+  "profile_dir": "prof",
+  "n_profile_sets": 5,
+  "nchan": 3770,
+  "nctrl": 8,
+  "chanw_Hz": 488281.25,
+  "nint": 279,
+  "n_drift": 77,
+  "win_lo": 229.0451778430237,
+  "win_hi": 230.8855098742737,
+  "win_bw_GHz": 1.84033203125,
+  "star_peak_pub": 5.834976673126221,
+  "star_peak_prof": 5.834976673126221,
+  "gate_rel": 3.9977504334638125e-06,
+  "gate": true,
+  "lines_in_window": [
+   {
+    "line": "CO(2-1)",
+    "nchan": 158,
+    "dv_at_peak": 8.677810640465449
+   }
+  ],
+  "n_masked_chan": 158,
+  "masked_frac": 0.04190981432360743,
+  "peak_is_masked": true,
+  "dv_at_peak": 8.677810640465449,
+  "peak_chan": 3000,
+  "f_peak_topo": 230.5100215930237,
+  "f_peak_stellar": 230.54467316690614,
+  "peak_offset_chan": -1.428747782483697e-05,
+  "bw_masked_GHz": 0.0771484375,
+  "n_keep_chan": 3612,
+  "bw_keep_GHz": 1.763671875,
+  "T_resid": 4.9432244300842285,
+  "resid_chan": 721,
+  "f_resid_topo": 229.3972286242737,
+  "f_resid_stellar": 229.43171291680537,
+  "resid_drift": 2296.19775390625,
+  "resid_nearest": "CO(2-1)",
+  "resid_dv": -1438.6197673466968,
+  "T_resid_ctrl_max": 4.663855075836182,
+  "n_ctrl_above_resid": 0,
+  "second_crossing": false,
+  "status": "ok"
+ },
+ {
+  "eb": "A002_Xdb7ab7_X5b4e",
+  "star": "HD 285968",
+  "display": "HD 285968",
+  "freq": 230.5115699,
+  "tstar": 5.8682,
+  "v_bary": -16.811941740563086,
+  "v_sys": 26.236,
+  "f_stellar": 230.54467075865543,
+  "line": "CO(2-1)",
+  "dv": 8.67467894244045,
+  "band": "6",
+  "screen": false,
+  "dq": false,
+  "n_candidate_profiles": 5,
+  "candidates": [
+   {
+    "rel": 7.505492602384694e-06,
+    "dir": "prof",
+    "file": "A002_Xdb7ab7_X5b4e_spw3_r8prof.npz",
+    "pub": 5.8681559562683105
+   },
+   {
+    "rel": 7.505492602384694e-06,
+    "dir": "prof_v409",
+    "file": "HD_285968_B6_EB_X5b4e__A002_Xdb7ab7_X5b4e_spw3_r8prof.npz",
+    "pub": 5.8681559562683105
+   },
+   {
+    "rel": 7.505492602384694e-06,
+    "dir": "prof_v409r",
+    "file": "HD_285968_B6_EB_X5b4e__A002_Xdb7ab7_X5b4e_spw3_r8prof.npz",
+    "pub": 5.8681559562683105
+   },
+   {
+    "rel": 7.505492602384694e-06,
+    "dir": "profall",
+    "file": "A002_Xdb7ab7_X5b4e_spw3_r8prof.npz",
+    "pub": 5.8681559562683105
+   },
+   {
+    "rel": 7.505492602384694e-06,
+    "dir": "profall_v409",
+    "file": "HD_285968_B6_EB_X5b4e__A002_Xdb7ab7_X5b4e_spw3_r8prof.npz",
+    "pub": 5.8681559562683105
+   }
+  ],
+  "profile": "A002_Xdb7ab7_X5b4e_spw3_r8prof.npz",
+  "profile_dir": "prof",
+  "n_profile_sets": 5,
+  "nchan": 3770,
+  "nctrl": 8,
+  "chanw_Hz": 488281.25,
+  "nint": 279,
+  "n_drift": 77,
+  "win_lo": 229.04672610992844,
+  "win_hi": 230.88705814117844,
+  "win_bw_GHz": 1.84033203125,
+  "star_peak_pub": 5.8681559562683105,
+  "star_peak_prof": 5.8681559562683105,
+  "gate_rel": 7.505492602384694e-06,
+  "gate": true,
+  "lines_in_window": [
+   {
+    "line": "CO(2-1)",
+    "nchan": 158,
+    "dv_at_peak": 8.674626825759544
+   }
+  ],
+  "n_masked_chan": 158,
+  "masked_frac": 0.04190981432360743,
+  "peak_is_masked": true,
+  "dv_at_peak": 8.674626825759544,
+  "peak_chan": 3000,
+  "f_peak_topo": 230.51156985992844,
+  "f_peak_stellar": 230.54467071857812,
+  "peak_offset_chan": -8.20665736682713e-05,
+  "bw_masked_GHz": 0.0771484375,
+  "n_keep_chan": 3612,
+  "bw_keep_GHz": 1.763671875,
+  "T_resid": 4.612642765045166,
+  "resid_chan": 476,
+  "f_resid_topo": 229.27914798492844,
+  "f_resid_stellar": 229.3120718710196,
+  "resid_drift": -1367.2303466796875,
+  "resid_nearest": "CO(2-1)",
+  "resid_dv": -1594.2014206698025,
+  "T_resid_ctrl_max": 4.8161492347717285,
+  "n_ctrl_above_resid": 3,
+  "second_crossing": false,
+  "status": "ok"
+ },
+ {
+  "eb": "A002_Xf5d76d_Xeb8",
+  "star": "bet Pic",
+  "display": "$\\beta$~Pic",
+  "freq": 115.26032550000001,
+  "tstar": 30.7648,
+  "v_bary": -8.046583078331883,
+  "v_sys": 20.0,
+  "f_stellar": 115.27110869377768,
+  "line": "CO(1-0)",
+  "dv": -0.24266686954149053,
+  "band": "3",
+  "screen": true,
+  "dq": false,
+  "n_candidate_profiles": 5,
+  "candidates": [
+   {
+    "rel": 1.2732851596699946e-06,
+    "dir": "prof",
+    "file": "A002_Xf5d76d_Xeb8_spw3_r8prof.npz",
+    "pub": 30.76483917236328
+   },
+   {
+    "rel": 1.2732851596699946e-06,
+    "dir": "prof_v409",
+    "file": "bet_Pic_B3_EB_Xeb8__A002_Xf5d76d_Xeb8_spw3_r8prof.npz",
+    "pub": 30.76483917236328
+   },
+   {
+    "rel": 1.2732851596699946e-06,
+    "dir": "prof_v409r",
+    "file": "bet_Pic_B3_EB_Xeb8__A002_Xf5d76d_Xeb8_spw3_r8prof.npz",
+    "pub": 30.76483917236328
+   },
+   {
+    "rel": 1.2732851596699946e-06,
+    "dir": "profall",
+    "file": "A002_Xf5d76d_Xeb8_spw3_r8prof.npz",
+    "pub": 30.76483917236328
+   },
+   {
+    "rel": 1.2732851596699946e-06,
+    "dir": "profall_v409",
+    "file": "bet_Pic_B3_EB_Xeb8__A002_Xf5d76d_Xeb8_spw3_r8prof.npz",
+    "pub": 30.76483917236328
+   }
+  ],
+  "profile": "A002_Xf5d76d_Xeb8_spw3_r8prof.npz",
+  "profile_dir": "prof",
+  "n_profile_sets": 5,
+  "nchan": 3534,
+  "nctrl": 8,
+  "chanw_Hz": 244140.625,
+  "nint": 335,
+  "n_drift": 53,
+  "win_lo": 114.82917316989654,
+  "win_hi": 115.69172199802154,
+  "win_bw_GHz": 0.862548828125,
+  "star_peak_pub": 30.76483917236328,
+  "star_peak_prof": 30.76483917236328,
+  "gate_rel": 1.2732851596699946e-06,
+  "gate": true,
+  "lines_in_window": [
+   {
+    "line": "CO(1-0)",
+    "nchan": 158,
+    "dv_at_peak": -0.24263137490477188
+   },
+   {
+    "line": "H(38a)",
+    "nchan": 158,
+    "dv_at_peak": -8.557016189294732
+   }
+  ],
+  "n_masked_chan": 171,
+  "masked_frac": 0.04838709677419355,
+  "peak_is_masked": true,
+  "dv_at_peak": -0.24263137490477188,
+  "peak_chan": 1766,
+  "f_peak_topo": 115.26032551364654,
+  "f_peak_stellar": 115.27110870742548,
+  "peak_offset_chan": 5.58961764909327e-05,
+  "bw_masked_GHz": 0.041748046875,
+  "n_keep_chan": 3363,
+  "bw_keep_GHz": 0.821044921875,
+  "T_resid": 4.686674118041992,
+  "resid_chan": 2556,
+  "f_resid_topo": 115.45319660739654,
+  "f_resid_stellar": 115.46399784525413,
+  "resid_drift": 783.63916015625,
+  "resid_nearest": "H(38a)",
+  "resid_dv": 493.08696766829945,
+  "T_resid_ctrl_max": 4.887695789337158,
+  "n_ctrl_above_resid": 1,
+  "second_crossing": false,
+  "status": "ok"
+ },
+ {
+  "eb": "A002_Xf5d76d_Xe19",
+  "star": "bet Pic",
+  "display": "$\\beta$~Pic",
+  "freq": 115.2603454,
+  "tstar": 27.6845,
+  "v_bary": -7.994034646448245,
+  "v_sys": 20.0,
+  "f_stellar": 115.27110839114692,
+  "line": "CO(1-0)",
+  "dv": -0.24345393877970084,
+  "band": "3",
+  "screen": true,
+  "dq": false,
+  "n_candidate_profiles": 5,
+  "candidates": [
+   {
+    "rel": 5.952606038988195e-08,
+    "dir": "prof",
+    "file": "A002_Xf5d76d_Xe19_spw3_r8prof.npz",
+    "pub": 27.68450164794922
+   },
+   {
+    "rel": 5.952606038988195e-08,
+    "dir": "prof_v409",
+    "file": "bet_Pic_B3_EB_Xe19__A002_Xf5d76d_Xe19_spw3_r8prof.npz",
+    "pub": 27.68450164794922
+   },
+   {
+    "rel": 5.952606038988195e-08,
+    "dir": "prof_v409r",
+    "file": "bet_Pic_B3_EB_Xe19__A002_Xf5d76d_Xe19_spw3_r8prof.npz",
+    "pub": 27.68450164794922
+   },
+   {
+    "rel": 5.952606038988195e-08,
+    "dir": "profall",
+    "file": "A002_Xf5d76d_Xe19_spw3_r8prof.npz",
+    "pub": 27.68450164794922
+   },
+   {
+    "rel": 5.952606038988195e-08,
+    "dir": "profall_v409",
+    "file": "bet_Pic_B3_EB_Xe19__A002_Xf5d76d_Xe19_spw3_r8prof.npz",
+    "pub": 27.68450164794922
+   }
+  ],
+  "profile": "A002_Xf5d76d_Xe19_spw3_r8prof.npz",
+  "profile_dir": "prof",
+  "n_profile_sets": 5,
+  "nchan": 3534,
+  "nctrl": 8,
+  "chanw_Hz": 244140.625,
+  "nint": 335,
+  "n_drift": 53,
+  "win_lo": 114.8291930659201,
+  "win_hi": 115.6917418940451,
+  "win_bw_GHz": 0.862548828125,
+  "star_peak_pub": 27.68450164794922,
+  "star_peak_prof": 27.68450164794922,
+  "gate_rel": 5.952606038988195e-08,
+  "gate": true,
+  "lines_in_window": [
+   {
+    "line": "CO(1-0)",
+    "nchan": 158,
+    "dv_at_peak": -0.24342878689424796
+   },
+   {
+    "line": "H(38a)",
+    "nchan": 158,
+    "dv_at_peak": -8.557813579168924
+   }
+  ],
+  "n_masked_chan": 171,
+  "masked_frac": 0.04838709677419355,
+  "peak_is_masked": true,
+  "dv_at_peak": -0.24342878689424796,
+  "peak_chan": 1766,
+  "f_peak_topo": 115.2603454096701,
+  "f_peak_stellar": 115.27110840081791,
+  "peak_offset_chan": 3.9608683437108994e-05,
+  "bw_masked_GHz": 0.041748046875,
+  "n_keep_chan": 3363,
+  "bw_keep_GHz": 0.821044921875,
+  "T_resid": 4.715763092041016,
+  "resid_chan": 1118,
+  "f_resid_topo": 115.1021422846701,
+  "f_resid_stellar": 115.11289050283743,
+  "resid_drift": 728.8849487304688,
+  "resid_nearest": "CO(1-0)",
+  "resid_dv": -411.7298339964169,
+  "T_resid_ctrl_max": 4.722551345825195,
+  "n_ctrl_above_resid": 1,
+  "second_crossing": false,
+  "status": "ok"
+ },
+ {
+  "eb": "A002_Xf5d76d_Xcc5",
+  "star": "bet Pic",
+  "display": "$\\beta$~Pic",
+  "freq": 115.2603721,
+  "tstar": 17.2885,
+  "v_bary": -7.921350900686468,
+  "v_sys": 20.0,
+  "f_stellar": 115.2711071472584,
+  "line": "CO(1-0)",
+  "dv": -0.24668899133583075,
+  "band": "3",
+  "screen": true,
+  "dq": false,
+  "n_candidate_profiles": 5,
+  "candidates": [
+   {
+    "rel": 6.716567935710447e-07,
+    "dir": "prof",
+    "file": "A002_Xf5d76d_Xcc5_spw3_r8prof.npz",
+    "pub": 17.288488388061523
+   },
+   {
+    "rel": 6.716567935710447e-07,
+    "dir": "prof_v409",
+    "file": "bet_Pic_B3_EB_Xcc5__A002_Xf5d76d_Xcc5_spw3_r8prof.npz",
+    "pub": 17.288488388061523
+   },
+   {
+    "rel": 6.716567935710447e-07,
+    "dir": "prof_v409r",
+    "file": "bet_Pic_B3_EB_Xcc5__A002_Xf5d76d_Xcc5_spw3_r8prof.npz",
+    "pub": 17.288488388061523
+   },
+   {
+    "rel": 6.716567935710447e-07,
+    "dir": "profall",
+    "file": "A002_Xf5d76d_Xcc5_spw3_r8prof.npz",
+    "pub": 17.288488388061523
+   },
+   {
+    "rel": 6.716567935710447e-07,
+    "dir": "profall_v409",
+    "file": "bet_Pic_B3_EB_Xcc5__A002_Xf5d76d_Xcc5_spw3_r8prof.npz",
+    "pub": 17.288488388061523
+   }
+  ],
+  "profile": "A002_Xf5d76d_Xcc5_spw3_r8prof.npz",
+  "profile_dir": "prof",
+  "n_profile_sets": 5,
+  "nchan": 3534,
+  "nctrl": 8,
+  "chanw_Hz": 244140.625,
+  "nint": 335,
+  "n_drift": 53,
+  "win_lo": 114.8292197857924,
+  "win_hi": 115.6917686139174,
+  "win_bw_GHz": 0.862548828125,
+  "star_peak_pub": 17.288488388061523,
+  "star_peak_prof": 17.288488388061523,
+  "gate_rel": 6.716567935710447e-07,
+  "gate": true,
+  "lines_in_window": [
+   {
+    "line": "CO(1-0)",
+    "nchan": 158,
+    "dv_at_peak": -0.24661215152838203
+   },
+   {
+    "line": "H(38a)",
+    "nchan": 158,
+    "dv_at_peak": -8.560996855516182
+   }
+  ],
+  "n_masked_chan": 171,
+  "masked_frac": 0.04838709677419355,
+  "peak_is_masked": true,
+  "dv_at_peak": -0.24661215152838203,
+  "peak_chan": 1766,
+  "f_peak_topo": 115.2603721295424,
+  "f_peak_stellar": 115.27110717680357,
+  "peak_offset_chan": 0.00012100569438189268,
+  "bw_masked_GHz": 0.041748046875,
+  "n_keep_chan": 3363,
+  "bw_keep_GHz": 0.821044921875,
+  "T_resid": 4.1275811195373535,
+  "resid_chan": 2169,
+  "f_resid_topo": 115.3587608014174,
+  "f_resid_stellar": 115.36950501234013,
+  "resid_drift": -787.8489379882812,
+  "resid_nearest": "H(38a)",
+  "resid_dv": 247.34082725535922,
+  "T_resid_ctrl_max": 4.900516510009766,
+  "n_ctrl_above_resid": 6,
+  "second_crossing": false,
+  "status": "ok"
+ },
+ {
+  "eb": "A002_Xf5d76d_X32f1",
+  "star": "bet Pic",
+  "display": "$\\beta$~Pic",
+  "freq": 115.2606437,
+  "tstar": 14.654,
+  "v_bary": -7.834225012993451,
+  "v_sys": 20.0,
+  "f_stellar": 115.27134527319329,
+  "line": "CO(1-0)",
+  "dv": 0.3726188504681111,
+  "band": "3",
+  "screen": true,
+  "dq": false,
+  "n_candidate_profiles": 5,
+  "candidates": [
+   {
+    "rel": 5.013721122907387e-07,
+    "dir": "prof",
+    "file": "A002_Xf5d76d_X32f1_spw3_r8prof.npz",
+    "pub": 14.653992652893066
+   },
+   {
+    "rel": 5.013721122907387e-07,
+    "dir": "prof_v409",
+    "file": "bet_Pic_B3__A002_Xf5d76d_X32f1_spw3_r8prof.npz",
+    "pub": 14.653992652893066
+   },
+   {
+    "rel": 5.013721122907387e-07,
+    "dir": "prof_v409r",
+    "file": "bet_Pic_B3__A002_Xf5d76d_X32f1_spw3_r8prof.npz",
+    "pub": 14.653992652893066
+   },
+   {
+    "rel": 5.013721122907387e-07,
+    "dir": "profall",
+    "file": "A002_Xf5d76d_X32f1_spw3_r8prof.npz",
+    "pub": 14.653992652893066
+   },
+   {
+    "rel": 5.013721122907387e-07,
+    "dir": "profall_v409",
+    "file": "bet_Pic_B3__A002_Xf5d76d_X32f1_spw3_r8prof.npz",
+    "pub": 14.653992652893066
+   }
+  ],
+  "profile": "A002_Xf5d76d_X32f1_spw3_r8prof.npz",
+  "profile_dir": "prof",
+  "n_profile_sets": 5,
+  "nchan": 3534,
+  "nctrl": 8,
+  "chanw_Hz": 244140.625,
+  "nint": 200,
+  "n_drift": 31,
+  "win_lo": 114.82924720740164,
+  "win_hi": 115.69179603552664,
+  "win_bw_GHz": 0.862548828125,
+  "star_peak_pub": 14.653992652893066,
+  "star_peak_prof": 14.653992652893066,
+  "gate_rel": 5.013721122907387e-07,
+  "gate": true,
+  "lines_in_window": [
+   {
+    "line": "CO(1-0)",
+    "nchan": 158,
+    "dv_at_peak": 0.37259746148818645
+   },
+   {
+    "line": "H(38a)",
+    "nchan": 158,
+    "dv_at_peak": -7.94180441555061
+   }
+  ],
+  "n_masked_chan": 171,
+  "masked_frac": 0.04838709677419355,
+  "peak_is_masked": true,
+  "dv_at_peak": 0.37259746148818645,
+  "peak_chan": 1767,
+  "f_peak_topo": 115.26064369177664,
+  "f_peak_stellar": 115.27134526496916,
+  "peak_offset_chan": -3.368291072547436e-05,
+  "bw_masked_GHz": 0.041748046875,
+  "n_keep_chan": 3363,
+  "bw_keep_GHz": 0.821044921875,
+  "T_resid": 5.035395622253418,
+  "resid_chan": 3239,
+  "f_resid_topo": 115.62001869177664,
+  "f_resid_stellar": 115.63075363176065,
+  "resid_drift": -1002.9017944335938,
+  "resid_nearest": "H(38a)",
+  "resid_dv": 926.7663236761773,
+  "T_resid_ctrl_max": 4.714324951171875,
+  "n_ctrl_above_resid": 0,
+  "second_crossing": true,
+  "status": "ok"
+ },
+ {
+  "eb": "A002_Xf4df6f_Xc7",
+  "star": "bet Pic",
+  "display": "$\\beta$~Pic",
+  "freq": 115.2620386,
+  "tstar": 17.9065,
+  "v_bary": -3.602396815791595,
+  "v_sys": 20.0,
+  "f_stellar": 115.27111317142669,
+  "line": "CO(1-0)",
+  "dv": -0.23102158970795084,
+  "band": "3",
+  "screen": true,
+  "dq": false,
+  "n_candidate_profiles": 5,
+  "candidates": [
+   {
+    "rel": 2.4422243013392503e-06,
+    "dir": "prof",
+    "file": "A002_Xf4df6f_Xc7_spw3_r8prof.npz",
+    "pub": 17.906543731689453
+   },
+   {
+    "rel": 2.4422243013392503e-06,
+    "dir": "prof_v409",
+    "file": "GaiaDR3_4792774797545800832_B3_EB_Xc7__A002_Xf4df6f_Xc7_spw3_r8prof.npz",
+    "pub": 17.906543731689453
+   },
+   {
+    "rel": 2.4422243013392503e-06,
+    "dir": "prof_v409r",
+    "file": "GaiaDR3_4792774797545800832_B3_EB_Xc7__A002_Xf4df6f_Xc7_spw3_r8prof.npz",
+    "pub": 17.906543731689453
+   },
+   {
+    "rel": 2.4422243013392503e-06,
+    "dir": "profall",
+    "file": "A002_Xf4df6f_Xc7_spw3_r8prof.npz",
+    "pub": 17.906543731689453
+   },
+   {
+    "rel": 2.4422243013392503e-06,
+    "dir": "profall_v409",
+    "file": "GaiaDR3_4792774797545800832_B3_EB_Xc7__A002_Xf4df6f_Xc7_spw3_r8prof.npz",
+    "pub": 17.906543731689453
+   }
+  ],
+  "profile": "A002_Xf4df6f_Xc7_spw3_r8prof.npz",
+  "profile_dir": "prof",
+  "n_profile_sets": 5,
+  "nchan": 3534,
+  "nctrl": 8,
+  "chanw_Hz": 244140.625,
+  "nint": 490,
+  "n_drift": 76,
+  "win_lo": 114.83088626408832,
+  "win_hi": 115.69343509221332,
+  "win_bw_GHz": 0.862548828125,
+  "star_peak_pub": 17.906543731689453,
+  "star_peak_prof": 17.906543731689453,
+  "gate_rel": 2.4422243013392503e-06,
+  "gate": true,
+  "lines_in_window": [
+   {
+    "line": "CO(1-0)",
+    "nchan": 158,
+    "dv_at_peak": -0.23100120253837694
+   },
+   {
+    "line": "H(38a)",
+    "nchan": 158,
+    "dv_at_peak": -8.545386339477501
+   }
+  ],
+  "n_masked_chan": 171,
+  "masked_frac": 0.04838709677419355,
+  "peak_is_masked": true,
+  "dv_at_peak": -0.23100120253837694,
+  "peak_chan": 1766,
+  "f_peak_topo": 115.26203860783832,
+  "f_peak_stellar": 115.27111317926563,
+  "peak_offset_chan": 3.210577415302396e-05,
+  "bw_masked_GHz": 0.041748046875,
+  "n_keep_chan": 3363,
+  "bw_keep_GHz": 0.821044921875,
+  "T_resid": 4.766232967376709,
+  "resid_chan": 2091,
+  "f_resid_topo": 115.34138431096332,
+  "f_resid_stellar": 115.35046512927174,
+  "resid_drift": 1004.560791015625,
+  "resid_nearest": "H(38a)",
+  "resid_dv": 197.8240794377932,
+  "T_resid_ctrl_max": 5.507485389709473,
+  "n_ctrl_above_resid": 2,
+  "second_crossing": false,
+  "status": "ok"
+ },
+ {
+  "eb": "A002_X7116f1_X1785",
+  "star": "bet Pic",
+  "display": "$\\beta$~Pic",
+  "freq": 230.527185,
+  "tstar": 9.6773,
+  "v_bary": 5.40634577841212,
+  "v_sys": 20.0,
+  "f_stellar": 230.5384065994498,
+  "line": "CO(2-1)",
+  "dv": 0.5287434109323069,
+  "band": "6",
+  "screen": false,
+  "dq": false,
+  "n_candidate_profiles": 5,
+  "candidates": [
+   {
+    "rel": 1.7221383457558637e-06,
+    "dir": "prof",
+    "file": "A002_X7116f1_X1785_spw0_r8prof.npz",
+    "pub": 9.677316665649414
+   },
+   {
+    "rel": 1.7221383457558637e-06,
+    "dir": "prof_v409",
+    "file": "bet_Pic_B6_EB_X1785__A002_X7116f1_X1785_spw0_r8prof.npz",
+    "pub": 9.677316665649414
+   },
+   {
+    "rel": 1.7221383457558637e-06,
+    "dir": "prof_v409r",
+    "file": "bet_Pic_B6_EB_X1785__A002_X7116f1_X1785_spw0_r8prof.npz",
+    "pub": 9.677316665649414
+   },
+   {
+    "rel": 1.7221383457558637e-06,
+    "dir": "profall",
+    "file": "A002_X7116f1_X1785_spw0_r8prof.npz",
+    "pub": 9.677316665649414
+   },
+   {
+    "rel": 1.7221383457558637e-06,
+    "dir": "profall_v409",
+    "file": "bet_Pic_B6_EB_X1785__A002_X7116f1_X1785_spw0_r8prof.npz",
+    "pub": 9.677316665649414
+   }
+  ],
+  "profile": "A002_X7116f1_X1785_spw0_r8prof.npz",
+  "profile_dir": "prof",
+  "n_profile_sets": 5,
+  "nchan": 3770,
+  "nctrl": 8,
+  "chanw_Hz": 244140.625,
+  "nint": 106,
+  "n_drift": 86,
+  "win_lo": 230.08211659240035,
+  "win_hi": 231.00228260802535,
+  "win_bw_GHz": 0.920166015625,
+  "star_peak_pub": 9.677316665649414,
+  "star_peak_prof": 9.677316665649414,
+  "gate_rel": 1.7221383457558637e-06,
+  "gate": true,
+  "lines_in_window": [
+   {
+    "line": "CO(2-1)",
+    "nchan": 315,
+    "dv_at_peak": 0.5286806963545814
+   }
+  ],
+  "n_masked_chan": 315,
+  "masked_frac": 0.08355437665782493,
+  "peak_is_masked": true,
+  "dv_at_peak": 0.5286806963545814,
+  "peak_chan": 1823,
+  "f_peak_topo": 230.52718495177535,
+  "f_peak_stellar": 230.53840655122278,
+  "peak_offset_chan": -0.00019752816297113895,
+  "bw_masked_GHz": 0.076904296875,
+  "n_keep_chan": 3455,
+  "bw_keep_GHz": 0.843505859375,
+  "T_resid": 4.699461936950684,
+  "resid_chan": 2221,
+  "f_resid_topo": 230.62435292052535,
+  "f_resid_stellar": 230.63557924991395,
+  "resid_drift": 1149.0155029296875,
+  "resid_nearest": "CO(2-1)",
+  "resid_dv": 126.89241331795502,
+  "T_resid_ctrl_max": 5.244786262512207,
+  "n_ctrl_above_resid": 6,
+  "second_crossing": false,
+  "status": "ok"
+ },
+ {
+  "eb": "A002_X6f1341_X1484",
+  "star": "bet Pic",
+  "display": "$\\beta$~Pic",
+  "freq": 230.5283785,
+  "tstar": 9.832,
+  "v_bary": 7.596794701881015,
+  "v_sys": 20.0,
+  "f_stellar": 230.5379156777931,
+  "line": "CO(2-1)",
+  "dv": -0.10965290612050087,
+  "band": "6",
+  "screen": true,
+  "dq": false,
+  "n_candidate_profiles": 5,
+  "candidates": [
+   {
+    "rel": 6.044851851691125e-07,
+    "dir": "prof",
+    "file": "A002_X6f1341_X1484_spw0_r8prof.npz",
+    "pub": 9.83199405670166
+   },
+   {
+    "rel": 6.044851851691125e-07,
+    "dir": "prof_v409",
+    "file": "bet_Pic_B6_EB_X1484__A002_X6f1341_X1484_spw0_r8prof.npz",
+    "pub": 9.83199405670166
+   },
+   {
+    "rel": 6.044851851691125e-07,
+    "dir": "prof_v409r",
+    "file": "bet_Pic_B6_EB_X1484__A002_X6f1341_X1484_spw0_r8prof.npz",
+    "pub": 9.83199405670166
+   },
+   {
+    "rel": 6.044851851691125e-07,
+    "dir": "profall",
+    "file": "A002_X6f1341_X1484_spw0_r8prof.npz",
+    "pub": 9.83199405670166
+   },
+   {
+    "rel": 6.044851851691125e-07,
+    "dir": "profall_v409",
+    "file": "bet_Pic_B6_EB_X1484__A002_X6f1341_X1484_spw0_r8prof.npz",
+    "pub": 9.83199405670166
+   }
+  ],
+  "profile": "A002_X6f1341_X1484_spw0_r8prof.npz",
+  "profile_dir": "prof",
+  "n_profile_sets": 5,
+  "nchan": 3770,
+  "nctrl": 8,
+  "chanw_Hz": 244140.625,
+  "nint": 181,
+  "n_drift": 116,
+  "win_lo": 230.08379842546145,
+  "win_hi": 231.00396444108645,
+  "win_bw_GHz": 0.920166015625,
+  "star_peak_pub": 9.83199405670166,
+  "star_peak_prof": 9.83199405670166,
+  "gate_rel": 6.044851851691125e-07,
+  "gate": true,
+  "lines_in_window": [
+   {
+    "line": "CO(2-1)",
+    "nchan": 315,
+    "dv_at_peak": -0.10964824213964838
+   }
+  ],
+  "n_masked_chan": 315,
+  "masked_frac": 0.08355437665782493,
+  "peak_is_masked": true,
+  "dv_at_peak": -0.10964824213964838,
+  "peak_chan": 1821,
+  "f_peak_topo": 230.52837850358645,
+  "f_peak_stellar": 230.53791568137967,
+  "peak_offset_chan": 1.4690100215375423e-05,
+  "bw_masked_GHz": 0.076904296875,
+  "n_keep_chan": 3455,
+  "bw_keep_GHz": 0.843505859375,
+  "T_resid": 4.651717662811279,
+  "resid_chan": 161,
+  "f_resid_topo": 230.12310506608645,
+  "f_resid_stellar": 230.13262547733297,
+  "resid_drift": 190.54672241210938,
+  "resid_nearest": "CO(2-1)",
+  "resid_dv": -527.1505112429637,
+  "T_resid_ctrl_max": 4.970714092254639,
+  "n_ctrl_above_resid": 3,
+  "second_crossing": false,
+  "status": "ok"
+ },
+ {
+  "eb": "A002_Xa7a216_X23e4",
+  "star": "bet Pic",
+  "display": "$\\beta$~Pic",
+  "freq": 230.5272612,
+  "tstar": 7.9879,
+  "v_bary": 6.477945038454685,
+  "v_sys": 20.0,
+  "f_stellar": 230.5376587353208,
+  "line": "CO(2-1)",
+  "dv": -0.44378183643516816,
+  "band": "6",
+  "screen": true,
+  "dq": false,
+  "n_candidate_profiles": 5,
+  "candidates": [
+   {
+    "rel": 1.2811010258696198e-06,
+    "dir": "prof",
+    "file": "A002_Xa7a216_X23e4_spw0_r8prof.npz",
+    "pub": 7.987889766693115
+   },
+   {
+    "rel": 1.2811010258696198e-06,
+    "dir": "prof_v409",
+    "file": "GaiaDR3_4792774797545800832_B6_EB_X23e4__A002_Xa7a216_X23e4_spw0_r8prof.npz",
+    "pub": 7.987889766693115
+   },
+   {
+    "rel": 1.2811010258696198e-06,
+    "dir": "prof_v409r",
+    "file": "GaiaDR3_4792774797545800832_B6_EB_X23e4__A002_Xa7a216_X23e4_spw0_r8prof.npz",
+    "pub": 7.987889766693115
+   },
+   {
+    "rel": 1.2811010258696198e-06,
+    "dir": "profall",
+    "file": "A002_Xa7a216_X23e4_spw0_r8prof.npz",
+    "pub": 7.987889766693115
+   },
+   {
+    "rel": 1.2811010258696198e-06,
+    "dir": "profall_v409",
+    "file": "GaiaDR3_4792774797545800832_B6_EB_X23e4__A002_Xa7a216_X23e4_spw0_r8prof.npz",
+    "pub": 7.987889766693115
+   }
+  ],
+  "profile": "A002_Xa7a216_X23e4_spw0_r8prof.npz",
+  "profile_dir": "prof",
+  "n_profile_sets": 5,
+  "nchan": 3534,
+  "nctrl": 8,
+  "chanw_Hz": 244140.625,
+  "nint": 370,
+  "n_drift": 137,
+  "win_lo": 230.11173381369963,
+  "win_hi": 230.97428264182463,
+  "win_bw_GHz": 0.862548828125,
+  "star_peak_pub": 7.987889766693115,
+  "star_peak_prof": 7.987889766693115,
+  "gate_rel": 1.2811010258696198e-06,
+  "gate": true,
+  "lines_in_window": [
+   {
+    "line": "CO(2-1)",
+    "nchan": 315,
+    "dv_at_peak": -0.4438371715663012
+   }
+  ],
+  "n_masked_chan": 315,
+  "masked_frac": 0.08913412563667232,
+  "peak_is_masked": true,
+  "dv_at_peak": -0.4438371715663012,
+  "peak_chan": 1702,
+  "f_peak_topo": 230.52726115744963,
+  "f_peak_stellar": 230.53765869276853,
+  "peak_offset_chan": -0.00017428630962967873,
+  "bw_masked_GHz": 0.076904296875,
+  "n_keep_chan": 3219,
+  "bw_keep_GHz": 0.785888671875,
+  "T_resid": 4.513268947601318,
+  "resid_chan": 894,
+  "f_resid_topo": 230.32999553244963,
+  "f_resid_stellar": 230.34038417044206,
+  "resid_drift": 2639.0,
+  "resid_nearest": "CO(2-1)",
+  "resid_dv": -256.9803472004003,
+  "T_resid_ctrl_max": 4.827014446258545,
+  "n_ctrl_above_resid": 6,
+  "second_crossing": false,
+  "status": "ok"
+ },
+ {
+  "eb": "A002_Xd9668b_Xa9df",
+  "star": "bet Pic",
+  "display": "$\\beta$~Pic",
+  "freq": 230.51602540000002,
+  "tstar": 8.9476,
+  "v_bary": -8.188647002144474,
+  "v_sys": 20.0,
+  "f_stellar": 230.53770059770102,
+  "line": "CO(2-1)",
+  "dv": -0.3893438441635639,
+  "band": "6",
+  "screen": true,
+  "dq": false,
+  "n_candidate_profiles": 5,
+  "candidates": [
+   {
+    "rel": 2.789952490253006e-07,
+    "dir": "prof",
+    "file": "A002_Xd9668b_Xa9df_spw5_r8prof.npz",
+    "pub": 8.94759750366211
+   },
+   {
+    "rel": 2.789952490253006e-07,
+    "dir": "prof_v409",
+    "file": "bet_Pic_B6_EB_Xa9df__A002_Xd9668b_Xa9df_spw5_r8prof.npz",
+    "pub": 8.94759750366211
+   },
+   {
+    "rel": 2.789952490253006e-07,
+    "dir": "prof_v409r",
+    "file": "bet_Pic_B6_EB_Xa9df__A002_Xd9668b_Xa9df_spw5_r8prof.npz",
+    "pub": 8.94759750366211
+   },
+   {
+    "rel": 2.789952490253006e-07,
+    "dir": "profall",
+    "file": "A002_Xd9668b_Xa9df_spw5_r8prof.npz",
+    "pub": 8.94759750366211
+   },
+   {
+    "rel": 2.789952490253006e-07,
+    "dir": "profall_v409",
+    "file": "bet_Pic_B6_EB_Xa9df__A002_Xd9668b_Xa9df_spw5_r8prof.npz",
+    "pub": 8.94759750366211
+   }
+  ],
+  "profile": "A002_Xd9668b_Xa9df_spw5_r8prof.npz",
+  "profile_dir": "prof",
+  "n_profile_sets": 5,
+  "nchan": 3534,
+  "nctrl": 8,
+  "chanw_Hz": 15258.7890625,
+  "nint": 385,
+  "n_drift": 1945,
+  "win_lo": 230.4893835322166,
+  "win_hi": 230.54329283397442,
+  "win_bw_GHz": 0.0539093017578125,
+  "star_peak_pub": 8.94759750366211,
+  "star_peak_prof": 8.94759750366211,
+  "gate_rel": 2.789952490253006e-07,
+  "gate": true,
+  "lines_in_window": [
+   {
+    "line": "CO(2-1)",
+    "nchan": 3534,
+    "dv_at_peak": -0.3893725601463143
+   }
+  ],
+  "n_masked_chan": 3534,
+  "masked_frac": 1.0,
+  "peak_is_masked": true,
+  "dv_at_peak": -0.3893725601463143,
+  "peak_chan": 1787,
+  "f_peak_topo": 230.51602537791973,
+  "f_peak_stellar": 230.53770057561866,
+  "peak_offset_chan": -0.0014470536261796951,
+  "bw_masked_GHz": 0.053924560546875,
+  "n_keep_chan": 0,
+  "bw_keep_GHz": 0.0,
+  "T_resid": null,
+  "second_crossing": false,
+  "status": "wholly_masked"
+ },
+ {
+  "eb": "A002_Xd9668b_X3a90",
+  "star": "bet Pic",
+  "display": "$\\beta$~Pic",
+  "freq": 230.51612790000001,
+  "tstar": 11.681,
+  "v_bary": -8.157296544645536,
+  "v_sys": 20.0,
+  "f_stellar": 230.53777899976728,
+  "line": "CO(2-1)",
+  "dv": -0.2873895105706008,
+  "band": "6",
+  "screen": true,
+  "dq": false,
+  "n_candidate_profiles": 5,
+  "candidates": [
+   {
+    "rel": 2.38855370258906e-06,
+    "dir": "prof",
+    "file": "A002_Xd9668b_X3a90_spw5_r8prof.npz",
+    "pub": 11.6809720993042
+   },
+   {
+    "rel": 2.38855370258906e-06,
+    "dir": "prof_v409",
+    "file": "bet_Pic_B6__A002_Xd9668b_X3a90_spw5_r8prof.npz",
+    "pub": 11.6809720993042
+   },
+   {
+    "rel": 2.38855370258906e-06,
+    "dir": "prof_v409r",
+    "file": "bet_Pic_B6__A002_Xd9668b_X3a90_spw5_r8prof.npz",
+    "pub": 11.6809720993042
+   },
+   {
+    "rel": 2.38855370258906e-06,
+    "dir": "profall",
+    "file": "A002_Xd9668b_X3a90_spw5_r8prof.npz",
+    "pub": 11.6809720993042
+   },
+   {
+    "rel": 2.38855370258906e-06,
+    "dir": "profall_v409",
+    "file": "bet_Pic_B6__A002_Xd9668b_X3a90_spw5_r8prof.npz",
+    "pub": 11.6809720993042
+   }
+  ],
+  "profile": "A002_Xd9668b_X3a90_spw5_r8prof.npz",
+  "profile_dir": "prof",
+  "n_profile_sets": 5,
+  "nchan": 3534,
+  "nctrl": 8,
+  "chanw_Hz": 15258.7890625,
+  "nint": 385,
+  "n_drift": 1944,
+  "win_lo": 230.48940978724207,
+  "win_hi": 230.54331908899988,
+  "win_bw_GHz": 0.0539093017578125,
+  "star_peak_pub": 11.6809720993042,
+  "star_peak_prof": 11.6809720993042,
+  "gate_rel": 2.38855370258906e-06,
+  "gate": true,
+  "lines_in_window": [
+   {
+    "line": "CO(2-1)",
+    "nchan": 3534,
+    "dv_at_peak": -0.2873545388268603
+   }
+  ],
+  "n_masked_chan": 3534,
+  "masked_frac": 1.0,
+  "peak_is_masked": true,
+  "dv_at_peak": -0.2873545388268603,
+  "peak_chan": 1782,
+  "f_peak_topo": 230.5161279268905,
+  "f_peak_stellar": 230.53777902666027,
+  "peak_offset_chan": 0.0017622951418161392,
+  "bw_masked_GHz": 0.053924560546875,
+  "n_keep_chan": 0,
+  "bw_keep_GHz": 0.0,
+  "T_resid": null,
+  "second_crossing": false,
+  "status": "wholly_masked"
+ },
+ {
+  "eb": "A002_Xcf525f_X5aa4",
+  "star": "CD-57 1054",
+  "display": "CD$-$57 1054",
+  "freq": 346.50989599999997,
+  "tstar": 5.1083,
+  "v_bary": 4.762185863416971,
+  "v_sys": 19.16,
+  "f_stellar": 346.5265371111546,
+  "line": "SO(9(8)-8(7))",
+  "dv": -1.681718089550739,
+  "band": "7",
+  "screen": false,
+  "dq": false,
+  "n_candidate_profiles": 5,
+  "candidates": [
+   {
+    "rel": 1.3592608035415821e-06,
+    "dir": "prof",
+    "file": "A002_Xcf525f_X5aa4_spw3_r8prof.npz",
+    "pub": 5.108293056488037
+   },
+   {
+    "rel": 1.3592608035415821e-06,
+    "dir": "prof_v409",
+    "file": "CD-57_1054_B7__A002_Xcf525f_X5aa4_spw3_r8prof.npz",
+    "pub": 5.108293056488037
+   },
+   {
+    "rel": 1.3592608035415821e-06,
+    "dir": "prof_v409r",
+    "file": "CD-57_1054_B7__A002_Xcf525f_X5aa4_spw3_r8prof.npz",
+    "pub": 5.108293056488037
+   },
+   {
+    "rel": 1.3592608035415821e-06,
+    "dir": "profall",
+    "file": "A002_Xcf525f_X5aa4_spw3_r8prof.npz",
+    "pub": 5.108293056488037
+   },
+   {
+    "rel": 1.3592608035415821e-06,
+    "dir": "profall_v409",
+    "file": "CD-57_1054_B7__A002_Xcf525f_X5aa4_spw3_r8prof.npz",
+    "pub": 5.108293056488037
+   }
+  ],
+  "profile": "A002_Xcf525f_X5aa4_spw3_r8prof.npz",
+  "profile_dir": "prof",
+  "n_profile_sets": 5,
+  "nchan": 3534,
+  "nctrl": 8,
+  "chanw_Hz": 488281.25,
+  "nint": 170,
+  "n_drift": 45,
+  "win_lo": 345.1231772333956,
+  "win_hi": 346.8482748896456,
+  "win_bw_GHz": 1.72509765625,
+  "star_peak_pub": 5.108293056488037,
+  "star_peak_prof": 5.108293056488037,
+  "gate_rel": 1.3592608035415821e-06,
+  "gate": true,
+  "lines_in_window": [
+   {
+    "line": "CO(3-2)",
+    "nchan": 237,
+    "dv_at_peak": 633.3575735211582
+   },
+   {
+    "line": "SO(9(8)-8(7))",
+    "nchan": 237,
+    "dv_at_peak": -1.6817324551335775
+   },
+   {
+    "line": "SO(2(3)-2(1))",
+    "nchan": 236,
+    "dv_at_peak": 712.8872614650585
+   }
+  ],
+  "n_masked_chan": 661,
+  "masked_frac": 0.18704018109790604,
+  "peak_is_masked": true,
+  "dv_at_peak": -1.6817324551335775,
+  "peak_chan": 2840,
+  "f_peak_topo": 346.5098959833956,
+  "f_peak_stellar": 346.5265370945495,
+  "peak_offset_chan": -3.400573041290045e-05,
+  "bw_masked_GHz": 0.32275390625,
+  "n_keep_chan": 2873,
+  "bw_keep_GHz": 1.40283203125,
+  "T_resid": 4.164249897003174,
+  "resid_chan": 2279,
+  "f_resid_topo": 346.2359702021456,
+  "f_resid_stellar": 346.2525981580348,
+  "resid_drift": -1271.9425048828125,
+  "resid_nearest": "SO(9(8)-8(7))",
+  "resid_dv": -238.674740598804,
+  "T_resid_ctrl_max": 4.759665012359619,
+  "n_ctrl_above_resid": 6,
+  "second_crossing": false,
+  "status": "ok"
+ },
+ {
+  "eb": "A002_Xff45a6_X10ca8",
+  "star": "HD161868",
+  "display": "HD 161868",
+  "freq": 345.6338357,
+  "tstar": 5.4812,
+  "v_bary": -25.52916049941747,
+  "v_sys": -12.31,
+  "f_stellar": 345.6490749987484,
+  "line": "SO(2(3)-2(1))",
+  "dv": -48.04161937447921,
+  "band": "7",
+  "screen": false,
+  "dq": false,
+  "n_candidate_profiles": 5,
+  "candidates": [
+   {
+    "rel": 7.093783530861246e-06,
+    "dir": "prof",
+    "file": "A002_Xff45a6_X10ca8_spw3_r8prof.npz",
+    "pub": 5.481161117553711
+   },
+   {
+    "rel": 7.093783530861246e-06,
+    "dir": "prof_v409",
+    "file": "HD161868_B7_EB_X10ca8__A002_Xff45a6_X10ca8_spw3_r8prof.npz",
+    "pub": 5.481161117553711
+   },
+   {
+    "rel": 7.093783530861246e-06,
+    "dir": "prof_v409r",
+    "file": "HD161868_B7_EB_X10ca8__A002_Xff45a6_X10ca8_spw3_r8prof.npz",
+    "pub": 5.481161117553711
+   },
+   {
+    "rel": 7.093783530861246e-06,
+    "dir": "profall",
+    "file": "A002_Xff45a6_X10ca8_spw3_r8prof.npz",
+    "pub": 5.481161117553711
+   },
+   {
+    "rel": 7.093783530861246e-06,
+    "dir": "profall_v409",
+    "file": "HD161868_B7_EB_X10ca8__A002_Xff45a6_X10ca8_spw3_r8prof.npz",
+    "pub": 5.481161117553711
+   }
+  ],
+  "profile": "A002_Xff45a6_X10ca8_spw3_r8prof.npz",
+  "profile_dir": "prof",
+  "n_profile_sets": 5,
+  "nchan": 3770,
+  "nctrl": 8,
+  "chanw_Hz": 488281.25,
+  "nint": 273,
+  "n_drift": 128,
+  "win_lo": 344.2012185561301,
+  "win_hi": 346.0415505873801,
+  "win_bw_GHz": 1.84033203125,
+  "star_peak_pub": 5.481161117553711,
+  "star_peak_prof": 5.481161117553711,
+  "gate_rel": 7.093783530861246e-06,
+  "gate": true,
+  "lines_in_window": [
+   {
+    "line": "CO(3-2)",
+    "nchan": 236,
+    "dv_at_peak": -127.36988726147851
+   },
+   {
+    "line": "SO(2(3)-2(1))",
+    "nchan": 236,
+    "dv_at_peak": -48.04158153718171
+   },
+   {
+    "line": "SO(8(8)-7(7))",
+    "nchan": 235,
+    "dv_at_peak": 1165.4044674561476
+   }
+  ],
+  "n_masked_chan": 658,
+  "masked_frac": 0.17453580901856763,
+  "peak_is_masked": true,
+  "dv_at_peak": -48.04158153718171,
+  "peak_chan": 2934,
+  "f_peak_topo": 345.6338357436301,
+  "f_peak_stellar": 345.64907504238033,
+  "peak_offset_chan": 8.935434743762016e-05,
+  "bw_masked_GHz": 0.3212890625,
+  "n_keep_chan": 3112,
+  "bw_keep_GHz": 1.51953125,
+  "T_resid": 4.935876846313477,
+  "resid_chan": 3410,
+  "f_resid_topo": 345.8662576186301,
+  "f_resid_stellar": 345.88150716506453,
+  "resid_drift": 3341.817138671875,
+  "resid_nearest": "CO(3-2)",
+  "resid_dv": 74.14024990828555,
+  "T_resid_ctrl_max": 5.373501777648926,
+  "n_ctrl_above_resid": 1,
+  "second_crossing": false,
+  "status": "ok"
+ },
+ {
+  "eb": "A002_Xff0235_X8392",
+  "star": "ALMA J153702653-33192492",
+  "display": "ALMA J153702653-33192492",
+  "freq": 230.5221514,
+  "tstar": 5.405,
+  "v_bary": -22.161324598115606,
+  "v_sys": 0.0,
+  "f_stellar": 230.539192109624,
+  "line": "CO(2-1)",
+  "dv": 1.5502237131414773,
+  "band": "6",
+  "screen": false,
+  "dq": false,
+  "n_candidate_profiles": 5,
+  "candidates": [
+   {
+    "rel": 3.88174559409223e-08,
+    "dir": "prof",
+    "file": "A002_Xff0235_X8392_spw2_r8prof.npz",
+    "pub": 5.40500020980835
+   },
+   {
+    "rel": 3.88174559409223e-08,
+    "dir": "prof_v409",
+    "file": "ALMA_J153702653-33192492_B6_EB_X8392__A002_Xff0235_X8392_spw2_r8prof.npz",
+    "pub": 5.40500020980835
+   },
+   {
+    "rel": 3.88174559409223e-08,
+    "dir": "prof_v409r",
+    "file": "ALMA_J153702653-33192492_B6_EB_X8392__A002_Xff0235_X8392_spw2_r8prof.npz",
+    "pub": 5.40500020980835
+   },
+   {
+    "rel": 3.88174559409223e-08,
+    "dir": "profall",
+    "file": "A002_Xff0235_X8392_spw2_r8prof.npz",
+    "pub": 5.40500020980835
+   },
+   {
+    "rel": 3.88174559409223e-08,
+    "dir": "profall_v409",
+    "file": "ALMA_J153702653-33192492_B6_EB_X8392__A002_Xff0235_X8392_spw2_r8prof.npz",
+    "pub": 5.40500020980835
+   }
+  ],
+  "profile": "A002_Xff0235_X8392_spw2_r8prof.npz",
+  "profile_dir": "prof",
+  "n_profile_sets": 5,
+  "nchan": 1886,
+  "nctrl": 8,
+  "chanw_Hz": 244140.625,
+  "nint": 21,
+  "n_drift": 167,
+  "win_lo": 230.29583307527375,
+  "win_hi": 230.75603815339875,
+  "win_bw_GHz": 0.460205078125,
+  "star_peak_pub": 5.40500020980835,
+  "star_peak_prof": 5.40500020980835,
+  "gate_rel": 3.88174559409223e-08,
+  "gate": true,
+  "lines_in_window": [
+   {
+    "line": "CO(2-1)",
+    "nchan": 315,
+    "dv_at_peak": 1.55026877381008
+   }
+  ],
+  "n_masked_chan": 315,
+  "masked_frac": 0.1670201484623542,
+  "peak_is_masked": true,
+  "dv_at_peak": 1.55026877381008,
+  "peak_chan": 927,
+  "f_peak_topo": 230.52215143464875,
+  "f_peak_stellar": 230.5391921442753,
+  "peak_offset_chan": 0.00014192122034728527,
+  "bw_masked_GHz": 0.076904296875,
+  "n_keep_chan": 1571,
+  "bw_keep_GHz": 0.383544921875,
+  "T_resid": 4.5397772789001465,
+  "resid_chan": 102,
+  "f_resid_topo": 230.32073541902375,
+  "f_resid_stellar": 230.3377612395309,
+  "resid_drift": 1120.2198486328125,
+  "resid_nearest": "CO(2-1)",
+  "resid_dv": -260.39121614619074,
+  "T_resid_ctrl_max": 5.082202911376953,
+  "n_ctrl_above_resid": 3,
+  "second_crossing": false,
+  "status": "ok"
+ },
+ {
+  "eb": "A002_Xc26103_X155a",
+  "star": "HD 48370",
+  "display": "HD 48370",
+  "freq": 230.51167370000002,
+  "tstar": 26.8342,
+  "v_bary": 7.211946978976949,
+  "v_sys": 23.615,
+  "f_stellar": 230.52428563920196,
+  "line": "CO(2-1)",
+  "dv": -17.83420491869258,
+  "band": "6",
+  "screen": true,
+  "dq": true,
+  "n_candidate_profiles": 5,
+  "candidates": [
+   {
+    "rel": 1.1337387972679676e-06,
+    "dir": "prof",
+    "file": "A002_Xc26103_X155a_spw16_r8prof.npz",
+    "pub": 26.834230422973633
+   },
+   {
+    "rel": 1.1337387972679676e-06,
+    "dir": "prof_v409",
+    "file": "HD_48370_B6_EB_X155a__A002_Xc26103_X155a_spw16_r8prof.npz",
+    "pub": 26.834230422973633
+   },
+   {
+    "rel": 1.1337387972679676e-06,
+    "dir": "prof_v409r",
+    "file": "HD_48370_B6_EB_X155a__A002_Xc26103_X155a_spw16_r8prof.npz",
+    "pub": 26.834230422973633
+   },
+   {
+    "rel": 1.1337387972679676e-06,
+    "dir": "profall",
+    "file": "A002_Xc26103_X155a_spw16_r8prof.npz",
+    "pub": 26.834230422973633
+   },
+   {
+    "rel": 1.1337387972679676e-06,
+    "dir": "profall_v409",
+    "file": "HD_48370_B6_EB_X155a__A002_Xc26103_X155a_spw16_r8prof.npz",
+    "pub": 26.834230422973633
+   }
+  ],
+  "profile": "A002_Xc26103_X155a_spw16_r8prof.npz",
+  "profile_dir": "prof",
+  "n_profile_sets": 5,
+  "nchan": 3770,
+  "nctrl": 8,
+  "chanw_Hz": 122070.3125,
+  "nint": 186,
+  "n_drift": 210,
+  "win_lo": 230.5004432280057,
+  "win_hi": 230.9605262358182,
+  "win_bw_GHz": 0.4600830078125,
+  "star_peak_pub": 26.834230422973633,
+  "star_peak_prof": 26.834230422973633,
+  "gate_rel": 1.1337387972679676e-06,
+  "gate": true,
+  "lines_in_window": [
+   {
+    "line": "CO(2-1)",
+    "nchan": 520,
+    "dv_at_peak": -17.834209137826548
+   }
+  ],
+  "n_masked_chan": 520,
+  "masked_frac": 0.13793103448275862,
+  "peak_is_masked": true,
+  "dv_at_peak": -17.834209137826548,
+  "peak_chan": 92,
+  "f_peak_topo": 230.5116736967557,
+  "f_peak_stellar": 230.52428563595748,
+  "peak_offset_chan": -2.6577385142445564e-05,
+  "bw_masked_GHz": 0.0634765625,
+  "n_keep_chan": 3250,
+  "bw_keep_GHz": 0.396728515625,
+  "T_resid": 4.476655960083008,
+  "resid_chan": 1418,
+  "f_resid_topo": 230.6735389311307,
+  "f_resid_stellar": 230.68615972643272,
+  "resid_drift": -1999.1492919921875,
+  "resid_nearest": "CO(2-1)",
+  "resid_dv": 192.66744989489575,
+  "T_resid_ctrl_max": 5.148144721984863,
+  "n_ctrl_above_resid": 7,
+  "second_crossing": false,
+  "status": "ok"
+ },
+ {
+  "eb": "A002_Xff0235_X4a6d",
+  "star": "CP-72 2713",
+  "display": "CP$-$72 2713",
+  "freq": 344.2697461,
+  "tstar": 5.8089,
+  "v_bary": -15.272589234679598,
+  "v_sys": 7.985,
+  "f_stellar": 344.2964546584426,
+  "line": "SO(8(8)-7(7))",
+  "dv": -12.326846969899371,
+  "band": "7",
+  "screen": true,
+  "dq": false,
+  "n_candidate_profiles": 5,
+  "candidates": [
+   {
+    "rel": 2.113519199726457e-06,
+    "dir": "prof",
+    "file": "A002_Xff0235_X4a6d_spw3_r8prof.npz",
+    "pub": 5.80891227722168
+   },
+   {
+    "rel": 2.113519199726457e-06,
+    "dir": "prof_v409",
+    "file": "CP-72_2713_B7__A002_Xff0235_X4a6d_spw3_r8prof.npz",
+    "pub": 5.80891227722168
+   },
+   {
+    "rel": 2.113519199726457e-06,
+    "dir": "prof_v409r",
+    "file": "CP-72_2713_B7__A002_Xff0235_X4a6d_spw3_r8prof.npz",
+    "pub": 5.80891227722168
+   },
+   {
+    "rel": 2.113519199726457e-06,
+    "dir": "profall",
+    "file": "A002_Xff0235_X4a6d_spw3_r8prof.npz",
+    "pub": 5.80891227722168
+   },
+   {
+    "rel": 2.113519199726457e-06,
+    "dir": "profall_v409",
+    "file": "CP-72_2713_B7__A002_Xff0235_X4a6d_spw3_r8prof.npz",
+    "pub": 5.80891227722168
+   }
+  ],
+  "profile": "A002_Xff0235_X4a6d_spw3_r8prof.npz",
+  "profile_dir": "prof",
+  "n_profile_sets": 5,
+  "nchan": 3534,
+  "nctrl": 8,
+  "chanw_Hz": 488281.25,
+  "nint": 495,
+  "n_drift": 129,
+  "win_lo": 344.25265624035313,
+  "win_hi": 345.97775389660313,
+  "win_bw_GHz": 1.72509765625,
+  "star_peak_pub": 5.80891227722168,
+  "star_peak_prof": 5.80891227722168,
+  "gate_rel": 2.113519199726457e-06,
+  "gate": true,
+  "lines_in_window": [
+   {
+    "line": "CO(3-2)",
+    "nchan": 236,
+    "dv_at_peak": -1300.0422320383468
+   },
+   {
+    "line": "SO(2(3)-2(1))",
+    "nchan": 236,
+    "dv_at_peak": -1221.024359907989
+   },
+   {
+    "line": "SO(8(8)-7(7))",
+    "nchan": 182,
+    "dv_at_peak": -12.32686081246384
+   }
+  ],
+  "n_masked_chan": 605,
+  "masked_frac": 0.1711941143180532,
+  "peak_is_masked": true,
+  "dv_at_peak": -12.32686081246384,
+  "peak_chan": 35,
+  "f_peak_topo": 344.26974608410313,
+  "f_peak_stellar": 344.29645464254446,
+  "peak_offset_chan": -3.255682531744242e-05,
+  "bw_masked_GHz": 0.29541015625,
+  "n_keep_chan": 2929,
+  "bw_keep_GHz": 1.43017578125,
+  "T_resid": 4.836522579193115,
+  "resid_chan": 2721,
+  "f_resid_topo": 345.58126952160313,
+  "f_resid_stellar": 345.6080798284577,
+  "resid_drift": 3289.528564453125,
+  "resid_nearest": "SO(2(3)-2(1))",
+  "resid_dv": -83.59233911317105,
+  "T_resid_ctrl_max": 5.107921123504639,
+  "n_ctrl_above_resid": 1,
+  "second_crossing": false,
+  "status": "ok"
+ },
+ {
+  "eb": "A002_Xa95c04_X14cd",
+  "star": "HIP10679",
+  "display": "HIP 10679",
+  "freq": 220.4185118,
+  "tstar": 5.4561,
+  "v_bary": 25.739399596692706,
+  "v_sys": 5.257,
+  "f_stellar": 220.40345204981907,
+  "line": "13CO(J=2-1,F=5/2-3/2)",
+  "dv": 6.462510427144909,
+  "band": "6",
+  "screen": false,
+  "dq": false,
+  "n_candidate_profiles": 5,
+  "candidates": [
+   {
+    "rel": 2.6194799903261807e-06,
+    "dir": "prof",
+    "file": "A002_Xa95c04_X14cd_spw3_r8prof.npz",
+    "pub": 5.456114292144775
+   },
+   {
+    "rel": 2.6194799903261807e-06,
+    "dir": "prof_v409",
+    "file": "HIP10679_B6__A002_Xa95c04_X14cd_spw3_r8prof.npz",
+    "pub": 5.456114292144775
+   },
+   {
+    "rel": 2.6194799903261807e-06,
+    "dir": "prof_v409r",
+    "file": "HIP10679_B6__A002_Xa95c04_X14cd_spw3_r8prof.npz",
+    "pub": 5.456114292144775
+   },
+   {
+    "rel": 2.6194799903261807e-06,
+    "dir": "profall",
+    "file": "A002_Xa95c04_X14cd_spw3_r8prof.npz",
+    "pub": 5.456114292144775
+   },
+   {
+    "rel": 2.6194799903261807e-06,
+    "dir": "profall_v409",
+    "file": "HIP10679_B6__A002_Xa95c04_X14cd_spw3_r8prof.npz",
+    "pub": 5.456114292144775
+   }
+  ],
+  "profile": "A002_Xa95c04_X14cd_spw3_r8prof.npz",
+  "profile_dir": "prof",
+  "n_profile_sets": 5,
+  "nchan": 3534,
+  "nctrl": 8,
+  "chanw_Hz": 15258.7890625,
+  "nint": 85,
+  "n_drift": 772,
+  "win_lo": 220.38651414583217,
+  "win_hi": 220.44042344758998,
+  "win_bw_GHz": 0.0539093017578125,
+  "star_peak_pub": 5.456114292144775,
+  "star_peak_prof": 5.456114292144775,
+  "gate_rel": 2.6194799903261807e-06,
+  "gate": true,
+  "lines_in_window": [
+   {
+    "line": "13CO(J=2-1,F=3/2-3/2)",
+    "nchan": 3534,
+    "dv_at_peak": 6.5740875976996795
+   },
+   {
+    "line": "13CO(J=2-1,F=3/2-1/2)",
+    "nchan": 3534,
+    "dv_at_peak": 6.508795217605767
+   },
+   {
+    "line": "13CO(2-1)",
+    "nchan": 3534,
+    "dv_at_peak": 6.485670839786467
+   },
+   {
+    "line": "13CO(J=2-1,F=5/2-3/2)",
+    "nchan": 3534,
+    "dv_at_peak": 6.462546465573129
+   }
+  ],
+  "n_masked_chan": 3534,
+  "masked_frac": 1.0,
+  "peak_is_masked": true,
+  "dv_at_peak": 6.462546465573129,
+  "peak_chan": 1436,
+  "f_peak_topo": 220.41851182649623,
+  "f_peak_stellar": 220.40345207631347,
+  "peak_offset_chan": 0.0017364565283060074,
+  "bw_masked_GHz": 0.053924560546875,
+  "n_keep_chan": 0,
+  "bw_keep_GHz": 0.0,
+  "T_resid": null,
+  "second_crossing": false,
+  "status": "wholly_masked"
+ },
+ {
+  "eb": "A002_Xc6fa08_X1053",
+  "star": "HR 1010",
+  "display": "HR~1010",
+  "freq": 230.51328,
+  "tstar": 5.4097,
+  "v_bary": -8.160196597805493,
+  "v_sys": 11.953,
+  "f_stellar": 230.52874547884664,
+  "line": "CO(2-1)",
+  "dv": -12.03461314048279,
+  "band": "6",
+  "screen": false,
+  "dq": false,
+  "n_candidate_profiles": 5,
+  "candidates": [
+   {
+    "rel": 2.130848697195543e-06,
+    "dir": "prof_v409r",
+    "file": "Hr_1010_B6_EB_X1053__A002_Xc6fa08_X1053_spw0_r8prof.npz",
+    "pub": 5.409688472747803
+   },
+   {
+    "rel": 0.3035955358737564,
+    "dir": "prof",
+    "file": "A002_Xc6fa08_X1053_spw0_r8prof.npz",
+    "pub": 3.7673392295837402
+   },
+   {
+    "rel": 0.3035955358737564,
+    "dir": "prof_v409",
+    "file": "HR_1010__Gaia_DR3_4722135642226902656__B6_EB_X1053__A002_Xc6fa08_X1053_spw0_r8prof.npz",
+    "pub": 3.7673392295837402
+   },
+   {
+    "rel": 0.3035955358737564,
+    "dir": "profall",
+    "file": "A002_Xc6fa08_X1053_spw0_r8prof.npz",
+    "pub": 3.7673392295837402
+   },
+   {
+    "rel": 0.3035955358737564,
+    "dir": "profall_v409",
+    "file": "HR_1010__Gaia_DR3_4722135642226902656__B6_EB_X1053__A002_Xc6fa08_X1053_spw0_r8prof.npz",
+    "pub": 3.7673392295837402
+   }
+  ],
+  "profile": "Hr_1010_B6_EB_X1053__A002_Xc6fa08_X1053_spw0_r8prof.npz",
+  "profile_dir": "prof_v409r",
+  "n_profile_sets": 1,
+  "nchan": 1886,
+  "nctrl": 8,
+  "chanw_Hz": 976562.5,
+  "nint": 282,
+  "n_drift": 43,
+  "win_lo": 229.60995943076387,
+  "win_hi": 231.45077974326387,
+  "win_bw_GHz": 1.8408203125,
+  "star_peak_pub": 5.409688472747803,
+  "star_peak_prof": 5.409688472747803,
+  "gate_rel": 2.130848697195543e-06,
+  "gate": true,
+  "lines_in_window": [
+   {
+    "line": "CO(2-1)",
+    "nchan": 78,
+    "dv_at_peak": -12.03494702349989
+   }
+  ],
+  "n_masked_chan": 78,
+  "masked_frac": 0.041357370095440084,
+  "peak_is_masked": true,
+  "dv_at_peak": -12.03494702349989,
+  "peak_chan": 960,
+  "f_peak_topo": 230.51327974326387,
+  "f_peak_stellar": 230.52874522209328,
+  "peak_offset_chan": -0.0002628978108987212,
+  "bw_masked_GHz": 0.076171875,
+  "n_keep_chan": 1808,
+  "bw_keep_GHz": 1.765625,
+  "T_resid": 4.1899919509887695,
+  "resid_chan": 608,
+  "f_resid_topo": 230.85702974326387,
+  "f_resid_stellar": 230.8725182847921,
+  "resid_drift": -1973.5250244140625,
+  "resid_nearest": "CO(2-1)",
+  "resid_dv": 435.00880047439756,
+  "T_resid_ctrl_max": 5.342386245727539,
+  "n_ctrl_above_resid": 7,
+  "second_crossing": false,
+  "status": "ok"
+ },
+ {
+  "eb": "A002_Xcd8029_Xb6b0",
+  "star": "HD 139084 B",
+  "display": "HD~139084~B",
+  "freq": 345.824056,
+  "tstar": 5.7635,
+  "v_bary": 4.516084430345381,
+  "v_sys": 4.55,
+  "f_stellar": 345.82409504406627,
+  "line": "CO(3-2)",
+  "dv": 24.366043813347122,
+  "band": "7",
+  "screen": false,
+  "dq": false,
+  "n_candidate_profiles": 8,
+  "candidates": [
+   {
+    "rel": 4.761504663577629e-06,
+    "dir": "prof_v409r",
+    "file": "Hd_139084B_805632_B7_EB_Xb6b0__A002_Xcd8029_Xb6b0_spw3_r8prof.npz",
+    "pub": 5.763472557067871
+   },
+   {
+    "rel": 0.01736540673167306,
+    "dir": "prof_v409",
+    "file": "HD_139084B_805632_B7__A002_Xcd8029_Xb6b0_spw3_r8prof.npz",
+    "pub": 5.663414478302002
+   },
+   {
+    "rel": 0.01736540673167306,
+    "dir": "profall_v409",
+    "file": "HD_139084B_805632_B7__A002_Xcd8029_Xb6b0_spw3_r8prof.npz",
+    "pub": 5.663414478302002
+   },
+   {
+    "rel": 0.27950463849714086,
+    "dir": "prof",
+    "file": "A002_Xcd8029_Xb6b0_spw3_r8prof.npz",
+    "pub": 4.1525750160217285
+   },
+   {
+    "rel": 0.27950463849714086,
+    "dir": "prof_v409",
+    "file": "HD_139084B_921024_B7_EB_Xb6b0__A002_Xcd8029_Xb6b0_spw3_r8prof.npz",
+    "pub": 4.1525750160217285
+   },
+   {
+    "rel": 0.27950463849714086,
+    "dir": "prof_v409r",
+    "file": "HD_139084B_921024_B7_EB_Xb6b0__A002_Xcd8029_Xb6b0_spw3_r8prof.npz",
+    "pub": 4.1525750160217285
+   }
+  ],
+  "profile": "Hd_139084B_805632_B7_EB_Xb6b0__A002_Xcd8029_Xb6b0_spw3_r8prof.npz",
+  "profile_dir": "prof_v409r",
+  "n_profile_sets": 1,
+  "nchan": 3534,
+  "nctrl": 8,
+  "chanw_Hz": 488281.25,
+  "nint": 170,
+  "n_drift": 44,
+  "win_lo": 345.14485725925766,
+  "win_hi": 346.86995491550766,
+  "win_bw_GHz": 1.72509765625,
+  "star_peak_pub": 5.763472557067871,
+  "star_peak_prof": 5.763472557067871,
+  "gate_rel": 4.761504663577629e-06,
+  "gate": true,
+  "lines_in_window": [
+   {
+    "line": "SO(2(3)-2(1))",
+    "nchan": 237,
+    "dv_at_peak": 103.73493208614163
+   },
+   {
+    "line": "CO(3-2)",
+    "nchan": 236,
+    "dv_at_peak": 24.366458228545337
+   },
+   {
+    "line": "SO(9(8)-8(7))",
+    "nchan": 236,
+    "dv_at_peak": -609.3855639154203
+   }
+  ],
+  "n_masked_chan": 660,
+  "masked_frac": 0.1867572156196944,
+  "peak_is_masked": true,
+  "dv_at_peak": 24.366458228545337,
+  "peak_chan": 1391,
+  "f_peak_topo": 345.82405647800766,
+  "f_peak_stellar": 345.824095522074,
+  "peak_offset_chan": 0.0009789597243070602,
+  "bw_masked_GHz": 0.322265625,
+  "n_keep_chan": 2874,
+  "bw_keep_GHz": 1.4033203125,
+  "T_resid": 4.638974666595459,
+  "resid_chan": 626,
+  "f_resid_topo": 345.45052132175766,
+  "f_resid_stellar": 345.45056032365136,
+  "resid_drift": -3379.247314453125,
+  "resid_nearest": "SO(2(3)-2(1))",
+  "resid_dv": -220.19213194324138,
+  "T_resid_ctrl_max": 4.5907158851623535,
+  "n_ctrl_above_resid": 0,
+  "second_crossing": false,
+  "status": "ok"
+ }
+]

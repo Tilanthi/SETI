@@ -1,0 +1,53 @@
+\section{Introduction}
+\label{sec:intro}
+
+The public ALMA archive holds thousands of hours of millimetre and
+submillimetre observations taken for other reasons, mostly studies of dust
+discs and planet formation. Their visibilities allow a spectrum at the
+position of the star at the centre of each field, at a resolution and depth
+set by the original observer's correlator setup. This paper searches those
+spectra for a narrowband transmitter at the star's own position. No such
+signal was found.
+
+Searches for \emph{technosignatures} --- detectable imprints of technology on
+the electromagnetic spectrum, intended or not
+\citep{Sheikh2020,SETIreview2025} --- have examined many thousands of stars
+over six decades, yet the last published accounting of that effort covers
+only \HaystackFrac{} of the space of transmitter position, power, frequency,
+bandwidth, polarisation and repetition rate
+\citep{Wright2018}, and essentially all of it lies below
+${\sim}30$\,GHz. Two targeted searches have reached nearby stars above that frequency.
+\citet{Steffes1994} observed \SbPriorNStarA{} solar-type stars within
+\SbPriorDistA\,pc at \SbPriorFreqGHz\,GHz, and \citet{Mauersberger1996}
+included $\tau$~Cet and $\epsilon$~Eri among \SbPriorNStarB{} targets at the
+same frequency. Each covered a single line, over no more than
+\SbPriorBandMHz\,MHz, with no search over drift rate and no test of
+persistence; \citet{Mason2025} has since searched more distant stars in
+Band~3. This survey covers
+\DnuA\,GHz in \CovNIslands{} disjoint intervals, searches a grid of drift rates rather
+than a fixed frequency, tests every crossing against the \BdNCtrl{} control positions of
+its own field, and uses repeat observations to test persistence.
+
+The band has physical advantages and physical costs. Interstellar dispersion
+and scintillation are negligible at these frequencies, so a carrier arrives
+essentially undistorted, and a given aperture delivers far more gain per watt
+supplied. Against that, receiver system temperatures are higher, the
+atmosphere is opaque in places at both ends of the link, and the same high
+gain narrows the beam: the \BenchDiam\,m benchmark of
+\S\ref{sec:excludes} radiates into a beam only \BmArcsec{} arcsec across, so
+the Earth must lie inside a beam that was deliberately aimed. What else makes
+the band hard belongs to the archive rather than to the sky, and
+\S\ref{sec:background} sets that out.
+
+The signal sought is an \emph{unresolved spectral carrier} --- emission confined
+to a few channels, unresolved at the stellar position, and present at more
+than one epoch. Recurrence rather than brightness is what separates an
+interesting event from a detection \citep{Sheikh2021}, and the archive holds
+a second, separated epoch for some of these systems and not for others, so
+what could be searched and what could be confirmed are different extents. The
+frequency is allowed to drift, as it must for a transmitter carried on a
+rotating, orbiting body (\S\ref{sec:statistic}). ``Narrowband'' describes the
+assumed transmitter and not the resolving power of the archived channels. The
+targets were chosen by other programmes for other purposes, so every
+statistical statement here is about an archive-selected sample
+(\S\ref{sec:bias}).

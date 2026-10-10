@@ -1,0 +1,295 @@
+{
+ "blanket": {
+  "note": "the completeness of no window; reported beside the strata and named as a blend",
+  "p90": 4.4152435178630824
+ },
+ "class_b": {
+  "n_bright": 4,
+  "n_injected_bright": 0,
+  "note": "no injected coarse unit has a bright control ring, so the rule cannot be applied; the Class B factor stays a blend and is declared as one"
+ },
+ "disc": {
+  "bound_adopted": 20.0,
+  "bound_lo": 8.0,
+  "frac_at_positive_control": 1.0,
+  "frac_at_top_rung": 0.7777777777777778,
+  "n_cat": 12,
+  "n_inj": 4,
+  "p90": null,
+  "stars": [
+   "$\\beta$~Pictoris",
+   "ALMA~J1537$-$3319",
+   "HD~48370",
+   "HD~139084"
+  ]
+ },
+ "generated_by": "strata_v411.py",
+ "individual": [
+  {
+   "array": "7m",
+   "band": 6,
+   "chanw_kHz": 976.5625,
+   "ctrl": 4.9332,
+   "p90": 3.1,
+   "p90sub": 3.1,
+   "star": "HD53143 Gaia DR3 5479222240596469632",
+   "tag": "A002_X10a341d_Xdc45_spw2",
+   "top": 1.0
+  },
+  {
+   "array": "12m",
+   "band": 7,
+   "chanw_kHz": 244.140625,
+   "ctrl": 5.617,
+   "p90": 2.9142857142857146,
+   "p90sub": 2.9142857142857146,
+   "star": "HD 69830",
+   "tag": "A002_X12209f7_X16edb_spw1",
+   "top": 1.0
+  },
+  {
+   "array": "12m",
+   "band": 7,
+   "chanw_kHz": 244.140625,
+   "ctrl": 5.4247,
+   "p90": 3.2,
+   "p90sub": 2.966666666666667,
+   "star": "HD 69830",
+   "tag": "A002_X12209f7_X16edb_spw2",
+   "top": 1.0
+  },
+  {
+   "array": "12m",
+   "band": 7,
+   "chanw_kHz": 244.140625,
+   "ctrl": 5.6561,
+   "p90": 3.45,
+   "p90sub": 3.45,
+   "star": "HD 69830",
+   "tag": "A002_X12209f7_X16edb_spw3",
+   "top": 1.0
+  },
+  {
+   "array": "7m",
+   "band": 8,
+   "chanw_kHz": 61.035156199999996,
+   "ctrl": 6.0694,
+   "p90": 3.783333333333333,
+   "p90sub": 3.783333333333333,
+   "star": "eta Crv",
+   "tag": "A002_X128b034_X11ca9_spw3",
+   "top": 1.0
+  },
+  {
+   "array": "7m",
+   "band": 6,
+   "chanw_kHz": 244.140625,
+   "ctrl": 14.1324,
+   "p90": null,
+   "p90sub": null,
+   "star": "bet Pic",
+   "tag": "A002_X7116f1_X1785_spw0",
+   "top": 1.0
+  },
+  {
+   "array": "7m",
+   "band": 6,
+   "chanw_kHz": 488.28125,
+   "ctrl": 6.0249,
+   "p90": 6.933333333333334,
+   "p90sub": 3.94,
+   "star": "bet Pic",
+   "tag": "A002_X7116f1_X1785_spw3",
+   "top": 1.0
+  },
+  {
+   "array": "12m",
+   "band": 6,
+   "chanw_kHz": 244.140625,
+   "ctrl": 6.0366,
+   "p90": 3.25,
+   "p90sub": 3.25,
+   "star": "HIP 490",
+   "tag": "A002_X74c92c_X6d5_spw0",
+   "top": 1.0
+  },
+  {
+   "array": "12m",
+   "band": 7,
+   "chanw_kHz": 488.28125,
+   "ctrl": 5.6759,
+   "p90": 3.4081632653061225,
+   "p90sub": 3.4081632653061225,
+   "star": "eta Crv",
+   "tag": "A002_X75bfbf_X1430_spw2",
+   "top": 1.0
+  },
+  {
+   "array": "12m",
+   "band": 6,
+   "chanw_kHz": 244.140625,
+   "ctrl": 18.3104,
+   "p90": null,
+   "p90sub": null,
+   "star": "bet Pic",
+   "tag": "A002_X75bfbf_Xace_spw0",
+   "top": 1.0
+  },
+  {
+   "array": "12m",
+   "band": 6,
+   "chanw_kHz": 488.28125,
+   "ctrl": 5.2783,
+   "p90": 3.125,
+   "p90sub": 3.125,
+   "star": "bet Pic",
+   "tag": "A002_X75bfbf_Xace_spw3",
+   "top": 1.0
+  },
+  {
+   "array": "7m",
+   "band": 7,
+   "chanw_kHz": 976.5625,
+   "ctrl": 5.4535,
+   "p90": 5.6,
+   "p90sub": 3.425,
+   "star": "hd107146",
+   "tag": "A002_Xb999fd_X148_spw16",
+   "top": 1.0
+  },
+  {
+   "array": "7m",
+   "band": 7,
+   "chanw_kHz": 488.28125,
+   "ctrl": 5.7175,
+   "p90": 5.25,
+   "p90sub": 3.433333333333333,
+   "star": "hd107146",
+   "tag": "A002_Xb999fd_X148_spw20",
+   "top": 1.0
+  },
+  {
+   "array": "7m",
+   "band": 6,
+   "chanw_kHz": 122.0703125,
+   "ctrl": 18.3574,
+   "p90": null,
+   "p90sub": null,
+   "star": "HD 48370",
+   "tag": "A002_Xc26103_X155a_spw16",
+   "top": 1.0
+  },
+  {
+   "array": "7m",
+   "band": 6,
+   "chanw_kHz": 488.28125,
+   "ctrl": 10.8229,
+   "p90": 7.4,
+   "p90sub": 7.4,
+   "star": "HD 48370",
+   "tag": "A002_Xc26103_X155a_spw22",
+   "top": 1.0
+  },
+  {
+   "array": "7m",
+   "band": 7,
+   "chanw_kHz": 488.28125,
+   "ctrl": 5.7014,
+   "p90": 3.2,
+   "p90sub": 3.2,
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "tag": "A002_Xc6a3db_X7b5b_spw0",
+   "top": 1.0
+  },
+  {
+   "array": "12m",
+   "band": 6,
+   "chanw_kHz": 122.0703125,
+   "ctrl": 6.4368,
+   "p90": 3.3666666666666667,
+   "p90sub": 3.3666666666666667,
+   "star": "TWA 3A 696000",
+   "tag": "A002_Xd40be0_X749c_spw2",
+   "top": 1.0
+  },
+  {
+   "array": "12m",
+   "band": 6,
+   "chanw_kHz": 122.0703125,
+   "ctrl": 6.4846,
+   "p90": 3.6,
+   "p90sub": 3.6,
+   "star": "TWA 3A 696000",
+   "tag": "A002_Xd40be0_X749c_spw3",
+   "top": 1.0
+  },
+  {
+   "array": "12m",
+   "band": 6,
+   "chanw_kHz": 976.5625,
+   "ctrl": 5.5322,
+   "p90": 3.7,
+   "p90sub": 3.7,
+   "star": "kap CrB",
+   "tag": "A002_Xe48598_Xff51_spw3",
+   "top": 1.0
+  },
+  {
+   "array": "12m",
+   "band": 8,
+   "chanw_kHz": 488.28125,
+   "ctrl": 6.0548,
+   "p90": 3.2333333333333334,
+   "p90sub": 3.2333333333333334,
+   "star": "HD61005",
+   "tag": "A002_Xe4f0a6_X3658_spw3",
+   "top": 1.0
+  },
+  {
+   "array": "7m",
+   "band": 8,
+   "chanw_kHz": 488.28125,
+   "ctrl": 5.7673,
+   "p90": 3.3,
+   "p90sub": 3.3,
+   "star": "HD 48370",
+   "tag": "A002_Xf05a48_X269c_spw0",
+   "top": 1.0
+  }
+ ],
+ "noise": {
+  "n_cat": 390,
+  "n_inj": 17,
+  "p90": 3.446946265694166,
+  "p90_hi": 4.198229671800091,
+  "p90_lo": 3.3708516050783874,
+  "p90_subtracted": 3.377465752108311
+ },
+ "provenance": {
+  "campaign": "campaign_m3a_v399.py",
+  "deposition": "linear split between the two straddled channels, convolved with the 0.25/0.5/0.25 channel kernel",
+  "injector": "inject_vis_v399.py",
+  "note": "the result predates inject_vis_v401.py and carries no injector field of its own; this record supplies it.  Any generator quoting the exact lag-window validation of a LATER injector alongside this completeness is mis-attributing it.",
+  "result": "m3a_result_v400.json (generated 2026-09-24T14:34:19Z)"
+ },
+ "response": {
+  "deposited_centre": 0.5,
+  "deposited_edge": 0.375,
+  "deposited_phase_mean": 0.4375,
+  "drift_channels_median": 10.7211387012174,
+  "exact_centre": 0.5,
+  "exact_edge": 0.42441318157885755,
+  "exact_phase_mean": 0.47414403720219156,
+  "n_phase_tone": 3673,
+  "peak_at_ninety": 1.9316690390650986,
+  "phase_flatness": 0.008388477180133025,
+  "shortfall_edge": 0.11642706617884913,
+  "shortfall_phase_mean": 0.07728461042855062
+ },
+ "rule": {
+  "column": "ctrl_max_snr",
+  "disc": ">= sigma",
+  "noise": "< sigma",
+  "sigma": 10.0
+ }
+}

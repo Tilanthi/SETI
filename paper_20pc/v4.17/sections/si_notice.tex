@@ -1,0 +1,45 @@
+%% SUPPORTING INFORMATION NOTICE -- typeset ONLY in the \SIPAPER build, in
+%% place of the five appendices.  It is not part of the default document.
+%% The appendices themselves are unchanged and are typeset by the companion
+%% \SIAPPX build; their letters, subsection numbers, float numbers and labels
+%% are the same in both, which is why every \ref in the body still resolves.
+%% r16-integrate: `\label{sec:si}` DELETED.  Nothing referenced it -- the
+%% notice is a heading, not a cross-reference target -- and this file is
+%% typeset only in the \SIPAPER build, so in the default build the label
+%% never reached the .aux and `xrefcheck` reported `sec:si -> UNRESOLVED`
+%% for every version since the split build existed.  A label that cannot
+%% resolve in the build the gate reads is a broken cross-reference whether
+%% or not anything points at it.
+\section*{Supporting Information}
+The following appendices are published as online Supporting Information with
+the electronic version of this paper. They are referred to by letter
+throughout the text, and their sections, figures and tables keep the
+numbering used here.
+
+\begin{itemize}[nosep,leftmargin=1.2em]
+\item \textbf{Appendix~A.} Spectral response, frequency conventions and the
+  primary-beam response: the channel response of the correlator and what it
+  does to an unresolved carrier, the three frequency frames and the
+  transformations between them, the intra-integration smearing correction
+  applied to every limit, and the primary-beam attenuation that turns a
+  measured noise into a flux at the star.
+\item \textbf{Appendix~B.} The spatial rank and what it can support: what the
+  comparison with the \NCtrl{} control positions does and does not establish,
+  the reserved out-of-sample hold-out that calibrates it, the channel-dependent
+  calibration mechanisms and the measurement that excludes them, and the null
+  of the recurrence statistic.
+\item \textbf{Appendix~C.} The line mask: the velocity criterion, its
+  evaluation in the star's own rest frame with the local standard of rest
+  as a check, the
+  published carbon-monoxide surveys each sightline is checked against, the
+  masked bandwidth and what it costs, and the one species treated as a note
+  rather than as an attribution.
+\item \textbf{Appendix~D.} The false-alarm expectation and the control
+  ensemble: what the expectation is conditioned on, the execution-block
+  quality criterion, the calibration and the resolution of the control
+  ensemble, the trials budget, and the crossing ledger itself.
+\item \textbf{Appendix~E.} Radio-frequency interference screening.
+\end{itemize}
+%% r15-deposit: the closing paragraph promising that "the deposit described in
+%% the Data Availability statement" carries the appendices' inputs, generators
+%% and diagnostic figures is DELETED.  There is no deposit (Glenn, 2026-10-08).

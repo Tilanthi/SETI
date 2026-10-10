@@ -1,0 +1,102 @@
+\begin{abstract}
+Searches for narrowband transmitters above 30\,GHz have covered one
+spectral line toward some tens of nearby stars. Uniformly searched, \NEB{}
+ALMA execution blocks give \NWinA{} fine-channel windows of
+\ChanLoA--\ChanHiA\,kHz toward \NSysClassA{} systems, covering
+\CvUnionA\,GHz of union bandwidth in \CovNIslands{} disjoint intervals;
+\NWinB{} coarser windows carry no drift discrimination.
+Windows are filtered for an unresolved carrier drifting linearly in the
+stellar frame; crossings are tested against catalogued transitions at the
+stellar velocity, unattributed ones sought again in later blocks. For a
+carrier narrower than the instrumental channel, nine injections in ten return
+at $\EirpNinetySysMedA$\,W for the median system. The default drift ceiling
+is \DriftCeilLo\,nHz, \AccelSheikhPct{} per cent of the \citet{Sheikh2019}
+range. Of the \EvNCrossRaw{} crossings, \MkAttr{} are attributed and
+\MkUnattr{} are not; \PrFlagXrossWord{} are in one
+block failing a quality criterion applied after inspection. None of the
+unattributed crossings recurred, including \PrRankClause, though one of them
+is untested, while \MkAttrRecur{} attributed to
+circumstellar or foreground carbon monoxide do recur. That excludes a carrier
+holding its stellar-frame
+frequency to within $\pm\RqDvMed$\,km\,s$^{-1}$, radiating through both
+observations, not a persistent transmitter of any kind; the remainder is
+consistent with chance to the control positions' accuracy. A per-cent-level
+calibration residual could mimic a carrier in \CxNAdmit{} of the windows;
+none holds a crossing. Line
+confusion costs \MkMaskAPct{} per cent of the coverage and \RcNoRepSys{}
+systems have no confirmation epoch; these, not sensitivity, limit the search.
+\end{abstract}
+
+\keywords{extraterrestrial intelligence, radio lines: stars, submillimetre: stars, surveys, astrobiology}
+
+%% One paragraph, in the conventional order: aim; data (blocks, windows,
+%% systems, channel widths, union bandwidth); method (de-drifted matched
+%% filter, attribution, recurrence); sensitivity (the median EIRP_90 and the
+%% drift ceiling); result (crossings, attributed, unattributed, none
+%% recurring, and the one instrumental mechanism that could have produced
+%% one); the two principal limitations (line confusion, repeat coverage).
+%% Nothing else belongs here, and nothing here may be the only place a
+%% number appears.
+%%
+%% MNRAS allows 250 words, so the length must be MEASURED on the built page
+%% and not asserted here: `abswords.py` counts the words between ABSTRACT
+%% and the subject headings in the PDF itself and fails the build above 250.
+%% A comment claiming a word count is not a word count -- an earlier one
+%% said 245 while the typeset paragraph held 253.
+%%
+%% THE SENSITIVITY STATEMENT IS CONDITIONAL IN TWO WAYS AND BOTH ARE LOAD
+%% BEARING.  EIRP_90 holds for a carrier narrower than the instrumental
+%% channel -- the channel widths here span two orders of magnitude, so a
+%% carrier spread over many channels meets a different threshold entirely --
+%% and the drift reach is a ceiling, stated in the literature's own units
+%% (one Hz per second per GHz is one nanohertz) and as a fraction of the
+%% general recommendation, so that a reader can see how restricted it is.
+%% \DriftCeilLo is round 13's and is NOT republished at round 590; round 590
+%% publishes only the comparison, and asserts that recomputing the ceiling
+%% from the catalogue reproduces round 13 to the printed digit.
+%%
+%% ONLY THE HEADLINE FIGURES OF THE EXPERIMENT ARE SET IN TYPE HERE:
+%% \NEB, \NWinA and \NSysClassA (its size), \CvUnionA with \CovNIslands (its
+%% extent, which must never be read as continuous coverage),
+%% \EirpNinetySysMedA (its depth), and the crossing partition.
+%%
+%% THE BLOCK COUNT AND THE SYSTEM COUNT ARE TWO STATEMENTS AND NOT ONE.  The
+%% \NEB{} blocks of the census are toward all \NSystems{} surveyed systems;
+%% the fine-channel windows they yield are toward the \NSysClassA{} of the
+%% carrier experiment.  Writing "\NEB{} blocks toward \NSysClassA{} systems"
+%% joins two true counts into a false one, and a referee read it that way.
+%% Never write "40 of 60" here either.
+%%
+%% \RcNoRepSys{} is the count of systems for which confirmation is
+%% IMPOSSIBLE -- no later block at a frequency the first one covered -- and
+%% it is the only confirmation figure this paragraph may quote.
+%% \ScSysNoConf{} and \ScSysIndep{} count later blocks at ANY frequency, so
+%% a repeat that shares no frequency confirms nothing and those two are
+%% ledger counts; counts_r15.py A9 fails the build if either reaches the
+%% prose.  The frequency extent is in the TITLE immediately above, so this
+%% paragraph does not repeat the band edges.  \PrFlagXrossWord and
+%% \PrRankClause are generated English, not figures, and neither may open a
+%% sentence.  Everything else is in the body: the spread of EIRP_90 across
+%% systems, the union over which a repeat exists, the attributed share by
+%% species, the control-ring size, and the coarse search's lower edge, which
+%% is conclusion 2's.
+%%
+%% Five things this paragraph must keep saying, each gated by prose_r15.py or
+%% prose_v412.py: the crossing total is never given without the subset in the
+%% block that fails the quality criterion (P9, and Referee 1 asks for that
+%% disclosure here explicitly); the recurrence result names the class of
+%% transmitter it excludes, now with the width of the frequency interval the
+%% test permits, and claims no generic one (P4); the spatial rank is named
+%% only inside the sentence that says nothing recurred, never as a result of
+%% its own (P4); the chance comparison is stated as a consistency, with no
+%% floor and no second construction (P10); and the bandwidth is labelled a
+%% union bandwidth (P7).
+%%
+%% THE RECURRENCE RESULT IS NOT A TEST OF EVERY CROSSING.  The power to
+%% recover a returning carrier is evaluated at the trigger amplitude, not at
+%% the discovery amplitude, which selection biases high, so some crossings
+%% are untested rather than excluded -- one of the two that lead their own
+%% control fields among them.  Naming the pair without that qualification
+%% overstates the test, which is what "though one of them is untested"
+%% exists to prevent; do not delete it to recover a word.
+%% Measure before adding anything.

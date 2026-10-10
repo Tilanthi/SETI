@@ -1,0 +1,84 @@
+{
+ "_what": "The two published star-targeted technosignature searches above 30 GHz, with the sentence of each paper that states each number. Frozen input to priorsearch_r15.py (round 600). Nothing here is computed; everything here is QUOTED, and the generator asserts that every value it publishes appears as a number inside the quotation it is attributed to.",
+ "_why": "Section 1 typed five numbers that belong to other people's papers (40, 23, 203, 17, 35). This project has mis-attributed an external constant twice in this round alone -- the 0.2 per cent bandpass accuracy that is nowhere in ALMA Technical Note 15, and the Band 8 flux accuracy the Proposer's Guide does not state -- and in both cases the provenance string named a document and no page. A number typed into LaTeX is checked by nothing; a number read out of a quotation, with the quotation asserted to contain it, is checked at every build.",
+ "_searched_by": "r15-refs, 2026-10-08, Technosearch Radio List (121 searches, 1960-present) plus an arXiv metadata sweep (332 records, 187 since 2022-01-01). Evidence: /workspace/SETI/referee_r15/refs/REFS_EVIDENCE_R15.md section 3; raw results in refs/technosearch_radio_2026-10-08.json and refs/arxiv_seti_sweep_2026-10-08.json.",
+ "n_searches": 2,
+ "searches": [
+  {
+   "key": "Steffes1994",
+   "ref": "Steffes P. G., DeBoer D. R., 1994, Icarus, 107, 215",
+   "doi": "10.1006/icar.1994.1019",
+   "title": "A SETI Search of Nearby Solar-Type Stars at the 203-GHz Positronium Hyperfine Resonance",
+   "facility": "NRAO 12 m, April 1993",
+   "values": {
+    "n_star": {
+     "value": 40,
+     "where": "abstract, first sentence",
+     "quote": "A total of 40 solar-type stars within 23 parsecs were observed, in addition to three locations near the galactic center. No detections were made at the detection threshold of 2.3 x 10^-19 W/m^2 in each of two orthogonal linear polarizations.",
+     "corroborated_by": "section II.C: \"A total of 40 stars were observed... The 40 stars were selected from a list of solar-type stars (F6 through K7 dwarfs, luminosity class 5) within 23 parsecs of earth, which was provided by D. Latham and G. Torres.\"  Table I was also counted row by row off the page image: 40 rows."
+    },
+    "dist_pc": {
+     "value": 23,
+     "where": "abstract, first sentence",
+     "quote": "A total of 40 solar-type stars within 23 parsecs were observed, in addition to three locations near the galactic center. No detections were made at the detection threshold of 2.3 x 10^-19 W/m^2 in each of two orthogonal linear polarizations.",
+     "corroborated_by": "section II.C, same sentence as for n_star: \"within 23 parsecs of earth\"."
+    },
+    "freq_GHz": {
+     "value": 203,
+     "where": "title",
+     "quote": "A SETI Search of Nearby Solar-Type Stars at the 203-GHz Positronium Hyperfine Resonance"
+    },
+    "line_GHz": {
+     "value": 203.3849,
+     "where": "section II.A",
+     "quote": "we observed a 5-MHz-wide spectral window centered at the 203.3849-GHz positronium hyperfine resonance, adjusted to a heliocentric rest frame."
+    },
+    "band_MHz": {
+     "value": 5,
+     "where": "section II.B",
+     "quote": "Since both systems analyzed only a 1-MHz-wide spectrum, the receiver local oscillator was stepped so as to allow taking of five individual 1-MHz spectra, giving a total bandwidth of 5 MHz.",
+     "corroborated_by": "section III: \"our search of 40 target stars in the frequency range from 203.3834 to 203.3884 GHz\" -- 5.0 MHz on their own two numbers."
+    }
+   },
+   "epochs_note": "ONE EPOCH PER STAR, and this is the half of our own \"at one epoch\" claim that is true.  The observations \"were conducted on April 9 and 10, 1993\"; Table I lists each of the 40 stars exactly once, with a single start elevation, and \"A typical observation lasted approximately 25 min.\"",
+   "instrument_note": "The 32,000-channel FFTSA that would have given ~32 Hz channels NEVER RAN: \"the FFTSA ... was irreparably damaged by the carrier responsible for transporting it to NRAO/Tucson.  As a result, all measurements were conducted with the slower, less sensitive conventional spectrum analyzer\" -- 3 kHz resolution bandwidth, 100 Hz equivalent noise bandwidth per bin.  Nothing in our paper quotes 32 Hz and nothing should."
+  },
+  {
+   "key": "Mauersberger1996",
+   "ref": "Mauersberger R., Wilson T. L., Rood R. T., Bania T. M., Hein H., Linhart A., 1996, A&A, 306, 141",
+   "title": "SETI at the spin-flip line frequency of positronium",
+   "facility": "IRAM 30 m, June 1994",
+   "values": {
+    "n_star": {
+     "value": 17,
+     "where": "abstract",
+     "quote": "Most of the 17 targets are mature stars with excess infrared radiation.",
+     "corroborated_by": "Table 1 was counted row by row off the page image: 17 target rows, two of them tau Cet and eps Eri.  Section 2 states the provenance of the list but not its size: \"Our target list also includes conventional SETI targets, nearby solar type stars with age comparable to the Sun... A few such stars also have IR excesses (tau Cet, eps Eri).\"",
+     "caveat": "One of the 17 is the Galactic Centre (Table 1 row \"Gal. Center\", d = 8500 pc), not a star.  \"17 targets\" is right and \"17 stars\" would not be; 16 of the 17 are stars, all within 20 pc."
+    },
+    "band_MHz": {
+     "value": 35,
+     "where": "section 3",
+     "quote": "two backends were used simultaneously, namely a filterbank of 512 x 1 MHz wide channels and a three-level autocorrelator with 3584 channels and a channel spacing of 9.7 kHz, yielding a total bandwidth of 35 MHz, corresponding to a total velocity coverage of 52 km s^-1.",
+     "note": "3584 x 9.7 kHz = 34.8 MHz.  The 35 MHz is the narrowband autocorrelator; the 512 MHz filterbank ran in parallel at 1 MHz resolution and is useless for a carrier, which is why the paper must say \"no more than\" and not \"the wider of the two\"."
+    },
+    "vel_cover_kms": {
+     "value": 52,
+     "where": "section 3",
+     "quote": "two backends were used simultaneously, namely a filterbank of 512 x 1 MHz wide channels and a three-level autocorrelator with 3584 channels and a channel spacing of 9.7 kHz, yielding a total bandwidth of 35 MHz, corresponding to a total velocity coverage of 52 km s^-1."
+    }
+   },
+   "our_stars_named": [
+    "tau Cet",
+    "eps Eri"
+   ],
+   "our_stars_note": "The target list also excludes beta Pic as young, which is a third star of this sample; only the two NAMED as observed are counted here, because an excluded star was not searched.",
+   "line_note": "The line is named, not numbered, in every sentence transcribed from this scan: the title is \"SETI at the spin-flip line frequency of positronium\".  The record therefore does NOT quote a frequency for this search -- the 203.385 GHz printed in the introduction on p. 141 was not transcribed verbatim, and a value whose quotation is reconstructed is exactly the defect this file was rewritten to remove.  P2 instead recovers the frequency from this paper's OWN bandwidth and velocity coverage, 35 MHz over 52 km/s, and requires it to agree with the frequency Steffes & DeBoer print.",
+   "epochs_note": "\"AT ONE EPOCH\" IS FALSE OF THIS SEARCH.  Table 1 is an observing log with a \"Date 6/94\" column and eight of the seventeen targets carry two dates, each with its own integration time, system temperature, r.m.s. and limit: HD 004614 (15, 20), del Cas (15, 19), HD 010307 (16, 20), psi5 Aur (15, 19), bet UMa (15, 19), HD 193664 (16, 20), HD 217014 (16, 20), WD 2326 (16, 20).  tau Cet and eps Eri were observed once each, on 20 June.  What IS true, and is the stronger statement, is that neither search used its repeats as a test of persistence, and they say so themselves (section 4): \"Our experiment was limited to a short period of time.  We may have just missed the 'on' cycle of the broadcast; this might be settled by regular monitoring.\""
+  }
+ ],
+ "line_width_MHz": 35,
+ "line_width_note": "The larger of the two single-line coverages, and the one Section 1 may quote as an upper bound for both: Steffes & DeBoer covered 5 MHz (their section II.B), a factor of seven less, so 35 MHz is the generous figure and the comparison with this survey's union bandwidth is conservative in the direction that favours the earlier work.  ★ An earlier version of this note read \"Steffes & DeBoer's 32 Hz channels span far less\".  Their 32 Hz FFTSA never ran -- see searches[0].instrument_note -- and that figure must not be used.",
+ "overlap_note": "The two target lists OVERLAP, so their star counts must never be added.  Five of Mauersberger's targets had already been observed by Steffes & DeBoer -- eta Cas (HD 4614 = GJ 34, two rows in Steffes), tau Cet (GJ 71), psi5 Aur (GJ 245), HD 193664 (GJ 788) and 51 Peg (HD 217014 = GJ 882) -- and one of the 17 is not a star, so the two searches cover 40 + (16 - 5) = 51 distinct stars, not 57.  Matched on SIMBAD-resolved positions with a negative control (all Mauersberger declinations + 1 deg -> 0 matches).  ★ A match on the PRINTED coordinates finds only four: Mauersberger's Table 1 misprints psi5 Aur's RA hour as \"5 43 08.0\" for 06h43m08s B1950, the declination, minutes and seconds all agreeing with Steffes's GL 245 exactly.  Full working: referee_r16/refs/overlap_r16.json.",
+ "_r16_correction": "★★★ 2026-10-09, r16: THREE OF THE FOUR QUOTATIONS IN THIS FILE WERE RECONSTRUCTIONS, NOT QUOTATIONS.  Every VALUE was right; three attributions were not.  The Steffes abstract quotation spliced in the telescope and dates from section II and dropped \"in addition to three locations near the galactic center\"; Mauersberger's 17 was attributed to a section 2 sentence that does not exist (it is in the abstract and in Table 1's row count); and the 35 MHz quotation was a paraphrase carrying a frequency string, \"203.385 GHz\", that is not in that sentence -- which mattered, because P2 recovered the frequency by regexing it OUT of that string, so the clause tested the record against itself and would have found nothing on the real sentence.  Both papers are SCANS WITH NO TEXT LAYER, so no automated check can ever reach these sentences and this record is the only provenance there will be.  Replacements read off the page images by r16-refs; evidence in referee_r16/refs/REFS_EVIDENCE_R16.md section 2."
+}
