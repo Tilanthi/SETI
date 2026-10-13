@@ -1,0 +1,27 @@
+%% DELETED at round 9 by appendix-triage.  The injection campaign is how the
+%% sensitivity is MEASURED rather than asserted, so the curve and the
+%% adopted number move UP; only the campaign's own records go to the
+%% release.
+%%  - REQUEST (results / sample-method): the amplitude-completeness curve
+%%    and the adopted P_90^sel belong in the method or results, not in an
+%%    appendix.  tab:p90budget is cited from 05_results.tex and has no
+%%    appendix to live in; print the dominant term and the total there.
+%%  - the duty-cycle and Stokes-I limitation list in this appendix
+%%    duplicated 06_discussion.tex:78 and :132 exactly, so deleting it loses
+%%    no limitation.  Verified before deletion.
+%%  - release: injections/dwell_campaign.csv, amplitude_recovery.csv,
+%%    completeness_curve.csv, class_comparison.csv, p90_budget.csv,
+%%    campaign_scope.md.
+%% Labels lost: app:inject (cited by 04_method.tex), sec:dwell, sec:ampinject,
+%% app:dwelldetail (cited by 06_discussion.tex), tab:p90budget (cited by
+%% 05_results.tex), tab:dwell, tab:classcomp, tab:compcurve, fig:stratcomp,
+%% fig:completeness.  Those three body citations need repointing.
+%% ** AND A BUILD BLOCKER THAT IS NOT MINE: p90_budget_v409.py assertion B10
+%% requires the manuscript to REFERENCE \BudTransLo, \BudTransHi,
+%% \BudTransN, \BudTransNTransferred, \BudPlxWorstPct, \BudPlxWorstStar and
+%% \BudPlxNStar, precisely so retire_macros cannot strip them.  v4.09 cited
+%% them at line 2267, in the material that became 05c_limits.tex; the
+%% flattened v4.10 manuscript cites none of them, so B10 fails as the tree
+%% stands, and it failed before this deletion.  It is the fifth occurrence
+%% of the defect B10 exists to prevent.  -> numbers / results.
+%% REQUEST (integrator): delete this file and its \input line together.

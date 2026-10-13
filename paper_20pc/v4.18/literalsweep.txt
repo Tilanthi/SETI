@@ -1,0 +1,33 @@
+literal sweep of technosignatures_40pc_v4.18.tex
+
+25 prose literals equal to a generated macro:
+  30         == CfgChanOut,EpWideLinesGHz,LgDMax,MedWinCoarseLo  hang Phueak, Chiang Mai, Thailand} {abstract} Above 30\,GHz, narrowband transmitter search
+  18         == CcNAgree,CcNMatched,ChnAttrA,CkNSecAttr     at array and single-dish C- and K-band work at 6 and 18\,GHz with the Sardinia Radio Teles
+  30         == CfgChanOut,EpWideLinesGHz,LgDMax,MedWinCoarseLo  leakage is outside it by construction. Above about 30\,GHz the record is nearly empty, and
+  25         == BdNBlocks,BpSixGapD,CovNSysAtRef,CsBpCoSepMinD  ry. A star enters if its Gaia~DR3 parallax is at least 25\,mas, measured to better than {}
+  30         == CfgChanOut,EpWideLinesGHz,LgDMax,MedWinCoarseLo  ance to a factor of two {under}-representation beyond 30\,pc. Colour comes second: A~stars
+  15         == CdNStarNoPhot,CeNFullMask,CeNWinTail,CfgOffOut  ed search would pick: of the {} sample systems within 15\,pc with a confirmed planet, {} c
+  0.99       == PxRossObsHi,RsevRankFracTwentyA             effort of ours would close that. {figure*} [width=0.99 ]{figures/coverage_waterfall.pdf} {
+  10.4       == EpGapD,VisStarMJy                           servatory records on each block's phase calibrator [ 10.4.11, 11.3.1]{ALMAHandbook}, throu
+  11.3       == CpRecFluxOne,RcCpFlux                       records on each block's phase calibrator [ 10.4.11, 11.3.1]{ALMAHandbook}, through the sta
+  30         == CfgChanOut,EpWideLinesGHz,LgDMax,MedWinCoarseLo  ce this archive opens} Earlier searches above about 30\,GHz reached nearby stars at one fr
+  30         == CfgChanOut,EpWideLinesGHz,LgDMax,MedWinCoarseLo  The two earlier searches to reach nearby stars above 30\,GHz each covered a single line, o
+  6.7        == BpRecOffChan,TuQuantAlignPct                o check it. *{Software} The pipeline depends on CASA~6.7.6 [casatools/casatasks 6.7.6-14;]
+  6.7        == BpRecOffChan,TuQuantAlignPct                e pipeline depends on CASA~6.7.6 [casatools/casatasks 6.7.6-14;][]{CASA2022}, Python~3 wit
+  14         == BudNHiWin,CkRuleSecUnattr,ClustMaxMed,ClustNObs  line depends on CASA~6.7.6 [casatools/casatasks 6.7.6-14;][]{CASA2022}, Python~3 with astr
+  350        == CkNContWin                                  elativistic terms at the \,km\,s scale are \,kHz at 350\,GHz, below the finest native chan
+  3.1        == BenchEffRatio,BsSirCenLo,CpRecTotalSpanH,CxAdmitTstarHi  a group sums to the row whose number heads it --- rows 3.1.1 to 3.1.4 to row 3.1, rows 3.1
+  3.1        == BenchEffRatio,BsSirCenLo,CpRecTotalSpanH,CxAdmitTstarHi  ums to the row whose number heads it --- rows 3.1.1 to 3.1.4 to row 3.1, rows 3.1 to 3.5 t
+  3.1        == BenchEffRatio,BsSirCenLo,CpRecTotalSpanH,CxAdmitTstarHi  w whose number heads it --- rows 3.1.1 to 3.1.4 to row 3.1, rows 3.1 to 3.5 to row 3. The 
+  3.1        == BenchEffRatio,BsSirCenLo,CpRecTotalSpanH,CxAdmitTstarHi  mber heads it --- rows 3.1.1 to 3.1.4 to row 3.1, rows 3.1 to 3.5 to row 3. The primary ce
+  3.5        == BpicbCeiling,BpicbFhi,EpsEriCorrMax,EpsEriPbHi  ads it --- rows 3.1.1 to 3.1.4 to row 3.1, rows 3.1 to 3.5 to row 3. The primary census is
+  3.1        == BenchEffRatio,BsSirCenLo,CpRecTotalSpanH,CxAdmitTstarHi  urvey's only block with a coarse-channel crossing. Row 3.1.1 is what this paper means by c
+  3.1        == BenchEffRatio,BsSirCenLo,CpRecTotalSpanH,CxAdmitTstarHi  ency the first did not cover confirms nothing, so rows 3.1 and 3.2 count any second epoch 
+  3.2        == BootPoisson,ExpDistinctDen,ExpStageOneAll,FlCtlBoxLo  first did not cover confirms nothing, so rows 3.1 and 3.2 count any second epoch and are n
+  2.2        == AccelJupRot,CkExpSec,EpEtaRepDepth,RsigNeedCPPct  any second epoch and are not confirmation counts. Row 2.2.1 was also decomposed system by 
+  19         == CxMarginBpNom,DutyTenth,EpDays,EpNUnit      ies active allocations throughout 90--275\,GHz and WRC-19 identified parts of 275--450\,GH
+
+3 prose literals within 5 per cent of a macro (possible stale value):
+  275        ~ ExpTotalMed=274.6,VnKeyNFineEntries=274,OcOldMed=273.1  Article~5 carries active allocations throughout 90--275\,GHz and WRC-19 identified parts o
+  275        ~ ExpTotalMed=274.6,VnKeyNFineEntries=274,OcOldMed=273.1  throughout 90--275\,GHz and WRC-19 identified parts of 275--450\,GHz for land-mobile and f
+  450        ~ FixDvVir=449,MrUnMin=449,WdMedKms=448       ghout 90--275\,GHz and WRC-19 identified parts of 275--450\,GHz for land-mobile and fixed 

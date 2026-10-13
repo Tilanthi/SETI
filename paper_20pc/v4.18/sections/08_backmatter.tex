@@ -1,0 +1,120 @@
+\section*{Author contributions}
+G.J.W.\ conceived the survey, defined the target sample and the selection
+criteria, and wrote the manuscript. R.D.\ built and operated the archival
+retrieval, calibration and search pipeline, implemented the spatial control
+statistic and the injection--recovery campaigns, and produced the per-window
+catalogue and its regeneration scripts. Both authors designed the vetting
+procedure, chose the masked species, carried out the statistical
+validation reported in \S\ref{sec:statistic} and
+Appendix~\ref{app:falsealarm}, and agreed the dispositions of
+Table~\ref{tab:ledger}.
+%% Authors to confirm this division before submission.
+
+\section*{Funding}
+This work received no dedicated funding. It used public archival data and
+no observing time was awarded for it.
+%% Authors to replace this if any grant supported the work.
+
+\section*{Competing interests}
+The authors declare no competing interests. VBRL Holdings is a privately
+held company through which R.D.\ conducts independent research, named
+here solely as his affiliation; it had no role in the design of the
+survey, the selection of targets, the analysis, the decision to publish
+or the content of this paper, and provided no funding for the work.
+%% Authors to confirm this wording, which is accurate only if the company's
+%% involvement was indeed nil.
+
+\section*{Acknowledgements}
+This paper makes use of the following ALMA data: the \NProjCodes{} projects
+listed in Table~\ref{tab:projcodes}, each cited as \texttt{ADS/JAO.ALMA\#}
+followed by its project code. The \NEB{} primary-census execution blocks
+searched span \PrEbDateFirst{} to \PrEbDateLast{}, and we thank the principal
+investigators and teams who proposed and obtained
+them.\ProjCodeUnresClause{} ALMA is a partnership of ESO
+(representing its member states), NSF (USA) and NINS (Japan), together with NRC
+(Canada), NSTC and ASIAA (Taiwan), and KASI (Republic of Korea), in cooperation
+with the Republic of Chile. The Joint ALMA Observatory is operated by ESO,
+AUI/NRAO and NAOJ. This work has made use of data from the European Space
+Agency (ESA) mission {\it Gaia} \citep{GaiaDR3}, processed by the {\it Gaia}
+Data Processing and Analysis Consortium (DPAC). This research has made use
+of the SIMBAD database \citep{SIMBAD2000} (CDS, Strasbourg, France); of the
+NASA Exoplanet Archive \citep{NEA2013}, which is operated by the California
+Institute of Technology under contract with the National Aeronautics and
+Space Administration under the Exoplanet Exploration Program; and of the
+Splatalogue spectral-line database \citep{Splatalogue2007}.
+
+\emph{Use of generative artificial intelligence.} Large language models were
+used in this work. They wrote most of the software: the archival retrieval and
+calibration scripts, the search and vetting pipeline, the statistical tests,
+and the generators that produce every number, table and figure in this paper.
+They also drafted text, which the authors revised. The authors set the
+scientific question, chose every criterion, and are responsible for the
+content of this paper.
+
+\emph{Testing and validation of that analysis.} No result here is accepted on
+a model's assertion, and four things are done instead. No number in this paper
+is typed: each is written by the program that computes it from the data and
+re-derived whenever the paper is built, so a value in the text cannot differ
+from the analysis behind it. Before the manuscript is settled, every generated
+product is deleted and rebuilt from the data and compared with its predecessor
+byte for byte, which a program depending on the state left by an earlier run
+would not survive. A separate audit re-derives the identities that must hold
+among the published values --- counts that must partition, quantities that
+must sum, numbers reached by two routes that must agree --- and stops the
+build where one does not. And every assertion in the analysis was first made
+to fail on purpose, on deliberately wrong input, before it was relied on,
+since an assertion that has never fired is no evidence that anything is right.
+Every reference cited here has been checked against the published literature.
+
+\section*{Data Availability}
+\label{sec:data}
+Every observation this paper rests on is public, and is identified here
+precisely enough to be fetched. The \NEB{} primary-census execution blocks and
+the blocks of every other set named in Table~\ref{tab:blockledger} are held in
+the ALMA Science Archive under the \NProjCodes{} project codes of
+Table~\ref{tab:projcodes}, and are retrieved there by the execution-block
+identifier, which Tables~\ref{tab:ledger} and~\ref{tab:ledgercont} give for
+every one of the \EvNCrossRaw{} threshold crossings. ALMA's own citation
+convention for archival data is the project code rather than a persistent
+identifier, so the archive's identifiers are given in place of one, which is
+the recommended practice where a data set carries none of its own
+\citep{Chen2022}. The
+ancillary catalogues are public in the same sense: Gaia~DR3 for the astrometry
+and the colours, the NASA Exoplanet Archive for the planet counts, and the
+CDMS and JPL line catalogues through Splatalogue for the mask, queried once on
+\McQueryDate.
+
+The derived results are in the paper. Table~\ref{tab:blockledger} partitions
+the blocks, windows, stars, systems and hours of every set the search defines;
+Table~\ref{tab:counts} carries every headline count, the five fates of the
+unprocessed blocks and the crossing partition; Appendix~\ref{app:persys} and
+Table~\ref{tab:persys} give the sensitivity, the frequency, the channel
+width, the covered bandwidth and the confirmability of every system of the
+carrier search;
+Tables~\ref{tab:ledger} and~\ref{tab:ledgercont} list all \EvNCrossRaw{}
+crossings with their frequencies in both frames, the stellar and control
+statistics, the nearest masked transition and the recurrence test;
+Table~\ref{tab:cand} gives the two leading events in full; and
+Table~\ref{tab:holdout} does the same for the reserved hold-out.
+
+What a reader can and cannot repeat is worth saying plainly. The observations
+can be obtained in full from the archive and the method is specified in enough
+detail to be reimplemented, so the search can be carried out again
+independently, which is the stronger test in any case. The calibrated
+visibilities, the per-window products and the code that produced them are not
+distributed with this paper, so this particular execution of the search cannot
+be re-run by a reader. Two choices that could create or remove an unattributed
+crossing were fixed before the data they govern were searched: the calibration
+hold-out rule of Appendix~\ref{sec:heldout} and the block list its first guard
+depends on were fixed \HoLeadBlockDays{} days before the first reserved block
+was searched, and the disposition criteria were fixed on \MkCritDate, before
+the line list was queried. The line list is a dated query of a public
+catalogue and can be repeated exactly as it stands; the ordering of the other
+two is a statement by the authors, and a reader has no way to check it.
+
+\section*{Software}
+The pipeline depends on CASA~6.7.6 \citep[casatools/casatasks
+6.7.6-14;][]{CASA2022}, Python~3 with astropy \citep{Astropy2022}, numpy
+\citep{Harris2020} and scipy \citep{Virtanen2020}, and the ALMA Science
+Archive and SIMBAD TAP interfaces through astroquery \citep{Ginsburg2019};
+all are free and open-source, at the versions cited.

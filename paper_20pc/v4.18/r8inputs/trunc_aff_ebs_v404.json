@@ -1,0 +1,338 @@
+{
+ "A002_Xdbc154_X138c": {
+  "gain": 1.4142135623730951,
+  "n_tgt": 2,
+  "disc_pb": 1,
+  "star": "Proxima Cen",
+  "pb": 28.07,
+  "sel_off": 0.62
+ },
+ "A002_Xdb7ab7_X140ee": {
+  "gain": 1.4142135623730951,
+  "n_tgt": 2,
+  "disc_pb": 1,
+  "star": "Proxima Cen",
+  "pb": 28.07,
+  "sel_off": 0.62
+ },
+ "A002_Xdc0d09_X1938": {
+  "gain": 1.4142135623730951,
+  "n_tgt": 2,
+  "disc_pb": 1,
+  "star": "Proxima Cen",
+  "pb": 28.07,
+  "sel_off": 0.6
+ },
+ "A002_Xdc21b9_X252f": {
+  "gain": 1.4142135623730951,
+  "n_tgt": 2,
+  "disc_pb": 1,
+  "star": "Proxima Cen",
+  "pb": 28.07,
+  "sel_off": 0.57
+ },
+ "A002_Xdb7ab7_X8bda": {
+  "gain": 1.4142135623730951,
+  "n_tgt": 2,
+  "disc_pb": 1,
+  "star": "Proxima Cen",
+  "pb": 28.07,
+  "sel_off": 0.63
+ },
+ "A002_Xbcef34_X2720": {
+  "gain": 2.0,
+  "n_tgt": 4,
+  "disc_pb": 3,
+  "star": "Proxima Cen",
+  "pb": 28.07,
+  "sel_off": 0.84
+ },
+ "A002_Xbaa732_X1627": {
+  "gain": 1.4142135623730951,
+  "n_tgt": 2,
+  "disc_pb": 1,
+  "star": "tau Cet",
+  "pb": 25.66,
+  "sel_off": 0.18
+ },
+ "A002_Xba4d35_Xb3a3": {
+  "gain": 1.4142135623730951,
+  "n_tgt": 2,
+  "disc_pb": 1,
+  "star": "tau Cet",
+  "pb": 25.66,
+  "sel_off": 0.17
+ },
+ "A002_Xba460f_X7e6": {
+  "gain": 1.4142135623730951,
+  "n_tgt": 2,
+  "disc_pb": 1,
+  "star": "tau Cet",
+  "pb": 43.99,
+  "sel_off": 0.16
+ },
+ "A002_Xb9cc97_X193f": {
+  "gain": 1.4142135623730951,
+  "n_tgt": 2,
+  "disc_pb": 1,
+  "star": "tau Cet",
+  "pb": 25.66,
+  "sel_off": 0.14
+ },
+ "A002_Xb9cc97_X1734": {
+  "gain": 1.4142135623730951,
+  "n_tgt": 2,
+  "disc_pb": 1,
+  "star": "tau Cet",
+  "pb": 25.66,
+  "sel_off": 0.14
+ },
+ "A002_Xb9cc97_X150a": {
+  "gain": 1.4142135623730951,
+  "n_tgt": 2,
+  "disc_pb": 1,
+  "star": "tau Cet",
+  "pb": 27.27,
+  "sel_off": 0.14
+ },
+ "A002_Xc74b5b_X7c16": {
+  "gain": 1.7320508075688772,
+  "n_tgt": 3,
+  "disc_pb": 2,
+  "star": "BD05 1668",
+  "pb": 28.07,
+  "sel_off": 0.24
+ },
+ "A002_Xc805c1_X1ab2": {
+  "gain": 1.7320508075688772,
+  "n_tgt": 3,
+  "disc_pb": 2,
+  "star": "BD05 1668",
+  "pb": 28.07,
+  "sel_off": 0.19
+ },
+ "A002_Xc7b4ea_X2729": {
+  "gain": 1.7320508075688774,
+  "n_tgt": 3,
+  "disc_pb": 2,
+  "star": "BD05 1668",
+  "pb": 28.07,
+  "sel_off": 0.22
+ },
+ "A002_Xc7fa6f_X28a8": {
+  "gain": 1.7320508075688774,
+  "n_tgt": 3,
+  "disc_pb": 2,
+  "star": "BD05 1668",
+  "pb": 48.11,
+  "sel_off": 0.2
+ },
+ "A002_Xc7a409_X5de8": {
+  "gain": 1.7320508075688774,
+  "n_tgt": 3,
+  "disc_pb": 2,
+  "star": "BD05 1668",
+  "pb": 28.07,
+  "sel_off": 0.22
+ },
+ "A002_Xc77d4f_X6247": {
+  "gain": 1.7320508075688772,
+  "n_tgt": 3,
+  "disc_pb": 2,
+  "star": "BD05 1668",
+  "pb": 28.07,
+  "sel_off": 0.23
+ },
+ "A002_Xc7e4e4_X683a": {
+  "gain": 1.7320508075688774,
+  "n_tgt": 3,
+  "disc_pb": 2,
+  "star": "BD05 1668",
+  "pb": 28.07,
+  "sel_off": 0.2
+ },
+ "A002_Xc8ed16_Xafd5": {
+  "gain": 1.7320508075688772,
+  "n_tgt": 3,
+  "disc_pb": 2,
+  "star": "BD05 1668",
+  "pb": 28.07,
+  "sel_off": 0.13
+ },
+ "A002_Xc8b2b0_X9c35": {
+  "gain": 1.9999477462305333,
+  "n_tgt": 4,
+  "disc_pb": 3,
+  "star": "HD 33793",
+  "pb": 28.07,
+  "sel_off": 0.49
+ },
+ "A002_Xbf792a_X26ec": {
+  "gain": 1.3417980657678599,
+  "n_tgt": 3,
+  "disc_pb": 2,
+  "star": "AU Mic",
+  "pb": 9.3,
+  "sel_off": 0.06
+ },
+ "A002_Xc6fa08_X1053": {
+  "gain": 1.4142135623730951,
+  "n_tgt": 2,
+  "disc_pb": 1,
+  "star": "HR 1010 Gaia DR3 4722135642226902656",
+  "pb": 27.27,
+  "sel_off": 0.09
+ },
+ "A002_Xc7111c_X61dc": {
+  "gain": 1.0624410473126802,
+  "n_tgt": 2,
+  "disc_pb": 1,
+  "star": "HR 1010 Gaia DR3 4722135642226902656",
+  "pb": 18.18,
+  "sel_off": 1.22
+ },
+ "A002_Xc6c0d5_X121e": {
+  "gain": 1.0619654186275667,
+  "n_tgt": 2,
+  "disc_pb": 1,
+  "star": "HR 1010 Gaia DR3 4722135642226902656",
+  "pb": 18.18,
+  "sel_off": 1.21
+ },
+ "A002_Xc6a3db_X7b5b": {
+  "gain": 1.2233631152421487,
+  "n_tgt": 2,
+  "disc_pb": 1,
+  "star": "HR 1010 Gaia DR3 4722135642226902656",
+  "pb": 31.17,
+  "sel_off": 1.21
+ },
+ "A002_Xc66ce1_X1345": {
+  "gain": 1.223077145587347,
+  "n_tgt": 2,
+  "disc_pb": 1,
+  "star": "HR 1010 Gaia DR3 4722135642226902656",
+  "pb": 31.17,
+  "sel_off": 1.2
+ },
+ "A002_Xc6141c_X3af0": {
+  "gain": 1.0614687712972288,
+  "n_tgt": 2,
+  "disc_pb": 1,
+  "star": "HR 1010 Gaia DR3 4722135642226902656",
+  "pb": 18.18,
+  "sel_off": 1.19
+ },
+ "A002_Xb0be8b_X785f": {
+  "gain": 2.0,
+  "n_tgt": 4,
+  "disc_pb": 3,
+  "star": "HD 38858 Gaia DR3 3023711269067191296",
+  "pb": 27.27,
+  "sel_off": 0.08
+ },
+ "A002_Xb0ebd1_X1855": {
+  "gain": 2.0,
+  "n_tgt": 4,
+  "disc_pb": 3,
+  "star": "HD 38858 Gaia DR3 3023711269067191296",
+  "pb": 25.67,
+  "sel_off": 0.08
+ },
+ "A002_Xb28642_Xcff3": {
+  "gain": 2.449489742783178,
+  "n_tgt": 6,
+  "disc_pb": 5,
+  "star": "HD 207129 Gaia DR3 6564091190988411520",
+  "pb": 25.66,
+  "sel_off": 0.05
+ },
+ "A002_Xb39557_X3789": {
+  "gain": 2.6457513110645907,
+  "n_tgt": 7,
+  "disc_pb": 6,
+  "star": "HD 10647",
+  "pb": 27.27,
+  "sel_off": 0.05
+ },
+ "A002_Xb3d48f_X26f7": {
+  "gain": 2.6457513110645907,
+  "n_tgt": 7,
+  "disc_pb": 6,
+  "star": "HD 10647",
+  "pb": 25.66,
+  "sel_off": 0.05
+ },
+ "A002_Xb54d65_X727": {
+  "gain": 2.82842712474619,
+  "n_tgt": 8,
+  "disc_pb": 7,
+  "star": "HD 10647",
+  "pb": 18.07,
+  "sel_off": 0.06
+ },
+ "A002_Xb2f730_X5b37": {
+  "gain": 2.4494897427831783,
+  "n_tgt": 6,
+  "disc_pb": 5,
+  "star": "HD 139664",
+  "pb": 25.66,
+  "sel_off": 0.02
+ },
+ "A002_Xb2e94e_X361a": {
+  "gain": 2.449489742783178,
+  "n_tgt": 6,
+  "disc_pb": 5,
+  "star": "HD 139664",
+  "pb": 25.66,
+  "sel_off": 0.03
+ },
+ "A002_X75bfbf_X1430": {
+  "gain": 1.255914457143621,
+  "n_tgt": 3,
+  "disc_pb": 2,
+  "star": "eta Crv",
+  "pb": 18.83,
+  "sel_off": 0.62
+ },
+ "A002_Xb25e1a_Xed74": {
+  "gain": 2.23606797749979,
+  "n_tgt": 5,
+  "disc_pb": 4,
+  "star": "WD 0407+179",
+  "pb": 27.32,
+  "sel_off": 0.35
+ },
+ "A002_Xb2f730_X9e28": {
+  "gain": 2.23606797749979,
+  "n_tgt": 5,
+  "disc_pb": 4,
+  "star": "Wolf 219",
+  "pb": 29.1,
+  "sel_off": 1.3
+ },
+ "A002_X75bfbf_Xace": {
+  "gain": 1.4131602081974055,
+  "n_tgt": 2,
+  "disc_pb": 1,
+  "star": "bet Pic",
+  "pb": 27.27,
+  "sel_off": 4.98
+ },
+ "A002_Xcdb7b8_Xfb16": {
+  "gain": 1.0033795767538163,
+  "n_tgt": 2,
+  "disc_pb": 1,
+  "star": "GJ 2006A",
+  "pb": 18.17,
+  "sel_off": 0.4
+ },
+ "A002_Xb47876_X3918": {
+  "gain": 2.0,
+  "n_tgt": 4,
+  "disc_pb": 3,
+  "star": "HD61005",
+  "pb": 28.07,
+  "sel_off": 0.04
+ }
+}
