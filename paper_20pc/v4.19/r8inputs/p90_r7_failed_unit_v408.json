@@ -1,0 +1,22 @@
+{
+    "_doc": "D32, 2026-09-27.  The one round-7 campaign unit excluded for a search-stage failure, with its cause.  The exclusion was already printed; the CAUSE was not, and it matters because the same unbounded read was armed in the production search path.  The unit produced no baseline, no ladder and no null, so it contributes zero tones to every number the campaign reports.",
+    "_provenance": "referee_r8/p90_r7/P90_R7_RESULT.md Sec. 1, from the host kernel log (`Out of memory: Killed process ... anon-rss:141333716kB ... global_oom`) and the campaign's own unit record (status `failed_search_base`, rc = -9 = SIGKILL; the campaign's run() returns 124 on its own timeout, so this was the kernel and not a timeout).  DECISIONS_R8.md D32.",
+    "unit": "A002_Xf934b1_X65fd_spw3",
+    "star": "beta Pic",
+    "band": "3",
+    "array": "12 m",
+    "search_class": "A",
+    "n_chan": 3840,
+    "n_row": 401800,
+    "status": "failed_search_base",
+    "rc": -9,
+    "anon_rss_GB": 141.3,
+    "machine_RAM_GB": 236.6,
+    "function": "closure_phase_vetting()",
+    "mechanism": "an unbounded tb.getcol('DATA') over the whole column plus a boolean-mask copy of it: 2 x 3840 x 401800 complex128 is 49.4 GB read and 49.4 GB copied, so >= 98.7 GB by construction, deterministic in n_row x n_chan rather than transient",
+    "docstring_promise": "the function's own docstring promised it could never abort the search; SIGKILL pre-empts the except clause, so it did",
+    "sibling_windows_survived": 3,
+    "sibling_note": "the three sibling windows of the same execution block survived 16-24 closure-phase calls each, being 128-channel coarse windows 30x smaller",
+    "patched": true,
+    "patch_note": "the same read in the production search path has been replaced by a chunked read, bit-identical on the same inputs, with a test that fails on the old code (referee_r8, test_closure_chunked.py); the patch is NOT in this release's frozen pipeline, which is the code the survey was run with"
+}

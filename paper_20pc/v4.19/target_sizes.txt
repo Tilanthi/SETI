@@ -1,0 +1,14 @@
+eirp_context.pdf                   792 x 331 pt  aspect 2.391
+pipeline_schematic.pdf             792 x 389 pt  aspect 2.037
+completeness.pdf                   504 x 540 pt  aspect 0.933
+bpic_velocity_space.pdf            468 x 331 pt  aspect 1.413
+eirp_continuum_vs_distance.pdf     792 x 310 pt  aspect 2.558
+freq_coverage.pdf                  1044 x 295 pt  aspect 3.537
+eirp_vs_linewidth.pdf              605 x 346 pt  aspect 1.750
+selection.pdf                      677 x 475 pt  aspect 1.424
+symcdf.pdf                         331 x 259 pt  aspect 1.278
+aumic_control_maxima.pdf           518 x 331 pt  aspect 1.565
+eirp_vs_frequency.pdf              612 x 331 pt  aspect 1.848
+star_coverage.pdf                  518 x 475 pt  aspect 1.091
+sample_distance_distribution.pdf   468 x 302 pt  aspect 1.548
+drift_acceleration.pdf             547 x 346 pt  aspect 1.583

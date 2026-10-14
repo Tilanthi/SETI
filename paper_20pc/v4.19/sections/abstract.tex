@@ -1,0 +1,235 @@
+\begin{abstract}
+Above 30\,GHz, narrowband searches of nearby stars have reached one spectral
+line.
+We uniformly search \NWinA{} fine-channel ALMA archive windows toward
+\NSysClassA{} systems, spanning \CvUnionA\,GHz of union bandwidth, for an
+unresolved carrier drifting linearly in the
+stellar frame, plus \NWinB{} coarser ones without drift discrimination.
+Crossings are tested against catalogued transitions at the star's velocity,
+then in later blocks.
+The median system recovers nine injections in ten at an estimated
+$\EirpNinetySysMedA$\,W, for a carrier narrower than the instrumental channel
+drifting below \DriftCeilLo\,nHz, \AccelSheikhPct{} per cent of the
+recommended ceiling. They carry no atmospheric decorrelation, so these limits
+are optimistic by it.
+No confirmed carrier is found. Of \EvNCrossRaw{} crossings, \MkAttr{} are
+attributed and \MkUnattr{} are not, the \PrFlagXrossWord{} coarse-window ones
+from one block failing a quality criterion. Attribution is not identification:
+\LnAttrCoincWord{} rest on frequency coincidence alone.
+None of the unattributed crossings returned to its predicted
+cell, including \PrRankClause. That excludes a carrier whose stellar-frame frequency returns
+to within $\pm\RqDvMed$\,km\,s$^{-1}$ and radiates through both observations,
+not a persistent transmitter of any kind. For \RcNPowerLoTrig{} the repeats
+are too shallow for that test at the trigger amplitude.
+The remainder is consistent with chance at the control positions, and does not
+exclude a smaller added population. A calibration residual could mimic a
+carrier in \CxNAdmit{} windows and is measured to act in none.
+Line emission, not interference, explains the strongest quality-passing
+crossings. What limits the search is inherited coverage, not depth:
+\ZcNoRepSys{} systems have no confirmation epoch.
+\end{abstract}
+
+\keywords{extraterrestrial intelligence, radio lines: stars, submillimetre: stars, surveys, astrobiology}
+
+%% One paragraph, in the conventional order: aim; data (windows, systems);
+%% method (de-drifted matched filter, attribution, recurrence); sensitivity
+%% (the median EIRP_90 and the drift ceiling); result (crossings, attributed,
+%% unattributed, none returning, and the one instrumental mechanism that
+%% could have produced one); what limits the search, which is the coverage
+%% the archive supplies and not depth -- the systems with no repeat measure
+%% that, and it is not a claim that sensitivity is adequate.
+%% Nothing else belongs here, and nothing here may be the only place a
+%% number appears.
+%%
+%% ★★★★ THE ONLY EXTERNAL LIMIT ON THIS PARAGRAPH IS arXiv's 1920
+%% CHARACTERS.  The paper is posted on the arXiv and published by the Open
+%% Journal of Astrophysics as an overlay on it, so arXiv's metadata rule is
+%% the one that can refuse the submission: "abstracts longer than 1920
+%% characters will not be accepted" (info.arxiv.org/help/prep.html, Abstract
+%% field, re-read 2026-10-13).  The journal itself sets NO abstract limit of
+%% any kind -- the word "word" does not occur in its author instructions.
+%% This paragraph is well inside both: the counts are measured on the built
+%% page and are reported by the gates named below.  So CHARACTERS are the
+%% budget and a word count is a readability guide; nothing here is to be cut
+%% to reach a word total, and nothing that was cut to reach one is to be
+%% restored without a reason of its own.
+%%
+%% A COMMENT CLAIMING A COUNT IS NOT A COUNT.  An earlier one here said 245
+%% words over a paragraph of 253.  Every count is measured on the built page:
+%% `abswords.py` (words, a house alarm), `abschars.py` (characters, the arXiv
+%% limit), `abstract_limit.py` (the same limit by an independent source route,
+%% no shared code) and `absmeta.py` (the plain-ASCII block that is actually
+%% pasted into the arXiv form, which is a DIFFERENT string and a different
+%% length again).  Re-measure after any edit; do not trust this paragraph of
+%% prose.
+%% ★ AND THE WORD COUNT OF THIS PARAGRAPH IS NOT STABLE TO THE WORD.  The
+%% median-system power is set as $1.5\times10^{15}$, and the math space on
+%% either side of the multiplication sign is stretchable glue: in a tightly
+%% set line TeX shrinks it to nothing, and both PDF text extractors then read
+%% "1.5x1015" as ONE token instead of three.  The same source therefore
+%% measures one word more or less depending on where the line happens to
+%% break.  Neither reading is an error, so do not be surprised when the
+%% number moves by one for an edit made somewhere else -- and never let a
+%% measured count sit exactly on a ceiling, since the ceiling is then met by
+%% a line break and not by the text.
+%%
+%% ONE THING PER SENTENCE.  The paragraph is deliberately written as short
+%% declarative sentences rather than clauses strung on semicolons: the
+%% standing complaint about it was never its length but that it "reads like a
+%% report of small numerical details found".  A chain of five subordinate
+%% clauses is that texture, and a sentence a reader can follow once, aloud,
+%% is the fix.  So resist re-joining these sentences to recover words or
+%% characters -- neither limit is near, and a connective usually costs a word
+%% rather than saving one.
+%%
+%% A PARAMETER IS NOT A RESULT, AND THE PARAMETERS BELONG IN THE BODY.
+%% Deliberately NOT here, each stated where it is used: the fine-channel
+%% width range (\ChanLoA--\ChanHiA, in S6.1 and Appendix F), the number of
+%% disjoint intervals making up the union (\CovNIslands, in S1, S6.1 and
+%% conclusion 2), the size of the decorrelation bias (\SensDecorPct,
+%% \SensDecorHiPct above \SensDecorHiGHz, in S5.1 and conclusion 3 -- the
+%% abstract states that the limits exclude it and are optimistic by it, which
+%% is what R2-8(4) asks for), the mask's cost in bandwidth (\MkMaskAPct, in
+%% S5.3, S6.4 and Appendix C) and the execution-block count (\NEB, in S3,
+%% conclusion 2 and the Acknowledgements).  None of them is orphaned by being
+%% absent here -- check with `macrosweep.py` before dropping any other,
+%% because a macro cited nowhere is retired by `retire_macros.py` and that
+%% has broken a build.
+%%
+%% ★ FOUR MEASURED STATEMENTS WERE SPENT TO REACH A 250-WORD CEILING THAT NO
+%% LONGER APPLIES, AND NONE OF THEM IS WRONG -- THEY ARE SIMPLY NOT HERE.
+%% Each is a point the reports asked for, each survives in the body, and each
+%% would cost the words shown if an editor wants it back (measured one at a
+%% time, not estimated).  ★★ TWO FURTHER CASUALTIES WERE NOT A CHOICE AT ALL and are
+%% back: the words "union bandwidth", and the rank clause.  Both are held by
+%% driven gates -- `prose_v412` P7 and P4 -- and the compression left the
+%% BANDWIDTH MACRO in place while removing the label, which is the one
+%% combination P7 refuses, and dropped \PrRankClause out of the negative
+%% sentence it is an appositive of, which P4 refuses.  Neither was in the list
+%% below.  A measured statement may be spent deliberately; a gated one may not
+%% be spent by accident.
+%%   +3  "in disjoint intervals" after the union bandwidth
+%%       -- R1-3.1's spectral extent.  Still in S1, S6.1 and conclusion 2.
+%%   +10 "while \MkAttrRecur{} attributed to circumstellar or foreground CO
+%%       do recur" -- the positive control for the recurrence stage.  Still
+%%       in S5.6 and the line-mask appendix.
+%%   +10 "\TjNOpen{} pairs of crossings are not separable from one carrier"
+%%       -- the second half of the open-pair disclosure.  The first half, the
+%%       words "returned to its predicted cell", IS here and is the part the
+%%       objection was actually about; the count is in conclusion 5 and S5.6.
+%%   +4  "toward tens of stars" in the opening sentence -- the sample size of
+%%       the prior record.  Still in conclusion 1 and S2.
+%% Do not restore one without taking the same number of words out somewhere
+%% else, and do not take them out of a qualification: at 250 the paragraph is
+%% exactly full.
+%%
+%% THREE NUMBERS HERE LOOK LIKE PARAMETERS AND ARE PINNED BY GATES THAT
+%% ENCODE REFEREE REQUIREMENTS.  \DriftCeilLo and \AccelSheikhPct are
+%% required in this file by `prosegate_r15.py` S6 (R1-3.2, M9: the drift
+%% reach must be stated in the literature's units and as a fraction of the
+%% recommendation), and \RqDvMed by `prose_v412.py` P4 (R2-1: the exclusion
+%% is worthless without the width of the interval it covers).  Deleting any
+%% of the three to shorten the paragraph fails the build, and it would also
+%% remove the qualification that makes the claim honest.
+%% ★ `prosegate_r15.py` S6 reads this file WITHOUT stripping comments, so
+%% none of the strings it pins may be written in a comment here: a gate that
+%% a comment can satisfy is a gate that cannot fail.  That is why the clause
+%% is paraphrased in this block and never quoted.
+%%
+%% THE SENSITIVITY STATEMENT IS CONDITIONAL IN THREE WAYS AND ALL THREE ARE
+%% LOAD BEARING.  It is AN ESTIMATE -- the best window of \SmcNEstSys{} of
+%% the \NSysClassA{} systems was never itself injected into, so the two words
+%% in front of the figure answer a referee point and may not be dropped for
+%% length.  It holds for a carrier narrower than the instrumental channel --
+%% the channel widths here span two orders of magnitude, so a carrier spread
+%% over many channels meets a different threshold entirely.  And the drift
+%% reach is a ceiling, stated in the literature's own units (one Hz per
+%% second per GHz is one nanohertz) and as a fraction of the recommendation,
+%% so that a reader can see how restricted it is.
+%% \DriftCeilLo is round 13's and is NOT republished at round 590; round 590
+%% publishes only the comparison, and asserts that recomputing the ceiling
+%% from the catalogue reproduces round 13 to the printed digit.
+%%
+%% ONLY THE HEADLINE FIGURES OF THE EXPERIMENT ARE SET IN TYPE HERE:
+%% \NWinA and \NSysClassA (its size), \NWinB (the supplementary search's),
+%% \EirpNinetySysMedA (its depth), and the crossing partition.
+%%
+%% THE BLOCK COUNT AND THE SYSTEM COUNT ARE TWO STATEMENTS AND NOT ONE, AND
+%% THAT IS WHY \NEB IS NOT HERE.  The \NEB{} blocks of the census are toward
+%% all \NSystems{} surveyed systems; the fine-channel windows they yield are
+%% toward the \NSysClassA{} of the carrier experiment.  Writing "\NEB{}
+%% blocks toward \NSysClassA{} systems" joins two true counts into a false
+%% one, and a referee read it that way.  The two counts are also within two
+%% of each other, so a reader meets "\NEB" and "\NWinA" in one breath and has
+%% no way to tell they count different things.  The scale of the search is in
+%% windows and systems; the archive is named in words; the block count is in
+%% S3 and conclusion 2, where it has room to be defined.  If it comes back,
+%% it may not share a clause with \NWinA or \NSysClassA.
+%% Never write "40 of 60" here either.
+%%
+%% \ZcNoRepSys{} is the count of systems for which confirmation is
+%% IMPOSSIBLE -- no later block at a frequency the first one covered -- and
+%% it is the only confirmation figure this paragraph may quote.
+%% \ScSysNoConf{} and \ScSysIndep{} count later blocks at ANY frequency, so
+%% a repeat that shares no frequency confirms nothing and those two are
+%% ledger counts; counts_r15.py A9 fails the build if either reaches the
+%% prose.  The frequency extent is in the TITLE immediately above, so this
+%% paragraph does not repeat the band edges.  \PrFlagXrossWord and
+%% \PrRankClause are generated English, not figures, and neither may open a
+%% sentence.  Everything else is in the body: the spread of EIRP_90 across
+%% systems, the union over which a repeat exists, the attributed share by
+%% species, the control-ring size, and the coarse search's lower edge, which
+%% is conclusion 2's.
+%%
+%% Five things this paragraph must keep saying, each gated by prosegate_r15.py
+%% or prose_v412.py: the crossing total is never given without the subset in the
+%% block that fails the quality criterion (P9, and Referee 1 asks for that
+%% disclosure here explicitly); the recurrence result names the class of
+%% transmitter it excludes, now with the width of the frequency interval the
+%% test permits, and claims no generic one (P4); the spatial rank is named
+%% only inside the sentence that says nothing returned, never as a result of
+%% its own (P4); the chance comparison is stated as a consistency, with no
+%% floor and no second construction (P10); and a bandwidth, IF ONE IS NAMED
+%% HERE AT ALL, is labelled a union bandwidth (P7).
+%%
+%% AND SEVEN MORE, GATED BY `absreq_r17.py`, WHICH EXISTS BECAUSE FOUR OF
+%% THEM WERE GATED BY NOTHING AT ALL.  P4, P7, P9, P10 and S6 between them
+%% protect the recurrence class, the bandwidth label, the flagged subset, the
+%% chance wording and the two sensitivity conditions.  Nothing protected the
+%% count of crossings whose repeats cannot test them, the statement that the
+%% limits exclude atmospheric decorrelation, the dependence of the chance
+%% comparison on the reserved events, or the admissible-but-not-acting
+%% calibration residual -- every one of them a qualification that makes a
+%% claim weaker, which is exactly what an editor under a budget reaches for
+%% first.  `absreq_r17.py` requires all seven, keys each on the macro that
+%% carries it rather than on a sentence, and is driven to fail on each.
+%% If a measurement ever makes one of these statements wrong, change the
+%% statement AND the clause together -- a pinned phrase outliving the
+%% measurement behind it is how P4 came to forbid the wording R2-1 required.
+%%
+%% ★ ONE MORE QUALIFICATION IS REQUIRED HERE AND IS GATED BY NOTHING: that a
+%% catalogued coincidence is an ATTRIBUTION and not an IDENTIFICATION, with
+%% \LnAttrCoincWord{} of the \MkAttr{} resting on the frequency coincidence
+%% alone.  It is one sentence, it costs ten words, and it is the only place
+%% in the front matter where the evidential standard of the attributions is
+%% stated.  If `absreq` gains an eighth clause, this is the one to add.
+%%
+%% THE RECURRENCE RESULT IS NOT A TEST OF EVERY CROSSING, AND THE NUMBER
+%% HERE IS \RcNPowerLoTrig AND NOT ONE.  The power to recover a returning
+%% carrier is evaluated at the trigger amplitude, not at the discovery
+%% amplitude, which selection biases high, so \RcNPowerLoTrig{} crossings
+%% are untested rather than excluded -- one of the two that lead their own
+%% control fields among them.  Quoting only that one event conflates "no
+%% second-epoch detection" with "a second epoch able to reject
+%% persistence", so the count stays and the clause may not be shortened to
+%% a single case to recover a word.
+%%
+%% WHAT THE RECURRENCE TEST CONSTRAINS IS A RETURN AND NOT A STABILITY.
+%% The predicted cell is the crossing's own stellar-frame frequency
+%% re-registered at the repeat epoch, so the class ruled out is a carrier
+%% that comes back to within half a channel of it -- stable over the gap or
+%% periodic at matched phase.  The drifts actually fitted to these events
+%% carry a carrier out of that cell in seconds, so "holding its
+%% stellar-frame frequency" is the one description the data do not support
+%% and must not reappear here.
+%% Measure before adding anything.

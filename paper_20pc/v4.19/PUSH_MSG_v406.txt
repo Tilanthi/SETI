@@ -1,0 +1,76 @@
+paper v4.06: a flat 5 sigma is not a uniform criterion; the multi-epoch stack; P90^sel through localisation
+
+D16. Cells per window span 4.8 decades (112 to 6.87e6), so a flat 5 sigma is a
+threshold and not a false-alarm rate: a uniform per-window 1 per cent needs
+3.52-15.86 (median 4.00) and a survey-wide 1 per cent needs 4.97-22.19
+(median 5.53). Summed window by window, 27.4 (ideal null) to 37.6 (measured
+scale) of the 51 crossings are EXPECTED by chance at a flat 5 sigma, with three
+independent routes bracketing Class A at 33.5/36.5/41.1 against 50 observed.
+eta Crv's T* = 5.0059 needs 5.157 / 6.420 in its own window and is below both.
+s_w (two independent routes), n_cells, N_ind and both thresholds are published
+per window as catalogue columns. This explains the crossing population without
+any artefact hypothesis and leaves the null result intact, because the rank
+screen and recurrence are relative to the same window.
+
+D16's measured NULLS, stated as nulls: morphology-for-threshold x1.16 (16 per
+cent worse; false-alarm log-slope -3.84/sigma, and Hanning already correlates
+channels at rho = 2/3), with its falsifier - the same cuts reject 20-channel
+lines 111/111 and 10 per cent-duty transients 107/107. Grid-quantisation
+recovery 0.997 +- 0.003, and the loss is ALREADY inside the measured P90^sel
+because the campaigns draw drift continuously, so nobody corrects twice. The
+one unbooked gain, measured and NOT applied: a 3-channel matched filter,
+x1.08 fixed / x1.17 offset-matched, for the n=1 population only.
+
+D17. The stellar-frame multi-epoch stack as a ~1-page subsection: 394 groups,
+78 stars, 1,454 h. Registration validated on real lines first (19.26 -> 0.798
+channels; beta Pic CO(2-1) agreeing to 0.087 km/s across a x16 channel change).
+The gain is sqrt(N_eff), not sqrt(N): realised/sqrt(N_eff) = 0.991, median
+N_eff/N = 0.67, and HD 161868 stacks 12 epochs for a gain of 0.94. Limits
+deepen x1.39 median, x1.21 carrier-equivalent; Proxima Centauri reaches
+5.15e12 W over 84 h and 6.3 yr. Two survivors, both beta Pic CO in two bands
+agreeing to 0.14 km/s - the positive control passing - and zero unattributed.
+The reflex restriction travels with it: a 488 kHz channel is 0.635 km/s, so
++-30 km/s de-registers a transmitter by 47 channels. The adopted generator's
+"47,000" was wrong and is now computed and asserted to be tens of channels.
+Its typed persistence-list keys were also wrong: three of nine misspelt, so the
+first run tested six stars while claiming nine. Corrected, the honest result is
+eight of nine at Z = 3.26-4.43 with 0 of 9 above their own controls, and
+HD 285968 at Z = 12.89 rejected because its OWN controls reach 14.19 - the
+foreground line is extended.
+
+D18. C_resp keyed on the nearest modelled FWHM instead of a binary "!= 2.0".
+One window of 1655 moves: 51 Eri X3e24 at 1953.1 kHz, C_resp 1.333 -> 1.057,
+EIRP overstated x1.26 (1.01 dB) in the CONSERVATIVE direction, 0 crossings
+affected, no published C_resp macro moves. A flag with too few states is a
+check that cannot fail; selftest reinstates the shipped binary flag and
+requires the new assertion to fire. The delivered channel covariance is added
+as a SIXTH validation of the response model and the only one sensitive to the
+averaging factor: 0.667/0.300/0.115 predicted, 0.628-0.674/0.267-0.302/0.105
+measured, 18 of 18 windows confirming their own key.
+
+D14. P90^sel is now measured through trigger -> visibility localisation, not
+through the rank gate, which A2 demoted to a consistency check. Class A
+5.70 -> 2.88 x P_trig against 2.87 for the trigger alone: localisation costs
+0.2 per cent. The per-window median falls 5.3e15 -> 2.7e15 W, the per-system
+median 2.9e15 -> 1.5e15 W, systems reaching 1e15 W 14 -> 25, and CWTFM
+2.5e4 -> 1.3e4; every one through the macros. The rank-gated value is retained
+and labelled superseded. And the chance expectation is RE-DERIVED, not
+relabelled: \ClustStageMean = 0.89 is conditioned on trigger AND rank, while
+the chain the paper states gives 36.5 x 0.985 x 0.96 = 34.5 expected
+unattributed Class A crossings against 35 observed - a factor 39 larger, and it
+accounts for the population outright.
+
+Residue: build_ranked_master40pc.py no longer emits a blank is_exo_host and
+pins the 96 it inherits; Sec. 6.5's habitable-zone list is generated, and the
+assertion immediately caught that "GJ 273" is BD05 1668 in the catalogue and
+that two of the six carry crossings; the occupancy extract's resolution class
+is derived from the channel width, relabelling 7 rows the binary assumption had
+filed as coarse; half-up rounding is shared and driven in both directions;
+eq:cwtfmhet is now referenced.
+
+Gates: pdflatex 0/0/0/0, roundcollide 89/89, macrosyn 0, consistency 0,
+prosenum 0, macroleak 0, intsweep 81/81, audit_numbers 49 PASS / 0 FAIL,
+reproducer 22/0, selftest_v403 20, selftest_v404 46/46, selftest_v405 60/60,
+selftest_v406 65/65 (new), clean regeneration 134/134 byte-identical.
+52 pp, main text 19.69 pp - the 15-page cap is deliberately broken, per the
+standing instruction that page length is deferred until the science is settled.

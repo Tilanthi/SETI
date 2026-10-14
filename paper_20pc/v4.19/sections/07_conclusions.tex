@@ -1,0 +1,91 @@
+\section{Conclusions}
+\label{sec:conclusions}
+
+\begin{enumerate}[leftmargin=1.6em,itemsep=4pt,topsep=4pt,parsep=0pt]
+
+\item \emph{What is new.} In the millimetre band the record for nearby stars
+is two measurements of one spectral line: \citet{Steffes1994} and
+\citet{Mauersberger1996} each covered no more than \SbPriorBandMHz\,MHz at
+narrowband resolution around the \SbPriorFreqGHz\,GHz positronium line, with
+no search over drift rate and
+no use of their repeat visits as a test of persistence. This survey covers at
+least \SbPriorRatio{} times that bandwidth, searches a grid of drift rates,
+and asks of every event whether it returns (\S\ref{sec:background}).
+
+\item \emph{What was searched.} The carrier search is \NWinA{} fine-channel
+windows toward \NSysClassA{} systems within 40\,pc, covering \CvUnionA\,GHz
+of unique frequency in \CovNIslands{} disjoint intervals. A coarse-channel
+search for a steady unresolved excess adds \NWinB{} windows toward
+\PrSysClassB{} systems. Both come from one pass through \NEB{} public ALMA
+execution blocks and together span \SurvFreqLo--\SurvFreqHi\,GHz
+(\S\ref{sec:sample}).
+
+\item \emph{How deep.} The median system's best window would have recovered
+a carrier of $\EirpNinetySysMedA$\,W nine times in ten, and \NSysEfifteen{}
+systems reach $10^{15}$\,W. That figure is an estimate rather than a
+measurement for \SmcNEstSys{} of the \NSysClassA{} systems, whose best window
+was not itself injected into. Every limit here is also nominal in one
+respect: it leaves out atmospheric decorrelation, which a real carrier
+suffers and an injected one does not (\S\ref{sec:pninetysel}).
+
+\item \emph{What was found.} The search produced \EvNCrossRaw{} threshold
+crossings: \CkNCrossCenA{} Class~A in the primary census, \PrFlagXrossWord{}
+Class~B, and \CeNTailCrossWord{} Class~A in archival-tail blocks. The
+\PrFlagXrossWord{} Class~B crossings are the whole of that search's crossing
+population and all come from the single execution block that fails the
+data-quality criterion of Appendix~\ref{sec:blockquality}, so the
+quality-passing data hold \EvNCrossQp{} crossings, all of them from the
+carrier search. \EvNAttrQp{} of those are attributed to
+a catalogued molecular transition at the star's own velocity and
+\EvNUnattrQp{} are not.
+\LnAttrSupp{} of the \EvNAttrQp{} attributions carry evidence beyond the
+frequency match -- a second transition of the same species, catalogued gas on
+the sightline, or the crossing's own recurrence -- while \LnAttrCoincWord{}
+rest on the coincidence alone and are only consistent with molecular
+emission. The unattributed count is what these fields' own control positions
+predict, \CeLo--\CeHi{} expected against the \CeObs{} found, a width
+dominated by the step from control positions to the star. That is agreement
+with a null calibrated on these data and not a demonstration that the
+crossings are noise: an added population of as many as \CeAddBlind{} events
+would sit inside the same range unremarked (\S\ref{sec:technosearch},
+\S\ref{sec:trigunif}).
+
+\item \emph{What the repeat observations exclude.} Every unattributed crossing
+with later coverage was re-read at the frequency and drift its own discovery
+predicts, in the star's rest frame, and none came back: the largest statistic
+at any predicted cell is \RcTMax{} against a trigger of \StageNullTrig, while
+the same reading recovers \MkAttrRecur{} of the \MkAttrTested{}
+line-attributed crossings it was tested on. What
+that excludes is a carrier returning to that one cell and radiating through
+both observations -- not a persistent transmitter of any kind. Of the
+\TjNPair{} pairs of crossings toward one star, only \TjNExcl{} can be shown
+not to be a single drifting carrier; the other \TjNOpen{} are \emph{open},
+which is neither a confirmation nor an exclusion
+(\S\ref{sec:etacrv}).
+
+\item \emph{What could have been confirmed at all.} A search limit and a
+confirmation limit are different statements. Of the \NSysClassA{} systems the
+carrier search covered, \ZcConfSysDay{} were observed again more than a day later
+at a frequency the first block covered -- counting every
+block the recurrence test reads, not the census alone -- and \ZcConfSysYr{}
+more than a year later. For the remaining \ZcNoRepSys{} no repeat exists, so
+no transmitted power would have made a confirmation possible
+(\S\ref{sec:confirmability}).
+
+\item \emph{Stacking the epochs.} Combining each star's observations in its
+own rest frame deepens the flux limit by a median factor \SyStkGainMed. The
+deepest result is Proxima Centauri's: $\SzProxEirpCensus$\,W from the census
+blocks and $\StkProxEirpCal$\,W once the rest of the archive is added, in
+coarse \ChanBModeMHz\,MHz channels, so it bounds a steady unresolved excess
+and not a drifting carrier (\S\ref{sec:stack}).
+
+\item \emph{What this does not constrain.} These limits hold only inside the
+domain actually searched. The drift grid stops at \DriftCeilLo\,nHz,
+\AccelSheikhPct{} per cent of the ceiling recommended for a general carrier
+search \citep{Sheikh2019}, so an unbound transmitter, one on a rapidly
+rotating planet, or one whose orbital and rotational accelerations together
+exceed that is not constrained here at all (\S\ref{sec:excludes}). What
+transfers beyond this archive is the obstacle: channelisation chosen by other
+observers, and not collecting area, decides which search is possible.
+
+\end{enumerate}

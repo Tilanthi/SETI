@@ -1,0 +1,45 @@
+{
+ "A002_X75bfbf_X1430": {
+  "freq": 345.540374,
+  "window": [
+   344.971526,
+   346.696624
+  ],
+  "chanw_Hz": 488281.25,
+  "n_overlap_windows": 83,
+  "n_other_stars": 31,
+  "n_other_blocks": 78,
+  "n_other_crossings": 10,
+  "n_same_channel_other_stars": 0,
+  "same_channel": [],
+  "frac_in_window": 0.329748222999506,
+  "edge_channels": 1165.0007040000057,
+  "in_94GHz_EESS": false
+ },
+ "A002_X122b6ff_X1041e": {
+  "freq": 357.281464,
+  "window": [
+   356.275605,
+   358.000702
+  ],
+  "chanw_Hz": 488281.25,
+  "n_overlap_windows": 10,
+  "n_other_stars": 3,
+  "n_other_blocks": 9,
+  "n_other_crossings": 0,
+  "n_same_channel_other_stars": 0,
+  "same_channel": [],
+  "frac_in_window": 0.5830738793239107,
+  "edge_channels": 1472.9994239999214,
+  "in_94GHz_EESS": false
+ },
+ "_clustering": {
+  "multiplicity": {
+   "A002_X75bfbf_X1430": 1,
+   "A002_X122b6ff_X1041e": 1
+  },
+  "survey_max": 4,
+  "null_max_mean": 2.4405,
+  "null_max_p95": 3.0
+ }
+}

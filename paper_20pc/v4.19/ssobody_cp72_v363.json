@@ -1,0 +1,100 @@
+{
+ "ra_deg": 340.70389177422,
+ "dec_deg": -71.70588885193,
+ "eb": "A002_Xff0235_X4a6d",
+ "band": 7,
+ "flo_GHz": 344.252656,
+ "theta_pb_arcsec": 18.216,
+ "queries": [
+  {
+   "mjd": 59854.017628,
+   "utc": "2022-10-02T00:25:23.059",
+   "radius_arcsec": 30,
+   "n": 0,
+   "nearest": [],
+   "status": "ok"
+  },
+  {
+   "mjd": 59854.017628,
+   "utc": "2022-10-02T00:25:23.059",
+   "radius_arcsec": 300,
+   "n": 0,
+   "nearest": [],
+   "status": "ok"
+  },
+  {
+   "mjd": 59854.017628,
+   "utc": "2022-10-02T00:25:23.059",
+   "radius_arcsec": 1800,
+   "n": 0,
+   "nearest": [],
+   "status": "ok"
+  },
+  {
+   "mjd": 59854.027029,
+   "utc": "2022-10-02T00:38:55.306",
+   "radius_arcsec": 30,
+   "n": 0,
+   "nearest": [],
+   "status": "ok"
+  },
+  {
+   "mjd": 59854.027029,
+   "utc": "2022-10-02T00:38:55.306",
+   "radius_arcsec": 300,
+   "n": 0,
+   "nearest": [],
+   "status": "500 Server Error: Internal Server Error for url: https://ssp.imcce.fr/webservices/skybot/a"
+  },
+  {
+   "mjd": 59854.027029,
+   "utc": "2022-10-02T00:38:55.306",
+   "radius_arcsec": 1800,
+   "n": 0,
+   "nearest": [],
+   "status": "ok"
+  },
+  {
+   "mjd": 59854.027784,
+   "utc": "2022-10-02T00:40:00.538",
+   "radius_arcsec": 30,
+   "n": 0,
+   "nearest": [],
+   "status": "ok"
+  },
+  {
+   "mjd": 59854.027784,
+   "utc": "2022-10-02T00:40:00.538",
+   "radius_arcsec": 300,
+   "n": 0,
+   "nearest": [],
+   "status": "ok"
+  },
+  {
+   "mjd": 59854.027784,
+   "utc": "2022-10-02T00:40:00.538",
+   "radius_arcsec": 1800,
+   "n": 0,
+   "nearest": [],
+   "status": "ok"
+  }
+ ],
+ "ecl_lat_deg": -56.083380568107735,
+ "body_seps_deg": {
+  "moon": 77.10289452028758,
+  "sun": 111.1466039981076,
+  "jupiter": 73.60289708713489,
+  "saturn": 57.41241462618035,
+  "mars": 93.8058323892544,
+  "venus": 112.36934372991179,
+  "mercury": 98.98251442973239,
+  "uranus": 97.5175602602523,
+  "neptune": 68.7353680164258
+ },
+ "nearest_body": "Saturn",
+ "nearest_body_sep_deg": 57.41241462618035,
+ "control_min": 118,
+ "control_max": 444,
+ "control_note": "positive control: SkyBoT cone searches of the same radius and epoch centred on the ecliptic at longitudes 90/180/270 deg return 118/444/189 known objects, so the null return at the CP-72 2713 field is a measurement and not a failed query",
+ "epoch_utc": "2022-10-02T00:25-00:40"
+}

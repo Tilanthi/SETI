@@ -1,0 +1,323 @@
+%% APPENDIX D -- the false-alarm expectation, the control ensemble, and the
+%% execution-block quality criterion.  Owner: r14-chance.  Carries
+%% \label{app:falsealarm} (04_method.tex, 08_backmatter.tex) and
+%% \label{sec:blockquality} (04_method.tex).
+\section{The false-alarm expectation and the control ensemble}
+\label{app:falsealarm}
+
+This appendix gives the chance expectation for the unattributed crossings,
+what it is conditioned on, and what the control ensemble calibrating it can
+support.
+
+\subsection{What the expectation is conditioned on}
+
+\emph{One attribution set serves both sides of the comparison}, the set of
+\S\ref{sec:technosearch}: the mask of Appendix~\ref{app:linemask} within
+$\pm\MaskHalfKms$\,km\,s$^{-1}$ in the star's own rest frame, sulphur monoxide
+excluded. So the \MkNSODecide{} sulphur monoxide coincidences are unattributed
+crossings, and a control maximum on one of those transitions is an
+unattributed exceedance. A systemic velocity is measured for the stars of
+\CeNVsys{} of the census windows and the others are taken at rest, which moves
+the masked share by \CeVsysSensPct{} points.
+
+The expectation is built from the control positions, the only empirical null
+the data provide, and each Class~A window contributes two quantities
+measured on itself. The fraction of its own \NCtrl{} control positions that
+reaches the trigger is the probability that a position in that field does so
+-- no cell count enters it and no form is assumed for the tail -- and
+summed over the windows \CeExpTrig{} are expected to trigger by chance. How
+many of those would be attributed is measured on the channels the control
+maxima land on, which the retained spectra record: \CeNExcAttr{} of
+\CeNExc{} exceedances fall inside the mask, and the attribution therefore
+takes \CeMaskPct{} per cent of the expectation. A maximum free to land
+anywhere on its own grid would take \CeUnifPct{} per cent, the median window
+offering \CeMaskPctMed{} per cent of its channels; the difference is that
+\CeNFullMask{} narrow line-tuned windows lie wholly inside the mask and
+their fields, which hold real emission, are where a control position most
+often triggers, so a uniform landing would under-attribute them and leave
+the unattributed expectation too high. What is
+left is \CeExp{} expected unattributed Class~A crossings against \CeObs{}
+observed.
+
+Both sides run over the \CeNWin{} Class~A windows of the primary census, so
+the expectation is a sum over rows and nothing is carried at an assumed rate.
+The same comparison holds system by system, each system's expectation formed
+from its own control positions: \MtNSysLowP{} of the \MtNSysChance{} systems
+fall below one chance in twenty, against \MtNSysLowPExp{} expected. The system
+holding the most crossings is \MtTopStar, toward which lie
+\MtTopStarNCross{} of the \EvNCrossRaw{} crossings and \MtTopStarNUnattr{} of
+the unattributed ones. Over its \MtTopSysNWin{} Class~A windows it gives
+\MtTopSysObs{} against \MtTopSysExp{} expected. No system departs from its
+own controls by more than chance allows.
+A further \CeNWinTail{} Class~A windows arrived with the archival tail and lie
+outside it, together with the \CeNTailCrossWord{} unattributed crossings
+toward \CeTailStar{} they hold, which are reported beside the comparison and
+enter neither side of it. No window holds more than one primary crossing, so
+both sides count windows; the weaker cells behind those maxima are counted at
+their own grain in \S\ref{sec:technosearch}.
+
+The one assumption the searched data cannot test is that a star behaves like
+a control position in its own field, and two samples measure it. In the census
+the star carries \CkRatioLo--\CkRatioHi{} times as many above-threshold cells
+as a control position, at every level from $T=\CkLadderLo$ up to the trigger,
+where it is \CeTrAt{} -- tens of thousands of cells, of which the crossings
+being counted are a small minority at every level below the trigger. That is
+the step applied to the sum above, giving \CeExpX{} against the \CeObs{}
+observed. The reserved blocks
+measure the same quantity out of sample and agree with it. Their stars reach
+the trigger in \StHoObs{} of \StHoNFine{} fine-channel windows where the
+control positions of those same windows predict \StHoExpFine, a ratio of
+\StHoRatio{} that lies inside the census range, with no two of the events in
+one block. So few events fix the ratio only to \StHoLo--\StHoHi, so they
+confirm the step and cannot sharpen it. In the \StHoNCoarse{} coarse-channel
+reserved windows no star reaches the trigger, against \StHoExpCoarse{}
+predicted. The same displacement is read in the body of the distribution,
+where the stellar rank sits below one half (Appendix~\ref{app:radius}), and it
+runs the same way.
+
+The \CeLo--\CeHi{} quoted beside the expectation is what \CeNBoot{}
+resamplings allow. Each window's rate is redrawn from its own \NCtrl{} probes
+and the attributed share from its own \CeNExc{} exceedances, the execution
+blocks are resampled because windows share them and are not independent
+trials, and the step to the star is drawn across the range above. The first
+three terms alone
+give \CeLoNull--\CeHiNull, and the observed \CeObs{} lies outside that and
+inside \CeLo--\CeHi: the step is not a refinement of the expectation but the
+term that reconciles it with the count. That is a range on a rate, and a count
+drawn from it scatters as well, so the number of unattributed crossings chance
+alone would deliver runs from \CeCntLo{} to \CeCntHi: an added population of
+as many as \CeAddBlind{} events would be absorbed by that width, and that is
+the limit on what the comparison can exclude. Read at the grain of the
+individual cell rather than the window, the same accounting gives \CkExp{}
+expected from the same \CkNCtrlPos{} control positions, \CkExpSec{} of them
+beside a window's largest. Against that it finds \CkNObs{} and
+\CkNSecUnattr, with \CkLo--\CkHi{} allowed on the same resampling.
+
+Every Class~B crossing in the survey comes from the one execution block of
+\S\ref{sec:blockquality}, and over both classes together \CeExpSurv{} are
+expected against the same \CeObs{} observed: a coarse single pointing holds
+too few cells for its own field to reach the trigger by chance, and only
+\NCtrlWinObs{} of the \NWindows{} windows hold a control position above
+$T_{\rm trig}=\StageNullTrig$ at all. The Class~A comparison is the survey's.
+
+\emph{The statistic is always the one measured over the window's whole field.}
+\StNRep{} windows admit integrations inside the primary beam that a narrower
+field would discard, recovering a median \StRepOnsrc{} times the on-source
+time and moving the statistic by a median \StRepDT; the whole-field value is
+the one adopted, on \StRepAdopted{} rows of Table~\ref{tab:ledger}, and each
+window's control ensemble is measured with it, so neither side of the
+comparison mixes two fields. Where the extraction catalogue's disposition
+column disagrees -- on \StRepFell{} crossings, \StRepAttrClause{} -- the
+ledger is the authority.
+
+\subsection{Execution-block quality}
+\label{sec:blockquality}
+
+The comparison with the control positions assumes each block's ensemble
+behaves like noise, and one block makes that false: every one of its \NCtrl{}
+probes exceeds the trigger, the smallest at \BqFailCtrlMin. A criterion for
+the condition is therefore applied to every block rather than to the one that
+prompted it.
+
+\emph{Two criteria are built from that statistic and they are not the same
+test.} The statistic is the median of a window's own \NCtrl-position control
+ensemble, which separates a field with a source in it from a field that is no
+null at all. A \emph{window} is flagged when that median exceeds \BqFactor{}
+the median of the same quantity over the survey, \DqThresh{} against
+\DqSurvMed. The flag is a property of the window and cuts across attribution
+by design: it fires on \DqNWin{} of the \NWindows{} windows in
+\BkFlagNBlock{} blocks toward \DqNStar{} stars (\DqStars), and every one of
+those windows carries a crossing, attributed and unattributed alike. A
+\emph{block} is judged on the same median divided by the median over the
+windows of its own class, since a maximum over a larger
+channel$\times$drift grid sits higher and one threshold should mean the same
+thing in both; a block fails when the median of that ratio over its windows
+exceeds \BqFactor{} the scale of its class. The factor is the same in
+both. Neither was fixed in advance: the condition
+was noticed in one block and the criterion written afterwards, so it is post
+hoc, and what makes it trustworthy is that it does not depend on where the
+line was drawn -- the failing block sits at \BqFailQ{} and the next worst at
+\BqNextQ, so any threshold between them selects the same single block.
+
+Applied to all \BqNBlocks{} blocks of the primary census, where the median
+block sits at \BqQMed, the criterion fails \BqNFail: \BqFailBlock{} toward
+\BqFailStar. Nothing else is close, and the unscaled form of the rule fails
+the same \BqRawNFail{} block. Its \BqFailNWin{} windows are all
+coarse-channel and
+hold the survey's entire Class~B crossing population, so it carries
+\EvNCrossFlag{} of the \EvNCrossRaw{} threshold crossings. \EvNRankFlag{}
+of those outrank all \NCtrl{} control positions of their own window, and
+no Class~A statistic here has ever contained it. Those \EvNCrossFlag{} appear
+in Table~\ref{tab:ledger} with their block named and enter no count
+elsewhere.
+
+\subsection{The control ensemble: its calibration, and its resolution}
+
+The ring geometry is set in \S\ref{sec:statistic}; its calibration and its
+resolution are the subject here. Over the \VerNTested{} census windows that
+retain a control vector the stellar ranks are consistent with the one half
+exchangeability implies -- median \BkRankBalSurv{} with each star carrying
+equal weight, \BkRankBalSurvLo{} to \BkRankBalSurvHi{} -- in both array
+strata, the compact-array windows measured on each observation's own antenna
+table rather than on a 12\,m beam. That is a weak statement and not a strong
+one, since a shift smaller than about \VerKsPowerAca{} could not have been
+seen in a sample of this size. The reserved blocks lean further from one half
+when their windows are pooled, but those windows are concentrated on a few
+stars: \BkRankTopFiveWin{} of \HoWin{} belong to five. The two
+samples agree once each star carries equal weight, \BkRankBalHo{}
+(\BkRankBalHoLo--\BkRankBalHoHi) against the \BkRankBalSurv{} above.
+Compared star by star over the \BkRankPairedStars{} stars both samples hold
+the difference is \BkRankPaired{} with \BkRankPairedLo{} to
+\BkRankPairedHi{} allowed (Appendix~\ref{sec:heldout}). What that settles is
+the gap between the two samples' pooled medians, which is an effect of how
+their windows are distributed over stars. It does not remove the displacement
+itself: that is small, it is measured on the census's own cells at every level
+up to the trigger, and the expectations above are stepped by it rather than
+corrected for it.
+
+\emph{The rank is not a significance test, and the reason is structural.}
+Ranking the star against \NCtrl{} control positions of the same field
+decides which windows deserve examination, but $1/(\NCtrl+1)=\RankFloorVal$
+is the \emph{resolution} of the ensemble -- the smallest rank it can
+express -- and not the probability that noise produced the window. A survey
+of \NWindows{} windows would need a rank \BonfRankRatio{} times finer, and
+correlation makes it coarser still: controls inside the synthesised beam are
+not independent, so an annulus resolves no better than
+\RankEffLo--\RankEffHi{} however many probes are drawn into it, with the
+primary beam bounding how many a single pointing contains. That floor is the
+design's central limitation: no single window here can be significant on the
+rank alone, which is why confirmation requires independent recurrence.
+
+\subsection{The trials budget}
+
+The searched cells counted in \S\ref{sec:summary} are not independent
+trials: channel smoothing and a drift grid stepped twice per channel
+correlate neighbouring ones, which alone would leave \StGridFrac{} of them
+independent. The control ensembles say otherwise, their maxima sitting at
+\CtrlMaxRatioMed{} of the prediction for the maximum of the full searched
+count treated as independent and Gaussian -- a budget predicting
+\NCtrlWinExp{} windows with a control above $T_{\rm trig}$ against the
+\NCtrlWinObs{} observed -- while fitting each window's effective count
+against its own ensemble returns \StNindFrac{} of its searched cells. Nothing
+turns on which is right, because the expectation above is summed from measured
+rates and not from a cell count: by the cell-count route the number reaching
+the trigger is \StExpModel{} rather than \CeExpTrig, \StModelAgreePct{} per
+cent away.
+
+\emph{The on-star crossings do exceed that budget, and the attribution
+accounts for it.} A Gaussian tail over every searched cell predicts
+\CellExpect{} stellar exceedances against the \NCross{} found. But \MkAttr{}
+are attributed by the set above, \EvNCrossFlag{} come from the block of
+\S\ref{sec:blockquality} and \CeNTailCross{} fall outside the census windows,
+which leaves \CeObs{} against the \CeExpSurv{} predicted. No excess survives
+the
+attribution.
+
+\emph{One stratum departs from uniformity, and the departure is where the
+line emission is.} Count the windows whose stellar peak both reaches the
+trigger and exceeds all \NCtrl{} control positions of its own window. The
+$\NFine$ fine-channel windows hold \NStageOneFine{} against
+\ExpStageOneFine{} expected; the coarse stratum, three times larger and
+predicting \ExpStageOneCoarse, contains \NStageOneCoarse. A coarse
+channel dilutes a narrow circumstellar line, so the class that can resolve
+one is the class that finds it -- and an unresolved carrier would appear in
+Class~A first for the same reason. Reaching the trigger is holding a
+crossing, so each of those windows holds one and \CeFirstAttr{} hold a
+crossing the mask attributes: the departure is a statement about the windows
+carrying line emission and not about the fine stratum at large. Drop the
+trigger condition and the star leads its own ring in \BkFirstBelow{} further
+windows, at \BkFirstBelowTLo{} and \BkFirstBelowTHi. That is \NsrFirstObs{}
+over all \NWindows{} windows against \NsrFirstExp{} expected. One quantity,
+two conditions; the chance comparison uses the conditioned one.
+
+\emph{What is left is bounded, and the bounds are null.} The real stellar
+ranks agree at $\pv{\StarPseudoP}$ with the \NPseudo{} ranks each control
+takes against the other probes of its own window; radial suppression is below
+\RingRhoBoundPct{} per cent in the mean; and scrambling a window so nothing
+coherent survives along a drift track carries \LNNWindows{} past the rank
+floor and changes no disposition.
+
+%% The chance expectation here is summed from the measured control exceedance
+%% rates and each window's own masked grid share (chance_v414.py, round 310),
+%% so no cell count and no Gaussian tail enters it and nothing in it is
+%% conditioned on the crossings; the cell-count route is a cross-check only,
+%% and the rank-conditioned expectation (\ClustStageMean against
+%% \ClustStageNObs) is a pipeline diagnostic that must not be reachable as
+%% "the" expectation.  tab:ctrlsep, tab:excess, tab:arraysplit and
+%% fig:ctrldiag are generated and nothing cites them; r15-deposit, 2026-10-08:
+%% they used to be described as "in the data release", and there is no data
+%% release, so they are simply unpublished diagnostics.
+%% tab:ledger lives here rather than in Sec. 5, beside the false-alarm
+%% accounting that explains how many of its rows are expected.
+%% The ledger is landscape because it is a wide one: fifteen columns, and
+%% at the \scriptsize every other table in this paper is held to it measures
+%% 605 pt against the 513 pt of a page's width and the 676 pt of its height.
+%% Upright it fitted only at \tiny, which prints at 5.0 pt.
+%% ★★★★ r18: ONE FLOAT, NOT TWO, AND THE COLUMN DEFINITIONS ARE NOW THIS
+%% SUBSECTION RATHER THAN THE CAPTION.  A `sidewaystable*` costs a whole page
+%% whatever its row count, so 56 rows in two parts cost two pages for content
+%% that needs 507 pt of a page's 513.  The old caption ran to nineteen
+%% rotated lines and -- because `rotating` centres a sideways double float in
+%% \hsize, which this revtex-derived class leaves at the COLUMN width -- it
+%% ran off the left edge of the paper with words missing from every line of
+%% it.  The preamble patches the placement; `rotfit_r18.py` fails the build on
+%% any ink outside the text block of a landscape page; and the method prose
+%% that made the caption nineteen lines long is below, where a reader can
+%% read it upright.
+\subsection{Reading the crossing ledger}
+\label{sec:ledgercolumns}
+
+The columns of Table~\ref{tab:ledger} are the star, its execution block and
+the ALMA band; the crossing frequency as the correlator delivered it, or,
+where no peak frequency was measured, recovered from the line offset, and the
+same frequency in the star's rest frame; the search statistic $T_\star$ and
+the largest statistic $T_{\rm ctrl}$ among the window's \NCtrl{} control
+positions; the nearest masked transition and the stellar-frame offset
+$\Delta v_\star$ from it; and then the recurrence test -- $n_{\rm rep}$
+covering repeat blocks spanning $\Delta t$ days, the statistic $T_{\rm pers}$
+a carrier persisting at the discovery flux would have produced at the
+predicted stellar-frame cell, the statistic $T_{\rm rep}$ measured there at
+the carried drift, and the exclusion of Eq.~\ref{eq:excl}. Three of those
+columns reproduce that exclusion, and two of them also give the limit defined
+in Appendix~\ref{app:radius}.
+
+Two kinds of blank appear in that test. Where the emission is present again in
+a covering block it returns a recovery and not an exclusion, so
+$T_{\rm rep}$ and $\sigma_{\rm excl}$ are blank and the disposition says which
+it was. Rows whose window is data-quality flagged
+(\S\ref{sec:blockquality}) are marked, and on those $T_{\rm pers}$ and the
+exclusion are withheld instead: both are built from the discovery amplitude,
+and in a window whose control ring stands as high as its star that amplitude
+cannot be assigned to a point source at the star.
+
+A crossing is attributed by the set defined above, and a dagger marks the
+\MkNSODecide{} rows whose coinciding species that set excludes. The
+transition named is the nearest in the star's frame, so where it is far from
+every transition it is the magnitude of the offset and not the name that
+carries the information. The delivered and rest-frame frequencies agree to
+the digits printed in one row only, \MkCancStar, where the barycentric and
+systemic terms -- \MkCancBaryMHz\,MHz each, in opposite senses -- cancel to
+\MkCancNetkHz\,kHz. That star's systemic velocity,
+\MkCancVSys\,km\,s$^{-1}$, is the barycentric correction at its epoch,
+\MkCancVBary\,km\,s$^{-1}$, and its offset from \MkCancLine{} is
+\MkCancDv\,km\,s$^{-1}$ either way. That star is also the fainter component
+of a \CenPairSep{} arcsec pair. The
+\CenPairNWin{} readings taken at its position are second extractions of the
+same \CenPairNWin{} spectral windows of one execution block and not windows
+of their own, so the per-window census counts them once, under
+\CenPairNameA. Both components sit \CenPairOffA{} and \CenPairOffB{} arcsec
+inside a \CenPairPbFwhmLo--\CenPairPbFwhmHi{} arcsec beam, with a response no
+lower than \CenPairPbRespLo.
+
+\begin{sidewaystable*}
+\centering
+\caption{\textbf{The crossing ledger, from which every disposition in this
+paper can be reproduced.} All \EvNCrossRaw{} threshold crossings, one to a
+window, including the \EvNCrossFlag{} in the failing block of
+\S\ref{sec:bdblock}. The columns, the blanks and the dagger are defined
+in \S\ref{sec:ledgercolumns}. Block identifiers omit the constant
+\texttt{A002\_} prefix.}
+\label{tab:ledger}
+\scriptsize
+\input{tab_ledger}
+\end{sidewaystable*}
