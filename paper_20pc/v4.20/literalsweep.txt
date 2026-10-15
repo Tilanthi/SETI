@@ -1,0 +1,26 @@
+literal sweep of technosignatures_40pc_v4.20.tex
+
+18 prose literals equal to a generated macro:
+  18         == CcNAgree,CcNMatched,CeCntLo,ChnAttrA        at array and single-dish C- and K-band work at 6 and 18\,GHz with the Sardinia Radio Teles
+  30         == CfgChanOut,EcWitIncBp,EpWideLinesGHz,LgDMax  leakage is outside it by construction. Above about 30\,GHz the record is nearly empty, and
+  25         == BdNBlocks,BpSixGapD,CeLo,CovNSysAtRef       ry. A star enters if its Gaia~DR3 parallax is at least 25\,mas, measured to better than {}
+  30         == CfgChanOut,EcWitIncBp,EpWideLinesGHz,LgDMax  ance to a factor of two {under}-representation beyond 30\,pc. Colour comes second: A~stars
+  15         == AnBandKms,CdNStarNoPhot,CeNFullMask,CeNWinTail  ed search would pick: of the {} sample systems within 15\,pc with a confirmed planet, {} c
+  0.99       == PxRossObsHi,RsevRankFracTwentyA             effort of ours would close that. {figure*} [width=0.99 ]{figures/coverage_waterfall.pdf} {
+  10.4       == EpGapD,VisStarMJy                           servatory records on each block's phase calibrator [ 10.4.11, 11.3.1]{ALMAHandbook}, throu
+  11.3       == CpRecFluxOne,RcCpFlux                       records on each block's phase calibrator [ 10.4.11, 11.3.1]{ALMAHandbook}, through the sta
+  30         == CfgChanOut,EcWitIncBp,EpWideLinesGHz,LgDMax  e searches of and reached nearby stars above about 30\,GHz at one frequency only, and the 
+  6.7        == BpRecOffChan,TuQuantAlignPct                record. {Software.} The pipeline depends on {casa}~6.7.6 , {python}~3 with {astropy} , {nu
+  350        == CkNContWin                                  elativistic terms at the \,km\,s scale are \,kHz at 350\,GHz, below the finest native chan
+  3.2        == BootPoisson,EcReqRateHd,ExpDistinctDen,ExpStageOneAll  of the other sets, it is computed over that row; rows~3.2 to 3.5 are the archival gap, and
+  3.5        == BpicbCeiling,BpicbFhi,EpsEriCorrMax,EpsEriPbHi  other sets, it is computed over that row; rows~3.2 to 3.5 are the archival gap, and no res
+  3.1        == BenchEffRatio,BsSirCenLo,CpRecTotalSpanH,CxAdmitTstarHi  urvey's only block with a coarse-channel crossing. Row 3.1.1 is what this paper means by c
+  3.1        == BenchEffRatio,BsSirCenLo,CpRecTotalSpanH,CxAdmitTstarHi  ency the first did not cover confirms nothing, so rows 3.1 and 3.2 count any second epoch 
+  3.2        == BootPoisson,EcReqRateHd,ExpDistinctDen,ExpStageOneAll  first did not cover confirms nothing, so rows 3.1 and 3.2 count any second epoch and are n
+  2.2        == AccelJupRot,CkExpSec,EcGridDtH,EpEtaRepDepth  any second epoch and are not confirmation counts. Row 2.2.1 is decomposed system by system
+  19         == CxMarginBpNom,DutyTenth,EpDays,EpNUnit      es active allocations throughout 90--275\,GHz, and WRC-19 identified parts of 275--450\,GH
+
+3 prose literals within 5 per cent of a macro (possible stale value):
+  275        ~ ExpTotalMed=274.6,VnKeyNFineEntries=274,OcOldMed=273.1  Article~5 carries active allocations throughout 90--275\,GHz, and WRC-19 identified parts 
+  275        ~ ExpTotalMed=274.6,VnKeyNFineEntries=274,OcOldMed=273.1  hroughout 90--275\,GHz, and WRC-19 identified parts of 275--450\,GHz for land-mobile and f
+  450        ~ MrUnMin=449,FixDvVir=449,WdMedKms=448       hout 90--275\,GHz, and WRC-19 identified parts of 275--450\,GHz for land-mobile and fixed 

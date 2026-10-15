@@ -1,0 +1,71 @@
+{
+ "round": 205,
+ "drive": null,
+ "census": {
+  "crossings": 56,
+  "attributed": 18,
+  "unattributed": 38,
+  "rank_flagged": 2,
+  "recurring": 0
+ },
+ "by_class": {
+  "A": 52,
+  "B": 4,
+  "A_unattr": 34,
+  "B_unattr": 4
+ },
+ "dispositions": {
+  "tested": 37,
+  "flagged": 4,
+  "no_recurrence": 33,
+  "no_spectrum": 1
+ },
+ "reconciliation": {
+  "released_column": 36,
+  "released_covered": 35,
+  "fell": [
+   [
+    "eta Crv",
+    "A002_X75bfbf_X1430",
+    345.540374
+   ],
+   [
+    "tau Cet",
+    "A002_Xba460f_X7e6",
+    231.033401
+   ],
+   [
+    "HR 1010 Gaia DR3 4722135642226902656",
+    "A002_Xc66ce1_X1345",
+    345.62056
+   ],
+   [
+    "HR 1010 Gaia DR3 4722135642226902656",
+    "A002_Xc6a3db_X7b5b",
+    345.478187
+   ]
+  ],
+  "attributed_by_rebuilt_mask": [],
+  "arrived": [
+   [
+    "HD 14055",
+    "A002_X1001fdc_X29ae",
+    331.1558555,
+    "window"
+   ],
+   [
+    "HD 14055",
+    "A002_X1190de8_Xd526",
+    344.467647,
+    "tail"
+   ],
+   [
+    "HD 14055",
+    "A002_X11adad7_X25c5e",
+    345.456382,
+    "tail"
+   ]
+  ],
+  "ledger": 34
+ }
+}

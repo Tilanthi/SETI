@@ -1,0 +1,384 @@
+%% APPENDIX A -- spectral response, frequency conventions, primary-beam response.
+%% Owner: appendix-triage.  Carries \label{app:conventions} (cited by
+%% 04_method.tex) and \label{app:pbresp}.
+\section{Spectral response, frequency conventions and the primary-beam
+response}
+\label{app:conventions}
+
+This appendix sets out the three things every threshold quoted in this paper
+is checked from: the frame of each frequency, the instrumental response, and
+the primary-beam factor that turns a measured noise into a flux at the star.
+
+%% The single-column figure of the three-point Hanning response against
+%% sub-channel phase is removed; its numbers are in the peak-channel
+%% paragraph below.  QUEUE_integrate.md entry S6: make_all.sh must stop
+%% running make_fig_hanning.py and figorphan.py must carry
+%% hanning_response.pdf in PENDING, or the figure gate fails.
+
+\subsection{Frequency frames, linewidth and smearing}
+%% (subsection label retired: nothing cites it)
+
+Every frequency axis here -- searched spectra, tabulated ranges and
+crossing frequencies alike -- is \emph{topocentric} as delivered by the
+ALMA correlator, and the search applies no velocity-frame shift.
+Velocities enter at the vetting stage, where the line mask carries every
+crossing frequency to the barycentre at its own block's epoch and then to the
+stellar frame before comparing it with a transition
+(Appendix~\ref{app:linemask}). The residual error is then the catalogue
+radial-velocity uncertainty alone, a few km\,s$^{-1}$ within 40\,pc;
+second-order relativistic terms at the \MaskHalfKms\,km\,s$^{-1}$
+scale are $\lesssim5$\,kHz at 350\,GHz, below the finest native channel
+searched. The stacking is drift-aligned and inverse-variance weighted:
+coherent in frequency trajectory, not in electric-field phase.
+
+The native channel width is also the linewidth convention for every EIRP
+threshold. The statistic is the single-channel flux density after drift
+correction, so EIRP$_{\rm trig}$ is the minimum \emph{total} power of a
+channel-confined carrier, flat in the assumed linewidth below the channel and
+never a spectral power density; flatness is exact only for a centred tone,
+and a boundary-straddling one divides its power between two channels, which
+is the loss the injections carry and one reason EIRP values are quoted to two
+significant figures. The Hz-resolution
+surveys' limits are total powers in the same sense, each the best case of
+its own channelisation, which makes the axes of Fig.~\ref{fig:context}(a)
+commensurable; and no reprocessing recovers resolution the correlator never
+recorded. Channel widths come from the measurement sets' own CHAN\_WIDTH;
+MS~v2 defines no ``EFFECTIVE\_BANDWIDTH'' column, so the quoted
+channelisations are separations and are not claimed to be noise bandwidths.
+
+ALMA applies online Hanning smoothing by default \citep{ALMAHandbook}, so
+the spectral response is ${\sim}2$ channels wide and neighbouring channels
+are correlated. For the $0.25/0.5/0.25$ kernel the coefficients
+are $\rho_1=\HanRhoOneFrac=\HanRhoOne$ and $\rho_2=\HanRhoTwo$, and the
+smoothing narrows the noise by
+$\sigma_{\rm smoothed}/\sigma_{\rm raw}=\HanSigRatio$. The correlation is
+not confined to adjacent channels: the lag-two term is a sixth of the
+lag-one term. The peak
+channel holds \HanBest{} of an unresolved carrier's flux at a channel centre
+and \HanWorst{} on a boundary, a median \HanMed{} over sub-channel phase.
+
+\emph{That loss enters the limits exactly once, and it is the thresholds
+rather than the limits that are free of it.} A window's trigger flux is the
+bare $\LtCommonSnr\sigma$ of its own spectrum, so setting the \emph{total}
+power of a channel-confined carrier against it would be optimistic by
+$\times\HanFacBest$--$\times\HanFacWorst$. The injected carriers are not set
+against it in that way: each is deposited with the correlator's own channel
+response, at a sub-channel phase drawn afresh, and recovered through the same
+trigger, which reads the peak channel. The measured completeness therefore
+already contains the loss, and factorises into it exactly:
+$\EirpNinetyMultA\,P_{\rm trig}$ is $\times\RpRespFac$ for the channel
+response and $\times\RpMarginNinety$ for the margin a peak channel needs
+above the nominal trigger for nine carriers in ten to return. So
+$P_{\rm trig}$, the sensitivity $S_{\min}$ below and the filled symbols of
+Fig.~\ref{fig:context}(a) are nominal throughout, which is what makes them
+commensurable with other programmes' detection thresholds, while
+$\mathrm{EIRP}_{90}$ carries the correction and is not corrected again.
+The deposition falls \InjShortPct{} per cent short of the ideal response
+averaged over phase, so the completeness is conservative by that much; and
+where in a channel a carrier was placed makes no difference to what is
+recovered, because at a typical searched drift rate it crosses about
+\InjDriftChan{} channels during one observation and samples the whole
+response.
+
+Two measurements fix the smoothing state. The retained per-integration
+residuals of the second-stage local null have a lag-one spectral
+autocorrelation of \LNLagOne{} against the Hanning prediction \HanRhoOne, so
+those spectra are smoothed and un-averaged. The archive's reported
+effective resolution is exactly twice the channel separation in \NHanTwo{} of
+the \NHanKnown{} windows; the other \NHanOther{} report a smaller ratio,
+the signature of online channel averaging, where the peak-channel loss is
+smaller. \emph{The correlation model is truncated at lag two}: the
+baseline step, a per-integration median over up to \MedWin{} channels, could
+imprint longer-range correlation that the retained spectra carry no residuals
+to measure, which would make the independent-trials count of
+Appendix~\ref{app:falsealarm} an over-estimate.
+
+\emph{Transmitters wider than one channel.} The baseline filter
+(\S\ref{sec:statistic}) is flat below roughly half its effective width $W$ and
+falls to zero above it, so $W$ is the linewidth ceiling:
+\MedWinFineLo--\MedWinFineHi{} channels over the fine class and
+\MedWinCoarseLo--\MedWinCoarseHi{} over the coarse one. In frequency that is
+${\approx}\MedWinCeilFineMHz$\,MHz at \ChanFineKHz\,kHz and
+${\approx}\MedWinCeilCoarseGHz$\,GHz at \ChanCoarseMHz\,MHz. Below it a
+top-hat transmitter spanning $N_{\rm ch}$ channels divides its flux between
+them at unchanged noise, so its threshold is $N_{\rm ch}$ times the
+single-channel one.
+
+\emph{Intra-integration smearing, which the injections do not model.} Each
+injected tone is deposited at one frequency per integration, so the campaign
+carries the channel response and the drift between integrations but not the
+sweep within one. A carrier moving $\Delta$ channels during an integration
+keeps $\eta_{\rm smear}=\mathrm{sinc}(\pi\Delta/2)$ of its peak amplitude, and
+every limit in this paper is divided by it. \emph{That form is the
+conservative one here and not the exact one.} It is the amplitude a sweep
+leaves when the spectral resolution is set by the integration itself, whereas
+these channels are $\NmRespChanTau$ times wider than the reciprocal of an
+integration, so the sweep cannot act inside the transform: it moves the
+carrier's dwell time across the delivered channel response, and the amplitude
+the correlator accumulates is the mean of that response over the sweep.
+So the attenuation is integrated through the delivered response that sets
+$\times\RpRespFac$ above -- Hanning-smoothed, and channel-averaged where the
+window is one of the \NmRespNAvgA{} Class~A windows that are, though none of
+the affected ones is. The worst case, a carrier crossing
+\NmRespDeltaWorst{} of a channel, needs $\times\NmRespFacWorst$ where
+$\times\SmcFacWorst$ is applied, and no window needs more. The limits of the
+\SmcNAbove{} windows concerned are
+therefore conservative by up to \NmRespOverPct{} per cent, and are left so.
+The $\Delta$ that sets a ninety
+per cent point is the one at the ninetieth percentile of each window's own
+drift draw, \SmcQninePct{} per cent of the searched ceiling over the
+campaign's \SmcNTone{} tones. The integration length is recorded for
+\SmcNMeas{} of the \NWindows{} windows, \CsNDumpWin{} of them in the delivered
+metadata and \SmNRecov{} more in the exposure records the search kept. For the
+other \SmcNBound{} the factor is \emph{bounded} at \SmcDtCeil\,s, the longest
+integration delivered anywhere, where none falls below \SmcBoundEta.
+Nothing moves in the median window, and \SmcNAbove{} windows on
+\SmcNAboveStar{} stars rise by more than one per cent, up to
+$\times\SmcFacWorst$: \SmcAboveStars. Re-scoring the \SmcValNWin{} injected
+windows' own ladders with every tone de-rated by its own $\eta_{\rm smear}$
+gives a penalty never larger than the one applied and smaller by at most
+\SmcValWorstPct{} per cent, so the correction errs the safe way.
+
+\subsection{The primary-beam response}
+\label{app:pbresp}
+
+The sensitivity quoted for a window is $S_{\min}=5\sigma/A$, where $A$ is the
+primary-beam response at the star's offset from the phase centre: the noise
+$\sigma$ is measured in apparent flux, the limit is quoted in true flux, and
+the two differ by $A$. That offset is not a nuisance. Archival fields are
+pointed at a catalogue position, often decades old, while these are
+high-proper-motion stars, so the star can sit well off axis. Over the
+\PbNWin{} windows the offset has a median of \PbOffMed$''$, a 99th
+percentile of \PbOffPNN$''$ and a maximum of \BmOffMax$''$. The response $A$
+runs from \BmRespMed{} in the median down to \BmRespMin. It falls below $0.99$
+on \PbNLowNN{} windows and below $0.9$ on \BmNBelowNine. Every one
+of those is a physically explicable J2000 pointing on a
+fast-moving star rather than an error.
+
+\emph{The response applied is a Gaussian of the full width the observatory
+documents}, $\RingPbCoef\,\lambda/D$ \citep{ALMAHandbook}, evaluated at each
+window's \emph{own} dish diameter. The dish matters: the \PbNAcaRow{} rows
+taken on the \PbAcaRatio$\times$ smaller compact-array antennas have a
+correspondingly wider beam, and a Gaussian forced to $D=12$\,m reproduces the
+per-window geometry only to $\SensPbResidTwelve$ against $\SensPbResid$ for
+the per-dish form. That width is a physical choice rather than a convention.
+The blocked-aperture response, which carries the shadow of the secondary and
+is what \textsc{casa} applies \citep{CASA2022}, has a half-power
+width of $\BmAiryFwhm\,\lambda/D$ on a 12\,m antenna and
+$\BmAiryFwhmAca\,\lambda/D$ on a 7\,m one. The Gaussian used here is that
+beam to \BmDocAiryPct{} per cent and departs from it by at most
+\BmModelMaxPct{} per cent anywhere in the sample. The other width available,
+a Gaussian of the Airy first-null width, is wider and departs from that beam
+by up to \BmModelMaxNullPct{} per cent, which is why the documented width is
+the one adopted; what it would do to the limits of the windows furthest off
+axis is in \S\ref{sec:pninetysel}.
+
+\emph{A window is used where the two forms agree.} At low response a small
+error in the beam model becomes a large error in inferred flux, and the two
+forms part company as the offset grows, so the limit on retention is the
+offset at which they differ by \BmFloorTolPct{} per cent:
+$\BmFloorC\,\lambda/D$ from the pointing centre, where the response is
+\BmFloorResp. The furthest window in the primary census lies at
+$\BmCensusWorstC\,\lambda/D$, where the two agree to \BmCensusWorstPct{} per
+cent, so the criterion excludes nothing from it; it is stated because it is
+what admits the one star this survey covers far off axis.
+
+\emph{That star is $\epsilon$\,Eridani, at \BmEpsDistPc\,pc the nearest in the
+sample with Band~6 coverage.} \BmEpsNOn{} of its \BmEpsNWin{} windows, in
+\BmEpsNBlock{} execution blocks, place it at the pointing centre and need no
+correction at all. The other \BmEpsNOff{} lie
+$\BmEpsCLo$--$\BmEpsCHi\,\lambda/D$ off it, where the response is
+\BmEpsRespLo--\BmEpsRespHi. Those offsets are inside the main lobe -- the
+blocked-aperture response does not reach its first null until
+$\BmAiryNull\,\lambda/D$ -- and there the two beam forms agree to
+\BmEpsAgreePct{} per cent, which is the extra uncertainty those limits carry.
+No window reaches the trigger, the largest statistic being \BmEpsTMax. Over
+\BmEpsHours\,window-hours the \BmEpsNFine{} fine windows reach
+$\BmEpsEirpFine$\,W at \BmEpsChanFineKHzLo--\BmEpsChanFineKHzHi\,kHz. The
+\BmEpsNCoarse{} coarse ones reach
+$\BmEpsEirpCoarseLo$--$\BmEpsEirpCoarseHi$\,W. \BmEpsNCensus{} of these
+windows fall inside the primary census and carry its statistics, counted with
+it in Table~\ref{tab:blockledger}; the other \BmEpsNExt{} are the
+\LdgExtWithheldWin{} windows withheld from the archival extension under the
+same primary-beam rule, and those carry no record of their own phase centre or
+intra-integration retention. The
+flux-scale
+comparison of \S\ref{sec:method} is a separate continuum measurement on the
+same star, a block mean over the \PxEpsN{} compact-array executions that place
+it at the pointing centre, \PxEpsHours\,h in Band~\PxEpsBand, where no beam
+correction enters either.
+
+\emph{The correction is applied exactly once.} The offset is computed for
+every measurement set from its own \texttt{FIELD::PHASE\_DIR} and the
+propagated stellar position, so no window carries a zero-by-assumption
+offset, and it enters in one place only: $S_{\min}=5\sigma/A$ closes on all
+\PbSminClosed{} catalogued rows to \PbSminWorstRes{} in relative terms. On
+\PbSminTaut{} rows whose products are not retained $A$ is back-solved from
+$5\sigma/S_{\min}$ and flagged as such, so there the closure is arithmetic;
+the test is the other \PbSminIndep{} rows, where $A$ comes from the search's
+own stored geometry and closes to \PbSminIndepRes. Nothing else needs
+correcting: the statistic of
+Eq.~\ref{eq:tstar}, the control ranks and the attribution are \emph{ratios}
+formed inside one window, in which $A$ divides out identically.
+
+\emph{The star's apparent direction includes the annual parallax, and the
+amplitude a compact source retains when that is left out of the assumed phase
+centre is measured rather than modelled.} A small fraction of a synthesised
+beam attenuates a compact source and does nothing else, while a displacement
+approaching a beam puts the phase wrong on the longest baselines, so the size
+of the displacement decides whether a scalar correction is legitimate at all.
+Re-extracting the \SensNReextWin{} windows of \SensNReextBlock{} blocks
+furthest out at the full apparent position -- proper motion, parallax and
+radial velocity where catalogued -- leaves each window's noise unchanged to
+\SensReextNoiseMaxPct{} per cent and alters no disposition. It cannot test the
+amplitude factor, which describes a source those windows do not hold: the
+statistic merely scatters from \SensReTstarLo{} to \SensReTstarHi{} about
+\SensReTstarMed{} rather than approaching the \SensPxLargePred{} a source
+would give. A carrier injected at the apparent position and recovered from the
+\emph{same} visibilities at both does return the normalised dirty beam, on
+that block's own baselines and with no model in it. It measures
+\SensPxSmallMeas{} against a predicted \SensPxSmallPred{} at
+\SensPxSmallBeams{} of a beam. At \SensPxLargeBeams{} of a beam it measures
+\SensPxLargeMeas{} against \SensPxLargePred. It
+exceeds the model at the larger displacement because maximising over a plane
+of trajectories lets a partly decohered carrier still find a cell, so a limit
+corrected by the model is shallower than it need be.
+
+\emph{A component of a bound pair does not travel in a straight line, and the
+propagation assumes it does.} A Gaia~DR3 five-parameter solution carries a
+star's position and its velocity at the catalogue epoch and nothing further,
+so a linear propagation omits the curvature of the orbit: zero at that epoch,
+growing as the square of the interval, and reaching years across an archive
+spanning \OmEpochLo--\OmEpochHi. Of the \OmNStar{} searched positions,
+\OmNComponent{} have a companion located inside \OmRadius{} arcsec by
+Gaia~DR3 or measured in the double-star catalogues
+\citep{wds,orb6}, and \OmNIndOnly{} more
+have a disturbed astrometric solution with no companion found. Where the pair
+has a published visual orbit the displacement follows from it; where it has
+not, the projected separation is a lower bound on the true one and so puts a
+ceiling on the orbital acceleration and on the displacement, with the
+companion's mass taken from the main-sequence sequence of
+\citet{pecaut2013}; and the
+Hipparcos--Gaia proper-motion anomaly, which is the departure from uniform
+motion measured directly over \OmHGInterval{} years
+\citep{kervella2022}, covers \OmNPma{} of
+them. The largest displacement anywhere in the survey is \OmWorstArcsec{}
+arcsec at \OmWorstStar, \OmWorstBeams{} of that block's synthesised beam,
+against the \SensPxLargeBeams{} of a beam at which the response measured
+above falls to \SensPxLargePred. The largest for which an orbit rather than a
+bound is available is
+\OmMeasArcsec{} arcsec at \OmMeasStar, \OmMeasBeams{} of a beam. The deepest
+limit of any system moves by at most \OmSysMovedMaxPct{} per cent, those of
+\OmSysMovedStars, and the median system limit does not move. A displacement
+can only attenuate: it can leave a limit optimistic and it can hide a
+carrier, but it cannot manufacture a crossing, and no crossing in the survey
+lies more than \OmCrossWorstBeams{} of a beam from its predicted position.
+The displacement exceeds a tenth of the synthesised beam for \OmNTenth{}
+components in all -- \OmTenthStars{} -- and for \OmFlagStars{} it cannot be
+computed at all, the solution being disturbed with no companion located and no
+Hipparcos epoch to measure one from; those \OmNFlag{} stars carry
+\OmNWinFlag{} of the survey's windows, and their limits are optimistic by an
+unmeasured amount.
+
+\emph{The injection campaign is blind to $A$ by construction, and the bias
+that follows is exactly zero.} The injector deposits an unattenuated amplitude
+at the star's own direction cosines and refers the ladder to the
+\emph{apparent} $5\sigma$ on all \PbInjNUnit{} scored units, so an injected
+apparent amplitude recovered nine times in ten implies a true flux larger by
+$1/A$ while $P_{\rm trig}$ is the power of a true $5\sigma/A$ and $A$ cancels
+identically; \PbInjNDistinct{} of the units have apparent and corrected
+$S_{\min}$ differing by more than a part in a thousand, so the cancellation
+is tested rather than vacuous. Being self-consistent in apparent flux, the
+campaign cannot falsify the beam model. It reaches out to an offset of
+\PbInjOffMax$''$, at which the response is \PbInjAMin. \PbNBeyond{}
+of the \PbNWin{} released windows, on \PbNBeyondStar{} stars, lie further out
+than any injected one, down to the sample minimum $A=\BmRespMin$. A limit
+quoted for one of those rests on an extrapolated curve, while their
+\PbNBeyondCross{} crossings are ratios and unaffected. That set is defined by
+offset and is not the \BmNBelowNine{} windows whose response falls below
+$0.9$, which is a different criterion and a smaller set.
+
+\emph{A few rows carry a catalogued noise that no retained product
+reproduces}, and they are declared rather than reconciled: on \PbGapN{}
+windows of \PbGapStar{} in block \texttt{\PbGapEb} the catalogued $\sigma$ is
+\PbGapPctLo--\PbGapPctHi{} per cent \emph{higher} than the surviving
+product's, so the limits there are weaker and not stronger. With the
+\PbGapNoProd{} windows whose products are not retained the declared
+provenance gap is \PbGapDeclared{} windows.
+
+%% Carried forward: the UV Ceti worked example (flux -> EIRP) is out of this
+%% appendix because two of its four numbers had no macro behind them.  If a
+%% worked example is wanted back it needs three: the flux density, the implied
+%% EIRP and the distance used.  It is the clearest single verification aid the
+%% paper could carry.  \label{app:repro} and the transmitter-power benchmark
+%% are both resolved: nothing cites the label any more, and exactly one
+%% benchmark survives, in Sec. 6.
+%% tab:blockledger lives here rather than in Sec. 3: it is a full-width
+%% table* worth 0.53 pp of the main text, and Sec. 3 carries its headline
+%% rows in prose and cites it.
+\begin{table*}
+\centering
+\scriptsize
+\caption{\textbf{The survey ledger, part one: execution blocks and windows.}
+Each row carries its own number, and a group sums to the row whose number
+heads it. The
+primary census is the survey: unless a statement names one of the other sets,
+it is computed over that row; rows~3.2 to 3.5 are the archival gap, and no
+result is formed on them. Hours are window-hours: on-source time summed
+over spectral windows, so the classes partition the hours as they partition
+the windows. The telescope on-source time behind the primary census is
+\StTelHours\,h, of which \StTelHoursFine\,h carries at least one Class~A
+window and \StTelHoursCoarse\,h at least one Class~B window -- figures that
+overlap and must not be added. Confirmed planet counts here and in the
+target list come from the \SfHostCatalogue{} \SfHostTable{} table
+\citep{NEA2013}, accessed \SfHostDate. Part two, Table~\ref{tab:counts},
+carries the events and the confirmation extents.}
+\label{tab:blockledger}
+\input{tab_blockledger}
+\end{table*}
+
+\begin{table}
+\centering
+\scriptsize
+\caption{\textbf{The survey ledger, part two: events, dispositions and
+confirmation.} Every headline count in this paper is read from here. Three
+counts are \MtCrossA{} over three different sets -- the Class~A crossings of
+the adopted ledger, those of the per-window extraction catalogue
+(\S\ref{sec:sample}), and the
+quality-passing crossings. The first two hold different rows, because on some
+windows the two read the statistic over different fields -- the whole primary
+beam in the ledger and a narrower one in the catalogue
+(Appendix~\ref{app:falsealarm}) -- which puts crossings on opposite sides of
+the trigger in both directions; the last two hold the same rows,
+because the one block failing the quality criterion is also the survey's only
+block with a coarse-channel crossing. Row 3.1.1 is what this
+paper means by confirmation and the only such count it quotes: it applies the
+more-than-a-day separation of \S\ref{sec:summary}, and a repeat epoch
+at a frequency the first did not cover confirms nothing, so rows 3.1 and 3.2
+count any second epoch and are not confirmation counts. Row 2.2.1 is
+decomposed system by system in Appendix~\ref{app:falsealarm}.}
+\label{tab:counts}
+\input{tab_counts}
+\end{table}
+
+
+%% ★★ 2026-10-08: THE ALMA PROJECT CODES, RESTORED AS A TABLE.
+%% They were taken out of the Acknowledgements as padding and then lived "in
+%% the data release"; there is no data release, so they were nowhere.  ALMA's
+%% data-use policy expects the codes to be traceable from the publication, so
+%% this is not optional -- but an appendix table satisfies the policy without
+%% putting \NProjCodes{} codes back into the front matter, which is what was
+%% objected to.  The fragment is generated by projcodes_v400.py and is the
+%% same list that resolves every block in Table~\ref{tab:blockledger}.
+\begin{table}
+\centering
+\scriptsize
+\caption{\textbf{The \NProjCodes{} ALMA proposals the searched execution
+blocks belong to}, in the standard
+\mbox{ADS/JAO.ALMA\#\textit{code}} form. Every block of the primary census
+belongs to one of these, and the blocks themselves are retrieved from the
+ALMA Science Archive by the execution-block identifiers
+Table~\ref{tab:ledger} gives.\ProjCodeUnresClause}
+\label{tab:projcodes}
+\input{tab_projcodes_v400}
+\end{table}
