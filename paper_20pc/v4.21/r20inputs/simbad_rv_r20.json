@@ -1,0 +1,14 @@
+{
+ "_provenance": "Radial velocities for the V343 Nor pair, queried live from the SIMBAD TAP service (simbad.cds.unistra.fr/simbad/sim-tap/sync, ADQL over basic JOIN ident) on 2026-10-15 at 07:38 UTC and frozen here with the bibcode and quality flag SIMBAD returns.  The query is the one check a reader of this paper cannot repeat from the released catalogue alone: the companion's systemic velocity agrees with the barycentric correction at its own epoch to 0.034 km/s, which is the signature a mis-populated field would leave, so the catalogued value is re-verified at its source rather than carried forward from r10inputs/vsys_r10.json.  The two files agree: the adopted +4.55 km/s is SIMBAD's value for HD 139084B with bibcode 2021A&A...645A..30Z.",
+ "query_utc": "2026-10-15T07:38:05Z",
+ "service": "https://simbad.cds.unistra.fr/simbad/sim-tap/sync",
+ "columns": ["main_id", "rvz_radvel", "rvz_err", "rvz_bibcode", "rvz_type", "rvz_qual", "rvz_nature"],
+ "rows": [
+  ["HD 139084", 3.9, 0.19, "2018yCat.1345....0G", "v", "A", "s"],
+  ["HD 139084B", 4.55, 0.01, "2021A&A...645A..30Z", "v", "A", "s"]
+ ],
+ "reference": {
+  "2021A&A...645A..30Z": "Zuniga-Fernandez S., Bayo A., Elliott P., Zamora C., et al., 2021, A&A, 645, A30 -- Search for associations containing young stars (SACY). VIII. An updated census of spectroscopic binary systems exhibiting hints of non-universal multiplicity among their associations",
+  "2018yCat.1345....0G": "Gaia Collaboration, 2018, VizieR On-line Data Catalogue I/345 (Gaia DR2); the primary's value, carried here only as the independent check on the companion's"
+ }
+}

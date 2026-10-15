@@ -1,0 +1,484 @@
+{
+ "round": 806,
+ "drive": 0,
+ "definition": "a confirmed signal requires recovery at the predicted stellar-frame cell in a block of a different observing session AND more than 1 d from the discovery block; a recovery in any block of the discovery's own session is a within-session repeat, whatever the interval",
+ "controls": [
+  {
+   "star": "$\\beta$~Pic",
+   "line": "CO(1-0)",
+   "eb": "A002_Xf5d76d_Xcc5",
+   "freq": 115.2603721,
+   "fstar": 115.2711071472584,
+   "tstar": 17.2885,
+   "n_cand": 4,
+   "n_indep": 1,
+   "n_unrec": 3,
+   "n_apart": 1,
+   "n_diff": 1,
+   "named": "A002_Xf5d76d_Xeb8",
+   "named_t": 30.76,
+   "best": {
+    "eb": "A002_Xf4df6f_Xc7",
+    "t": 17.91,
+    "sep": -52.83634799999709,
+    "unrec": false,
+    "apart": true,
+    "diff_sess": true,
+    "both": true,
+    "approx": true
+   }
+  },
+  {
+   "star": "$\\beta$~Pic",
+   "line": "CO(1-0)",
+   "eb": "A002_Xf5d76d_Xe19",
+   "freq": 115.2603454,
+   "fstar": 115.27110839114692,
+   "tstar": 27.6845,
+   "n_cand": 4,
+   "n_indep": 1,
+   "n_unrec": 3,
+   "n_apart": 1,
+   "n_diff": 1,
+   "named": "A002_Xf5d76d_Xeb8",
+   "named_t": 30.76,
+   "best": {
+    "eb": "A002_Xf4df6f_Xc7",
+    "t": 17.91,
+    "sep": -52.83634799999709,
+    "unrec": false,
+    "apart": true,
+    "diff_sess": true,
+    "both": true,
+    "approx": true
+   }
+  },
+  {
+   "star": "$\\beta$~Pic",
+   "line": "CO(1-0)",
+   "eb": "A002_Xf5d76d_Xeb8",
+   "freq": 115.26032550000001,
+   "fstar": 115.27110869377768,
+   "tstar": 30.7648,
+   "n_cand": 4,
+   "n_indep": 1,
+   "n_unrec": 3,
+   "n_apart": 1,
+   "n_diff": 1,
+   "named": "A002_Xf5d76d_Xe19",
+   "named_t": 27.68,
+   "best": {
+    "eb": "A002_Xf4df6f_Xc7",
+    "t": 17.91,
+    "sep": -52.83634799999709,
+    "unrec": false,
+    "apart": true,
+    "diff_sess": true,
+    "both": true,
+    "approx": true
+   }
+  },
+  {
+   "star": "$\\beta$~Pic",
+   "line": "CO(1-0)",
+   "eb": "A002_Xf4df6f_Xc7",
+   "freq": 115.2620386,
+   "fstar": 115.27111317142669,
+   "tstar": 17.9065,
+   "n_cand": 4,
+   "n_indep": 4,
+   "n_unrec": 0,
+   "n_apart": 4,
+   "n_diff": 4,
+   "named": "A002_Xf5d76d_Xeb8",
+   "named_t": 30.76,
+   "best": {
+    "eb": "A002_Xf5d76d_Xeb8",
+    "t": 30.76,
+    "sep": 52.83634799999709,
+    "unrec": false,
+    "apart": true,
+    "diff_sess": true,
+    "both": true,
+    "approx": true
+   }
+  },
+  {
+   "star": "$\\beta$~Pic",
+   "line": "CO(1-0)",
+   "eb": "A002_Xf5d76d_X32f1",
+   "freq": 115.2606437,
+   "fstar": 115.27134527319329,
+   "tstar": 14.654,
+   "n_cand": 4,
+   "n_indep": 1,
+   "n_unrec": 3,
+   "n_apart": 1,
+   "n_diff": 1,
+   "named": "A002_Xf5d76d_Xeb8",
+   "named_t": 30.76,
+   "best": {
+    "eb": "A002_Xf4df6f_Xc7",
+    "t": 17.91,
+    "sep": -52.83634799999709,
+    "unrec": false,
+    "apart": true,
+    "diff_sess": true,
+    "both": true,
+    "approx": false
+   }
+  },
+  {
+   "star": "$\\beta$~Pic",
+   "line": "CO(2-1)",
+   "eb": "A002_Xa7a216_X23e4",
+   "freq": 230.5272612,
+   "fstar": 230.5376587353208,
+   "tstar": 7.9879,
+   "n_cand": 4,
+   "n_indep": 4,
+   "n_unrec": 0,
+   "n_apart": 4,
+   "n_diff": 4,
+   "named": "A002_Xd9668b_X3a90",
+   "named_t": 11.68,
+   "best": {
+    "eb": "A002_Xd9668b_X3a90",
+    "t": 11.68,
+    "sep": 1311.5798799999975,
+    "unrec": false,
+    "apart": true,
+    "diff_sess": true,
+    "both": true,
+    "approx": false
+   }
+  },
+  {
+   "star": "$\\beta$~Pic",
+   "line": "CO(2-1)",
+   "eb": "A002_Xd9668b_Xa9df",
+   "freq": 230.51602540000002,
+   "fstar": 230.53770059770102,
+   "tstar": 8.9476,
+   "n_cand": 4,
+   "n_indep": 3,
+   "n_unrec": 0,
+   "n_apart": 4,
+   "n_diff": 3,
+   "named": "A002_Xd9668b_X3a90",
+   "named_t": 11.68,
+   "best": {
+    "eb": "A002_X6f1341_X1484",
+    "t": 9.83,
+    "sep": -1983.7660142222303,
+    "unrec": false,
+    "apart": true,
+    "diff_sess": true,
+    "both": true,
+    "approx": false
+   }
+  },
+  {
+   "star": "$\\beta$~Pic",
+   "line": "CO(2-1)",
+   "eb": "A002_Xd9668b_X3a90",
+   "freq": 230.51612790000001,
+   "fstar": 230.53777899976728,
+   "tstar": 11.681,
+   "n_cand": 4,
+   "n_indep": 3,
+   "n_unrec": 0,
+   "n_apart": 4,
+   "n_diff": 3,
+   "named": "A002_X6f1341_X1484",
+   "named_t": 9.83,
+   "best": {
+    "eb": "A002_X6f1341_X1484",
+    "t": 9.83,
+    "sep": -1982.7488620000004,
+    "unrec": false,
+    "apart": true,
+    "diff_sess": true,
+    "both": true,
+    "approx": false
+   }
+  },
+  {
+   "star": "$\\beta$~Pic",
+   "line": "CO(2-1)",
+   "eb": "A002_X6f1341_X1484",
+   "freq": 230.5283785,
+   "fstar": 230.5379156777931,
+   "tstar": 9.832,
+   "n_cand": 4,
+   "n_indep": 4,
+   "n_unrec": 0,
+   "n_apart": 4,
+   "n_diff": 4,
+   "named": "A002_Xd9668b_X3a90",
+   "named_t": 11.68,
+   "best": {
+    "eb": "A002_Xd9668b_X3a90",
+    "t": 11.68,
+    "sep": 1982.7488620000004,
+    "unrec": false,
+    "apart": true,
+    "diff_sess": true,
+    "both": true,
+    "approx": false
+   }
+  },
+  {
+   "star": "$\\beta$~Pic",
+   "line": "CO(2-1)",
+   "eb": "A002_X7116f1_X1785",
+   "freq": 230.527185,
+   "fstar": 230.5384065994498,
+   "tstar": 9.6773,
+   "n_cand": 4,
+   "n_indep": 4,
+   "n_unrec": 0,
+   "n_apart": 4,
+   "n_diff": 4,
+   "named": "A002_Xd9668b_X3a90",
+   "named_t": 11.68,
+   "best": {
+    "eb": "A002_Xd9668b_X3a90",
+    "t": 11.68,
+    "sep": 1957.6186710000038,
+    "unrec": false,
+    "apart": true,
+    "diff_sess": true,
+    "both": true,
+    "approx": false
+   }
+  },
+  {
+   "star": "HD 285968",
+   "line": "CO(2-1)",
+   "eb": "A002_Xdb7ab7_X5b4e",
+   "freq": 230.5115699,
+   "fstar": 230.54467075865543,
+   "tstar": 5.8682,
+   "n_cand": 2,
+   "n_indep": 2,
+   "n_unrec": 0,
+   "n_apart": 2,
+   "n_diff": 2,
+   "named": "A002_Xd98580_X3bf6",
+   "named_t": 5.96,
+   "best": {
+    "eb": "A002_Xd98580_X3bf6",
+    "t": 5.96,
+    "sep": -43.894299666666484,
+    "unrec": false,
+    "apart": true,
+    "diff_sess": true,
+    "both": true,
+    "approx": false
+   }
+  },
+  {
+   "star": "HD 285968",
+   "line": "CO(2-1)",
+   "eb": "A002_Xdb4b9a_X108f",
+   "freq": 230.51002160000002,
+   "fstar": 230.54467317388347,
+   "tstar": 5.835,
+   "n_cand": 2,
+   "n_indep": 2,
+   "n_unrec": 0,
+   "n_apart": 2,
+   "n_diff": 2,
+   "named": "A002_Xd98580_X3bf6",
+   "named_t": 5.96,
+   "best": {
+    "eb": "A002_Xd98580_X3bf6",
+    "t": 5.96,
+    "sep": -38.905870777780365,
+    "unrec": false,
+    "apart": true,
+    "diff_sess": true,
+    "both": true,
+    "approx": false
+   }
+  },
+  {
+   "star": "HD 285968",
+   "line": "CO(2-1)",
+   "eb": "A002_Xd98580_X3bf6",
+   "freq": 230.5020791,
+   "fstar": 230.54469734219387,
+   "tstar": 5.9557,
+   "n_cand": 2,
+   "n_indep": 2,
+   "n_unrec": 0,
+   "n_apart": 2,
+   "n_diff": 2,
+   "named": "A002_Xdb7ab7_X5b4e",
+   "named_t": 5.87,
+   "best": {
+    "eb": "A002_Xdb7ab7_X5b4e",
+    "t": 5.87,
+    "sep": 43.894299666666484,
+    "unrec": false,
+    "apart": true,
+    "diff_sess": true,
+    "both": true,
+    "approx": false
+   }
+  }
+ ],
+ "printed": [
+  "53$^\\ddagger$",
+  "53$^\\ddagger$",
+  "53$^\\ddagger$",
+  "53$^\\ddagger$",
+  "53",
+  "1312",
+  "1984",
+  "1983",
+  "1983",
+  "1958",
+  "44",
+  "39",
+  "44"
+ ],
+ "hazard": [
+  {
+   "cid": "U31",
+   "star": "HD161868",
+   "eb": "A002_Xff45a6_X10ca8",
+   "near": "A002_Xff45a6_X10e14",
+   "sep_h": 0.4555599999427795,
+   "freq": 345.6338357
+  },
+  {
+   "cid": "U03",
+   "star": "ALMA J153702653-33192492",
+   "eb": "A002_Xd9d7c7_Xbb64",
+   "near": "A002_Xd9d7c7_Xb3d2",
+   "sep_h": -1.2231333332591587,
+   "freq": 347.2179398
+  },
+  {
+   "cid": "U15",
+   "star": "GJ 849",
+   "eb": "A002_Xd9668b_X841a",
+   "near": "A002_Xd9668b_X7c83",
+   "sep_h": -1.2521733331680298,
+   "freq": 230.87691030000002
+  },
+  {
+   "cid": "U18",
+   "star": "HD 14055",
+   "eb": "A002_X11adad7_X25c5e",
+   "near": "A002_X11adad7_X25dc7",
+   "sep_h": 1.2943200000127157,
+   "freq": 345.456382
+  },
+  {
+   "cid": "U21",
+   "star": "HD 31392",
+   "eb": "A002_X129754b_X6946",
+   "near": "A002_X129754b_X70a9",
+   "sep_h": 1.3206799999872842,
+   "freq": 231.19984480000002
+  },
+  {
+   "cid": "U22",
+   "star": "HD 69830",
+   "eb": "A002_X12209f7_X16edb",
+   "near": "A002_X12209f7_X163ba",
+   "sep_h": -1.5919466665056017,
+   "freq": 322.4324914
+  },
+  {
+   "cid": "U30",
+   "star": "HD14055",
+   "eb": "A002_Xfffde1_X3835",
+   "near": "A002_Xfffde1_X2b1a",
+   "sep_h": -1.7347199998961556,
+   "freq": 345.0099054
+  },
+  {
+   "cid": "U02",
+   "star": "61 Vir",
+   "eb": "A002_Xc079b5_X82f",
+   "near": "A002_Xc079b5_X1ae",
+   "sep_h": -1.9735866668489244,
+   "freq": 346.3138115
+  },
+  {
+   "cid": "A01",
+   "star": "CP-72 2713",
+   "eb": "A002_Xff0235_X4a6d",
+   "near": "A002_Xff0235_X502d",
+   "sep_h": 2.0461199998855593,
+   "freq": 344.2697461
+  },
+  {
+   "cid": "U27",
+   "star": "HD14055",
+   "eb": "A002_Xff99e1_X2b2ee",
+   "near": "A002_Xff99e1_X2c3bb",
+   "sep_h": 2.2270533333884344,
+   "freq": 344.7006991
+  },
+  {
+   "cid": "U28",
+   "star": "HD14055",
+   "eb": "A002_Xff99e1_X2c3bb",
+   "near": "A002_Xff99e1_X2b2ee",
+   "sep_h": -2.2270533333884344,
+   "freq": 345.5256112
+  },
+  {
+   "cid": "U20",
+   "star": "HD 23484 Gaia DR3 4856592239127350400",
+   "eb": "A002_X10b22d7_X2445",
+   "near": "A002_X10b22d7_X1d34",
+   "sep_h": -2.3309733335177105,
+   "freq": 230.7903809
+  },
+  {
+   "cid": "U16",
+   "star": "HD 10647",
+   "eb": "A002_Xff294f_Xaf70",
+   "near": "A002_Xff294f_Xc10b",
+   "sep_h": 2.4078133334053886,
+   "freq": 331.657036
+  },
+  {
+   "cid": "U19",
+   "star": "HD 207129 Gaia DR3 6564091190988411520",
+   "eb": "A002_Xc19d6f_X5706",
+   "near": "A002_Xc19d6f_X1c16",
+   "sep_h": -19.259146666526796,
+   "freq": 230.42261760000002
+  },
+  {
+   "cid": "U26",
+   "star": "HD14055",
+   "eb": "A002_Xff99e1_X24be0",
+   "near": "A002_Xff99e1_X2b2ee",
+   "sep_h": 21.55835999992159,
+   "freq": 331.70776159999997
+  }
+ ],
+ "conf_census_day": 38,
+ "conf_census_adopted": 38,
+ "unattributed_recovered": [],
+ "same_session_over_a_day": [
+  [
+   "A002_Xd9668b_Xa9df",
+   "A002_Xd9668b_X3a90",
+   1.0171522222299245
+  ],
+  [
+   "A002_Xd9668b_X3a90",
+   "A002_Xd9668b_Xa9df",
+   1.0171522222299245
+  ]
+ ]
+}

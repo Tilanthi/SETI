@@ -1,0 +1,169 @@
+\section*{Acknowledgements}
+This paper makes use of the following ALMA data: the \NProjCodes{} projects
+listed in Table~\ref{tab:projcodes}, each cited as \texttt{ADS/JAO.ALMA\#}
+followed by its project code. The \NEB{} primary-census execution blocks
+searched span \PrEbDateFirst{} to \PrEbDateLast{}, and we thank the principal
+investigators and teams who proposed and obtained
+them.\ProjCodeUnresClause{} ALMA is a partnership of ESO
+(representing its member states), NSF (USA) and NINS (Japan), together with NRC
+(Canada), NSTC and ASIAA (Taiwan), and KASI (Republic of Korea), in cooperation
+with the Republic of Chile. The Joint ALMA Observatory is operated by ESO,
+AUI/NRAO and NAOJ. This work has made use of data from the European Space
+Agency (ESA) mission {\it Gaia} \citep{GaiaDR3}, processed by the {\it Gaia}
+Data Processing and Analysis Consortium (DPAC). This research has made use
+of the SIMBAD database \citep{SIMBAD2000} (CDS, Strasbourg, France); of the
+NASA Exoplanet Archive \citep{NEA2013}, which is operated by the California
+Institute of Technology under contract with the National Aeronautics and
+Space Administration under the Exoplanet Exploration Program; and of the
+Splatalogue spectral-line database \citep{Splatalogue2007}.
+
+\emph{Use of generative artificial intelligence.} Large language models were
+used in this work. They wrote most of the software: the archival retrieval and
+calibration scripts, the search and vetting pipeline, the statistical tests,
+and the generators that produce every number, table and figure in this paper.
+They also drafted text, which the authors revised. The authors set the
+scientific question, chose every criterion, and are responsible for the
+content of this paper.
+
+\emph{Testing and validation of that analysis.} No result here is accepted
+on a model's assertion. No number in this paper is typed: each is written by
+the program that computes it from the data, so a value in the text cannot
+differ from the analysis behind it. A separate audit re-derives the
+identities that must hold among the published values -- counts that must
+partition, quantities that must sum, numbers reached by two routes that must
+agree -- and refuses the paper where one does not. Every assertion in the
+analysis was first made to fail on purpose, on deliberately wrong input,
+before it was relied on, since an assertion that has never fired is no
+evidence that anything is right. Every reference cited here has been checked
+against its source of record.
+
+\emph{Software.} The pipeline depends on \textsc{casa}~6.7.6
+\citep{CASA2022}, \textsc{python}~3 with \textsc{astropy} \citep{Astropy2022}, \textsc{numpy}
+\citep{Harris2020} and \textsc{scipy} \citep{Virtanen2020}, and the ALMA Science
+Archive and SIMBAD TAP interfaces through \textsc{astroquery} \citep{Ginsburg2019};
+all are free and open-source, at the versions cited.
+
+\emph{Author contributions.} G.J.W.\ conceived the survey, defined the target sample and the selection
+criteria, and wrote the manuscript. R.D.\ built and operated the archival
+retrieval, calibration and search pipeline, implemented the spatial control
+statistic and the injection--recovery campaigns, and produced the per-window
+catalogue and its regeneration scripts. Both authors designed the vetting
+procedure, chose the masked species, carried out the statistical
+validation reported in \S\ref{sec:statistic} and
+Appendix~\ref{app:falsealarm}, and agreed the dispositions of
+the crossing ledger.
+%% Authors to confirm this division before submission.
+
+\emph{Funding.} This work received no dedicated funding. It used public archival data and
+no observing time was awarded for it.
+%% Authors to replace this if any grant supported the work.
+
+\emph{Competing interests.} The authors declare no competing interests. VBRL Holdings is a privately
+held company through which R.D.\ conducts independent research, named
+here solely as his affiliation; it had no role in the design of the
+survey, the selection of targets, the analysis, the decision to publish
+or the content of this paper, and provided no funding for the work.
+%% Authors to confirm this wording, which is accurate only if the company's
+%% involvement was indeed nil.
+
+\section*{Data availability}
+\label{sec:data}
+Every observation this paper rests on is public, and is identified here
+precisely enough to be fetched. The \NEB{} primary-census execution blocks and
+the blocks of every other set named in Table~\ref{tab:blockledger} are held in
+the ALMA Science Archive under the \NProjCodes{} project codes of
+Table~\ref{tab:projcodes}, and are retrieved there by the execution-block
+identifier, which the crossing ledger gives for every one of the
+\EvNCrossRaw{} threshold crossings. ALMA's own citation
+convention for archival data is the project code rather than a persistent
+identifier, so the archive's identifiers are given in place of one, which is
+the recommended practice where a data set carries none of its own
+\citep{Chen2022}. The
+ancillary catalogues are public in the same sense: Gaia~DR3 for the astrometry
+and the colours, the NASA Exoplanet Archive for the planet counts, and the
+CDMS and JPL line catalogues through Splatalogue for the mask, queried once on
+\McQueryDate.
+
+The derived results are in the paper. Table~\ref{tab:blockledger} partitions
+the blocks, windows, stars, systems and hours of every set the search defines
+and gives the five fates of the unprocessed blocks;
+Table~\ref{tab:counts} carries the headline counts and the crossing
+partition; Appendix~\ref{app:persys} and
+Table~\ref{tab:persys} give the sensitivity, the frequency, the channel
+width, the covered bandwidth and the confirmability of every system of the
+carrier search;
+Table~\ref{tab:ledger} samples the crossing ledger, whose
+\EvNCrossRaw{} rows give each crossing's frequencies in both frames, its
+stellar and control statistics, the nearest masked transition and the
+recurrence test;
+Table~\ref{tab:cand} gives the two leading events in full; and
+Table~\ref{tab:holdout} does the same for the reserved hold-out.
+
+%% ★★★ THE MACHINE-READABLE FORM OF TWO PUBLISHED TABLES (referee 2, minor 11),
+%% as arXiv ANCILLARY FILES -- `anc/` in the submission package.  This journal
+%% publishes the arXiv PDF itself and hosts no supporting information, so an
+%% ancillary file is the mechanism available, and it is the right one: arXiv's
+%% own first listed use for it is "raw data for tables and plots in the
+%% article" (info.arxiv.org/help/ancillary_files.html).
+%% ★★ WHAT THIS PARAGRAPH MAY PROMISE IS LIMITED BY WHAT THE FILES HOLD, and
+%% that is why the two column lists are MACROS: `si_r18.py` builds
+%% \SiCatColList and \SiLdgColList phrase by phrase from the headers of the
+%% files on disk and asserts that the phrases cover those headers exactly and
+%% in order, so this sentence cannot promise a column a file does not carry.
+%% The row counts are the paper's own published counts, asserted against the
+%% files in the same generator (S1, S7).
+%% ★ An ancillary file is not refereed and is not part of the article.  So
+%% nothing here is offered as evidence, no claim rests on it and no identifier
+%% of ours is quoted.  ★★ AND THE TWO FILES ARE NOT THE SAME KIND OF THING,
+%% which the sentence must not blur: the ledger is the machine-readable form of
+%% a table this paper typesets in full, while the per-window catalogue is the
+%% window-level measurement the paper's counts are formed from and is typeset
+%% nowhere -- \NWindows{} rows would be forty pages.  Table~\ref{tab:persys} is
+%% per SYSTEM, from each system's best window, so it is not that file either.
+%% A first draft of this paragraph said both files held published tables; it
+%% was wrong about the catalogue, and the distinction is the whole value of
+%% saying only what the files contain.
+%% ★★★★ r20-final: THERE ARE THREE FILES NOW, AND TWO OF THEM CARRY ROWS THE
+%% ARTICLE NO LONGER PRINTS.  Glenn approved taking the crossing ledger and
+%% the master count table out of the typeset article; the article keeps a
+%% computed sample of the first and the accounting rows of the second, and the
+%% full content of both is attached as data.  The counts file is written by
+%% `counts_r15.py` itself, from the same declared row list as the table, and
+%% its A14 asserts the two agree row for row and value for value -- the
+%% alternative, a second generator for the data form of a table, is how a
+%% table and its own data file come to disagree.
+%% ★★ THE FILENAMES ARE DELIBERATELY NOT WRITTEN HERE, AND THE REASON IS NOT
+%% AN arXiv RULE.  arXiv's ancillary-files page forbids TeX files inside
+%% `anc/` and pointers to that directory from the code the build compiles; it
+%% does not forbid naming a file in prose, and arXiv's own abstract page
+%% lists the ancillary files by name.  So `arxivset.sh`'s A13 -- which fails
+%% the build on any ancillary basename appearing in the LaTeX sources -- is
+%% STRICTER than the rule it was written from, and this paragraph is written
+%% the way it is on its own merits: each file is named by what it is, which is
+%% what a reader needs in any case, and A13's two-sided promise/file clause
+%% then polices the three descriptions against the three files in both
+%% directions.  One plain-text filename here would be legal; it would also be
+%% the one thing in the paragraph that goes stale if a file is renamed.
+Three files accompany the paper on the arXiv as ancillary files, served
+beside the article and not part of it. The per-window catalogue
+carries one row for each of the
+\NWindows{} searched spectral windows, with \SiCatColList. The crossing ledger
+carries one row for each of the \EvNCrossRaw{} threshold crossings, with
+\SiLdgColList. The master counts carry all \MtCountRows{} rows of
+Table~\ref{tab:counts}, with the value of each and whether the article prints
+it. Each file is plain tab-separated text and describes its own columns
+in its own header. The ledger file holds every row of the ledger
+Table~\ref{tab:ledger} samples, in a form a program can read; the catalogue holds the window-level measurements from which the counts,
+the coverage and the sensitivity of this paper are formed.
+
+What a reader can and cannot repeat is worth saying plainly. The observations
+can be obtained in full from the archive and the method is specified in enough
+detail to be reimplemented, so the search can be carried out again
+independently, which is the stronger test in any case. The calibrated
+visibilities, the per-window products and the code that produced them are not
+distributed with this paper, so this particular execution of the search cannot
+be re-run by a reader. The line list is a dated query of a public catalogue
+and can be repeated exactly as it stands. The hold-out rule of
+Appendix~\ref{sec:heldout} and the disposition criteria were settled before
+the data they govern were searched, but a reader has no way to check that,
+and nothing here is offered as evidence on the strength of it.

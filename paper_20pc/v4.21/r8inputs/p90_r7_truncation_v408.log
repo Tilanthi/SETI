@@ -1,0 +1,39 @@
+[2026-09-27T04:55:05Z] === truncation start; free 153 GB
+[2026-09-27T04:55:05Z] done line: done=51/56
+[2026-09-27T04:55:05Z] kill driver 1879757
+[2026-09-27T04:55:05Z] kill driver 1879758
+[2026-09-27T04:55:05Z] kill driver 1879760
+[2026-09-27T04:55:08Z] signalled 0 campaign processes
+[2026-09-27T04:55:18Z] remaining campaign procs: 0
+0
+[2026-09-27T04:55:18Z] --- in-flight units (claim with no out/*.json):
+[2026-09-27T04:55:18Z]   TRUNCATED: A002_Xd40be0_X749c_spw1
+[2026-09-27T04:55:18Z]   TRUNCATED: A002_Xd40be0_X749c_spw2
+[2026-09-27T04:55:18Z]   TRUNCATED: A002_Xd40be0_X749c_spw3
+[2026-09-27T04:55:18Z]   TRUNCATED: A002_Xe48598_Xff51_spw3
+[2026-09-27T04:55:18Z]   TRUNCATED: A002_Xe4f0a6_X3658_spw3
+[2026-09-27T04:55:18Z] --- work dirs removed:
+[2026-09-27T04:55:18Z]   rm A002_Xd40be0_X749c_spw1 (6G)
+[2026-09-27T04:55:19Z]   rm A002_Xd40be0_X749c_spw2 (42G)
+[2026-09-27T04:55:26Z]   rm A002_Xd40be0_X749c_spw3 (42G)
+[2026-09-27T04:55:30Z]   rm A002_Xe48598_Xff51_spw3 (15G)
+[2026-09-27T04:55:32Z]   rm A002_Xe4f0a6_X3658_spw3 (33G)
+[2026-09-27T04:55:37Z] === truncation done; free 287 GB; scored units 51
+[2026-09-27T05:35:14Z] === truncation start; free 116 GB
+[2026-09-27T05:35:14Z] done line: done=51/56
+[2026-09-27T05:35:14Z] kill driver 2573320
+[2026-09-27T05:35:14Z] kill driver 2573322
+[2026-09-27T05:35:17Z] signalled 9 campaign processes
+[2026-09-27T05:35:27Z] remaining campaign procs: 0
+0
+[2026-09-27T05:35:27Z] --- in-flight units (claim with no out/*.json):
+[2026-09-27T05:35:27Z]   TRUNCATED: A002_Xd40be0_X749c_spw2
+[2026-09-27T05:35:27Z]   TRUNCATED: A002_Xd40be0_X749c_spw3
+[2026-09-27T05:35:27Z]   TRUNCATED: A002_Xe48598_Xff51_spw3
+[2026-09-27T05:35:27Z]   TRUNCATED: A002_Xe4f0a6_X3658_spw3
+[2026-09-27T05:35:27Z] --- work dirs removed:
+[2026-09-27T05:35:27Z]   rm A002_Xd40be0_X749c_spw2 (41G)
+[2026-09-27T05:35:33Z]   rm A002_Xd40be0_X749c_spw3 (41G)
+[2026-09-27T05:35:40Z]   rm A002_Xe48598_Xff51_spw3 (15G)
+[2026-09-27T05:35:42Z]   rm A002_Xe4f0a6_X3658_spw3 (33G)
+[2026-09-27T05:35:47Z] === truncation done; free 244 GB; scored units 51
