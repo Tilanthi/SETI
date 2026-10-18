@@ -1,0 +1,87 @@
+{
+ "provenance": {
+  "item1": "host /data/SETI/r8sens/item1_result.json + item1_power.json; SENSITIVITY_UPGRADES.md Item 1",
+  "item2": "host /data/SETI/r8sens/item2/summ.txt + noise2.json; Item 2",
+  "item3": "host /data/SETI/r8sens/item3/hitsurvey.json + sweep2; Item 3",
+  "item4": "measured in full from r8inputs/scale_v406.jsonl by trigunif_v406.py",
+  "matched_filter": "SENSITIVITY_UPGRADES.md sec.7, analytic with the Hann autocovariance (0.375,0.25,0.0625); covariance verified by sens/chancorr.py",
+  "note": "every value here is an OUTPUT of a measurement recorded in referee_r8/; the asserted relations among them are in trigunif_v406.py"
+ },
+ "alpha_window": 0.01,
+ "route_empirical_512": 33.5,
+ "route_loose_join": 41.1,
+ "nulls": {
+  "morph": {
+   "p90_factor": 1.1602373887240365,
+   "p90_lo": 1.0700651931944665,
+   "p90_hi": 1.2136564770715352,
+   "p90_sd": 0.06006131524493062,
+   "p90_boot_n": 200,
+   "far_log_slope_per_sigma": -3.835315717161862,
+   "need_frac_for_5pct": 0.6166584567277957,
+   "need_frac_for_10pct": 0.8530492612016847,
+   "need_frac_for_20pct": 0.9784054803666293,
+   "got_frac": 0.13309352517985606,
+   "thresh_old": 4.999999999999968,
+   "thresh_new": 4.969999999999969,
+   "flux_gain": 0.9940000000000001,
+   "tau90_old": 6.61,
+   "tau90_new": 7.666666666666671,
+   "completeness_cost_lo": 0.05,
+   "completeness_cost_hi": 0.07,
+   "hanning_rho1": 0.6666666666666666,
+   "auc_best": 0.728,
+   "auc_best_stat": "the shoulder ratio",
+   "cut_w25": 5,
+   "cut_zmax": 4.012727331241244,
+   "keep_carrier": 0.9583333333333334,
+   "reject_resolved_line": 111,
+   "reject_resolved_line_n": 111,
+   "reject_transient": 107,
+   "reject_transient_n": 107
+  },
+  "quant": {
+   "net": 0.997,
+   "net_err": 0.003,
+   "gross_signal": 1.0081,
+   "noise_infl_lo": 1.0109,
+   "noise_infl_hi": 1.0162,
+   "total_align_loss": 0.06669999999999998,
+   "integer_shift_ceiling_loss": 0.05179999999999996,
+   "injection_draws_continuous": true,
+   "draw_sites": [
+    "inject_vis_v401.py:162-163",
+    "campaign_m3a_v399.py:301,319",
+    "campaign_p90_r7.py:569,595"
+   ],
+   "net_rank": 0.992
+  },
+  "dedup": {
+   "dedup_windows_in_our_code": 0,
+   "n_windows": 12,
+   "n_monotone": 10,
+   "yield_ratio_double": 1.076,
+   "yield_ratio_quarter": 0.562,
+   "peak_move_max": 0.034,
+   "ceiling_range_factor": 8,
+   "hitlist_cap": 50,
+   "n_truncated_hitlists": 3,
+   "n_released_records": 3027
+  }
+ },
+ "matched_filter": {
+  "gain_at_centre": 1.134,
+  "gain_fixed_mean_offset": 1.08,
+  "gain_fixed_at_boundary": 0.972,
+  "gain_matched_mean_offset": 1.172,
+  "gain_matched_at_boundary": 1.266,
+  "naive_lag1_only": 1.224744871391589,
+  "predicted_lag1": 0.6666666666666666,
+  "predicted_lag2": 0.16666666666666666,
+  "measured_lag1": 0.651,
+  "measured_lag2": 0.145,
+  "n_windows": 25,
+  "n_within_008": 18,
+  "gain_fixed_at_centre": 1.134
+ }
+}

@@ -1,0 +1,941 @@
+{
+ "round": 800,
+ "drive": 0,
+ "census": {
+  "day": 38,
+  "yr": 12,
+  "norep": 23
+ },
+ "recur": {
+  "day": 40,
+  "yr": 13,
+  "norep": 21
+ },
+ "n_rec_eb": 166,
+ "n_rec_eb_outside_census": 42,
+ "moved": [
+  "CD-57 1054",
+  "CP-72 2713"
+ ],
+ "gained_day": [
+  "CD-57 1054",
+  "CP-72 2713"
+ ],
+ "per_system": {
+  "51 Eri": {
+   "census": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "recur": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "n_extra": 0
+  },
+  "61 Vir": {
+   "census": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "recur": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "n_extra": 8
+  },
+  "ALMA J153702653-33192492": {
+   "census": [
+    true,
+    false,
+    true,
+    true
+   ],
+   "recur": [
+    true,
+    false,
+    true,
+    true
+   ],
+   "n_extra": 34
+  },
+  "AU Mic": {
+   "census": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "recur": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "n_extra": 6
+  },
+  "Barta 161 12": {
+   "census": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "recur": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "n_extra": 0
+  },
+  "CD-57 1054": {
+   "census": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "recur": [
+    true,
+    false,
+    true,
+    true
+   ],
+   "n_extra": 2
+  },
+  "CP-72 2713": {
+   "census": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "recur": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "n_extra": 6
+  },
+  "GJ 2006A": {
+   "census": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "recur": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "n_extra": 0
+  },
+  "GJ 849": {
+   "census": [
+    true,
+    false,
+    true,
+    true
+   ],
+   "recur": [
+    true,
+    false,
+    true,
+    true
+   ],
+   "n_extra": 6
+  },
+  "GJ14 Gaia DR3 383426372059603712": {
+   "census": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "recur": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "n_extra": 0
+  },
+  "GL 3379 Gaia DR3 3316364602541746048": {
+   "census": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "recur": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "n_extra": 0
+  },
+  "HD 10647": {
+   "census": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "recur": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "n_extra": 11
+  },
+  "HD 139084": {
+   "census": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "recur": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "n_extra": 0
+  },
+  "HD 139664": {
+   "census": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "recur": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "n_extra": 0
+  },
+  "HD 155555C": {
+   "census": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "recur": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "n_extra": 0
+  },
+  "HD 207129 Gaia DR3 6564091190988411520": {
+   "census": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "recur": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "n_extra": 5
+  },
+  "HD 23484 Gaia DR3 4856592239127350400": {
+   "census": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "recur": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "n_extra": 5
+  },
+  "HD 285968": {
+   "census": [
+    true,
+    false,
+    true,
+    true
+   ],
+   "recur": [
+    true,
+    false,
+    true,
+    true
+   ],
+   "n_extra": 0
+  },
+  "HD 31392": {
+   "census": [
+    true,
+    false,
+    true,
+    true
+   ],
+   "recur": [
+    true,
+    false,
+    true,
+    true
+   ],
+   "n_extra": 9
+  },
+  "HD 38858 Gaia DR3 3023711269067191296": {
+   "census": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "recur": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "n_extra": 0
+  },
+  "HD 45184": {
+   "census": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "recur": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "n_extra": 0
+  },
+  "HD 48370": {
+   "census": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "recur": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "n_extra": 0
+  },
+  "HD 69830": {
+   "census": [
+    true,
+    false,
+    true,
+    true
+   ],
+   "recur": [
+    true,
+    false,
+    true,
+    true
+   ],
+   "n_extra": 12
+  },
+  "HD 89452": {
+   "census": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "recur": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "n_extra": 0
+  },
+  "HD110411": {
+   "census": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "recur": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "n_extra": 2
+  },
+  "HD14055": {
+   "census": [
+    true,
+    false,
+    true,
+    true
+   ],
+   "recur": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "n_extra": 217
+  },
+  "HD161868": {
+   "census": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "recur": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "n_extra": 14
+  },
+  "HD170773": {
+   "census": [
+    true,
+    false,
+    true,
+    true
+   ],
+   "recur": [
+    true,
+    false,
+    true,
+    true
+   ],
+   "n_extra": 5
+  },
+  "HD172555": {
+   "census": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "recur": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "n_extra": 0
+  },
+  "HD202628": {
+   "census": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "recur": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "n_extra": 0
+  },
+  "HD377": {
+   "census": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "recur": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "n_extra": 0
+  },
+  "HD53143 Gaia DR3 5479222240596469632": {
+   "census": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "recur": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "n_extra": 0
+  },
+  "HD61005": {
+   "census": [
+    true,
+    false,
+    true,
+    true
+   ],
+   "recur": [
+    true,
+    false,
+    true,
+    true
+   ],
+   "n_extra": 0
+  },
+  "HIP 490": {
+   "census": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "recur": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "n_extra": 0
+  },
+  "HIP10679": {
+   "census": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "recur": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "n_extra": 0
+  },
+  "HN Lib": {
+   "census": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "recur": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "n_extra": 0
+  },
+  "HR 1010 Gaia DR3 4722135642226902656": {
+   "census": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "recur": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "n_extra": 8
+  },
+  "L 836-122": {
+   "census": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "recur": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "n_extra": 0
+  },
+  "LHS 1140": {
+   "census": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "recur": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "n_extra": 5
+  },
+  "LP 353-51": {
+   "census": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "recur": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "n_extra": 0
+  },
+  "LP 476-207 384128": {
+   "census": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "recur": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "n_extra": 0
+  },
+  "NAME AT Mic AB Gaia DR3 6792436799475128960": {
+   "census": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "recur": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "n_extra": 0
+  },
+  "PM J034331958": {
+   "census": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "recur": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "n_extra": 0
+  },
+  "TRAPPIST-1": {
+   "census": [
+    true,
+    false,
+    true,
+    true
+   ],
+   "recur": [
+    true,
+    false,
+    true,
+    true
+   ],
+   "n_extra": 0
+  },
+  "TWA 3A 696000": {
+   "census": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "recur": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "n_extra": 0
+  },
+  "TWA 7": {
+   "census": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "recur": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "n_extra": 0
+  },
+  "TYC 2211-1309-1": {
+   "census": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "recur": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "n_extra": 0
+  },
+  "UCAC2 20312880": {
+   "census": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "recur": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "n_extra": 0
+  },
+  "UCAC3 176-23654": {
+   "census": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "recur": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "n_extra": 0
+  },
+  "V star TX PsA": {
+   "census": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "recur": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "n_extra": 0
+  },
+  "WD 0407179": {
+   "census": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "recur": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "n_extra": 0
+  },
+  "Wolf 219": {
+   "census": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "recur": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "n_extra": 0
+  },
+  "bet Pic": {
+   "census": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "recur": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "n_extra": 4
+  },
+  "eps Eri": {
+   "census": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "recur": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "n_extra": 0
+  },
+  "eta Crv": {
+   "census": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "recur": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "n_extra": 2
+  },
+  "hd107146": {
+   "census": [
+    true,
+    false,
+    true,
+    true
+   ],
+   "recur": [
+    true,
+    false,
+    true,
+    true
+   ],
+   "n_extra": 0
+  },
+  "hd92945": {
+   "census": [
+    true,
+    false,
+    true,
+    true
+   ],
+   "recur": [
+    true,
+    false,
+    true,
+    true
+   ],
+   "n_extra": 0
+  },
+  "j1256-1257": {
+   "census": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "recur": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "n_extra": 0
+  },
+  "kap CrB": {
+   "census": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "recur": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "n_extra": 0
+  },
+  "lp 876-10 Gaia DR3 6623351805412369024": {
+   "census": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "recur": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "n_extra": 0
+  },
+  "tau Cet": {
+   "census": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "recur": [
+    true,
+    false,
+    true,
+    false
+   ],
+   "n_extra": 0
+  }
+ }
+}

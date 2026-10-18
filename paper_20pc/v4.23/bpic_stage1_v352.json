@@ -1,0 +1,64 @@
+{
+ "_doc": "The beta Pictoris Band 6 window that is itself one of the four stage-1 spatial outliers, re-searched in an independent execution block of the same MOUS with the unmodified frozen pipeline. Every number below was read from the two blocks' own products and search arrays, read-only on the processing host; nothing was downloaded and no compute was started beyond reading the stored arrays.",
+ "mous": "uid://A001/X133d/Xbb5",
+ "flagged_frequency_GHz": 230.5161279268905,
+ "blocks": {
+  "original": {
+   "eb": "A002_Xd9668b_X3a90",
+   "star_peak_snr": 11.6809720993042,
+   "star_peak_chan": 1782,
+   "star_peak_freq_GHz": 230.5161279268905,
+   "star_peak_drift_Hz_s": -6.8012,
+   "control_peak_snr": 9.116724967956543,
+   "n_control_ge_star": 0,
+   "n_control": 512,
+   "n_hits_above_threshold": 114,
+   "src_region_peak_snr": 12.7783842086792,
+   "rms_combined_mJy": 6.6604,
+   "n_int": 385,
+   "n_chan": 3534,
+   "chanwidth_Hz": 15258.7890625,
+   "control_snr_percentiles_50_90_99_100": [
+    5.223605155944824,
+    5.590004920959473,
+    6.111221790313721,
+    9.116724967956543
+   ],
+   "freq_lo_GHz": 230.54331908899988,
+   "freq_hi_GHz": 230.48940978724207,
+   "detection": true
+  },
+  "repeat": {
+   "eb": "A002_Xd9668b_Xa9df",
+   "star_peak_snr": 8.947596549987793,
+   "star_peak_chan": 1787,
+   "star_peak_freq_GHz": 230.51602537791973,
+   "star_peak_drift_Hz_s": 3.3989453315734863,
+   "control_peak_snr": 8.407160758972168,
+   "n_control_ge_star": 0,
+   "n_control": 512,
+   "n_hits_above_threshold": 106,
+   "src_region_peak_snr": 10.725074768066406,
+   "rms_combined_mJy": 6.346,
+   "n_int": 385,
+   "n_chan": 3534,
+   "chanwidth_Hz": 15258.7890625,
+   "control_snr_percentiles_50_90_99_100": [
+    5.207736015319824,
+    5.5829188346862795,
+    5.991363635063172,
+    8.407160758972168
+   ],
+   "freq_lo_GHz": 230.54329283397442,
+   "freq_hi_GHz": 230.4893835322166,
+   "detection": true,
+   "searched_utc": "2026-09-12T13:49:05Z",
+   "n_windows_searched": 7,
+   "T_star_at_flagged_frequency": 8.09536075592041,
+   "chan_nearest_flagged_frequency": 1780,
+   "freq_of_that_chan_GHz": 230.51613218944317,
+   "n_control_ge_T_at_flagged_frequency": 2
+  }
+ },
+ "note": "The repeat block is a stage-1 spatial outlier in its own right: the window maximum at the star exceeds all 512 control statistics. The margin collapses, however, from 11.68/9.12 to 8.95/8.41, and at the original block's own peak frequency the star reaches only 8.10, which two controls exceed."
+}
