@@ -1,0 +1,130 @@
+\section{Conclusions}
+\label{sec:conclusions}
+
+\begin{enumerate}[leftmargin=1.6em,itemsep=4pt,topsep=4pt,parsep=0pt]
+
+\item \emph{What is new.} In the millimetre band the record for nearby stars
+is two measurements of one spectral line: \citet{Steffes1994} and
+\citet{Mauersberger1996} each covered no more than \SbPriorBandMHz\,MHz at
+narrowband resolution around the \SbPriorFreqGHz\,GHz positronium line, with
+no search over drift rate and
+no epoch-to-epoch test of persistence. This survey covers at
+least \SbPriorRatio{} times that bandwidth, searches a grid of drift rates,
+and asks of every event whether it returns (\S\ref{sec:background}).
+
+\item \emph{What was searched.} The carrier search is \NWinA{} fine-channel
+windows toward \NSysClassA{} systems within 40\,pc, covering \CvUnionA\,GHz
+of unique frequency in \CovNIslands{} disjoint intervals. In \EdrNWinA{} of
+those windows the track is long enough for the searched drift to cross a
+channel, covering \EdrUnionGHz\,GHz toward \EdrNSys{} systems. A coarse-channel
+search for a steady unresolved excess adds \NWinB{} windows toward
+\PrSysClassB{} systems. Both come from one pass through \NEB{} public ALMA
+execution blocks and together span \SurvFreqLo--\SurvFreqHi\,GHz
+(\S\ref{sec:sample}).
+
+\item \emph{How deep.} The median system's best window would have produced a
+threshold crossing from a carrier of $\EirpNinetySysMedA$\,W nine times in
+ten, and \NSysEfifteen{} systems reach $10^{15}$\,W on that measure. Three
+things qualify it. It is the completeness of one observation and not of a
+confirmation, which needs a second and separated epoch
+(\S\ref{sec:confirmability}); it is an estimate rather than a measurement
+for \SmcNEstSys{} of the \NSysClassA{} systems, whose best window was not
+itself injected into; and it leaves out atmospheric decorrelation, which a
+real carrier suffers and an injected one does not, against which a
+conservative term of comparable size runs the other way, so the net bias is
+of either sign by window (\S\ref{sec:pninetysel}).
+
+\item \emph{What was found.} The search produced \EvNCrossRaw{} threshold
+crossings: \CkNCrossCenA{} Class~A in the primary census, \PrFlagXrossWord{}
+Class~B, and \CeNTailCrossWord{} Class~A in archival-tail blocks. The
+\PrFlagXrossWord{} Class~B crossings are the whole of that search's crossing
+population and all come from the single execution block that fails the
+data-quality criterion of Appendix~\ref{sec:blockquality}, so the
+quality-passing data hold \EvNCrossQp{} crossings, all of them from the
+carrier search. \EvNAttrQp{} of those are attributed to
+a catalogued molecular transition at the star's own velocity and
+\EvNUnattrQp{} are not.
+An attribution here is a coincidence of frequency and velocity and not an
+identification: \LnAttrSupp{} of the \EvNAttrQp{} carry evidence beyond the
+frequency match -- a second transition of the same species, catalogued gas
+on the sightline, or the crossing's own recurrence -- and
+\LnAttrCoincWord{} rest on the coincidence alone. The unattributed count is
+what these fields' own control positions predict, \CeExp{} expected against
+the \CeObs{} found, with probability \CeProbNull. That is consistency and
+not a demonstration that the crossings are noise: a further \CeAddLim{}
+would still have been consistent
+(\S\ref{sec:technosearch}, \S\ref{sec:trigunif}).
+
+\item \emph{What the repeat observations exclude.} A transmitter on an
+orbiting body arrives at a frequency its own motion has moved, so every
+unattributed crossing another block covers was searched again across that
+whole window at every drift of the grid. \WdNExc{} of the \WdNCov{} covering
+windows hold a statistic above the trigger, which is the number chance
+predicts in trials of that size, \WdExpect. Each of those is itself a
+crossing, so of the \TjNCandPair{} pairs one carrier might have produced, the
+\TjNPair{} with a fitted drift and a block epoch for both members were asked
+whether a single trajectory fits both. The \TjNPower{} whose
+fitted drifts the grid resolves all fail a constant-acceleration track, but
+the exclusion claimed is the weaker and safer one -- that no trajectory
+inside the searched grid fits both -- and that separates only \TjNExcl.
+The remaining \TjNOpen{} cannot be separated -- \TjNPairEdge{} of them
+marked \emph{edge}, where one fitted rate is only a lower bound -- and are
+\emph{open}: neither a confirmation nor an exclusion, with only the
+agreement of their number with chance bearing on them. Read instead at the single cell
+its own discovery predicts -- a narrower question, which asks a carrier to be
+radiating in both observations \emph{and} to have returned to that cell, its
+stellar-frame frequency agreeing between the epochs to within half a native
+channel, and not a test of a
+persistent transmitter of any kind -- no crossing returned: the largest
+statistic at any predicted cell is \RcTMax{} against a trigger of
+\StageNullTrig. The same reading recovers \MkAttrRecur{} of the
+\MkAttrTested{} line-attributed crossings it was tested on, each in a
+different observing session more than a day away
+(Table~\ref{tab:confirm}); what those recoveries establish divides with the
+width of the line they fall on, so the registration of a single cell is
+tested by the \RgRegNUnres{} readings of \RgRegStar{} alone, and the rest
+test the frame correction only to the width of a resolved line. Each
+exclusion's depth was measured by injection as well as calculated, the
+measured one is the weaker and is the one quoted, and at \HjEtaStar{} the
+injection is recovered \HjEtaMeas{} of the time where the calculation gives
+one, so that crossing is reported as untested
+(\S\ref{sec:etacrv}).
+
+\item \emph{What could have been confirmed at all.} A search limit and a
+confirmation limit are different statements. Of the \NSysClassA{} systems the
+carrier search covered, \ZcConfSysDay{} were observed again in another
+observing session more than a day later at a frequency the first block
+covered -- counting every
+block the recurrence test reads, not the census alone -- and \ZcConfSysYr{}
+more than a year later. For the remaining \ZcNoRepSys{} no repeat exists, so
+no transmitted power would have made a confirmation possible. Those
+\ZcConfSysDay{} are confirmable for a carrier whose stellar-frame frequency at
+the two epochs agrees to within half a native channel; one accelerating as
+these crossings do, at \ZtALosLo{} to \ZtALosHi\,m\,s$^{-2}$, is back inside
+that interval for a fraction of order
+$10^{\RgPhaseExpLo}$--$10^{\RgPhaseExpHi}$ of the phases of an orbit at the
+searched ceiling, so under this criterion none of the \NSysClassA{} could have
+been confirmed except by that coincidence (\S\ref{sec:confirmability}).
+
+\item \emph{Stacking the epochs.} Combining each star's observations in its
+own rest frame deepens the flux limit by a median factor \SyStkGainMed. The
+deepest result is Proxima Centauri's: $\SzProxEirpCensus$\,W from the census
+blocks and $\StkProxEirpCal$\,W once the rest of the archive is added, in
+coarse \ChanBModeMHz\,MHz channels, so it bounds a steady unresolved excess
+and not a drifting carrier (\S\ref{sec:stack}). Stacking buys that depth
+with a tolerance of one channel, and \PxPlanet's own orbit carries a
+transmitter across \PxNChanWalk{} of them, so the stacked figure applies to
+the one body in that system only if the orbit is within
+\PxIncMaxDeg$^\circ$ of face-on. What applies at any inclination is the
+single-epoch limit, $\PxEirpSingle$\,W.
+
+\item \emph{What this does not constrain.} These limits hold only inside the
+domain actually searched. The drift grid stops at \DriftCeilLo\,nHz,
+\AccelSheikhPct{} per cent of the ceiling recommended for a general carrier
+search \citep{Sheikh2019}, so an unbound transmitter, one on a rapidly
+rotating planet, or one whose orbital and rotational accelerations together
+exceed that is not constrained here at all (\S\ref{sec:excludes}). What
+transfers beyond this archive is the obstacle: channelisation chosen by other
+observers, and not collecting area, decides which search is possible.
+
+\end{enumerate}

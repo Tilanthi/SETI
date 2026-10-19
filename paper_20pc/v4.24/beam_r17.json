@@ -1,0 +1,66 @@
+{
+ "adoption": {
+  "n_above_one_pct": 48,
+  "n_above_ten_pct": 12,
+  "n_sys_1e15": [
+   26,
+   26
+  ],
+  "resp_med": 0.999982,
+  "resp_min": 0.230832,
+  "shift_system": 0.00043834967866063224,
+  "shift_window": 0.004400790207060856,
+  "worst_ratio": 0.811945338468844,
+  "worst_star": "eps Eri"
+ },
+ "drive": null,
+ "epseri": {
+  "blocks": [
+   "A002_X99c183_X4f1e",
+   "A002_Xb9c01c_X2004",
+   "A002_Xba4d35_Xbb59",
+   "A002_Xba839d_X26d2",
+   "A002_Xba9cdb_X1a87",
+   "A002_Xbaedce_Xa06b",
+   "A002_Xe539c7_X12189",
+   "A002_Xe539c7_X4ec3",
+   "A002_Xe539c7_Xc742",
+   "A002_Xe59f51_X1822",
+   "A002_Xe5aacf_X1929"
+  ],
+  "c_range": [
+   0.7538797529790943,
+   0.8220664920715289
+  ],
+  "deeper_than_n_systems": 52,
+  "e90_best_fine": 117057372663366.34,
+  "hours": 6.585600304073758,
+  "n_off": 24,
+  "n_on": 20,
+  "n_win": 44,
+  "t_max": 4.647326946258545
+ },
+ "failures": [],
+ "floor": {
+  "c": 0.8311661119039861,
+  "census_worst_c": 0.8216970560666402,
+  "resp": 0.2231201706572062,
+  "tol": 0.1
+ },
+ "generated_by": "beam_r17.py",
+ "models": {
+  "airy_fwhm": {
+   "12.0": 1.1508459705801184,
+   "7.0": 1.1432895984439582
+  },
+  "airy_null": {
+   "12.0": 1.3595999999999384,
+   "7.0": 1.3427999999999403
+  },
+  "coef_doc": 1.13,
+  "coef_null": 1.22,
+  "dev_doc_max": 0.062040793457640575,
+  "dev_null_max": 0.3080146341453922
+ },
+ "round": 720
+}

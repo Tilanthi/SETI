@@ -1,0 +1,581 @@
+{
+ "_doc": "Topocentric offset of each crossing from the nearest telluric transition (O3, H2O, O2; selection and provenance in calib_r15.json). Key on (eb, freq), not on star name. dnu_MHz is signed positive; dv_kms is the same offset as a velocity at the crossing frequency. species names the nearest transition.",
+ "rows": [
+  {
+   "sample": "census",
+   "star": "BD05 1668",
+   "eb": "A002_Xc7fa6f_X28a8",
+   "freq_GHz": 224.7421894,
+   "dnu_MHz": 1311.8536000000022,
+   "dv_kms": 1749.9331849089365,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "BD05 1668",
+   "eb": "A002_Xc7fa6f_X28a8",
+   "freq_GHz": 226.7421894,
+   "dnu_MHz": 688.1463999999978,
+   "dv_kms": 909.8487637689298,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "BD05 1668",
+   "eb": "A002_Xc7fa6f_X28a8",
+   "freq_GHz": 240.1015606,
+   "dnu_MHz": 1008.2815999999875,
+   "dv_kms": 1258.9473323905129,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "BD05 1668",
+   "eb": "A002_Xc7fa6f_X28a8",
+   "freq_GHz": 242.1953106,
+   "dnu_MHz": 123.37739999999758,
+   "dv_kms": 152.71812619335032,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "61 Vir",
+   "eb": "A002_Xc079b5_X82f",
+   "freq_GHz": 346.3138115,
+   "dnu_MHz": 2808.1746000000276,
+   "dv_kms": 2430.944241526951,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "61 Vir",
+   "eb": "A002_Xc067f7_X822",
+   "freq_GHz": 345.5598724,
+   "dnu_MHz": 2054.23550000001,
+   "dv_kms": 1782.1638420533864,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "GJ 849",
+   "eb": "A002_Xd9668b_X841a",
+   "freq_GHz": 230.87691030000002,
+   "dnu_MHz": 404.60069999998086,
+   "dv_kms": 525.3718884400492,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "HD 285968",
+   "eb": "A002_Xd98580_X3bf6",
+   "freq_GHz": 230.5020791,
+   "dnu_MHz": 779.431899999996,
+   "dv_kms": 1013.7340455104337,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "HD 285968",
+   "eb": "A002_Xdb4b9a_X108f",
+   "freq_GHz": 230.51002160000002,
+   "dnu_MHz": 771.4893999999913,
+   "dv_kms": 1003.3694064212547,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "HD 285968",
+   "eb": "A002_Xdb7ab7_X5b4e",
+   "freq_GHz": 230.5115699,
+   "dnu_MHz": 769.9410999999964,
+   "dv_kms": 1001.3490211548062,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "AU Mic",
+   "eb": "A002_X899169_X1838",
+   "freq_GHz": 230.82522980000002,
+   "dnu_MHz": 456.2811999999685,
+   "dv_kms": 592.6113995671202,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "AU Mic",
+   "eb": "A002_Xa42f75_X319",
+   "freq_GHz": 230.6863687,
+   "dnu_MHz": 595.1423000000068,
+   "dv_kms": 773.4274633660893,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "eb": "A002_Xc66ce1_Xaa9",
+   "freq_GHz": 230.834752,
+   "dnu_MHz": 446.7589999999909,
+   "dv_kms": 580.2201686842164,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "HD 69830",
+   "eb": "A002_X12277ed_X178c6",
+   "freq_GHz": 321.2005269,
+   "dnu_MHz": 25.150100000028033,
+   "dv_kms": 23.473841623870022,
+   "species": "H2O"
+  },
+  {
+   "sample": "census",
+   "star": "HD 69830",
+   "eb": "A002_X12209f7_X16edb",
+   "freq_GHz": 322.4324914,
+   "dnu_MHz": 1206.8143999999738,
+   "dv_kms": 1122.0762949629564,
+   "species": "H2O"
+  },
+  {
+   "sample": "census",
+   "star": "LHS 1140",
+   "eb": "A002_Xd9d7c7_X6fd2",
+   "freq_GHz": 230.63546440000002,
+   "dnu_MHz": 646.0465999999724,
+   "dv_kms": 839.7663329895698,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "HD 207129 Gaia DR3 6564091190988411520",
+   "eb": "A002_Xc19d6f_X5706",
+   "freq_GHz": 230.42261760000002,
+   "dnu_MHz": 847.6646000000183,
+   "dv_kms": 1102.8581162754408,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "HD 23484 Gaia DR3 4856592239127350400",
+   "eb": "A002_X10b22d7_X2445",
+   "freq_GHz": 230.7903809,
+   "dnu_MHz": 491.1301000000094,
+   "dv_kms": 637.9689625824809,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "HD 10647",
+   "eb": "A002_Xff294f_Xaf70",
+   "freq_GHz": 331.657036,
+   "dnu_MHz": 1047.4829999999492,
+   "dv_kms": 946.8440865014508,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "eta Crv",
+   "eb": "A002_X122b6ff_X1041e",
+   "freq_GHz": 357.28146399999997,
+   "dnu_MHz": 348.3540000000503,
+   "dv_kms": 292.30148338775024,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "bet Pic",
+   "eb": "A002_Xf5d76d_Xeb8",
+   "freq_GHz": 115.26032550000001,
+   "dnu_MHz": 281.1255000000092,
+   "dv_kms": 731.2082825193977,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "bet Pic",
+   "eb": "A002_Xf5d76d_Xe19",
+   "freq_GHz": 115.2603454,
+   "dnu_MHz": 281.1454000000085,
+   "dv_kms": 731.2599162261034,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "bet Pic",
+   "eb": "A002_Xf5d76d_Xcc5",
+   "freq_GHz": 115.2603721,
+   "dnu_MHz": 281.17209999999614,
+   "dv_kms": 731.3291935834436,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "bet Pic",
+   "eb": "A002_Xf5d76d_X32f1",
+   "freq_GHz": 115.2606437,
+   "dnu_MHz": 281.44370000000345,
+   "dv_kms": 732.0339007582311,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "bet Pic",
+   "eb": "A002_Xf4df6f_Xc7",
+   "freq_GHz": 115.2620386,
+   "dnu_MHz": 280.53059999999823,
+   "dv_kms": 729.6501011063522,
+   "species": "H2O"
+  },
+  {
+   "sample": "census",
+   "star": "bet Pic",
+   "eb": "A002_X7116f1_X1785",
+   "freq_GHz": 230.527185,
+   "dnu_MHz": 754.3260000000009,
+   "dv_kms": 980.9743075347416,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "bet Pic",
+   "eb": "A002_X6f1341_X1484",
+   "freq_GHz": 230.5283785,
+   "dnu_MHz": 753.132500000007,
+   "dv_kms": 979.4171322585653,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "bet Pic",
+   "eb": "A002_Xa7a216_X23e4",
+   "freq_GHz": 230.5272612,
+   "dnu_MHz": 754.2497999999905,
+   "dv_kms": 980.8748879024358,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "bet Pic",
+   "eb": "A002_Xd9668b_Xa9df",
+   "freq_GHz": 230.51602540000002,
+   "dnu_MHz": 765.4855999999854,
+   "dv_kms": 995.5351658930712,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "bet Pic",
+   "eb": "A002_Xd9668b_X3a90",
+   "freq_GHz": 230.51612790000001,
+   "dnu_MHz": 765.3830999999773,
+   "dv_kms": 995.4014192021874,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "bet Pic",
+   "eb": "A002_Xd9668b_Xa9df",
+   "freq_GHz": 241.8366585,
+   "dnu_MHz": 482.0295000000042,
+   "dv_kms": 597.5471606737912,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "bet Pic",
+   "eb": "A002_Xd9668b_X3a90",
+   "freq_GHz": 241.7512355,
+   "dnu_MHz": 567.4524999999849,
+   "dv_kms": 703.6902186720798,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "HD 31392",
+   "eb": "A002_X129754b_X6946",
+   "freq_GHz": 231.19984480000002,
+   "dnu_MHz": 81.66619999997783,
+   "dv_kms": 105.89501413676102,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "CD-57 1054",
+   "eb": "A002_Xcf525f_X5aa4",
+   "freq_GHz": 346.50989599999997,
+   "dnu_MHz": 3004.2590999999666,
+   "dv_kms": 2599.216445056039,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "HD161868",
+   "eb": "A002_Xff45a6_X10ca8",
+   "freq_GHz": 345.6338357,
+   "dnu_MHz": 2128.198800000013,
+   "dv_kms": 1845.9360266985987,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "ALMA J153702653-33192492",
+   "eb": "A002_Xfe62c1_X398",
+   "freq_GHz": 216.1844318,
+   "dnu_MHz": 1228.7547999999952,
+   "dv_kms": 1703.9683140185166,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "ALMA J153702653-33192492",
+   "eb": "A002_Xf8f6a9_X10359",
+   "freq_GHz": 217.7292444,
+   "dnu_MHz": 2773.5674,
+   "dv_kms": 3818.938473635144,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "ALMA J153702653-33192492",
+   "eb": "A002_Xfe62c1_X398",
+   "freq_GHz": 218.8729083,
+   "dnu_MHz": 3917.231300000014,
+   "dv_kms": 5365.47172102222,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "ALMA J153702653-33192492",
+   "eb": "A002_Xf8f6a9_X10359",
+   "freq_GHz": 218.67113890000002,
+   "dnu_MHz": 3715.461900000024,
+   "dv_kms": 5093.801867084697,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "ALMA J153702653-33192492",
+   "eb": "A002_Xff0235_X8392",
+   "freq_GHz": 230.5221514,
+   "dnu_MHz": 759.3595999999961,
+   "dv_kms": 987.541889607298,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "ALMA J153702653-33192492",
+   "eb": "A002_Xd9d7c7_Xbb64",
+   "freq_GHz": 347.2179398,
+   "dnu_MHz": 2526.025200000033,
+   "dv_kms": 2181.0028137202585,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "HD14055",
+   "eb": "A002_X1001fdc_X29ae",
+   "freq_GHz": 331.1558555,
+   "dnu_MHz": 1548.6635000000242,
+   "dv_kms": 1401.9913269505523,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "HD14055",
+   "eb": "A002_Xfff3d8_Xd46",
+   "freq_GHz": 331.7699224,
+   "dnu_MHz": 934.5965999999898,
+   "dv_kms": 844.5160125595512,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "HD14055",
+   "eb": "A002_Xff99e1_X24be0",
+   "freq_GHz": 331.70776159999997,
+   "dnu_MHz": 996.7574000000022,
+   "dv_kms": 900.854262602488,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "HD14055",
+   "eb": "A002_Xfffde1_X3835",
+   "freq_GHz": 345.0099054,
+   "dnu_MHz": 1504.2685000000056,
+   "dv_kms": 1307.1171118525651,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "HD14055",
+   "eb": "A002_Xff99e1_X2c3bb",
+   "freq_GHz": 345.5256112,
+   "dnu_MHz": 2019.9743000000599,
+   "dv_kms": 1752.614106927444,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "HD14055",
+   "eb": "A002_Xff99e1_X2b2ee",
+   "freq_GHz": 344.7006991,
+   "dnu_MHz": 1195.062200000044,
+   "dv_kms": 1039.367298460175,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "HD 48370",
+   "eb": "A002_Xc26103_X155a",
+   "freq_GHz": 230.51167370000002,
+   "dnu_MHz": 769.8372999999847,
+   "dv_kms": 1001.2135729292514,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "CP-72 2713",
+   "eb": "A002_Xff0235_X4a6d",
+   "freq_GHz": 344.2697461,
+   "dnu_MHz": 764.1092000000644,
+   "dv_kms": 665.3915362690444,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "HD170773",
+   "eb": "A002_Xff0235_X8c42",
+   "freq_GHz": 331.0101355,
+   "dnu_MHz": 1694.3834999999963,
+   "dv_kms": 1534.5856207464738,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "HD110411",
+   "eb": "A002_Xe45e29_Xb7d4",
+   "freq_GHz": 219.45378490000002,
+   "dnu_MHz": 4498.107900000032,
+   "dv_kms": 6144.796383004773,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "HIP10679",
+   "eb": "A002_Xa95c04_X14cd",
+   "freq_GHz": 220.4185118,
+   "dnu_MHz": 5462.8348000000115,
+   "dv_kms": 7430.0323460397385,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "HR 1010",
+   "eb": "A002_Xc6fa08_X1053",
+   "freq_GHz": 230.51328,
+   "dnu_MHz": 768.2309999999998,
+   "dv_kms": 999.1175337134499,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "HD 139084 B",
+   "eb": "A002_Xcd8029_Xb6b0",
+   "freq_GHz": 345.824056,
+   "dnu_MHz": 2318.419099999999,
+   "dv_kms": 2009.821319842329,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "HD 14055",
+   "eb": "A002_X1190de8_Xd526",
+   "freq_GHz": 344.467647,
+   "dnu_MHz": 962.0101000000141,
+   "dv_kms": 837.2437150819857,
+   "species": "O3"
+  },
+  {
+   "sample": "census",
+   "star": "HD 14055",
+   "eb": "A002_X11adad7_X25c5e",
+   "freq_GHz": 345.456382,
+   "dnu_MHz": 1950.7451000000583,
+   "dv_kms": 1692.8871456208128,
+   "species": "O3"
+  },
+  {
+   "sample": "holdout",
+   "star": "HD 285968",
+   "eb": "A002_Xdaef5a_Xdd9b",
+   "freq_GHz": 230.508058,
+   "dnu_MHz": 773.4529999999795,
+   "dv_kms": 1005.9317580015698,
+   "species": "O3"
+  },
+  {
+   "sample": "holdout",
+   "star": "HD14055",
+   "eb": "A002_X107376c_X6126",
+   "freq_GHz": 330.712276,
+   "dnu_MHz": 1992.2430000000168,
+   "dv_kms": 1805.979001224917,
+   "species": "O3"
+  },
+  {
+   "sample": "holdout",
+   "star": "TRAPPIST-1",
+   "eb": "A002_Xd0e450_X259b",
+   "freq_GHz": 346.245404,
+   "dnu_MHz": 2739.7670999999973,
+   "dv_kms": 2372.194702854543,
+   "species": "O3"
+  },
+  {
+   "sample": "holdout",
+   "star": "HD172555",
+   "eb": "A002_X107fa96_X1300f",
+   "freq_GHz": 344.60655,
+   "dnu_MHz": 1100.9131000000634,
+   "dv_kms": 957.7457082386238,
+   "species": "O3"
+  },
+  {
+   "sample": "holdout",
+   "star": "HD 285968",
+   "eb": "A002_Xdb4b9a_Xa7c",
+   "freq_GHz": 229.912932,
+   "dnu_MHz": 337.9789999999921,
+   "dv_kms": 440.70402774203075,
+   "species": "O3"
+  },
+  {
+   "sample": "holdout",
+   "star": "HR 1010  Gaia DR3 4722135642226902656",
+   "eb": "A002_Xc6b674_X23f2",
+   "freq_GHz": 346.230117,
+   "dnu_MHz": 2724.4801000000443,
+   "dv_kms": 2359.0627904593844,
+   "species": "O3"
+  },
+  {
+   "sample": "holdout",
+   "star": "HD 10647",
+   "eb": "A002_Xff99e1_X9cdf",
+   "freq_GHz": 345.705924,
+   "dnu_MHz": 2200.287100000016,
+   "dv_kms": 1908.0653012318544,
+   "species": "O3"
+  },
+  {
+   "sample": "holdout",
+   "star": "HD170773",
+   "eb": "A002_Xff294f_X1fb",
+   "freq_GHz": 345.559733,
+   "dnu_MHz": 2054.0961000000243,
+   "dv_kms": 1782.0436236626595,
+   "species": "O3"
+  }
+ ]
+}

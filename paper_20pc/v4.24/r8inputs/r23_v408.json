@@ -1,0 +1,27 @@
+{
+    "_doc": "D32, 2026-09-27.  The round-7 injection campaign's answer to referee 2's item 3, which REVERSES the sign of the answer the paper gave.  Everything in this file is a quantity the campaign measured on the host over its full per-tone sample and which CANNOT be recomputed from the aggregate record deposited in p90_r7_analysis_v406.json -- that file carries quantiles, not the individual fits.  The quantities that CAN be recomputed from the deposit (the Re/sigma distribution at the selected T* bin, its mean, s.d., localised fraction and the same tones re-fitted at the superseded epoch) are read from the deposit by the generator and are NOT duplicated here.  The per-event percentiles below are therefore the one transcribed set, and the generator ASSERTS each of them against the deposit's own 16th percentile: an event quoted below the 16th percentile must have a Re/sigma below the 16th-percentile value and one quoted above it must not.  If the campaign aggregate is ever re-deposited with the per-tone sample, this file should be deleted and the percentiles computed.",
+    "_provenance": "referee_r8/p90_r7/P90_R7_RESULT.md Secs. 3.2(c) and 4, from p90_r7_result.json on the host (/data/SETI/p90_r7, released by D23/D25 and not retained).  Event Re/sigma, Im/sigma and T* are NOT taken from here: the generator reads them from the paper's own released ledger (ledger_v403.json).",
+    "percentile_among_injected_at_tstar_bin": {
+        "_doc": "percentile of each unattributed crossing's adopted-epoch Re/sigma within the Class A injected-source distribution at the same recovered T* bin",
+        "61 Vir": 23,
+        "HR 1010": 9,
+        "HD 14055": 11,
+        "HD 23484": 10,
+        "HD 207129": 9,
+        "HD 110411": 21
+    },
+    "frac_im_below_3_at_tstar5_classA": 0.992,
+    "clean_pass_control_census": {
+        "_doc": "the campaign's own UNINJECTED passes: how often the noise field alone puts a control position above the survey's 5 sigma trigger, per window.  This is why the trigger and the visibility fit are not independent at T* ~ 5.",
+        "classA": {
+            "n_windows": 12,
+            "n_with_control_ge5": 11,
+            "n_with_star_ge5": 3,
+            "star_ge5_note": "the three are the real CO lines"
+        },
+        "classB": {
+            "n_windows": 28,
+            "n_with_control_ge5": 1
+        }
+    }
+}

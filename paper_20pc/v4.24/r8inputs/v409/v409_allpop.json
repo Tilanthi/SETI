@@ -1,0 +1,68 @@
+{
+ "n_old": 1641,
+ "n_distinct": 1637,
+ "n_added": 4,
+ "n_colliding_basenames": 35,
+ "n_windows_lost": 39,
+ "n_windows_lost_shipped": 35,
+ "colliding": [
+  "A002_X877e41_X14c1_spw0",
+  "A002_X877e41_X14c1_spw1",
+  "A002_X877e41_X14c1_spw2",
+  "A002_X877e41_X14c1_spw3",
+  "A002_Xb25e1a_Xed74_spw0",
+  "A002_Xb25e1a_Xed74_spw1",
+  "A002_Xb25e1a_Xed74_spw2",
+  "A002_Xb25e1a_Xed74_spw3",
+  "A002_Xcd2acd_X6125_spw0",
+  "A002_Xcd2acd_X6125_spw1",
+  "A002_Xcd2acd_X6125_spw2",
+  "A002_Xcd2acd_X6125_spw3",
+  "A002_Xcd8029_Xb6b0_spw0",
+  "A002_Xcd8029_Xb6b0_spw1",
+  "A002_Xcd8029_Xb6b0_spw2",
+  "A002_Xcd8029_Xb6b0_spw3",
+  "A002_Xcd97a1_X3f1e_spw0",
+  "A002_Xcd97a1_X3f1e_spw1",
+  "A002_Xcd97a1_X3f1e_spw2",
+  "A002_Xcd97a1_X3f1e_spw3",
+  "A002_Xcdb7b8_Xfb16_spw0",
+  "A002_Xcdb7b8_Xfb16_spw1",
+  "A002_Xcdb7b8_Xfb16_spw2",
+  "A002_Xcdb7b8_Xfb16_spw3",
+  "A002_Xcf749a_X4871_spw0",
+  "A002_Xcf749a_X4871_spw1",
+  "A002_Xcf749a_X4871_spw2",
+  "A002_Xd10f82_X2635_spw0",
+  "A002_Xd10f82_X2635_spw1",
+  "A002_Xd10f82_X2635_spw2",
+  "A002_Xd10f82_X2635_spw3",
+  "A002_Xd3607d_X6487_spw0",
+  "A002_Xd3607d_X6487_spw1",
+  "A002_Xd3607d_X6487_spw2",
+  "A002_Xd3607d_X6487_spw3"
+ ],
+ "dups": [
+  [
+   "/data/SETI/targets/HD_139084B_921024_B7_EB_Xb6b0/products/A002_Xcd8029_Xb6b0_spw2",
+   "HD 139084B 921024",
+   "HD 139084B 805632"
+  ],
+  [
+   "/data/SETI/targets/HD_139084B_921024_B7_EB_Xb6b0/products/A002_Xcd8029_Xb6b0_spw1",
+   "HD 139084B 921024",
+   "HD 139084B 805632"
+  ],
+  [
+   "/data/SETI/targets/HD_139084B_921024_B7_EB_Xb6b0/products/A002_Xcd8029_Xb6b0_spw3",
+   "HD 139084B 921024",
+   "HD 139084B 805632"
+  ],
+  [
+   "/data/SETI/targets/HD_139084B_921024_B7_EB_Xb6b0/products/A002_Xcd8029_Xb6b0_spw0",
+   "HD 139084B 921024",
+   "HD 139084B 805632"
+  ]
+ ],
+ "fail": []
+}
