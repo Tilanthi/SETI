@@ -1,0 +1,40 @@
+{
+ "question": "does the blind search recover a real narrow line at a stellar position, and what are the strongest apparent signals when it does",
+ "source": "per_target_results_v3.99.csv",
+ "trigger_sigma_derived": 5.0,
+ "n_crossings_plotted": 52,
+ "ledger_delta": {
+  "released": 56,
+  "fell": 4,
+  "added": 4
+ },
+ "delta_touches_this_figure": false,
+ "bpic_CO10_blocks": 5,
+ "bpic_CO21_blocks": 5,
+ "bpic_flagged_CO10": 5,
+ "bpic_flagged_CO21": 4,
+ "bpic_Tstar_max_CO10": 30.7648,
+ "bpic_Tstar_max_CO21_flagged": 11.681,
+ "bpic_ring_range_CO10": [
+  5.5197,
+  7.3409
+ ],
+ "bpic_dv_range_CO": [
+  -0.44378183643516816,
+  0.5287434109323069
+ ],
+ "bpic_ring_wins": [
+  [
+   "A002_X7116f1_X1785",
+   9.6773,
+   14.1324,
+   6
+  ]
+ ],
+ "hd48370": [
+  26.8342,
+  18.3574,
+  -17.83420491869258
+ ],
+ "mask_half_width_kms": 50.0
+}

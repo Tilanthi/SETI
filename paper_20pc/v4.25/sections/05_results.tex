@@ -1,0 +1,951 @@
+\section{Results}
+\label{sec:results}
+
+The primary experiment is the Class~A search for a drifting, unresolved
+spectral carrier: \NWinA{} fine-channel windows toward \NSysClassA{}
+systems, \EdrNWinA{} of which are channelised finely enough on the criterion
+of \S\ref{sec:statistic} to tell a drifting carrier from a stationary one.
+The Class~B search for an unresolved spectral excess is secondary
+and carries no drift discrimination: \NWinB{} coarse windows. Together they
+are the \NWindows{} windows of the primary census. No event
+satisfied the confirmation criterion set out in \S\ref{sec:summary}. Depth
+comes first below, then what the search found and how each finding was
+disposed of.
+
+\subsection{Sensitivity: the power at which a carrier would have crossed
+the threshold} \label{sec:pninetysel}
+
+\emph{The median system, on its best window, would have produced a threshold
+crossing from a carrier of $\EirpNinetySysMedA$\,W.} Across the \NSysClassA{} systems those limits
+run from $\EirpNinetySysLoA$ to $\EirpNinetySysHiA$\,W
+(Fig.~\ref{fig:classasens}a), and \NSysEfifteen{} of the systems reach
+$10^{15}$\,W. The median Class~A \emph{window} reaches
+$\EirpNinetyWinMedA$\,W.
+Over the \EdrNWinA{} windows in which the searched drift crosses a channel
+(\S\ref{sec:statistic}) the search covers \EdrUnionGHz\,GHz toward
+\EdrNSys{} systems, and their median system limit is \ScEdrMedPct{} per cent
+\ScEdrMedSense{} than the figure above.
+
+\emph{They are a recovery completeness of one epoch, and not a threshold.}
+Artificial carriers were injected at a random sub-channel phase and a random
+drift from each window's own grid, then recovered through the unchanged
+pipeline; the power at which nine in ten come back is
+$\mathrm{EIRP}_{90}$, the only sensitivity quoted here. It is measured
+through the single-epoch trigger and the localisation at the stellar position
+inside one execution block. It is therefore the power at which a
+carrier would have produced a crossing and not the power at which one would
+have been confirmed, because confirmation needs a second and separated epoch, which the archive
+supplies for some systems and not others (\S\ref{sec:confirmability}). The \NCtrl-position spatial rank
+decides nothing and is not charged against it either: charging it would cost
+a further factor $\SensCostLike$, and in \SensNRingHiUnres{} bright-ring
+windows it could not be met at any injected power (Fig.~\ref{fig:strata}).
+
+\emph{Measured that way the completeness is one number for the class.} Nine
+carriers in ten are recovered at $\EirpNinetyMultA\,P_{\rm trig}$, and the
+sampling error of that pooled value is $\pm\SensBootPct$ per
+cent, a statement about the class average and about no individual
+window. It is a
+total power set against a nominal threshold, $P_{\rm trig}$ being the bare
+$\LtCommonSnr\sigma$ of the window itself. The loss a channel-confined
+carrier suffers to the correlator's spectral response is carried by the
+injected tones, so it sits inside the measured factor -- $\times\RpRespFac$
+of it -- and is not applied to the result as well
+(Appendix~\ref{app:conventions}). Every one of the \SensNInj{} directly
+injected Class~A windows resolves a ninety per cent point of its own, and the
+value does not depend on the brightness of its control ring: the
+\SensNRingHi{} windows whose ring carries resolved emission come back at
+$\SensRingHi\,P_{\rm trig}$ against $\SensRingLo$ for the rest
+(Fig.~\ref{fig:strata}). Class~B carries its own factor $\EirpNinetyMultB\,P_{\rm trig}$, which
+sets the limits for Barnard's Star, Wolf~359 and Proxima. It is measured the
+same way, from \SensNToneCoarse{} carriers injected into \SensNInjCoarse{}
+coarse windows of \SensNInjCoarseBlock{} execution blocks.
+
+Calibration of that factor is good to
+$\times\SensFacLo$--$\times\SensFacHi$ (Table~\ref{tab:p90budget}), which is
+an interval on the median and on the counts and not on any one window's
+limit. The median system's limit above carries it -- $\TfMedCalLo$ to
+$\TfMedCalHi$\,W -- so the second figure of that median is set by the
+calibration and not by the depth of any observation.
+
+\emph{Every limit quoted here is nominal in one respect: it excludes
+atmospheric decorrelation.} An injected carrier is added to already
+calibrated visibilities and so suffers none, whereas a real carrier does, and
+the bias runs one way only. Measured block by block from the phase rms the
+observatory records on each block's phase calibrator
+\citep[\S\S10.4.11, 11.3.1]{ALMAHandbook}, through the standard phase-scatter
+relation \citep[Eq.~3]{Richards2022}, it leaves the median limit optimistic
+by \SensDecorPct{} per cent. It is least secure at the top of the frequency
+range: \SensDecorHiPct{} per cent for the median window above
+\SensDecorHiGHz\,GHz, and \NmDecHiPct{} per cent at the ninetieth percentile
+of windows. Across the systems' own best windows -- the limits a reader uses -- the
+median is \NmDecSysMedPct{} per cent, and \NmDecNBigSys{} of them carry more
+than a tenth. The strongest limits are among the least affected: of the ten
+deepest in the survey only \NmDecDeepBigSys{} carries more than a twentieth,
+at \NmDecDeepBigPct{} per cent, and \NmDecNoRecSys{} carries no estimate at
+all, its delivery exposing neither a phase record nor a baseline to match on.
+Table~\ref{tab:persys} gives the figure system by system, measured from the
+phase calibrator of a system's own block where the delivery exposes one and
+imputed from the blocks matched to it in baseline length where it does not
+(Appendix~\ref{app:persys}). \emph{That is why this term is stated and not
+folded in}: the three factors that are applied are available for every window
+of the census, while this one is available for \SensDecorNBlk{} blocks of
+\SensDecorNBlkTot{} and the rest are measurably the harder ones. Folding it
+in where it is known would leave a set of limits that is neither corrected
+nor uncorrected.
+
+\emph{Three further factors act window by window, and all three are divided
+out of the limits above and not quoted beside them}
+(Appendix~\ref{app:conventions}). The first is the primary-beam response
+$A$ at the star's own offset from the pointing centre, which is what turns a
+measured noise into a flux density at the star. It divides into the limit, so its
+cost is the factor $1/A$: nothing in the median window, where the star is all
+but on axis, more than $\times2$ in \NmBeamNFacTwo{} windows and
+$\times\NmBeamFacWorst$ in the worst. It is evaluated on the full width the
+observatory documents, at each window's own dish diameter and centre
+frequency. Of the two widths available that is the one that follows a blocked
+circular aperture (Appendix~\ref{app:conventions}). Only the
+\BmNAboveTenPct{} windows furthest off axis, toward \BnStarList, would move
+by more than a tenth on the wider of the two, where they would be up to
+\BmShiftMaxPct{} per cent deeper. One of those windows is its own system's
+best: \BnBestSys{} is corrected by $\times\BnBestFac$ at that window's
+response of \BnBestResp, and that limit carries the beam-model departure as a
+systematic beside the calibration interval.
+
+The second is the annual parallax, which the search's phase centre omits. It
+displaces the star by at most \SensBeamsMax{} of a synthesised beam and makes
+the median Class~A limit shallower by \PxaShiftWinPct{} per cent, while
+\PxaNMissing{} windows in \PxaNMissingEb{} blocks, toward
+\PxaMissingStars, have no astrometric keys and are left uncorrected.
+\PxaNMissingTop{} of those are \PxaMissingTopStar's, where the displacement
+follows from the catalogued parallax instead and leaves the tabulated limit
+optimistic by at most \BmEpsPxBoundPct{} per cent
+(Appendix~\ref{app:pbresp}). That correction is concentrated, which is
+why the median limit moves far more than the median window's own factor
+(Table~\ref{tab:p90budget}): \RpPxNNone{} of the \NWinA{} windows need none
+at all, while \RpPxNBig{} lose more than a tenth and lie around the middle of
+the distribution of limits.
+
+The third the injections do not reproduce at all, each carrier being laid
+down at one frequency per integration while a real one sweeps within it. The
+sweep costs the mean of the delivered channel response over it, these
+channels being wide enough that a sweep moves a carrier's dwell time between
+channels instead of destroying coherence inside one
+(Appendix~\ref{app:conventions}). It costs nothing in the median
+window and up to $\times\SmcFacWorst$ in the \SmcNAbove{} finest-channel
+ones, which are also the deepest, and it takes the best Class~A window from
+$\SmcWinLoWas$ to $\EirpNinetyWinLoA$\,W.
+
+\emph{The net bias on one window's limit is therefore of either sign.} The
+decorrelation leaves a limit optimistic, while the injected profile falls
+\InjShortPct{} per cent short of the exact channel response and leaves it
+conservative by that much (Table~\ref{tab:p90budget}). In the median window
+the second is the larger, so the quoted limit is conservative by
+\NmNetConsPct{} per cent; at the ninetieth percentile of the systems' own
+best windows the first is, and the quoted limit is optimistic by
+\NmNetOptPct{} per cent, rising to \NmNetOptMaxPct{} per cent for the most
+affected system. Neither direction describes the sample, and Table
+\ref{tab:persys} gives the decorrelation system by system so that a reader
+can apply it to the one limit in question.
+
+\emph{Carriers were injected directly into \SensNInj{} of the \NWinA{}
+Class~A windows, \SensNInjPct{} per cent, and the result transferred to the
+remaining \SensNTransfer. That transfer is the dominant caveat on everything
+above.} The injected windows are the Class~A windows of execution blocks
+drawn in a random order, balanced by band and array; they hold
+\SensNCrossAch{} crossings against the \SensNCrossExp{} the population rate
+predicts. \emph{The unit is the block and not the window}, because a block's
+calibrated visibilities are what an injection campaign has to rebuild, so
+band and array were fixed by the draw and the conditions that vary within a
+block were compared with the population afterwards.
+
+That comparison covers \RpNAxis{} properties -- channel width, integration
+time, noise, control-ring brightness, the channels a carrier at the drift
+ceiling crosses in one track, and the intra-integration retention -- and on
+every one the injected windows span the central eight-tenths of the
+population, five of them agreeing in the median to \RpCovOtherPct{} per cent.
+The sixth, \RpCovWorstAxis, does not: the injected windows are
+$\times\RpCovWorstRatio$ noisier, which follows from drawing whole blocks,
+and it is also the property the measurement is built to be insensitive to,
+each ladder being in units of its own window's threshold: splitting the
+injected set at the median of each property in turn moves the ninety per cent
+point by at most \RpFacShiftMax\,$P_{\rm trig}$ (Appendix~\ref{app:persys}).
+
+A window that was not injected therefore carries an estimated
+$\mathrm{EIRP}_{90}$. One dimensionless number per class is
+carried across -- the ninety per cent point in units of the window's own trigger power
+-- while the channel width, the noise, the integration time, the primary-beam
+response, the parallax displacement and the intra-integration retention that
+turn it into a power are each that window's own measurement.
+Across the injected windows the ninety per cent point
+ranges from $\times\SensIndivFacLo$ to $\times\SensIndivFacHi$ of the
+adopted factor, with \NmDispNTenth{} of the \SensNInj{} lying within a tenth
+of it. The upper end of that range is one window and not a typical error: the
+second largest is $\times\NmDispSecond$. That dispersion, and not the calibration
+interval above, is what one uninjected window's own limit is uncertain by.
+Two bands and two channelisations of the survey hold no injected window at
+all, \NgNExtrapWin{} windows between them, and \NgNExtrapSys{} systems take
+their best window from one: \NgExtrapSys. Their completeness is carried
+across a configuration boundary and not within one, and because no
+injected window lies in those configurations the range just quoted is not an
+empirical bound on it. The deepest limit in the survey is one of these.
+The best window was itself injected into for \SmcNMeasSys{} of the
+\NSysClassA{} systems, marked as measured in Table~\ref{tab:persys}; for the
+other \SmcNEstSys{} the headline limit is an estimate carrying that
+dispersion. Each of those six at its own measured
+factor instead of the class average would move by at most \NmOwnDevPct{} per
+cent, and over the population the estimate is not biased in a direction one
+can name (Appendix~\ref{app:persys}).
+
+\emph{A carrier that is not always radiating is penalised in proportion.} The
+de-drifted stack runs the length of a whole execution block, so over
+\DutyNTrial{} trials at duty cycles down to \DutyCycleMinPct{} per cent the
+recovered amplitude followed the duty cycle to \DutyAttenDevPct{} per cent: a
+transmitter radiating a tenth of the time needs $\DutyPowFac\times$ the power
+quoted above. Those trials carry no drift, so the joint drifting and
+intermittent case is not measured here.
+
+\begin{table*}
+\centering
+\scriptsize
+\caption{What sets $\mathrm{EIRP}_{90}$, and in which direction. The
+uncertainty on the calibration is an uncertainty on the class-average factor,
+and so on any statistic formed over many windows; its flux-scale term is
+band-dependent, so the submillimetre windows carry the larger combined
+figure. The spread between windows
+is an observed dispersion and is the statement about one window's own limit;
+the signed terms are biases, stated with their direction and not folded
+into an error bar, and the decorrelation term is measured in \SensDecorNBlk{}
+of the \SensDecorNBlkTot{} blocks and not imputed to the rest.}
+\label{tab:p90budget}
+\setlength{\tabcolsep}{2pt}
+\input{tab_budget_r11}
+\end{table*}
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{figures/sens_ring.pdf}
+\caption{Why one completeness factor serves the whole class. Each of the
+\SensNInj{} of the \NWinA{} Class~A windows injected directly is plotted at
+the power that recovers nine carriers in ten, against the maximum of its own
+\NCtrl-position control ring. Filled circles are the criterion adopted
+here -- the trigger and localisation at the star -- with the pooled value
+and its uncertainty as the line and band; they show no trend with the ring.
+Open squares add the demand that the carrier outrank every control position,
+and arrows mark the windows that then reach ninety per cent at no injected
+power. Dotted, the $\SensRingRule\sigma$ ring brightness above which a ring
+carries resolved emission, not noise.}
+\label{fig:strata}
+\end{figure}
+
+\begin{figure*}
+\centering
+\includegraphics[width=\textwidth]{figures/classa_sensitivity.pdf}
+\caption{\textbf{The two completenesses of the carrier search, over the same
+\NSysClassA{} systems.} \emph{(a)}~Single-epoch trigger completeness: the
+cumulative number of systems whose best window reaches a given
+$\mathrm{EIRP}_{90}$ (Table~\ref{tab:quantities}), evaluated as
+$\EirpNinetyMultA\,P_{\rm trig}$ with each window's own primary-beam,
+annual-parallax and smearing retentions applied and atmospheric
+decorrelation excluded, which Table~\ref{tab:persys} gives system by system;
+the shaded band is the calibration interval of
+Table~\ref{tab:p90budget}. \emph{(b)}~Confirmation completeness, for a
+carrier whose stellar-frame frequency at the two epochs agrees to within half
+a native channel, which no
+amount of power buys: systems grouped by the longest separation between two
+execution blocks of different observing sessions covering a common
+frequency, which is what the criterion of \S\ref{sec:summary} requires,
+over the primary census together with every repeat block the recurrence
+test of \S\ref{sec:etacrv} reads. \textbf{Left of the dashed line,
+\ZcNoRepSys{} systems have no such pair, and for them confirmation was not
+possible at any sensitivity in panel~(a)}. The two panels are separate
+statements and neither follows from the other: (a) is the power at which a
+carrier crosses the trigger in one block, (b) whether a crossing there could
+then have been tested at all.}
+\label{fig:classasens}
+\end{figure*}
+
+\subsection{The nearest stars: Barnard's Star and Wolf~359}
+\label{sec:barnardswolf}
+
+Barnard's Star is the second-nearest stellar system and Wolf~359 the third if
+brown dwarfs are excluded, and to our knowledge these are the first millimetre
+or submillimetre technosignature limits for either; radio searches of
+the nearest stars have worked at centimetre wavelengths \citep{Enriquez2017,
+Price2020, Margot2023}. Both are non-detections. \emph{Both limits come from
+the secondary Class~B experiment and not from the carrier search}: the archive
+holds only coarse Band~6 windows toward these stars, so the
+constraint is on an unresolved spectral excess and not on a
+drifting carrier. On the $\mathrm{EIRP}_{90}$ convention of \S\ref{sec:pninetysel}
+Barnard's Star reaches $\EirpNinetyBarnLo$--$\EirpNinetyBarnHi$\,W over
+\NWinBarn{} windows. Wolf~359 reaches
+$\EirpNinetyWolfLo$--$\EirpNinetyWolfHi$\,W over \NWinWolf.
+
+\subsection{Threshold crossings and how each was disposed of}
+\label{sec:technosearch}
+
+\emph{The result is a chain of three tests, and it is read in one direction.}
+Of the windows the search covers -- the \NWindows{} of the primary census
+and the archival-tail blocks beside them -- \EvNCrossRaw{} hold a cell
+reaching $T\geq5$ at the stellar position. \EvNCrossFlag{} lie in the one
+execution block that fails the quality criterion of \S\ref{sec:bdblock}, which
+was written after the condition was seen in that block and is insensitive to
+where the line was drawn (Appendix~\ref{sec:blockquality}), so the population
+that characterises the search is the \EvNCrossQp{} in quality-passing data and
+those \EvNCrossFlag{} are reported beside it. The molecular-line mask is $\pm\MaskHalfKms$\,km\,s$^{-1}$ wide in each
+star's own rest frame, and it places \MkNCoinc{} of the \EvNCrossQp{} within
+that distance of a catalogued transition. Of those coincidences, \MkNSODecideWord{} are with a species no debris disc
+has been shown to carry, and are reported, not acted on
+(Appendix~\ref{app:linemask}). That leaves
+\EvNAttrQp{} crossings attributed and \EvNUnattrQp{} unattributed. The attributions are kinematic and not an accident of bandwidth: in the
+frame the correlator delivered, the crossings with a measured peak frequency
+crowd onto the transitions these setups were tuned to far more tightly than a
+free landing on their own grids would put them (Appendix~\ref{app:rfi}). Of the unattributed,
+\EvNRankQp{} outrank all \NCtrl{} control positions of their own window, and
+none was found again in any other epoch covering its frequency. No
+crossing survives the chain, and this survey reports no detection.
+Figure~\ref{fig:chain} counts what survives each step and the crossing
+ledger lists every crossing, a sample of it in Table~\ref{tab:ledger}.
+
+\emph{Anything bright in a window hides a weaker carrier behind it, so the
+weaker cells were sought too.} The de-drifted statistic is retained in every
+channel, so behind a window's tabulated crossing -- its largest cell --
+weaker above-trigger cells can be read as well, neighbouring channels counting
+as one. \CkNWin{} of the \NWinA{} Class~A windows retain such a profile and the
+other \CkNWinNotCov{} retain none. Re-read that way they hold \CkNPrimary{}
+maxima at or above the trigger -- one for each of the census's
+\CkNCrossCenA{} Class~A crossings but \CkMissStar's, whose own window retains
+no spectrum -- and \CkNSecondaryWord{} weaker cells besides, in \CkNSecWin{}
+windows and as many as \CkNSecMax{} in one. \CkNSecAttr{} of the weaker cells
+are the resolved carbon monoxide of a disc spread over channels. The
+\CkNSecUnattrWord{} unattributed ones, toward \CkSecStars, each have
+\CkCovLo--\CkCovHi{} covering blocks, and \CkNRecurWord{} reaches the trigger
+in any of them: the deepest repeat is $T_\star=\CkTrepHi$. Applied to the window maxima the rule returns \CkRegN{} of the
+\EvNCrossRaw{} tabulated crossings to \CkRegDev{} of a channel. The
+\CkRegMiss{} it misses are the \EvNCrossFlag{} of the failing block, whose
+repaired profile was not retained, and crossings whose own window retains no
+usable profile.
+Cells are counted in the controls too, and outside the mask the star holds
+\CkRatioLo--\CkRatioHi{} times as many as a control position at every level
+from $T=\CkLadderLo$ to the trigger, with no step where a carrier search would
+put one; the expectation that follows is \S\ref{sec:trigunif}'s.
+
+\subsubsection{The unattributed count is what the control positions predict}
+\label{sec:trigunif}
+
+The trigger is a threshold on a statistic and not a false-alarm rate: the
+number of searched channel\,$\times$\,drift cells per window spans
+\TuCellsDecades{} decades, so one level buys very unequal protection. How
+many crossings chance should produce is therefore measured window by window,
+over the \CeNWin{} Class~A windows of the census and with one condition on
+both sides of the comparison: a cell at the stellar position that reaches the
+trigger and that the line mask does not attribute. A window's own \NCtrl{} control positions measure how often a position in
+that field reaches the trigger, and the channels their exceedances land on
+measure how often one of them would be attributed. Both are read from the
+data themselves, and Appendix~\ref{app:falsealarm} gives that accounting. The control positions carry no continuum, so a calibration error varying
+with frequency would raise the star and not them; on the continuum these
+stars have, the least demanding window would need
+\CyEpsMinPct{} per cent of it to reach the trigger, and the mild excess of
+\S\ref{sec:technosearch} runs the wrong way with continuum brightness,
+\CkRatioContBright{} against \CkRatioContFaint{} over the \CkNContWin{}
+windows with a photospheric estimate (Appendix~\ref{app:radius}). These fields' own control positions predict \CeExp{} unattributed
+Class~A crossings and \CeObs{} are found. A count that large or larger arises
+by chance with probability \CeProbNull. Both sides are read over the whole
+primary beam \S\ref{sec:statistic} defines; over a narrower field, which
+drops the integrations whose pointing falls outside it and so is not that
+statistic, the same comparison gives \FrNarrowObs{} against \FrNarrowExp{}
+at $P=\FrNarrowProb$ (Appendix~\ref{app:falsealarm}). The stars do carry \CeStepPct{} per cent
+more above-threshold cells than their own controls below the trigger, and
+that excess has no identified cause; the rate adopted is the control
+positions' own, which is the smaller of the two and the more demanding of
+the count under test. Carried in as a sensitivity test the excess would give
+\CeExpX{} and a probability of \CeProbStep. A further \CeNTailCrossWord{} unattributed
+crossings, both toward \CeTailStar, lie in archival-tail blocks the catalogue
+does not tabulate window by window, and enter neither side.
+
+That establishes consistency with the expectation these fields' own
+control positions set, under the assumptions above, and not that the
+unattributed crossings are noise: the most this comparison could not have
+rejected is \CeAddLim{} further crossings against those same control
+positions, or \FrNarrowAddLim{} on the narrower reading, which is a bound on
+compatibility and not a confidence limit on a
+population of transmitters (Appendix~\ref{app:falsealarm}). Each
+crossing is tested individually by the recurrence test of
+\S\ref{sec:etacrv}.
+
+\subsubsection{One execution block accounts for four of the crossings}
+\label{sec:bdblock}
+
+\BdNCross{} crossings belong to \BdStar{} (\BdAlias), all of them in one
+ACA execution block, \texttt{\BdBlock}, whose whole field is above threshold.
+\BdNCtrlAbove{} of its \BdNCtrl{} control positions exceed $T=5$, where the
+median of a window's own control ensemble is \BdSurvCtrlMed{} across the
+survey. Its single-integration noise is as predicted, \BdRmsMeas\,Jy against
+\BdRmsPred\,Jy, but it does not integrate down. A jackknife on the channel
+mean gives \BdJack\,Jy against \BdThermal\,Jy thermal, \BdJackRatio{} times
+too large, while neighbouring channels stay uncorrelated (\BdChanCorr). The
+two numbers describe a residual that persists from one integration to the next and differs from
+channel to channel. Equation~\ref{eq:tstar} divides by the noise of the
+stacked spectrum, which falls as the root of the integration count, so a
+residual that does not average down accumulates along a drift track faster
+than the denominator grows, and it does so at every position in the field; and
+having no part common to the channels of one integration, it is not what the
+continuum median of \S\ref{sec:statistic} removes. The \BdNSibling{}
+sibling executions of the same field, array and setup reach only
+$T_\star=\BdSibTMax{}$ and produce no crossing. \emph{The field is inflated and the star is not.} The strongest of the
+four reaches $T_\star=\EvFlagTStarHi$ where its own controls peak at
+\EvFlagCtrlAtHi, and \EvFlagNgeLo--\EvFlagNgeHi{} of the \BdNCtrl{} stand
+above the star. The
+criterion fails this block and no other, at any threshold between it and the
+next most extreme block (Appendix~\ref{sec:blockquality}), so its
+\BdNCross{} crossings are reported apart from the \EvNCrossQp{}; Appendix~\ref{app:rfi} carries what the block
+might instead be. Milder cases of the same condition are not unique to it:
+read window by window the same diagnostic flags \DqNWin{} windows in
+\BkFlagNBlock{} blocks, and the \BkFlagNCrossOther{} flagged crossing outside
+this block -- \BkFlagOtherStar{} -- is withheld for it too.
+
+\subsubsection{Stellar flares are excluded by a broadband prediction}
+
+Known flare stars are in the sample, but a millimetre flare raises every
+channel of a window alike, so one able to produce a single-channel crossing at
+the trigger must produce a $5\sqrt{N}\sigma$ continuum event in the same
+integrations. Over the \FlNCont{} crossings with a recoverable continuum measurement
+that prediction runs \FlPredLo--\FlPredHi$\sigma$. The observed continuum
+statistic has median \FlObsMed, with $|Z|<3$ in \FlNQuiet{} of them. One block settles it: \FlEgStar{} \texttt{\FlEgEb} holds both a
+crossing ($T_\star=\FlEgT$) and the millimetre flare of
+\citet{MacGregor2020}, and that flare contributes \FlEgContrib$\sigma$
+to the single-channel statistic -- raising the continuum at $Z=\FlEgContZ$
+while the crossing's own de-drifted track reaches $Z_{\max}=\FlEgTrackZ$.
+
+\subsection{$\beta$~Pictoris: an astrophysical positive control, and the
+obstacle it identifies} \label{sec:bpicval}
+
+\emph{A search that finds nothing must show that it could have found
+something, and the survey's strongest features show exactly that.} The
+pipeline recovers the $\beta$~Pictoris circumstellar carbon monoxide
+without being told the disc is there. It recovers it in two
+rotational transitions and in \CsBpCoBlocks{} execution
+blocks spanning \BpBaselineYr\,yr. Those blocks belong to \CsBpCoSess{}
+observing sessions, several of them executions of one session on one
+tuning, and each transition is recovered in more than one session: the
+closest two sessions to hold the same transition are \CsBpCoSepMinD\,d
+apart -- \texttt{\NbSessEbOne} and \texttt{\NbSessEbTwo} in
+\NbSessLine{} -- while one session's own blocks here span \QfBpSameSessD\,d
+-- so a
+repeat between sessions is a repeat between epochs, and a repeat inside one
+is not a confirmation however far apart the two blocks fall.
+In \NStageOneBpicEb{} of the blocks the star also outranks every control:
+\BpicNFlagThree{} Band~3 windows, at $T_\star$ up to \BpicBThreeTsym, and
+\BpicNFlagSix{} Band~6 windows at \BpicBSixTsym. The identification is kinematic and does not rest on those
+statistics. Carried through the frame chain -- to the barycentre at each
+block's own epoch, then to the star's rest frame -- all \BpicPanelNCo{}
+crossings lie within \BpicDvCoHi\,km\,s$^{-1}$ of the stellar systemic
+velocity, in the two lowest CO transitions of a star with mapped
+circumstellar CO \citep{Dent2014,Matra2017}. The Band~3 peaks agree across blocks to
+\BpRecThreeTuneChanMax{} channel once each block's own tuning is removed, so
+any apparent drift is far below the grid searched. The alternative reading
+requires a transmitter placed by coincidence at matched offsets from two CO
+transitions of one star.
+
+It is also the control that shows the recurrence test of
+\S\ref{sec:etacrv} working in the positive direction: every flagged
+$\beta$~Pictoris carbon-monoxide feature is recovered in another execution
+block, and each transition in a block of another session as well, the
+screened Band~6 window returning
+$T_\star=\BpRecTTwo{}$ in the second block of its own recurrence set. A
+non-recurrence elsewhere means nothing unless the same machinery recovers a
+repeat where one exists.
+
+\emph{One of those blocks is a counterexample, and it is the more useful half
+of the control.} In it several of the \NCtrl{} control positions exceed the
+stellar statistic, so the spatial rank disfavours a window holding carbon
+monoxide known to be real and centred on the star; the disc is resolved on
+the scale of the primary beam in that configuration, which is the geometry
+the statistic is built to reject. The rank is therefore a test of
+compactness and not of authenticity, and on a real extended source it errs
+conservatively -- a stronger statement than a clean positive control, because
+it bounds the diagnostic's reach as well as demonstrating it
+(Fig.~\ref{fig:bpiccontrol}).
+
+%% fig:bpiccontrol MOVED to Appendix B (sections/app_C_spatialnorm.tex),
+%% which is the appendix about the spatial statistic this figure bounds.
+%% 0.36 pp off the main text; Sec. 5.4 cites it.
+
+
+HD~48370 is the complementary case and is equally instructive. Its crossing
+reaches $T_\star=\HdTsym$, but the control ring rises with the star, to
+\HdRingMax, as emission filling the primary beam does. The velocity matches
+the prominent CO($2{\to}1$) that \citet{Cataldi2023} report toward the
+source and flag as possible cloud contamination. The block's
+$^{13}$CO($2{\to}1$) window is bright at the ring and faint at the star.
+The extended emission is therefore identified by the \emph{level} of the
+control ring and not by the star's rank against it -- the star here outranks
+every control -- which is why the window-level flag of
+Appendix~\ref{sec:blockquality} is defined on the ring's median.
+
+\emph{These two results identify the dominant obstacle for
+millimetre technosignature searches, and it is not sensitivity.} The
+strongest apparent signals in the quality-passing data are circumstellar and
+interstellar molecular emission, the \DqBlockNCross{} highest statistics in the
+survey belonging instead to the one block that fails the criterion of
+\S\ref{sec:bdblock}: \MkNCoinc{} of all \NCross{} crossings land
+on a catalogued transition and \NAttributed{} of them are attributed to it.
+The mask that
+removes them covers \FrNSpec{} species and costs \MkMaskAPct{} per cent of
+the Class~A union bandwidth, and it is nevertheless the single most
+productive test in the chain. The warning for
+future work is about line lists and not about depth, and
+Appendix~\ref{app:linemask} puts a number on it.
+
+\subsection{The two crossings that lead their own control fields}
+\label{sec:vistest}
+
+Frequencies in this section and the next are in the star's own rest frame,
+which is the frame the recurrence test registers in; the delivered ones are in
+Table~\ref{tab:cand} and in the ledger.
+
+Two crossings reach a stellar statistic above every one of the \NCtrl{}
+control positions in their own window, and neither is a detection. They are
+\EvAStar{} at \RqFreqSx\,GHz and \EvBStar{} at \RqFreqCp\,GHz, both in
+Band~\EvABand; both are tabulated in Table~\ref{tab:cand} and the first is
+drawn in Fig.~\ref{fig:event}. Their control rank is recorded because it says which crossing was examined
+first, and it disposes of nothing (\S\ref{sec:method}).
+\EvBStar's crossing lies $\EvBDv$\,km\,s$^{-1}$ from \EvBLine, a coincidence
+reported as a note, not as a disposition
+(Appendix~\ref{app:linemask}). Both events go on to the recurrence test. Each was also re-fitted in the visibility domain, as \LgNFit{} of the
+\NCross{} crossings were, by phase rotating to the star and following the
+recovered drift, and \LgNLocalCor{} of those fits are consistent with a point
+source at the star. The fit excludes neither crossing: injected sources in
+the bin these two occupy return
+${\rm Re}/\sigma=\RsevReAtFiveMeanA\pm\RsevReAtFiveSdA$. Its value is that a pedestal fed through a sidelobe from elsewhere in
+the field, which a dirty map at the star cannot tell from a source at the
+phase centre, is not a point source there. Of the \NCtrl{} control positions
+the rank screen uses, \RcNRetCtrl{} retain a dynamic spectrum and
+\RcNVisCtrl{} are reachable in the visibilities.
+
+Neither crossing is present when the same stellar-frame frequency is observed
+again, and Table~\ref{tab:cand} gives both readings of that silence. The nearest covering block assumes least. It lies \RcSxNearH{} and
+\EvBDeepH\,hours from each discovery, and rules out anything above
+\RqNearFracSx{} and \RqNearFracCp{} of the discovery amplitude. Combining every covering block instead -- \RqNRepSx{} and \RqNRepCp{} of
+them -- deepens that to \RcSxFive{} and \RcCpFive. It asks the same return
+over baselines of \RqSpanDSx{} and \RqSpanDCp\,days, however, and not of
+hours. Either
+reading covers half a channel in the star's frame, $\pm\RqDispSx$ and
+$\pm\RqDispCp$\,km\,s$^{-1}$, which each carrier's own fitted drift would
+cross in \ZtSxLeaveSec{} and \ZtCpLeaveSec{} seconds: the
+test asks for a return to that frequency, not a stability at
+it (\S\ref{sec:etacrv}). At the faintest amplitude consistent with each crossing
+having been found at all, the criterion would have recovered a persisting
+carrier with probability \RqPowerTrigSx{} and \RqPowerTrigCp{} -- and
+injected carriers at that amplitude are recovered \RjMeasSx{} and
+\RjMeasCp{} of the time by the same reading -- so for
+\EvBStar{} the silence is not an exclusion and is not read as one.
+Appendix~\ref{app:radius} follows its crossing through every step
+of the chain.
+
+
+\subsection{Recurrence, applied to every unattributed crossing}
+\label{sec:etacrv}
+
+A transmitter on a body in orbit about its star does not arrive at the same
+frequency twice: its line-of-sight velocity changes between epochs, and a
+carrier at a fixed rest frequency changes with it. Two questions are therefore
+asked of every unattributed crossing that another block covers, and the
+broader one carries the result. It is whether anything above the trigger is
+present again anywhere in a covering window, searched at every drift of the
+grid. That window is $\pm\WdHalfKms$\,km\,s$^{-1}$ wide in the median case,
+against the $\pm\EcVexcKms$\,km\,s$^{-1}$ an orbit at the grid's own
+\WdAGrid\,m\,s$^{-2}$ ceiling can produce about any star in this sample,
+whatever its eccentricity and orientation, so it spans the excursion such a
+carrier could have made. \WdNExc{} of the \WdNCov{} covering windows hold a
+statistic above the trigger, and that is the number chance predicts in trials
+of that size: \WdExpect. That expectation is a sum over those windows and not
+a control rate applied to their number: each contributes its own chance of
+holding one cell above the trigger, from the number of independent
+channel--drift cells fitted to it and the noise scale its own control
+positions measure
+(Appendix~\ref{sec:pairacct}). The strongest of them reaches \WdExcMax{} and the
+nearest sits \WdNearKms\,km\,s$^{-1}$ from the crossing's own frequency, a
+median \WdMedKms\,km\,s$^{-1}$ away. A catalogued window covers \WdNOrbTot{} of the
+\RcNExcl{} crossings that carry an exclusion and spans that excursion in
+\EcNSpan{} of them; for \EcNShort, toward \EcShortStarList, the widest
+covering window is narrower than the excursion, and \WdNNoCov{} is covered by
+no catalogued window at all.
+
+The second question is far narrower, and it is the one each ledger exclusion
+answers: whether a carrier returned to the single cell its own discovery
+predicts. One trajectory model carries it -- a carrier at a fixed rest
+frequency, whose line-of-sight velocity relative to its star is the same at
+the two epochs to within half a channel, and which drifts through each
+observation at the rate fitted there. The predicted channel is set by the
+Earth's motion at the repeat epoch and the star's systemic velocity and by
+nothing else -- that frame moves the cell by up to \ZtFrameChanMax{} channels,
+and for $\eta$~Crv by $\VnEcrDchan$ -- while the fitted drift enters only as
+the de-drift within each observation, where half a step of the window's own
+grid costs \RjDriftPct{} per cent of the statistic
+(Appendix~\ref{app:radius}). The statistic is read at that one channel,
+maximised over nothing. The model is a strong assumption and these crossings
+disfavour it: every one of them carries a fitted line-of-sight acceleration of
+\ZtALosLo{} to at least \ZtALosHi\,m\,s$^{-2}$, so such a carrier arrives at the same
+frequency twice only by coincidence of phase, which the interval the cell
+permits makes a fraction of order $10^{\RgPhaseExpLo}$--$10^{\RgPhaseExpHi}$
+of the orbits that ceiling admits. A
+\emph{confirmed signal} is an \emph{unattributed} crossing that satisfies the
+criterion (Table~\ref{tab:quantities}); a line-coincident crossing that
+satisfies it is a recurring molecular line, and is reported as one.
+
+None of the unattributed crossings returned to its own predicted cell, while
+\MkAttrRecur{} crossings attributed to circumstellar or interstellar carbon
+monoxide do recur, as expected. Those \MkAttrRecur{} are the positive control of this stage and they
+test it on both of the ways real emission arises here: \RqNRecurDisc{} are the
+resolved circumstellar disc of \RqRecurDiscStars{} and \RqNRecurCloud{} are
+interstellar gas toward \RqRecurCloudStars, whose sightline carries catalogued
+cloud emission at the crossing's own velocity in the local standard of rest
+(Appendix~\ref{app:linemask}). No exclusion is formed for them, because what
+one would exclude has just been observed. Close to the trigger the control is
+thinner than that count suggests: every circumstellar recovery has
+$T_\star\ge\RqRecurDiscTLo$, and the \RqNearTrigN{} attributed crossings that
+are not recovered are the two faintest tested, both at
+$T_\star=\RqNearTrigT$, so there the stage is controlled by
+\RqRecurCloudStars{} alone -- by interstellar gas and not by a point
+source. The control reaches across the baselines the exclusions are quoted
+over: every one of the \QcNCtl{} is recovered in a block more than \EpSep{}
+day from its own and in a different observing session, \QcSepMinD{} to
+\QcSepMaxD{} days away (Table~\ref{tab:confirm}).
+That control is a window search, so the same cell was also read for each of
+them in the way the exclusions are read -- one channel at the frequency its
+own discovery predicts, through the same frame correction, start-of-block
+anchor and carried drift -- and what it establishes divides with the width of
+the line it recovers: the registration of a single cell is tested by the
+\RgRegNUnres{} readings of \RgRegStar{} alone, whose line is confined to one
+channel, while the rest test the frame correction only to the width of a
+resolved line (Table~\ref{tab:confirm}, Appendix~\ref{sec:regbudget}). \RcNExclPoss{} of the \RcNTested{} unattributed crossings were tested,
+over \RcNRepeatMeas{} readings in \RcNRepeatBlock{} execution blocks. At the
+predicted cell the largest statistic anywhere is $\RcTRepMax$ for a crossing's
+whole repeat coverage combined at the \emph{carried drift} -- the rate fitted
+at the discovery epoch and carried across to the repeat. Read in one block
+alone it is \RcTMatched{} at that drift and \RcTMax{} at any drift of the
+grid, against a trigger of \StageNullTrig. The exception is \RcUntStar{} \texttt{\RcUntEb}:
+\RcUntNRep{} blocks cover its frequency, but its own window retains no
+spectrum, so there is no discovery amplitude to transport to them and no
+reading is quoted for it.
+
+Every exclusion is conditional on that model, and the condition is narrow. The reading is taken at one cell at one drift, so it constrains only a
+carrier whose stellar-frame frequency returned to within half that cell:
+half a native channel, \RqHalfChanKHz\,kHz in the median case, or
+$\pm\RqDvLo$ to $\pm\RqDvHi$\,km\,s$^{-1}$ across the \RcNExcl{}
+crossings that carry an exclusion, with a median of $\pm\RqDvMed$. It is not a requirement of frequency stability, and these crossings are
+not stable. Their fitted drifts are line-of-sight accelerations of
+\ZtALosLo{} to \ZtALosHi\,m\,s$^{-2}$ in the observatory's frame, reaching
+\EgStarALosHi{} in the star's own, and the largest of them is a lower bound
+because the search found its maximum on the outermost trial of the grid; the
+carrier of
+Fig.~\ref{fig:event} crosses \EvADriftChan{} channels of its own window
+inside the discovery observation. At those rates a carrier leaves the
+half-channel the reading covers in \ZtSxLeaveSec{} and \ZtCpLeaveSec{}
+seconds. The single cell therefore asks
+only that the carrier be back where it was -- stable over the gap, or
+periodic and sampled at the same phase -- and says nothing about one its own
+motion has carried elsewhere. The window search above tests whether
+recurrences exceed chance as a population; it excludes no individual
+accelerating carrier, and \TjNOpen{} of the \TjNPair{} testable pairs remain
+open.
+
+Neither the registration nor the anchoring of that cell changes any of
+this. The reading was re-made over every cell within the measured
+registration residual and at every anchor along the discovery track, and
+no anchor recovers anything anywhere in this survey
+(Appendix~\ref{sec:regbudget}).
+
+The amplitude each exclusion reaches is the fraction of the discovery
+amplitude still excluded at the trigger, $(T_{\rm rep}+5)/T_{\rm pers}$. Of
+the \RcNTested{} unattributed crossings, \RcNExcl{} carry a quoted exclusion;
+\RcNWithheld{} take their discovery amplitude from the block that fails the
+quality criterion of \S\ref{sec:bdblock} and \RcNNoSpec{} retains no discovery
+spectrum, so none can be formed for those. Over the \RcNExcl{} the repeat coverage rules out a carrier at a median
+\RcFracMed{} of the discovery amplitude, and the deepest at \RcFracMin{} of
+it. The individual limits run to \RcFracMax, however, and for \RcNFracWeak{}
+of them -- \RcFracWeakList{} -- nothing below \RcFracWeakLo{} is ruled out.
+Combining every covering block buys most of that depth: the nearest block
+alone rules out a median \TjFracNearMed{} of the discovery amplitude, and
+\TjNNearWeak{} of the \RcNExcl{} rule out nothing. The chance that a carrier would have satisfied the criterion is evaluated at
+the trigger amplitude $5S/T_\star$ and not at the discovery amplitude,
+which is selected as the largest of many cells at a statistic of about five
+and is biased high (Appendix~\ref{app:radius}). It exceeds
+\RcPowerLevel{} per cent for \HjNPowerHi{} of the \RcNExcl. For the remaining
+\HjNPowerLo{} it is \HjLowList, so those are untested and not excluded.
+These are conditional detection probabilities under the persistent-carrier
+model adopted here, not probabilities that a candidate was noise: a crossing
+that does not recur has not been shown to be anything else. Each was
+therefore measured as well as calculated, by injecting a carrier at the
+trigger amplitude into the retained per-integration spectra of every covering
+repeat block and reading it back by the same procedure
+(Appendix~\ref{app:radius}, Table~\ref{tab:hostinj}); the injected value is
+the weaker of the two readings and is the one quoted here. At \HjEtaStar{} it
+falls to \HjEtaMeas{} where the calculation gives one, because that repeat
+observation is much the longer of the two while the drift grid is sized to
+the discovery, so that crossing is reported as untested and not excluded
+and is counted so above.
+
+Part of the power lost at a single cell is the threshold and not the archive:
+a bar set instead to hold the chance of one false confirmation across every
+reading would be lower, and nothing would have been confirmed
+there either (Appendix~\ref{sec:regbudget}).
+
+Each of the \WdNExc{} repeat windows that hold something above the trigger
+holds a crossing, so a carrier present again would appear in its repeat block
+as one, and each pair must be asked whether one transmitter could have
+produced both members. Inside that interval there are
+\TjNCandPair{} pairs in which at least
+one member is unattributed (Appendix~\ref{sec:pairacct} takes the one count
+to the other); Table~\ref{tab:pairs} asks the question of the
+\TjNPair{} of them, across \TjNStarPair{} stars, whose two crossings each
+carry an independently fitted drift and a block epoch measured from their own
+data. The other \TjNCandLost{} cannot be asked: \TjNCandLostSpec{} involve the
+crossing whose discovery products do not survive and \TjNCandLostFit{} a
+line-attributed crossing for which no drift was fitted. Both fitted drifts are
+carried into the star's frame first, by removing the observatory's own
+line-of-sight acceleration, which is diurnal here and so cannot be
+extrapolated across days. Two criteria then follow, and they partition the
+pairs differently. Constant line-of-sight acceleration means
+$\dot\nu_1=\dot\nu_2$, which \TjNUneqDrift{} of the \TjNPair{} pairs fail by
+more than the grid resolves; the weakest model admitting two unequal drifts
+is a drift changing at a constant rate, and all \TjNPower{} of the pairs
+whose rates the grid resolves fail that too. The claim is
+weaker and safer -- that no trajectory inside the searched grid joins the two crossings
+-- and it separates \TjNExcl{} pair, the two crossings of \EcGridStar{}
+needing \EcGridFactor{} times the grid's own ceiling between them. The
+remaining \TjNOpen{} are \emph{open}, neither a confirmation nor an
+exclusion, and Table~\ref{tab:pairs} marks \TjNPairEdge{} of them
+\emph{edge}, where one of the two fitted rates sits at the edge of the grid
+and is a lower bound. The comparison has the power to reject, which it uses
+on all \TjNPower{} resolved pairs, and none to accept a drifting carrier --
+and it does accept the one pair that is a single emitter, the \TjCtlLine{}
+line of \TjCtlStar, which is a line that does not drift
+(Appendix~\ref{sec:pairacct}).
+
+The \MkAttrExcl{} attributed crossings of the \MkAttrTested{} tested that are
+not recovered both remain consistent with their attribution: each is bounded
+only \RqHrExcl{} and \RqAjExcl{} standard deviations below what carbon
+monoxide persisting at the discovery flux density would have given, and for the
+serendipitous field star among them the attribution rests on a catalogued
+interstellar velocity and not on this test
+(Appendix~\ref{app:linemask}). Whether an interstellar line recurs at the
+phase centre is set by where the cloud is bright, which the control ring
+measures in the same map.
+
+\subsubsection{What can be searched, and what can be confirmed}
+\label{sec:confirmability}
+
+A sensitivity limit and a confirmation limit are different statements. This experiment searched \RcSearchSys{} systems and \RcSearchWin{}
+Class~A windows over \CvUnionA\,GHz of union bandwidth. For a carrier whose
+stellar-frame frequency at the two epochs agrees to within half a native
+channel it could have
+confirmed a signal in \ZcConfSysDay{} of those systems -- those observed
+again in another observing session more than a day later at a frequency the
+first block covered, counting every block the recurrence test above reads and
+not the census alone -- and
+in \ZcConfSysYr{} of them more than a year later
+(Fig.~\ref{fig:confcov}). The count applies the criterion of
+\S\ref{sec:summary} entire, and that condition is the whole of its reach: a
+carrier accelerating as these crossings do is back inside the interval the
+reading permits for a fraction of order
+$10^{\RgPhaseExpLo}$--$10^{\RgPhaseExpHi}$ of the phases of an orbit at the
+searched ceiling, so under this criterion none of the \NSysClassA{} systems
+could have been confirmed except by that coincidence. Requiring the different session as well as the day
+moves \QfNSysMovedWord{} system, because each of the \QfNSysPairDropWord{}
+systems holding a same-session pair more than a day apart holds a pair in two
+sessions as well. A count taken over the census blocks alone and blind to
+frequency arrives at the same number over a different block set, so the cost
+of retuning cannot be read off the two together.
+
+An independent execution block is also not an independent epoch. The baselines run from \RcSepMinH\,hours to \RcSepMaxYr\,yr. For
+\RcNSepSameDay{} of the \RcNExclPoss{} crossings that carry a discovery
+amplitude at all, the nearest covering block falls within a day, and for
+\QcNHazard{} of those it is a block of the same observing session as well --
+the two events of Table~\ref{tab:cand} among them, whose nearest coverage lies
+\QcEvSepOneH{} and \QcEvSepTwoH\,hours away. A recovery in a block of the
+discovery's own session would not have been a confirmation. Separated coverage is not merely present; it carries the depth. Read over
+blocks of another session more than a day away alone, \SpNSep{} of the
+\RcNExcl{} keep such a block and rule out a median \SpFracMed{} of the
+discovery amplitude, from \SpFracMin{} to \SpFracMax, with \SpNPower{} of
+them still reaching \RcPowerLevel{} per cent recovery at the trigger
+amplitude against \RqNPowerHi{} over every covering block. Those two
+counts are the modelled recovery and are comparable with each other, not
+with the \HjNPowerHi{} the injections measure over every covering block,
+which is the weaker reading and the one quoted everywhere else here.
+The \QfNExclSameOnlyWord{} crossings whose
+only coverage lies in their own session -- \SpNoSepList{} -- are all among
+the \HjNPowerLo{} reported too shallow to exclude anything.
+Over months and years these tests
+bound no duty cycle, and for the other \ZcNoRepSys{} systems they bound
+nothing at all.
+
+\subsubsection{The reserved hold-out and the control beyond 40\,pc}
+\label{sec:holdoutsearch}
+
+Three sets of execution blocks enter no census statistic
+(Table~\ref{tab:blockledger}); each was searched with the same pipeline, each
+holds data on real targets and each is reported here as a search. The hold-out is \HoNBlock{} blocks, \HoNWin{} windows, \HoNStar{} stars
+and \HoHours\,h on source, set aside by the identifier rule of
+Appendix~\ref{sec:heldout} and sharing no execution block
+with the census. It contains \HoNCross{} threshold crossings,
+the strongest at $T_\star=\HoTMax$, and none of them outranks its own
+control positions: the fewest controls above the star in any of them is
+\HoNCtrlMin{} of \NCtrl. \HoNTested{} were tested for recurrence on the same
+code path as the census, and exactly one is present again -- \HoRecStar{} at
+$\HoRecDv$\,km\,s$^{-1}$ from \HoRecLine. Its \HoRecNRep{} later blocks
+combine to $T_{\rm rep}=\HoRecTRep$ at the carried drift, the value
+Table~\ref{tab:holdout} prints, while the strongest single block reaches
+\HoRecTAnyDrift{} at its own best drift. It is a molecular line, so its
+recovery is the test working in the positive direction here as well; for
+every other tested crossing the repeat coverage rules out a carrier at
+\HoFracMax{} of the discovery amplitude or less (Table~\ref{tab:holdout}).
+
+The archival extension was searched the same way. Its \LdgExtWin{} windows in
+\LdgExtEB{} blocks hold \QxObsCross{} threshold crossings, every one of them
+in a fine-channel window. \QxObsAttr{} lie inside the mask in their own
+star's frame and \QxObsUnattr{} do not. Over the \QxNWinA{} of those windows that are
+fine-channel (Table~\ref{tab:blockledger}) the
+control positions predict \QxLam{} unattributed crossings by chance
+(Appendix~\ref{app:falsealarm}). The chance of \QxObsUnattr{} or more is
+\QxPGe, so the extension returns what the census's own fields predict.
+A sample this size could have shown a
+shortfall and does not, $P(0\,|\,\QxLam)=\QxPZero$. The frame these
+offsets are read in is approximate: no barycentric term is recorded for
+these blocks, and \QxNVsysCross{} of the \QxObsCross{} carry a measured
+systemic velocity. Over the whole range either term can take, the
+unattributed count stays at \QxObsUnattrLo{} or \QxObsUnattrHi.
+\ExtNStageOne{} of the \QxObsCross{} outrank their own control positions,
+and all \ExtNStageOne{} are the $\beta$~Pictoris disc's carbon monoxide.
+
+The control beyond 40\,pc is \OosNBlock{} blocks and \OosNWin{} windows
+toward \OosNStar{} background sources. It carries \OosHours\,h on source and
+holds \OosNCross{} crossings, the strongest at $T_\star=\OosTMax$, none of
+which outranks its own controls. \OosVsysClause, so the set supports no limit and shows only that
+the pipeline behaves the same way on fields beyond the sample. The third reserved set calibrates the spatial rank
+and is not external at all (Appendix~\ref{app:radius}).
+
+\begin{figure*}
+\centering
+\includegraphics[width=\textwidth]{figures/event_crossings.pdf}
+\caption{\textbf{The strongest unattributed crossing of the quality-passing
+data, and the control field it leads.} Frequencies are in the star's rest
+frame.
+\emph{(a)}~The dynamic spectrum at \EvAStar's position around the crossing
+at \RqFreqSx\,GHz, observed \EvADate, with the fitted drift of
+\EvADrift\,Hz\,s$^{-1}$ as the dashed track. The \EvANInt{} integrations are
+binned into \EvANBin{} and plotted in units of each bin's noise. At
+\EvAFlux$\pm$\EvAFluxErr\,mJy against \EvARmsInt\,mJy per integration the
+carrier is \EvAPerIntSig{} standard deviations in any one of them, and exists
+only in the drift-aligned stack of all \EvADwellMin{} minutes on source.
+\emph{(b)}~The same rows shifted by that drift, which carries the carrier
+\EvADriftChan{} channels of \EvAChanwkHz\,kHz across the
+\EvAElapsedMin{} minutes of elapsed time the block spans, not the
+\EvADwellMin{} on source.
+\emph{(c)}~The de-drifted stack at the star (black) and at the
+\RcNRetCtrl{} control positions with retained dynamic spectra (grey), in
+units of its own noise; dashed, the trigger. \emph{(d)}~The same statistic at
+each of the \NCtrl{} rank-screen control positions: the star (solid) against
+the highest control (dotted). The recurrence test for this crossing, and for the second one --
+\EvBStar{} at \RqFreqCp\,GHz -- is in Table~\ref{tab:cand}.}
+\label{fig:event}
+\end{figure*}
+
+\begin{table}
+\centering
+\caption{\textbf{Can two crossings be one carrier?} Every pair of crossings
+toward one star, in two execution blocks, lying within
+$\pm\WdHalfKms$\,km\,s$^{-1}$ of each other in the star's frame -- the
+half-width of the median spectral window a repeat could be found in -- and
+carrying between them two independently fitted drifts and two block epochs
+measured from their own data: \TjNPair{} pairs with an unattributed member,
+of the \TjNCandPair{} inside that interval. Below the rule is the control, the
+\TjNCandAttrTest{} of \TjNCandAttr{} pairs of already attributed crossings for
+which a drift and an epoch were both recorded; it is a line that does not
+drift, so it shows the test accepting a pair at one frequency and not a
+drifting carrier. Stars are
+identified by position, so the two archival-tail crossings of \TjDeepStar{}
+pair with its catalogued ones. $\Delta\nu$ is the stellar-frame offset and
+$\dot\nu_1$, $\dot\nu_2$ the drifts fitted independently in the two blocks
+and carried into that frame. A carrier whose drift changes at a constant rate
+between the epochs would put the pair at
+$\Delta\nu=\frac{1}{2}(\dot\nu_1+\dot\nu_2)\Delta t$; constant
+line-of-sight acceleration is the special case $\dot\nu_1=\dot\nu_2$, which
+\TjNUneqDrift{} of these pairs fail outright. \emph{Miss} is how
+far the pair is from that prediction in units of the drift grid's resolution
+carried over $\Delta t$, which is also the resolution the comparison has on
+the mean of the two drifts; a dash means it exceeds the window searched, so the
+comparison has no power at all. The last column is the verdict under the weaker
+criterion of a trajectory whose drift stays inside the searched grid:
+\emph{no} where no such trajectory joins the pair, \emph{open} where the pair
+is not separable -- neither a confirmation nor an exclusion --
+\emph{yes} for the control row. The subscript $\star$ marks the star's
+frame, in which the drifts are given; the grid was stepped in the
+observatory's, and Table~\ref{tab:edge} gives the rates in it. \EgNPairDriftEdge{} of the rates
+printed here, \EgStarDriftHzS\,Hz\,s$^{-1}$ toward \EgStarALosHiStar, is the
+outermost trial of its own window's grid: there the search reached the edge
+of the interval it covers, so the rate is a lower bound --
+\EgStarALosHi\,m\,s$^{-2}$ or more -- and every pair that uses it is marked
+\emph{edge}, not \emph{open}. The exception is the row the criterion
+separates, whose verdict uses neither rate: that pair's own offset of
+\EgExclOffMHz\,MHz is \EgExclFac{} times the \EgExclReachMHz\,MHz the
+ceiling permits over \EgExclDtH\,hours, whatever the two rates are.
+Appendix~\ref{sec:edge} establishes the grid's edges and lists every
+edge-limited crossing.}
+\label{tab:pairs}
+\scriptsize
+\input{tab_pairs_v415}
+\end{table}
+
+\begin{table}
+\centering
+\caption{\textbf{The two events}, the crossings whose
+stellar statistic exceeds all \NCtrl{} control positions of their own window;
+the first of them is Fig.~\ref{fig:event}.
+Repeat epochs measured are the blocks at which the predicted stellar-frame
+cell was read, the remainder of them coming from the reserved hold-out and the
+archival extension.
+$T_{\rm pers}$ is what a carrier persisting at the discovery amplitude $S$
+would have given there and $T_{\rm rep}$ is what is measured, combining every
+repeat epoch by inverse variance at the carried drift: one cell and one
+trial, so it may be negative, while the two indented readings beneath it are
+maxima and so positive on average whatever is there -- the second of them
+the same cell at every trial of the window's own drift grid, which bounds an
+error in the carried drift. The nearest block alone
+follows, because the combination asks the model of \S\ref{sec:etacrv} of
+every block across the whole baseline while the single reading asks it only
+of the two observations. The exclusion is the fraction of $S$ still
+ruled out at the trigger, $(T_{\rm rep}+5)/T_{\rm pers}$; the displacement
+permitted is half a channel in the star's frame. The last row but one is the
+chance $\Phi(5T_{\rm pers}/T_\star-5)$ that a carrier at the trigger
+amplitude $5S/T_\star$ would have satisfied the criterion, and in brackets the
+same at $S$, which is selected as the largest of many cells and biased high.}
+\label{tab:cand}
+\footnotesize
+\input{tab_recurcand_v411}
+\end{table}
+
+\begin{table*}
+\centering
+\caption{\textbf{The threshold crossings of the reserved hold-out}, searched
+with the same pipeline and disposed of by the same tests as the
+census. $\Delta v_\star$ is the offset from the nearest masked transition in
+the star's own frame and $n_{\rm rep}$ the number of covering repeat blocks;
+$T_{\rm pers}$ and $T_{\rm rep}$ are as in the crossing ledger. The one
+crossing that is present again is a carbon monoxide line. A dagger marks an
+offset inside the attribution interval whose species the attribution set
+excludes, as in the crossing ledger; such a crossing is reported and not
+acted on (Appendix~\ref{app:linemask}).}
+\label{tab:holdout}
+\scriptsize
+\input{tab_holdout_v412}
+\end{table*}
+
+%% tab:ledger MOVED to Appendix D (sections/app_J_falsealarm.tex): a
+%% full-width 56-row table* worth 0.72 pp of the main text.  Sec. 5.3 and
+%% Sec. 5.6 carry the counts and cite it.
+
+
+
+%% fig:chain MOVED to sections/04_method.tex, Sec. 4.2, where it is first
+%% cited (referee 2, minor 3).  Sec. 5 cites it at the crossing census.

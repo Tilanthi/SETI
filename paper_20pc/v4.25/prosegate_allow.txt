@@ -1,0 +1,48 @@
+# prosegate_selfref allow file -- DECLARED exemptions, pinned to the sentence.
+#
+# Each line: <12-hex pin> <reason>.  The pin is sha1 of the sentence with markup
+# stripped and whitespace collapsed, so EDITING THE SENTENCE LAPSES THE PIN and the
+# gate re-fires.  A pin that matches nothing is a FAILURE, so a dead exemption cannot
+# sit here covering prose it was never read against.  A sentence usually needs TWO
+# pins, one for the source and one for the typeset text, because macros expand.
+#
+# Nothing here is a word-level whitelist: the word stays banned everywhere else.
+
+# 1. "the original observer's correlator setup" -- the ALMA observers who took the
+#    archival data, not an earlier state of this work.  Source and PDF coincide.
+d616652f89b3  01_intro: "the original observer" = the proposing observer of the archival data
+
+# 2. "whatever previous ALMA programmes happened to observe" -- other people's
+#    programmes, which is the whole point of the sentence (archive-selected sample).
+bc1181e64f85  03_sample (source): "previous ALMA programmes" = other observers' programmes
+d95c2436945c  03_sample (PDF): same sentence, macros expanded
+
+# 4. "They also drafted text, which the authors revised." -- the generative-AI
+#    disclosure the journal requires; it describes authorship, not a revision history.
+4306d6baf926  08_backmatter: AI-use disclosure, "revised" = revised a model's draft
+
+# 6. "...this execution of the search cannot be re-run." -- reproducibility
+#    statement about the pipeline, not about re-running an analysis after a
+#    referee.  ★ RE-PINNED: the sentence was rewritten when the overclaim that
+#    followed it ("specified in enough detail to be reimplemented, which is the
+#    stronger test in any case") was replaced by what is actually measured, so
+#    the old pin lapsed -- which is the mechanism working.  Source and PDF
+#    coincide here because the sentence carries no macro.
+22eea2b8f6f6  08_backmatter: "re-run" = a reader re-executing the pipeline
+
+# 7. "Re-extracting the N windows of M blocks furthest out..." -- a test performed
+#    and reported in the present tense; the re-extraction IS the measurement here.
+09fde13d4649  app_A (source): re-extraction test of the parallax displacement
+3fdf89793ca4  app_A (PDF): same sentence, macros expanded
+
+# ★ RE-PINNED TWICE IN ONE DAY, not newly exempted: entries 2 and 3 keep their
+# SOURCE pins and their reasons unchanged; only their PDF pins have moved, each
+# time because the CLASS changed and reflowed the typeset text the hash is
+# taken over.  Entry 2's PDF pin has been c2f264859c96 under one class and is
+# d95c2436945c under this one; entry 3's happens to be unchanged, because its
+# sentence does not sit against a heading.  (Entry 2's does: this class runs a
+# subsection heading into its paragraph, so the extracted sentence begins "The
+# archival selection This sample was not designed...".)  The sentences are the
+# same sentences.  A PDF pin is a hash of the typeset paragraph, so it lapses
+# whenever the page breaks move -- which is the mechanism working, and the
+# reason every entry here carries a reason rather than a word.

@@ -1,0 +1,920 @@
+[
+ {
+  "file": "_",
+  "id": "E1",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": 448,
+  "detail": "new present",
+  "title": "P_eff is an analytic, window-specific response correction, not a measu"
+ },
+ {
+  "file": "_",
+  "id": "E2",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": 223,
+  "detail": "new present",
+  "title": "correct the primary-beam convention to 1.13 lambda/D at the array's ow"
+ },
+ {
+  "file": "_",
+  "id": "E3",
+  "lvl": "MUST",
+  "state": "PENDING",
+  "cost": 723,
+  "detail": "anchor x1",
+  "title": "12 m-only robustness analysis, in place of re-running ACA control extr"
+ },
+ {
+  "file": "_",
+  "id": "E4",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": 128,
+  "detail": "new present",
+  "title": "main text: execution-block clustered permutation replaces the independ"
+ },
+ {
+  "file": "_",
+  "id": "E5",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": 868,
+  "detail": "new present",
+  "title": "appendix: the clustered permutation itself, with the measurement that "
+ },
+ {
+  "file": "_",
+  "id": "E6",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -1,
+  "detail": "new present",
+  "title": "CP-72 subsection heading: execution blocks, unconfirmed event"
+ },
+ {
+  "file": "_",
+  "id": "E7",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": 1,
+  "detail": "new present",
+  "title": "CP-72 recurrence-test paragraph: epoch wording"
+ },
+ {
+  "file": "_",
+  "id": "E8",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": 4,
+  "detail": "new present",
+  "title": "CP-72 non-recurrence paragraph: epoch wording"
+ },
+ {
+  "file": "_",
+  "id": "E9",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": 0,
+  "detail": "new present",
+  "title": "CP-72 window-maximum sentence: epoch wording"
+ },
+ {
+  "file": "_",
+  "id": "E10",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": 0,
+  "detail": "new present",
+  "title": "CP-72 catalogue-frequency paragraph: epoch wording"
+ },
+ {
+  "file": "_",
+  "id": "E11",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": 3,
+  "detail": "new present",
+  "title": "CP-72 standing description: unconfirmed first-block event"
+ },
+ {
+  "file": "_",
+  "id": "E12",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": 12,
+  "detail": "new present",
+  "title": "Figure 5 caption: execution 1 and execution 2"
+ },
+ {
+  "file": "_",
+  "id": "E13",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -8,
+  "detail": "new present",
+  "title": "Table 6 disposition cell: absent in the repeat block"
+ },
+ {
+  "file": "_",
+  "id": "E14",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": 2,
+  "detail": "new present",
+  "title": "Table 5 row: absent in the repeat block"
+ },
+ {
+  "file": "_",
+  "id": "E15",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": 26,
+  "detail": "new present",
+  "title": "main-text disposition sentence: unconfirmed first-block event"
+ },
+ {
+  "file": "_",
+  "id": "E16",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": 0,
+  "detail": "new present",
+  "title": "abstract: two blocks, not two epochs"
+ },
+ {
+  "file": "_",
+  "id": "E17",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": 8,
+  "detail": "new present",
+  "title": "conclusions: two executions, pre-registered criterion"
+ },
+ {
+  "file": "_",
+  "id": "E18",
+  "lvl": "SHOULD",
+  "state": "APPLIED",
+  "cost": 1,
+  "detail": "new present",
+  "title": "data availability: repeat-block products"
+ },
+ {
+  "file": "_",
+  "id": "E19",
+  "lvl": "MUST",
+  "state": "AMBIG",
+  "cost": 25,
+  "detail": "anchor gone, new absent",
+  "title": "benchmarks: foreground the 12 m / 1 MW / 230 GHz case and label the Ar"
+ },
+ {
+  "file": "_",
+  "id": "E20",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": 40,
+  "detail": "new present",
+  "title": "Figure 1 caption: name the Arecibo line a power-scale benchmark"
+ },
+ {
+  "file": "_",
+  "id": "E21",
+  "lvl": "SHOULD",
+  "state": "APPLIED",
+  "cost": 147,
+  "detail": "new present",
+  "title": "Figure 6 caption: power-scale label, and mark the drift-smeared window"
+ },
+ {
+  "file": "_",
+  "id": "E22",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -11,
+  "detail": "new present",
+  "title": "statistic: drift-aligned inverse-variance weighted stacking, not coher"
+ },
+ {
+  "file": "_",
+  "id": "E23",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -9,
+  "detail": "new present",
+  "title": "frames: name the operation drift-aligned inverse-variance weighted sta"
+ },
+ {
+  "file": "_",
+  "id": "E24",
+  "lvl": "SHOULD",
+  "state": "APPLIED",
+  "cost": -16,
+  "detail": "new present",
+  "title": "eta_drift definition: drop the second misleading use of coherently"
+ },
+ {
+  "file": "_",
+  "id": "E25",
+  "lvl": "SHOULD",
+  "state": "APPLIED",
+  "cost": 0,
+  "detail": "new present",
+  "title": "dwell section: ideal stacking gain"
+ },
+ {
+  "file": "_",
+  "id": "E26",
+  "lvl": "SHOULD",
+  "state": "APPLIED",
+  "cost": 0,
+  "detail": "new present",
+  "title": "appendix B: ideal stacking gain"
+ },
+ {
+  "file": "_",
+  "id": "E27",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": 6,
+  "detail": "new present",
+  "title": "rename Appendix I"
+ },
+ {
+  "file": "_",
+  "id": "E28",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -21,
+  "detail": "new present",
+  "title": "Appendix I table caption: same rename"
+ },
+ {
+  "file": "_",
+  "id": "E29",
+  "lvl": "MUST",
+  "state": "AMBIG",
+  "cost": 134,
+  "detail": "anchor gone, new absent",
+  "title": "held-out check: bound the stage-1 rate the null windows actually suppo"
+ },
+ {
+  "file": "_",
+  "id": "E30",
+  "lvl": "SHOULD",
+  "state": "APPLIED",
+  "cost": 346,
+  "detail": "new present",
+  "title": "two-category framing for the masked frequencies"
+ },
+ {
+  "file": "_",
+  "id": "E31",
+  "lvl": "SHOULD",
+  "state": "PENDING",
+  "cost": 20,
+  "detail": "anchor x1",
+  "title": "label the beta Pic validation subsection so the methods section can po"
+ },
+ {
+  "file": "_",
+  "id": "E32",
+  "lvl": "SHOULD",
+  "state": "PENDING",
+  "cost": 305,
+  "detail": "anchor x1",
+  "title": "methods validation list: point at the beta Pic end-to-end validation"
+ },
+ {
+  "file": "_",
+  "id": "E33",
+  "lvl": "SHOULD",
+  "state": "APPLIED",
+  "cost": -7,
+  "detail": "new present",
+  "title": "do not call a Class B excess a narrow, artificial-looking line"
+ },
+ {
+  "file": "_",
+  "id": "E34",
+  "lvl": "SHOULD",
+  "state": "PENDING",
+  "cost": 63,
+  "detail": "anchor x1",
+  "title": "Table 5: give the 12 m / ACA split"
+ },
+ {
+  "file": "_",
+  "id": "E35",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": 788,
+  "detail": "new present",
+  "title": "one completeness matrix replaces the two experiment-specific tables (p"
+ },
+ {
+  "file": "_",
+  "id": "E36",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -1222,
+  "detail": "anchor gone, action=delete",
+  "title": "delete the second completeness table, now rows of the matrix"
+ },
+ {
+  "file": "_",
+  "id": "E37",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -257,
+  "detail": "new present",
+  "title": "cut the withdrawn-criterion history from the methods (it is in Appendi"
+ },
+ {
+  "file": "_",
+  "id": "E38",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -113,
+  "detail": "new present",
+  "title": "cut the same history from the Results preamble"
+ },
+ {
+  "file": "_",
+  "id": "E39",
+  "lvl": "SHOULD",
+  "state": "APPLIED",
+  "cost": -218,
+  "detail": "new present",
+  "title": "compress the mask-repair chronology, which Appendix H carries in full"
+ },
+ {
+  "file": "_",
+  "id": "E40",
+  "lvl": "SHOULD",
+  "state": "APPLIED",
+  "cost": -337,
+  "detail": "new present",
+  "title": "delete a repeated N_eff sentence inside Appendix G"
+ },
+ {
+  "file": "_",
+  "id": "E41",
+  "lvl": "SHOULD",
+  "state": "APPLIED",
+  "cost": -410,
+  "detail": "new present",
+  "title": "compress the superseded-statistic subsection"
+ },
+ {
+  "file": "_",
+  "id": "E42",
+  "lvl": "SHOULD",
+  "state": "APPLIED",
+  "cost": -181,
+  "detail": "new present",
+  "title": "compress the asymmetric-statistic justification in the methods"
+ },
+ {
+  "file": "_",
+  "id": "E43",
+  "lvl": "SHOULD",
+  "state": "APPLIED",
+  "cost": -151,
+  "detail": "new present",
+  "title": "compress the exploratory-diagnostics paragraph"
+ },
+ {
+  "file": "_",
+  "id": "E44",
+  "lvl": "SHOULD",
+  "state": "APPLIED",
+  "cost": -59,
+  "detail": "new present",
+  "title": "compress the pipeline-history paragraph"
+ },
+ {
+  "file": "_",
+  "id": "E45",
+  "lvl": "SHOULD",
+  "state": "APPLIED",
+  "cost": -132,
+  "detail": "new present",
+  "title": "compress the coarse-noise signature paragraph"
+ },
+ {
+  "file": "_",
+  "id": "E46",
+  "lvl": "SHOULD",
+  "state": "APPLIED",
+  "cost": -155,
+  "detail": "anchor gone, action=delete",
+  "title": "delete a sentence the Conclusions already carry"
+ },
+ {
+  "file": "_",
+  "id": "E47",
+  "lvl": "SHOULD",
+  "state": "APPLIED",
+  "cost": -203,
+  "detail": "new present",
+  "title": "compress the eight-control caveat"
+ },
+ {
+  "file": "_",
+  "id": "E49",
+  "lvl": "SHOULD",
+  "state": "APPLIED",
+  "cost": -112,
+  "detail": "new present",
+  "title": "trim the ancillary-results by-products"
+ },
+ {
+  "file": "_",
+  "id": "E50",
+  "lvl": "SHOULD",
+  "state": "APPLIED",
+  "cost": -132,
+  "detail": "new present",
+  "title": "trim the per-target-values sentence"
+ },
+ {
+  "file": "_",
+  "id": "E51",
+  "lvl": "SHOULD",
+  "state": "APPLIED",
+  "cost": -310,
+  "detail": "anchor gone, action=delete",
+  "title": "delete the stratum sentence that rests on the withdrawn statistic"
+ },
+ {
+  "file": "_",
+  "id": "E52",
+  "lvl": "SHOULD",
+  "state": "APPLIED",
+  "cost": -58,
+  "detail": "new present",
+  "title": "compress the results opener, whose counts are all in Table 5"
+ },
+ {
+  "file": "_",
+  "id": "E54",
+  "lvl": "SHOULD",
+  "state": "APPLIED",
+  "cost": -183,
+  "detail": "new present",
+  "title": "PAYMENT: the four excluded classes are listed twice, in S5.2 and in Ap"
+ },
+ {
+  "file": "_",
+  "id": "E55",
+  "lvl": "SHOULD",
+  "state": "APPLIED",
+  "cost": -159,
+  "detail": "new present",
+  "title": "PAYMENT: the multi-epoch caveat is made three times"
+ },
+ {
+  "file": "_",
+  "id": "F1",
+  "lvl": "MUST",
+  "state": "PENDING",
+  "cost": 106,
+  "detail": "anchor x1",
+  "title": "Say in the main text that the two analysis choices were data-driven an"
+ },
+ {
+  "file": "_",
+  "id": "F2",
+  "lvl": "MUST",
+  "state": "AMBIG",
+  "cost": 11,
+  "detail": "anchor gone, new absent",
+  "title": "Call the held-out check preliminary in the word referee F used."
+ },
+ {
+  "file": "_",
+  "id": "F3",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": 181,
+  "detail": "new present",
+  "title": "State the held-out check's power as a number instead of \"about a tenth"
+ },
+ {
+  "file": "_",
+  "id": "F4",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": 16,
+  "detail": "new present",
+  "title": "Stop hard-coding which held-out stars are unflagged; the campaign has "
+ },
+ {
+  "file": "_",
+  "id": "F5",
+  "lvl": "MUST",
+  "state": "PENDING",
+  "cost": 425,
+  "detail": "anchor x1",
+  "title": "State the closure-phase limitation quantitatively in the main text whe"
+ },
+ {
+  "file": "_",
+  "id": "F6",
+  "lvl": "MUST",
+  "state": "PENDING",
+  "cost": 561,
+  "detail": "anchor x1",
+  "title": "Report the prospective line-database cross-check and its outcome (appe"
+ },
+ {
+  "file": "_",
+  "id": "F7",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -40,
+  "detail": "new present",
+  "title": "PAYMENT for F6, same appendix: the tuned-line suggestion is superseded"
+ },
+ {
+  "file": "_",
+  "id": "F8",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": 97,
+  "detail": "new present",
+  "title": "Carry the 0.5-2x transfer bracket into the Discussion case (ii) recove"
+ },
+ {
+  "file": "_",
+  "id": "F9",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": 62,
+  "detail": "new present",
+  "title": "Carry the bracket into the Scope-of-the-constraints box, the other pla"
+ },
+ {
+  "file": "_",
+  "id": "F10",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": 77,
+  "detail": "new present",
+  "title": "Carry the bracket into the Conclusions, where the conditional fraction"
+ },
+ {
+  "file": "_",
+  "id": "F11",
+  "lvl": "SHOULD",
+  "state": "APPLIED",
+  "cost": 52,
+  "detail": "new present",
+  "title": "Figure 3 caption: say that the row labels alternate between the two ax"
+ },
+ {
+  "file": "_",
+  "id": "F12",
+  "lvl": "SHOULD",
+  "state": "APPLIED",
+  "cost": 13,
+  "detail": "new present",
+  "title": "Abstract: name the threshold in the Arecibo clause instead of \"on that"
+ },
+ {
+  "file": "_",
+  "id": "F13",
+  "lvl": "SHOULD",
+  "state": "APPLIED",
+  "cost": 55,
+  "detail": "new present",
+  "title": "State the searched sample's completeness fraction early, where the cen"
+ },
+ {
+  "file": "_",
+  "id": "F14",
+  "lvl": "SHOULD",
+  "state": "PENDING",
+  "cost": 1494,
+  "detail": "anchor x1",
+  "title": "Move the nomenclature table to the head of S3, before the terms are us"
+ },
+ {
+  "file": "_",
+  "id": "F15",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -1250,
+  "detail": "anchor gone, action=delete",
+  "title": "PAYMENT for F14: delete the nomenclature table from its old position."
+ },
+ {
+  "file": "_",
+  "id": "F16",
+  "lvl": "MUST",
+  "state": "AMBIG",
+  "cost": -194,
+  "detail": "anchor gone, new absent",
+  "title": "PAYMENT for F14's two new rows: replace the S3 prose that defines the "
+ },
+ {
+  "file": "_",
+  "id": "F17",
+  "lvl": "SHOULD",
+  "state": "APPLIED",
+  "cost": -89,
+  "detail": "new present",
+  "title": "Relate the conditional searched-domain fraction back to the Cosmic Hay"
+ },
+ {
+  "file": "_",
+  "id": "F18",
+  "lvl": "SHOULD",
+  "state": "PENDING",
+  "cost": 195,
+  "detail": "anchor x1",
+  "title": "Add the Haystack connection where the axis-by-axis comparison ends."
+ },
+ {
+  "file": "_",
+  "id": "F19",
+  "lvl": "SHOULD",
+  "state": "APPLIED",
+  "cost": 12,
+  "detail": "new present",
+  "title": "Fix a broken construction in S6.2 (accessibility, M8)."
+ },
+ {
+  "file": "_",
+  "id": "F21",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -293,
+  "detail": "new present",
+  "title": "PAYMENT: delete the S6.2 restatement of the unsearched-block audit, wh"
+ },
+ {
+  "file": "_",
+  "id": "F22",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -111,
+  "detail": "new present",
+  "title": "PAYMENT: compress the S6.2 mask restatement, keeping the point."
+ },
+ {
+  "file": "_",
+  "id": "F23",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -108,
+  "detail": "new present",
+  "title": "PAYMENT: compress the held-out section's opening, which repeats the in"
+ },
+ {
+  "file": "_",
+  "id": "F24",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -82,
+  "detail": "new present",
+  "title": "PAYMENT: merge the two sentences in S2 that both say the pilot is not "
+ },
+ {
+  "file": "_",
+  "id": "F25",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -27,
+  "detail": "new present",
+  "title": "PAYMENT: compress the S6.1 signposting sentence."
+ },
+ {
+  "file": "_",
+  "id": "F26",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -9,
+  "detail": "new present",
+  "title": "PAYMENT: compress the pointing-crossmatch lesson, which S3 already car"
+ },
+ {
+  "file": "_",
+  "id": "F27",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -159,
+  "detail": "anchor gone, action=delete",
+  "title": "PAYMENT: delete the S4 gloss on \"5 sigma\", which the boxed rule 90 lin"
+ },
+ {
+  "file": "_",
+  "id": "F28",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -58,
+  "detail": "new present",
+  "title": "PAYMENT: drop the clause in S6.2 that the occurrence appendix already "
+ },
+ {
+  "file": "_",
+  "id": "F29",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -69,
+  "detail": "new present",
+  "title": "PAYMENT: compress the prior-limits sentence in S5.1."
+ },
+ {
+  "file": "_",
+  "id": "F30",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -96,
+  "detail": "new present",
+  "title": "PAYMENT: compress the S6.3 restatement of the bolded habitable-zone ca"
+ },
+ {
+  "file": "_",
+  "id": "F31",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -49,
+  "detail": "new present",
+  "title": "PAYMENT: compress a pointer sentence in S5.3.4."
+ },
+ {
+  "file": "_",
+  "id": "F32",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -22,
+  "detail": "new present",
+  "title": "PAYMENT: compress a second pointer in the same subsection."
+ },
+ {
+  "file": "_",
+  "id": "F33",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -25,
+  "detail": "new present",
+  "title": "PAYMENT: compress the opening of the conditional-fraction paragraph."
+ },
+ {
+  "file": "_",
+  "id": "F34",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -239,
+  "detail": "new present",
+  "title": "PAYMENT (appendix): the two factors are stated twice in Appendix~\\ref{"
+ },
+ {
+  "file": "_",
+  "id": "F35",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -40,
+  "detail": "new present",
+  "title": "PAYMENT (appendix): compress the closure appendix preamble."
+ },
+ {
+  "file": "_",
+  "id": "F36",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -62,
+  "detail": "new present",
+  "title": "PAYMENT (appendix): compress the repaired-mask pointer."
+ },
+ {
+  "file": "_",
+  "id": "F37",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -55,
+  "detail": "new present",
+  "title": "PAYMENT (appendix): compress the Bonferroni preamble."
+ },
+ {
+  "file": "_",
+  "id": "F38",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -11,
+  "detail": "new present",
+  "title": "PAYMENT (appendix): compress the bookkeeping caveat."
+ },
+ {
+  "file": "_",
+  "id": "F39",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -20,
+  "detail": "new present",
+  "title": "PAYMENT (appendix): compress the chirp-extension result sentence."
+ },
+ {
+  "file": "_",
+  "id": "F40",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -52,
+  "detail": "new present",
+  "title": "PAYMENT (appendix): compress the released-list sentence."
+ },
+ {
+  "file": "_",
+  "id": "F41",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -20,
+  "detail": "new present",
+  "title": "PAYMENT: compress the unresolved-carrier caveat in S4."
+ },
+ {
+  "file": "_",
+  "id": "F42",
+  "lvl": "MUST",
+  "state": "AMBIG",
+  "cost": -19,
+  "detail": "anchor gone, new absent",
+  "title": "PAYMENT: compress the held-out conclusion sentence."
+ },
+ {
+  "file": "_",
+  "id": "F43",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -41,
+  "detail": "new present",
+  "title": "PAYMENT: compress the build-date sentence in the held-out section."
+ },
+ {
+  "file": "_",
+  "id": "F44",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -4,
+  "detail": "new present",
+  "title": "PAYMENT: compress the dwell sentence in S6.1."
+ },
+ {
+  "file": "_",
+  "id": "F45",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -20,
+  "detail": "new present",
+  "title": "PAYMENT (appendix): compress the control-count remark."
+ },
+ {
+  "file": "_",
+  "id": "F46",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -11,
+  "detail": "new present",
+  "title": "PAYMENT (appendix): compress the frequency-occupancy closing sentence."
+ },
+ {
+  "file": "_",
+  "id": "F47",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -13,
+  "detail": "new present",
+  "title": "PAYMENT (appendix): compress the chirp-blindness sentence."
+ },
+ {
+  "file": "_",
+  "id": "F48",
+  "lvl": "MUST",
+  "state": "AMBIG",
+  "cost": -49,
+  "detail": "anchor gone, new absent",
+  "title": "PAYMENT: drop a redundant clause in S3."
+ },
+ {
+  "file": "_",
+  "id": "F49",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -11,
+  "detail": "new present",
+  "title": "PAYMENT: compress the systematic-budget closing clause in S4."
+ },
+ {
+  "file": "_",
+  "id": "F50",
+  "lvl": "MUST",
+  "state": "APPLIED",
+  "cost": -15,
+  "detail": "new present",
+  "title": "PAYMENT: compress the field-of-view caveat in S3."
+ }
+]

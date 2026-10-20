@@ -1,0 +1,40 @@
+{
+ "cwtfm": {
+  "adopt_med": 113797.69124163852,
+  "adopt_med_uniform": 12310.192776095026,
+  "adopt_worst": 2865413.5623287037,
+  "bare_med": 37018.58370878608,
+  "bare_med_uniform": 4004.5267771339886,
+  "bare_worst": 946044.3639589403,
+  "bare_worst_uniform": 102339.40924463588
+ },
+ "drive": null,
+ "eirp_adopted": {
+  "median": 1452706160186695.2,
+  "worst": 3.657898405547191e+16
+ },
+ "eirp_bare": {
+  "median": 472567800000000.0,
+  "worst": 1.207691e+16
+ },
+ "failures": [],
+ "gap_dex": {
+  "bandwidth": 2.762090490965735,
+  "depth": 2.57588038675075,
+  "total": 5.337970877716485
+ },
+ "generated_by": "cwtfm_r17.py",
+ "literature": {
+  "enriquez": 0.85,
+  "enriquez_five": 0.17,
+  "margot": 0.1434813415210203,
+  "margot_five": 0.07174067076051015
+ },
+ "n_systems": 61,
+ "nu_mid_GHz": 493.55236,
+ "ratio": 9.244184336627166,
+ "round": 721,
+ "sigma_nu_rel": 0.638284548806009,
+ "uniform_product": 5.900420028383646,
+ "union_GHz": 47.74043000000026
+}

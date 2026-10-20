@@ -1,0 +1,50 @@
+%% The figure-of-merit arithmetic, moved out of the discussion so the section
+%% can state what the comparison shows and leave the bookkeeping here.  Every
+%% quantity is a macro cwtfm_r17.py publishes and asserts (W1-W7b); nothing in
+%% this appendix is typed.
+\section{The figure of merit, term by term}
+\label{app:cwtfm}
+
+The conventional measure for comparing programmes is the continuous-waveform
+transmitter figure of merit of \citet{Enriquez2017},
+$\mathrm{CWTFM}=\zeta_{\rm AO}\,\mathrm{EIRP}_{\rm min}/
+(N_{\star}\nu_{\rm rel})$ with $\nu_{\rm rel}=\Delta\nu/\nu_{\rm mid}$,
+smaller being better. Those programmes quote $\mathrm{EIRP}_{\rm min}$ at
+their own detection thresholds, and the measure is linear in it. Put on the
+common footing of five (Table~\ref{tab:litthresh}), \FomLitEnriquez{} becomes
+\FomLitEnriquezFive{} and \FgLitMargot{} becomes \FgLitMargotFive. That runs
+against this survey, making the comparison programmes deeper than their own
+papers report -- on one arithmetic convention and not
+at a matched false-alarm probability. \citet{Margot2023} publish no
+CWTFM; the value quoted here is the same expression on the three quantities
+they do give -- \FomMargotN{} stars, \FomMargotLo--\FomMargotHi\,GHz and
+$\mathrm{EIRP}>\FgMargotEirp$\,W. This experiment takes no such factor.
+
+The denominator used here modifies theirs: in place of a single survey-wide
+fractional bandwidth it is the star-bandwidth product
+$\sum_{i}\Delta\nu_{i}/\nu_{i}$, one term per system, in which
+$\Delta\nu_{i}$ is the union of that system's own searched windows and
+$\nu_{i}$ the midpoint of the span those windows cover. That is not the
+frequency of its best window, which is
+what Table~\ref{tab:persys} lists; formed with those the same sum is
+\CwSigmaBest, and the smaller of the two is adopted. The two are one quantity
+for a survey in which every star is observed over the same band, which the
+programmes compared here are, while for an archive a single fractional
+bandwidth credits every system with frequencies searched toward another.
+Measured term by term it is \CwSigma{} over the \CwNSys{} systems, against
+\CwUniform{} on the uniform convention. That factor of \CwRatio{} is there
+because the median system was covered over only \SysUnionAMed\,GHz of the
+\CvUnionA\,GHz union.
+
+On that denominator the Class~A experiment is
+$\CwBareWorst$ on the sample's largest threshold power and $\CwBareMed$ on
+the median system. On the $\mathrm{EIRP}_{90}$ adopted everywhere else here
+it is $\CwAdoptWorst$ and $\CwAdoptMed$, a completeness rather than a
+threshold, so the comparison with the published values is made on the bare
+thresholds. The median here is a factor $\CwRatioEnriquez$ above the
+published Enriquez value and $\CwRatioEnriquezFive$ above it once that value
+is put on the common threshold of five. That
+gap is \CwBandDex{} decades of haystack and \CwEirpDex{} decades of depth, so
+neither explains it alone: this is a far smaller haystack than a wideband
+centimetre survey of thousands of stars and a shallower one, and the measure
+compares surveys instead of estimating occurrence rates.

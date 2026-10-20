@@ -1,0 +1,58 @@
+v4.05: the finished round-8 measurements, wired in at their generators
+
+Dispositions become COMPUTED (D4). The catalogue now carries three disposition
+columns: the frozen 15-transition mask evaluated topocentrically over all 56
+threshold crossings (16 attributed, 10 of those rank-screened), the authors'
+hand-assigned label re-keyed on (star, block, window), and the published column
+unchanged. Every disagreement is printed crossing by crossing in a new table.
+Assertion A1 fires on the released column with six offenders -- six crossings
+the mask attributes shipped with a blank disposition, three of them the
+HD 285968 CO(2-1) events localised in three independent blocks. Assertion A2
+fires twice on the ungated hand literal, which would label two beta Pic
+crossings 3,793 and 3,898 km/s from CS(5-4) "circumstellar CO": (star, band) is
+not a key.
+
+Appendix M's clustering test replaced by a measured one (R2-9). The shipped
+1 MHz statistic reproduces exactly (4 / 2.44 / p = 0.0095) and is then shown to
+be counting per-window peaks rather than crossings, to have a null that ignores
+the ALMA channel grid (grid null 5.06, p = 1.0000), and to have 0.0/1.3/8.8 per
+cent power at 6/12/24 events over 156 MHz against the replacement scan's
+10.5/100/100. The old test is described rather than deleted: it beats the scan
+outright for exactly-one-channel clusters. The scan finds the crossings
+clustering at p = 0.0042 in 230.423-230.723 GHz, 9 of whose 12 members are
+CO(2-1), falling to p = 0.107 line-removed; equivalently and with no band
+chosen, 11 of 51 crossings lie inside the +-50 km/s tube against 4.8 expected,
+p = 0.0010.
+
+The occupancy excess is WITHDRAWN. Keyed on the execution-block directory
+rather than the star, a star's own repeats counted as cross-target
+coincidences. Keyed on the star: 569 against 554 +- 13, z = 1.1; among the 109
+significant windows 4 against 5.2, z = -0.6. The corrected screen supports no
+interference claim, which is what the paper wants to say -- now on a test that
+could have contradicted it.
+
+Mask-width ladder generated in both frames, with the machine-asserted fact that
++-50 and +-100 select the IDENTICAL SET (61 Vir, CP-72 2713) in both.
+
+Three flagged corrections fixed at their generators: \NExoHostsTab 19 -> 23 and
+\NExoPlanetsTab 42 -> 50 (the blank-flag defect; the disagreement with the
+earlier 22/49 is reported, not reconciled); \HostNMult 1 -> 0 on a fresh SIMBAD
+query of basic.otype and h_link; Appendix B's x26 relabelled an illustrative
+rescaling and the defensible heterogeneous figure given, CWTFM = 2.3e5, x9.2.
+
+eta_drift narrowed, not deleted: 13 of 403 Class A windows below 1, but 0 of 12
+stage-1 windows and 0 of 52 Class A crossings.
+
+New gate selftest_v405.py: 60 cases, 60 demonstrated failing. It immediately
+caught a TAUTOLOGICAL assertion of mine -- the re-keying check compared the
+shipped column against the map it is computed from, and could not fail.
+
+Gates: 0 errors / 0 undefined / 0 multiply-defined / 0 overfull / 0 Type-3,
+roundcollide 84/84, macrosyn 0, consistency 0, prosenum 0, macroleak 0,
+intsweep 82/82, audit_numbers 49 PASS / 0 FAIL, reproducer 22/0,
+selftest_v403 20, selftest_v404 46/46, selftest_v405 60/60,
+clean regeneration 127/127 byte-identical.
+
+48 pages, main text 17.72 pp. Page length is deferred by Glenn's directive and
+was measured, not optimised. Every P_90 macro is untouched, verified: 0 of 24
+changed. Notes in BUILD_NOTES_V405.md.

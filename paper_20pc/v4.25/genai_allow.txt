@@ -1,0 +1,51 @@
+# genai_sweep allow file -- DECLARED exemptions, pinned to the sentence.
+#
+# Each line: <12-hex pin> <reason>.  The pin is sha1 of (pattern family, sentence)
+# with case, spacing, hyphenation and markup removed, so the three renderings pin
+# identically and REWORDING THE SENTENCE LAPSES THE PIN and the gate re-fires on it.
+# A pin that matches nothing is a FAILURE, so a dead exemption cannot sit here
+# covering prose that has gone.  Nothing here is a word-level whitelist: the word
+# stays swept everywhere else in the paper, including inside figures, because the
+# sweep reads the PDF text layer.
+#
+# Regenerate a lapsed pin with:  python3 genai_sweep.py PAPER.pdf --pins
+# and read the sentence before you paste the number.
+
+# 1. "the one that prompted it" -- the BLOCK that prompted a data-quality criterion.
+#    Ordinary English; nothing to do with a prompt given to a model.
+3b3f9372f554  app (data-quality criterion): "prompted" = the block that prompted the criterion
+
+# 2. "...cannot be re-run" -- the reproducibility statement: a reader cannot re-run
+#    this execution of the pipeline.  Not a re-run after a referee.
+#    ★ RE-PINNED with the sentence, which was rewritten when the reproducibility
+#    overclaim beside it was replaced by the narrower measured statement.
+880286471cb0  08_backmatter: "re-run" = a reader re-executing the pipeline
+
+# 2b. "...is an assertion of ours and not something a reader can check." -- the
+#    LABEL on the hold-out's independence, added because it cannot be verified
+#    from what is released and saying so is the honest form.  The build-word
+#    family lands on "assertion"; here the word is used against our own
+#    interest, which is the opposite of build narration.
+fb02af519314  app B.1: "assertion" = the unverifiable claim labelled as such
+
+# 3. "...lets a partly de-cohered carrier still find a cell" -- "lets" the verb, not
+#    the contraction "let's".  The family is cased against the contraction and this
+#    is the one place ordinary English collides with it.
+fe7a519be145  app (decorrelation): "lets" = the verb, not "let us"
+
+# 4. "Use of generative artificial intelligence." -- the disclosure heading the
+#    journal REQUIRES.  Swept by the llm-word family by construction.
+9f581e010498  08_backmatter: the required generative-AI disclosure heading
+
+# 5-6. "assertion" in the two sentences that describe how the analysis was checked.
+#    Both are about the analysis code's internal assertions, which is a method
+#    statement a reader is entitled to; neither is build narration.
+03e329d14cc5  08_backmatter: "no result accepted on a model's assertion"
+7955775f868d  08_backmatter: "every assertion was first made to fail on purpose"
+
+# 7. "Neither criterion was fixed in advance." -- the DISCLOSURE that the criterion
+#    is post hoc, which is the opposite of a pre-specification claim and is the
+#    sentence R2-6(iv) leaves standing deliberately.  The notebook-voice family
+#    lands on "was fixed"; the sentence is the one place the paper talks about
+#    chronology and it talks about it against our own interest.
+e95018293b87  05_results: "was fixed in advance" = the post-hoc disclosure, not a claim

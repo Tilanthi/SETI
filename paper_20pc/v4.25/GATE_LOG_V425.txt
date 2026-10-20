@@ -1,0 +1,464 @@
+pages: ['41'] | errors: 0 | undef refs/cites: 0 | multdef: 0 | overfull: 0 | underfull: 31
+   Underfull \hbox (badness 2486) in paragraph at lines 75--97
+   Underfull \hbox (badness 1033) in paragraph at lines 127--162
+   Underfull \hbox (badness 10000) in paragraph at lines 416--416
+   Underfull \hbox (badness 1092) in paragraph at lines 365--374
+   Underfull \hbox (badness 2512) in paragraph at lines 378--405
+   Underfull \hbox (badness 1715) in paragraph at lines 659--688
+   Underfull \hbox (badness 1226) in paragraph at lines 40--53
+   Underfull \hbox (badness 1152) in paragraph at lines 145--155
+   Underfull \hbox (badness 2680) in paragraph at lines 145--155
+   Underfull \hbox (badness 1297) in paragraph at lines 2--19
+   Underfull \hbox (badness 10000) in paragraph at lines 13--13
+   Underfull \hbox (badness 4108) in paragraph at lines 15--16
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+Type3 fonts: 0 []
+appendix divider NOT FOUND in the PDF (none typeset, or the class no longer prints one): main/appendix split unmeasured
+technosignatures_40pc_v4.25.tex (flattened): total lines 5749  appendix@3669 bib@5665
+  MAIN (1..3668) chars=224083
+  APPX (3669..5664) chars=125873
+  BIB  chars=8970
+technosignatures_40pc_v4.25.pdf: 41 pages, column height 694 pt
+  main text (S1-Conclusions)   21.65 pages  (15019.8 pt)
+  back matter                   1.26 pages  (  873.2 pt)
+  appendices                   17.13 pages  (11881.6 pt)
+  bibliography                  0.67 pages  (  467.0 pt)
+  TOTAL                        40.71 pages
+--- arXiv abstract limit ---
+abstract: 1551 rendered characters (arXiv limit 1920) -- OK
+abschars: 1568 characters, 244 words in the typeset abstract of technosignatures_40pc_v4.25.pdf (arXiv limit 1920, headroom 352)
+  NOTE 3 non-ASCII character(s) in the typeset abstract, which the arXiv metadata field will reject and which must be entered as TeX or as words: × (U+00D7) – (U+2013) ’ (U+2019)
+  OK within the arXiv character limit, measured on the page
+    note: the repair '\\bkm s-1\\b' matched nothing in this abstract, so the artefact it undoes is not present
+    note: the repair '\\bm s-2\\b' matched nothing in this abstract, so the artefact it undoes is not present
+    note: the repair '\\bsingleepoch\\b' matched nothing in this abstract, so the artefact it undoes is not present
+    note: the repair '\\bdedrifted\\b' matched nothing in this abstract, so the artefact it undoes is not present
+    note: the repair '\\bqualitypassing\\b' matched nothing in this abstract, so the artefact it undoes is not present
+absmeta: the pasted abstract in OJA_SUBMISSION.md is 1572 characters, 245 words (arXiv limit 1920, headroom 348)
+  OK the pasted text is the typeset abstract, transliterated, character for character
+  OK pure ASCII, within the arXiv character limit, and the counts the file quotes are the measured ones
+  drive P1: FIRED '4dcb008f1938431749750bcc75bbc5cf'
+  drive P2: FIRED '21.85 pp'
+  drive P3: FIRED '1562 characters'
+  drive P4: FIRED '240 items'
+  drive P5: FIRED '30 underfull'
+  drive C (code spans and fences are not claims): CLEAN
+arxivpin --selftest: 5 clause(s), all demonstrated
+arxivpin: ARXIV_UPLOAD.md, 0 prose measurement(s), 0 instruction(s) missing
+  OK no measurement is stated, and every number the author needs has a named command beside it
+abswords: 244 words in the typeset abstract of technosignatures_40pc_v4.25.pdf (limit 245)
+  OK one paragraph, within the limit, measured on the page
+twinmacro: 1563 manuscript macros, 13 stems with more than one name, 36 declared pairs
+  whitelisted, differing for a stated reason:
+  bsnwin                             BsNWinA=38  BsNWinB=374
+      -- fine- and coarse-channel window counts of the bright stars the Gaia DR3 requirement excludes: different sets by construction, like NWinA/NWinB
+  cenpairoff                         CenPairOffA=5.21  CenPairOffB=5.09
+      -- the offsets of the two components of one resolved pair from the same pointing centre, in arcsec: the primary and the companion of HD 139084, 10.3 arcsec apart on the sky.  A single value would be a statement about neither of them
+  eirpninetymult                     EirpNinetyMultA=3.03  EirpNinetyMultB=4.17
+      -- pooled completeness factor per class, measured separately on the fine and coarse experiments (x3.03 and x4.17); one factor per class, nothing stratified.  The name is legacy and should become EirpNinetyMultBlend at the next version bump.
+  nstar                              MasonNStar=28  SfNStar=90  StkNStar=69
+      -- three different populations: the comparison programme's targets, the stars searched here, and the stars entering the multi-epoch stacks.
+  sbpriornstar                       SbPriorNStarA=40  SbPriorNStarB=17
+      -- the star counts of the TWO PUBLISHED SEARCHES above 30 GHz, not of two classes of this one: Steffes & DeBoer's 40 solar-type stars within 23 pc and Mauersberger et al.'s 17 Vega-like and solar-type targets.  The A/B suffix here distinguishes two other people's papers, which is the one case where the class heuristic means something else
+  scimuncross                        ScImUnCrossA=218.8729  ScImUnCrossB=345.6338
+      -- the topocentric frequencies of those two crossings
+  scimunline                         ScImUnLineA=CO($2$--$1$)  ScImUnLineB=$^{13
+      -- the parent transition each crossing's image position is bounded against -- CO(2-1) for the first, 13CO(3-2) for the second
+  scimunoff                          ScImUnOffA=2\,190  ScImUnOffB=424
+      -- the radius within which each image position is bounded against its own parent transition, in MHz: intervals about different lines in different windows
+  scimunratio                        ScImUnRatioA=1.37  ScImUnRatioB=0.93
+      -- the measured parent-to-crossing amplitude ratio at each crossing, each read in the block that observed its own parent frequency, and each short of the leakage a 10 dB image rejection would need
+  scimunstar                         ScImUnStarA=ALMA~J153702653-33192492  ScImUnStarB=HD~161868
+      -- the two stars toward which an unattributed crossing sits at an image position: two objects, not two classes
+  survfreqlo                         SurvFreqLo=90  SurvFreqLoA=114
+      -- Class A span 114 GHz against the 90 GHz archival harvest; the distinction R1-5 requires
+  win                                NWinA=405  NWinB=1258
+      -- fine- and coarse-channel window counts: different sets by construction
+  OK no unexplained twin, and every declared pair holds
+--- generator/round-file ownership (v3.99: added after a silent overwrite) ---
+resolved format-built output names (v4.11): survey_numbers_round103.tex <- numbers_v410.py; survey_numbers_round130.tex <- statchain_v411.py; survey_numbers_round140.tex <- stacktol_v411.py; survey_numbers_round160.tex <- maskframe_v411.py; survey_numbers_round170.tex <- maskcat_v412.py; survey_numbers_round185.tex <- cover_v412.py; survey_numbers_round210.tex <- stack_v412.py; survey_numbers_round220.tex <- recurnull_v413.py; survey_numbers_round250.tex <- sens_r12.py; survey_numbers_round270.tex <- stackfix_v413.py; survey_numbers_round300.tex <- census_r12.py; survey_numbers_round330.tex <- maskso_v414.py; survey_numbers_round340.tex <- bookkeep_r13.py; survey_numbers_round350.tex <- stack_r13.py; survey_numbers_round410.tex <- scope_r14.py; survey_numbers_round420.tex <- pairs_v415.py; survey_numbers_round421.tex <- epochfix_v415.py; survey_numbers_round440.tex <- maskcost_v440.py; survey_numbers_round450.tex <- ledger_r14.py; survey_numbers_round460.tex <- sens_r14.py; survey_numbers_round520.tex <- masklsr_v520.py; survey_numbers_round540.tex <- smear_r15.py; survey_numbers_round600.tex <- priorsearch_r15.py; survey_numbers_round620.tex <- resp_r16.py; survey_numbers_round660.tex <- maskrfi_v660.py; survey_numbers_round680.tex <- fig_r16.py; survey_numbers_round700.tex <- traj_v418.py; survey_numbers_round720.tex <- beam_r17.py; survey_numbers_round721.tex <- cwtfm_r17.py; survey_numbers_round730.tex <- brightgap_v730.py; survey_numbers_round740.tex <- sens_r18.py; survey_numbers_round750.tex <- recurinj_r19.py; survey_numbers_round790.tex <- species_r17.py; survey_numbers_round800.tex <- confset_r18.py; survey_numbers_round803.tex <- orbit_r18.py; survey_numbers_round804.tex <- anchor_r18.py; survey_numbers_round805.tex <- ctl_r18.py; survey_numbers_round806.tex <- confirm_r19.py; survey_numbers_round810.tex <- orbpm_r18.py; survey_numbers_round820.tex <- linesupport_r18.py; survey_numbers_round830.tex <- si_r18.py; survey_numbers_round860.tex <- orbit_r19.py; survey_numbers_round870.tex <- hostinj_r19.py; survey_numbers_round900.tex <- beam_r19.py; survey_numbers_round901.tex <- eta_r19.py; survey_numbers_round902.tex <- trap_r19.py; survey_numbers_round910.tex <- confirm_r20.py; survey_numbers_round920.tex <- linerecur_r20.py; survey_numbers_round930.tex <- vsyssweep_r20.py; survey_numbers_round940.tex <- tolrecur_r21.py; survey_numbers_round950.tex <- r21_scope.py; survey_numbers_round951.tex <- r21_lines.py; survey_numbers_round952.tex <- r21_image.py; survey_numbers_round953.tex <- sensnull_r21.py; survey_numbers_round960.tex <- edge_v423.py; survey_numbers_round961.tex <- proxb_v423.py; survey_numbers_round962.tex <- epsx_v423.py; survey_numbers_round971.tex <- num_r22.py; survey_numbers_round972.tex <- r1_r22.py; survey_numbers_round980.tex <- screen_r23.py; survey_numbers_round981.tex <- pairacct_r23.py; survey_numbers_round982.tex <- senscal_r23b.py
+roundcollide: 179 round files, 179 inputs, 0 problems
+orphanround: read 18 file(s); 221 \input target(s); 179 round file(s) on disk
+orphanround: 179/179 round file(s) cited, 0 orphan, 0 dangling, 0 FAIL
+--- the reference layer (duplicate, dangling and aliased labels) ---
+labelcheck: 222 files, 72 labels, 64 distinct \ref targets, 30 floats/maths environments, 74 aux entries
+  note: F4 (not a failure) 8 unreferenced sectioning label(s); F4 fires only on floats, equations and appendices
+  note: F6 (unreferenced) sec:data is on a starred section
+labelcheck: 0 FAIL
+--- retired macro NAMES may not appear in the manuscript ---
+retired: the superseded column is deposited as eirp_p90_superseded_rankgated_W; the old name eirp_p90_sel_W is indexed in 0 live line(s)
+retired: 2 generator(s) read the retired catalogue column eirp_p90_superseded_rankgated_W; 0 of them emit a macro the manuscript still cites
+retired: 6 generator-declared supersession(s): BudPlxWorstPct->SfPlxWorstPct, BudPlxWorstStar->SfPlxWorstStar, InjPeakAtNinety->RpMarginNinety, NClassAM->SfMClassAStars, NMCensus->SfMCensus, NMSearched->SfMSearched
+retired: 57 retired names, 37 of them aliased to a replacement, 0 uses in the manuscript
+--- figures: none built-and-uncited, none cited-and-missing ---
+included (11):
+    bpic_control.pdf
+    chain_v412.pdf
+    classa_sensitivity.pdf
+    completeness_map.pdf
+    confcoverage.pdf
+    coverage_waterfall.pdf
+    drift_acceleration.pdf
+    eirp_context_a.pdf
+    eirp_context_b.pdf
+    event_crossings.pdf
+    sens_ring.pdf
+orphaned (8):
+    appm_power.pdf                 appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge.
+    calib_cont.pdf                 calibration (calib_r15.py, round 530) 2026-10-08: built but not a figure of the paper; Ruling 3 asked for a coefficient and a sentence and Appendix B carries both.  It is not distributed anywhere -- see AUTHOR_ACTIONS.md item 1.
+    control_diagnostics.pdf        appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge.
+    ledger_vis_v403.pdf            appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge; already uncited before it.
+    rank_cdf.pdf                   appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge.
+    selection_bias.pdf             appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge; fig:selbias was already uncited before it.
+    sensitivity_2d.pdf             appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge; fig:sens2d was already uncited before it.
+    stratified_completeness.pdf    appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge.
+note: 4 .png sibling(s) in figures/ that LaTeX does not use: appm_power.png, calib_cont.png, chain_v412.png, ledger_vis_v403.png
+figorphan: 11 included, 8 pending, 0 unexpected orphans, 0 missing files
+--- the typeset ledger IS the adopted crossing list ---
+    ledger fragment(s) the manuscript inputs: tab_ledger.tex
+ledgergate: tab_ledger.tex -- 56 data rows against 56 adopted crossings
+ledgergate: 0 FAIL
+--- cross-reference resolution (R2-t2) ---
+xrefcheck: 71 labels, 47 resolved, 64 referenced
+  MISPLACED LABELS (prefix disagrees with anchor): 0
+  DEFINED BUT NEVER REFERENCED: 8
+    sec:barnardswolf             -> 5.2
+    sec:conclusions              -> 7
+    sec:coverage                 -> 3.2
+    sec:data                     -> 7
+    sec:discussion               -> 6
+    sec:intro                    -> 1
+    sec:newspace                 -> 6.2
+    sec:results                  -> 5
+  SHARED ANCHORS (deliberate aliases are fine): 0
+--- macro synonyms and ledger identities (referee 2, M2) ---
+--- two macros that MEAN the same thing may not carry two values (v4.11) ---
+synmacro: 1563 cited macros with a numeric value, 20 same-stem group(s) of two or more, 17 differing
+  declared  bsnwin                 \BsNWinA = 38; \BsNWinB = 374
+            reason: the same channelisation split over the BRIGHT STARS THE SAMPLE EXCLUDES -- the holding that would be admitted if the Gaia DR3 parallax requirement were dropped -- and not a second count of the searched windows: 38 fine and 374 coarse, in neither \NWinA nor \NWinB
+  declared  cenpairoff             \CenPairOffA = 5.21; \CenPairOffB = 5.09
+            reason: the offsets of the two components of one resolved pair from the same pointing centre, in arcsec: the primary and the companion of HD 139084, 10.3 arcsec apart on the sky.  The A/B suffix here distinguishes two stars and not two channelisation classes
+  declared  fracmax                \HoFracMax = 0.47; \RcFracMax = 1
+            reason: the largest fraction of the discovery amplitude the repeat coverage still excludes, in the reserved hold-out search against the primary census.  Two populations, and the difference is the point: every hold-out crossing is excluded at 0.47 of its amplitude or less, while in the census the individual limits run all the way to 1.00, which is why the census median is reported as a median and never as a bound on the set
+  declared  fracmed                \RcFracMed = 0.43; \RfiFracMed = 0.5
+            reason: TWO DIFFERENT FRACTIONS OF TWO DIFFERENT THINGS, and only the word "frac" is shared.  RcFracMed is the median fraction of the DISCOVERY AMPLITUDE that the repeat coverage excludes, over the crossings that carry an exclusion.  RfiFracMed is the median fractional POSITION of a released peak inside its own spectral window, which is the fixed-intermediate-frequency test of the interference appendix and is 0.50 because the positions are uniform.  Neither is a bound and they are not the same quantity in any sense
+  declared  ncross                 \HoNCross = 8; \LdgNCrossB = 4
+            reason: TWO POPULATIONS, NOT TWO COUNTS OF ONE.  \HoNCross is every crossing found in the hold-out, i.e. in the execution blocks the identifier rule of App. B.1 reserves, of either class (8 events, which is the set the transfer ratio R2-4 asks about is measured on).  \LdgNCrossB is the Class B crossings of the PRIMARY CENSUS (4), all of them in the one execution block that fails the data-quality criterion, which is the fact R1-3 requires the principal result to state.  The hold-out and the census share no execution block at all (holdout_v412 H4), so neither count is any part of the other
+  declared  ninetymult             \EirpNinetyMultA = 3.03; \EirpNinetyMultB = 4.17
+            reason: the completeness multiplier measured separately per class, which is the whole point of measuring it per class
+  declared  nstar                  \DqNStar = 2; \HoNStar = 36; \MasonNStar = 28; \SfNStar = 90; \StkNStar = 69
+            reason: the reserved hold-out's stars; Mason et al.'s sample; the searched sample; the stars with a stellar-frame stack -- four sets, four counts
+  declared  ntested                \HoNTested = 7; \RcNTested = 38; \VerNTested = 1657
+            reason: unattributed crossings tested for recurrence against windows matched to an ACA geometry-verification record -- different things counted, as queue entry 31 sets out
+  declared  nwin                   \DqNWin = 5; \HoNWin = 315; \PbNWin = 1663
+            reason: windows flagged by the data-quality rule; the reserved hold-out's windows; and the windows of the primary-beam audit, which is the whole release -- three sets, three counts.  'ScrNWinA' and 'PxaNWin' left this group when Ruling 1 removed the screen cost from the paper and the parallax row from the budget
+  declared  sbpriornstar           \SbPriorNStarA = 40; \SbPriorNStarB = 17
+            reason: the star counts of the TWO PUBLISHED SEARCHES above 30 GHz, not of two classes of this one: Steffes & DeBoer's 40 solar-type stars within 23 pc and Mauersberger et al.'s 17 Vega-like and solar-type targets.  The A/B suffix here distinguishes two other people's papers, which is the one case where the class heuristic means something else
+  declared  scimuncross            \ScImUnCrossA = 218.873; \ScImUnCrossB = 345.634
+            reason: the topocentric frequencies of the TWO image-coincident unattributed crossings, which are two crossings and not two classes of one search
+  declared  scimunoff              \ScImUnOffA = 2190; \ScImUnOffB = 424
+            reason: the radius within which each of the two crossings' image position is bounded against its own parent transition -- CO(2-1) for the first, 13CO(3-2) for the second -- so the two numbers are intervals about different lines in different windows
+  declared  scimunratio            \ScImUnRatioA = 1.37; \ScImUnRatioB = 0.93
+            reason: the measured parent-to-crossing amplitude ratio at each of the two crossings, each read in the block that observed its own parent frequency: two independent measurements, and the point of both is that each falls short of the leakage a 10 dB image rejection would need
+  declared  stars                  \HoStars = 36; \NStars = 90
+            reason: stars reached by the reserved hold-out against stars in the primary census.  ★ The two are disjoint in EXECUTION BLOCKS and not in stars -- H4 proves no shared block, and 27 of the 36 hold-out stars are census stars -- so neither count is a subset of the other and the out-of-sample claim the paper makes is about windows the pipeline had never seen, never about unseen stars
+  declared  survfreqlo             \SurvFreqLo = 90; \SurvFreqLoA = 114
+            reason: the ARCHIVAL frequency extent, which the title states, against the Class A extent, which the abstract states inside it (R1-5)
+  declared  tmax                   \HoTMax = 8.64; \RcTMax = 4.71
+            reason: the largest stellar statistic reached in the hold-out against the largest reached at a predicted recurrence cell in the census: one is a search maximum over all windows, the other a single predicted channel, and they are not comparable numbers
+  declared  win                    \HoWin = 315; \NWinA = 405; \NWinB = 1258
+            reason: the window count split by channelisation class: A fine enough to resolve a drift, B not
+synmacro: 0 FAIL
+macrosyn: 11 groups, 6 relations, 185 macro files, 9 deferred
+  known divergences, not enforced:
+  [open]    \NStageOneWin = 12; \NVisTested = 13 -- owner: retire visfit_v385_calc.py; repoint visgain_v399.py at ledger_v403
+  [open]    \NStageOneUnattrib = 1; \NVisUnatt = 4 -- owner: retire visfit_v385_calc.py; repoint visgain_v399.py at ledger_v403
+  [open]    \NStageOneLine = 11; \NVisAtt = 9 -- owner: retire visfit_v385_calc.py; repoint visgain_v399.py at ledger_v403
+  [open]    \VisHdFortyRe = 53; \FitHdFortyRe = 5.9 -- owner: retire visfit_v385_calc.py; repoint visgain_v399.py at ledger_v403
+  [open]    \VisMaxReSig = 2.5; \FitUnattMaxAbs = 0.93 -- owner: retire visfit_v385_calc.py; repoint visgain_v399.py at ledger_v403
+  [open]    \SelTransFineLo = \EirpNinetyFacLo; \StratTransferNineLo = 0.48 -- owner: R2-M3.3: one transfer bracket, from the M3a campaign
+  [open]    \SelTransFineHi = \EirpNinetyFacHi; \StratTransferNineHi = 1.35 -- owner: R2-M3.3, as above
+  [open]    \ClustStageMean = 0.90; \PriMean = 1.3 -- owner: R2-8 CLOSED at v4.04: 0.89 is the survey's single chance expectation; 1.3 is the same quantity with the measured tail factor applied and is labelled in the text as a comparison, not a second expectation. 4.7 and 3.23 are no longer quoted as expected CANDIDATE counts anywhere
+  [gone]    FlagTVir vs CampUnOneT -- RC-3: campaign_v372.json is a pre-repair record
+macrosyn: 0 problem(s)
+--- primary-statistic consistency (referee 2, v3.99) ---
+  frozen            12 = 11 + 1  OK
+  radius-corrected  11 = 10 + 1  OK
+  primary statistic   no explicit claim found
+  abstract uses      neither
+  attribution scope   8 sentence(s) give the mask half-width about the star; 0 attribute at its velocity alone
+consistency_v399: 0 problem(s)
+--- macro leakage (referee 2, v3.99) ---
+--- prose literals vs macros (referee 2, M6) ---
+prosenum: 0 literal(s) disagreeing with a macro
+macroleak: 0 problem(s)
+--- every integer in running prose is registered (referee 2, item 1) ---
+intsweep: 24 distinct integers in running prose, 89 registered, 65 stale registry entries
+intsweep: 0 problems
+--- two generators publishing one quantity under two names (v4.16) ---
+valuetwin: 6013 cited macros in the layer, 4102 macro uses, 381 with a declared unit, 253 (value, unit) groups, 31 cross-generator
+  SAME quantity, equality enforced by twinmacro: 118.1 GHz  \DnuAB = \FrMaskUnionGHz
+  SAME quantity, equality enforced by twinmacro: 47.7 GHz  \CvUnionA = \DnuA = \UnionClassA
+  SAME quantity, equality enforced by twinmacro: 56 km s^-1  \AnNearKms = \WdNearKms
+  coincidence: 0.4 per cent  \PxaShiftWinPct, \RjDriftPct
+      -- the median deepening of a Class A window limit on applying the annual-parallax retention alone, and the fraction of the recurrence statistic that half a step of a window own drift grid costs when it is carried into the repeat reading: a limit shift in the sensitivity chain and a drift-fit loss in the recurrence chain, from two generators that do not read each other, both 0.4 per cent
+  coincidence: 0.5 km s^-1  \BpicDvCoHi, \LsLupDv
+      -- the largest offset of a beta Pic CO crossing from its transition, and the offset of the Lupus crossing from the foreground cloud velocity a published survey gives: two unrelated velocity residuals that both round to half a kilometre per second
+  coincidence: 1 per cent  \CdSpecBpWorst, \DutyAttenDevPct, \SensDecorPct, \SmcValWorstPct, \StkFapCeil, \ZtFwPct
+      -- the worst-band bandpass accuracy specification, the duty-cycle attenuation residual, the decorrelation term of the budget, the largest disagreement between the applied smearing correction and the campaign re-scoring that validates it, the stacked false-alarm ceiling and the declared family-wise false-alarm probability of the recurrence confirmation threshold: six quantities whose only common property is that each is one per cent
+  coincidence: 10 per cent  \BmFloorTolPct, \CeRCritPct, \DutyCycleMinPct, \NmOwnDevPct, \RingRhoBoundPct
+      -- the departure between the two primary-beam forms at which the retention floor is placed, the smallest duty cycle the intermittency campaign injected, the bound on the star-to-ring correlation, the largest departure of an injected window's own recovery factor from the class average over the six systems whose headline window was injected into, and the DEFICIT at the star that the observed count would need in order to stand above chance; five unrelated ten per cents, one a chosen tolerance, one an injected parameter, two measured and one the inversion of a comparison
+  coincidence: 15 km s^-1  \WdBandKms, \XlLupNamedDv
+      -- the half-width in velocity over which a carrier is counted as within the searched band, and the offset of the one OCS transition that reaches a Lupus crossing: a search tolerance and a measured line offset, both fifteen kilometres per second
+  coincidence: 15.3 kHz  \FluxChanBestKHz, \RgOffMaxChanKHz, \SzChanFinestKHz
+      -- the channel width of the window that sets the best flux-density limit, the channel width of the block with the largest predicted-cell offset, and the finest channel width anywhere in the survey.  They are the same width because the finest channelisation is what makes an offset largest in channels and a limit best in flux, and they are different quantities because any of the three could move without the others
+  coincidence: 15.625 MHz  \ChanBModeMHz, \ScBhChanMHz
+      -- the modal Class B channel width over the whole coarse sample, and the channel width of the 38 coarse windows that satisfy the drift criterion.  The second is a subset of the first and takes the same value because the subset is selected on track length and not on channelisation; either could move without the other the moment the coarse sample gains a mode
+  coincidence: 150 K  \McEuMax, \XlEuMax
+      -- the upper-state energy ceiling of the frozen attribution mask, and the ceiling of the wider query the mask is compared against.  The comparison is deliberately made at the same cut, so the agreement is construction and not a twin -- but the two lists are built by different generators from different catalogues and neither reads the other
+  coincidence: 2.5 per cent  \PxIsoPct, \SfPlxWorstPct
+      -- the fraction of randomly oriented orbits face-on enough for the stacked limit to apply to Proxima b, and the largest fractional parallax error in the sample: an orientation fraction and a measurement error, both two and a half per cent
+  coincidence: 20 per cent  \CeUnifPct, \CySpecTsysHi, \PlxAdqlPct
+      -- the upper end of the residual T_sys specification, the uniform-channel share the chance expectation is compared against, and the parallax-error cut of the sample query; three different twenty per cents, from a specification, a measurement and a query
+  coincidence: 21 per cent  \HjEtaFracOkPct, \NmNetOptPct, \RpDecMatchHi
+      -- the share of injected realisations in which the drift fitted to eta Crv's discovery block lands within half a grid step of the truth in its much longer repeat block, the optimism of the net bias at the ninetieth percentile of the systems' own best windows, and the upper end of the matched decorrelation bracket: a success rate of a drift fit, a net bias and a phase-loss percentile.  The second and third are both built from the decorrelation measurement, which is why they are not independent -- but one is a percentile of the correction over unmeasured blocks and the other the NET of two opposed terms over the systems' headline windows, and either moves without the other
+  coincidence: 22 per cent  \LsMaskAddPct, \SensCovWorstPct
+      -- the extra bandwidth the second mask frame costs, and the worst per-window coverage shortfall of the injection campaign
+  coincidence: 231 GHz  \CovNuMaxAtRef, \CvConfNuMaxDay
+      -- the frequency at which most systems are covered at the benchmark power, and the frequency at which confirmation coverage peaks: two maxima of two different curves, both in the CO(2-1) band, so both land on the same tuning
+  coincidence: 29 per cent  \CeMaskPct, \TrapPhaseHi
+      -- the share of the chance expectation the line attribution takes, measured on the channels the control maxima land on, and the larger of the two TRAPPIST-1 b phase fractions: an attribution share and an orbital phase, both twenty-nine per cent
+  coincidence: 3 per cent  \NmDecSysMedPct, \StModelAgreePct
+      -- the median decorrelation correction over the systems' own best windows, and the agreement between the stacked-sensitivity model and the stack it describes: two different three per cents
+  coincidence: 3.6 m s^-2  \WdAGrid, \ZtALosHi
+      -- the drift grid's own acceleration ceiling and the largest line-of-sight acceleration fitted to a tested crossing.  The fitted maximum sits AT the grid edge -- 3.6388 m s^-2 against a smallest per-window ceiling that rounds to the same 3.6 -- so the agreement is construction and not numerology, and either could move without the other
+  coincidence: 31.25 MHz  \CdSpecTsysRes, \SbBoneChanMHz, \SzChanWidestMHz
+      -- the resolution at which the system temperature is measured, the channel width of the Band 1 continuum mode, and the widest channel in the survey: one is a property of the calibration mode and the other two of the searched data, and any of the three could move without the others -- the first because a system temperature can be measured on any channelisation, the last two because they are the extremes of sets that change with the sample
+  coincidence: 488 kHz  \FluxChanMedKHz, \RgWalkChanKHz, \StkRefChanKHz
+      -- the fine-channel width in three roles -- the median of the flux-limit sample, the channel of the block with the longest drift walk, and the stacking reference.  Both are the same physical correlator setting and neither is derived from the other; they move apart the moment either subset changes, which is the state this entry exists to make visible
+  coincidence: 488.3 kHz  \ChanAMedKHz, \EvAChanwkHz
+      -- the MEDIAN Class A channel width, and the channel width of the one window carrying the leading crossing; the second is one draw from the distribution the first summarises
+  coincidence: 6 per cent  \AccelSheikhPct, \PxBlockPct
+      -- the drift ceiling searched here as a fraction of a recommended one, and the velocity a transmitter on Proxima b gains inside the longest stacked block as a fraction of one channel: a fraction of somebody else's recommendation and a fraction of our own channel
+  coincidence: 7 per cent  \BmEpsAgreePct, \NmNetConsPct, \StkMadZScatterPct
+      -- the worst departure between the Gaussian and blocked-aperture beam forms over the restored epsilon Eridani offsets, the conservatism of the net bias in the median window, and the median-absolute-deviation scatter of the stacked z statistic: a beam-model agreement, a net bias and a noise scatter, all three seven per cent
+  coincidence: 8 per cent  \InjShortPct, \SensDecorHiPct, \TnCtrlCenHi
+      -- the shortfall of the injected channel response against the exact lag window, the upper decorrelation bracket, and the worst of the four displaced-window controls on the line-mask tuning: three unrelated eight per cents, from an injection, a bracket and a control.  \SmcValWorstPct left this group when the integrated channel response was adopted and the two smearing routes came into one-per-cent agreement
+  coincidence: 8.5 GHz  \CvConfGHzYr, \ScBhNewBandGHz
+      -- the confirmable frequency coverage lost when the confirmation criterion is read over a year rather than a day, and the frequency the 38 drift-resolving Class B windows would add outside the Class A union: a coverage loss and a coverage gain, in different sections and from different data, both eight and a half gigahertz
+  coincidence: 873 GHz  \SurvFreqHi, \SurvFreqHiA
+      -- the archival extent, which the title states, and the Class A extent inside it (R1-5).  The two share their UPPER end and not their lower, which is why the pair cannot be declared one quantity; synmacro carries the lower-end pair for the same reason
+  coincidence: 873.1 GHz  \DomAFreqHi, \TlFreqHi
+      -- the top of the Class A coverage, and the top of the interval the telluric line list was built over -- the list was deliberately built to the coverage, so the agreement is construction and not a twin
+  coincidence: 90 per cent  \PctDiscProposal, \RcPowerLevel
+      -- the share of the searched blocks whose proposals targeted discs, and the recovery level the recurrence probabilities are quoted at; both ninety per cent and neither derived from the other
+  coincidence: 95 per cent  \CeCovPct, \ScNearWinPct
+      -- the coverage of the quoted chance interval, and the fraction of the one screened crossing's own window inside the same telluric radius of the same transition: a confidence level and a share of a window, both rounding to ninety-five per cent
+  coincidence: 98 per cent  \PxFracSampled, \XlBandPct
+      -- the share of Proxima b's velocity excursion the stacked epochs sample at the least favourable phase, and the share of the searched band covered by a differently chosen line list: two coverage fractions of unrelated things
+valuetwin: 3 same-quantity group(s), 28 declared coincidence(s), 0 FAIL
+--- generated fragments older than the catalogue they describe ---
+fragstale: 16 generated fragments the manuscript inputs, 7 spine inputs
+fragstale: 0 FAIL
+--- what round 15's prose claims is measured, not asserted (v4.16) ---
+PASS  S1 the nHz ceiling recomputed from the catalogue reproduces round 13  [recomputed 12.0--13.3 nHz over 1663 windows; round 13 prints 12.0--13.3]
+PASS  S2 the recommendation is read from a frozen record carrying its own source, and round 37 prints that value  [record 200 nHz from Sheikh S. Z., Wright J. T., Siemion A. P. V., Enriquez J. E., 2019, ApJ, 884, 14; round 37 prints 200]
+PASS  S3 the published fraction is the quotient at the NARROWER ceiling and is below 100 per cent  [recomputed 6.00 per cent of 200 nHz (6.67 at the wider ceiling); round 37 prints 6]
+PASS  S4 the recomputed rotational acceleration and its share of the default ceiling agree with round 37  [recomputed 2.21 m s^-2 = 61.4 per cent of 3.60; round 37 prints 2.2 and 61]
+PASS  S5 the omitted rotational term is material: added to the orbit the default ceiling was sized for, it leaves every ceiling searched  [3.60 + 2.21 = 5.81 against the largest ceiling searched 4.00; rotation ALONE does NOT exceed it, so rotation by itself would have been searched]
+PASS  S6 the abstract states the sensitivity as conditional on the carrier being narrower than the instrumental channel, and carries the drift fraction (R1-3.2, M9)  [bandwidth clause present; drift fraction present]
+PASS  S7 the polarisation paragraph says Stokes I retains the full intensity of a circularly polarised carrier and loses discrimination, not sensitivity (minor 12)  [intensity clause present; the expression present]
+PASS  S8 the introduction states the costs of the band as well as its advantages, and names the beam the Earth must lie inside (minor 10)  [balance present; beam present]
+prosegate_r15: 8 check(s), 0 FAILED
+--- the reference layer in both directions ---
+citegate: 222 source files
+  G1   every bibitem is cited somewhere                               PASS  none
+  G2   every citation has a bibitem                                   PASS  none
+  G3   no key is declared twice                                       PASS  none
+  G4   the comparison was not vacuous                                 PASS  68 bibitems, 68 cited keys, 222 source files
+  G5   a citation only in a macro body lives in a used macro          PASS  1 cited only from the macro layer, each in a referenced macro: ALMAPropGuide (BudFluxSource)
+citegate: 68 bibitems, 68 cited keys, 0 FAIL
+--- no unfulfilled promise of a deposit (Glenn, 2026-10-08) ---
+doigate (inverted): the paper may promise no deposit
+  PASS  no promissory phrase, no DOI of ours, and the Data Availability statement still names what a reader can obtain
+--- no generated lower-case word may open a sentence ---
+wordcase: 36 prose sources, 186 macro-layer files
+  W1  no lower-case macro value opens a sentence                   PASS  none
+  W2  the sweep found, and searched for, every such macro          PASS  119 lower-case-valued macros in the layer, 37 of them cited; not searched: none
+  W3  every prose source the manuscript inputs was read            PASS  36 prose sources swept, 186 macro-layer files read
+wordcase: 119 lower-case-valued macros, 37 cited, 0 FAIL
+--- no self-reference, and no unnamed comparative (Glenn, 2026-10-13) ---
+
+prosegate_selfref: 0 hit(s), 7 allow entr(ies), 0 stale, drive 0
+prosegate_selfref: PASS
+--- nothing in the TYPESET page, figures included, reads as machine narration (v4.24) ---
+  furniture: running head removed from 40 of 41 pages
+
+### prompt-word  -- 1 distinct hit(s)
+  [raw] prompted                     | A criterion for the condition is therefore applied to every block and not to the one that prompted it.
+
+### handoff  -- 1 distinct hit(s)
+  [raw] re-run                       | The calibrated visibilities, the per-window products and the code that produced them are not dis- tributed, so this execution of the search cannot be re-run.
+
+### lets  -- 1 distinct hit(s)
+  [raw] lets                         | It exceeds the model at the larger displacement because maximising over a plane of trajectories lets a partly de- cohered carrier still find a cell, so a limit corrected by the model is shallower than it need be.
+
+### llm-word  -- 1 distinct hit(s)
+  [raw] artificial intelligence      | Use of generative artificial intelligence.
+
+### build-word  -- 4 distinct hit(s)
+  [raw] assertion                    | No result here is accepted on a model’s assertion.
+  [raw] assertion                    | Every assertion in the analysis was first made to fail on purpose, on deliberately wrong input, before it was relied on, since an assertion that has never fired is no evidence that anything is right.
+  [raw] assertion                    | That this sample is indepen- dent of the choice of statistic and of mask is an assertion of ours and not something a reader can check.
+  [p27] assertion                    | That this sample is independent of the choice of statistic and of mask is an assertion of ours and not something a reader can check.
+
+### notebook-voice  -- 1 distinct hit(s)
+  [raw] was fixed                    | Neither criterion was fixed in advance.
+
+==== 9 hit lines across 23 pattern families ====
+genai_sweep: 9 hit(s), 8 allowed, 0 unpinned, 0 stale
+genai_sweep: --selfdrive 1 fails as it must
+genai_sweep: --selfdrive 2 fails as it must
+genai_sweep: --selfdrive 3 fails as it must
+--- the abstract carries every statement it is required to carry (r17) ---
+PASS  B1 the crossings whose repeats cannot test them are given as a count where the exclusion is quantified, with the amplitude the power is evaluated at, and the abstract never quotes the excluded count without it (R1-2)  [count 8; in Sec. 5.5 True (3 paragraph(s)); abstract implication True]
+PASS  B2 the plain negative result is stated and the trajectory family the test does not constrain is not reintroduced (R2-1)  [negative True; reintroduced nothing]
+PASS  B3 the chance comparison is stated as a consistency and says what it does not exclude, in the sentence that states it (R1-4, R1-6)  [1 chance sentence(s); qualification True]
+PASS  B4 the calibration residual is disposed of quantitatively where the chance comparison is made: in Sec. 5.3 the mechanism is named and the residual a window would have to carry is in type from its own macro, in the same paragraph (R2-4.4 round 16; R2-10 round 21; relocated out of the abstract on R1-13, round 22)  [least demanding window needs 21.4 per cent; 1 paragraph(s) of 05_results.tex carry the macro; mechanism named True; disposed True]
+PASS  B5 the limits are said to exclude atmospheric decorrelation, in one sentence, which gives the direction of that omission, names the opposing channel-response term, says the balance between them is window dependent, and does not claim the two cancel (R2-8.4, restated at R2-1d, with R2-1a, R2-4 and R1-3)  [1 decorrelation sentence(s); direction of the omission given: True; opposing channel-response term named in the same sentence: True; window dependence stated there: True; cancellation implied: False]
+PASS  B6 the headline depth and the scale of both searches are set in type  [missing nothing]
+PASS  B7 one sentence names coverage against depth as what limits the search, with the systems that cannot be confirmed and line emission named (R2-5)  [systems 21; limiting sentence Coverage limits this search: \ZcNoRepSys{} systems have no repeat at a]
+absreq_r17: 7 check(s), 0 FAILED
+--- every clause of the two front-matter gates is DEMONSTRATED, not just asserted (v4.25) ---
+absreq_r17: all 10 drives fail as they must
+prose_v412: all 17 drives fail as they must
+--- the crossing accounting closes, and the prose keeps citing its terms (R1-1/R1-3) ---
+PASS  A1 the census, the failing block and the archival tail sum to the reported crossing total  [50 census Class A + 4 flagged Class B + 2 archival-tail Class A = 56 against \EvNCrossRaw 56]
+PASS  A2 the quality-passing crossings are the census and archival-tail Class A sets, and the flagged block is the whole of the difference  [50 + 2 = 52 against \EvNCrossQp 52; 52 + 4 = 56 against 56]
+PASS  A3 the attributed and unattributed quality-passing crossings partition that total  [18 attributed + 34 unattributed = 52 against 52]
+PASS  A4 the conclusions carry every term of the accounting and describe the flagged set rather than merely counting it  [missing nothing; 2 sentence(s) carry the flagged count; flagged set described in the sentence that counts it]
+PASS  A5 the attribution in the discussion is made on the quality-passing population and not on the pooled total  [pooled \NCross absent; quality-passing terms present]
+PASS  A6 the deductions the abstract prints close on the count it prints, and exactly one unattributed crossing has no repeat reading, so the arithmetic a reader does in that paragraph is the arithmetic the generators did  [\MkUnattr 38 - \EvNCrossFlag 4 - \CeNTailCross 2 - \CeTlObsCut 1 = 31 against \CeObs 31; \MkUnattr - \RcNExclPoss 37 = 1 against 1]
+censusacct_r17: 6 check(s), 0 FAILED
+--- every included figure is legible, scaled 1 and reproducible (r17) ---
+figgate: 11 figure(s) in the \includegraphics closure, floor 6.0 pt, epoch D:20200101000000Z
+  figures/eirp_context_a.pdf x1.0000  min  6.50 pt  epoch ok
+  figures/eirp_context_b.pdf x1.0000  min  6.50 pt  epoch ok
+  figures/coverage_waterfall.pdf x1.0079  min  7.06 pt  epoch ok
+  figures/drift_acceleration.pdf x1.0000  min  6.50 pt  epoch ok
+  figures/chain_v412.pdf     x1.0000  min  6.50 pt  epoch ok
+  figures/sens_ring.pdf      x1.0000  min  6.50 pt  epoch ok
+  figures/classa_sensitivity.pdf x1.0000  min  6.50 pt  epoch ok
+  figures/event_crossings.pdf x1.0000  min  6.50 pt  epoch ok
+  figures/confcoverage.pdf   x1.0000  min  6.50 pt  epoch ok
+  figures/completeness_map.pdf x1.0000  min  6.50 pt  epoch ok
+  figures/bpic_control.pdf   x1.0000  min  6.40 pt  epoch ok
+figgate: 0 FAIL
+--- no table prints below the type floor the figures are held to (r17) ---
+tabfloor_r17: /workspace/SETI/paper_20pc/v4.25 -> /workspace/tmp/tabfloor_r17   floor 6.50 pt, clearance 0.150 em
+  built /workspace/tmp/tabfloor_r17/plain/technosignatures_40pc_v4.25.pdf
+  built /workspace/tmp/tabfloor_r17/probe/technosignatures_40pc_v4.25.pdf
+  tab:litthresh    table           p2      39 lines  243.7/ 245.3 pt  min  6.97 pt  clear 0.386 em
+  tab:selfunc      table           p5      98 lines  243.2/ 245.3 pt  min  6.97 pt  clear 0.189 em
+  tab:quantities   table*          p9      49 lines  505.9/ 513.1 pt  min  7.97 pt  clear NOT APPLICABLE (2 rules: no rows to measure between them)
+  tab:p90budget    table*          p12     53 lines  510.2/ 513.1 pt  min  6.97 pt  clear 0.189 em
+  tab:pairs        table           p17     94 lines  243.5/ 245.3 pt  min  6.97 pt  clear NOT APPLICABLE (0 rules: no rows to measure between them)
+  tab:cand         table           p19    112 lines  244.4/ 245.3 pt  min  7.97 pt  clear 0.177 em
+  tab:holdout      table*          p20     48 lines  511.2/ 513.1 pt  min  6.97 pt  clear 0.455 em
+  tab:blockledger  table*          p27    168 lines  511.2/ 513.1 pt  min  6.97 pt  clear 0.184 em
+  tab:counts       table           p28    139 lines  244.4/ 245.3 pt  min  6.97 pt  clear 0.184 em
+  tab:projcodes    table           p28     24 lines  240.0/ 245.3 pt  min  6.97 pt  clear NOT APPLICABLE (0 rules: no rows to measure between them)
+  tab:hostinj      table*          p30    110 lines  511.1/ 513.1 pt  min  6.97 pt  clear 0.769 em
+  tab:masklines    table           p31     53 lines  244.3/ 245.3 pt  min  7.97 pt  clear 0.417 em
+  tab:pairacct     table           p35     15 lines  242.2/ 245.3 pt  min  7.97 pt  clear NOT APPLICABLE (0 rules: no rows to measure between them)
+  tab:ledger       table           p36     60 lines  242.0/ 245.3 pt  min  6.97 pt  clear 0.377 em
+  tab:confirm      table*          p37    180 lines  511.2/ 513.1 pt  min  7.97 pt  clear 0.342 em
+  tab:edge         table           p37     41 lines  240.2/ 245.3 pt  min  7.97 pt  clear 0.177 em
+  tab:persys       table*          p40    382 lines  511.2/ 513.1 pt  min  7.97 pt  clear 0.240 em
+0 of 17 floats fail; 4 clause(s) NOT APPLICABLE
+--- the landscape float is on the page, not over its edge (r18) ---
+rotfit R3 text block measured from 379 upright blocks: 50.70--562.00 pt (class 50.74--561.99)
+rotfit: 0 landscape page(s); PASS
+--- no float is too large for its page, and no ink is off the paper (r18) ---
+floatfit F1 log: 0 "Float too large for page" warning(s)
+floatfit F2 closest to an edge: p.2   44.0 pt clear (ink y to 737.0)
+floatfit F2 closest to an edge: p.4   44.0 pt clear (ink y to 746.0)
+floatfit F2 closest to an edge: p.6   44.0 pt clear (ink y to 737.0)
+floatfit F3 pages: log ['41'], pdf 41, measured 41
+floatfit: ALL CLAUSES PASS
+--- no file reads another version directory by an unguarded path (r22) ---
+  FAIL  a_unguarded.py                              :1     v4.21  V1 unguarded; V2 pins a version directory that no longer exists
+  FAIL  b_dead.py                                   :1     v0.01  V1 unguarded; V2 pins a version directory that no longer exists
+  ok    c_guarded.py                                :3     v4.21  guarded
+verpin --selftest: 3 pin(s) into another version directory, 1 guarded, 3 dead, 2 FAIL
+  selftest: caught ['a_unguarded.py', 'b_dead.py'], expected ['a_unguarded.py', 'b_dead.py'] -> PASS
+  ok    .anchorchk.py                               :6     v3.52  guarded
+  ok    edge_v423.py                                :68    v4.22  guarded
+  ok    epsx_v423.py                                :67    v4.22  guarded
+  ok    harvest_sptype_r18.py                       :27    v4.18  guarded
+  ok    make_figures_v328.py                        :175   v3.27  guarded
+  ok    num_r22.py                                  :60    v4.22  guarded
+  ok    orbit_r19.py                                :88    v4.19  guarded
+  ok    proxb_v423.py                               :53    v4.22  guarded
+  ok    quality_r19.py                              :38    v4.19  guarded
+  ok    r1_r22.py                                   :48    v4.22  guarded
+  ok    r21_harvest.py                              :56    v4.21  guarded
+  ok    r21_harvest_full.py                         :37    v4.21  guarded
+  ok    verpin.py                                   :119   v4.21  guarded
+  ok    verpin.py                                   :121   v0.01  guarded
+  ok    verpin.py                                   :124   v4.21  guarded
+  ok    vsyssweep_r20.py                            :70    v4.20  guarded
+  ok    r15inputs/cells/cells_jobs.py               :47    v4.16  guarded
+  ok    r13inputs/decor_harvest/build_record.py     :35    v4.14  guarded
+  ok    r17inputs/harvest_brightgap_r17.py          :116   v4.18  guarded
+verpin: 19 pin(s) into another version directory, 19 guarded, 19 dead, 0 FAIL
+--- a hyphen may not be typeset where a minus sign belongs (r17) ---
+minuscheck: 222 source file(s)
+  survey_numbers_round102.tex     10 line(s)
+  survey_numbers_round81.tex       7 line(s)
+  survey_numbers_round11.tex       5 line(s)
+  survey_numbers_round20.tex       5 line(s)
+  survey_numbers_round160.tex      5 line(s)
+  survey_numbers_round420.tex      5 line(s)
+  survey_numbers_round30.tex       4 line(s)
+  survey_numbers_recurrence.tex    3 line(s)
+  survey_numbers_round99.tex       3 line(s)
+  survey_numbers_round8.tex        2 line(s)
+  survey_numbers_round12.tex       2 line(s)
+  survey_numbers_round15.tex       2 line(s)
+  survey_numbers_round28.tex       2 line(s)
+  survey_numbers_round48.tex       2 line(s)
+  survey_numbers_round52.tex       2 line(s)
+  survey_numbers_round77.tex       2 line(s)
+  survey_numbers_round82.tex       2 line(s)
+  survey_numbers_round95.tex       2 line(s)
+  survey_numbers_round180.tex      2 line(s)
+  survey_numbers_round185.tex      2 line(s)
+  survey_numbers_round190.tex      2 line(s)
+  survey_numbers_round421.tex      2 line(s)
+  survey_numbers_round530.tex      2 line(s)
+  survey_numbers_round962.tex      2 line(s)
+  survey_numbers_round700.tex      2 line(s)
+  survey_numbers_round940.tex      2 line(s)
+  technosignatures_40pc_v4.25.tex   1 line(s)
+  survey_numbers.tex               1 line(s)
+  survey_numbers_round9.tex        1 line(s)
+  survey_numbers_round13.tex       1 line(s)
+  survey_numbers_round18.tex       1 line(s)
+  survey_numbers_round19.tex       1 line(s)
+  survey_numbers_round31.tex       1 line(s)
+  survey_numbers_round38.tex       1 line(s)
+  survey_numbers_round41.tex       1 line(s)
+  survey_numbers_round44.tex       1 line(s)
+  survey_numbers_round61.tex       1 line(s)
+  survey_numbers_round96.tex       1 line(s)
+  survey_numbers_round250.tex      1 line(s)
+  survey_numbers_round840.tex      1 line(s)
+minuscheck: 0 M-rule(s) (`---`) in 222 source file(s); this paper sets its parenthetical dash as a spaced N-rule throughout
+  typeset: 0 hyphen-before-digit, 80 true minus-before-digit
+  pages: {}
+minuscheck: 0 FAIL
+--- the LaTeX log is a gate too (v4.11) ---
+latexlog: 0 error(s), 0 undefined control sequence(s), 0 unresolved reference/citation warning(s), 0 multiply defined, 0 overfull vbox, 0 overfull hbox
+===========================================================
+gate.sh: ALL GATES PASS

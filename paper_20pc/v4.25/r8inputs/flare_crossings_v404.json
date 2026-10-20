@@ -1,0 +1,41 @@
+{
+  "_provenance": "Measured on the host by referee_r8/mmvar/crossings.py, 2026-09-26; reported in referee_r8/MM_VARIABILITY_PILOT.md section 4. Transcribed here as a frozen input because the per-block continuum light curves are not part of the paper's released products. Only OBSERVED quantities are recorded; every predicted quantity is derived by flare_v404.py from the channel counts below.",
+  "n_crossings": 56,
+  "n_with_window": 52,
+  "n_with_continuum": 48,
+  "trigger_sigma": 5.0,
+  "pred_z_lo": 49,
+  "pred_z_hi": 4717,
+  "pred_z_med": 170,
+  "obs_z_median": -0.29,
+  "obs_z_absmax": 27,
+  "n_absz_lt3": 45,
+  "implied_single_channel_median": 0.051,
+  "implied_single_channel_max": 1.97,
+  "implied_single_channel_max_where": "eta Crv A002_X75bfbf_X1430, whose control ensemble is equally extreme",
+  "timeconc_median": -0.53,
+  "timeconc_n_gt2": 1,
+  "worked_example": {
+    "star": "AU Mic",
+    "eb": "A002_Xa42f75_X319",
+    "tstar": 5.27,
+    "nchan": 3840,
+    "continuum_z": 10.3,
+    "continuum_mJy": 1.92,
+    "track_zmax": 2.1,
+    "reference": "MacGregor et al. 2020, ApJ 891, 80 -- the published 2015 June 24 flare"
+  },
+  "negative_control": {
+    "what": "beta Pictoris CO, five blocks",
+    "tstar_lo": 14.7,
+    "tstar_hi": 30.8,
+    "boxcar_zmax_lo": 3.2,
+    "boxcar_zmax_hi": 4.4,
+    "ctrl_zmax_lo": 3.8,
+    "ctrl_zmax_hi": 4.2
+  },
+  "illustrative_nchan": [
+    4096,
+    128
+  ]
+}

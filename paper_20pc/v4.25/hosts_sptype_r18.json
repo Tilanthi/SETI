@@ -1,0 +1,195 @@
+{
+ "source": "SIMBAD sim-id ASCII, queried by harvest_sptype_r18.py",
+ "hosts": {
+  "BD+05 1668": {
+   "query": "BD+05 1668",
+   "main_id": "BD+05 1668",
+   "sp_type": "M3.5V",
+   "n_bytes": 13731,
+   "ledger_names": [
+    "BD05 1668"
+   ]
+  },
+  "61 Vir": {
+   "query": "61 Vir",
+   "main_id": "* 61 Vir",
+   "sp_type": "G6.5V",
+   "n_bytes": 19799,
+   "ledger_names": [
+    "61 Vir"
+   ]
+  },
+  "GJ 849": {
+   "query": "GJ 849",
+   "main_id": "BD-05 5715",
+   "sp_type": "M3.5V",
+   "n_bytes": 10635,
+   "ledger_names": [
+    "GJ 849"
+   ]
+  },
+  "AU Mic": {
+   "query": "AU Mic",
+   "main_id": "HD 197481",
+   "sp_type": "M1VeBa1",
+   "n_bytes": 33441,
+   "ledger_names": [
+    "AU Mic"
+   ]
+  },
+  "HR 1010": {
+   "query": "HR 1010",
+   "main_id": "* zet02 Ret",
+   "sp_type": "G1V",
+   "n_bytes": 11785,
+   "ledger_names": [
+    "HR 1010",
+    "HR 1010 Gaia DR3 4722135642226902656"
+   ]
+  },
+  "HD 69830": {
+   "query": "HD 69830",
+   "main_id": "HD 69830",
+   "sp_type": "G8:V",
+   "n_bytes": 15927,
+   "ledger_names": [
+    "HD 69830"
+   ]
+  },
+  "LHS 1140": {
+   "query": "LHS 1140",
+   "main_id": "G 268-38",
+   "sp_type": "M4.5V",
+   "n_bytes": 6817,
+   "ledger_names": [
+    "LHS 1140"
+   ]
+  },
+  "HD 207129": {
+   "query": "HD 207129",
+   "main_id": "HD 207129",
+   "sp_type": "G2V",
+   "n_bytes": 10771,
+   "ledger_names": [
+    "HD 207129 Gaia DR3 6564091190988411520"
+   ]
+  },
+  "HD 23484": {
+   "query": "HD 23484",
+   "main_id": "HD 23484",
+   "sp_type": "K2V",
+   "n_bytes": 5829,
+   "ledger_names": [
+    "HD 23484 Gaia DR3 4856592239127350400"
+   ]
+  },
+  "HD 10647": {
+   "query": "HD 10647",
+   "main_id": "* q01 Eri",
+   "sp_type": "F9V",
+   "n_bytes": 10871,
+   "ledger_names": [
+    "HD 10647"
+   ]
+  },
+  "eta Crv": {
+   "query": "eta Crv",
+   "main_id": "* eta Crv",
+   "sp_type": "F2V",
+   "n_bytes": 10850,
+   "ledger_names": [
+    "eta Crv"
+   ]
+  },
+  "bet Pic": {
+   "query": "bet Pic",
+   "main_id": "* bet Pic",
+   "sp_type": "A6V",
+   "n_bytes": 48398,
+   "ledger_names": [
+    "bet Pic"
+   ]
+  },
+  "HD 31392": {
+   "query": "HD 31392",
+   "main_id": "HD 31392",
+   "sp_type": "G9V",
+   "n_bytes": 4544,
+   "ledger_names": [
+    "HD 31392"
+   ]
+  },
+  "CD-57 1054": {
+   "query": "CD-57 1054",
+   "main_id": "CD-57 1054",
+   "sp_type": "M0Ve",
+   "n_bytes": 5672,
+   "ledger_names": [
+    "CD-57 1054"
+   ]
+  },
+  "HD161868": {
+   "query": "HD161868",
+   "main_id": "* gam Oph",
+   "sp_type": "A1VnkA0mA0",
+   "n_bytes": 11960,
+   "ledger_names": [
+    "HD161868"
+   ]
+  },
+  "ALMA J153702653-33192492": {
+   "query": "ALMA J153702653-33192492",
+   "main_id": "ALMA J153702.653-331924.92",
+   "sp_type": "~",
+   "n_bytes": 1094,
+   "ledger_names": [
+    "ALMA J153702653-33192492"
+   ]
+  },
+  "HD14055": {
+   "query": "HD14055",
+   "main_id": "* gam Tri",
+   "sp_type": "A1Vnn",
+   "n_bytes": 7615,
+   "ledger_names": [
+    "HD14055"
+   ]
+  },
+  "CP-72 2713": {
+   "query": "CP-72 2713",
+   "main_id": "CPD-72 2713",
+   "sp_type": "K7Ve",
+   "n_bytes": 4200,
+   "ledger_names": [
+    "CP-72 2713"
+   ]
+  },
+  "HD170773": {
+   "query": "HD170773",
+   "main_id": "HD 170773",
+   "sp_type": "F5V",
+   "n_bytes": 4412,
+   "ledger_names": [
+    "HD170773"
+   ]
+  },
+  "HD110411": {
+   "query": "HD110411",
+   "main_id": "* rho Vir",
+   "sp_type": "A0Va_lB",
+   "n_bytes": 8163,
+   "ledger_names": [
+    "HD110411"
+   ]
+  },
+  "HD 14055": {
+   "query": "HD 14055",
+   "main_id": "* gam Tri",
+   "sp_type": "A1Vnn",
+   "n_bytes": 7617,
+   "ledger_names": [
+    "HD 14055"
+   ]
+  }
+ }
+}
