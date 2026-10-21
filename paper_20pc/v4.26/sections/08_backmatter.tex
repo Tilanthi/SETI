@@ -1,0 +1,121 @@
+\section*{Acknowledgements}
+This paper makes use of the following ALMA data: the \NProjCodes{} projects
+listed in Table~\ref{tab:projcodes}, each cited as \texttt{ADS/JAO.ALMA\#}
+followed by its project code. The \NEB{} primary-census execution blocks
+searched span \PrEbDateFirst{} to \PrEbDateLast{}, and we thank the principal
+investigators and teams who proposed and obtained
+them.\ProjCodeUnresClause{} ALMA is a partnership of ESO
+(representing its member states), NSF (USA) and NINS (Japan), together with NRC
+(Canada), NSTC and ASIAA (Taiwan), and KASI (Republic of Korea), in cooperation
+with the Republic of Chile. The Joint ALMA Observatory is operated by ESO,
+AUI/NRAO and NAOJ. This work has made use of data from the European Space
+Agency (ESA) mission {\it Gaia} \citep{GaiaDR3}, processed by the {\it Gaia}
+Data Processing and Analysis Consortium (DPAC). This research has made use
+of the SIMBAD database \citep{SIMBAD2000} (CDS, Strasbourg, France); of the
+NASA Exoplanet Archive \citep{NEA2013}, which is operated by the California
+Institute of Technology under contract with the National Aeronautics and
+Space Administration under the Exoplanet Exploration Program; and of the
+Splatalogue spectral-line database \citep{Splatalogue2007}.
+
+\emph{Use of generative artificial intelligence.} Large language models were
+used in this work. They wrote most of the software: the archival retrieval and
+calibration scripts, the search and vetting pipeline, the statistical tests,
+and the generators that produce every number, table and figure in this paper.
+They also drafted text, which the authors revised. The authors set the
+scientific question, chose every criterion, and are responsible for the
+content of this paper.
+
+\emph{Testing and validation of that analysis.} No result here is accepted
+on a model's assertion. Every number in the text is written by the program
+that computes it from the data rather than transcribed, which removes
+transcription error and nothing else: it does not make a computation correct,
+and Appendix~\ref{sec:regbudget} names the one window where the archive holds
+two extractions of the same data that differ. A separate audit re-derives the
+identities that must hold among the published values -- counts that must
+partition, quantities that must sum, numbers reached by two routes that must
+agree -- and refuses the paper where one does not, and every assertion in the
+analysis was first made to fail on purpose, on deliberately wrong input,
+before it was relied on, since an assertion that has never fired is no
+evidence that anything is right.
+
+\emph{Software.} The pipeline depends on \textsc{casa}~6.7.6
+\citep{CASA2022}, \textsc{python}~3 with \textsc{astropy} \citep{Astropy2022}, \textsc{numpy}
+\citep{Harris2020} and \textsc{scipy} \citep{Virtanen2020}, and the ALMA Science
+Archive and SIMBAD TAP interfaces through \textsc{astroquery} \citep{Ginsburg2019};
+all are free and open-source, at the versions cited.
+
+\emph{Author contributions.} G.J.W.\ conceived the survey, defined the target sample and the selection
+criteria, and wrote the manuscript. R.D.\ built and operated the archival
+retrieval, calibration and search pipeline, implemented the spatial control
+statistic and the injection--recovery campaigns, and produced the per-window
+catalogue and its regeneration scripts. Both authors designed the vetting
+procedure, chose the masked species, carried out the statistical
+validation reported in \S\ref{sec:statistic} and
+Appendix~\ref{app:falsealarm}, and agreed the dispositions of
+the crossing ledger.
+%% Authors to confirm this division before submission.
+
+\emph{Funding.} This work received no dedicated funding. It used public archival data and
+no observing time was awarded for it.
+%% Authors to replace this if any grant supported the work.
+
+\emph{Competing interests.} The authors declare no competing interests. VBRL Holdings is a privately
+held company through which R.D.\ conducts independent research, named
+here solely as his affiliation; it had no role in the design of the
+survey, the selection of targets, the analysis, the decision to publish
+or the content of this paper, and provided no funding for the work.
+%% Authors to confirm this wording, which is accurate only if the company's
+%% involvement was indeed nil.
+
+\section*{Data availability}
+\label{sec:data}
+\emph{Public.} Every observation this paper rests on is public and is
+identified here precisely enough to be fetched. The \NEB{} primary-census
+execution blocks, and those of every other set of
+Table~\ref{tab:blockledger}, are held in the ALMA Science Archive under the
+\NProjCodes{} project codes of Table~\ref{tab:projcodes} and are retrieved by
+the execution-block identifier, which the crossing ledger gives for each of
+the \EvNCrossRaw{} threshold crossings; archival data should carry the full
+provenance of their origin and the credit for it \citep{Chen2022}.
+The astrometry is Gaia~DR3, the planet counts the NASA Exoplanet Archive, and
+the mask one Splatalogue query of CDMS and JPL made on \McQueryDate{} and
+repeatable as it stands.
+
+\emph{Deposited.} The machine-readable data behind this paper are deposited
+as a citable archive \citep{SIdeposit}: the per-window catalogue of all
+\NWindows{} searched windows; the Class~A and Class~B sensitivity
+measurements; the \EvNCrossRaw{} threshold crossings, with their molecular
+identifications, the atmospheric flag and both field readings of the trigger;
+the repeat-observation readings; the injection trials and the completeness
+calibration carried from them; the control-field statistics, including the
+above-threshold cell counts below the trigger; the execution-block and count
+accounting, all \MtCountRows{} rows of Table~\ref{tab:counts} included; and
+the data behind the figures. Every table describes its own columns and units,
+and carries the project code and execution block that tie each row to an
+observation. Five of them also accompany the paper on the arXiv as ancillary
+files, served beside the article and not part of it. The archive includes
+short reference implementations of the four definitions the results rest on
+-- the statistic of Equation~\ref{eq:tstar}, the control-position generator,
+the injection--recovery harness and the line mask -- runnable against the
+deposited tables; they implement the published definitions and are not the
+pipeline that produced the survey.
+
+\emph{What the deposit supports.} With Table~\ref{tab:blockledger} for the
+block and window partition and Appendix~\ref{app:persys} for every system of
+the carrier search, it rebuilds the window, star and system counts; the
+crossing counts and their classification; the chance expectation of \CeExp{}
+crossings, as a sum over each Class~A window's own control exceedance rate,
+masked share and atmospheric factor; the $\mathrm{EIRP}_{90}$ summaries,
+including which windows carry an injected completeness and which a
+transferred one; and every exclusion depth with its recovery probability. Two
+quantities it does not give on their own: the interval on the chance
+expectation, whose resampling draws on quantities that are not per-window;
+and the completeness of the individually injected windows, whose injection
+was made into per-integration spectra that are not deposited.
+
+\emph{Not public.} The calibrated visibilities, the per-window products and
+the code that produced them are not distributed, so this execution of the
+search cannot be re-run. Two claims should be kept apart. The published
+statistical summaries rebuild from the deposited tables, row by row. Whether
+the description here suffices to implement the search afresh has not been
+tested.

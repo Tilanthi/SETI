@@ -1,0 +1,48 @@
+{
+ "_provenance": {
+  "drive": null,
+  "generator": "sensnull_r21.py",
+  "round": 953
+ },
+ "macros": {
+  "RpCovAxis": "channel width",
+  "RpCovAxisPct": "7.8",
+  "RpExtrapSys": "51~Eri, HD\\,172555, HIP\\,10679 and $\\beta$~Pictoris",
+  "RpNExtrapSys": "4",
+  "RpNExtrapWin": "30",
+  "RpNInjBand": "3",
+  "RpNInjChan": "5",
+  "SensMatchMaxChan": "0.50",
+  "SensMatchMedChan": "0.07",
+  "SensNTone": "10332",
+  "SensNullBiasPct": "0.09",
+  "SensNullNCell": "4461",
+  "SensNullNCellB": "5936",
+  "SensNullNTrig": "21",
+  "SensNullNWin": "3",
+  "SensNullNWinTot": "21",
+  "SensNullPNinety": "3.0287",
+  "SensNullPNinetyCorr": "3.0316",
+  "SensNullRank": "none",
+  "SensNullTrigPct": "0.47"
+ },
+ "match_max_chan": 0.499433514268399,
+ "match_med_chan": 0.07315676345003141,
+ "n_tones": 10332,
+ "null": {
+  "coarse": {
+   "both": 0,
+   "n": 5936,
+   "rank": 0,
+   "trig": 0
+  },
+  "fine": {
+   "both": 0,
+   "n": 4461,
+   "rank": 0,
+   "trig": 21
+  }
+ },
+ "p90": 3.0287487703190146,
+ "p90_corrected": 3.031598741378766
+}

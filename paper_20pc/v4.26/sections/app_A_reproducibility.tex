@@ -1,0 +1,285 @@
+%% APPENDIX A -- spectral response, frequency conventions, primary-beam response.
+%% Owner: appendix-triage.  Carries \label{app:conventions} (cited by
+%% 04_method.tex) and \label{app:pbresp}.
+\section{Spectral response, frequency conventions and the primary-beam
+response}
+\label{app:conventions}
+
+%% The single-column figure of the three-point Hanning response against
+%% sub-channel phase is removed; its numbers are in the peak-channel
+%% paragraph below.  QUEUE_integrate.md entry S6: make_all.sh must stop
+%% running make_fig_hanning.py and figorphan.py must carry
+%% hanning_response.pdf in PENDING, or the figure gate fails.
+
+\subsection{Frequency frames, linewidth and smearing}
+%% (subsection label retired: nothing cites it)
+
+Every frequency axis here -- searched spectra, tabulated ranges and
+crossing frequencies alike -- is \emph{topocentric} as delivered by the
+ALMA correlator, and the search applies no velocity-frame shift.
+Velocities enter at the vetting stage, where the line mask carries every
+crossing frequency to the barycentre at its own block's epoch and then to the
+stellar frame before comparing it with a transition
+(Appendix~\ref{app:linemask}). The residual error is then the catalogue
+radial-velocity uncertainty alone, a few km\,s$^{-1}$ within 40\,pc;
+second-order relativistic terms at the \MaskHalfKms\,km\,s$^{-1}$
+scale are $\lesssim5$\,kHz at 350\,GHz, below the finest native channel
+searched. The stacking is drift-aligned and inverse-variance weighted:
+coherent in frequency trajectory, not in electric-field phase.
+
+The native channel width is also the linewidth convention for every EIRP
+threshold. The statistic is the single-channel flux density after drift
+correction, so EIRP$_{\rm trig}$ is the minimum \emph{total} power of a
+channel-confined carrier, flat in the assumed linewidth below the channel and
+never a spectral power density. Above the channel it is not a threshold at
+all: spreading a fixed total power over $N$ channels lowers the statistic as
+$N^{\ScNBroadExp}$, measured on Eq.~\ref{eq:tstar} as the power recovered nine
+times in ten, so a feature as wide as the widest line these fields resolve
+(\ScNBroadChan{} channels) must carry \ScNBroadRatio$\times$ the power of a
+carrier. A filter matched to such a feature would pay only
+\ScNBroadRatioMatched$\times$, and this search uses no such filter. Flatness
+is exact only for a centred tone, and a boundary-straddling one divides its
+power between two channels, which is the loss the injections carry and one
+reason EIRP values are quoted to two significant figures. The Hz-resolution
+surveys' limits are total powers in the same sense, each the best case of
+its own channelisation, which makes the axes of Fig.~\ref{fig:context}(a)
+commensurable. Channel widths come from the measurement sets' own
+CHAN\_WIDTH; MS~v2 defines no ``EFFECTIVE\_BANDWIDTH'' column, so the quoted
+channelisations are separations and are not claimed to be noise bandwidths.
+
+ALMA applies online Hanning smoothing by default \citep{ALMAHandbook}, so
+the spectral response is ${\sim}2$ channels wide and neighbouring channels
+are correlated. For the $0.25/0.5/0.25$ kernel the coefficients
+are $\rho_1=\HanRhoOneFrac=\HanRhoOne$ and $\rho_2=\HanRhoTwo$, the lag-two
+term a sixth of the lag-one term, and the smoothing narrows the noise by
+$\sigma_{\rm smoothed}/\sigma_{\rm raw}=\HanSigRatio$. The peak
+channel holds \HanBest{} of an unresolved carrier's flux at a channel centre
+and \HanWorst{} on a boundary, a median \HanMed{} over sub-channel phase.
+\emph{That loss enters the limits exactly once; the thresholds are free of it
+and the limits are not.} A window's trigger flux is the
+bare $\LtCommonSnr\sigma$ of its own spectrum, so setting the \emph{total}
+power of a channel-confined carrier against it would be optimistic by
+$\times\HanFacBest$--$\times\HanFacWorst$. The injected carriers are not set
+against it in that way: each is deposited with the correlator's own channel
+response, at a sub-channel phase drawn afresh, and recovered through the same
+trigger, which reads the peak channel. The measured completeness therefore
+already contains the loss, and factorises into it exactly:
+$\EirpNinetyMultA\,P_{\rm trig}$ is $\times\RpRespFac$ for the channel
+response and $\times\RpMarginNinety$ for the margin a peak channel needs
+above the nominal trigger for nine carriers in ten to return. So
+$P_{\rm trig}$, the sensitivity $S_{\min}$ below and the filled symbols of
+Fig.~\ref{fig:context}(a) are nominal throughout, which is what makes them
+commensurable with other programmes' detection thresholds, while
+$\mathrm{EIRP}_{90}$ carries the correction and is not corrected again.
+The deposition falls \InjShortPct{} per cent short of the ideal response
+averaged over phase, so the completeness is conservative by that much; and
+at a typical searched drift rate a carrier crosses about \InjDriftChan{}
+channels in one observation, sampling the whole response.
+
+\emph{Intra-integration smearing, which the injections do not model.} Each
+injected tone is deposited at one frequency per integration, so the campaign
+carries the channel response and the drift between integrations but not the
+sweep within one. A carrier moving $\Delta$ channels during an integration
+spends its dwell time spread across the delivered channel response, so
+$\eta_{\rm smear}$ is the mean of that response over the sweep and every
+limit in this paper is divided by it once. \emph{The sweep cannot act inside
+the transform}: these channels are $\NmRespChanTau$ times wider than the
+reciprocal of an integration, so a sweep redistributes dwell time rather than
+destroying coherence, and where the transform-limited amplitude
+$\mathrm{sinc}(\pi\Delta/2)$ is the more severe of the two it is so by
+\NmRespOverPct{} per cent at worst. The correction exceeds one per cent in
+\NmRespNApplied, reaching $\times\SmcFacWorst$; it is measured where the
+integration length is recorded, for \SmcNMeas{} of the \NWindows{} windows,
+and \emph{bounded} for the other \SmcNBound{} at \SmcDtCeil\,s, the longest
+integration delivered anywhere, where none falls below \SmcBoundEta.
+Re-scoring the \SmcValNWin{} injected windows' own ladders with every tone
+de-rated by its own $\eta_{\rm smear}$ gives a penalty never larger than the
+one applied, so the correction errs the safe way.
+
+\subsection{The primary-beam response}
+\label{app:pbresp}
+
+The sensitivity quoted for a window is $S_{\min}=5\sigma/A$, where $A$ is the
+primary-beam response at the star's offset from the phase centre: the noise
+$\sigma$ is measured in apparent flux density, the limit is quoted in true
+flux density, and the two differ by $A$. Archival fields are
+pointed at a catalogue position, often decades old, while these are
+high-proper-motion stars, so the star can sit well off axis. Over the
+\PbNWin{} windows the offset has a median of \PbOffMed$''$, a 99th
+percentile of \PbOffPNN$''$ and a maximum of \BmOffMax$''$; the response $A$
+runs from \BmRespMed{} in the median down to \BmRespMin, falling below $0.99$
+on \PbNLowNN{} windows and below $0.9$ on \BmNBelowNine, every one of
+those being a J2000 pointing on a fast-moving star rather than an error.
+
+\emph{The response applied is a Gaussian of the full width the observatory
+documents}, $\RingPbCoef\,\lambda/D$ \citep{ALMAHandbook}, evaluated at each
+window's \emph{own} dish diameter. The dish matters: the \PbNAcaRow{} rows
+taken on the \PbAcaRatio$\times$ smaller compact-array antennas have a
+correspondingly wider beam, and a Gaussian forced to $D=12$\,m reproduces the
+per-window geometry only to $\SensPbResidTwelve$ against $\SensPbResid$ for
+the per-dish form. The blocked-aperture response, which carries the shadow of
+the secondary and is what \textsc{casa} applies \citep{CASA2022}, has a
+half-power width of $\BmAiryFwhm\,\lambda/D$ on a 12\,m antenna and
+$\BmAiryFwhmAca\,\lambda/D$ on a 7\,m one; the Gaussian used here is that
+beam to \BmDocAiryPct{} per cent, while a Gaussian of the Airy first-null
+width departs from it by up to \BmModelMaxNullPct{} per cent, which is why
+the documented width is the one adopted. The two forms part company as the
+offset grows, which is what sets the retention rule of
+\S\ref{sec:sample}, and \emph{the furthest
+window of the primary census lies at $\BmCensusWorstC\,\lambda/D$, where they
+agree to \BmCensusWorstPct{} per cent: that is the largest beam-model
+uncertainty any sensitivity quoted here carries.}
+
+\emph{One star is covered far off axis.} $\epsilon$\,Eridani, at
+\BmEpsDistPc\,pc the nearest in the sample with Band~6 coverage, has
+\BmEpsNOn{} of its \BmEpsNWin{} windows at the pointing centre and
+\BmEpsNOff{} lying $\BmEpsCLo$--$\BmEpsCHi\,\lambda/D$ off it, where the
+response is \BmEpsRespLo--\BmEpsRespHi, inside the main lobe -- the
+blocked-aperture response does not reach its first null until
+$\BmAiryNull\,\lambda/D$ -- and the two beam forms agree to
+\BmEpsAgreePct{} per cent. \BmEpsNCensus{} of those windows fall inside the
+primary census and carry its statistics, counted in
+Table~\ref{tab:blockledger}, and the deepest of them, $\BmEpsCenEirp$\,W in
+\BmEpsCenEb, is the limit Table~\ref{tab:persys} gives for this star; no
+window of it reaches the trigger, the largest statistic being \BmEpsTMax,
+and the \BmEpsNExt{} outside the census are reported with the archival
+extension. Nor does any block of this star carry an annual-parallax record,
+so its limit omits a displacement of \ExCenPxArcsec$''$ --
+\ExCenPxBeams{} of that block's synthesised beam, from the largest catalogued
+parallax in the sample, \BmEpsPlxMas\,mas -- which is smaller than the
+\SensPxSmallBeams{} of a beam at which the retained amplitude below was
+measured, so that measurement bounds the loss instead of being extrapolated
+to it and the limit is optimistic by at most \BmEpsPxBoundPct{} per cent on
+this account.
+
+\emph{The correction is applied exactly once.} The offset is computed for
+every measurement set from its own \texttt{FIELD::PHASE\_DIR} and the
+propagated stellar position, so no window carries an offset
+that is zero by assumption, and it enters in one place only:
+$S_{\min}=5\sigma/A$ closes on all \PbSminClosed{} catalogued rows to
+\PbSminWorstRes{} in relative terms, and on the \PbSminIndep{} of them whose
+$A$ comes from the search's own stored geometry to \PbSminIndepRes{} -- the
+other \PbSminTaut, whose products are not retained, having $A$ back-solved
+from $5\sigma/S_{\min}$ and flagged as such. Nothing else needs
+correcting: the statistic of
+Eq.~\ref{eq:tstar}, the control ranks and the attribution are \emph{ratios}
+formed inside one window, in which $A$ divides out identically.
+
+\emph{The star's apparent direction includes the annual parallax, and the
+amplitude a compact source retains when that is left out of the assumed phase
+centre is measured rather than modelled.} A small fraction of a synthesised
+beam attenuates a compact source and does nothing else, while a displacement
+approaching a beam puts the phase wrong on the longest baselines.
+Re-extracting the \SensNReextWin{} windows of \SensNReextBlock{} blocks
+furthest out at the full apparent position -- proper motion, parallax and
+radial velocity where catalogued -- leaves each window's noise unchanged to
+\SensReextNoiseMaxPct{} per cent and alters no disposition. A carrier
+injected at the apparent position and recovered from the \emph{same}
+visibilities at both does return the normalised dirty beam, with no model in
+it: \SensPxSmallMeas{} against a predicted \SensPxSmallPred{} at
+\SensPxSmallBeams{} of a beam, and \SensPxLargeMeas{} against
+\SensPxLargePred{} at \SensPxLargeBeams. It exceeds the model at the larger
+displacement because maximising over a plane of trajectories lets a partly
+decohered carrier still find a cell, so a limit corrected by the model is
+shallower than it need be.
+
+\emph{A component of a bound pair does not travel in a straight line, and the
+propagation assumes it does.} Of the \OmNStar{} searched positions,
+\OmNComponent{} have a companion located inside \OmRadius{} arcsec by
+Gaia~DR3 or measured in the double-star catalogues \citep{wds,orb6} and
+\OmNIndOnly{} more have a disturbed astrometric solution with no companion
+found; where the pair has a published visual orbit the displacement follows
+from it, where it has not the projected separation puts a ceiling on the
+orbital acceleration with the companion's mass taken from the main-sequence
+sequence of \citet{pecaut2013}, and the Hipparcos--Gaia proper-motion
+anomaly \citep{kervella2022} covers \OmNPma{} of them. The largest
+displacement anywhere is \OmWorstArcsec{} arcsec at \OmWorstStar,
+\OmWorstBeams{} of that block's synthesised beam, no crossing lies more than
+\OmCrossWorstBeams{} of a beam from its predicted position and the deepest
+limit of any system moves by at most \OmSysMovedMaxPct{} per cent -- except
+for \OmFlagStars, whose solutions are disturbed with no companion located and
+no Hipparcos epoch to measure one from, so that the \OmNWinFlag{} windows of
+those \OmNFlag{} stars carry limits optimistic by an unmeasured amount.
+
+Table~\ref{tab:blockledger} accounts for every execution block the archival
+query exposed and Table~\ref{tab:counts} for every event the search returned;
+the full itemisation of both, all \MtCountRows{} rows, accompanies this paper
+as data. The telescope on-source time behind the primary census is
+\StTelHours\,h, of which \StTelHoursFine\,h carries at least one Class~A
+window and \StTelHoursCoarse\,h at least one Class~B window -- figures that
+overlap and must not be added. Confirmed planet counts there and in the
+target list come from the \SfHostCatalogue{} \SfHostTable{} table
+\citep{NEA2013}, accessed \SfHostDate. Three counts in the second table are
+\MtCrossA{} over three different sets -- the Class~A crossings of the adopted
+ledger, those of the per-window extraction catalogue and the quality-passing
+crossings -- and the first two differ on \FrNFlag{} rows, where the statistic
+read over a narrower field falls on the other side of the trigger from the
+whole-primary-beam reading the ledger adopts, in both directions
+(Appendix~\ref{app:falsealarm}); the accompanying table carries the ledger's
+flag, \MtCrossACen{} of them in the census. Row 3.1.1 applies the criterion
+of \S\ref{sec:summary} and row 2.2.1 is decomposed system by system in
+Appendix~\ref{app:falsealarm}.
+
+%% Carried forward: the UV Ceti worked example (flux -> EIRP) is out of this
+%% appendix because two of its four numbers had no macro behind them.  If a
+%% worked example is wanted back it needs three: the flux density, the implied
+%% EIRP and the distance used.  It is the clearest single verification aid the
+%% paper could carry.  \label{app:repro} and the transmitter-power benchmark
+%% are both resolved: nothing cites the label any more, and exactly one
+%% benchmark survives, in Sec. 6.
+%% tab:blockledger lives here rather than in Sec. 3: it is a full-width
+%% table* worth 0.53 pp of the main text, and Sec. 3 carries its headline
+%% rows in prose and cites it.
+\begin{table*}
+\centering
+\scriptsize
+%% ★ v4.26 (r25-captions): 4 printed lines -> the author's 3.  DELETED because
+%% \S\ref{sec:sample}'s first paragraph says it in the same words -- "every
+%% sensitivity, every expectation and every limit here is computed over it"
+%% -- checked before deleting.  No macro and no \ref lost a citation site.
+\caption{\textbf{The survey ledger, part one: execution blocks and windows.}
+Each row carries its own number, and a group sums to the row whose number
+heads it. Hours are window-hours, so the classes partition the hours as they
+partition the windows. Rows~3.2 to 3.5 are the archival gap, over which no
+result is formed.}
+\label{tab:blockledger}
+\input{tab_blockledger}
+\end{table*}
+
+The numbering of Table~\ref{tab:counts} below is not consecutive, because
+the itemisation it is drawn from accompanies the paper as data rather than
+as part of the article.
+
+\begin{table}
+\centering
+\scriptsize
+%% ★ v4.26 (r25-captions): 5 printed lines -> the author's 3.  The sentence
+%% about the numbering MOVED to the paragraph immediately above this float:
+%% it explains the table rather than reading it.
+\caption{\textbf{The survey ledger, part two: events, dispositions and
+confirmation.} Every headline count in this paper is read from here.}
+\label{tab:counts}
+\input{tab_counts}
+\end{table}
+
+%% ★★ 2026-10-08: THE ALMA PROJECT CODES, RESTORED AS A TABLE.
+%% They were taken out of the Acknowledgements as padding and then lived "in
+%% the data release"; there is no data release, so they were nowhere.  ALMA's
+%% data-use policy expects the codes to be traceable from the publication, so
+%% this is not optional -- but an appendix table satisfies the policy without
+%% putting \NProjCodes{} codes back into the front matter, which is what was
+%% objected to.  The fragment is generated by projcodes_v400.py and is the
+%% same list that resolves every block in Table~\ref{tab:blockledger}.
+\begin{table}
+\centering
+\scriptsize
+%% ★ v4.26 (r25-captions): 4 printed lines -> the author's 3.  The unbreakable
+%% \mbox is about a fifth of a column here, so this caption breaks badly and
+%% costs a whole line more than its character count suggests -- which is why
+%% the limit is measured in printed lines and not in characters.
+\caption{\textbf{The \NProjCodes{} ALMA proposals the searched blocks belong
+to}, as \mbox{ADS/JAO.ALMA\#\textit{code}}. Every census block belongs to
+one.\ProjCodeUnresClause}
+\label{tab:projcodes}
+\input{tab_projcodes_v400}
+\end{table}

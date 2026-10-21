@@ -1,0 +1,174 @@
+%% APPENDIX E -- radio-frequency interference screening.
+%% Owner: appendix-triage.  Carries \label{app:rfi}.
+\section{Radio-frequency interference screening}
+\label{app:rfi}
+
+Interference is the first alternative explanation for an unattributed
+crossing, so the screening this survey has and the coverage it lacks are both
+set out here. Millimetre interferometry is an unusually poor
+environment for terrestrial interference, though not an empty one: ITU Radio
+Regulations Article~5 \citep{ITU2024} carries active allocations throughout
+90--275\,GHz, and WRC-19 identified parts of 275--450\,GHz for land-mobile and
+fixed use. The specific hazard is the \RadarLo--\RadarHi\,GHz Earth
+exploration-satellite allocation used by spaceborne cloud radar
+\citep{CloudSat2002,EarthCARE2023}, a documented contaminant of ALMA Band~3
+\citep{ALMAMemo504}: of the \RadarNTot{} census windows \RadarNWin{} overlaps
+it, carrying \RadarNCross{} threshold crossings and \RadarNStage{}
+rank-passing events, so no result here rests on it. Two things favour this
+band: terrestrial transmitters are sparse compared with centimetre
+wavelengths, and an interferometer is not a total-power detector, so a signal
+not in the far field at the phase centre acquires a rapidly varying
+geometric phase across the array and is suppressed in the correlation rather
+than imaged.
+
+\emph{The coverage of the screening is uneven.} The five tests of
+Table~\ref{tab:rfitests} are computed for every searched window of the
+census, as is the \NCtrl-position rank screen; recurrence
+reaches only the crossings with a covering repeat block, and the visibility
+fit is a consistency check rather than a filter. The correlator flagging is
+the observatory's own, replayed from each block's delivered calibration
+script, and was not retained window by window: \emph{no per-channel
+interference flag of our own exists, and none can be recovered.} The
+populations of the five tests in Table~\ref{tab:rfitests} differ from one
+another for that reason: each test needs a different quantity to have been
+recorded.
+
+\begin{table}
+\centering
+\footnotesize
+%% ★ v4.26 (r25-captions): 4 printed lines -> the author's 3.  The reason the
+%% five populations differ MOVED to the paragraph above, where the record
+%% that is or is not retained is the subject.
+\caption{The five interference tests, each of which could have failed. $p$ is
+against the same peaks redrawn on their own channel grids.}
+\label{tab:rfitests}
+\begin{tabular}{@{}p{0.20\columnwidth}p{0.22\columnwidth}p{0.33\columnwidth}r@{}}
+\hline
+Test & Population & Result & $p$ \\
+\hline
+Clustering in sky frequency &
+\AppMNCrossF{} crossings with a measured peak &
+\AppMTubeObs{} within $\pm\DispoHalfKms$\,km\,s$^{-1}$ of a searched
+transition against \AppMTubeNull{} expected: they cluster on the survey's own
+lines &
+\AppMTubeP \\
+Crowding on one another &
+\QcNQP{} unattributed, quality-passing &
+no crowding at any of six separations from \QcTolLo{} to \QcTolHi\,MHz, where
+the \QcNAttr{} attributed crossings crowd at every one &
+$\geq\QcPQPMin$ \\
+Atmospheric transitions &
+\TlNCross{} crossings against \TlNLine{} telluric lines &
+\ScNInRad{} inside the \ScRadMHz\,MHz screening radius in the topocentric
+frame, flagged as atmospheric and removed from both sides of the chance
+comparison while remaining among the unattributed; \TlTubeObs{} inside
+$\pm\TlTubeHalf$\,km\,s$^{-1}$ against \TlTubeNull{} expected &
+-- \\
+Fixed intermediate frequency &
+\IfPopNWin{} windows with a released peak frequency &
+peak positions within their own windows uniform, median \RfiFracMed &
+-- \\
+Cross-target occupancy &
+\RfiOccNWin{} windows toward \RfiOccNStars{} stars &
+\RfiOccObs{} cross-star coincidences within \RfiOccTol\,MHz against
+\RfiOccNull$\,\pm\,$\RfiOccNullSd{} expected; \emph{below} the null over the
+\RfiOccSigN{} above-trigger windows, \RfiOccSigObs{} against
+\RfiOccSigNull$\,\pm\,$\RfiOccSigNullSd &
+\RfiOccP \\
+Image sideband &
+\ImNScreen{} unattributed crossings &
+\ImNNoParent{} have no catalogued transition in the image interval and
+\ImNParentAbsent{} have one the same block observed with nothing bright
+enough to leak; for \ImNLeft{} the parent frequency was not observed &
+-- \\
+\hline
+\end{tabular}
+\end{table}
+
+The first four tests establish that the crossing population carries none of
+the signatures interference leaves. The clustering it does show is the
+attribution and not a residue left over after it: the ledger counts the
+densest band, \AppMBandLo--\AppMBandHi\,GHz, as \EvTubeLedgerN{} crossings
+with \EvTubeLedgerAttr{} attributed, and the one concentration a reader will
+notice, \TlBandAll{} crossings between \TlBandLo{} and \TlBandHi\,GHz, is the
+carbon monoxide tuning seen from the other side -- \TlBandObs{} of the
+\TlBandNSub{} unattributed crossings whose window the catalogue tabulates
+against \TlBandNull$\,\pm\,$\TlBandNullSd{} expected from where the spectral
+windows were tuned. It is not atmospheric either, because that interval
+holds \TlBandNLine{} telluric transitions. The mask has to be applied before the
+occupancy screen, because \RfiOccMaskN{} of the \RfiOccSigN{} above-trigger
+windows sit on a masked transition (\RfiOccSpeciesList), and a carbon
+monoxide line falls at nearly the same sky frequency toward every nearby
+star, which is exactly the coincidence that screen is looking for; applied,
+it reads \RfiOccMskObs{} against
+\RfiOccMskNull$\,\pm\,$\RfiOccMskNullSd. The atmospheric screen is not sharp
+where it fires: the one crossing it removes sits in a window tuned on the
+line, \ScNearWinPct{} per cent of whose channels lie within the same radius
+of the same transition, so the coincidence establishes not that this channel
+is atmospheric but that this window cannot separate the two, and removing it
+from both sides of the comparison of \S\ref{sec:trigunif} is the
+conservative response. It remains among the \MkUnattr{} unattributed
+crossings and is tested for recurrence with them. The same radius is taken off the control side,
+where it enters the expectation of Appendix~\ref{app:falsealarm} as one
+surviving fraction formed over all windows rather than crossing by crossing;
+that pooled fraction is the larger of the two, so the screen takes
+proportionally more from the expectation than from the observed count and the
+residual asymmetry runs against the null and not for it.
+
+\emph{The fifth test bounds the one mechanism that could put a crossing where
+no line is catalogued.} A sideband-separating receiver passes the
+image frequency $2\nu_{\rm LO1}-\nu$ at finite rejection, and the first
+local oscillator is not among the quantities the archive delivers; each
+block's own spectral windows bound it, every window having to
+fall inside one sideband at an intermediate frequency the receiver passes,
+which pins $\nu_{\rm LO1}$ to a median \ImLoWidthBlkGHz\,GHz. Reflecting each
+crossing about that interval places its image \ImGapLoGHz--\ImGapHiGHz\,GHz
+away, never inside the window the crossing was found in, and ALMA specifies
+an image rejection of at least \ImIrrDb\,dB, so a parent would have to be
+\ImIrrFac{} times the crossing's own flux density. Taken \ImWideGHz\,GHz
+wider at each end the screen leaves \ImNNoParentWide{} of the \ImNScreen{}
+excluded on frequency alone, so it is a bound and not a clearance, and
+\ImNDsb{} unattributed crossings lie in Band~9 or Band~10, where the
+receivers are double-sideband and no such bound could be drawn. Where a
+carbon monoxide isotopologue does fall in the image band of a Class~A window,
+\ScImNHitCross{} crossings lie at the image position against \ScImExp{}
+expected from the share of the window that band occupies, \ScImNHitUn{} of
+them unattributed -- and neither parent attributes its crossing: each was
+observed at its own frequency in the same block, where no
+feature reaches the trigger, \ScImUnParMaxT{} at most, and the largest
+amplitude is \ScImUnRatioA{} and \ScImUnRatioB{} times the crossing's own,
+where a leak at the quoted rejection would need \ImIrrFac{} times as much.
+
+\emph{One execution block fails these tests, and it fails them as a block
+and not as a carrier.} Its \DqBlockNCross{} crossings toward
+\LgVerRejectStar{} are the \DqBlockNCross{} highest statistics in the survey
+(\S\ref{sec:bdblock}, which identifies the failure). Whether interference
+accounts for them is what belongs here, and three readings say not. The
+visibility fit returns a large imaginary part,
+placing the emission away from the phase centre; the block's
+\BdNSibling{} sibling executions of the same field, array and spectral setup
+produce no crossing at all; and of the further windows covering each of its
+frequencies toward other stars, \DqOtherSame{} carries a crossing in the
+same channel.
+
+\emph{None of this substitutes for the ON/OFF cadence a dedicated search
+uses.} The claim is only that no
+identified interference mechanism accounts for the unattributed events:
+allocation tables cannot exclude harmonics, intermodulation products,
+unconventional emitters or near-field sources, and archival data without a
+simultaneous off-source strategy cannot do better. These are statements about
+the population, not a clearance of any one crossing.
+
+%% "The null result rests on internal validation alone" lives once, in the
+%% discussion's lessons subsection, and not here.  fig:appm is not included
+%% -- it compared our own two statistics and the paper states only the one it
+%% uses -- so figures/appm_power.pdf and the \AppMPowerOld* and
+%% \RfiOcc{Prior,Dir,Stale}* families will be retired.
+%%
+%% ★ r16-mask: the cross-target screen of the fourth test is now scoped to
+%% the ADOPTED attribution (round 660, maskrfi_v660.py), which makes it two
+%% events and not one.  round 49's \RfiEventLead, \RfiFreqThem,
+%% \RfiSameChanClause, \RfiNotTestableClause, \RfiOtherWin,
+%% \RfiOtherStarsRange and \RfiOtherBlocksRange are therefore unreferenced
+%% and will be retired; rfi_v399.py still reproduces them and its grammar
+%% selftest still runs, so nothing breaks if the scope is ever restored.

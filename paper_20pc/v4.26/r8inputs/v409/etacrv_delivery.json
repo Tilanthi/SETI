@@ -1,0 +1,22 @@
+{
+ "eb": "A002_X11e10bc_X23333",
+ "mous": "uid://A001/X362b/Xc1d",
+ "verdict": "eb_not_calibrated_in_delivery",
+ "delivery": {
+  "n_ebs_offered": 3,
+  "n_with_calapply": 2,
+  "n_without": 1,
+  "calapply": [
+   "A002_X11e10bc_X12662",
+   "A002_X122b6ff_X1041e"
+  ],
+  "no_calibration": [
+   "A002_X11e10bc_X23333"
+  ]
+ },
+ "correct_fate": "excluded_no_calibration_available",
+ "not_never_started": true,
+ "gb": 67.240411136,
+ "check_validation": "cal_available.py screened against 361 already-calibrated blocks: eb_not_calibrated_in_delivery resolved 0, failed 10 -- never a false exclusion",
+ "consequence": "no amount of disk can produce this epoch; the gap is in the ALMA delivery, not in our effort"
+}

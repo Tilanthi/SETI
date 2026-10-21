@@ -1,0 +1,198 @@
+\section{Introduction}
+\label{sec:intro}
+
+The public ALMA archive holds thousands of hours of millimetre and
+submillimetre observations taken for other reasons, mostly studies of dust
+discs and planet formation. Their visibilities allow a spectrum at the
+position of the star at the centre of each field, at a resolution and depth
+set by the original observer's correlator setup. This paper searches those
+spectra for a narrowband transmitter at the star's own position. No such
+signal was found.
+
+Searches for \emph{technosignatures} -- detectable imprints of technology,
+intended or not
+\citep{Sheikh2020,SETIreview2025} -- have examined many thousands of stars
+over six decades, yet the last published accounting of that effort covers
+only \HaystackFrac{} of the space of transmitter position, power, frequency,
+bandwidth, polarisation and repetition rate
+\citep{Wright2018}, and essentially all of it lies below
+${\sim}30$\,GHz. That heritage is centimetre and metre work: the first
+proposals and targeted experiments
+\citep{CocconiMorrison1959,Drake1960}, the programmes reviewed by
+\citet{Tarter2001} and Project Phoenix \citep{Backus2002}, and the present
+generation of targeted and commensal surveys, several riding back-ends built
+for other science
+\citep{Zhang2020,Czech2021,FAST3IATLAS2025,LOFARdualsite2023,Choza2024,Morrison2023,Tremblay2024,SRT2025},
+in which machine-learning interference rejection is now central
+\citep{Ma2023,GLOBULAR2025,AnomalyParkesGBT2025}. The classical threshold
+search used here lacks that capability and instead tests the star against
+control positions within its own primary beam, which a single dish cannot
+resolve. It also reaches only one class of signal: broadband
+planetary-scale leakage \citep{BRaTs2026} is outside it by construction.
+
+Above about 30\,GHz the record is nearly empty, and that is what makes this
+frequency range new. \citet{Steffes1994} observed \SbPriorNStarA{} solar-type
+stars within \SbPriorDistA\,pc at \SbPriorFreqGHz\,GHz, and
+\citet{Mauersberger1996} included $\tau$~Cet and $\epsilon$~Eri among
+\SbPriorNStarB{} targets at the same frequency; each covered a single line
+over no more than \SbPriorBandMHz\,MHz at narrowband resolution, with no
+search over drift rate and no epoch-to-epoch test of persistence. Of ALMA's
+receiver bands only Band~3 has been searched for technosignatures
+\citep{Mason2025}; the \SbBandOneLoGHz--\SbBandOneHiGHz\,GHz band does hold
+observations of \SbBoneNStar{} stars of this sample, but all proprietary
+until \SbBoneRelYear{} and all in a continuum mode whose channels are
+\SbBoneChanRatio{} times coarser than the narrowest channel searched here, so
+that coverage cannot carry a carrier search, and the band above it holds none
+at all. This survey covers
+\DnuA\,GHz in \CovNIslands{} disjoint intervals, searches a grid of drift rates rather
+than a fixed frequency, tests every crossing against the \BdNCtrl{} control positions of
+its own field, and uses repeat observations to ask whether an event returns
+at the same frequency in the star's frame. Every window reported here was
+re-reduced and re-searched from the raw archive with the pipeline of
+\S\ref{sec:method}.
+
+The band has physical advantages and physical costs. Interstellar dispersion
+and scintillation are negligible at these frequencies, so a carrier arrives
+essentially undistorted, and a given aperture delivers far more gain per watt
+supplied. Against that, receiver system temperatures are higher, the
+atmosphere is opaque in places at both ends of the link, and the same high
+gain narrows the beam: the \BenchDiam\,m benchmark of
+\S\ref{sec:excludes} radiates into a beam \BmArcsec{} arcsec wide at half
+power, a solid angle of $\BmOmegaSr$\,sr, so
+the Earth must lie inside a beam that was deliberately aimed. The limits of
+this paper are stated as EIRP and need no transmitter model.
+
+\citet{Mason2025} is the only prior millimetre search to cover more than a
+single line, and the only archival one; it also identified the obstacles that
+shape the present method, in that drift rates scale with frequency, smearing
+erodes sensitivity unless drift is searched for, and the molecular line
+forest raises the confusion background. The quantity that makes the two
+surveys commensurable is the minimum detectable \emph{received} flux,
+$F_{\rm min}=S_{\rm min}\,\delta\nu$, compared at the channel width each
+experiment recorded: $S_{\rm min}$ falls as $\delta\nu^{-1/2}$ while
+$F_{\rm min}$ rises as $\delta\nu^{1/2}$, so putting a coarse window on a
+fine channel arithmetically credits it with a depth it never reached. Mason
+et~al.\ reach \MasonFluxLo--\MasonFluxHi\,W\,m$^{-2}$ on a
+\MasonChanKHz\,kHz channel at a bare $5\sigma$ flux threshold; on that same
+convention and on native channels throughout, the best window searched here
+reaches \FluxTrigBest\,W\,m$^{-2}$, a factor \FluxNatBestRatio{} deeper in a
+channel \FluxChanBestKHz\,kHz wide, while the median window reaches
+\FluxTrigMed\,W\,m$^{-2}$, a factor \FluxNatMedRatio{} shallower in a channel
+\FluxChanMedKHz\,kHz wide. Per channel this survey is therefore the shallower
+of the two except in its finest windows, and its advantage lies elsewhere:
+\NSysClassA{} stellar systems within 40\,pc rather than distant stars in
+\MasonNCal{} calibrator fields, over a frequency range reaching about nine
+times higher.
+
+Figure~\ref{fig:context}(a) places this survey among published searches,
+in minimum detectable EIRP against distance. For a carrier narrower than
+every programme's channel that limit is a total radiated power and not
+a spectral power density, so the axis is commensurable. It is a limit only
+for a signal narrower than the native channel that set it, however, and those
+channels differ by \LtChanSpanDex{} orders of magnitude, from \LtChanNarrow{}
+to \LtChanWide: a signal detectable by one programme need not be detectable
+by another at any power, and no limit drawn in either panel carries a
+confirmation criterion of any kind. The detection
+thresholds behind the published limits are not: of the \LtNProg{}
+programmes drawn, \LtNRescaled{} quote their limits at a threshold other
+than $\LtCommonSnr\sigma$, so Table~\ref{tab:litthresh} gives each programme's
+threshold, the factor that puts it on the common basis and the channel width
+it used, and the figure is drawn after that rescaling, with each published
+value kept beside it. That
+puts the thresholds on one convention and not the completeness behind them,
+which is measured here and not established on the same basis elsewhere, so
+the comparison is between nominal thresholds on one arithmetic convention and
+not at a matched false-alarm probability
+(Appendix~\ref{app:falsealarm}). The limits this survey quotes
+elsewhere are $\mathrm{EIRP}_{90}$, the power recovered nine times in ten
+through the single-epoch trigger stage, while the values compared here and
+the filled symbols of Fig.~\ref{fig:context}(a) are bare
+$\LtCommonSnr\sigma$ thresholds, which are the only symbols on that panel
+carrying a measured completeness. The \NgNDecBOnly{} stars drawn there as
+grey triangles were covered in coarse channels alone, and so constrain an
+unresolved excess and not a drifting carrier
+(Table~\ref{tab:quantities}). Panel~(b) is the other axis, the native
+channel width of every window searched here beside the channel of each
+comparison programme. This survey is distinguished by its frequency range and
+the proximity of its targets, and not by its depth in any one channel.
+
+The signal sought is an \emph{unresolved spectral carrier} -- emission confined
+to a few channels, unresolved at the stellar position, and present at more
+than one epoch. Recurrence, and not brightness, separates an interesting event from a detection, and a signal of interest needs detailed
+follow-up \citep{Sheikh2021}, and the archive holds
+a second, separated epoch for some of these systems and not for others, so
+the extent that could be searched and the extent that could be confirmed differ. The
+frequency is allowed to drift, as it must for a transmitter carried on a
+rotating, orbiting body (\S\ref{sec:statistic}). ``Narrowband'' describes the
+assumed transmitter and not the resolving power of the archived channels.
+
+A non-detection becomes a quantitative statement only through a stated
+search volume. \citet{Wright2018} formalised that volume, and
+\citet{Margot2023} its conversion into an upper bound on the fraction of
+stars hosting a transmitter; \citet{EarthDetectingEarth2025} asked where
+Earth's own technosignatures would be detectable. Such a bound is valid
+only if the sample represents the population it is meant to describe. The
+targets were chosen by other programmes for other purposes, so this sample
+does not, every statistical statement here is about an archive-selected
+sample (\S\ref{sec:bias}), and \S\ref{sec:sample} states what it is instead.
+This search needs an unusually detailed statistical treatment, and the
+appendices set it out in full.
+
+%% Glenn's instruction: the appendices are deliberately detailed and the paper
+%% says so, so that a reader meets them as intended rather than as padding.
+%% ★★ GLENN'S ORIGINAL WORDING, VERBATIM, KEPT HERE SO REVERTING IS ONE LINE.
+%% He asked for this sentence at the end of the background material:
+%%
+%%   Because of the very specific and detailed statistical nature of this
+%%   study, we have extended the paper to include several very detailed
+%%   Appendices that rigorously explain the methodology involved.
+%%
+%% It is replaced above because "we have extended the paper to include"
+%% describes an edit to the manuscript, which is the one thing his own
+%% standing instruction 3 forbids outright -- so two of his instructions
+%% conflict here and the choice is his, not ours.  The replacement keeps his
+%% point (the appendices are deliberately detailed and the paper says so) and
+%% drops only that clause.  To revert, replace the sentence above with the
+%% three commented lines.
+%%
+%% ★★★★ THE BACKGROUND SECTION IS MERGED INTO THIS ONE.  Both referees asked
+%% for it and the page budget required it.  The three cross-references from
+%% other files are repointed at \label{sec:intro}, and the sentence that used
+%% to send the reader forward ("The band's other difficulties belong to the
+%% archive and not to the sky, and \S\ref{sec:background} sets that out") is
+%% gone, because the material it pointed at is here.
+%% ★ \label{sec:background} was FIRST kept here beside \label{sec:intro} so
+%%   that nothing had to be repointed.  `xrefcheck` accepted that as a
+%%   "deliberate alias", and `labelcheck`'s F7 correctly REFUSED it: two
+%%   labels on one anchor.  The two gates disagree, and the stricter one is
+%%   right -- a reader following two different names to one number cannot
+%%   tell whether a section is missing.
+%%
+%% ★★★★ A FALSE CLAIM OF OURS IS CORRECTED HERE, and it was not new.  The text
+%% read "...against control positions in the same field, which a single dish
+%% cannot make."  A single dish can and does make a spatial coincidence test
+%% -- FAST's multibeam matching uses the central beam on source and the outer
+%% beams as contemporaneous references -- and FAST3IATLAS2025, the paper that
+%% says so, is cited in the same paragraph.  What an interferometer uniquely
+%% provides is control positions INSIDE one primary beam, which is what this
+%% search uses.  The replacement ("...control positions within its own primary
+%% beam, which a single dish cannot resolve") is one word longer.
+%% ►► ROUND 24 RECORDED THIS FIX AS ACCEPTED UNCONDITIONALLY AND IT NEVER
+%%   LANDED; the phrase spans a source line break, so a one-line grep returns
+%%   0, which is almost certainly how it came to be marked done.  The
+%%   coordinator has dispatched an audit of round 24's rulings against the
+%%   shipped PDF (Ruling 11), and QUEUE_audit owns landing it -- if that audit
+%%   lands the clause too, this file already carries it and the two agree.
+%%
+%% The Mason comparison is made here and nowhere else, now at NATIVE channel
+%% widths on both sides: F_min propto dnu^(1/2), so rescaling our 488 kHz
+%% median window to their 30.52 kHz flattered it by the square root of the
+%% ratio (x4), which is a resolution app_A says no reprocessing can recover.
+%% masoncmp_v401.py asserts that the two median comparisons differ by exactly
+%% that square root, so the rescaled figures cannot be quoted again by
+%% accident. The benchmark is evaluated once, in \S\ref{sec:excludes}, and is
+%% labelled illustrative in both places it is named.
+%%
+%% Housekeeping. The two-symbol convention on panel (a) -- bare 5 sigma
+%% filled, EIRP_90 open, joined -- is set by make_fig_context_v410.py and
+%% stated in Figure 1's caption.

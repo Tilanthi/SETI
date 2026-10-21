@@ -1,0 +1,11 @@
+{
+ "_provenance": "Systemic (barycentric) radial velocities for stars carrying a threshold crossing that the released catalogue's own radial-velocity table (starrv_v399.json) does not hold, because they entered the crossing list with the archival tail rather than with the release.  Queried from SIMBAD on 2026-10-04 and frozen here with the bibcode SIMBAD returns, so the mask's frame chain carries no number without a source.  Used only to transform a crossing frequency into its star's rest frame; nothing in the search depends on it.",
+ "v_sys_kms": {
+  "HD 139084 B": {
+   "v": 4.55,
+   "err": 0.01,
+   "src": "SIMBAD 2021A&A...645A..30Z (Zuniga-Fernandez et al.)",
+   "note": "M5Ve companion of HD 139084 (V343 Nor, beta Pic moving group); the primary's SIMBAD value is +3.90 +- 0.19 km/s from Gaia DR3, consistent with it, and either leaves this crossing attributed."
+  }
+ }
+}

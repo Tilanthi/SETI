@@ -1,0 +1,108 @@
+{
+ "U02": {
+  "cid": "U02",
+  "star": "61 Vir",
+  "display": "61 Vir",
+  "freq_GHz": 346.3138115,
+  "disc": {
+   "stem": "/data/SETI/targets/61_Vir_B7_EB_X82f/products/A002_Xc079b5_X82f_spw16",
+   "drift": 3181.552001953125,
+   "chan": 2952
+  },
+  "repeats": [
+   {
+    "eb": "A002_Xc067f7_X822",
+    "stem": "/data/SETI/targets/61_Vir_B7_EB_X822/products/A002_Xc067f7_X822_spw16",
+    "f_here_GHz": 346.3152656936337,
+    "drift": 3181.565361491535,
+    "chan": 2952,
+    "sep_h": -71.88082666662004,
+    "sig_mJy": 21.9447217059553,
+    "in_cat": true
+   },
+   {
+    "eb": "A002_Xc074d4_X2e6",
+    "stem": "/data/SETI/targets/61_Vir_B7_EB_X2e6/products/A002_Xc074d4_X2e6_spw16",
+    "f_here_GHz": 346.31431393623154,
+    "drift": 3181.5566177869305,
+    "chan": 2952,
+    "sep_h": -24.115760000016955,
+    "sig_mJy": 19.540319660560296,
+    "in_cat": true
+   },
+   {
+    "eb": "A002_Xc079b5_X1ae",
+    "stem": "/data/SETI/targets/61_Vir_B7_EB_X1ae/products/A002_Xc079b5_X1ae_spw16",
+    "f_here_GHz": 346.31408743586655,
+    "drift": 3181.55453694965,
+    "chan": 2952,
+    "sep_h": -1.9735866668489244,
+    "sig_mJy": 22.509700847952235,
+    "in_cat": true
+   }
+  ]
+ },
+ "A01": {
+  "cid": "A01",
+  "star": "CP-72 2713",
+  "display": "CP$-$72 2713",
+  "freq_GHz": 344.2697461,
+  "disc": {
+   "stem": "/data/SETI/targets/CP-72_2713_B7/products/A002_Xff0235_X4a6d_spw3",
+   "drift": -2055.5126953125,
+   "chan": 35
+  },
+  "repeats": [
+   {
+    "eb": "A002_Xff0235_X502d",
+    "stem": "/data/SETI/targets/CP-72_2713_EB2/products/A002_Xff0235_X502d_spw3",
+    "f_here_GHz": 344.2696531120092,
+    "drift": -2055.512140114148,
+    "chan": 35,
+    "sep_h": 2.0461199998855593,
+    "sig_mJy": 1.8261105243248574,
+    "in_cat": true
+   },
+   {
+    "eb": "A002_Xff0235_X99ed",
+    "stem": "/data/SETI/targets/GaiaDR3_6382640367603744128_B7_EB_X99ed/products/A002_Xff0235_X99ed_spw3",
+    "f_here_GHz": 344.2695485177858,
+    "drift": -2055.5115156190927,
+    "chan": 153,
+    "sep_h": 25.477786666817135,
+    "sig_mJy": 19.986381635738,
+    "in_cat": false
+   },
+   {
+    "eb": "A002_Xff0235_Xa6a3",
+    "stem": "/data/SETI/targets/CP-72_2713_B7_EB_Xa6a3/products/A002_Xff0235_Xa6a3_spw3",
+    "f_here_GHz": 344.26947628939234,
+    "drift": -2055.5110843689426,
+    "chan": 153,
+    "sep_h": 27.11652000003391,
+    "sig_mJy": 18.919487248853194,
+    "in_cat": false
+   },
+   {
+    "eb": "A002_Xff0235_Xb32c",
+    "stem": "/data/SETI/targets/CP-72_2713_B7_EB_Xb32c/products/A002_Xff0235_Xb32c_spw3",
+    "f_here_GHz": 344.2694206767127,
+    "drift": -2055.5107523253337,
+    "chan": 153,
+    "sep_h": 28.839133333365123,
+    "sig_mJy": 22.298392516890946,
+    "in_cat": false
+   },
+   {
+    "eb": "A002_Xff294f_X1e10",
+    "stem": "/data/SETI/targets/CP-72_2713_B7_EB_X1e10/products/A002_Xff294f_X1e10_spw3",
+    "f_here_GHz": 344.2693793265016,
+    "drift": -2055.510505437872,
+    "chan": 153,
+    "sep_h": 50.50387999984953,
+    "sig_mJy": 22.43532750467508,
+    "in_cat": false
+   }
+  ]
+ }
+}

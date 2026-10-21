@@ -1,0 +1,328 @@
+prodident: 927 record(s) naming a product; 579 under the released tree and in the catalogue, 575 of those reproducing its published statistic; 64 under the re-extraction tree, which must not; 907 reached under a per-block stem
+prodident: 3 window(s) named by a record and absent from the deposited catalogue (the declared archival tail): [('A002_X1190de8_Xd526', 3), ('A002_X11adad7_X25c5e', 3), ('A002_Xc6b674_X28f5', 0)]
+prodident: 0 FAIL
+  J1 the channel response used here is the one the 400 retained response trials measure PASS  largest deviation 0.0030 over fractional offsets 0.000, 0.125, 0.250, 0.375, 0.500
+  J2 the crossings measured are the ledger's own rank-leading pair, in the order the rest of the paper prints them PASS  ['U02', 'A01'] at ['346.3232', '344.2965'] against ['346.3232', '344.2965']
+  J3 U02: the retained repeat rows are the frozen record's own blocks, keyed on the execution block PASS  3 retained, 3 in the record, 3 published
+  J4 U02: the modelled recovery probability reproduced here is the one the paper prints for this crossing PASS  computed 0.9992 against published 1.00
+
+U02 61 Vir  3 repeat blocks  T*=5.958  T_pers=9.702  trigger-amplitude T=8.142
+   modelled                0.999
+   carrier centred         1.000 +- 0.000
+   sub-channel phase       1.000 +- 0.000
+   no carrier              0.0000
+   the band's own null     +0.123 +- 0.862 over 92 cells
+   de-drift: half a step of 70.9 Hz/s over a 3430 s dwell takes T 3.93 to 3.94 (1.002)
+  J3 A01: the retained repeat rows are the frozen record's own blocks, keyed on the execution block PASS  5 retained, 5 in the record, 5 published
+  J4 A01: the modelled recovery probability reproduced here is the one the paper prints for this crossing PASS  computed 0.6647 against published 0.66
+
+A01 CP$-$72 2713  5 repeat blocks  T*=5.809  T_pers=6.303  trigger-amplitude T=5.425
+   modelled                0.665
+   carrier centred         0.705 +- 0.014
+   sub-channel phase       0.654 +- 0.015
+   no carrier              0.0000
+   the band's own null     +0.116 +- 1.002 over 66 cells
+   de-drift: half a step of 64.7 Hz/s over a 3745 s dwell takes T 3.98 to 3.96 (0.996)
+  J5 the measured recovery agrees with the model it tests, for both crossings and with the carrier centred or at a random sub-channel position PASS  largest departure 2.79 binomial errors; 61 Vir 1.000+-0.000 and 1.000+-0.000 against 0.999; CP$-$72 2713 0.705+-0.014 and 0.654+-0.015 against 0.665
+  J6 the same reading confirms nothing when the carrier is removed PASS  0 of 2000 carrier-free readings reach the trigger
+  J7 half a step of error in the carried drift costs little inside one block, which is what a grid stepping by half a channel across the dwell is for PASS  the statistic keeps 0.996 of its value at worst, over grids of 70.9, 64.7 Hz/s
+  J8 every retained per-integration product is measured here, and the crossings with nothing to inject into are the rest of those carrying an exclusion PASS  retained ['A01', 'U02']; measured ['A01', 'U02']; 31 of 33 carry an exclusion with nothing to inject into
+
+13 macros -> survey_numbers_round750.tex
+all checks pass
+
+1  the blocks with no phase-stability record
+  B1 the published median longest baseline of the unrecorded blocks is PASS  278.8 m over 125 of 128 unrecorded against a published 279; 46.0 m over 279 recorded against 46
+  B2 the set is bimodal and the published median is a property of the  PASS  modes at 44 m (n=58) and 456 m (n=67), nothing between 49 and 271 m; 5 blocks of mix move the median from 279 m to below 271 m
+  B3 the real difference is the share of 12 m blocks, and within each  PASS  12 m share 54 per cent against 26; 7 m medians 44/44 m; 12 m medians 456/448 m
+  B4 and the archive-derived baselines use a conversion the blocks mea PASS  k = 1.257 over 23 measured against 1.220 assumed on 116 derived
+
+2  the median of a window's own control ensemble
+  B5 the two published values are the same quantity over two different PASS  2.7535 over 1476 rows carrying ctrl_med (published 2.75) against 2.7431 over 1663 windows with a stored ensemble (published 2.74, and 2.74 as the survey median of the quality rule); the results section cites the owner
+  B6 and the value to keep is the one the quality rule itself uses, wh PASS  1663 windows in the owner against 1663 in the census and 1476 carrying ctrl_med
+
+3  the predicted-cell offset
+  B7 the offset column is centred on zero and its typical size is a fr PASS  signed median -0.001, absolute median 0.059, largest 41.08 channels over 13 readings
+  B8 and the same column in velocity agrees with the registration resi PASS  median |offset| 0.0375 km/s against a published 0.04 in the table and 0.05 as the residual
+
+4  the 3.9 per cent
+  B9 every published value of the four is reproduced by the repair rec PASS  worst difference 3.2e-05 over 4 rows against the deposited repair record
+  B10 and the value the audit found on disk is the PRE-REPAIR extracti PASS  the pre-repair export reproduces the surviving product to 4.9e-06 and differs from the published value by up to 0.2329
+  B11 the difference decomposes into the window noise and the recovere PASS  3.91 per cent in the statistic = 1.16 per cent in the noise and 2.72 per cent in the amplitude
+  B12 and the repair moved this window's control ensemble, which is wh PASS  largest control 10.854 before against 8.117 published
+  B15 and the window belongs to the compact array, which is where a co PASS  7m, 12 x 7 m and 0 x 12 m antennas
+
+5  the closest two sessions
+  B13 the closest two sessions to recover one transition are the two t PASS  25.13 d between sessions X6f1341 and X7116f1 on CO(2-1), against a published 25
+  B14 and both of those blocks are already in the recurrence table, so PASS  blocks A002_X6f1341_X1484, A002_X7116f1_X1785; the table pairs them at 25 d instead
+
+assertions failed: 0 []
+
+1  R1-1: where the 405 is named, is the 391 named with it
+  A1 the two subsets of the carrier search close on its own size, so PASS  391 + 14 == 405, and the catalogue holds 405 Class A windows
+  A2 every section that introduces the carrier search by its size al PASS  missing in: none (checked in abstract.tex, 05_results.tex, 07_conclusions.tex, 03_sample.tex)
+
+2  R1-2: the calibration uncertainty and the transfer
+  A3 every individual Class A limit carries the SAME class factor -- PASS  smallest adopted/nominal ratio 3.028836 against the class factor 3.028749, largest 4.390 over 405 windows
+  A4 the published calibration interval is narrower than the measure PASS  calibration x0.89-1.11 against dispersion x0.80-1.58, the latter being the 49 windows' own range 2.41-4.80 over the adopted 3.03
+  A5 and that dispersion is the 49 measured points themselves, so no PASS  49 measured points spanning 2.41-4.80 P_trig against the published 2.41-4.80
+  A6 some configurations of the population hold no injected window a PASS  30 of 405 Class A windows in 5 such configurations; 4 systems, the deepest being bet Pic at 7.13e+13 W
+  A7 and the deepest limit in the survey is one of them, which is wh PASS  deepest system bet Pic at 7.13e+13 W, band 6, 15 kHz channels
+
+3  R1-3: the decorrelation behind each system's own best window
+  A8 a majority of the systems take their headline limit from a bloc PASS  measured 26, imputed 34, none 1 of 61 systems
+  A9 and the deepest limits are no better supported than the rest: o PASS  4 of the 10 deepest measured, 5 imputed, 1 with no estimate
+  A10 the pooled per-system median the text quotes lies between the  PASS  measured 3.8 per cent, imputed 3.0, pooled 3.0 against a published 3
+  A11 and Table F1 marks exactly those systems, so the reader can se PASS  34 starred rows against 34 imputed; 6 daggered against 6 injected
+  A12 the class of a star's own deepest window is the class of its c PASS  66 stars carrier-searched and 24 coarse-only, of 90
+
+assertions failed: 0 []
+ledgergate: tab_ledger.tex -- 56 data rows against 56 adopted crossings
+ledgergate: 0 FAIL
+fragstale: 12 generated fragments the manuscript inputs, 7 spine inputs
+fragstale: 0 FAIL
+included (11):
+    bpic_control.pdf
+    chain_v412.pdf
+    classa_sensitivity.pdf
+    completeness_map.pdf
+    confcoverage.pdf
+    coverage_waterfall.pdf
+    drift_acceleration.pdf
+    eirp_context_a.pdf
+    eirp_context_b.pdf
+    event_crossings.pdf
+    sens_ring.pdf
+orphaned (8):
+    appm_power.pdf                 appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge.
+    calib_cont.pdf                 calibration (calib_r15.py, round 530) 2026-10-08: built but not a figure of the paper; Ruling 3 asked for a coefficient and a sentence and Appendix B carries both.  It is not distributed anywhere -- see AUTHOR_ACTIONS.md item 1.
+    control_diagnostics.pdf        appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge.
+    ledger_vis_v403.pdf            appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge; already uncited before it.
+    rank_cdf.pdf                   appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge.
+    selection_bias.pdf             appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge; fig:selbias was already uncited before it.
+    sensitivity_2d.pdf             appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge; fig:sens2d was already uncited before it.
+    stratified_completeness.pdf    appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge.
+note: 4 .png sibling(s) in figures/ that LaTeX does not use: appm_power.png, calib_cont.png, chain_v412.png, ledger_vis_v403.png
+orphan table fragments: 47 not \input anywhere, of which 1 are generated AND carry a caption
+    tab_maskband_v411              mask (maskframe_v411.py, round 170) 2026-10-20, round 25: the band-by-band mask cost. Superseded as an article table by Table C1 (tab_maskspecies_v414.tex), which is the mask by species, and the article states the cost as a single pair of figures. KEPT because `cleanregen.py` lists it as a product of `maskframe_v411.py` and retiring a product mid-close is a build change, not a prose change. ITS CAPTION IS CORRECT AND DERIVED: it no longer names SO, and it now reads \FrMaskWorstBand and \FrMaskWorstPct, which were computed and cited by no sentence in the paper. TO DO: retire the fragment or give it a float.
+figorphan: 11 included, 8 pending, 0 unexpected orphans, 0 missing files
+labelcheck: 218 files, 66 labels, 59 distinct \ref targets, 27 floats/maths environments, 68 aux entries
+  note: F4 (not a failure) 7 unreferenced sectioning label(s); F4 fires only on floats, equations and appendices
+  note: F6 (unreferenced) sec:data is on a starred section
+labelcheck: 0 FAIL
+wordcase: 31 prose sources, 187 macro-layer files
+  W1  no lower-case macro value opens a sentence                   PASS  none
+  W2  the sweep found, and searched for, every such macro          PASS  138 lower-case-valued macros in the layer, 22 of them cited; not searched: none
+  W3  every prose source the manuscript inputs was read            PASS  31 prose sources swept, 187 macro-layer files read
+wordcase: 138 lower-case-valued macros, 22 cited, 0 FAIL
+citegate: 218 source files
+  G1   every bibitem is cited somewhere                               PASS  none
+  G2   every citation has a bibitem                                   PASS  none
+  G3   no key is declared twice                                       PASS  none
+  G4   the comparison was not vacuous                                 PASS  67 bibitems, 67 cited keys, 218 source files
+  G6   no two bibitems print the same label to the reader             PASS  67 printed labels, all distinct
+  G5   a citation only in a macro body lives in a used macro          PASS  1 cited only from the macro layer, each in a referenced macro: ALMAPropGuide (BudFluxSource)
+citegate: 67 bibitems, 67 cited keys, 0 FAIL
+retired: the superseded column is deposited as eirp_p90_superseded_rankgated_W; the old name eirp_p90_sel_W is indexed in 0 live line(s)
+retired: 2 generator(s) read the retired catalogue column eirp_p90_superseded_rankgated_W; 0 of them emit a macro the manuscript still cites
+retired: 6 generator-declared supersession(s): BudPlxWorstPct->SfPlxWorstPct, BudPlxWorstStar->SfPlxWorstStar, InjPeakAtNinety->RpMarginNinety, NClassAM->SfMClassAStars, NMCensus->SfMCensus, NMSearched->SfMSearched
+retired: 57 retired names, 51 of them aliased to a replacement, 0 uses in the manuscript
+requestsweep --selftest: PASS, 5 markers, boundary-matched both ways
+requestsweep: 219 shipped .tex, 597389 characters, 0 open REQUEST/TODO/FIXME/XXX/PLEASE markers
+synmacro: 1205 cited macros with a numeric value, 16 same-stem group(s) of two or more, 14 differing
+  declared  bsnwin                 \BsNWinA = 38; \BsNWinB = 374
+            reason: the same channelisation split over the BRIGHT STARS THE SAMPLE EXCLUDES -- the holding that would be admitted if the Gaia DR3 parallax requirement were dropped -- and not a second count of the searched windows: 38 fine and 374 coarse, in neither \NWinA nor \NWinB
+  declared  fracmax                \HoFracMax = 0.47; \RcFracMax = 0.997
+            reason: the largest fraction of the discovery amplitude the repeat coverage still excludes, in the reserved hold-out search against the primary census.  Two populations, and the difference is the point: every hold-out crossing is excluded at 0.47 of its amplitude or less, while in the census the individual limits run all the way to 1.00, which is why the census median is reported as a median and never as a bound on the set
+  declared  fracmed                \RcFracMed = 0.43; \RfiFracMed = 0.5
+            reason: TWO DIFFERENT FRACTIONS OF TWO DIFFERENT THINGS, and only the word "frac" is shared.  RcFracMed is the median fraction of the DISCOVERY AMPLITUDE that the repeat coverage excludes, over the crossings that carry an exclusion.  RfiFracMed is the median fractional POSITION of a released peak inside its own spectral window, which is the fixed-intermediate-frequency test of the interference appendix and is 0.50 because the positions are uniform.  Neither is a bound and they are not the same quantity in any sense
+  declared  ncross                 \HoNCross = 8; \LdgNCrossB = 4
+            reason: TWO POPULATIONS, NOT TWO COUNTS OF ONE.  \HoNCross is every crossing found in the hold-out, i.e. in the execution blocks the identifier rule of App. B.1 reserves, of either class (8 events, which is the set the transfer ratio R2-4 asks about is measured on).  \LdgNCrossB is the Class B crossings of the PRIMARY CENSUS (4), all of them in the one execution block that fails the data-quality criterion, which is the fact R1-3 requires the principal result to state.  The hold-out and the census share no execution block at all (holdout_v412 H4), so neither count is any part of the other
+  declared  ninetymult             \EirpNinetyMultA = 3.03; \EirpNinetyMultB = 4.17
+            reason: the completeness multiplier measured separately per class, which is the whole point of measuring it per class
+  declared  nstar                  \DqNStar = 2; \HoNStar = 36; \SfNStar = 90
+            reason: the stars of the windows the data-quality rule flags; the reserved hold-out's stars; and the searched sample -- three sets, three counts
+  declared  ntested                \HoNTested = 7; \RcNTested = 38; \VerNTested = 1657
+            reason: unattributed crossings tested for recurrence against windows matched to an ACA geometry-verification record -- different things counted, as queue entry 31 sets out
+  declared  nwin                   \DqNWin = 5; \HoNWin = 315; \PbNWin = 1663
+            reason: windows flagged by the data-quality rule; the reserved hold-out's windows; and the windows of the primary-beam audit, which is the whole release -- three sets, three counts.  'ScrNWinA' and 'PxaNWin' left this group when Ruling 1 removed the screen cost from the paper and the parallax row from the budget
+  declared  sbpriornstar           \SbPriorNStarA = 40; \SbPriorNStarB = 17
+            reason: the star counts of the TWO PUBLISHED SEARCHES above 30 GHz, not of two classes of this one: Steffes & DeBoer's 40 solar-type stars within 23 pc and Mauersberger et al.'s 17 Vega-like and solar-type targets.  The A/B suffix here distinguishes two other people's papers, which is the one case where the class heuristic means something else
+  declared  scimunratio            \ScImUnRatioA = 1.37; \ScImUnRatioB = 0.93
+            reason: the measured parent-to-crossing amplitude ratio at each of the two crossings, each read in the block that observed its own parent frequency: two independent measurements, and the point of both is that each falls short of the leakage a 10 dB image rejection would need
+  declared  stars                  \HoStars = 36; \NStars = 90
+            reason: stars reached by the reserved hold-out against stars in the primary census.  ★ The two are disjoint in EXECUTION BLOCKS and not in stars -- H4 proves no shared block, and 27 of the 36 hold-out stars are census stars -- so neither count is a subset of the other and the out-of-sample claim the paper makes is about windows the pipeline had never seen, never about unseen stars
+  declared  survfreqlo             \SurvFreqLo = 90; \SurvFreqLoA = 114
+            reason: the ARCHIVAL frequency extent, which the title states, against the Class A extent, which the abstract states inside it (R1-5)
+  declared  tmax                   \HoTMax = 8.64; \RcTMax = 4.71
+            reason: the largest stellar statistic reached in the hold-out against the largest reached at a predicted recurrence cell in the census: one is a search maximum over all windows, the other a single predicted channel, and they are not comparable numbers
+  declared  win                    \HoWin = 315; \NWinA = 405; \NWinB = 1258
+            reason: the window count split by channelisation class: A fine enough to resolve a drift, B not
+synmacro: 0 FAIL
+generators OK
+
+===== cleanregen pass 1 of 2 =====
+prodident: 927 record(s) naming a product; 579 under the released tree and in the catalogue, 575 of those reproducing its published statistic; 64 under the re-extraction tree, which must not; 907 reached under a per-block stem
+prodident: 3 window(s) named by a record and absent from the deposited catalogue (the declared archival tail): [('A002_X1190de8_Xd526', 3), ('A002_X11adad7_X25c5e', 3), ('A002_Xc6b674_X28f5', 0)]
+prodident: 0 FAIL
+  J1 the channel response used here is the one the 400 retained response trials measure PASS  largest deviation 0.0030 over fractional offsets 0.000, 0.125, 0.250, 0.375, 0.500
+  J2 the crossings measured are the ledger's own rank-leading pair, in the order the rest of the paper prints them PASS  ['U02', 'A01'] at ['346.3232', '344.2965'] against ['346.3232', '344.2965']
+  J3 U02: the retained repeat rows are the frozen record's own blocks, keyed on the execution block PASS  3 retained, 3 in the record, 3 published
+  J4 U02: the modelled recovery probability reproduced here is the one the paper prints for this crossing PASS  computed 0.9992 against published 1.00
+
+U02 61 Vir  3 repeat blocks  T*=5.958  T_pers=9.702  trigger-amplitude T=8.142
+   modelled                0.999
+   carrier centred         1.000 +- 0.000
+   sub-channel phase       1.000 +- 0.000
+   no carrier              0.0000
+   the band's own null     +0.123 +- 0.862 over 92 cells
+   de-drift: half a step of 70.9 Hz/s over a 3430 s dwell takes T 3.93 to 3.94 (1.002)
+  J3 A01: the retained repeat rows are the frozen record's own blocks, keyed on the execution block PASS  5 retained, 5 in the record, 5 published
+  J4 A01: the modelled recovery probability reproduced here is the one the paper prints for this crossing PASS  computed 0.6647 against published 0.66
+
+A01 CP$-$72 2713  5 repeat blocks  T*=5.809  T_pers=6.303  trigger-amplitude T=5.425
+   modelled                0.665
+   carrier centred         0.705 +- 0.014
+   sub-channel phase       0.654 +- 0.015
+   no carrier              0.0000
+   the band's own null     +0.116 +- 1.002 over 66 cells
+   de-drift: half a step of 64.7 Hz/s over a 3745 s dwell takes T 3.98 to 3.96 (0.996)
+  J5 the measured recovery agrees with the model it tests, for both crossings and with the carrier centred or at a random sub-channel position PASS  largest departure 2.79 binomial errors; 61 Vir 1.000+-0.000 and 1.000+-0.000 against 0.999; CP$-$72 2713 0.705+-0.014 and 0.654+-0.015 against 0.665
+  J6 the same reading confirms nothing when the carrier is removed PASS  0 of 2000 carrier-free readings reach the trigger
+  J7 half a step of error in the carried drift costs little inside one block, which is what a grid stepping by half a channel across the dwell is for PASS  the statistic keeps 0.996 of its value at worst, over grids of 70.9, 64.7 Hz/s
+  J8 every retained per-integration product is measured here, and the crossings with nothing to inject into are the rest of those carrying an exclusion PASS  retained ['A01', 'U02']; measured ['A01', 'U02']; 31 of 33 carry an exclusion with nothing to inject into
+
+13 macros -> survey_numbers_round750.tex
+all checks pass
+
+1  the blocks with no phase-stability record
+  B1 the published median longest baseline of the unrecorded blocks is PASS  278.8 m over 125 of 128 unrecorded against a published 279; 46.0 m over 279 recorded against 46
+  B2 the set is bimodal and the published median is a property of the  PASS  modes at 44 m (n=58) and 456 m (n=67), nothing between 49 and 271 m; 5 blocks of mix move the median from 279 m to below 271 m
+  B3 the real difference is the share of 12 m blocks, and within each  PASS  12 m share 54 per cent against 26; 7 m medians 44/44 m; 12 m medians 456/448 m
+  B4 and the archive-derived baselines use a conversion the blocks mea PASS  k = 1.257 over 23 measured against 1.220 assumed on 116 derived
+
+2  the median of a window's own control ensemble
+  B5 the two published values are the same quantity over two different PASS  2.7535 over 1476 rows carrying ctrl_med (published 2.75) against 2.7431 over 1663 windows with a stored ensemble (published 2.74, and 2.74 as the survey median of the quality rule); the results section cites the owner
+  B6 and the value to keep is the one the quality rule itself uses, wh PASS  1663 windows in the owner against 1663 in the census and 1476 carrying ctrl_med
+
+3  the predicted-cell offset
+  B7 the offset column is centred on zero and its typical size is a fr PASS  signed median -0.001, absolute median 0.059, largest 41.08 channels over 13 readings
+  B8 and the same column in velocity agrees with the registration resi PASS  median |offset| 0.0375 km/s against a published 0.04 in the table and 0.05 as the residual
+
+4  the 3.9 per cent
+  B9 every published value of the four is reproduced by the repair rec PASS  worst difference 3.2e-05 over 4 rows against the deposited repair record
+  B10 and the value the audit found on disk is the PRE-REPAIR extracti PASS  the pre-repair export reproduces the surviving product to 4.9e-06 and differs from the published value by up to 0.2329
+  B11 the difference decomposes into the window noise and the recovere PASS  3.91 per cent in the statistic = 1.16 per cent in the noise and 2.72 per cent in the amplitude
+  B12 and the repair moved this window's control ensemble, which is wh PASS  largest control 10.854 before against 8.117 published
+  B15 and the window belongs to the compact array, which is where a co PASS  7m, 12 x 7 m and 0 x 12 m antennas
+
+5  the closest two sessions
+  B13 the closest two sessions to recover one transition are the two t PASS  25.13 d between sessions X6f1341 and X7116f1 on CO(2-1), against a published 25
+  B14 and both of those blocks are already in the recurrence table, so PASS  blocks A002_X6f1341_X1484, A002_X7116f1_X1785; the table pairs them at 25 d instead
+
+assertions failed: 0 []
+
+1  R1-1: where the 405 is named, is the 391 named with it
+  A1 the two subsets of the carrier search close on its own size, so PASS  391 + 14 == 405, and the catalogue holds 405 Class A windows
+  A2 every section that introduces the carrier search by its size al PASS  missing in: none (checked in abstract.tex, 05_results.tex, 07_conclusions.tex, 03_sample.tex)
+
+2  R1-2: the calibration uncertainty and the transfer
+  A3 every individual Class A limit carries the SAME class factor -- PASS  smallest adopted/nominal ratio 3.028836 against the class factor 3.028749, largest 4.390 over 405 windows
+  A4 the published calibration interval is narrower than the measure PASS  calibration x0.89-1.11 against dispersion x0.80-1.58, the latter being the 49 windows' own range 2.41-4.80 over the adopted 3.03
+  A5 and that dispersion is the 49 measured points themselves, so no PASS  49 measured points spanning 2.41-4.80 P_trig against the published 2.41-4.80
+  A6 some configurations of the population hold no injected window a PASS  30 of 405 Class A windows in 5 such configurations; 4 systems, the deepest being bet Pic at 7.13e+13 W
+  A7 and the deepest limit in the survey is one of them, which is wh PASS  deepest system bet Pic at 7.13e+13 W, band 6, 15 kHz channels
+
+3  R1-3: the decorrelation behind each system's own best window
+  A8 a majority of the systems take their headline limit from a bloc PASS  measured 26, imputed 34, none 1 of 61 systems
+  A9 and the deepest limits are no better supported than the rest: o PASS  4 of the 10 deepest measured, 5 imputed, 1 with no estimate
+  A10 the pooled per-system median the text quotes lies between the  PASS  measured 3.8 per cent, imputed 3.0, pooled 3.0 against a published 3
+  A11 and Table F1 marks exactly those systems, so the reader can se PASS  34 starred rows against 34 imputed; 6 daggered against 6 injected
+  A12 the class of a star's own deepest window is the class of its c PASS  66 stars carrier-searched and 24 coarse-only, of 90
+
+assertions failed: 0 []
+ledgergate: tab_ledger.tex -- 56 data rows against 56 adopted crossings
+ledgergate: 0 FAIL
+fragstale: 12 generated fragments the manuscript inputs, 7 spine inputs
+fragstale: 0 FAIL
+included (11):
+    bpic_control.pdf
+    chain_v412.pdf
+    classa_sensitivity.pdf
+    completeness_map.pdf
+    confcoverage.pdf
+    coverage_waterfall.pdf
+    drift_acceleration.pdf
+    eirp_context_a.pdf
+    eirp_context_b.pdf
+    event_crossings.pdf
+    sens_ring.pdf
+orphaned (8):
+    appm_power.pdf                 appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge.
+    calib_cont.pdf                 calibration (calib_r15.py, round 530) 2026-10-08: built but not a figure of the paper; Ruling 3 asked for a coefficient and a sentence and Appendix B carries both.  It is not distributed anywhere -- see AUTHOR_ACTIONS.md item 1.
+    control_diagnostics.pdf        appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge.
+    ledger_vis_v403.pdf            appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge; already uncited before it.
+    rank_cdf.pdf                   appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge.
+    selection_bias.pdf             appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge; fig:selbias was already uncited before it.
+    sensitivity_2d.pdf             appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge; fig:sens2d was already uncited before it.
+    stratified_completeness.pdf    appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge.
+note: 4 .png sibling(s) in figures/ that LaTeX does not use: appm_power.png, calib_cont.png, chain_v412.png, ledger_vis_v403.png
+orphan table fragments: 47 not \input anywhere, of which 1 are generated AND carry a caption
+    tab_maskband_v411              mask (maskframe_v411.py, round 170) 2026-10-20, round 25: the band-by-band mask cost. Superseded as an article table by Table C1 (tab_maskspecies_v414.tex), which is the mask by species, and the article states the cost as a single pair of figures. KEPT because `cleanregen.py` lists it as a product of `maskframe_v411.py` and retiring a product mid-close is a build change, not a prose change. ITS CAPTION IS CORRECT AND DERIVED: it no longer names SO, and it now reads \FrMaskWorstBand and \FrMaskWorstPct, which were computed and cited by no sentence in the paper. TO DO: retire the fragment or give it a float.
+figorphan: 11 included, 8 pending, 0 unexpected orphans, 0 missing files
+labelcheck: 219 files, 66 labels, 59 distinct \ref targets, 27 floats/maths environments, 68 aux entries
+  note: F4 (not a failure) 7 unreferenced sectioning label(s); F4 fires only on floats, equations and appendices
+  note: F6 (unreferenced) sec:data is on a starred section
+labelcheck: 0 FAIL
+wordcase: 31 prose sources, 188 macro-layer files
+  W1  no lower-case macro value opens a sentence                   PASS  none
+  W2  the sweep found, and searched for, every such macro          PASS  138 lower-case-valued macros in the layer, 22 of them cited; not searched: none
+  W3  every prose source the manuscript inputs was read            PASS  31 prose sources swept, 188 macro-layer files read
+wordcase: 138 lower-case-valued macros, 22 cited, 0 FAIL
+citegate: 219 source files
+  G1   every bibitem is cited somewhere                               PASS  none
+  G2   every citation has a bibitem                                   PASS  none
+  G3   no key is declared twice                                       PASS  none
+  G4   the comparison was not vacuous                                 PASS  67 bibitems, 67 cited keys, 219 source files
+  G6   no two bibitems print the same label to the reader             PASS  67 printed labels, all distinct
+  G5   a citation only in a macro body lives in a used macro          PASS  1 cited only from the macro layer, each in a referenced macro: ALMAPropGuide (BudFluxSource)
+citegate: 67 bibitems, 67 cited keys, 0 FAIL
+retired: the superseded column is deposited as eirp_p90_superseded_rankgated_W; the old name eirp_p90_sel_W is indexed in 0 live line(s)
+retired: 2 generator(s) read the retired catalogue column eirp_p90_superseded_rankgated_W; 0 of them emit a macro the manuscript still cites
+retired: 6 generator-declared supersession(s): BudPlxWorstPct->SfPlxWorstPct, BudPlxWorstStar->SfPlxWorstStar, InjPeakAtNinety->RpMarginNinety, NClassAM->SfMClassAStars, NMCensus->SfMCensus, NMSearched->SfMSearched
+retired: 57 retired names, 51 of them aliased to a replacement, 0 uses in the manuscript
+requestsweep --selftest: PASS, 5 markers, boundary-matched both ways
+requestsweep: 219 shipped .tex, 597420 characters, 0 open REQUEST/TODO/FIXME/XXX/PLEASE markers
+synmacro: 1205 cited macros with a numeric value, 16 same-stem group(s) of two or more, 14 differing
+  declared  bsnwin                 \BsNWinA = 38; \BsNWinB = 374
+            reason: the same channelisation split over the BRIGHT STARS THE SAMPLE EXCLUDES -- the holding that would be admitted if the Gaia DR3 parallax requirement were dropped -- and not a second count of the searched windows: 38 fine and 374 coarse, in neither \NWinA nor \NWinB
+  declared  fracmax                \HoFracMax = 0.47; \RcFracMax = 0.997
+            reason: the largest fraction of the discovery amplitude the repeat coverage still excludes, in the reserved hold-out search against the primary census.  Two populations, and the difference is the point: every hold-out crossing is excluded at 0.47 of its amplitude or less, while in the census the individual limits run all the way to 1.00, which is why the census median is reported as a median and never as a bound on the set
+  declared  fracmed                \RcFracMed = 0.43; \RfiFracMed = 0.5
+            reason: TWO DIFFERENT FRACTIONS OF TWO DIFFERENT THINGS, and only the word "frac" is shared.  RcFracMed is the median fraction of the DISCOVERY AMPLITUDE that the repeat coverage excludes, over the crossings that carry an exclusion.  RfiFracMed is the median fractional POSITION of a released peak inside its own spectral window, which is the fixed-intermediate-frequency test of the interference appendix and is 0.50 because the positions are uniform.  Neither is a bound and they are not the same quantity in any sense
+  declared  ncross                 \HoNCross = 8; \LdgNCrossB = 4
+            reason: TWO POPULATIONS, NOT TWO COUNTS OF ONE.  \HoNCross is every crossing found in the hold-out, i.e. in the execution blocks the identifier rule of App. B.1 reserves, of either class (8 events, which is the set the transfer ratio R2-4 asks about is measured on).  \LdgNCrossB is the Class B crossings of the PRIMARY CENSUS (4), all of them in the one execution block that fails the data-quality criterion, which is the fact R1-3 requires the principal result to state.  The hold-out and the census share no execution block at all (holdout_v412 H4), so neither count is any part of the other
+  declared  ninetymult             \EirpNinetyMultA = 3.03; \EirpNinetyMultB = 4.17
+            reason: the completeness multiplier measured separately per class, which is the whole point of measuring it per class
+  declared  nstar                  \DqNStar = 2; \HoNStar = 36; \SfNStar = 90
+            reason: the stars of the windows the data-quality rule flags; the reserved hold-out's stars; and the searched sample -- three sets, three counts
+  declared  ntested                \HoNTested = 7; \RcNTested = 38; \VerNTested = 1657
+            reason: unattributed crossings tested for recurrence against windows matched to an ACA geometry-verification record -- different things counted, as queue entry 31 sets out
+  declared  nwin                   \DqNWin = 5; \HoNWin = 315; \PbNWin = 1663
+            reason: windows flagged by the data-quality rule; the reserved hold-out's windows; and the windows of the primary-beam audit, which is the whole release -- three sets, three counts.  'ScrNWinA' and 'PxaNWin' left this group when Ruling 1 removed the screen cost from the paper and the parallax row from the budget
+  declared  sbpriornstar           \SbPriorNStarA = 40; \SbPriorNStarB = 17
+            reason: the star counts of the TWO PUBLISHED SEARCHES above 30 GHz, not of two classes of this one: Steffes & DeBoer's 40 solar-type stars within 23 pc and Mauersberger et al.'s 17 Vega-like and solar-type targets.  The A/B suffix here distinguishes two other people's papers, which is the one case where the class heuristic means something else
+  declared  scimunratio            \ScImUnRatioA = 1.37; \ScImUnRatioB = 0.93
+            reason: the measured parent-to-crossing amplitude ratio at each of the two crossings, each read in the block that observed its own parent frequency: two independent measurements, and the point of both is that each falls short of the leakage a 10 dB image rejection would need
+  declared  stars                  \HoStars = 36; \NStars = 90
+            reason: stars reached by the reserved hold-out against stars in the primary census.  ★ The two are disjoint in EXECUTION BLOCKS and not in stars -- H4 proves no shared block, and 27 of the 36 hold-out stars are census stars -- so neither count is a subset of the other and the out-of-sample claim the paper makes is about windows the pipeline had never seen, never about unseen stars
+  declared  survfreqlo             \SurvFreqLo = 90; \SurvFreqLoA = 114
+            reason: the ARCHIVAL frequency extent, which the title states, against the Class A extent, which the abstract states inside it (R1-5)
+  declared  tmax                   \HoTMax = 8.64; \RcTMax = 4.71
+            reason: the largest stellar statistic reached in the hold-out against the largest reached at a predicted recurrence cell in the census: one is a search maximum over all windows, the other a single predicted channel, and they are not comparable numbers
+  declared  win                    \HoWin = 315; \NWinA = 405; \NWinB = 1258
+            reason: the window count split by channelisation class: A fine enough to resolve a drift, B not
+synmacro: 0 FAIL
+generators OK
+
+===== cleanregen pass 2 of 2 =====

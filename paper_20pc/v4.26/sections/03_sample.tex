@@ -1,0 +1,190 @@
+\section{The sample}
+\label{sec:sample}
+
+This search covers \NWindows{} spectral windows toward \NStars{} stars in
+\NSystems{} systems within 40\,pc. They are drawn from \NEB{} public ALMA
+execution blocks and \TotalDataTB\,TB of raw data, put through one
+pipeline: \StTelHours\,h of telescope time, and \LdgCensusHours\,h summed
+over windows. That set is the \emph{primary census}: every
+sensitivity, every expectation and every limit here is computed over it, and
+so are \MtCrossACen{} of the \EvNCrossRaw{} threshold crossings this paper
+reports. \LdgNCrossB{} more are coarse-channel crossings of the same census,
+all of them in the one execution block that fails the data-quality criterion
+of \S\ref{sec:summary}, and they are reported apart for that reason and not
+because they fall outside it. The remaining \CeNTailCross{} lie in the
+\emph{archival tail}: blocks searched after the sweep that fixed the census
+was closed, toward stars the census already holds, whose windows are not
+tabulated window by window here and enter no expectation. Three further sets
+were searched and enter no census statistic either -- the \emph{archival
+extension}, a larger harvest of blocks toward the same stars; a
+\emph{hold-out}, set aside by the identifier rule of
+Appendix~\ref{sec:heldout} and searched as an additional sample; and a
+control beyond 40\,pc -- and each is reported with its own counts where its
+result is (\S\ref{sec:holdoutsearch}).
+Table~\ref{tab:blockledger} names them in rows that sum, and
+Table~\ref{tab:counts} resolves every count of windows, crossings and systems
+into the set it is counted over.
+
+\emph{Star} means one stellar component, \emph{system} a bound group
+counted once however many of its components were observed, and \emph{target}
+one ALMA pointing.
+
+The census is two experiments, divided on native channel width, which is
+what the search statistic and the completeness calibration both depend on.
+\emph{Class~A} is the \NWinA{} fine-channel windows toward
+\LdgClassAStars{} stars in \NSysClassA{} systems, and every sensitivity and
+exclusion quoted here refers to them unless stated otherwise;
+\emph{Class~B} is the remaining \NWinB{} coarse-channel windows, which
+support a secondary search for an unresolved spectral excess. The division
+is unambiguous because the channelisation of the sample is bimodal: the
+widest fine channel is \ScChanFineMaxMHz\,MHz and the narrowest coarse one
+\ScChanCoarseMinMHz\,MHz, a factor of \ScChanGapFac{} with nothing between
+them. Whether a window can also discriminate a drifting carrier is a
+separate question, and \S\ref{sec:statistic} answers it: \EtaDriftAOk{} of
+the \NWinA{} can, \EtaDriftALo{} cannot.
+
+Every inclusion criterion was applied by query. A star enters
+if its Gaia~DR3 parallax is at least 25\,mas, measured to better than
+\PlxAdqlPct{} per cent, and if its proper-motion-corrected position at the
+observation epoch falls inside the quoted field of view of at least one
+public execution block. Distances are direct inversions, $d=1/\varpi$, and
+the star need not sit at the pointing centre. One further rule applies to the
+window and not to the star: a window is kept only where the primary-beam
+response at the star is at least \BmFloorResp, the offset at which the
+Gaussian adopted here and the response of a blocked circular aperture
+part by \BmFloorTolPct{} per cent. It removes nothing, in the census or in
+the archival coverage beyond it: the furthest window from a pointing centre
+lies at \ExCWorstExt\,$\lambda/D$ against a limit at
+\BmFloorC\,$\lambda/D$, so the limit does not stand clear of the
+distribution, and the windows it is nearest are the off-axis ones on
+$\epsilon$~Eridani, which the survey searches.
+The precision clause never binds: the worst fractional parallax
+error among the stars searched is \SfPlxWorstPct{} per cent. The query returns
+\NCensus{} work-list entries; the quoted field of view is optimistic, and
+only \NGenuinelyCovered{} of those stars are in fact contained by a public
+field, of which \NStars{} yielded a searchable window. One target has no
+catalogue name -- a serendipitous field star that appears throughout as
+\BkAlmaName, Gaia~DR3 \BkAlmaGaia, an \BkAlmaSpType{} dwarf at
+\BkAlmaDistPc\,pc with no measured systemic velocity.
+
+Disc, planet and colour enter as descriptive metadata only. One exclusion,
+though, is a property of the catalogue and not of the sky: a Gaia~DR3
+parallax needs a Gaia~DR3 source, and the brightest stars have none. Every
+one of the \BsNBright{} stars in this volume brighter than \BsBrightMag{}
+magnitude is absent from DR3 astrometry, and so is a steady
+\BsGapFaintPct{} per cent of every magnitude bin below Hp~\BsGapMagCut,
+which saturation does not explain. Together \BsNGap{} of the \BsNVol{} Hipparcos stars whose own parallaxes
+meet the criteria above never reached the work list: \BsGapNBright{} of them
+brighter than Hp~\BsGapMagCut{} and \BsGapNFaint{} fainter. Of these,
+\BsNAlmaWord{} lie inside a public field of view -- \BsStarList{} -- and
+hold \BsNWinA{} fine-channel and \BsNWinB{} coarse-channel windows, amounting
+to \BsRawTB\,TB of raw data in \BsNEB{} execution blocks, none of it searched
+here -- Sirius~A among them, since the \BsSirNEBWord{} blocks that put
+Sirius~B in this census are pointed at it. A search of
+this volume should admit these stars on Hipparcos astrometry where Gaia has
+none.
+
+Two removals act on windows and not on stars and account for the whole
+difference between the \LqNExport{} rows the extraction wrote and the
+\NWindows{} retained: \NDup{} repeated rows of one window, and \NDefect{}
+lying more than \LqDefectCut{} times below the sample median in
+$\sigma\sqrt{t_{\rm on}\Delta\nu_{\rm ch}}$ and so not measuring the sky. The
+primary-beam limit above removes none, and no integration-time cut was
+applied.
+
+\subsection{The archival selection}
+\label{sec:bias}
+
+This sample was not designed: it is whatever previous ALMA programmes
+happened to observe among the stars Gaia~DR3 catalogues, and
+\PctDiscProposal{} per cent of the stars searched were targeted under a
+debris-disc or planet-formation proposal. Table~\ref{tab:selfunc} measures
+the bias against a volume-limited reference census of which the searched
+stars are a subset, classifying both columns by one rule so that every ratio
+below -- the searched column fraction over the census column fraction, above
+one for over-representation -- is like against like. Both columns are the
+same Gaia~DR3 selection --
+$\varpi>0$, $\sigma_\varpi/\varpi\le\SfPlxCutDec$ and $1/\varpi\le40$\,pc,
+\SfCensusN{} objects -- and the looser \PlxAdqlPct{} per cent the query above
+applies selects exactly the same objects, so the two cuts are one selection
+and not two. The one rule is colour: BP$-$RP sets the class, and the absolute
+$G$ magnitude separates the degenerates that colour alone would place among
+the A~stars. It reaches \SfCensusNCol{} census objects, \SfCensusColPct{} per
+cent of them, and \SfNClassified{} of the \SfNStar{} searched stars, the
+other \SfNNoColour{} carrying no Gaia BP or RP photometry. Both columns are
+Gaia-defined, so neither contains the bright stars above and the ratios are
+internally consistent without them.
+
+Distance is the dominant selection effect. Stars within 5\,pc are
+over-represented by a factor \SfTopRatio, and the enhancement falls
+monotonically with distance to a factor of two \emph{under}-representation
+beyond 30\,pc. Colour comes second: A~stars are over-represented by about
+\SfARatio{} and F and G stars by factors of three, because those are the
+stars with bright debris discs. For the A~stars that factor is a floor,
+because the catalogue requirement is itself colour-selective: it removes
+\BsNEarly{} of the \BsNEarlyVol{} stars in the volume as blue as an A~star,
+\BsEarlyRatio{} times its rate among all the others. M~dwarfs are depleted
+--
+\SfMSearched{} of the \SfNStar{} searched stars are M~dwarfs, a factor
+\SfMRatio{} of their share of the reference census, and only
+\SfMClassAStars{} of them carry fine-channel coverage at all. Coverage is also concentrated:
+\ConcThreeWin{} of the \NWindows{} windows come from \ConcThreeSys{}
+systems. No statement in this paper is therefore an occurrence rate for the
+solar neighbourhood, and the selection acts hardest on
+exactly the targets a designed search would pick: of the \CsIntNRow{} sample
+systems within 15\,pc with a confirmed planet, \CsIntNoClassA{} carry no
+Class~A coverage and so no drift-resolving limit.
+
+\input{tab_selection}
+
+%% fig:funnel DELETED: it drew the three counts the sentence above it
+%% already carries, so it joined the prose instead of replacing it.  The
+%% artwork is online material (figures_diagnostic/selection_funnel.pdf).
+
+\subsection{Frequency coverage and archival scope}
+\label{sec:coverage}
+
+The Class~A experiment covers $\Delta\nu_A=\DnuA$\,GHz of unique sky
+frequency, and that coverage is sparse: \DomAIslands{} disjoint islands
+between \DomAFreqLo{} and \DomAFreqHi\,GHz instead of a band, so those
+endpoints bound where observations exist and not what was covered. With the
+coarse-channel windows the archival coverage is \DnuAB\,GHz in
+\UnionIntervals{} intervals, of which \SearchedUnionGHz\,GHz survives the
+molecular-line mask of \S\ref{sec:method}. Fig.~\ref{fig:waterfall} shows the
+distribution: a transmitter between the islands was never observable here,
+whatever its power.
+
+The archive is not exhausted either. \LdgExtScope{} further blocks lie inside
+the same query and were unprocessed when the census was frozen;
+Table~\ref{tab:blockledger} accounts for every one of them row by row,
+including the \LdgExtEB{} reported here as repeat epochs. The largest single
+gap is the \FateNoCal{} blocks whose raw visibilities
+the archive holds but never pipeline-calibrated, \FateNoCalGB\,GB in all; no
+effort of ours would close that.
+
+\begin{figure*}
+\centering
+\includegraphics[width=0.99\textwidth]{figures/coverage_waterfall.pdf}
+\caption{Where this survey searched: the number of independent systems
+covering each sky frequency -- blue the fine-channel carrier search
+(Class~A), light grey the coarse-channel spectral-excess search (Class~B).
+Curves step at the searched window edges themselves, so an interval narrower
+than a plotted pixel still appears. The summed window bandwidth is
+$\GrossOverUnion\times$ the union.}
+\label{fig:waterfall}
+\end{figure*}
+
+%% Floats that belong elsewhere: tab:blockledger is in Appendix A (its
+%% headline rows are in the prose above, so the cross-reference is not a
+%% pointer with no numbers beside it); tab:interesting is neither typeset nor
+%% distributed -- r15-deposit, 2026-10-08: there is no deposit, so if its rows
+%% are wanted by a reader they have to be printed; tab:searchspace is deleted, nothing having cited
+%% it, and its counts, unions, channel widths and drift range are all
+%% elsewhere in the paper.
+%% Carried forward to the numbers owner: tab_interesting.tex is still
+%% generated but is not in make_all.sh, and its planet column should read the
+%% dated NASA Exoplanet Archive extract selfunc_v411.py uses so that one
+%% definition of "confirmed planet" serves both tables.  Two display defects
+%% belong in star_alias.designation: Barnard's Star prints as a SIMBAD
+%% identifier with the "NAME" prefix stripped, and BD+05 1668 would read
+%% better with its GJ alias beside it.
