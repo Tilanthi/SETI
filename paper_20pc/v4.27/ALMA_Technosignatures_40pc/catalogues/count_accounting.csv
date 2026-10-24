@@ -1,0 +1,22 @@
+row,count,value,what_it_counts,in_article
+1,Threshold crossings at T* >= 5,56,census and archival tail,1
+1.1,"Class A, fine channels",52,the carrier experiment,1
+1.1.1,in the primary census,50,catalogued window by window,0
+1.1.2,in archival-tail blocks,2,both toward HD 14055; in no expectation,0
+1.2,"Class B, coarse channels",4,all in the one block failing the block whose control median identifies it as defective,1
+2,Quality-passing crossings,52,the same rows as 1.1,1
+2.1,attributed to a transition,18,of 18 coincidences inside the mask in the star's own frame,1
+2.2,unattributed,34,rows 2.2.1 to 2.2.3,1
+2.2.1,in the primary census,31,against 24.6 expected by chance at the 405 windows' own control positions -- a count chance delivers with probability 0.13,1
+2.2.2,in archival-tail blocks,2,outside that comparison,1
+2.2.3,coincident with an atmospheric transition,1,"within 62.5 MHz of one in the topocentric frame (the atmospheric screen), and counted as atmospheric on both sides of that comparison",1
+2.2.4,above all 512 controls,2,the two events whose statistic exceeds every control position,0
+2.2.5,recovered in a later block,0,no confirmed signal; 13 attributed ones do,0
+3,Class A systems,61,of 83 surveyed,1
+3.1,observed again more than 1 day later,40,"over the census blocks, at any frequency and whatever the session, so not a confirmation count",0
+3.1.1,Class A systems with same-frequency coverage in a separated session,40,"the only confirmation count quoted: a later block in another session covering a frequency the first covered, 13 of them over a year later. For an accelerating carrier, confirmation further requires the repeat to fall at a matching orbital phase. Over the census together with the repeat blocks the recurrence test reads",1
+3.2,"observed once, or all within one day",21,"over the census blocks: 18 in a single block, 3 within a day",0
+3.3,with no separated second block at a covered frequency,21,confirmation impossible over the 166 blocks the recurrence test reads; 36 of all 83,1
+3.3.1,counting census blocks alone,23,the two systems the archive retests outside the census are the difference,0
+4,Class A union bandwidth,47.7 GHz,26 disjoint islands,1
+4.1,removed by the line mask,5.0 %,"2.38 GHz: the figure the text quotes, against 3.1 per cent of the 118.1 GHz archival union",1

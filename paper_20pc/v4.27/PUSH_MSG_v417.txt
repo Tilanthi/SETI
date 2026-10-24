@@ -1,0 +1,56 @@
+paper v4.17: a calibration exclusion withdrawn and replaced by a measurement; the primary beam correctly attributed
+
+The amplitude argument against a channel-dependent calibration residual is
+withdrawn. It was built on each star's photospheric continuum; measured
+instead on the continuum the pipeline records at the extraction position,
+with dust inside the beam, that estimate was low by a median factor of 651
+and by 1.3e4 at one star. Nine windows toward two stars admit the mechanism
+at 4-13 per cent, inside the documented 5-20 per cent range. The claim is
+deleted and replaced by a stronger, empirical one: in all nine the largest
+statistic anywhere is 3.1 against a trigger of 5 and none holds a crossing,
+bounding the coherent residual below 7 per cent, and below 2 per cent at the
+star whose continuum is best measured. The mechanism is admissible and is
+measured not to be operating. CD-57 1054 carries the argument within one
+star: six of its windows admit 9-13 per cent and do nothing, while its one
+crossing sits in a window that would need 71 per cent.
+
+Appendix A.2 named the wrong primary-beam model as the one its own limits
+were computed with. The applied response is a Gaussian of the Airy
+first-null width, 1.22 lambda/D, reproduced from the released attenuation
+column on all 1651 windows to three parts in a million -- not the 1.13
+lambda/D the appendix claimed to have adopted. Nothing moves, because the
+effect is 1e-5 in the median window, but the attribution flips and the
+signed bias is now stated and measured: 0.02 per cent in the median system,
+above 10 per cent in four windows, worst 10.3 per cent at 8.1 arcsec off
+axis. A value assertion had checked the column since round 11 and passed
+every build; what no gate checked was whether the prose named the same
+coefficient. It now does, and fails the build otherwise.
+
+Recurrence power is quoted at the trigger amplitude rather than the
+discovery amplitude: 26 of 33 crossings are excluded above 90 per cent and
+seven are untested rather than excluded, among them one of the two events
+that lead their own control fields. The beta Pictoris pair is excluded by
+the criterion applied to every other pair, by the narrowest margin in the
+set. The chance comparison is stated as compatibility with the empirical
+control expectation, 32 observed against 28.9 expected, and the reserved
+hold-out as compatibility with that expectation rather than as the shape of
+the tail. Confirmable systems are 37 and unconfirmable 23, replacing 39 and
+21 in six sentences. The attribution rule is the stellar frame with the
+local standard of rest as a check, stated once; the HD 48370 coincidence is
+foreground gas on measurement, tracking a cloud line rather than the star.
+Two false novelty claims are removed and a third corrected against the page
+images of both earlier searches: each covered a single line, over no more
+than 35 MHz, with no test of persistence.
+
+Verification. 31 pp inline; 20 pp printed plus 12 pp Supporting Information.
+0 errors, 0 undefined control sequences, 0 unresolved references and 0
+overfull boxes in all three forms. Every gate passes twice with identical
+md5; audit_numbers 57 PASS, 0 FAIL; cleanregen 206/206 byte-identical on
+two independent runs. Four generators were in no build script, so a clean
+checkout would have produced a PDF with their macros undefined; and the
+gate that exists to catch that was a hand-kept list with ten typeset
+fragments outside it, including five numbered tables. It now expands the
+manuscript's own input tree, so a fragment joins the test the moment the
+paper cites it.
+
+Abstract 248 words.

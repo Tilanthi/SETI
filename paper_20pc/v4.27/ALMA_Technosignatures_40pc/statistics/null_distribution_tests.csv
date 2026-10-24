@@ -1,0 +1,40 @@
+test,reading,quantity,value,exact,note
+chance comparison,whole beam (adopted),n_windows,405,405,"fine-channel windows of the released extent, each contributing its own control exceedance rate"
+chance comparison,whole beam (adopted),expected_at_trigger,36.2,36.238281,sum over those windows of the probability that a position in the field reaches the trigger
+chance comparison,whole beam (adopted),mask_share_weighted,,0.288266,"share of the expectation the attribution mask removes, weighted by each window's own rate"
+chance comparison,whole beam (adopted),expected_after_mask,25.7,25.792015,the expectation with the masked share removed and the atmospheric screen not yet applied
+chance comparison,whole beam (adopted),telluric_factor,,0.953271,"factor the atmospheric screen applies, measured on the control side: 10 of 214 surviving control exceedances fall inside the screening radius"
+chance comparison,whole beam (adopted),expected,24.6,24.586781,the chance expectation: the trigger expectation less the masked share and less the atmospherically screened share
+chance comparison,whole beam (adopted),expected_interval_lo,24,23.754248,"lower end of the 95 per cent interval on the expectation, from resampling; it folds in the sub-trigger transfer band, so it is not reconstructible from the per-window rates alone"
+chance comparison,whole beam (adopted),expected_interval_hi,31,30.614751,"upper end of that interval, on the same basis"
+chance comparison,whole beam (adopted),observed,31,31,"unattributed crossings in those windows, after the atmospheric screen has been applied to the crossings on the same radius in the same topocentric frame"
+chance comparison,whole beam (adopted),observed_before_screen,,32,"the same count before that screen, which removes one crossing"
+chance comparison,whole beam (adopted),probability,0.13,0.128793,"probability of a count at least as large as the observed one, under the expectation above"
+chance comparison,whole beam (adopted),added_population_bound,17,17.504437,largest added population the comparison could not have rejected; a bound on compatibility and not a confidence limit on a population of transmitters
+chance comparison,narrower extraction field,observed,35,,"the same comparison with both sides read over the narrower extraction field, which drops the integrations whose pointing falls outside it"
+chance comparison,narrower extraction field,expected,24.1,,on the same reading
+chance comparison,narrower extraction field,probability,0.027,,on the same reading
+chance comparison,narrower extraction field,added_population_bound,22,,on the same reading
+control exceedances,whole beam (adopted),n_exceedances,302,302,control positions reaching the trigger anywhere in the survey fine channels
+control exceedances,whole beam (adopted),n_inside_mask,88,88,"of those, exceedances falling inside the attribution mask, with the control channels transformed to the same stellar rest frame as the star's own reading"
+control exceedances,whole beam (adopted),n_inside_atmospheric_radius,,10,"of the exceedances surviving the mask, those inside the atmospheric screening radius"
+sub-trigger step,whole beam (adopted),ratio,1.104,1.103889,"ratio of the stellar to the control above-threshold cell rate in the band just below the trigger, given in the two rows below"
+sub-trigger step,whole beam (adopted),band_lo,4,4.0,"lower level of that band, in units of the per-channel noise"
+sub-trigger step,whole beam (adopted),band_hi,5,5.0,"upper level of it; the trigger itself is excluded, so the cells under test are not in the ratio"
+sub-trigger step,whole beam (adopted),n_star_cells,1902,1902,"stellar cells the ratio is formed from, over 399 windows; they are the 4 and 5 rows of above_threshold_cells.csv differenced"
+sub-trigger step,whole beam (adopted),n_control_cells,,13784,"control cells the ratio is formed from, over the same windows and differenced the same way"
+sub-trigger step,whole beam (adopted),interval_lo,1.046,1.045506,lower end of the interval on the ratio at the coverage of the resampling rows below
+sub-trigger step,whole beam (adopted),interval_hi,1.161,1.161014,upper end of it
+sub-trigger step,whole beam (adopted),probability,,0.262576,probability of a ratio at least as large by chance
+sub-trigger step,whole beam (adopted),ratio_at_trigger,1.10,1.102222,"the same ratio at the trigger itself, where it is formed from the 31 cells that are the crossings under test and so is not used"
+sub-trigger step,whole beam (adopted),expected_with_step,27.1,27.141066,"the chance expectation with the step carried in as a sensitivity test, which the article does not adopt"
+sub-trigger step,whole beam (adopted),probability_with_step,0.26,0.262576,the probability on that sensitivity test
+sub-trigger step,whole beam (adopted),added_population_bound_with_step,15,15,"the bound on an added population on that sensitivity test, against the adopted 17 of the chance-comparison rows above"
+transfer band,whole beam (adopted),adopted_lo,,1.046317,lowest level-by-level ratio of above_threshold_cells.csv up to the trigger; the interval on the expectation is widened by this band
+transfer band,whole beam (adopted),adopted_hi,,1.148495,the highest of them
+transfer band,reserved blocks,check_lo,,0.473781,"the same quantity measured out of sample on the reserved blocks, from a handful of trigger events; it is the check and not the adopted band"
+transfer band,reserved blocks,check_hi,,1.774466,the upper end of it
+resampling,whole beam (adopted),n_bootstrap,20000,20000,"resampling draws; execution blocks are resampled, and each window rate is redrawn as a binomial on its own control count"
+resampling,whole beam (adopted),n_realisations,,2000,realisations of the null count
+resampling,whole beam (adopted),coverage_percent,95,95.0,coverage of the interval
+resampling,whole beam (adopted),seed,,310,"seed, so the resampling is reproducible"

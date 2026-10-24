@@ -1,0 +1,423 @@
+{
+ "_doc": "ALMA obscore harvest 2026-09-12 (v3.48): scientific_category and science_keyword for every execution block searched here, from 'SELECT DISTINCT asdm_uid, scientific_category, science_keyword FROM ivoa.obscore WHERE asdm_uid IN (<the 102 EBs of the released catalogue>)' on the ALMA TAP service (almascience.eso.org/tap).  102 of 102 EBs matched.  Companion to archive_meta_v343.json, which carries the array and beam for the same blocks. v3.60: extended to the two Band 9/10 execution blocks (uid://A002/X11d9ce7/X5257, uid://A002/Xbf792a/X26ec), 104 of 104 EBs matched.",
+ "harvested_utc": "2026-09-12T10:13:23Z",
+ "blocks": {
+  "uid://A002/Xff0235/X4a6d": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/X1239f8e/Xa43b": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/X128b034/X187cc": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xcf749a/X4871": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xd10f82/X706f": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xccea8d/X2ff5": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xd189ef/X867b": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xd86f11/X584b": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xcda49e/Xdebb": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/X12a8fc8/X10b8": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Exo-planets;null"
+  },
+  "uid://A002/Xc99ad7/X348": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around high-mass stars"
+  },
+  "uid://A002/Xd28a9e/Xbcdf": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around high-mass stars"
+  },
+  "uid://A002/Xcc626d/X579": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around high-mass stars"
+  },
+  "uid://A002/Xe3da01/X4265": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xc19d6f/X19ce": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xbbadbe/X3846": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xb999fd/X148": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xa95c04/X14cd": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xa68906/X1590": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xb0be8b/X785f": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/X106a1f1/X6a0c": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets"
+  },
+  "uid://A002/Xc8b2b0/X9c35": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/Xcd64ec/X21c9": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xd98580/X3bf6": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xd09670/X23c5": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xc6141c/X3af0": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/Xc9831a/X443": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Exo-planets;null"
+  },
+  "uid://A002/Xd9d7c7/Xb3d2": {
+   "scientific_category": "ISM and star formation",
+   "science_keyword": "Pre-stellar cores, Infra-Red Dark Clouds (IRDC);null"
+  },
+  "uid://A002/Xe4f0a6/X3658": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/X6f1341/X1484": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/X899169/X1838": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xd3607d/X6487": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Disks around high-mass stars"
+  },
+  "uid://A002/Xc74b5b/X7c16": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/Xd16a1e/X8d4": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/Xcdd033/X85ff": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xc296d2/X148c": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xe5808e/X80a1": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xda2c82/X765d": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xd9d7c7/X6fd2": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xc66ce1/Xaa9": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/Xb2e94e/X361a": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xd9668b/X3a90": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Solar system - Comets"
+  },
+  "uid://A002/Xcd2acd/X6125": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xce1e34/X1fb8": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/X1207c39/X9417": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/X1009c59/X1ba4d": {
+   "scientific_category": "ISM and star formation",
+   "science_keyword": "Pre-stellar cores, Infra-Red Dark Clouds (IRDC);null"
+  },
+  "uid://A002/X11e10bc/X12662": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Solar system - Comets"
+  },
+  "uid://A002/X877e41/X14c1": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;null"
+  },
+  "uid://A002/Xd9398d/X322a": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xff294f/X7bf4": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/X1001fdc/X2085": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/Xff294f/X2db6": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/Xe539c7/X113b1": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xe50c9e/X17ab": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xdc621b/X2bb0": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xce574d/X123f": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xc20718/X2fcf": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xb39557/X3789": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xb77b17/X3940": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xcd64ec/X9149": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xcf0c6b/X6513": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xff0235/X8c42": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/X1263402/X816f": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xcd8029/Xb6b0": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xcdb7b8/Xfb16": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xb95160/X3e24": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/X74c92c/X6d5": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xb9cc97/X150a": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/Xd0fb35/X90dc": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around high-mass stars"
+  },
+  "uid://A002/Xbe7502/X2047": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/X10b0d7d/X323f": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/X12277ed/X22e53": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Solar system - Comets"
+  },
+  "uid://A002/X74deb6/Xff1": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;null"
+  },
+  "uid://A002/Xba3ea7/X2ab4": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;Brown dwarfs"
+  },
+  "uid://A002/Xb9a2bb/X1899": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;Brown dwarfs"
+  },
+  "uid://A002/X9f2ff8/X25b0": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xd95042/X2d99": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around high-mass stars"
+  },
+  "uid://A002/Xd6ebab/X41a3": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around high-mass stars"
+  },
+  "uid://A002/Xb25e1a/Xed74": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets"
+  },
+  "uid://A002/Xfdf45f/X478e": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;null"
+  },
+  "uid://A002/Xfdb69b/X667a": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;null"
+  },
+  "uid://A002/X126c7ed/Xe9d": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xd12f5c/Xd7c6": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/X12925a3/Xa4b1": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/X74fea5/Xd70": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xcd97a1/X2377": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xcbb583/Xb78": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xf5d76d/X32f1": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xe64b7b/X1704c": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/X107fa96/Xce38": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Disks around low-mass stars;Exo-planets"
+  },
+  "uid://A002/Xfeb5e6/X13ee": {
+   "scientific_category": "Stars and stellar evolution",
+   "science_keyword": "Main sequence stars;null"
+  },
+  "uid://A002/Xd10f82/X2635": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xcf525f/X5aa4": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xcd97a1/X3f1e": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/X1237e23/Xdb0": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around low-mass stars"
+  },
+  "uid://A002/Xc26103/X155a": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xcf196f/Xabc5": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xcccc19/X5564": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/Xd248b5/X5186": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Disks around high-mass stars"
+  },
+  "uid://A002/X10a341d/X82d2": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xc067f7/X822": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xd64dca/X410": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;Exo-planets"
+  },
+  "uid://A002/X11d9ce7/X5257": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  },
+  "uid://A002/Xbf792a/X26ec": {
+   "scientific_category": "Disks and planet formation",
+   "science_keyword": "Debris disks;null"
+  }
+ },
+ "harvested_utc_v360": "2026-09-13T09:10:39Z"
+}

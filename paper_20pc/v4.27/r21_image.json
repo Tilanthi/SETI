@@ -1,0 +1,1305 @@
+{
+ "dsb": [
+  "10",
+  "9"
+ ],
+ "fails": [],
+ "if_range": {
+  "10": [
+   4.0,
+   12.0
+  ],
+  "3": [
+   4.0,
+   8.0
+  ],
+  "4": [
+   4.0,
+   8.0
+  ],
+  "5": [
+   4.0,
+   8.0
+  ],
+  "6": [
+   4.5,
+   10.0
+  ],
+  "7": [
+   4.0,
+   8.0
+  ],
+  "8": [
+   4.0,
+   8.0
+  ],
+  "9": [
+   4.0,
+   12.0
+  ]
+ },
+ "irr_db": 10.0,
+ "lo1_width": {
+  "block_median": 0.395212000000015,
+  "own_median": 7.319335999999964
+ },
+ "n_left": 4,
+ "n_no_parent": 28,
+ "n_no_parent_wide": 7,
+ "n_parent_absent": 4,
+ "n_screened": 36,
+ "not_screenable": [
+  {
+   "eb": "A002_X1190de8_Xd526",
+   "f": 344.467647,
+   "star": "HD 14055"
+  },
+  {
+   "eb": "A002_X11adad7_X25c5e",
+   "f": 345.456382,
+   "star": "HD 14055"
+  }
+ ],
+ "rows": [
+  {
+   "band": "6",
+   "dsb": false,
+   "eb": "A002_Xc7fa6f_X28a8",
+   "f_topo": 224.7421894,
+   "image": [
+    [
+     240.9921826,
+     241.5234386
+    ]
+   ],
+   "lo1": [
+    [
+     232.867186,
+     233.132814
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 87,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     223.132814,
+     224.867189
+    ]
+   ],
+   "parents": [],
+   "star": "BD05 1668",
+   "tstar": 48.3033
+  },
+  {
+   "band": "6",
+   "dsb": false,
+   "eb": "A002_Xc7fa6f_X28a8",
+   "f_topo": 226.7421894,
+   "image": [
+    [
+     238.9921826,
+     239.5234386
+    ]
+   ],
+   "lo1": [
+    [
+     232.867186,
+     233.132814
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 70,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     225.132814,
+     226.867189
+    ]
+   ],
+   "parents": [],
+   "star": "BD05 1668",
+   "tstar": 41.3545
+  },
+  {
+   "band": "6",
+   "dsb": false,
+   "eb": "A002_Xc7fa6f_X28a8",
+   "f_topo": 240.1015606,
+   "image": [
+    [
+     225.6328114,
+     226.1640674
+    ]
+   ],
+   "lo1": [
+    [
+     232.867186,
+     233.132814
+    ]
+   ],
+   "max_flux_ratio": 0.1082145630113945,
+   "n_expanded_in_image": 118,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     239.132811,
+     240.867186
+    ]
+   ],
+   "parents": [
+    {
+     "f_obs": 225.6941291715723,
+     "f_rest": 225.697754,
+     "flux_ratio": 0.1082145630113945,
+     "line": "H2CO(3(1,2)-2(1,1),F=2-2)",
+     "observed_in_block": true,
+     "peak": 10.1359
+    },
+    {
+     "f_obs": 225.69414017139565,
+     "f_rest": 225.697765,
+     "flux_ratio": 0.1082145630113945,
+     "line": "H2CO(3(1,2)-2(1,1),F=2-3)",
+     "observed_in_block": true,
+     "peak": 10.1359
+    },
+    {
+     "f_obs": 225.69414717128322,
+     "f_rest": 225.697772,
+     "flux_ratio": 0.1082145630113945,
+     "line": "H2CO(3(1,2)-2(1,1),F=2-1)",
+     "observed_in_block": true,
+     "peak": 10.1359
+    },
+    {
+     "f_obs": 225.6941481712672,
+     "f_rest": 225.697773,
+     "flux_ratio": 0.1082145630113945,
+     "line": "H2CO(3(1,2)-2(1,1),F=4-3)",
+     "observed_in_block": true,
+     "peak": 10.1359
+    },
+    {
+     "f_obs": 225.69414917125113,
+     "f_rest": 225.697774,
+     "flux_ratio": 0.1082145630113945,
+     "line": "H2CO(3(1,2)-2(1,1),F=3-2)",
+     "observed_in_block": true,
+     "peak": 10.1359
+    },
+    {
+     "f_obs": 225.69415017123504,
+     "f_rest": 225.697775,
+     "flux_ratio": 0.1082145630113945,
+     "line": "H2CO(3(1,2)-2(1,1))",
+     "observed_in_block": true,
+     "peak": 10.1359
+    },
+    {
+     "f_obs": 225.69415917109052,
+     "f_rest": 225.697784,
+     "flux_ratio": 0.1082145630113945,
+     "line": "H2CO(3(1,2)-2(1,1),F=3-3)",
+     "observed_in_block": true,
+     "peak": 10.1359
+    }
+   ],
+   "star": "BD05 1668",
+   "tstar": 73.3981
+  },
+  {
+   "band": "6",
+   "dsb": false,
+   "eb": "A002_Xc7fa6f_X28a8",
+   "f_topo": 242.1953106,
+   "image": [
+    [
+     223.5390614,
+     224.0703174
+    ]
+   ],
+   "lo1": [
+    [
+     232.867186,
+     233.132814
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 106,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     241.132811,
+     242.867186
+    ]
+   ],
+   "parents": [],
+   "star": "BD05 1668",
+   "tstar": 39.5857
+  },
+  {
+   "band": "7",
+   "dsb": false,
+   "eb": "A002_Xc079b5_X82f",
+   "f_topo": 346.3138115,
+   "image": [
+    [
+     334.79670649999997,
+     335.43099850000004
+    ]
+   ],
+   "lo1": [
+    [
+     340.555259,
+     340.872405
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 64,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     344.872405,
+     346.712737
+    ]
+   ],
+   "parents": [],
+   "star": "61 Vir",
+   "tstar": 5.9583
+  },
+  {
+   "band": "7",
+   "dsb": false,
+   "eb": "A002_Xc067f7_X822",
+   "f_topo": 345.5598724,
+   "image": [
+    [
+     335.5535096,
+     336.18780159999994
+    ]
+   ],
+   "lo1": [
+    [
+     340.556691,
+     340.873837
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 63,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     344.873837,
+     346.714169
+    ]
+   ],
+   "parents": [],
+   "star": "61 Vir",
+   "tstar": 5.0382
+  },
+  {
+   "band": "6",
+   "dsb": false,
+   "eb": "A002_Xd9668b_X841a",
+   "f_topo": 230.87691030000002,
+   "image": [
+    [
+     211.00093369999996,
+     213.32971169999996
+    ]
+   ],
+   "lo1": [
+    [
+     220.938922,
+     222.103311
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 313,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     229.09859,
+     230.938922
+    ]
+   ],
+   "parents": [],
+   "star": "GJ 849",
+   "tstar": 5.0904
+  },
+  {
+   "band": "6",
+   "dsb": false,
+   "eb": "A002_X899169_X1838",
+   "f_topo": 230.82522980000002,
+   "image": [
+    [
+     211.9765962,
+     214.42601819999996
+    ]
+   ],
+   "lo1": [
+    [
+     221.400913,
+     222.625624
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 761,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     229.675816,
+     231.400913
+    ]
+   ],
+   "parents": [],
+   "star": "AU Mic",
+   "tstar": 5.2213
+  },
+  {
+   "band": "6",
+   "dsb": false,
+   "eb": "A002_Xa42f75_X319",
+   "f_topo": 230.6863687,
+   "image": [
+    [
+     212.1541413,
+     214.6020593
+    ]
+   ],
+   "lo1": [
+    [
+     221.420255,
+     222.644214
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 793,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     229.695158,
+     231.420255
+    ]
+   ],
+   "parents": [],
+   "star": "AU Mic",
+   "tstar": 5.274
+  },
+  {
+   "band": "6",
+   "dsb": false,
+   "eb": "A002_Xc66ce1_Xaa9",
+   "f_topo": 230.834752,
+   "image": [
+    [
+     245.86949,
+     248.387486
+    ]
+   ],
+   "lo1": [
+    [
+     238.352121,
+     239.611119
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 715,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     229.611119,
+     231.451939
+    ]
+   ],
+   "parents": [],
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "tstar": 5.0439
+  },
+  {
+   "band": "7",
+   "dsb": false,
+   "eb": "A002_X12277ed_X178c6",
+   "f_topo": 321.2005269,
+   "image": [
+    [
+     333.6683011,
+     335.94704709999996
+    ]
+   ],
+   "lo1": [
+    [
+     327.434414,
+     328.573787
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 244,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     321.157558,
+     321.265224
+    ]
+   ],
+   "parents": [],
+   "star": "HD 69830",
+   "tstar": 5.046
+  },
+  {
+   "band": "7",
+   "dsb": false,
+   "eb": "A002_X12209f7_X16edb",
+   "f_topo": 322.4324914,
+   "image": [
+    [
+     332.4416006,
+     334.72016659999997
+    ]
+   ],
+   "lo1": [
+    [
+     327.437046,
+     328.576329
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 261,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     322.399532,
+     322.507198
+    ]
+   ],
+   "parents": [],
+   "star": "HD 69830",
+   "tstar": 5.2592
+  },
+  {
+   "band": "6",
+   "dsb": false,
+   "eb": "A002_Xd9d7c7_X6fd2",
+   "f_topo": 230.63546440000002,
+   "image": [
+    [
+     211.20187159999998,
+     213.53353559999996
+    ]
+   ],
+   "lo1": [
+    [
+     220.918668,
+     222.0845
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 524,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     229.078335,
+     230.918668
+    ]
+   ],
+   "parents": [],
+   "star": "LHS 1140",
+   "tstar": 5.1363
+  },
+  {
+   "band": "6",
+   "dsb": false,
+   "eb": "A002_Xc19d6f_X5706",
+   "f_topo": 230.42261760000002,
+   "image": [
+    [
+     245.3437424,
+     248.86011839999998
+    ]
+   ],
+   "lo1": [
+    [
+     237.88318,
+     239.641368
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 790,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     229.641368,
+     231.4817
+    ]
+   ],
+   "parents": [],
+   "star": "HD 207129 Gaia DR3 6564091190988411520",
+   "tstar": 5.4325
+  },
+  {
+   "band": "6",
+   "dsb": false,
+   "eb": "A002_X10b22d7_X2445",
+   "f_topo": 230.7903809,
+   "image": [
+    [
+     216.01399709999998,
+     218.35775510000002
+    ]
+   ],
+   "lo1": [
+    [
+     223.402189,
+     224.574068
+    ]
+   ],
+   "max_flux_ratio": 0.1065819018856953,
+   "n_expanded_in_image": 704,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     229.609717,
+     231.450537
+    ]
+   ],
+   "parents": [
+    {
+     "f_obs": 218.20063419137003,
+     "f_rest": 218.222192,
+     "flux_ratio": 0.1065819018856953,
+     "line": "H2CO(3(0,3)-2(0,2))",
+     "observed_in_block": true,
+     "peak": 3.1712
+    },
+    {
+     "f_obs": 217.08347156491774,
+     "f_rest": 217.104919,
+     "flux_ratio": 0.1065819018856953,
+     "line": "SiO(5-4)",
+     "observed_in_block": true,
+     "peak": 3.1712
+    }
+   ],
+   "star": "HD 23484 Gaia DR3 4856592239127350400",
+   "tstar": 5.5203
+  },
+  {
+   "band": "7",
+   "dsb": false,
+   "eb": "A002_Xff294f_Xaf70",
+   "f_topo": 331.657036,
+   "image": [
+    [
+     344.49634,
+     344.93782600000003
+    ]
+   ],
+   "lo1": [
+    [
+     338.076688,
+     338.297431
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 52,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     330.350395,
+     332.190727
+    ]
+   ],
+   "parents": [],
+   "star": "HD 10647",
+   "tstar": 5.1202
+  },
+  {
+   "band": "7",
+   "dsb": false,
+   "eb": "A002_X122b6ff_X1041e",
+   "f_topo": 357.28146399999997,
+   "image": [
+    [
+     342.71994,
+     343.51036400000004
+    ]
+   ],
+   "lo1": [
+    [
+     350.000702,
+     350.395914
+    ]
+   ],
+   "max_flux_ratio": 0.6593630566273109,
+   "n_expanded_in_image": 82,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     356.275605,
+     358.000702
+    ]
+   ],
+   "parents": [
+    {
+     "f_obs": 342.88206082348745,
+     "f_rest": 342.88285,
+     "flux_ratio": 0.6593630566273109,
+     "line": "CS(7-6)",
+     "observed_in_block": true,
+     "peak": 3.973
+    }
+   ],
+   "star": "eta Crv",
+   "tstar": 5.0059
+  },
+  {
+   "band": "6",
+   "dsb": false,
+   "eb": "A002_Xd9668b_Xa9df",
+   "f_topo": 241.8366585,
+   "image": [
+    [
+     228.2499275,
+     229.4086635
+    ]
+   ],
+   "lo1": [
+    [
+     235.043293,
+     235.622661
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 255,
+   "n_win_used": 7,
+   "own_window": [
+    [
+     241.553089,
+     241.984364
+    ]
+   ],
+   "parents": [],
+   "star": "bet Pic",
+   "tstar": 5.0791
+  },
+  {
+   "band": "6",
+   "dsb": false,
+   "eb": "A002_Xd9668b_X3a90",
+   "f_topo": 241.7512355,
+   "image": [
+    [
+     228.3354025,
+     229.49414050000001
+    ]
+   ],
+   "lo1": [
+    [
+     235.043319,
+     235.622688
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 246,
+   "n_win_used": 7,
+   "own_window": [
+    [
+     241.553115,
+     241.98439
+    ]
+   ],
+   "parents": [],
+   "star": "bet Pic",
+   "tstar": 5.4199
+  },
+  {
+   "band": "6",
+   "dsb": false,
+   "eb": "A002_X129754b_X6946",
+   "f_topo": 231.19984480000002,
+   "image": [
+    [
+     245.57775919999997,
+     247.92150919999997
+    ]
+   ],
+   "lo1": [
+    [
+     238.388802,
+     239.560677
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 665,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     229.653946,
+     231.379532
+    ]
+   ],
+   "parents": [],
+   "star": "HD 31392",
+   "tstar": 5.2887
+  },
+  {
+   "band": "7",
+   "dsb": false,
+   "eb": "A002_Xcf525f_X5aa4",
+   "f_topo": 346.50989599999997,
+   "image": [
+    [
+     334.9869320000001,
+     335.727182
+    ]
+   ],
+   "lo1": [
+    [
+     340.748414,
+     341.118539
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 88,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     345.123177,
+     346.848275
+    ]
+   ],
+   "parents": [],
+   "star": "CD-57 1054",
+   "tstar": 5.1083
+  },
+  {
+   "band": "7",
+   "dsb": false,
+   "eb": "A002_Xff45a6_X10ca8",
+   "f_topo": 345.6338357,
+   "image": [
+    [
+     330.55466429999996,
+     330.99721029999995
+    ]
+   ],
+   "lo1": [
+    [
+     338.09425,
+     338.315523
+    ]
+   ],
+   "max_flux_ratio": 0.9290597013807219,
+   "n_expanded_in_image": 62,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     344.201219,
+     346.041551
+    ]
+   ],
+   "parents": [
+    {
+     "f_obs": 330.6014415130813,
+     "f_rest": 330.587867,
+     "flux_ratio": 0.9290597013807219,
+     "line": "13CO(J=3-2,F=5/2-5/2)",
+     "observed_in_block": true,
+     "peak": 4.8391
+    },
+    {
+     "f_obs": 330.6015235164483,
+     "f_rest": 330.587949,
+     "flux_ratio": 0.9290597013807219,
+     "line": "13CO(J=3-2,F=5/2-3/2)",
+     "observed_in_block": true,
+     "peak": 4.8391
+    },
+    {
+     "f_obs": 330.60153951710527,
+     "f_rest": 330.587965,
+     "flux_ratio": 0.9290597013807219,
+     "line": "13CO(3-2)",
+     "observed_in_block": true,
+     "peak": 4.8391
+    },
+    {
+     "f_obs": 330.6015565178034,
+     "f_rest": 330.587982,
+     "flux_ratio": 0.9290597013807219,
+     "line": "13CO(J=3-2,F=7/2-5/2)",
+     "observed_in_block": true,
+     "peak": 4.8391
+    }
+   ],
+   "star": "HD161868",
+   "tstar": 5.4812
+  },
+  {
+   "band": "6",
+   "dsb": false,
+   "eb": "A002_Xfe62c1_X398",
+   "f_topo": 216.1844318,
+   "image": [
+    [
+     233.13267420000003,
+     235.4004722
+    ]
+   ],
+   "lo1": [
+    [
+     224.658553,
+     225.792452
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 362,
+   "n_win_used": 5,
+   "own_window": [
+    [
+     216.068221,
+     217.908553
+    ]
+   ],
+   "parents": [],
+   "star": "ALMA J153702653-33192492",
+   "tstar": 5.2281
+  },
+  {
+   "band": "6",
+   "dsb": false,
+   "eb": "A002_Xf8f6a9_X10359",
+   "f_topo": 217.7292444,
+   "image": [
+    [
+     231.63354160000003,
+     233.9013396
+    ]
+   ],
+   "lo1": [
+    [
+     224.681393,
+     225.815292
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 651,
+   "n_win_used": 5,
+   "own_window": [
+    [
+     216.091061,
+     217.931393
+    ]
+   ],
+   "parents": [
+    {
+     "f_obs": 231.90345901709588,
+     "f_rest": 231.900928,
+     "flux_ratio": null,
+     "line": "H(30a)",
+     "observed_in_block": false,
+     "peak": null
+    }
+   ],
+   "star": "ALMA J153702653-33192492",
+   "tstar": 5.0911
+  },
+  {
+   "band": "6",
+   "dsb": false,
+   "eb": "A002_Xfe62c1_X398",
+   "f_topo": 218.8729083,
+   "image": [
+    [
+     230.44419770000002,
+     232.7119957
+    ]
+   ],
+   "lo1": [
+    [
+     224.658553,
+     225.792452
+    ]
+   ],
+   "max_flux_ratio": 1.374412589354087,
+   "n_expanded_in_image": 570,
+   "n_win_used": 5,
+   "own_window": [
+    [
+     218.318221,
+     220.158553
+    ]
+   ],
+   "parents": [
+    {
+     "f_obs": 230.51759710442082,
+     "f_rest": 230.538,
+     "flux_ratio": 1.374412589354087,
+     "line": "CO(2-1)",
+     "observed_in_block": true,
+     "peak": 4.1538
+    },
+    {
+     "f_obs": 231.88040448362221,
+     "f_rest": 231.900928,
+     "flux_ratio": null,
+     "line": "H(30a)",
+     "observed_in_block": false,
+     "peak": null
+    }
+   ],
+   "star": "ALMA J153702653-33192492",
+   "tstar": 5.0901
+  },
+  {
+   "band": "6",
+   "dsb": false,
+   "eb": "A002_Xf8f6a9_X10359",
+   "f_topo": 218.67113890000002,
+   "image": [
+    [
+     230.6916471,
+     232.95944509999998
+    ]
+   ],
+   "lo1": [
+    [
+     224.681393,
+     225.815292
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 540,
+   "n_win_used": 5,
+   "own_window": [
+    [
+     218.341061,
+     220.181393
+    ]
+   ],
+   "parents": [
+    {
+     "f_obs": 231.90345901709588,
+     "f_rest": 231.900928,
+     "flux_ratio": null,
+     "line": "H(30a)",
+     "observed_in_block": false,
+     "peak": null
+    }
+   ],
+   "star": "ALMA J153702653-33192492",
+   "tstar": 5.0476
+  },
+  {
+   "band": "7",
+   "dsb": false,
+   "eb": "A002_Xd9d7c7_Xbb64",
+   "f_topo": 347.2179398,
+   "image": [
+    [
+     334.3512242,
+     335.01843619999994
+    ]
+   ],
+   "lo1": [
+    [
+     340.784582,
+     341.118188
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 59,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     346.976241,
+     348.701338
+    ]
+   ],
+   "parents": [],
+   "star": "ALMA J153702653-33192492",
+   "tstar": 5.0087
+  },
+  {
+   "band": "7",
+   "dsb": false,
+   "eb": "A002_X1001fdc_X29ae",
+   "f_topo": 331.1558555,
+   "image": [
+    [
+     345.06450450000006,
+     345.5079265
+    ]
+   ],
+   "lo1": [
+    [
+     338.11018,
+     338.331891
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 97,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     330.384371,
+     332.224703
+    ]
+   ],
+   "parents": [],
+   "star": "HD14055",
+   "tstar": 5.0819
+  },
+  {
+   "band": "7",
+   "dsb": false,
+   "eb": "A002_Xfff3d8_Xd46",
+   "f_topo": 331.7699224,
+   "image": [
+    [
+     344.45493760000005,
+     344.8983596
+    ]
+   ],
+   "lo1": [
+    [
+     338.11243,
+     338.334141
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 59,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     330.386622,
+     332.226954
+    ]
+   ],
+   "parents": [],
+   "star": "HD14055",
+   "tstar": 5.575
+  },
+  {
+   "band": "7",
+   "dsb": false,
+   "eb": "A002_Xff99e1_X24be0",
+   "f_topo": 331.70776159999997,
+   "image": [
+    [
+     344.5187544,
+     344.96217640000003
+    ]
+   ],
+   "lo1": [
+    [
+     338.113258,
+     338.334969
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 52,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     330.387449,
+     332.227781
+    ]
+   ],
+   "parents": [],
+   "star": "HD14055",
+   "tstar": 5.277
+  },
+  {
+   "band": "7",
+   "dsb": false,
+   "eb": "A002_Xfffde1_X3835",
+   "f_topo": 345.0099054,
+   "image": [
+    [
+     331.2134986,
+     331.65692060000003
+    ]
+   ],
+   "lo1": [
+    [
+     338.111702,
+     338.333413
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 68,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     344.21889,
+     346.059222
+    ]
+   ],
+   "parents": [],
+   "star": "HD14055",
+   "tstar": 5.1773
+  },
+  {
+   "band": "7",
+   "dsb": false,
+   "eb": "A002_Xff99e1_X2c3bb",
+   "f_topo": 345.5256112,
+   "image": [
+    [
+     330.69990679999995,
+     331.1433308
+    ]
+   ],
+   "lo1": [
+    [
+     338.112759,
+     338.334471
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 67,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     344.219947,
+     346.060279
+    ]
+   ],
+   "parents": [],
+   "star": "HD14055",
+   "tstar": 5.1861
+  },
+  {
+   "band": "7",
+   "dsb": false,
+   "eb": "A002_Xff99e1_X2b2ee",
+   "f_topo": 344.7006991,
+   "image": [
+    [
+     331.5253869,
+     331.96880889999994
+    ]
+   ],
+   "lo1": [
+    [
+     338.113043,
+     338.334754
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 46,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     344.22023,
+     346.060562
+    ]
+   ],
+   "parents": [],
+   "star": "HD14055",
+   "tstar": 5.175
+  },
+  {
+   "band": "7",
+   "dsb": false,
+   "eb": "A002_Xff0235_X4a6d",
+   "f_topo": 344.2697461,
+   "image": [
+    [
+     331.9065699,
+     332.3487579
+    ]
+   ],
+   "lo1": [
+    [
+     338.088158,
+     338.309252
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 66,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     344.252656,
+     345.977754
+    ]
+   ],
+   "parents": [],
+   "star": "CP-72 2713",
+   "tstar": 5.8089
+  },
+  {
+   "band": "7",
+   "dsb": false,
+   "eb": "A002_Xff0235_X8c42",
+   "f_topo": 331.0101355,
+   "image": [
+    [
+     345.19148450000006,
+     345.63442649999996
+    ]
+   ],
+   "lo1": [
+    [
+     338.10081,
+     338.322281
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 71,
+   "n_win_used": 4,
+   "own_window": [
+    [
+     330.374882,
+     332.215214
+    ]
+   ],
+   "parents": [],
+   "star": "HD170773",
+   "tstar": 5.0291
+  },
+  {
+   "band": "6",
+   "dsb": false,
+   "eb": "A002_Xe45e29_Xb7d4",
+   "f_topo": 219.45378490000002,
+   "image": [
+    [
+     230.82530509999998,
+     232.24357909999998
+    ]
+   ],
+   "lo1": [
+    [
+     225.139545,
+     225.848682
+    ]
+   ],
+   "max_flux_ratio": null,
+   "n_expanded_in_image": 361,
+   "n_win_used": 6,
+   "own_window": [
+    [
+     219.369801,
+     219.801197
+    ]
+   ],
+   "parents": [
+    {
+     "f_obs": 231.8996903388284,
+     "f_rest": 231.900928,
+     "flux_ratio": null,
+     "line": "H(30a)",
+     "observed_in_block": false,
+     "peak": null
+    }
+   ],
+   "star": "HD110411",
+   "tstar": 5.3929
+  }
+ ]
+}
