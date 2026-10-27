@@ -1,8 +1,0 @@
-# dupgate allowlist.  One entry per line, `<keep-reason> :: <clause>`.
-#
-# An entry without a keep-reason is refused by the gate.  The rule this file
-# exists to serve is the referees' own: STATE EACH CAVEAT ONCE -- not "delete
-# the second copy", but "decide, and write down why".  A clause here is a
-# decision; a clause not here is a defect.
-#
-A1 requires the accelerating-carrier caveat in BOTH captions: a figure caption must be readable without the body, and Fig. 6(b) and Fig. 8 are the two figures whose meaning the caveat changes. One sentence, identical by design so the two figures cannot drift apart. :: For an accelerating carrier, confirmation further requires the repeat to fall at a matching orbital phase.
