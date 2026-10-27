@@ -1,0 +1,13 @@
+{
+ "n_trials": 3888,
+ "n_win": 12,
+ "n_tgt": 11,
+ "coarseOne": 100,
+ "coarseHalf": 100,
+ "coarseQuarter": 100,
+ "coarseTenth": 83,
+ "fineOne": 100,
+ "fineHalf": 99,
+ "fineQuarter": 91,
+ "fineTenth": 71
+}

@@ -1,0 +1,130 @@
+{
+ "band1": {
+  "chan_khz": [
+   31250.0
+  ],
+  "chan_ratio": 2047.9999949668352,
+  "n_public": 0,
+  "n_star": 4,
+  "n_win": 16,
+  "pb_arcsec": 68.50528979215017,
+  "programmes": [
+   "2025.1.00268.S"
+  ],
+  "provenance": "ALMA Science Archive, ivoa.obscore via TAP at almascience.eso.org, harvested 2026-10-07 by harvest_band1.py. Every Band 1 and Band 2 observation whose pointing centre lies within the Band 1 half-power radius (68.5 arcsec: 1.13 lambda/D at 42.5 GHz on a 12 m dish) of one of the 89 stars this survey searched.  Positions are the release work list own Gaia DR3 coordinates.",
+  "release": [
+   "2027-01-08",
+   "2027-01-08",
+   "2027-01-08",
+   "2027-01-08",
+   "2027-01-09",
+   "2027-01-09",
+   "2027-01-09",
+   "2027-01-09",
+   "2027-01-27",
+   "2027-01-27",
+   "2027-01-27",
+   "2027-01-27",
+   "2027-04-09",
+   "2027-04-09",
+   "2027-04-09",
+   "2027-04-09"
+  ],
+  "stars": [
+   "HD 10647",
+   "bet Pic",
+   "eta Crv",
+   "hd107146"
+  ]
+ },
+ "band2": {
+  "n_win": 0
+ },
+ "bands": {
+  "edges": {
+   "1": [
+    35,
+    50
+   ],
+   "2": [
+    67,
+    116
+   ],
+   "3": [
+    84,
+    116
+   ],
+   "4": [
+    125,
+    163
+   ],
+   "5": [
+    163,
+    211
+   ],
+   "6": [
+    211,
+    275
+   ],
+   "7": [
+    275,
+    373
+   ],
+   "8": [
+    385,
+    500
+   ],
+   "9": [
+    602,
+    720
+   ],
+   "10": [
+    787,
+    950
+   ]
+  },
+  "first_cycle": {
+   "1": 10,
+   "2": 13,
+   "3": 0,
+   "4": 0,
+   "5": 0,
+   "6": 0,
+   "7": 0,
+   "8": 0,
+   "9": 0,
+   "10": 0
+  },
+  "hi_ghz": 950,
+  "lo_ghz": 35,
+  "n": 10,
+  "prior_searches": {
+   "Mason2025": 3
+  },
+  "searched_here": [
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "source": "ALMA Cycle 13 Proposer's Guide (band edges and the bands offered); Band 1 first offered in Cycle 10, Band 2 in Cycle 13.  EXTERNAL OBSERVATORY SPECIFICATION, not measured here."
+ },
+ "drive": null,
+ "fail": [],
+ "fluxcheck": {
+  "aumic_err": 0.014,
+  "aumic_is_internal": true,
+  "aumic_pct": 1.4084507042253522,
+  "aumic_ratio": 0.994,
+  "eps_err": 0.31,
+  "eps_pct": 28.18181818181818,
+  "eps_ratio": 1.1,
+  "quoted_calibration_pct": 11.0
+ },
+ "generated_by": "sens_r14.py",
+ "round": 460
+}

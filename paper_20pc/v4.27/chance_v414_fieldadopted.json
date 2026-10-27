@@ -1,0 +1,165 @@
+{
+ "added_population_limit": 17,
+ "added_population_limit_basis": "control positions alone",
+ "added_population_limit_basis_mean": 24.603299013417836,
+ "added_population_limit_exact": 17.504436564452398,
+ "added_population_limit_sensitivity": 16,
+ "added_population_limit_sensitivity_exact": 16.410211611956157,
+ "added_population_not_excluded": 14,
+ "blocks_with_several_crossings": {
+  "A002_Xc7fa6f_X28a8": 4,
+  "A002_Xd9668b_X3a90": 2,
+  "A002_Xd9668b_Xa9df": 2,
+  "A002_Xf8f6a9_X10359": 2,
+  "A002_Xfe62c1_X398": 2
+ },
+ "census_arrival": {
+  "A002_X1190de8_Xd526": "tail",
+  "A002_X11adad7_X25c5e": "tail"
+ },
+ "coverage_pct": 95.0,
+ "critical_transfer": 0.9004440784052321,
+ "critical_transfer_expectation": 22.13902113261299,
+ "drive": null,
+ "e_chance": 24.586780749142353,
+ "e_chance_previous_factor": 32.8318828125,
+ "e_chance_transfer_applied": 25.706536892136413,
+ "e_survey": 24.708005477982784,
+ "e_trigger_census": 36.23828125,
+ "e_trigger_released": 36.23828125,
+ "interval": [
+  23.754248265700323,
+  30.614751048984548
+ ],
+ "interval_null_only": [
+  21.85452089185878,
+  27.59246466787923
+ ],
+ "mask_share_median": 0.05994694960212202,
+ "mask_share_previous": 0.094,
+ "mask_share_weighted": 0.2882660487770644,
+ "mask_vs_ledger": {
+  "attributed": 18,
+  "classified_differently": 0,
+  "n_transitions_attributing": 96,
+  "n_transitions_searched": 96,
+  "reported_as_coincidence": []
+ },
+ "max_crossings_per_window": 1,
+ "n_boot": 20000,
+ "n_realisations": 2000,
+ "n_win_A_census": 420,
+ "n_win_A_reference": 405,
+ "n_win_A_released": 405,
+ "n_win_A_tail": 15,
+ "n_windows_wholly_masked": 15,
+ "near_added_population_limit": 15,
+ "near_band": [
+  4.0,
+  5.0
+ ],
+ "near_expectation": 27.141066154886104,
+ "near_interval": [
+  1.0455059297935847,
+  1.1610143211165909
+ ],
+ "near_n_star_events": 1902,
+ "near_n_windows": 399,
+ "near_p_at_least": 0.26257626810463336,
+ "near_ratio": 1.1038885664538596,
+ "near_rise": [
+  1.0354507129951922,
+  1.0684514347862462,
+  1.0963111333667168,
+  1.1542730299667037
+ ],
+ "observed": 31,
+ "observed_coarse_clean": 0,
+ "observed_flagged": 4,
+ "observed_tabulated": 31,
+ "observed_tail": [
+  [
+   "HD~14055",
+   "A002_X1190de8_Xd526",
+   344.467647
+  ],
+  [
+   "HD~14055",
+   "A002_X11adad7_X25c5e",
+   345.456382
+  ]
+ ],
+ "p_at_least_observed_control_only": 0.12879341361789934,
+ "p_at_least_observed_control_only_point": 0.11870445704964411,
+ "p_at_least_observed_with_step": 0.18163286548388932,
+ "p_at_least_observed_with_trigger_step": 0.26007487816390457,
+ "p_trigger_wholly_masked": 4.541015625,
+ "round": 310,
+ "route_macro": 31,
+ "seed": 310,
+ "stage_one_fine_attributed": 10,
+ "stage_one_fine_holding_a_crossing": 12,
+ "stage_one_fine_windows": 12,
+ "step": 1.0455430157538261,
+ "step_band": [
+  3.0,
+  4.5
+ ],
+ "step_crossing_windows_only": 1.053213471085469,
+ "step_interval": [
+  1.0327677854111026,
+  1.0589574461338043
+ ],
+ "step_n_control_events": 267681,
+ "step_n_masked_excluded": 7863,
+ "step_n_star_events": 34984,
+ "step_n_trigger_cells": 31,
+ "step_n_uncancelled": 0,
+ "step_n_windows": 399,
+ "step_trigger_level": 1.1022222222222222,
+ "step_without_crossing_windows": 1.0443024789945143,
+ "tail_blocks_in_census": [
+  "A002_X1190de8_Xd526",
+  "A002_X11adad7_X25c5e"
+ ],
+ "tail_blocks_in_followup": [],
+ "telluric": {
+  "ctrl_exceedances": 302,
+  "ctrl_in_mask": 88,
+  "ctrl_removed": 10,
+  "ctrl_surviving_mask": 214,
+  "e_chance_after": 24.586780749142353,
+  "e_chance_before": 25.792015099590508,
+  "factor": 0.9532710280373832,
+  "n_tsys_channels": 2,
+  "observed_after": 31,
+  "observed_before": 32,
+  "observed_removed": [
+   {
+    "d_MHz": -25.150100000028033,
+    "eb": "A002_X12277ed_X178c6",
+    "f_topo": 321.2005269,
+    "line_MHz": 321225.677,
+    "species": "H2O",
+    "star": "HD 69830"
+   }
+  ],
+  "radius_MHz": 62.5,
+  "tsys_resolution_MHz": 31.25
+ },
+ "transfer_adopted": [
+  1.0463167573820575,
+  1.1484953132708435
+ ],
+ "transfer_adopted_at": 1.1022222222222222,
+ "transfer_adopted_levels": 5,
+ "transfer_exp": 7.48828125,
+ "transfer_obs": 8,
+ "transfer_ratio": 1.0683359415753781,
+ "transfer_reserved": [
+  0.47378070298988967,
+  1.7744660580402125
+ ],
+ "vsys_measured_windows": 277,
+ "vsys_sensitivity_pct": 2.9867421582067344
+}

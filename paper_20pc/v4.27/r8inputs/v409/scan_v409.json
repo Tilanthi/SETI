@@ -1,0 +1,120 @@
+{
+ "population": {
+  "n_fine_line_windows": 281,
+  "n_co32_windows": 97,
+  "n_co32_stars": 34,
+  "n_co32_crossings": 11,
+  "n_repointed": 22,
+  "vintages": [
+   "released",
+   "reextracted",
+   "released_no_position_match"
+  ]
+ },
+ "shipped": {
+  "fixed_sky": [
+   6,
+   0.00036
+  ],
+  "scan150_sky": [
+   6,
+   0.0061
+  ],
+  "ladder_sky": [
+   6,
+   0.094
+  ],
+  "fixed_stel": [
+   4,
+   0.023
+  ],
+  "scan150_stel": [
+   6,
+   0.0084
+  ],
+  "ladder_stel": [
+   6,
+   0.131
+  ]
+ },
+ "released_products": {
+  "fixed_sky": [
+   7,
+   0.00017
+  ],
+  "scan150_sky": [
+   6,
+   0.028
+  ],
+  "ladder_sky": [
+   7,
+   0.095
+  ],
+  "fixed_stel": [
+   4,
+   0.054
+  ],
+  "scan150_stel": [
+   6,
+   0.039
+  ],
+  "ladder_stel": [
+   7,
+   0.131
+  ]
+ },
+ "repaired": {
+  "fixed_sky": [
+   4,
+   0.01908
+  ],
+  "scan150_sky": [
+   3,
+   0.8181
+  ],
+  "ladder_sky": [
+   4,
+   0.7826
+  ],
+  "fixed_stel": [
+   2,
+   0.3301
+  ],
+  "scan150_stel": [
+   3,
+   0.8886
+  ],
+  "ladder_stel": [
+   4,
+   0.8762
+  ],
+  "fixed_sky_ctrlmasked": [
+   4,
+   0.00264
+  ],
+  "ctrl_exceed_sky": 119,
+  "ctrl_exceed_sky_masked": 86
+ },
+ "fixed_sky_p": 0.01908,
+ "macros": {
+  "ClustCoThreeTwoNWin": "97",
+  "ClustCoThreeTwoNStar": "34",
+  "ClustCoThreeTwoNCross": "11",
+  "ClustFixedSkyObs": "4",
+  "ClustFixedSkyP": "0.019",
+  "ClustScanSkyObs": "3",
+  "ClustScanSkyP": "0.82",
+  "ClustLadderSkyObs": "4",
+  "ClustLadderSkyP": "0.78",
+  "ClustFixedStelObs": "2",
+  "ClustFixedStelP": "0.33",
+  "ClustScanStelP": "0.89",
+  "ClustLadderStelP": "0.88",
+  "ClustShippedFixedP": "0.00036",
+  "ClustShippedScanP": "0.0061",
+  "ClustShippedLadderP": "0.094",
+  "ClustShippedObs": "6",
+  "ClustNLostToRepair": "3",
+  "ClustNLostHRTen": "2"
+ }
+}

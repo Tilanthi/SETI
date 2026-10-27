@@ -1,0 +1,17 @@
+{
+    "_doc": "D33, 2026-10-03.  THE SECOND INDEPENDENT EXTERNAL TEST OF THIS PAPER'S ABSOLUTE FLUX SCALE.  Burton, MacGregor & Osten (2022) published millimetre photometry of epsilon Eridani from execution blocks this survey also searched.  In their 2015 January 12 m block the star sits 17.99 arcsec from the phase centre, near 0.7 of the primary-beam FWHM -- those windows are the ones this paper WITHHOLDS under its own rule (Sec. sec:extension) -- but the 2016 ACA executions place the star at the pointing centre, where no beam correction enters.  Over those four blocks our extractor's inverse-variance weighted continuum flux is compared with their flare-excluded quiescent value.  The comparison is in Band 6 and in the compact 7 m configuration, so it is independent of the AU Mic January check (Band 3, 12 m, geometry-free) in band, array and estimator.  The ratio and its error are RECOMPUTED by the paper's own generator from the four numbers below; nothing is transcribed except the measurements themselves.",
+    "_provenance": "ours: referee_r8/taucet/validate.py -> validate.json['epseri_aca'], the inverse-variance weighted mean over the four 2016 ACA execution blocks of the same stored spectra this survey searched (the array split is the physical one, the 2016 ACA scheduling blocks, asserted n == 4 there); theirs: Burton, MacGregor & Osten (2022), arXiv:2210.10818, flare-excluded quiescent point-source fit.  Recorded in referee_r8/TAUCET_LETTER.md Sec. 4 and DECISIONS_R8.md D33.  The tau Ceti Letter that commissioned this measurement is CANCELLED (D33); this single check is the only part of it that enters the paper.",
+    "star": "epsilon Eridani",
+    "band": "6",
+    "array": "ACA 7 m",
+    "n_blocks": 4,
+    "on_source_h": 0.22,
+    "ours_mJy": 0.869,
+    "ours_err_mJy": 0.241,
+    "published_uJy": 787.0,
+    "published_err_uJy": 45.0,
+    "published_ref": "Burton, MacGregor & Osten (2022)",
+    "published_method": "flare-excluded quiescent point-source fit to the visibilities (uvmodelfit)",
+    "twelve_m_offset_arcsec": 17.99,
+    "twelve_m_note": "their three published flares are all in the 2015 January 12 m block, where the star is 17.99 arcsec off axis; this paper withholds that stratum rather than correcting it, so it plays no part in this check"
+}
