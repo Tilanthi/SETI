@@ -1,0 +1,8 @@
+# SIMBAD TAP (simbad.cds.unistra.fr sim-tap, basic.rvz_*), the two hold-out stars that carry a threshold
+# crossing ONLY after the re-extraction on the repaired annulus (r27-holdout, row 53).  Queried 2026-10-27T16:55Z.
+# ALMA J153702.653-331924.92 has no catalogued radial velocity; the paper's resolver treats it as a
+# background source, bound only, v_sys = 0 (maskframe_v411 _FROZEN_VSYS from r9inputs/mask_r9.json), and
+# vsys_holdout_v412.json carries that 0.0.  CPD-72 2713 = the resolver's starrv value exactly.
+query_id,main_id,rvz_radvel,rvz_err,rvz_bibcode,rvz_qual
+"ALMA J153702.653-331924.92","ALMA J153702.653-331924.92",,,,
+"CP-72 2713","CPD-72  2713",7.985,0.018,"2021A&A...645A..30Z",A

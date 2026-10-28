@@ -1,0 +1,124 @@
+{
+ "s1": {
+  "n": 13,
+  "gb": 19.970857984,
+  "cpus": "32-47",
+  "maxgb": 4.567281664,
+  "dir": "/data/SETI/mine2026/lane_s1",
+  "phase": 1
+ },
+ "s2": {
+  "n": 13,
+  "gb": 19.250045952,
+  "cpus": "48-63",
+  "maxgb": 4.33513472,
+  "dir": "/data/SETI/mine2026/lane_s2",
+  "phase": 1
+ },
+ "s3": {
+  "n": 13,
+  "gb": 18.152404991999997,
+  "cpus": "64-79",
+  "maxgb": 3.5241984,
+  "dir": "/data/SETI/mine2026/lane_s3",
+  "phase": 1
+ },
+ "s4": {
+  "n": 13,
+  "gb": 17.768938496,
+  "cpus": "80-95",
+  "maxgb": 3.512434688,
+  "dir": "/data/SETI/mine2026/lane_s4",
+  "phase": 1
+ },
+ "s5": {
+  "n": 13,
+  "gb": 17.173226496,
+  "cpus": "96-111",
+  "maxgb": 3.231698944,
+  "dir": "/data/SETI/mine2026/lane_s5",
+  "phase": 1
+ },
+ "s6": {
+  "n": 13,
+  "gb": 16.664522752,
+  "cpus": "112-127",
+  "maxgb": 3.23168256,
+  "dir": "/data/SETI/mine2026/lane_s6",
+  "phase": 1
+ },
+ "s7": {
+  "n": 12,
+  "gb": 16.039688192,
+  "cpus": "128-143",
+  "maxgb": 2.888891392,
+  "dir": "/data/SETI/mine2026/lane_s7",
+  "phase": 1
+ },
+ "s8": {
+  "n": 12,
+  "gb": 15.556664320000001,
+  "cpus": "144-159",
+  "maxgb": 2.518597632,
+  "dir": "/data/SETI/mine2026/lane_s8",
+  "phase": 1
+ },
+ "m1": {
+  "n": 11,
+  "gb": 153.37634816,
+  "cpus": "160-175",
+  "maxgb": 19.86738688,
+  "dir": "/data/SETI/mine2026/lane_m1",
+  "phase": 1
+ },
+ "m2": {
+  "n": 11,
+  "gb": 148.90951475199998,
+  "cpus": "176-191",
+  "maxgb": 19.744175104,
+  "dir": "/data/SETI/mine2026/lane_m2",
+  "phase": 1
+ },
+ "m3": {
+  "n": 10,
+  "gb": 137.346338816,
+  "cpus": "192-207",
+  "maxgb": 19.549654016,
+  "dir": "/data/SETI/mine2026/lane_m3",
+  "phase": 1
+ },
+ "l1": {
+  "n": 13,
+  "gb": 443.70021785599994,
+  "cpus": "32-63",
+  "maxgb": 40.459901952,
+  "dir": "/data/SETI/mine2026/lane_l1",
+  "phase": 2
+ },
+ "l2": {
+  "n": 12,
+  "gb": 409.447461888,
+  "cpus": "64-95",
+  "maxgb": 40.110277632,
+  "dir": "/data/SETI/mine2026/lane_l2",
+  "phase": 2
+ },
+ "x1": {
+  "n": 11,
+  "gb": 660.469864448,
+  "cpus": "96-159",
+  "maxgb": 73.96036608,
+  "dir": "/data/SETI/mine2026/lane_x1",
+  "phase": 2
+ },
+ "r1": {
+  "n": 7,
+  "gb": 152.389931008,
+  "cpus": "208-223",
+  "maxgb": 23.984674816,
+  "dir": "/data/SETI/mine2026/lane_r1",
+  "phase": 2,
+  "fs": "root",
+  "note": "root-volume lane, cap 24 GB"
+ }
+}

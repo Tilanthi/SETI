@@ -1,0 +1,566 @@
+{
+ "generator": "edge_v423.py --flags",
+ "round": 960,
+ "rows": [
+  {
+   "eb": "A002_X1001fdc_X29ae",
+   "freq": 331.155856,
+   "drift": -3975.654541015625,
+   "cls": "edge-low",
+   "dmax": 3975.6544,
+   "ntrial": 136,
+   "star": "HD14055",
+   "cid": "L"
+  },
+  {
+   "eb": "A002_X107376c_X6126",
+   "freq": 330.712276,
+   "drift": -1725.3170166015625,
+   "cls": "interior",
+   "dmax": 3975.640080147726,
+   "ntrial": 136,
+   "star": "HD14055",
+   "cid": "HH03"
+  },
+  {
+   "eb": "A002_X10b22d7_X2445",
+   "freq": 230.790381,
+   "drift": -1421.7181396484375,
+   "cls": "interior",
+   "dmax": 2766.3615,
+   "ntrial": 39,
+   "star": "HD 23484 Gaia DR3 4856592239127350400",
+   "cid": "U20"
+  },
+  {
+   "eb": "A002_X1190de8_Xd526",
+   "freq": 344.467647,
+   "drift": -2588.6630859375,
+   "cls": "no grid recorded",
+   "dmax": null,
+   "ntrial": null,
+   "star": "HD 14055",
+   "cid": "U17"
+  },
+  {
+   "eb": "A002_X11adad7_X25c5e",
+   "freq": 345.456382,
+   "drift": 2584.05224609375,
+   "cls": "no grid recorded",
+   "dmax": null,
+   "ntrial": null,
+   "star": "HD 14055",
+   "cid": "U18"
+  },
+  {
+   "eb": "A002_X12209f7_X16edb",
+   "freq": 322.432491,
+   "drift": -708.6790161132812,
+   "cls": "interior",
+   "dmax": 3869.4404,
+   "ntrial": 273,
+   "star": "HD 69830",
+   "cid": "U22"
+  },
+  {
+   "eb": "A002_X12277ed_X178c6",
+   "freq": 321.200527,
+   "drift": 1311.94873046875,
+   "cls": "interior",
+   "dmax": 3854.5367,
+   "ntrial": 273,
+   "star": "HD 69830",
+   "cid": "U23"
+  },
+  {
+   "eb": "A002_X122b6ff_X1041e",
+   "freq": 357.281464,
+   "drift": -574.75,
+   "cls": "interior",
+   "dmax": 4285.6578,
+   "ntrial": 20,
+   "star": "eta Crv",
+   "cid": "U37"
+  },
+  {
+   "eb": "A002_X129754b_X6946",
+   "freq": 231.199845,
+   "drift": -2359.48974609375,
+   "cls": "interior",
+   "dmax": 2766.2009,
+   "ntrial": 42,
+   "star": "HD 31392",
+   "cid": "U21"
+  },
+  {
+   "eb": "A002_X6f1341_X1484",
+   "freq": 230.528379,
+   "drift": 142.07009887695312,
+   "cls": "interior",
+   "dmax": 2766.5266,
+   "ntrial": 116,
+   "star": "bet Pic",
+   "cid": "L"
+  },
+  {
+   "eb": "A002_X7116f1_X1785",
+   "freq": 230.527185,
+   "drift": -612.9692993164062,
+   "cls": "interior",
+   "dmax": 2766.5064,
+   "ntrial": 86,
+   "star": "bet Pic",
+   "cid": "L"
+  },
+  {
+   "eb": "A002_X75bfbf_X1430",
+   "freq": 345.540374,
+   "drift": -2008.190673828125,
+   "cls": "interior",
+   "dmax": 4150.0089,
+   "ntrial": 106,
+   "star": "eta Crv",
+   "cid": "L"
+  },
+  {
+   "eb": "A002_X899169_X1838",
+   "freq": 230.82523,
+   "drift": 1418.5205078125,
+   "cls": "interior",
+   "dmax": 2766.4604,
+   "ntrial": 49,
+   "star": "AU Mic",
+   "cid": "U08"
+  },
+  {
+   "eb": "A002_Xa42f75_X319",
+   "freq": 230.686369,
+   "drift": 2626.81787109375,
+   "cls": "interior",
+   "dmax": 2766.6925,
+   "ntrial": 62,
+   "star": "AU Mic",
+   "cid": "U09"
+  },
+  {
+   "eb": "A002_Xa95c04_X14cd",
+   "freq": 220.418512,
+   "drift": -825.5751953125,
+   "cls": "interior",
+   "dmax": 2644.9616,
+   "ntrial": 772,
+   "star": "HIP10679",
+   "cid": "L"
+  },
+  {
+   "eb": "A002_Xba460f_X7e6",
+   "freq": 231.033401,
+   "drift": 1098.4481201171875,
+   "cls": "interior",
+   "dmax": 2766.5912,
+   "ntrial": 44,
+   "star": "tau Cet",
+   "cid": "L"
+  },
+  {
+   "eb": "A002_Xc067f7_X822",
+   "freq": 345.559872,
+   "drift": 1052.315673828125,
+   "cls": "interior",
+   "dmax": 4149.528,
+   "ntrial": 118,
+   "star": "61 Vir",
+   "cid": "U01"
+  },
+  {
+   "eb": "A002_Xc079b5_X82f",
+   "freq": 346.313811,
+   "drift": 3181.552001953125,
+   "cls": "interior",
+   "dmax": 4149.5109,
+   "ntrial": 118,
+   "star": "61 Vir",
+   "cid": "U02"
+  },
+  {
+   "eb": "A002_Xc19d6f_X5706",
+   "freq": 230.422618,
+   "drift": -2701.22998046875,
+   "cls": "interior",
+   "dmax": 2766.7384,
+   "ntrial": 86,
+   "star": "HD 207129 Gaia DR3 6564091190988411520",
+   "cid": "U19"
+  },
+  {
+   "eb": "A002_Xc26103_X155a",
+   "freq": 230.511674,
+   "drift": -722.990234375,
+   "cls": "interior",
+   "dmax": 2768.7658,
+   "ntrial": 210,
+   "star": "HD 48370",
+   "cid": "L"
+  },
+  {
+   "eb": "A002_Xc66ce1_X1345",
+   "freq": 345.62056,
+   "drift": 793.6729125976562,
+   "cls": "interior",
+   "dmax": 4149.3071,
+   "ntrial": 132,
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "cid": "L"
+  },
+  {
+   "eb": "A002_Xc66ce1_Xaa9",
+   "freq": 230.834752,
+   "drift": 1088.581787109375,
+   "cls": "interior",
+   "dmax": 2766.3784,
+   "ntrial": 42,
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "cid": "U33"
+  },
+  {
+   "eb": "A002_Xc6a3db_X7b5b",
+   "freq": 345.478187,
+   "drift": 3334.977783203125,
+   "cls": "interior",
+   "dmax": 4149.2978,
+   "ntrial": 132,
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "cid": "L"
+  },
+  {
+   "eb": "A002_Xc7fa6f_X28a8",
+   "freq": 224.742189,
+   "drift": -569.3031005859375,
+   "cls": "interior",
+   "dmax": 2688.0,
+   "ntrial": 3,
+   "star": "BD05 1668",
+   "cid": "U10"
+  },
+  {
+   "eb": "A002_Xc7fa6f_X28a8",
+   "freq": 226.742189,
+   "drift": -593.3031005859375,
+   "cls": "interior",
+   "dmax": 2712.0,
+   "ntrial": 3,
+   "star": "BD05 1668",
+   "cid": "U11"
+  },
+  {
+   "eb": "A002_Xc7fa6f_X28a8",
+   "freq": 240.101561,
+   "drift": -761.3030395507812,
+   "cls": "interior",
+   "dmax": 2880.0,
+   "ntrial": 3,
+   "star": "BD05 1668",
+   "cid": "U12"
+  },
+  {
+   "eb": "A002_Xc7fa6f_X28a8",
+   "freq": 242.195311,
+   "drift": 3452.0908203125,
+   "cls": "edge-high",
+   "dmax": 2904.0,
+   "ntrial": 3,
+   "star": "BD05 1668",
+   "cid": "U13"
+  },
+  {
+   "eb": "A002_Xcf525f_X5aa4",
+   "freq": 346.509896,
+   "drift": 1223.9588623046875,
+   "cls": "interior",
+   "dmax": 4151.8287,
+   "ntrial": 45,
+   "star": "CD-57 1054",
+   "cid": "U14"
+  },
+  {
+   "eb": "A002_Xd0e450_X259b",
+   "freq": 346.245404,
+   "drift": -4623.34619140625,
+   "cls": "edge-low",
+   "dmax": 4623.346248925819,
+   "ntrial": 138,
+   "star": "TRAPPIST-1",
+   "cid": "HH02"
+  },
+  {
+   "eb": "A002_Xd9668b_X3a90",
+   "freq": 241.751236,
+   "drift": -1625.467529296875,
+   "cls": "interior",
+   "dmax": 2901.225,
+   "ntrial": 256,
+   "star": "bet Pic",
+   "cid": "U35"
+  },
+  {
+   "eb": "A002_Xd9668b_X841a",
+   "freq": 230.87691,
+   "drift": 1681.591552734375,
+   "cls": "interior",
+   "dmax": 2760.2251,
+   "ntrial": 74,
+   "star": "GJ 849",
+   "cid": "U15"
+  },
+  {
+   "eb": "A002_Xd9668b_Xa9df",
+   "freq": 241.836658,
+   "drift": -692.3801879882812,
+   "cls": "interior",
+   "dmax": 2901.2247,
+   "ntrial": 256,
+   "star": "bet Pic",
+   "cid": "U36"
+  },
+  {
+   "eb": "A002_Xd98580_X3bf6",
+   "freq": 230.502079,
+   "drift": -50.17377853393555,
+   "cls": "interior",
+   "dmax": 2759.4888,
+   "ntrial": 77,
+   "star": "HD 285968",
+   "cid": "L"
+  },
+  {
+   "eb": "A002_Xd9d7c7_X6fd2",
+   "freq": 230.635464,
+   "drift": 518.6729736328125,
+   "cls": "interior",
+   "dmax": 2759.982,
+   "ntrial": 79,
+   "star": "LHS 1140",
+   "cid": "U34"
+  },
+  {
+   "eb": "A002_Xd9d7c7_Xbb64",
+   "freq": 347.21794,
+   "drift": -2580.54150390625,
+   "cls": "interior",
+   "dmax": 4174.0655,
+   "ntrial": 96,
+   "star": "ALMA J153702653-33192492",
+   "cid": "U03"
+  },
+  {
+   "eb": "A002_Xdaef5a_Xdd9b",
+   "freq": 230.508058,
+   "drift": -123.92558288574219,
+   "cls": "interior",
+   "dmax": 2759.5605603396857,
+   "ntrial": 77,
+   "star": "HD 285968",
+   "cid": "HH01"
+  },
+  {
+   "eb": "A002_Xdb4b9a_X108f",
+   "freq": 230.510022,
+   "drift": -48.512733459472656,
+   "cls": "interior",
+   "dmax": 2759.5841,
+   "ntrial": 77,
+   "star": "HD 285968",
+   "cid": "L"
+  },
+  {
+   "eb": "A002_Xdb7ab7_X5b4e",
+   "freq": 230.51157,
+   "drift": -48.14070129394531,
+   "cls": "interior",
+   "dmax": 2759.6027,
+   "ntrial": 77,
+   "star": "HD 285968",
+   "cid": "L"
+  },
+  {
+   "eb": "A002_Xe45e29_Xb7d4",
+   "freq": 219.453785,
+   "drift": -1147.4417724609375,
+   "cls": "interior",
+   "dmax": 2635.026,
+   "ntrial": 76,
+   "star": "HD110411",
+   "cid": "U24"
+  },
+  {
+   "eb": "A002_Xf5d76d_X32f1",
+   "freq": 115.260644,
+   "drift": -1362.13623046875,
+   "cls": "off grid",
+   "dmax": 1383.1263,
+   "ntrial": 31,
+   "star": "bet Pic",
+   "cid": "L"
+  },
+  {
+   "eb": "A002_Xf8f6a9_X10359",
+   "freq": 217.729244,
+   "drift": -983.4454956054688,
+   "cls": "interior",
+   "dmax": 2604.1347,
+   "ntrial": 79,
+   "star": "ALMA J153702653-33192492",
+   "cid": "U04"
+  },
+  {
+   "eb": "A002_Xf8f6a9_X10359",
+   "freq": 218.671139,
+   "drift": -2023.376220703125,
+   "cls": "interior",
+   "dmax": 2631.1347,
+   "ntrial": 79,
+   "star": "ALMA J153702653-33192492",
+   "cid": "U05"
+  },
+  {
+   "eb": "A002_Xfe62c1_X398",
+   "freq": 216.184432,
+   "drift": -2198.18212890625,
+   "cls": "interior",
+   "dmax": 2603.8606,
+   "ntrial": 79,
+   "star": "ALMA J153702653-33192492",
+   "cid": "U06"
+  },
+  {
+   "eb": "A002_Xfe62c1_X398",
+   "freq": 218.872908,
+   "drift": 2372.5087890625,
+   "cls": "interior",
+   "dmax": 2630.8606,
+   "ntrial": 79,
+   "star": "ALMA J153702653-33192492",
+   "cid": "U07"
+  },
+  {
+   "eb": "A002_Xff0235_X4a6d",
+   "freq": 344.269746,
+   "drift": -2055.5126953125,
+   "cls": "interior",
+   "dmax": 4141.3825,
+   "ntrial": 129,
+   "star": "CP-72 2713",
+   "cid": "A01"
+  },
+  {
+   "eb": "A002_Xff0235_X8392",
+   "freq": 230.522151,
+   "drift": -18.935808181762695,
+   "cls": "interior",
+   "dmax": 2766.3112,
+   "ntrial": 167,
+   "star": "ALMA J153702653-33192492",
+   "cid": "L"
+  },
+  {
+   "eb": "A002_Xff0235_X8c42",
+   "freq": 331.010135,
+   "drift": -763.9151611328125,
+   "cls": "interior",
+   "dmax": 3975.5406,
+   "ntrial": 135,
+   "star": "HD170773",
+   "cid": "U32"
+  },
+  {
+   "eb": "A002_Xff0235_X8c42",
+   "freq": 331.010136,
+   "drift": -763.9151611328125,
+   "cls": "interior",
+   "dmax": 3975.5406,
+   "ntrial": 135,
+   "star": "HD170773",
+   "cid": "L"
+  },
+  {
+   "eb": "A002_Xff0235_X99ed",
+   "freq": 332.08403,
+   "drift": -30.1922607421875,
+   "cls": "interior",
+   "dmax": 3975.384341559758,
+   "ntrial": 132,
+   "star": "CP-72 2713",
+   "cid": "HH06"
+  },
+  {
+   "eb": "A002_Xff294f_Xaf70",
+   "freq": 331.657036,
+   "drift": -3296.471923828125,
+   "cls": "interior",
+   "dmax": 3975.2467,
+   "ntrial": 119,
+   "star": "HD 10647",
+   "cid": "U16"
+  },
+  {
+   "eb": "A002_Xff45a6_X10ca8",
+   "freq": 345.633836,
+   "drift": 4195.1728515625,
+   "cls": "edge-high",
+   "dmax": 4141.4566,
+   "ntrial": 128,
+   "star": "HD161868",
+   "cid": "U31"
+  },
+  {
+   "eb": "A002_Xff99e1_X24be0",
+   "freq": 331.707762,
+   "drift": 1103.779296875,
+   "cls": "interior",
+   "dmax": 3975.6914,
+   "ntrial": 136,
+   "star": "HD14055",
+   "cid": "U26"
+  },
+  {
+   "eb": "A002_Xff99e1_X2b2ee",
+   "freq": 344.700699,
+   "drift": -2425.631591796875,
+   "cls": "interior",
+   "dmax": 4141.6848,
+   "ntrial": 141,
+   "star": "HD14055",
+   "cid": "U27"
+  },
+  {
+   "eb": "A002_Xff99e1_X2c3bb",
+   "freq": 345.525611,
+   "drift": 4184.064453125,
+   "cls": "edge-high",
+   "dmax": 4141.6814,
+   "ntrial": 142,
+   "star": "HD14055",
+   "cid": "U28"
+  },
+  {
+   "eb": "A002_Xfff3d8_Xd46",
+   "freq": 331.769922,
+   "drift": -3857.32470703125,
+   "cls": "interior",
+   "dmax": 3975.6815,
+   "ntrial": 136,
+   "star": "HD14055",
+   "cid": "U29"
+  },
+  {
+   "eb": "A002_Xfffde1_X3835",
+   "freq": 345.009905,
+   "drift": 1768.6046142578125,
+   "cls": "interior",
+   "dmax": 4141.6687,
+   "ntrial": 142,
+   "star": "HD14055",
+   "cid": "U30"
+  }
+ ]
+}

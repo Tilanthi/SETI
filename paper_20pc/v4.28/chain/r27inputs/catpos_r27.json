@@ -1,0 +1,113 @@
+{
+ "note": "Catalogue-row star positions for the 12 census rows that pbcat_v408.json does not carry (the three eps Eri blocks added to the census after v4.08). Read from the supplying extraction log of each block; identical across that block's windows. Written by r27-pick for posjoin_r27.py.",
+ "rows": [
+  {
+   "star_name": "eps Eri",
+   "eb": "A002_X99c183_X4f1e",
+   "flo_GHz": "215.103264",
+   "fhi_GHz": "216.837639",
+   "star_ra": 53.228555,
+   "star_dec": -9.458174,
+   "source": "/data/SETI/targets/eps_Eri_B6/logs/process.log: the extractor's own \"<star> at RA= Dec=\" line (6 dp, ~0.02 arcsec)"
+  },
+  {
+   "star_name": "eps Eri",
+   "eb": "A002_X99c183_X4f1e",
+   "flo_GHz": "217.352956",
+   "fhi_GHz": "219.087331",
+   "star_ra": 53.228555,
+   "star_dec": -9.458174,
+   "source": "/data/SETI/targets/eps_Eri_B6/logs/process.log: the extractor's own \"<star> at RA= Dec=\" line (6 dp, ~0.02 arcsec)"
+  },
+  {
+   "star_name": "eps Eri",
+   "eb": "A002_Xe539c7_X12189",
+   "flo_GHz": "229.112260",
+   "fhi_GHz": "230.837846",
+   "star_ra": 53.227206,
+   "star_dec": -9.458145,
+   "source": "/data/SETI/targets/GaiaDR3_5164707970261890560_B6_EB_X12189/logs/extract_spw[0-3].log: the extractor's own \"<star> at RA= Dec=\" line (6 dp, ~0.02 arcsec)"
+  },
+  {
+   "star_name": "eps Eri",
+   "eb": "A002_Xb9c01c_X2004",
+   "flo_GHz": "229.618873",
+   "fhi_GHz": "231.459205",
+   "star_ra": 53.22807,
+   "star_dec": -9.458164,
+   "source": "/data/SETI/targets/GaiaDR3_5164707970261890560_B6_EB_X2004/logs/extract_spw[0-3].log: the extractor's own \"<star> at RA= Dec=\" line (6 dp, ~0.02 arcsec)"
+  },
+  {
+   "star_name": "eps Eri",
+   "eb": "A002_X99c183_X4f1e",
+   "flo_GHz": "229.652822",
+   "fhi_GHz": "231.377920",
+   "star_ra": 53.228555,
+   "star_dec": -9.458174,
+   "source": "/data/SETI/targets/eps_Eri_B6/logs/process.log: the extractor's own \"<star> at RA= Dec=\" line (6 dp, ~0.02 arcsec)"
+  },
+  {
+   "star_name": "eps Eri",
+   "eb": "A002_Xe539c7_X12189",
+   "flo_GHz": "231.560720",
+   "fhi_GHz": "233.388845",
+   "star_ra": 53.227206,
+   "star_dec": -9.458145,
+   "source": "/data/SETI/targets/GaiaDR3_5164707970261890560_B6_EB_X12189/logs/extract_spw[0-3].log: the extractor's own \"<star> at RA= Dec=\" line (6 dp, ~0.02 arcsec)"
+  },
+  {
+   "star_name": "eps Eri",
+   "eb": "A002_Xb9c01c_X2004",
+   "flo_GHz": "231.579086",
+   "fhi_GHz": "233.407211",
+   "star_ra": 53.22807,
+   "star_dec": -9.458164,
+   "source": "/data/SETI/targets/GaiaDR3_5164707970261890560_B6_EB_X2004/logs/extract_spw[0-3].log: the extractor's own \"<star> at RA= Dec=\" line (6 dp, ~0.02 arcsec)"
+  },
+  {
+   "star_name": "eps Eri",
+   "eb": "A002_X99c183_X4f1e",
+   "flo_GHz": "232.100938",
+   "fhi_GHz": "233.835313",
+   "star_ra": 53.228555,
+   "star_dec": -9.458174,
+   "source": "/data/SETI/targets/eps_Eri_B6/logs/process.log: the extractor's own \"<star> at RA= Dec=\" line (6 dp, ~0.02 arcsec)"
+  },
+  {
+   "star_name": "eps Eri",
+   "eb": "A002_Xe539c7_X12189",
+   "flo_GHz": "244.059364",
+   "fhi_GHz": "245.887489",
+   "star_ra": 53.227206,
+   "star_dec": -9.458145,
+   "source": "/data/SETI/targets/GaiaDR3_5164707970261890560_B6_EB_X12189/logs/extract_spw[0-3].log: the extractor's own \"<star> at RA= Dec=\" line (6 dp, ~0.02 arcsec)"
+  },
+  {
+   "star_name": "eps Eri",
+   "eb": "A002_Xb9c01c_X2004",
+   "flo_GHz": "244.078717",
+   "fhi_GHz": "245.906842",
+   "star_ra": 53.22807,
+   "star_dec": -9.458164,
+   "source": "/data/SETI/targets/GaiaDR3_5164707970261890560_B6_EB_X2004/logs/extract_spw[0-3].log: the extractor's own \"<star> at RA= Dec=\" line (6 dp, ~0.02 arcsec)"
+  },
+  {
+   "star_name": "eps Eri",
+   "eb": "A002_Xe539c7_X12189",
+   "flo_GHz": "246.059147",
+   "fhi_GHz": "247.887272",
+   "star_ra": 53.227206,
+   "star_dec": -9.458145,
+   "source": "/data/SETI/targets/GaiaDR3_5164707970261890560_B6_EB_X12189/logs/extract_spw[0-3].log: the extractor's own \"<star> at RA= Dec=\" line (6 dp, ~0.02 arcsec)"
+  },
+  {
+   "star_name": "eps Eri",
+   "eb": "A002_Xb9c01c_X2004",
+   "flo_GHz": "246.078659",
+   "fhi_GHz": "247.906784",
+   "star_ra": 53.22807,
+   "star_dec": -9.458164,
+   "source": "/data/SETI/targets/GaiaDR3_5164707970261890560_B6_EB_X2004/logs/extract_spw[0-3].log: the extractor's own \"<star> at RA= Dec=\" line (6 dp, ~0.02 arcsec)"
+  }
+ ]
+}

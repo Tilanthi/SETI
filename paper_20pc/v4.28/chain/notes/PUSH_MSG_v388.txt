@@ -1,0 +1,67 @@
+paper v3.88 -- the prospective epoch extension
+
+123 public in-scope execution blocks that the frozen survey never searched
+were found and searched. They existed because make_worklist.py had been
+built against the v3.43-era archive map (102 member OUS, 448 progenitors);
+the v3.81 map (152 OUS, 656) exposed them. They were searched with the
+frozen pipeline AFTER the detection statistic and the molecular-line mask
+were fixed.
+
+THEY ARE DELIBERATELY NOT MERGED INTO THE SCIENCE SAMPLE. Every statistic
+in this paper rests on a denominator and a candidate list fixed before the
+data were examined, and merging would destroy that property. The frozen
+sample is unchanged; the new data is reported as a prospective extension
+(new sec:extension) with its own null, its own generated table, and its
+own released file, and the Data Availability statement says why.
+
+The survey's own withholding rule was applied rather than bypassed: all 32
+eps Eri windows in the campaign are Band 6, where the star sits near 0.7
+primary-beam FWHM and the Gaussian beam correction does not hold, so all
+are withheld exactly as in the frozen sample. That leaves 115 blocks, 463
+windows (67 Class A), 16 stars, 16 systems, 57.6 GHz.
+
+Three results:
+1. The departure from exchangeability REPRODUCES on data the statistic had
+   never seen: median add-one rank 0.409 over 463 windows where 0.5 is
+   expected, D = 0.116. A third independent measurement after the hold-out
+   (0.429) and the radius analysis (0.437), and the strongest support the
+   paper has for using the spatial rank as a screen and never as a
+   significance.
+2. The positive control recovers: 3 windows reach stage 1 and all three
+   are the beta Pictoris disc in CO(1-0), T* = 23.17 / 19.82 / 19.39
+   against ring maxima below 6.21, within 8.8-9.0 MHz of the transition,
+   in three DIFFERENT previously unsearched execution blocks.
+3. No new unattributed event: 13 threshold crossings (2.81 per cent), 4
+   rank-first against 1.3 expected, 0 unattributed against 0.21 expected
+   on the 78 windows whose control maximum reaches the trigger. The
+   paper's unattributed count remains 4.
+
+The epoch gain is small and is reported as such: systems with more than
+one searched epoch 55 -> 56 of 82; single-epoch systems 27 -> 26. That
+matches the prediction S6.4 item (2) made before the campaign ran, and
+item (2) now records that it has been acted on in part.
+
+Manuscript changes: new sec:extension; new generated tab:extension whose
+frozen column is recomputed from the released catalogue by the same
+definition applied to the extension and cross-asserted against
+NStageOneWin / NStageOneLine / NStageOneUnattrib; one abstract sentence
+paid for by ten trims elsewhere; the exchangeability paragraph now cites
+its third measurement; S6.4 item 2 and the conclusions updated; and
+export_extension.json released separately.
+
+Gates: 47 pages, 0 errors / 0 undefined / 0 multiply-defined / 0 overfull
+/ 0 Type 3, 29 underfull, 1149 macros 0 unused, abstract 1912/1920 on BOTH
+counters, clean regeneration 90/90 byte-identical, number audit 49/49,
+catalogue self-sufficiency 36/36, roundcollide 46/46, xrefcheck 0
+misplaced, arXiv set 87 items.
+
+Traps: the v387->v388 rename orphaned tab_falsealarm_v387.tex and only the
+clean-regeneration test caught it; the two abstract counters disagreed
+again (source 1917 vs PDF 1926, and the PDF is what arXiv reads); a first
+draft of tab:extension used one macro for two different frozen quantities.
+
+Campaign state: 121 of 174 unique blocks searched at this snapshot and
+still running. 13 blocks have no archive calibration, 11 fail the legacy
+Cycle 0/1 scriptForCalibration replay, 1 is infeasible on this host -- all
+three closed by author decision, so the reachable population is about 149
+of 174 and any coverage statement must use that denominator.

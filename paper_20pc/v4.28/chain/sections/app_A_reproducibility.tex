@@ -1,0 +1,185 @@
+%% APPENDIX A -- spectral response, frequency conventions, primary-beam response.
+%% Owner: appendix-triage.  Carries \label{app:conventions} (cited by
+%% 04_method.tex) and \label{app:pbresp}.
+\section{Spectral response, frequency conventions and the primary-beam
+response}
+\label{app:conventions}
+
+%% The single-column figure of the three-point Hanning response against
+%% sub-channel phase is removed; its numbers are in the peak-channel
+%% paragraph below.  QUEUE_integrate.md entry S6: make_all.sh must stop
+%% running make_fig_hanning.py and figorphan.py must carry
+%% hanning_response.pdf in PENDING, or the figure gate fails.
+
+\subsection{Frequency frames, linewidth and smearing}
+%% (subsection label retired: nothing cites it)
+
+Every frequency axis here is \emph{topocentric}, as the correlator delivers
+it; velocities enter only at vetting, where the line mask carries each
+crossing to the stellar frame (Appendix~\ref{app:linemask}). The native
+channel width is the linewidth convention for every threshold:
+EIRP$_{\rm trig}$ is the minimum \emph{total} power of a channel-confined
+carrier, never a spectral power density, and spreading it over $N$ channels
+lowers the statistic as $N^{\ScNBroadExp}$, so a feature as wide as the widest
+line these fields resolve (\ScNBroadChan{} channels) must carry
+\ScNBroadRatio$\times$ a carrier's power. The Hz-resolution surveys' limits
+are total powers in the same sense, which makes the axes of
+Fig.~\ref{fig:context}(a) commensurable.
+
+ALMA applies online Hanning smoothing by default \citep{ALMAHandbook}, so
+neighbouring channels are correlated: for the $0.25/0.5/0.25$ kernel
+$\rho_1=\HanRhoOneFrac=\HanRhoOne$, $\rho_2=\HanRhoTwo$ and
+$\sigma_{\rm smoothed}/\sigma_{\rm raw}=\HanSigRatio$, and the peak
+channel holds \HanBest{} of an unresolved carrier's flux at a channel centre
+and \HanWorst{} on a boundary, a median \HanMed{} over sub-channel phase.
+\emph{That loss enters the limits exactly once; the thresholds are free of it
+and the limits are not.} A window's trigger flux is the bare
+$\LtCommonSnr\sigma$ of its own spectrum, so the \emph{total} power of a
+channel-confined carrier set against it would be optimistic by
+$\times\HanFacBest$--$\times\HanFacWorst$. The injected carriers are not set
+against it in that way: each is deposited with the correlator's own channel
+response, at a sub-channel phase drawn afresh, and recovered through the same
+trigger, which reads the peak channel. The measured completeness therefore
+already contains the loss, and factorises into it exactly:
+$\EirpNinetyMultA\,P_{\rm trig}$ is $\times\RpRespFac$ for the channel
+response and $\times\RpMarginNinety$ for the margin a peak channel needs
+above the nominal trigger for nine carriers in ten to return. So
+$P_{\rm trig}$, the sensitivity $S_{\min}$ below and the filled symbols of
+Fig.~\ref{fig:context}(a) are nominal throughout, which is what makes them
+commensurable with other programmes' detection thresholds, while
+$\mathrm{EIRP}_{90}$ carries the correction once.
+That factor is $1/\InjDepMean$, the phase-mean peak-channel share a deposited
+tone keeps, \InjShortPct{} per cent short of the exact response's
+\InjRespMean{}, so the completeness is conservative by that much.
+
+\emph{Intra-integration smearing, which the injections do not model,} is
+divided out of every limit once as $\eta_{\rm smear}$, the mean channel
+response over the sweep within one integration; it exceeds one per cent in
+\NmRespNApplied, reaching $\times\SmcFacWorst$, and is measured for
+\SmcNMeas{} of the \NWindows{} windows and bounded for the other \SmcNBound{}
+at \SmcDtCeil\,s, the longest integration delivered. Re-scoring the
+\SmcValNWin{} injected windows with every tone de-rated by its own
+$\eta_{\rm smear}$ gives a penalty never larger than the one applied, so the
+correction errs the safe way; the full treatment is in
+\texttt{documentation/\allowbreak appendix\_A\_smearing.md} of the data archive
+\citep{SIdeposit}.
+
+\subsection{The primary-beam response}
+\label{app:pbresp}
+
+The sensitivity quoted for a window is $S_{\min}=5\sigma/A$, where $A$ is the
+primary-beam response at the star's offset from the phase centre. Archival
+fields are pointed at catalogue positions, so these high-proper-motion stars
+can sit well off axis -- a median \PbOffMed$''$ and at most \BmOffMax$''$
+over the \PbNWin{} windows, $A$ falling to \BmRespMin{} and below $0.9$ on
+\BmNBelowNine{} -- each a J2000 pointing on a fast-moving star rather than an
+error.
+
+\emph{The response applied is a Gaussian of the full width the observatory
+documents}, $\RingPbCoef\,\lambda/D$ \citep{ALMAHandbook}, at each window's
+own dish diameter. It matches the blocked-aperture response \textsc{casa}
+applies \citep{CASA2022} to \BmDocAiryPct{} per cent in width; the two part
+company with offset, which sets the retention rule of \S\ref{sec:sample}, and
+\emph{the furthest census window lies at $\BmCensusWorstC\,\lambda/D$, where
+they agree to \BmCensusWorstPct{} per cent, the largest beam-model uncertainty
+any sensitivity here carries.}
+
+
+
+\emph{The correction is applied once}: $S_{\min}=5\sigma/A$ closes on all
+\PbSminClosed{} catalogued rows to \PbSminWorstRes, and to \PbSminIndepRes{}
+on the \PbSminIndep{} whose $A$ is not back-solved from $S_{\min}$, while the
+statistic, ranks and attribution are ratios within one window, in which $A$
+divides out.
+
+\emph{The annual parallax is measured rather than modelled}: a carrier
+injected at the full apparent position of the \SensNReextWin{} furthest-out
+windows and recovered from the same visibilities returns the normalised dirty
+beam, \SensPxSmallMeas{} against a predicted \SensPxSmallPred{} at
+\SensPxSmallBeams{} of a beam and \SensPxLargeMeas{} against
+\SensPxLargePred{} at \SensPxLargeBeams, so a limit corrected by the model is
+shallower than it need be. $\epsilon$\,Eridani, with \BmEpsNOff{} of its
+\BmEpsNWin{} windows $\BmEpsCLo$--$\BmEpsCHi\,\lambda/D$ off axis and the
+largest parallax in the search, has no parallax record, so its limit is
+optimistic by at most \BmEpsPxBoundPct{} per cent.
+
+\emph{A component of a bound pair does not travel in a straight line, and the
+propagation assumes it does.} \OmNComponent{} of the \OmNStar{} searched
+positions have a companion within \OmRadius{} arcsec \citep{wds,orb6}, the
+displacement taken from a visual orbit or bounded from the separation, with
+masses from \citet{pecaut2013}, or from the proper-motion anomaly
+\citep{kervella2022}; the largest is \OmWorstArcsec{} arcsec at \OmWorstStar,
+\OmWorstBeams{} of a beam, and no system's limit moves by more than
+\OmSysMovedMaxPct{} per cent. The exception is \OmFlagStars, whose solutions
+are disturbed with no companion and no Hipparcos epoch, so the \OmNWinFlag{}
+windows of those \OmNFlag{} stars carry limits optimistic by an unmeasured
+amount.
+
+%% Carried forward: the UV Ceti worked example (flux -> EIRP) is out of this
+%% appendix because two of its four numbers had no macro behind them.  If a
+%% worked example is wanted back it needs three: the flux density, the implied
+%% EIRP and the distance used.  It is the clearest single verification aid the
+%% paper could carry.  \label{app:repro} and the transmitter-power benchmark
+%% are both resolved: nothing cites the label any more, and exactly one
+%% benchmark survives, in Sec. 6.
+%% tab:blockledger lives here rather than in Sec. 3: it is a full-width
+%% table* worth 0.53 pp of the main text, and Sec. 3 carries its headline
+%% rows in prose and cites it.
+\begin{table*}
+\centering
+\scriptsize
+%% ★ v4.26 (r25-captions): 4 printed lines -> the author's 3.  DELETED because
+%% \S\ref{sec:sample}'s first paragraph says it in the same words -- "every
+%% sensitivity, every expectation and every limit here is computed over it"
+%% -- checked before deleting.  No macro and no \ref lost a citation site.
+\caption{\textbf{The survey ledger, part one: execution blocks and windows.}
+Each row carries its own number, and a group sums to the row whose number
+heads it. Hours are window-hours, so the classes partition the hours as they
+partition the windows. Rows~3.2 to 3.5 are the archival gap, over which no
+result is formed.}
+\label{tab:blockledger}
+\input{tab_blockledger}
+\end{table*}
+
+Table~\ref{tab:blockledger} accounts for every execution block the query
+exposed and Table~\ref{tab:counts} for every event; their itemisation, all
+\MtCountRows{} rows, accompanies this paper as data under the same row
+numbers. Three counts in the second table are \MtCrossA{} over three different
+sets -- the adopted ledger's Class~A crossings, the per-window catalogue's and
+the quality-passing ones -- and the first two differ on \FrNFlag{} rows, where
+a narrower-field reading falls on the other side of the trigger
+(Appendix~\ref{app:falsealarm}). The census's on-source time is
+\StTelHours\,h; planet counts are from the \SfHostCatalogue{} \SfHostTable{}
+table \citep{NEA2013}, accessed \SfHostDate.
+
+\begin{table*}
+\centering
+\scriptsize
+\caption{\textbf{The survey ledger, part two: events, dispositions and
+confirmation.} Every headline count is read from here; rows 2.2--2.4
+define each unattributed set.}
+\label{tab:counts}
+\input{tab_counts}
+\end{table*}
+
+%% ★★ 2026-10-08: THE ALMA PROJECT CODES, RESTORED AS A TABLE.
+%% They were taken out of the Acknowledgements as padding and then lived "in
+%% the data release"; there is no data release, so they were nowhere.  ALMA's
+%% data-use policy expects the codes to be traceable from the publication, so
+%% this is not optional -- but an appendix table satisfies the policy without
+%% putting \NProjCodes{} codes back into the front matter, which is what was
+%% objected to.  The fragment is generated by projcodes_v400.py and is the
+%% same list that resolves every block in Table~\ref{tab:blockledger}.
+\begin{table}
+\centering
+\scriptsize
+%% ★ v4.26 (r25-captions): 4 printed lines -> the author's 3.  The unbreakable
+%% \mbox is about a fifth of a column here, so this caption breaks badly and
+%% costs a whole line more than its character count suggests -- which is why
+%% the limit is measured in printed lines and not in characters.
+\caption{\textbf{The \NProjCodes{} ALMA proposals the searched blocks belong
+to}, as \mbox{ADS/JAO.ALMA\#\textit{code}}. Every census block belongs to
+one.\ProjCodeUnresClause}
+\label{tab:projcodes}
+\input{tab_projcodes_v400}
+\end{table}

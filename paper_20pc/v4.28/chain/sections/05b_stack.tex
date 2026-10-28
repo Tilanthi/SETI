@@ -1,0 +1,108 @@
+\subsection{A stellar-frame multi-epoch stacked search}
+\label{sec:stack}
+
+Combining the epochs of a star in that star's own rest frame deepens the
+limit. \EpMulti{} of the \NSystems{} surveyed systems hold more than one
+searched execution block. \SxStkStarCensus{} of the surveyed stars can be
+stacked, \SttNStkOneEb{} of them from blocks beyond the census. Over
+\SyStkNGroup{} stacked groups, \SyStkNEpochComb{} epoch-windows and
+\SyStkHours\,h the flux-density limit improves on each star's best single epoch
+by a median factor \SyStkGainMed{} and by \SyStkGainMax{} at most. A further
+\SxStkStarOutside{} stars, all control stars beyond 40\,pc, are stacked and
+excluded from those figures. \emph{A fixed stellar-frame frequency is not a
+fixed observed frequency, so the epochs are registered before they are added}.
+The barycentric term alone swings by a median \StkVcorrSwingMed\,km\,s$^{-1}$
+between the epochs of one star, many channels at the \StkRefChanKHz\,kHz
+Class~A width. Each epoch is therefore transformed to the stellar rest frame,
+divided by its own primary-beam response and combined by inverse variance over
+the channels of common stellar-frame coverage, keyed on the star's catalogued
+identity. The transform is verified on a real line, \StkPersistLineStar's,
+which \StkRegNEpoch{} epochs in \StkRegSpanD\,d observe
+\StkRegTopoKms\,km\,s$^{-1}$ -- \StkRegTopoChan{} channels -- apart and all
+place at one stellar-frame frequency to \FrEpochStelKms\,km\,s$^{-1}$. Every stacked limit is
+measured by injection into the stack itself and never read off a stacked
+spectrum as a threshold. The criterion is evaluated identically at the stacked
+control positions, so that the whole test's false-alarm rate is measured.
+\emph{The gain is $\sqrt{N_{\rm eff}}$ and not
+$\sqrt{N}$}, where $N_{\rm eff}=\sigma_{\min}^{2}\sum_e\sigma_e^{-2}$ is the
+equivalent number of equal-depth epochs. The median $N_{\rm eff}/N$ is
+\StkNeffFrac{} and the realised gain against $\sqrt{N}$ is \StkGainVsN. The
+shortfall is unequal epoch depth, so an epoch count alone misleads.
+
+\emph{The deepest stacked limit is Proxima Centauri's, and it is a Class~B
+limit.} Its \SxProxEbCensus{} census blocks are all coarse \ChanBModeMHz\,MHz
+windows. The stack therefore constrains an unresolved spectral excess,
+discriminates no drift and reaches $\mathrm{EIRP}_{90}=\SzProxEirpCensus$\,W.
+\emph{Every stacked limit holds only for an emitter steady in the stellar frame
+to within one of its own channels, and \PxPlanet{} does not satisfy that.} At
+\PxPorbD\,d about a star of \PxMassMsun\,M$_\odot$ the planet moves at
+\PxVorbKms\,km\,s$^{-1}$. These are the archive's default parameter set
+\citep{NEA2013}, for the planet of \citet{AngladaEscude2016} and a host mass
+agreeing with \citet{Kervella2017}. A transmitter on the planet therefore
+swings over \PxPPKms$\sin i$\,km\,s$^{-1}$, some \PxNChanWalk{} channels at
+$\sin i=1$. The stack cancels such a carrier instead of building it unless the
+orbit is seen nearly face-on ($\sin i\le\PxSiniMax$, \PxIsoPct{} per cent of
+randomly oriented orbits). Within a single block the same transmitter gains at most
+\PxBlockDvKms\,km\,s$^{-1}$, \PxBlockPct{} per cent of one channel. For that reason the
+single-epoch limit of $\PxEirpSingle$\,W -- the deepest single epoch in the
+archive, from a reserved block and not a census limit -- is the one that applies
+to it, and the deepest limit this survey places on the nearest plausible
+transmitter site. The same tolerance
+divides the sample. A fine-channel stack admits a far smaller stellar-frame
+excursion than a coarse one, so the coarse stacks buy reflex tolerance with
+bandwidth. No crossing of \S\ref{sec:etacrv} drifts slowly enough to survive a
+fine-channel stack, and the single-epoch limits of \S\ref{sec:excludes} are the
+ones that apply generally. \emph{\StkNSurvive{} groups pass the full criterion
+and both are known lines}: $\beta$~Pictoris carbon monoxide in two transitions.
+That is the astrophysical positive control of \S\ref{sec:bpicval}, passing in
+the stack as well. The survey's own $\pm\StkAttrKms$\,km\,s$^{-1}$ mask leaves
+\StkUnattrClause.
+
+%% ★ CUT HERE, round 25, to the referees' instruction "keep the method (one
+%% paragraph) and Proxima (one paragraph); delete the HD 161868 example and
+%% the beta Pic stacked-CO paragraph, which repeats Sec. 5.4".
+%%
+%% DELETED, with where each thing now lives:
+%%  * the HD 161868 worst-stack example (\StkWorstStar, \StkWorstN,
+%%    \StkWorstGain, \StkWorstNeff, \SzWorstSqrtNeff, \SzWorstNoise) -- an
+%%    illustration of the sqrt(N_eff) point, which is KEPT as the point.
+%%  * the realised-noise validation (\StkGainVsNeff, \StkMadZScatterPct,
+%%    \SzNoiseLo, \SzNoiseHi): a validation result, so it is NOT simply gone --
+%%    it belongs in the appendix with the rest of the stack validation, and is
+%%    queued for the appendix owner rather than dropped.  The claim it
+%%    supports ("the gain is sqrt(N_eff), not sqrt(N)") is weakened to exactly
+%%    what survives: the measured ratio against sqrt(N), \StkGainVsN.
+%%  * the beta Pic stacked-CO detail (\StkBpCoOne*/\StkBpCoTwo*,
+%%    \StkBpCrossKms, \StkBpCrossChan, \BpicDvCoHi here) -- Sec. 5.4 carries the
+%%    same control, and the RESULT (two groups pass, both known lines, none
+%%    unattributed) is kept in full, because deleting a result is not a length
+%%    saving.
+%%  * HD 285968's own rejection by its controls (\StkPersistLineZ,
+%%    \StkPersistLineCtrl).  The star itself stays: it is the registration
+%%    standard, which is method.
+%%  * Proxima's epoch provenance (\SxProxEbCensus, \SzProxEbSearched,
+%%    \SzProxEbHold), its N_eff breakdown (\StkProxNeff, \SxProxSqrtNeff,
+%%    \StkProxGain), \PxNEpoch/\PxFracSampled, \PxIncMaxDeg,
+%%    \StkProxDriftHzS, \StkProxDistPc, \SttDriftMinHzS/\SttDriftMinMin,
+%%    \SttNIncDisc.  The census-only figure \SzProxEirpCensus is KEPT and is
+%%    named as the set every other limit uses, which is the one distinction a
+%%    reader needs.
+%%  * \StkLimitGainMed and \StkNStar: the all-stars median gain, which the
+%%    census figures above already bound.
+%%
+%% NOTHING WEAKENED INTO A STRONGER CLAIM.  The two caveats in this subsection
+%% -- that a stacked limit holds only for a carrier steady to within one
+%% channel, and that the stack is not a test of the drifting crossings -- are
+%% both KEPT, and the sqrt(N_eff) qualification is kept with the one number
+%% that still supports it.
+%%
+%% ►► GATE CONSEQUENCES, all three handled in patches_cutmain.json:
+%%  * \StkMadZScatterPct leaves valuetwin's seven-per-cent COINCIDENCE group
+%%    (record G1);
+%%  * \PxFracSampled's COINCIDENCE entry goes stale and is deleted (record G4);
+%%  * \StkNStar leaves synmacro's nstar group (record G6), which is what
+%%    exposed a defect in that gate's own note.
+%%  * retire_macros --dry-run retires exactly FIVE macros across this whole
+%%    pass -- StkBpCoOneN, StkBpCoOneOff, StkBpCoOneZ, StkBpCoTwoOff,
+%%    StkBpCoTwoZ -- which are precisely the beta Pic stacked-CO detail the
+%%    brief instructed be deleted, and no gate or generator names any of them.

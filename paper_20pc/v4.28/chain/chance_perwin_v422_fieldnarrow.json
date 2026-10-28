@@ -1,0 +1,3654 @@
+{
+ "round": 310,
+ "drive": null,
+ "trigger": 5.0,
+ "e_trigger_released": 35.513671875,
+ "e_chance_released": 24.097309515698647,
+ "rows": [
+  {
+   "eb": "A002_Xe539c7_X12189",
+   "rms_mJy": 2.07984,
+   "star_snr": 4.5994,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 17,
+   "mask_attr_share": 0.04468325791855204,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xb9c01c_X2004",
+   "rms_mJy": 61.03812,
+   "star_snr": 3.8417,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 8,
+   "mask_attr_share": 0.04190981432360743,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X99c183_X4f1e",
+   "rms_mJy": 4.03079,
+   "star_snr": 4.3898,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 31,
+   "mask_attr_share": 0.04442558007923034,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xbaa732_X1627",
+   "rms_mJy": 13.50608,
+   "star_snr": 4.3676,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 21,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xba4d35_Xb3a3",
+   "rms_mJy": 10.13704,
+   "star_snr": 3.9513,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 21,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xba460f_X7e6",
+   "rms_mJy": 12.84357,
+   "star_snr": 5.198,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 22,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xb9cc97_X193f",
+   "rms_mJy": 15.14449,
+   "star_snr": 4.2606,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 17,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xb9cc97_X1734",
+   "rms_mJy": 12.83042,
+   "star_snr": 4.9755,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 15,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xb9cc97_X150a",
+   "rms_mJy": 14.14669,
+   "star_snr": 3.917,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 18,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xda2c82_X765d",
+   "rms_mJy": 14.20205,
+   "star_snr": 4.3307,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 31,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xdaef5a_X7167",
+   "rms_mJy": 12.94311,
+   "star_snr": 4.4827,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 10,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xdaef5a_X6873",
+   "rms_mJy": 9.30814,
+   "star_snr": 4.9481,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 38,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xdb3eb4_X899",
+   "rms_mJy": 15.0393,
+   "star_snr": 4.7551,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 22,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xdd0d37_X18197",
+   "rms_mJy": 9.82481,
+   "star_snr": 4.4475,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 28,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xdd0d37_X17f99",
+   "rms_mJy": 10.03989,
+   "star_snr": 4.102,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 36,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xdcf222_X4da7",
+   "rms_mJy": 11.69759,
+   "star_snr": 4.1461,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 33,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xdcbe57_X2dd3",
+   "rms_mJy": 11.15927,
+   "star_snr": 4.4229,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 42,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xdcad18_X305b",
+   "rms_mJy": 11.56991,
+   "star_snr": 4.5341,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 54,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xdc946c_X226",
+   "rms_mJy": 15.05899,
+   "star_snr": 4.6749,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 33,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xdc621b_X2bb0",
+   "rms_mJy": 13.17659,
+   "star_snr": 4.2403,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 25,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xce574d_X8706",
+   "rms_mJy": 1.56965,
+   "star_snr": 4.5901,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 47,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xce0587_Xe4d0",
+   "rms_mJy": 1.89446,
+   "star_snr": 4.2933,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 41,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xcda49e_Xdebb",
+   "rms_mJy": 1.57025,
+   "star_snr": 4.1514,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 36,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xc079b5_X82f",
+   "rms_mJy": 19.47754,
+   "star_snr": 5.9583,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 52,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xc079b5_X1ae",
+   "rms_mJy": 22.25224,
+   "star_snr": 4.6051,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 54,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xc074d4_X2e6",
+   "rms_mJy": 18.96467,
+   "star_snr": 4.6584,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 59,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xc067f7_X822",
+   "rms_mJy": 21.42891,
+   "star_snr": 5.0382,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 53,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X9db5ce_X224b",
+   "rms_mJy": 1.95031,
+   "star_snr": 4.5596,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 63,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd86f11_X584b",
+   "rms_mJy": 36.94632,
+   "star_snr": 4.6145,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 37,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd95042_X67d7",
+   "rms_mJy": 19.0024,
+   "star_snr": 4.3191,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 25,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd95042_X5feb",
+   "rms_mJy": 12.21622,
+   "star_snr": 4.9213,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 31,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd9668b_X88ad",
+   "rms_mJy": 12.22331,
+   "star_snr": 4.8877,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 43,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd9668b_X841a",
+   "rms_mJy": 11.16303,
+   "star_snr": 5.0904,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 32,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd9668b_X7c83",
+   "rms_mJy": 9.87704,
+   "star_snr": 4.5832,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 40,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd98580_X3bf6",
+   "rms_mJy": 13.29272,
+   "star_snr": 5.9557,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 111,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xda2c82_X7136",
+   "rms_mJy": 25.08295,
+   "star_snr": 4.7561,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 44,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xdb4b9a_X108f",
+   "rms_mJy": 13.50335,
+   "star_snr": 5.835,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 84,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xdb7ab7_X5b4e",
+   "rms_mJy": 11.40786,
+   "star_snr": 5.8682,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 84,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1237e23_Xdb0",
+   "rms_mJy": 2.80875,
+   "star_snr": 4.3842,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 7,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1240efd_X14e83",
+   "rms_mJy": 1.15789,
+   "star_snr": 3.7972,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 10,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1240efd_X14140",
+   "rms_mJy": 1.18872,
+   "star_snr": 4.0498,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 7,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1240efd_X13b03",
+   "rms_mJy": 1.25335,
+   "star_snr": 4.1742,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 7,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X12a079b_Xf640",
+   "rms_mJy": 1.02251,
+   "star_snr": 3.7488,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 14,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X129754b_X2b51b",
+   "rms_mJy": 1.02182,
+   "star_snr": 4.4974,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 8,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X129754b_X23b68",
+   "rms_mJy": 1.19354,
+   "star_snr": 4.1027,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 9,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X129754b_X2363e",
+   "rms_mJy": 0.98995,
+   "star_snr": 4.3117,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 8,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X129754b_X1a931",
+   "rms_mJy": 0.92611,
+   "star_snr": 4.0145,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 9,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X12925a3_Xa4b1",
+   "rms_mJy": 1.05564,
+   "star_snr": 4.2742,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 13,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X899169_X1838",
+   "rms_mJy": 1.90704,
+   "star_snr": 5.2213,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 24,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xa42f75_X319",
+   "rms_mJy": 1.3683,
+   "star_snr": 5.274,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 28,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X7d80c7_X15c6",
+   "rms_mJy": 1.40349,
+   "star_snr": 4.2611,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 22,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xcd97a1_X3f1e",
+   "rms_mJy": 1.98831,
+   "star_snr": 3.8955,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 18,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xcd97a1_X3f1e",
+   "rms_mJy": 1.98814,
+   "star_snr": 4.7119,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 21,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xc6fa08_X1053",
+   "rms_mJy": 81.88858,
+   "star_snr": 3.7673,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 0,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xc6e968_X1339",
+   "rms_mJy": 7.37656,
+   "star_snr": 4.5974,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 15,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xc6d2f9_X7060",
+   "rms_mJy": 11.03064,
+   "star_snr": 4.5469,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 14,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xc694dd_X41ca",
+   "rms_mJy": 11.64848,
+   "star_snr": 4.0967,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 18,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xc694dd_X3e5f",
+   "rms_mJy": 9.60817,
+   "star_snr": 4.5623,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 12,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xc68b3e_X107b",
+   "rms_mJy": 10.79059,
+   "star_snr": 4.0624,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 7,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xc67b7e_X1f16",
+   "rms_mJy": 10.84028,
+   "star_snr": 4.2151,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 13,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xc66ce1_Xaa9",
+   "rms_mJy": 7.74954,
+   "star_snr": 5.0439,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 24,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xc7111c_X61dc",
+   "rms_mJy": 32.17039,
+   "star_snr": 4.4528,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 57,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xc6c0d5_X121e",
+   "rms_mJy": 36.21927,
+   "star_snr": 4.5225,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 51,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xc6a3db_X7b5b",
+   "rms_mJy": 43.28974,
+   "star_snr": 5.0542,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 41,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xc66ce1_X1345",
+   "rms_mJy": 24.72427,
+   "star_snr": 5.582,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 48,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xc6141c_X3af0",
+   "rms_mJy": 29.98473,
+   "star_snr": 4.4471,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 49,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd0e450_Xc7a1",
+   "rms_mJy": 1.41169,
+   "star_snr": 4.6064,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 67,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd0e450_Xc008",
+   "rms_mJy": 1.41882,
+   "star_snr": 4.3519,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 73,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd0e450_X1e19",
+   "rms_mJy": 1.18157,
+   "star_snr": 4.9055,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 60,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xcccc19_X5564",
+   "rms_mJy": 1.26733,
+   "star_snr": 4.267,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 49,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xcccc19_X4dfa",
+   "rms_mJy": 1.4588,
+   "star_snr": 4.5554,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 62,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xcbc47c_Xd4",
+   "rms_mJy": 1.03037,
+   "star_snr": 4.8438,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 34,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xcbb583_Xb78",
+   "rms_mJy": 0.87625,
+   "star_snr": 4.4156,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 24,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xcbc47c_Xd4",
+   "rms_mJy": 1.02591,
+   "star_snr": 4.3678,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 38,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xcbb583_Xb78",
+   "rms_mJy": 0.84705,
+   "star_snr": 4.5267,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 45,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X12277ed_X178c6",
+   "rms_mJy": 2.87961,
+   "star_snr": 5.046,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 19,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X12235df_X8337",
+   "rms_mJy": 3.90561,
+   "star_snr": 3.9668,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 17,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X12235df_X7876",
+   "rms_mJy": 3.34418,
+   "star_snr": 4.4969,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 24,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X12209f7_X16edb",
+   "rms_mJy": 2.67173,
+   "star_snr": 4.2195,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 23,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X12209f7_X163ba",
+   "rms_mJy": 2.86267,
+   "star_snr": 4.6401,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 25,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1207c39_X9417",
+   "rms_mJy": 3.7483,
+   "star_snr": 4.4203,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 22,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X12277ed_X178c6",
+   "rms_mJy": 3.95307,
+   "star_snr": 4.3073,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 23,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X12235df_X8337",
+   "rms_mJy": 5.88577,
+   "star_snr": 4.7168,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 22,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X12235df_X7876",
+   "rms_mJy": 4.63963,
+   "star_snr": 4.6777,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 26,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X12209f7_X16edb",
+   "rms_mJy": 3.4232,
+   "star_snr": 5.2592,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 28,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X12209f7_X163ba",
+   "rms_mJy": 3.87075,
+   "star_snr": 4.4849,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 27,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1207c39_X9417",
+   "rms_mJy": 5.07662,
+   "star_snr": 4.3987,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 28,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X12277ed_X178c6",
+   "rms_mJy": 2.20609,
+   "star_snr": 4.2503,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 18,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X12235df_X8337",
+   "rms_mJy": 2.65557,
+   "star_snr": 4.3018,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 20,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X12235df_X7876",
+   "rms_mJy": 2.37679,
+   "star_snr": 4.7791,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 34,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X12209f7_X16edb",
+   "rms_mJy": 2.12915,
+   "star_snr": 4.1675,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 19,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X12209f7_X163ba",
+   "rms_mJy": 2.20706,
+   "star_snr": 4.0122,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 24,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1207c39_X9417",
+   "rms_mJy": 2.55445,
+   "star_snr": 4.799,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 25,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd09670_X1d79",
+   "rms_mJy": 1.61979,
+   "star_snr": 4.9297,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 40,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xcf196f_Xabc5",
+   "rms_mJy": 2.12555,
+   "star_snr": 4.258,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 36,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd09670_X1d79",
+   "rms_mJy": 1.66704,
+   "star_snr": 4.1845,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 31,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xcf196f_Xabc5",
+   "rms_mJy": 1.91477,
+   "star_snr": 4.621,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 25,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd9d7c7_X6fd2",
+   "rms_mJy": 9.61326,
+   "star_snr": 5.1363,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 42,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xda1250_X72ef",
+   "rms_mJy": 19.56221,
+   "star_snr": 4.6616,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 46,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xda1250_X6f6b",
+   "rms_mJy": 12.88099,
+   "star_snr": 4.4686,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 29,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xda2c82_X62d7",
+   "rms_mJy": 11.48074,
+   "star_snr": 4.837,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 34,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xc20718_X2fcf",
+   "rms_mJy": 13.76975,
+   "star_snr": 4.4229,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 33,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xc23361_Xb5c9",
+   "rms_mJy": 10.90464,
+   "star_snr": 4.4295,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 43,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xb0be8b_X785f",
+   "rms_mJy": 10.30222,
+   "star_snr": 3.8682,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 1,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xb0ebd1_X1855",
+   "rms_mJy": 6.01683,
+   "star_snr": 3.5086,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 1,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xc19d6f_X1c16",
+   "rms_mJy": 12.1374,
+   "star_snr": 4.5769,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 41,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xc19d6f_X5706",
+   "rms_mJy": 8.43422,
+   "star_snr": 5.4325,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 52,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xc19d6f_X19ce",
+   "rms_mJy": 10.86619,
+   "star_snr": 4.198,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 48,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xb28642_Xcff3",
+   "rms_mJy": 2.88616,
+   "star_snr": 3.5884,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 3,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X10b22d7_X2445",
+   "rms_mJy": 8.57171,
+   "star_snr": 5.5203,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 15,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X10b33b1_Xf94",
+   "rms_mJy": 8.10371,
+   "star_snr": 4.9717,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 14,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X10b22d7_X1d34",
+   "rms_mJy": 9.58233,
+   "star_snr": 3.9555,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 8,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X10b0d7d_X323f",
+   "rms_mJy": 11.20884,
+   "star_snr": 4.1671,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 12,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xb39557_X3789",
+   "rms_mJy": 4.10657,
+   "star_snr": 4.3174,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 4,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xb3d48f_X26f7",
+   "rms_mJy": 4.05867,
+   "star_snr": 4.0806,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 4,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff294f_Xc10b",
+   "rms_mJy": 30.07945,
+   "star_snr": 4.6235,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 68,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff294f_Xaf70",
+   "rms_mJy": 24.86678,
+   "star_snr": 5.1202,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 57,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff294f_X2db6",
+   "rms_mJy": 22.68516,
+   "star_snr": 4.8199,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 53,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xfffde1_Xffdf",
+   "rms_mJy": 1.88715,
+   "star_snr": 4.2921,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 54,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1171dca_X5df0",
+   "rms_mJy": 3.15821,
+   "star_snr": 4.5743,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 42,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff294f_Xc10b",
+   "rms_mJy": 26.09924,
+   "star_snr": 4.7994,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 41,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff294f_Xaf70",
+   "rms_mJy": 23.01789,
+   "star_snr": 4.7652,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 57,
+   "mask_attr_share": 0.06259946949602122,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xfffde1_Xffdf",
+   "rms_mJy": 1.81853,
+   "star_snr": 4.3901,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 48,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1171dca_X5df0",
+   "rms_mJy": 2.62994,
+   "star_snr": 4.8491,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 31,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xcf749a_X36e0",
+   "rms_mJy": 1.62157,
+   "star_snr": 4.5214,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 41,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xcf0c6b_X6513",
+   "rms_mJy": 1.69399,
+   "star_snr": 4.3416,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 43,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xb54d65_X727",
+   "rms_mJy": 6.24391,
+   "star_snr": 4.2254,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 4,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xb2f730_X5b37",
+   "rms_mJy": 3.41391,
+   "star_snr": 3.9617,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 7,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xb2e94e_X361a",
+   "rms_mJy": 2.8811,
+   "star_snr": 4.1182,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 6,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X75bfbf_X1430",
+   "rms_mJy": 6.43179,
+   "star_snr": 5.0126,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 42,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X122b6ff_X1041e",
+   "rms_mJy": 3.40408,
+   "star_snr": 3.973,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 8,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X11e10bc_X12662",
+   "rms_mJy": 1.51385,
+   "star_snr": 4.8902,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 62,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X11e10bc_X12662",
+   "rms_mJy": 3.58969,
+   "star_snr": 4.8275,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 112,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X122b6ff_X1041e",
+   "rms_mJy": 8.21088,
+   "star_snr": 4.0915,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 19,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X11e10bc_X12662",
+   "rms_mJy": 1.64562,
+   "star_snr": 4.5308,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 65,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X122b6ff_X1041e",
+   "rms_mJy": 3.62129,
+   "star_snr": 4.152,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 12,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X11e10bc_X12662",
+   "rms_mJy": 1.85301,
+   "star_snr": 4.2364,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 77,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X122b6ff_X1041e",
+   "rms_mJy": 4.09743,
+   "star_snr": 5.0059,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 11,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X128b034_X11ca9",
+   "rms_mJy": 186.07122,
+   "star_snr": 4.4573,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 116,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X12277ed_X22e53",
+   "rms_mJy": 261.77609,
+   "star_snr": 4.7949,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 104,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X122b6ff_X18e15",
+   "rms_mJy": 229.02015,
+   "star_snr": 4.7127,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 127,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X10a341d_X82d2",
+   "rms_mJy": 14.62183,
+   "star_snr": 3.9614,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 10,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X10a341d_Xdc45",
+   "rms_mJy": 27.34031,
+   "star_snr": 3.7973,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 0,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X10a513c_X3b99",
+   "rms_mJy": 16.34038,
+   "star_snr": 4.2827,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 8,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X10a513c_X389e",
+   "rms_mJy": 13.64322,
+   "star_snr": 4.5804,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 14,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X10b33b1_X1ca0",
+   "rms_mJy": 8.83238,
+   "star_snr": 4.1092,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 10,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd9668b_X3f6e",
+   "rms_mJy": 0.9072,
+   "star_snr": 4.3913,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 13,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xb25e1a_Xed74",
+   "rms_mJy": 8.0397,
+   "star_snr": 3.9031,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 1,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xb2f730_X9e28",
+   "rms_mJy": 10.04007,
+   "star_snr": 3.8374,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 1,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xf5d76d_Xeb8",
+   "rms_mJy": 2.45785,
+   "star_snr": 30.7648,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 23,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xf5d76d_Xe19",
+   "rms_mJy": 2.64896,
+   "star_snr": 27.6845,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 34,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xf5d76d_Xcc5",
+   "rms_mJy": 4.67764,
+   "star_snr": 17.2885,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 24,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xf5d76d_X32f1",
+   "rms_mJy": 3.69571,
+   "star_snr": 14.654,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 13,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xf4df6f_Xc7",
+   "rms_mJy": 1.76989,
+   "star_snr": 17.9065,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 38,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X75bfbf_Xace",
+   "rms_mJy": 3.26586,
+   "star_snr": 4.5245,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 12,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X7116f1_X1785",
+   "rms_mJy": 21.56828,
+   "star_snr": 4.1372,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 16,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xa7a216_X23e4",
+   "rms_mJy": 1.30409,
+   "star_snr": 4.4567,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 29,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X6f1341_X1484",
+   "rms_mJy": 24.71467,
+   "star_snr": 4.7511,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 16,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd9668b_Xa9df",
+   "rms_mJy": 2.0276,
+   "star_snr": 4.4887,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 29,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd9668b_X3a90",
+   "rms_mJy": 2.13151,
+   "star_snr": 4.8171,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 27,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd9668b_Xa9df",
+   "rms_mJy": 2.00203,
+   "star_snr": 4.4525,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 28,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd9668b_X3a90",
+   "rms_mJy": 2.09694,
+   "star_snr": 4.3942,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 30,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd9668b_Xa9df",
+   "rms_mJy": 2.00223,
+   "star_snr": 4.8976,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 31,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd9668b_X3a90",
+   "rms_mJy": 2.10376,
+   "star_snr": 4.5227,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 24,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd9668b_Xa9df",
+   "rms_mJy": 1.98685,
+   "star_snr": 4.2382,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 27,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd9668b_X3a90",
+   "rms_mJy": 2.08549,
+   "star_snr": 4.4556,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 29,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X7116f1_X1785",
+   "rms_mJy": 30.55686,
+   "star_snr": 9.6773,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 146,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X6f1341_X1484",
+   "rms_mJy": 35.90756,
+   "star_snr": 9.832,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 90,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X75bfbf_Xace",
+   "rms_mJy": 4.78704,
+   "star_snr": 4.8178,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 69,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xa7a216_X23e4",
+   "rms_mJy": 1.91254,
+   "star_snr": 7.9879,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 93,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd9668b_Xa9df",
+   "rms_mJy": 6.34601,
+   "star_snr": 8.9476,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 435,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd9668b_X3a90",
+   "rms_mJy": 6.66045,
+   "star_snr": 11.681,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 446,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd9668b_Xa9df",
+   "rms_mJy": 2.08947,
+   "star_snr": 5.0791,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 120,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd9668b_X3a90",
+   "rms_mJy": 2.19152,
+   "star_snr": 5.4199,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 105,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xb25e1a_Xed74",
+   "rms_mJy": 7.99285,
+   "star_snr": 3.3311,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 0,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xcd2acd_X6125",
+   "rms_mJy": 2.16265,
+   "star_snr": 4.6655,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 33,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xcd2acd_X6125",
+   "rms_mJy": 2.16752,
+   "star_snr": 4.3982,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 35,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd9398d_X37e8",
+   "rms_mJy": 1.87512,
+   "star_snr": 3.865,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 11,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd9398d_X322a",
+   "rms_mJy": 1.82838,
+   "star_snr": 4.9607,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 26,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xb9c01c_X41a2",
+   "rms_mJy": 18.03561,
+   "star_snr": 4.4359,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 20,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xbbcb1f_X7dd5",
+   "rms_mJy": 1.82482,
+   "star_snr": 4.9335,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 14,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xbbadbe_X3846",
+   "rms_mJy": 1.48687,
+   "star_snr": 4.0322,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 26,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xb9c01c_X41a2",
+   "rms_mJy": 22.81773,
+   "star_snr": 4.5411,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 68,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xbbcb1f_X7dd5",
+   "rms_mJy": 2.27709,
+   "star_snr": 4.0396,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 54,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xbbadbe_X3846",
+   "rms_mJy": 1.95977,
+   "star_snr": 4.7351,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 59,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X126fc6d_Xc894",
+   "rms_mJy": 17.29778,
+   "star_snr": 4.6254,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 13,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X126c7ed_Xe9d",
+   "rms_mJy": 10.91588,
+   "star_snr": 4.493,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 14,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X12754c1_X9b5",
+   "rms_mJy": 15.44289,
+   "star_snr": 3.9025,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 13,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1275eb2_Xe05",
+   "rms_mJy": 11.62109,
+   "star_snr": 4.2445,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 19,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X12771d5_X9f13",
+   "rms_mJy": 12.39819,
+   "star_snr": 4.0991,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 13,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X12771d5_X3b63",
+   "rms_mJy": 14.93612,
+   "star_snr": 4.2835,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 8,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X12771d5_X10e06",
+   "rms_mJy": 13.91934,
+   "star_snr": 4.4143,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 17,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd10f82_X2635",
+   "rms_mJy": 2.85096,
+   "star_snr": 4.4371,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 16,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd10f82_X2635",
+   "rms_mJy": 2.85145,
+   "star_snr": 4.1936,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 24,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xb99071_X3ca",
+   "rms_mJy": 18.56576,
+   "star_snr": 4.0447,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 17,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xbf1cbb_X6176",
+   "rms_mJy": 1.09089,
+   "star_snr": 4.6441,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 33,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd64dca_X820",
+   "rms_mJy": 1.11476,
+   "star_snr": 4.4351,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 29,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd64dca_X410",
+   "rms_mJy": 1.06798,
+   "star_snr": 4.2012,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 27,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd659d4_X211",
+   "rms_mJy": 1.33529,
+   "star_snr": 4.2557,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 21,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X128b034_X187cc",
+   "rms_mJy": 12.597,
+   "star_snr": 4.2252,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 8,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1294347_X5c2e",
+   "rms_mJy": 11.08244,
+   "star_snr": 4.4869,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 12,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1294347_X1b730",
+   "rms_mJy": 12.27321,
+   "star_snr": 4.3768,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 13,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1294347_X1af7f",
+   "rms_mJy": 12.00825,
+   "star_snr": 4.3453,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 11,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X129691d_X6985",
+   "rms_mJy": 13.72342,
+   "star_snr": 4.3715,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 10,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X129754b_X70a9",
+   "rms_mJy": 14.45769,
+   "star_snr": 4.2155,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 8,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X129754b_X6946",
+   "rms_mJy": 13.30727,
+   "star_snr": 5.2887,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 16,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X12b3da5_X4411",
+   "rms_mJy": 13.26414,
+   "star_snr": 4.0333,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 13,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X12b3da5_X2f34",
+   "rms_mJy": 13.31628,
+   "star_snr": 4.5779,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 6,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xcf525f_X5aa4",
+   "rms_mJy": 3.61603,
+   "star_snr": 5.1083,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 25,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd10f82_X7829",
+   "rms_mJy": 4.99188,
+   "star_snr": 4.4567,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 33,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd10f82_X706f",
+   "rms_mJy": 5.75494,
+   "star_snr": 4.4801,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 33,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xbe2ed7_X7c91",
+   "rms_mJy": 24.02042,
+   "star_snr": 4.3041,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 13,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xb999fd_X148",
+   "rms_mJy": 26.48776,
+   "star_snr": 4.0904,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 20,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xba0af7_X8a66",
+   "rms_mJy": 24.09467,
+   "star_snr": 4.6453,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 18,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xbb9cd7_X40d5",
+   "rms_mJy": 1.64333,
+   "star_snr": 4.601,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 23,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xbe2ed7_X7c91",
+   "rms_mJy": 31.08429,
+   "star_snr": 4.6267,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 67,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xb999fd_X148",
+   "rms_mJy": 33.30784,
+   "star_snr": 4.8419,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 45,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xba0af7_X8a66",
+   "rms_mJy": 31.73372,
+   "star_snr": 4.5406,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 54,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xbb9cd7_X40d5",
+   "rms_mJy": 2.05974,
+   "star_snr": 4.4912,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 55,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xcd64ec_X21c9",
+   "rms_mJy": 2.95345,
+   "star_snr": 4.1841,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 16,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xa68906_X1590",
+   "rms_mJy": 17.43013,
+   "star_snr": 4.9566,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 147,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xa68906_X1590",
+   "rms_mJy": 16.05292,
+   "star_snr": 4.7304,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 151,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X107376c_X4442",
+   "rms_mJy": 4.20513,
+   "star_snr": 4.4625,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 61,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X107376c_X4442",
+   "rms_mJy": 2.57143,
+   "star_snr": 4.2214,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 66,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X107376c_X4442",
+   "rms_mJy": 1.99524,
+   "star_snr": 4.916,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 79,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xcd97a1_X2b1e",
+   "rms_mJy": 8.02517,
+   "star_snr": 4.202,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 31,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xcd97a1_X2377",
+   "rms_mJy": 7.73203,
+   "star_snr": 3.9725,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 29,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xce1e34_X7be",
+   "rms_mJy": 1.26575,
+   "star_snr": 3.9276,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 8,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xcd97a1_X2b1e",
+   "rms_mJy": 7.14349,
+   "star_snr": 4.5516,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 33,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xcd97a1_X2377",
+   "rms_mJy": 7.34318,
+   "star_snr": 4.5897,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 27,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xce1e34_X7be",
+   "rms_mJy": 1.26638,
+   "star_snr": 4.0066,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 8,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff294f_X812c",
+   "rms_mJy": 23.98614,
+   "star_snr": 4.5649,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 61,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff45a6_X8474",
+   "rms_mJy": 42.47375,
+   "star_snr": 4.4291,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 48,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff294f_X7bf4",
+   "rms_mJy": 23.57966,
+   "star_snr": 4.9377,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 77,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff45a6_X111c3",
+   "rms_mJy": 45.31203,
+   "star_snr": 4.7157,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 47,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff45a6_X10ca8",
+   "rms_mJy": 20.43041,
+   "star_snr": 4.8391,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 55,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff699e_Xd7",
+   "rms_mJy": 20.64579,
+   "star_snr": 4.3604,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 57,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff699e_X7543",
+   "rms_mJy": 33.87503,
+   "star_snr": 4.852,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 82,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff45a6_X107fe",
+   "rms_mJy": 19.21533,
+   "star_snr": 4.8346,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 69,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff81e8_X734e",
+   "rms_mJy": 40.51266,
+   "star_snr": 4.2933,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 28,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff294f_X812c",
+   "rms_mJy": 20.91565,
+   "star_snr": 4.481,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 65,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff45a6_X8474",
+   "rms_mJy": 35.82088,
+   "star_snr": 4.3852,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 67,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff294f_X7bf4",
+   "rms_mJy": 20.7583,
+   "star_snr": 4.4217,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 50,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff45a6_X111c3",
+   "rms_mJy": 41.70071,
+   "star_snr": 4.3354,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 45,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff45a6_X10ca8",
+   "rms_mJy": 19.41433,
+   "star_snr": 5.4812,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 69,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff699e_Xd7",
+   "rms_mJy": 19.51611,
+   "star_snr": 4.8345,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 72,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff699e_X7543",
+   "rms_mJy": 29.69526,
+   "star_snr": 4.8644,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 41,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff45a6_X107fe",
+   "rms_mJy": 18.55399,
+   "star_snr": 4.7276,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 60,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff81e8_X734e",
+   "rms_mJy": 37.06032,
+   "star_snr": 4.5085,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 14,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xb95160_X3e24",
+   "rms_mJy": 1.04724,
+   "star_snr": 3.9026,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 0,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xe48598_Xff51",
+   "rms_mJy": 1.21707,
+   "star_snr": 4.2861,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 16,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xccea8d_X2ff5",
+   "rms_mJy": 2.55671,
+   "star_snr": 4.1704,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 41,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xcdd033_X85ff",
+   "rms_mJy": 3.18038,
+   "star_snr": 4.5382,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 20,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xb77b17_X3940",
+   "rms_mJy": 3.26187,
+   "star_snr": 4.7169,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 111,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xb825df_X2265",
+   "rms_mJy": 3.13774,
+   "star_snr": 4.1285,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 88,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xb25e1a_Xed74",
+   "rms_mJy": 8.10674,
+   "star_snr": 3.9352,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 1,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd12f5c_Xd7c6",
+   "rms_mJy": 2.73334,
+   "star_snr": 4.6622,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 30,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xcdb7b8_Xfb16",
+   "rms_mJy": 2.21096,
+   "star_snr": 4.2213,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 21,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xfe62c1_X398",
+   "rms_mJy": 29.34179,
+   "star_snr": 5.2281,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 38,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff0235_X8392",
+   "rms_mJy": 34.80511,
+   "star_snr": 4.247,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 43,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xf8f6a9_X10359",
+   "rms_mJy": 31.86418,
+   "star_snr": 5.0911,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 34,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1009c59_X1ba4d",
+   "rms_mJy": 44.11948,
+   "star_snr": 4.6462,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 26,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1015532_X20dc8",
+   "rms_mJy": 40.11194,
+   "star_snr": 4.5964,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 21,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1018459_X73b0",
+   "rms_mJy": 33.54048,
+   "star_snr": 4.5069,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 37,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1020da2_X78cd",
+   "rms_mJy": 33.05562,
+   "star_snr": 4.6496,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 42,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xfe62c1_X398",
+   "rms_mJy": 30.63299,
+   "star_snr": 5.0901,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 38,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff0235_X8392",
+   "rms_mJy": 35.83109,
+   "star_snr": 4.2805,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 38,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xf8f6a9_X10359",
+   "rms_mJy": 33.35963,
+   "star_snr": 5.0476,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 42,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1009c59_X1ba4d",
+   "rms_mJy": 45.44371,
+   "star_snr": 4.679,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 33,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1015532_X20dc8",
+   "rms_mJy": 40.75798,
+   "star_snr": 4.6808,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 29,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1018459_X73b0",
+   "rms_mJy": 34.34252,
+   "star_snr": 4.6992,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 41,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1020da2_X78cd",
+   "rms_mJy": 33.96678,
+   "star_snr": 4.1677,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 27,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xfe62c1_X398",
+   "rms_mJy": 51.59258,
+   "star_snr": 4.1538,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 134,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff0235_X8392",
+   "rms_mJy": 59.35597,
+   "star_snr": 5.405,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 138,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xf8f6a9_X10359",
+   "rms_mJy": 56.58751,
+   "star_snr": 4.7803,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 129,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1009c59_X1ba4d",
+   "rms_mJy": 74.55853,
+   "star_snr": 4.5583,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 130,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1015532_X20dc8",
+   "rms_mJy": 69.571,
+   "star_snr": 4.5897,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 122,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1018459_X73b0",
+   "rms_mJy": 57.29063,
+   "star_snr": 4.6373,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 119,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1020da2_X78cd",
+   "rms_mJy": 56.49026,
+   "star_snr": 4.584,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 116,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xfe62c1_X398",
+   "rms_mJy": 42.42256,
+   "star_snr": 4.2217,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 34,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff0235_X8392",
+   "rms_mJy": 50.92075,
+   "star_snr": 4.1953,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 38,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xf8f6a9_X10359",
+   "rms_mJy": 46.34573,
+   "star_snr": 4.5282,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 34,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1009c59_X1ba4d",
+   "rms_mJy": 63.77567,
+   "star_snr": 4.4399,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 31,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1015532_X20dc8",
+   "rms_mJy": 58.68367,
+   "star_snr": 4.6895,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 25,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1018459_X73b0",
+   "rms_mJy": 48.65244,
+   "star_snr": 4.3876,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 39,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1020da2_X78cd",
+   "rms_mJy": 47.79115,
+   "star_snr": 4.4431,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 41,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xfe62c1_X398",
+   "rms_mJy": 30.99682,
+   "star_snr": 4.8874,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 34,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff0235_X8392",
+   "rms_mJy": 37.84202,
+   "star_snr": 4.3433,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 40,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xf8f6a9_X10359",
+   "rms_mJy": 33.9612,
+   "star_snr": 4.2491,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 38,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1009c59_X1ba4d",
+   "rms_mJy": 47.22377,
+   "star_snr": 4.9082,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 45,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1015532_X20dc8",
+   "rms_mJy": 43.27456,
+   "star_snr": 4.6166,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 44,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1018459_X73b0",
+   "rms_mJy": 35.83861,
+   "star_snr": 4.2664,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 31,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1020da2_X78cd",
+   "rms_mJy": 35.06366,
+   "star_snr": 4.7607,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 32,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd9d7c7_Xbb64",
+   "rms_mJy": 6.75412,
+   "star_snr": 4.3286,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 11,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd9d7c7_Xb3d2",
+   "rms_mJy": 6.98362,
+   "star_snr": 4.562,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 15,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd9d7c7_Xbb64",
+   "rms_mJy": 6.05274,
+   "star_snr": 4.251,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 20,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd9d7c7_Xb3d2",
+   "rms_mJy": 6.23653,
+   "star_snr": 4.2803,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 19,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd9d7c7_Xbb64",
+   "rms_mJy": 6.58911,
+   "star_snr": 4.34,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 47,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd9d7c7_Xb3d2",
+   "rms_mJy": 6.80021,
+   "star_snr": 4.5357,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 38,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd9d7c7_Xbb64",
+   "rms_mJy": 7.37187,
+   "star_snr": 5.0087,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 35,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd9d7c7_Xb3d2",
+   "rms_mJy": 7.59836,
+   "star_snr": 4.5068,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 48,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xcdb7b8_Xfb16",
+   "rms_mJy": 2.21555,
+   "star_snr": 4.406,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 35,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd189ef_X867b",
+   "rms_mJy": 2.48676,
+   "star_snr": 4.4844,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 27,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd09670_X23c5",
+   "rms_mJy": 2.11697,
+   "star_snr": 3.9924,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 13,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd09670_X23c5",
+   "rms_mJy": 2.10325,
+   "star_snr": 4.3766,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 16,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X101088d_Xbf80",
+   "rms_mJy": 35.1865,
+   "star_snr": 4.5005,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 76,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1006d51_X228e",
+   "rms_mJy": 22.66292,
+   "star_snr": 4.4945,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 73,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1003af4_X14e08",
+   "rms_mJy": 24.04486,
+   "star_snr": 4.7346,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 64,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1003af4_X3a2c",
+   "rms_mJy": 23.74367,
+   "star_snr": 4.7586,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 62,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1001fdc_Xc06e",
+   "rms_mJy": 20.02572,
+   "star_snr": 4.5405,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 83,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1001fdc_X29ae",
+   "rms_mJy": 23.20046,
+   "star_snr": 5.0819,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 76,
+   "mask_attr_share": 0.05994694960212202,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1001fdc_X2085",
+   "rms_mJy": 20.33971,
+   "star_snr": 4.9099,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 58,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xfffde1_X9bd6",
+   "rms_mJy": 9.75372,
+   "star_snr": 4.5046,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 58,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xfffde1_X3835",
+   "rms_mJy": 26.5185,
+   "star_snr": 4.3546,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 81,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xfff3d8_Xd46",
+   "rms_mJy": 22.31333,
+   "star_snr": 5.575,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 76,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff99e1_X2c3bb",
+   "rms_mJy": 23.73887,
+   "star_snr": 4.6437,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 74,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff99e1_X2b2ee",
+   "rms_mJy": 31.01795,
+   "star_snr": 4.4472,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 79,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff99e1_X24be0",
+   "rms_mJy": 34.95363,
+   "star_snr": 5.277,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 77,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff99e1_X1b0c4",
+   "rms_mJy": 23.18691,
+   "star_snr": 4.8288,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 76,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X107fa96_X9a88",
+   "rms_mJy": 41.38583,
+   "star_snr": 4.3236,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 71,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X107fa96_X150f6",
+   "rms_mJy": 36.50565,
+   "star_snr": 4.2403,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 68,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1086384_X10bc1",
+   "rms_mJy": 14.06612,
+   "star_snr": 4.4871,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 67,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1088045_X3c7b",
+   "rms_mJy": 26.87554,
+   "star_snr": 4.7447,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 69,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X101088d_Xbf80",
+   "rms_mJy": 28.99734,
+   "star_snr": 4.4157,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 83,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1006d51_X228e",
+   "rms_mJy": 20.8425,
+   "star_snr": 4.6545,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 80,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1003af4_X14e08",
+   "rms_mJy": 22.29685,
+   "star_snr": 4.5058,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 64,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1003af4_X3a2c",
+   "rms_mJy": 24.62156,
+   "star_snr": 4.5259,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 48,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1001fdc_Xc06e",
+   "rms_mJy": 19.5062,
+   "star_snr": 4.8635,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 64,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1001fdc_X29ae",
+   "rms_mJy": 21.5387,
+   "star_snr": 4.7511,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 59,
+   "mask_attr_share": 0.06259946949602122,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1001fdc_X2085",
+   "rms_mJy": 19.10649,
+   "star_snr": 4.7801,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 80,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xfffde1_X9bd6",
+   "rms_mJy": 9.88233,
+   "star_snr": 4.2004,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 70,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xfffde1_X3835",
+   "rms_mJy": 24.92703,
+   "star_snr": 5.1773,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 71,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xfff3d8_Xd46",
+   "rms_mJy": 20.48207,
+   "star_snr": 4.8996,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 63,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff99e1_X2c3bb",
+   "rms_mJy": 22.36003,
+   "star_snr": 5.1861,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 68,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff99e1_X2b2ee",
+   "rms_mJy": 27.31361,
+   "star_snr": 5.175,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 77,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff99e1_X24be0",
+   "rms_mJy": 29.80284,
+   "star_snr": 4.9592,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 73,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff99e1_X1b0c4",
+   "rms_mJy": 22.10375,
+   "star_snr": 4.9033,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 86,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X107fa96_X9a88",
+   "rms_mJy": 37.4722,
+   "star_snr": 4.5658,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 76,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X107fa96_X150f6",
+   "rms_mJy": 30.83085,
+   "star_snr": 4.307,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 62,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1086384_X10bc1",
+   "rms_mJy": 13.88891,
+   "star_snr": 4.2832,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 61,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1088045_X3c7b",
+   "rms_mJy": 24.89096,
+   "star_snr": 4.2412,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 79,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xc26103_X155a",
+   "rms_mJy": 13.16665,
+   "star_snr": 4.4244,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 118,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xc26103_X155a",
+   "rms_mJy": 30.66966,
+   "star_snr": 26.8342,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 464,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xe64b7b_X1704c",
+   "rms_mJy": 182.12387,
+   "star_snr": 4.6956,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 52,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xf05a48_X269c",
+   "rms_mJy": 151.07793,
+   "star_snr": 4.2932,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 37,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X12694b3_Xab7",
+   "rms_mJy": 12.15677,
+   "star_snr": 3.9343,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 11,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X126787e_X227e",
+   "rms_mJy": 12.06382,
+   "star_snr": 4.0598,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 22,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X126787e_X1c15",
+   "rms_mJy": 12.19605,
+   "star_snr": 4.5017,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 12,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X126787e_X1170",
+   "rms_mJy": 14.25941,
+   "star_snr": 4.7048,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 10,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1264cde_X2d40",
+   "rms_mJy": 12.35483,
+   "star_snr": 4.2084,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 12,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1264cde_X258b",
+   "rms_mJy": 11.79434,
+   "star_snr": 4.2044,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 12,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1263402_X856c",
+   "rms_mJy": 11.07585,
+   "star_snr": 4.6735,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 15,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1263402_X816f",
+   "rms_mJy": 11.24073,
+   "star_snr": 4.6111,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 14,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X7d194b_X58f",
+   "rms_mJy": 3.14387,
+   "star_snr": 4.2937,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 35,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X74fea5_Xd70",
+   "rms_mJy": 3.91781,
+   "star_snr": 4.3492,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 73,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1066403_Xbbde",
+   "rms_mJy": 2.54278,
+   "star_snr": 4.6401,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 59,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff0235_X26e3",
+   "rms_mJy": 2.41118,
+   "star_snr": 4.2884,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 17,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1066403_Xbbde",
+   "rms_mJy": 2.21756,
+   "star_snr": 4.5491,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 67,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff0235_X26e3",
+   "rms_mJy": 2.39101,
+   "star_snr": 4.2909,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 33,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xe4f0a6_X3658",
+   "rms_mJy": 10.07987,
+   "star_snr": 4.4812,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 45,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X11d9ce7_X5257",
+   "rms_mJy": 35.83812,
+   "star_snr": 4.4365,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 58,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X11d9ce7_X5257",
+   "rms_mJy": 33.3024,
+   "star_snr": 4.5534,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 45,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X11d9ce7_X5257",
+   "rms_mJy": 32.53891,
+   "star_snr": 4.7583,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 54,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X11d9ce7_X5257",
+   "rms_mJy": 34.91997,
+   "star_snr": 4.6286,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 50,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X11d9ce7_X5257",
+   "rms_mJy": 35.74907,
+   "star_snr": 4.8481,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 54,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X11d9ce7_X5257",
+   "rms_mJy": 33.75601,
+   "star_snr": 4.5935,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 52,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X11d9ce7_X5257",
+   "rms_mJy": 35.86671,
+   "star_snr": 4.911,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 43,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X11d9ce7_X5257",
+   "rms_mJy": 38.6318,
+   "star_snr": 4.3679,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 40,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xc296d2_X148c",
+   "rms_mJy": 16.14329,
+   "star_snr": 4.4061,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 26,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xc296d2_X148c",
+   "rms_mJy": 35.60596,
+   "star_snr": 4.7785,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 87,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff0235_X4a6d",
+   "rms_mJy": 2.33239,
+   "star_snr": 4.544,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 54,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff0235_X4a6d",
+   "rms_mJy": 2.09705,
+   "star_snr": 5.8089,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 59,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff0235_X502d",
+   "rms_mJy": 2.1395,
+   "star_snr": 4.4696,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 54,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff0235_X502d",
+   "rms_mJy": 1.96402,
+   "star_snr": 4.6982,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 63,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xcca365_X3822",
+   "rms_mJy": 17.14892,
+   "star_snr": 4.5418,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 35,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xce574d_X123f",
+   "rms_mJy": 1.40517,
+   "star_snr": 4.4174,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 16,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xcca365_X3822",
+   "rms_mJy": 19.86608,
+   "star_snr": 4.5184,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 32,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xce574d_X123f",
+   "rms_mJy": 1.37327,
+   "star_snr": 4.1788,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 11,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff0235_X8c42",
+   "rms_mJy": 23.09921,
+   "star_snr": 5.0291,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 65,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X10228b9_X423",
+   "rms_mJy": 3.08335,
+   "star_snr": 4.4486,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 31,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xff0235_X8c42",
+   "rms_mJy": 20.79717,
+   "star_snr": 4.5002,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 70,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X10228b9_X423",
+   "rms_mJy": 2.82039,
+   "star_snr": 4.1679,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 31,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd3607d_X6487",
+   "rms_mJy": 3.30262,
+   "star_snr": 4.7421,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 101,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd40be0_X749c",
+   "rms_mJy": 2.67124,
+   "star_snr": 4.7302,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 90,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd3607d_X6487",
+   "rms_mJy": 3.11522,
+   "star_snr": 4.7904,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 93,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd40be0_X749c",
+   "rms_mJy": 2.46206,
+   "star_snr": 4.5915,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 88,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd3607d_X6487",
+   "rms_mJy": 3.30321,
+   "star_snr": 4.8491,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 83,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xd3607d_X6487",
+   "rms_mJy": 3.11585,
+   "star_snr": 4.6145,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 79,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xce1e34_X1fb8",
+   "rms_mJy": 2.77612,
+   "star_snr": 4.0506,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 14,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1239f8e_Xa43b",
+   "rms_mJy": 17.36072,
+   "star_snr": 4.1828,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 3,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X1263402_Xb082",
+   "rms_mJy": 14.01559,
+   "star_snr": 4.41,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 9,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xcd8029_Xb6b0",
+   "rms_mJy": 3.11783,
+   "star_snr": 4.1526,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 88,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X74c92c_X6d5",
+   "rms_mJy": 1.98046,
+   "star_snr": 4.8162,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 56,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X10b6f7c_X850c",
+   "rms_mJy": 14.35529,
+   "star_snr": 4.2005,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 10,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xe3da01_X4265",
+   "rms_mJy": 1.85613,
+   "star_snr": 4.6542,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 19,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xe45e29_Xb7d4",
+   "rms_mJy": 2.29102,
+   "star_snr": 5.3929,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 19,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xe3da01_X4265",
+   "rms_mJy": 2.41029,
+   "star_snr": 4.5575,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 15,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xe45e29_Xb7d4",
+   "rms_mJy": 2.91833,
+   "star_snr": 4.8731,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 29,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_X10b6f7c_X850c",
+   "rms_mJy": 15.21949,
+   "star_snr": 4.623,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 15,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xe3da01_X4265",
+   "rms_mJy": 2.30403,
+   "star_snr": 4.1098,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 22,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xe45e29_Xb7d4",
+   "rms_mJy": 2.80007,
+   "star_snr": 4.4375,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 20,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xe3da01_X4265",
+   "rms_mJy": 1.92948,
+   "star_snr": 4.2097,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 22,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xe45e29_Xb7d4",
+   "rms_mJy": 2.36279,
+   "star_snr": 4.4805,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 24,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xa95c04_X14cd",
+   "rms_mJy": 22.95083,
+   "star_snr": 5.4561,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 286,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  },
+  {
+   "eb": "A002_Xa95c04_X14cd",
+   "rms_mJy": 20.47569,
+   "star_snr": 4.978,
+   "n_ctrl": 512,
+   "n_ctrl_trig": 269,
+   "mask_attr_share": 0.2913907284768212,
+   "telluric_factor": 0.9532710280373832
+  }
+ ]
+}

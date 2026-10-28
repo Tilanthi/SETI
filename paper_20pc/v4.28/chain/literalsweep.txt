@@ -1,0 +1,18 @@
+literal sweep of technosignatures_40pc_v4.28.tex
+
+13 prose literals equal to a generated macro:
+  30         == CfgChanOut,CovNHalf,EcWitIncBp,EpWideLinesGHz  Essentially all of it lies below \,GHz. Above about 30\,GHz the record is nearly empty, an
+  25         == BdNBlocks,BmArcsec,BpSixGapD,CsBpCoSepMinD  ry. A star enters if its Gaia~DR3 parallax is at least 25\,mas, measured to better than {}
+  30         == CfgChanOut,CovNHalf,EcWitIncBp,EpWideLinesGHz  ance to a factor of two {under}-representation beyond 30\,pc. Colour comes second, A~stars
+  15         == AnBandKms,CdNStarNoPhot,CeNFullMask,CeNWinTail  ed search would pick. Of the {} sample systems within 15\,pc with a confirmed planet, {} c
+  10.4       == EpGapD,VisStarMJy,WuExpWinCtrl              servatory records on each block's phase calibrator [ 10.4.11, 11.3.1]{ALMAHandbook} throug
+  11.3       == CpRecFluxOne,RcCpFlux,WuExpWin              records on each block's phase calibrator [ 10.4.11, 11.3.1]{ALMAHandbook} through the stan
+  6.7        == BpRecOffChan,TuQuantAlignPct,ZmOffLoMHz     s right. {Software.} The pipeline depends on {casa}~6.7.0 , {python}~3 with {astropy} , {n
+  3.2        == BootPoisson,EcReqRateHd,ExpDistinctDen,ExpStageOneAll  artition the hours as they partition the windows. Rows~3.2 to 3.5 are the archival gap, ov
+  3.5        == BpicbCeiling,BpicbFhi,EpsEriCorrMax,EpsEriPbHi  n the hours as they partition the windows. Rows~3.2 to 3.5 are the archival gap, over whic
+  2.2        == AccelJupRot,CkExpSec,EcGridDtH,EpEtaRepDepth  rmation.} Every headline count is read from here; rows 2.2--2.4 define each unattributed s
+  2.4        == ArecGHz,CoMassHi,SensCostHi,SoCloudW        on.} Every headline count is read from here; rows 2.2--2.4 define each unattributed set.} 
+  2.3        == CpNodeDistChan,ExpAggSpreadPct,ExpStageOneTail,MaskBWTwenty  the {} crossings a later catalogued block covers, row 2.3.3 of Table~ -- so a pair of unat
+  2.4        == ArecGHz,CoMassHi,SensCostHi,SoCloudW        rved hold-out together place in a searched window (row 2.4 of Table~ ) against {} expected
+
+0 prose literals within 5 per cent of a macro (possible stale value):

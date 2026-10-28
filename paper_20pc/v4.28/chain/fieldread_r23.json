@@ -1,0 +1,64 @@
+{
+ "aca_other_max_tstar": 3.8417,
+ "aca_other_rows": [
+  {
+   "cls": "A",
+   "eb": "A002_Xb9c01c_X2004",
+   "star": "eps Eri",
+   "tstar": 3.8417
+  },
+  {
+   "cls": "B",
+   "eb": "A002_Xb9c01c_X2004",
+   "star": "eps Eri",
+   "tstar": 3.6675
+  },
+  {
+   "cls": "B",
+   "eb": "A002_Xb9c01c_X2004",
+   "star": "eps Eri",
+   "tstar": 2.9674
+  },
+  {
+   "cls": "B",
+   "eb": "A002_Xb9c01c_X2004",
+   "star": "eps Eri",
+   "tstar": 2.5472
+  },
+  {
+   "cls": "B",
+   "eb": "A002_Xd9d7c7_X6fd2",
+   "star": "LHS 1140",
+   "tstar": 2.6139
+  }
+ ],
+ "adopted": {
+  "expectation": 24.75105540917152,
+  "observed": 31,
+  "p": 0.1365673202718738
+ },
+ "drive": null,
+ "flags_catalogue_only": [
+  "A002_Xba460f_X7e6",
+  "A002_Xc6a3db_X7b5b",
+  "A002_Xc66ce1_X1345",
+  "A002_X75bfbf_X1430"
+ ],
+ "flags_ledger_only": [
+  "A002_Xc6fa08_X1053",
+  "A002_Xcd8029_Xb6b0"
+ ],
+ "n_aca_other_geometry": 5,
+ "n_aca_own_geometry": 1053,
+ "n_aca_row": 1058,
+ "narrow": {
+  "bound": 22,
+  "expectation": 24.097309515698647,
+  "observed": 35,
+  "p": 0.027217237959521606
+ },
+ "recorded_dish": [
+  7.0
+ ],
+ "round": 311
+}

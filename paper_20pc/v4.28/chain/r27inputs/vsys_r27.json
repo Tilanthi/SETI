@@ -1,0 +1,2642 @@
+{
+ "_provenance": "Round 27, row 52 (r27-vsys). Live queries of 2026-10-27: Gaia DR3 (gea.esac.esa.int TAP, gaiadr3.gaia_source, 180 arcsec cone about each deposited target position with parallax within 20 per cent of 1000/dist_pc); SIMBAD (sim-tap basic + ident) for every object vsys_r26.json takes a velocity from; VizieR (astroquery, 6 arcsec) and the literature for the two wrong-object joins. SIMBAD queried 2026-10-27T14:15:11Z.",
+ "_rule": "IDENTITY IS DECIDED ON NUMBERS. The target is the Gaia DR3 source at the deposited position whose parallax matches the adopted distance. The velocity object is the target itself when it is the same Gaia DR3 source or lies within 2 arcsec of the target's position propagated to J2000 by the target's own proper motion; otherwise it is a different object, admissible only if declared under `companions` and co-distant (parallax within the snapshot's 20 per cent), within 1000 au projected and within 15 km/s in tangential velocity.",
+ "astrometry": {
+  "2MASS J05241914-1601153 551040": {
+   "deposited_dec": "-16.021030",
+   "deposited_ra": "81.079889",
+   "dist_pc": 30.9854,
+   "target": {
+    "dec_2016": -16.021006482278416,
+    "gaia_dr3": "2983928739350551040",
+    "parallax": 32.273250710441474,
+    "pmdec": -34.24251559938638,
+    "pmra": 0.5825217332636066,
+    "ra_2016": 81.07988840263758,
+    "ruwe": 1.5732911,
+    "rv_dr3": null,
+    "rv_dr3_err": null
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(81.0798890,-16.0210300),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(81.0798890,-16.0210300,0.05000)) AND parallax BETWEEN 25.8186 AND 38.7279 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -16.0209084,
+    "gaia_dr3": null,
+    "parallax": null,
+    "pmdec": -34.8,
+    "pmra": 16.0,
+    "ra_2000": 81.0797362,
+    "rv": 19.68,
+    "rv_bibcode": "2018MNRAS.475.1960F",
+    "simbad_main_id": "PM J05243-1601"
+   }
+  },
+  "2MASS J05241914-1601153 717696": {
+   "deposited_dec": "-16.021030",
+   "deposited_ra": "81.079889",
+   "dist_pc": 30.9854,
+   "target": {
+    "dec_2016": -16.021054872828934,
+    "gaia_dr3": "2983928735054717696",
+    "parallax": 32.06140648712182,
+    "pmdec": -24.00298306216711,
+    "pmra": 31.98659319809813,
+    "ra_2016": 81.07977038972696,
+    "ruwe": 33.469078,
+    "rv_dr3": 27.474602,
+    "rv_dr3_err": 3.210119
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(81.0798890,-16.0210300),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(81.0798890,-16.0210300,0.05000)) AND parallax BETWEEN 25.8186 AND 38.7279 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -16.0209084,
+    "gaia_dr3": null,
+    "parallax": null,
+    "pmdec": -34.8,
+    "pmra": 16.0,
+    "ra_2000": 81.0797362,
+    "rv": 19.68,
+    "rv_bibcode": "2018MNRAS.475.1960F",
+    "simbad_main_id": "PM J05243-1601"
+   }
+  },
+  "51 Eri": {
+   "deposited_dec": "-2.473847",
+   "deposited_ra": "69.400758",
+   "dist_pc": 29.9052,
+   "target": {
+    "dec_2016": -2.473833383625505,
+    "gaia_dr3": "3205095125321700480",
+    "parallax": 33.4390324822182,
+    "pmdec": -64.02842203088811,
+    "pmra": 44.04884090373149,
+    "ra_2016": 69.40074849308137,
+    "ruwe": 1.1452852,
+    "rv_dr3": null,
+    "rv_dr3_err": null
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(69.4007580,-2.4738470),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(69.4007580,-2.4738470,0.05000)) AND parallax BETWEEN 26.7512 AND 40.1268 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -2.47354881285,
+    "gaia_dr3": "3205095125321700480",
+    "parallax": 33.439,
+    "pmdec": -64.028,
+    "pmra": 44.049,
+    "ra_2000": 69.40055253787,
+    "rv": 12.6,
+    "rv_bibcode": "2006AstL...32..759G",
+    "simbad_main_id": "*  51 Eri"
+   }
+  },
+  "61 Vir": {
+   "deposited_dec": "-18.315706",
+   "deposited_ra": "199.596527",
+   "dist_pc": 8.5344,
+   "target": {
+    "dec_2016": -18.31592210064546,
+    "gaia_dr3": "3507879565090229888",
+    "parallax": 117.1726460991387,
+    "pmdec": -1063.8486605375717,
+    "pmra": -1070.2015735200084,
+    "ra_2016": 199.596298132351,
+    "ruwe": 1.1792638,
+    "rv_dr3": -7.864339,
+    "rv_dr3_err": 0.12939139
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(199.5965270,-18.3157060),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(199.5965270,-18.3157060,0.05000)) AND parallax BETWEEN 93.7383 AND 140.6074 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -18.311193819050562,
+    "gaia_dr3": "3507879565090229888",
+    "parallax": 117.1726,
+    "pmdec": -1063.849,
+    "pmra": -1070.202,
+    "ra_2000": 199.60130827686294,
+    "rv": -7.824,
+    "rv_bibcode": "2018A&A...616A...7S",
+    "simbad_main_id": "*  61 Vir"
+   }
+  },
+  "ALMA J153702653-33192492": {
+   "deposited_dec": "-33.324806",
+   "deposited_ra": "234.262289",
+   "dist_pc": 35.0098,
+   "target": {
+    "dec_2016": -33.324644713896944,
+    "gaia_dr3": "6015967739554000768",
+    "parallax": 28.563467968785297,
+    "pmdec": -83.25542532076133,
+    "pmra": -113.36685419076841,
+    "ra_2016": 234.262551465927,
+    "ruwe": 1.1384691,
+    "rv_dr3": null,
+    "rv_dr3_err": null
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(234.2622890,-33.3248060),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(234.2622890,-33.3248060,0.05000)) AND parallax BETWEEN 22.8507 AND 34.2761 ORDER BY sep",
+   "vel_object": null
+  },
+  "AU Mic": {
+   "deposited_dec": "-31.343402",
+   "deposited_ra": "311.292008",
+   "dist_pc": 9.7141,
+   "target": {
+    "dec_2016": -31.3425000799281,
+    "gaia_dr3": "6794047652729201024",
+    "parallax": 102.9431913175485,
+    "pmdec": -360.14771869635376,
+    "pmra": 281.31903452626165,
+    "ra_2016": 311.2911826481039,
+    "ruwe": 0.92735684,
+    "rv_dr3": -6.8976626,
+    "rv_dr3_err": 0.366353
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(311.2920080,-31.3434020),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(311.2920080,-31.3434020,0.05000)) AND parallax BETWEEN 82.3545 AND 123.5318 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -31.34089941384472,
+    "gaia_dr3": "6794047652729201024",
+    "parallax": 102.9432,
+    "pmdec": -360.148,
+    "pmra": 281.319,
+    "ra_2000": 311.28971873921626,
+    "rv": -4.71,
+    "rv_bibcode": "2018MNRAS.475.1960F",
+    "simbad_main_id": "HD 197481"
+   }
+  },
+  "BD05 1668": {
+   "deposited_dec": "5.207424",
+   "deposited_ra": "111.854933",
+   "dist_pc": 3.7861,
+   "target": {
+    "dec_2016": 5.209382701706996,
+    "gaia_dr3": "3139847906307949696",
+    "parallax": 264.12689775460655,
+    "pmdec": -3691.4865653792745,
+    "pmra": 571.2323467293181,
+    "ra_2016": 111.85462844259372,
+    "ruwe": 1.2387705,
+    "rv_dr3": 17.353445,
+    "rv_dr3_err": 0.19115439
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(111.8549330,5.2074240),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(111.8549330,5.2074240,0.05000)) AND parallax BETWEEN 211.2992 AND 316.9488 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": 5.225789303071388,
+    "gaia_dr3": "3139847906307949696",
+    "parallax": 264.1269,
+    "pmdec": -3691.487,
+    "pmra": 571.232,
+    "ra_2000": 111.85207903566794,
+    "rv": 18.36,
+    "rv_bibcode": "2018MNRAS.475.1960F",
+    "simbad_main_id": "BD+05  1668"
+   }
+  },
+  "Barta 161 12": {
+   "deposited_dec": "-7.214544",
+   "deposited_ra": "23.808518",
+   "dist_pc": 37.2812,
+   "target": {
+    "dec_2016": -7.214511232156196,
+    "gaia_dr3": "2477870708709917568",
+    "parallax": 26.82316957306465,
+    "pmdec": -48.94475939419378,
+    "pmra": 96.7631066458467,
+    "ra_2016": 23.808452780623654,
+    "ruwe": 1.4883922,
+    "rv_dr3": 5.875812,
+    "rv_dr3_err": 3.5077717
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(23.8085180,-7.2145440),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(23.8085180,-7.2145440,0.05000)) AND parallax BETWEEN 21.4585 AND 32.1878 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -7.21429369969,
+    "gaia_dr3": "2477870708709917568",
+    "parallax": 26.8232,
+    "pmdec": -48.945,
+    "pmra": 96.763,
+    "ra_2000": 23.80801929061,
+    "rv": 6.3,
+    "rv_bibcode": "2014ApJ...788...81M",
+    "simbad_main_id": "Barta 161 12"
+   }
+  },
+  "CD-23 14742": {
+   "deposited_dec": "-23.837460",
+   "deposited_ra": "282.460094",
+   "dist_pc": 2.976,
+   "target": {
+    "dec_2016": -23.83709744872712,
+    "gaia_dr3": "4075141768785646848",
+    "parallax": 336.0266016683708,
+    "pmdec": -193.95792507116096,
+    "pmra": 639.367850335873,
+    "ra_2016": 282.4587890175222,
+    "ruwe": 0.98801184,
+    "rv_dr3": -11.11644,
+    "rv_dr3_err": 0.5655069
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(282.4600940,-23.8374600),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(282.4600940,-23.8374600,0.05000)) AND parallax BETWEEN 268.8172 AND 403.2258 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -23.83623538204166,
+    "gaia_dr3": "4075141768785646848",
+    "parallax": 336.0266,
+    "pmdec": -193.958,
+    "pmra": 639.368,
+    "ra_2000": 282.45568240083537,
+    "rv": -10.494,
+    "rv_bibcode": "2018A&A...616A...7S",
+    "simbad_main_id": "CD-23 14742"
+   }
+  },
+  "CD-38 10980": {
+   "deposited_dec": "-39.229487",
+   "deposited_ra": "245.891546",
+   "dist_pc": 12.908,
+   "target": {
+    "dec_2016": -39.22948746474345,
+    "gaia_dr3": "6018034958869558912",
+    "parallax": 77.45445300678792,
+    "pmdec": 0.3858446568492385,
+    "pmra": 77.3976910067686,
+    "ra_2016": 245.8914359505284,
+    "ruwe": 0.94737566,
+    "rv_dr3": null,
+    "rv_dr3_err": null
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(245.8915460,-39.2294870),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(245.8915460,-39.2294870,0.05000)) AND parallax BETWEEN 61.9771 AND 92.9656 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -39.22948917877,
+    "gaia_dr3": "6018034958869558912",
+    "parallax": 77.4545,
+    "pmdec": 0.386,
+    "pmra": 77.398,
+    "ra_2000": 245.89099187453996,
+    "rv": 44.0,
+    "rv_bibcode": "2020A&A...638A.131N",
+    "simbad_main_id": "CD-38 10980"
+   }
+  },
+  "CD-57 1054": {
+   "deposited_dec": "-57.256689",
+   "deposited_ra": "75.196710",
+   "dist_pc": 26.8732,
+   "target": {
+    "dec_2016": -57.25674085176277,
+    "gaia_dr3": "4764027962957023104",
+    "parallax": 37.21185747681589,
+    "pmdec": 74.11315957504551,
+    "pmra": 35.38835067056905,
+    "ra_2016": 75.19666437541598,
+    "ruwe": 1.0049267,
+    "rv_dr3": 18.541079,
+    "rv_dr3_err": 0.2166527
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(75.1967100,-57.2566890),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(75.1967100,-57.2566890,0.05000)) AND parallax BETWEEN 29.7694 AND 44.6542 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -57.25707024687001,
+    "gaia_dr3": "4764027962957023104",
+    "parallax": 37.2119,
+    "pmdec": 74.113,
+    "pmra": 35.388,
+    "ra_2000": 75.19637357894,
+    "rv": 19.16,
+    "rv_bibcode": "2018A&A...616A...7S",
+    "simbad_main_id": "CD-57  1054"
+   }
+  },
+  "CP-72 2713": {
+   "deposited_dec": "-71.706144",
+   "deposited_ra": "340.705366",
+   "dist_pc": 36.7222,
+   "target": {
+    "dec_2016": -71.70612167520389,
+    "gaia_dr3": "6382640367603744128",
+    "parallax": 27.231483378389388,
+    "pmdec": -52.38401799984418,
+    "pmra": 94.85392450898829,
+    "ra_2016": 340.70523481724115,
+    "ruwe": 0.9250941,
+    "rv_dr3": 7.0229354,
+    "rv_dr3_err": 0.21187687
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(340.7053660,-71.7061440),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(340.7053660,-71.7061440,0.05000)) AND parallax BETWEEN 21.7852 AND 32.6778 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -71.70588885193,
+    "gaia_dr3": "6382640367603744128",
+    "parallax": 27.2315,
+    "pmdec": -52.384,
+    "pmra": 94.854,
+    "ra_2000": 340.70389177422,
+    "rv": 7.985,
+    "rv_bibcode": "2021A&A...645A..30Z",
+    "simbad_main_id": "CPD-72  2713"
+   }
+  },
+  "G 272-61A": {
+   "deposited_dec": "-17.948518",
+   "deposited_ra": "24.770128",
+   "dist_pc": 2.7195,
+   "target": {
+    "dec_2016": -17.948299887129313,
+    "gaia_dr3": "5140693571158739840",
+    "parallax": 367.71189618147696,
+    "pmdec": 544.3863845619521,
+    "pmra": 3385.315810465071,
+    "ra_2016": 24.771554293454546,
+    "ruwe": 12.367461,
+    "rv_dr3": 21.458223,
+    "rv_dr3_err": 0.7900771
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(24.7701280,-17.9485180),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(24.7701280,-17.9485180,0.05000)) AND parallax BETWEEN 294.1717 AND 441.2576 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -17.950278122424443,
+    "gaia_dr3": "5140693571158946048",
+    "parallax": 373.8443,
+    "pmdec": 584.061,
+    "pmra": 3178.694,
+    "ra_2000": 24.756823827312502,
+    "rv": 22.01,
+    "rv_bibcode": "2018MNRAS.475.1960F",
+    "simbad_main_id": "G 272-61B"
+   }
+  },
+  "G 272-61B": {
+   "deposited_dec": "-17.947917",
+   "deposited_ra": "24.770335",
+   "dist_pc": 2.6749,
+   "target": {
+    "dec_2016": -17.947682860008488,
+    "gaia_dr3": "5140693571158946048",
+    "parallax": 373.8443122683992,
+    "pmdec": 584.0613350385156,
+    "pmra": 3178.6942575748953,
+    "ra_2016": 24.771674208211856,
+    "ruwe": 10.453167,
+    "rv_dr3": 10.249533,
+    "rv_dr3_err": 3.2381904
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(24.7703350,-17.9479170),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(24.7703350,-17.9479170,0.05000)) AND parallax BETWEEN 299.0766 AND 448.6149 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -17.950278122424443,
+    "gaia_dr3": "5140693571158946048",
+    "parallax": 373.8443,
+    "pmdec": 584.061,
+    "pmra": 3178.694,
+    "ra_2000": 24.756823827312502,
+    "rv": 22.01,
+    "rv_bibcode": "2018MNRAS.475.1960F",
+    "simbad_main_id": "G 272-61B"
+   }
+  },
+  "GJ 2006A": {
+   "deposited_dec": "-32.551993",
+   "deposited_ra": "6.959973",
+   "dist_pc": 35.0292,
+   "target": {
+    "dec_2016": -32.55196152818741,
+    "gaia_dr3": "2315841869173294080",
+    "parallax": 28.54764582026202,
+    "pmdec": -47.19402028438259,
+    "pmra": 110.1978991408203,
+    "ra_2016": 6.959885949983793,
+    "ruwe": 1.8057306,
+    "rv_dr3": 8.085619,
+    "rv_dr3_err": 0.3273775
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(6.9599730,-32.5519930),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(6.9599730,-32.5519930,0.05000)) AND parallax BETWEEN 22.8381 AND 34.2571 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -32.55175177565,
+    "gaia_dr3": "2315841869173294080",
+    "parallax": 28.5476,
+    "pmdec": -47.194,
+    "pmra": 110.198,
+    "ra_2000": 6.9593049023199995,
+    "rv": 8.75,
+    "rv_bibcode": "2020A&A...642A.179M",
+    "simbad_main_id": "GJ 2006 A"
+   }
+  },
+  "GJ 2006B": {
+   "deposited_dec": "-32.556930",
+   "deposited_ra": "6.960488",
+   "dist_pc": 34.9764,
+   "target": {
+    "dec_2016": -32.55690077270133,
+    "gaia_dr3": "2315841869173294208",
+    "parallax": 28.590687724876755,
+    "pmdec": -44.50097972386254,
+    "pmra": 112.46220003211967,
+    "ra_2016": 6.960399431589031,
+    "ruwe": 1.8884964,
+    "rv_dr3": 7.656672,
+    "rv_dr3_err": 0.46086466
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(6.9604880,-32.5569300),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(6.9604880,-32.5569300,0.05000)) AND parallax BETWEEN 22.8726 AND 34.3088 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -32.55670298918001,
+    "gaia_dr3": "2315841869173294208",
+    "parallax": 28.5907,
+    "pmdec": -44.501,
+    "pmra": 112.462,
+    "ra_2000": 6.95980641208,
+    "rv": 9.48,
+    "rv_bibcode": "2020A&A...642A.179M",
+    "simbad_main_id": "GJ 2006 B"
+   }
+  },
+  "GJ 581": {
+   "deposited_dec": "-7.722779",
+   "deposited_ra": "229.855389",
+   "dist_pc": 6.3005,
+   "target": {
+    "dec_2016": -7.722707024157902,
+    "gaia_dr3": "6322070093095493504",
+    "parallax": 158.71827296463243,
+    "pmdec": -97.22923861858034,
+    "pmra": -1221.2776289653712,
+    "ra_2016": 229.85630133329227,
+    "ruwe": 1.3033525,
+    "rv_dr3": -9.745852,
+    "rv_dr3_err": 0.15540636
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(229.8553890,-7.7227790),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(229.8553890,-7.7227790,0.05000)) AND parallax BETWEEN 126.9740 AND 190.4611 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -7.722274860407221,
+    "gaia_dr3": "6322070093095493504",
+    "parallax": 158.7183,
+    "pmdec": -97.229,
+    "pmra": -1221.278,
+    "ra_2000": 229.86177891146036,
+    "rv": -9.24,
+    "rv_bibcode": "2018MNRAS.475.1960F",
+    "simbad_main_id": "BD-07  4003"
+   }
+  },
+  "GJ 674": {
+   "deposited_dec": "-46.900919",
+   "deposited_ra": "262.171890",
+   "dist_pc": 4.5509,
+   "target": {
+    "dec_2016": -46.89910489864381,
+    "gaia_dr3": "5951824121022278144",
+    "parallax": 219.64625138839503,
+    "pmdec": -880.5826187621278,
+    "pmra": 572.5684618204186,
+    "ra_2016": 262.1701639221161,
+    "ruwe": 1.054375,
+    "rv_dr3": -3.370759,
+    "rv_dr3_err": 0.12801456
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(262.1718900,-46.9009190),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(262.1718900,-46.9009190,0.05000)) AND parallax BETWEEN 175.7894 AND 263.6841 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -46.89519113774277,
+    "gaia_dr3": "5951824121022278144",
+    "parallax": 219.6463,
+    "pmdec": -880.583,
+    "pmra": 572.568,
+    "ra_2000": 262.16643990898785,
+    "rv": -2.904,
+    "rv_bibcode": "2018A&A...616A...7S",
+    "simbad_main_id": "CD-46 11540"
+   }
+  },
+  "GJ 849": {
+   "deposited_dec": "-4.640854",
+   "deposited_ra": "332.424115",
+   "dist_pc": 8.8149,
+   "target": {
+    "dec_2016": -4.64083481515791,
+    "gaia_dr3": "2627117287488522240",
+    "parallax": 113.4447215072131,
+    "pmdec": -22.15730652565566,
+    "pmra": 1132.5832654528356,
+    "ra_2016": 332.4231515660494,
+    "ruwe": 1.353798,
+    "rv_dr3": -15.6121025,
+    "rv_dr3_err": 0.16134895
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(332.4241150,-4.6408540),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(332.4241150,-4.6408540,0.05000)) AND parallax BETWEEN 90.7554 AND 136.1331 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -4.640736321655555,
+    "gaia_dr3": "2627117287488522240",
+    "parallax": 113.4447,
+    "pmdec": -22.157,
+    "pmra": 1132.583,
+    "ra_2000": 332.41810130710456,
+    "rv": -15.3,
+    "rv_bibcode": "2018MNRAS.475.1960F",
+    "simbad_main_id": "BD-05  5715"
+   }
+  },
+  "GJ14 Gaia DR3 383426372059603712": {
+   "deposited_dec": "40.948726",
+   "deposited_ra": "4.280416",
+   "dist_pc": 14.6876,
+   "target": {
+    "dec_2016": 40.94866840359883,
+    "gaia_dr3": "383426372059603712",
+    "parallax": 68.08463937366406,
+    "pmdec": 83.45352189239841,
+    "pmra": 567.191978775712,
+    "ra_2016": 4.279896289658576,
+    "ruwe": 0.98883563,
+    "rv_dr3": 2.2630439,
+    "rv_dr3_err": 0.12562715
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(4.2804160,40.9487260),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(4.2804160,40.9487260,0.05000)) AND parallax BETWEEN 54.4677 AND 81.7016 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": 40.94829745093833,
+    "gaia_dr3": "383426372059603712",
+    "parallax": 68.0846,
+    "pmdec": 83.454,
+    "pmra": 567.192,
+    "ra_2000": 4.276558743065417,
+    "rv": 2.92,
+    "rv_bibcode": "2018A&A...616A...7S",
+    "simbad_main_id": "BD+40    45"
+   }
+  },
+  "GL 3379 Gaia DR3 3316364602541746048": {
+   "deposited_dec": "2.706338",
+   "deposited_ra": "90.016255",
+   "dist_pc": 5.208,
+   "target": {
+    "dec_2016": 2.7063740799024933,
+    "gaia_dr3": "3316364602541746048",
+    "parallax": 192.01346218785218,
+    "pmdec": -40.36843064589449,
+    "pmra": 309.14624371351175,
+    "ra_2016": 90.01597644159976,
+    "ruwe": 1.0857981,
+    "rv_dr3": 29.956833,
+    "rv_dr3_err": 0.17415352
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(90.0162550,2.7063380),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(90.0162550,2.7063380,0.05000)) AND parallax BETWEEN 153.6098 AND 230.4147 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": 2.706553494371112,
+    "gaia_dr3": "3316364602541746048",
+    "parallax": 192.0135,
+    "pmdec": -40.368,
+    "pmra": 309.146,
+    "ra_2000": 90.0146009238775,
+    "rv": 30.228,
+    "rv_bibcode": "2018A&A...616A...7S",
+    "simbad_main_id": "G  99-49"
+   }
+  },
+  "HD 10647": {
+   "deposited_dec": "-53.741545",
+   "deposited_ra": "25.624043",
+   "dist_pc": 17.3488,
+   "target": {
+    "dec_2016": -53.74129984828599,
+    "gaia_dr3": "4912580642524184960",
+    "parallax": 57.640899065213326,
+    "pmdec": -105.4958102197813,
+    "pmra": 166.04054972266235,
+    "ra_2016": 25.62339159017506,
+    "ruwe": 0.87479657,
+    "rv_dr3": 27.639664,
+    "rv_dr3_err": 0.123256646
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(25.6240430,-53.7415450),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(25.6240430,-53.7415450,0.05000)) AND parallax BETWEEN 46.1127 AND 69.1690 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -53.74083095924,
+    "gaia_dr3": "4912580642524184960",
+    "parallax": 57.6409,
+    "pmdec": -105.496,
+    "pmra": 166.041,
+    "ra_2000": 25.62214382373,
+    "rv": 27.662,
+    "rv_bibcode": "2018A&A...616A...7S",
+    "simbad_main_id": "* q01 Eri"
+   }
+  },
+  "HD 139084": {
+   "deposited_dec": "-57.708070",
+   "deposited_ra": "234.739298",
+   "dist_pc": 38.7162,
+   "target": {
+    "dec_2016": -57.708008517689656,
+    "gaia_dr3": "5882581895219921024",
+    "parallax": 25.828989374686707,
+    "pmdec": -92.78585182991179,
+    "pmra": -54.601923976803974,
+    "ra_2016": 234.73936530440275,
+    "ruwe": 8.613702,
+    "rv_dr3": 3.8532782,
+    "rv_dr3_err": 0.21182077
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(234.7392980,-57.7080700),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(234.7392980,-57.7080700,0.05000)) AND parallax BETWEEN 20.6632 AND 30.9948 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -57.70759613463,
+    "gaia_dr3": "5882581895219921024",
+    "parallax": 25.829,
+    "pmdec": -92.786,
+    "pmra": -54.602,
+    "ra_2000": 234.73981954873,
+    "rv": 3.9,
+    "rv_bibcode": "2018yCat.1345....0G",
+    "simbad_main_id": "HD 139084"
+   }
+  },
+  "HD 139664": {
+   "deposited_dec": "-44.662417",
+   "deposited_ra": "235.296323",
+   "dist_pc": 17.3986,
+   "target": {
+    "dec_2016": -44.6623899936602,
+    "gaia_dr3": "5989102478619519616",
+    "parallax": 57.475860390190874,
+    "pmdec": -266.39145844308257,
+    "pmra": -169.10565112984054,
+    "ra_2016": 235.2963466961976,
+    "ruwe": 0.946274,
+    "rv_dr3": -3.9631126,
+    "rv_dr3_err": 0.14828381
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(235.2963230,-44.6624170),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(235.2963230,-44.6624170,0.05000)) AND parallax BETWEEN 45.9807 AND 68.9711 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -44.66120602675139,
+    "gaia_dr3": "5989102478619519616",
+    "parallax": 57.4759,
+    "pmdec": -266.391,
+    "pmra": -169.106,
+    "ra_2000": 235.29740336214545,
+    "rv": -7.08,
+    "rv_bibcode": "2015A&A...573A.126D",
+    "simbad_main_id": "* g Lup"
+   }
+  },
+  "HD 155555C": {
+   "deposited_dec": "-66.952260",
+   "deposited_ra": "259.380175",
+   "dist_pc": 30.4116,
+   "target": {
+    "dec_2016": -66.95216506015974,
+    "gaia_dr3": "5811866358170877184",
+    "parallax": 32.882156439015375,
+    "pmdec": -145.2044300598275,
+    "pmra": -14.85124078605511,
+    "ra_2016": 259.38019925411857,
+    "ruwe": 1.4724585,
+    "rv_dr3": 2.9640374,
+    "rv_dr3_err": 34.358852
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(259.3801750,-66.9522600),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(259.3801750,-66.9522600,0.05000)) AND parallax BETWEEN 26.3058 AND 39.4586 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -66.95151970705,
+    "gaia_dr3": "5811866358170877184",
+    "parallax": 32.8822,
+    "pmdec": -145.204,
+    "pmra": -14.851,
+    "ra_2000": 259.38036784632993,
+    "rv": 4.22,
+    "rv_bibcode": "2020A&A...642A.179M",
+    "simbad_main_id": "HD 155555C"
+   }
+  },
+  "HD 207129 Gaia DR3 6564091190988411520": {
+   "deposited_dec": "-47.304958",
+   "deposited_ra": "327.066735",
+   "dist_pc": 15.559,
+   "target": {
+    "dec_2016": -47.30492965427047,
+    "gaia_dr3": "6564091190988411520",
+    "parallax": 64.27166055130206,
+    "pmdec": -295.552731253777,
+    "pmra": 165.06854306177507,
+    "ra_2016": 327.0667117287086,
+    "ruwe": 0.87611145,
+    "rv_dr3": -7.546653,
+    "rv_dr3_err": 0.11577412
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(327.0667350,-47.3049580),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(327.0667350,-47.3049580,0.05000)) AND parallax BETWEEN 51.4172 AND 77.1258 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -47.30361608148555,
+    "gaia_dr3": "6564091190988411520",
+    "parallax": 64.2717,
+    "pmdec": -295.553,
+    "pmra": 165.069,
+    "ra_2000": 327.06562984757784,
+    "rv": -7.455,
+    "rv_bibcode": "2018A&A...616A...7S",
+    "simbad_main_id": "HD 207129"
+   }
+  },
+  "HD 23484 Gaia DR3 4856592239127350400": {
+   "deposited_dec": "-38.279874",
+   "deposited_ra": "56.039966",
+   "dist_pc": 16.1696,
+   "target": {
+    "dec_2016": -38.280484230845914,
+    "gaia_dr3": "4856592239127350400",
+    "parallax": 61.844397847782254,
+    "pmdec": 289.31584899741154,
+    "pmra": 209.05794687020227,
+    "ra_2016": 56.0394043824196,
+    "ruwe": 1.011423,
+    "rv_dr3": 29.351315,
+    "rv_dr3_err": 0.12038499
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(56.0399660,-38.2798740),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(56.0399660,-38.2798740,0.05000)) AND parallax BETWEEN 49.4756 AND 74.2133 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -38.2817700731175,
+    "gaia_dr3": "4856592239127350400",
+    "parallax": 61.8444,
+    "pmdec": 289.316,
+    "pmra": 209.058,
+    "ra_2000": 56.03822071647666,
+    "rv": 29.616,
+    "rv_bibcode": "2018A&A...616A...7S",
+    "simbad_main_id": "HD  23484"
+   }
+  },
+  "HD 285968": {
+   "deposited_dec": "18.952210",
+   "deposited_ra": "70.736099",
+   "dist_pc": 9.4852,
+   "target": {
+    "dec_2016": 18.953202926391814,
+    "gaia_dr3": "3409711211681795584",
+    "parallax": 105.42748417135273,
+    "pmdec": -1116.5935413672632,
+    "pmra": 656.6469583029074,
+    "ra_2016": 70.73548173808452,
+    "ruwe": 0.88777876,
+    "rv_dr3": 25.82175,
+    "rv_dr3_err": 0.13686664
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(70.7360990,18.9522100),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(70.7360990,18.9522100,0.05000)) AND parallax BETWEEN 84.3419 AND 126.5129 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": 18.958165540845552,
+    "gaia_dr3": "3409711211681795584",
+    "parallax": 105.4275,
+    "pmdec": -1116.594,
+    "pmra": 656.647,
+    "ra_2000": 70.73239591997876,
+    "rv": 26.236,
+    "rv_bibcode": "2018A&A...616A...7S",
+    "simbad_main_id": "HD 285968"
+   }
+  },
+  "HD 31392": {
+   "deposited_dec": "-35.403409",
+   "deposited_ra": "73.518617",
+   "dist_pc": 25.7602,
+   "target": {
+    "dec_2016": -35.40381777054113,
+    "gaia_dr3": "4824866896260056448",
+    "parallax": 38.81961578358068,
+    "pmdec": 157.46916518127705,
+    "pmra": 125.13111743965055,
+    "ra_2016": 73.51821774797449,
+    "ruwe": 0.99374,
+    "rv_dr3": 29.29782,
+    "rv_dr3_err": 0.12861754
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(73.5186170,-35.4034090),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(73.5186170,-35.4034090,0.05000)) AND parallax BETWEEN 31.0557 AND 46.5835 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -35.40451764462,
+    "gaia_dr3": "4824866896260056448",
+    "parallax": 38.8196,
+    "pmdec": 157.469,
+    "pmra": 125.131,
+    "ra_2000": 73.51753542573,
+    "rv": 29.519,
+    "rv_bibcode": "2018A&A...616A...7S",
+    "simbad_main_id": "HD  31392"
+   }
+  },
+  "HD 33793": {
+   "deposited_dec": "-45.047002",
+   "deposited_ra": "77.965070",
+   "dist_pc": 3.9339,
+   "target": {
+    "dec_2016": -45.0438126993602,
+    "gaia_dr3": "4810594479418041856",
+    "parallax": 254.19859326384577,
+    "pmdec": -5708.614150045243,
+    "pmra": 6491.223339061598,
+    "ra_2016": 77.9599373502188,
+    "ruwe": 1.1701684,
+    "rv_dr3": 245.05313,
+    "rv_dr3_err": 0.12662344
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(77.9650700,-45.0470020),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(77.9650700,-45.0470020,0.05000)) AND parallax BETWEEN 203.3605 AND 305.0408 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -45.01843381524333,
+    "gaia_dr3": "4810594479418041856",
+    "parallax": 254.1986,
+    "pmdec": -5708.614,
+    "pmra": 6491.223,
+    "ra_2000": 77.91912433145708,
+    "rv": 245.234,
+    "rv_bibcode": "2018A&A...616A...7S",
+    "simbad_main_id": "HD  33793"
+   }
+  },
+  "HD 38858 Gaia DR3 3023711269067191296": {
+   "deposited_dec": "-4.095678",
+   "deposited_ra": "87.145862",
+   "dist_pc": 15.2104,
+   "target": {
+    "dec_2016": -4.095664047742017,
+    "gaia_dr3": "3023711269067191296",
+    "parallax": 65.74459508507027,
+    "pmdec": -229.29120099564255,
+    "pmra": 61.42699725421628,
+    "ra_2016": 87.1458581131804,
+    "ruwe": 1.0174928,
+    "rv_dr3": 31.419485,
+    "rv_dr3_err": 0.12071104
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(87.1458620,-4.0956780),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(87.1458620,-4.0956780,0.05000)) AND parallax BETWEEN 52.5956 AND 78.8934 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -4.09464494104,
+    "gaia_dr3": "3023711269067191296",
+    "parallax": 65.7446,
+    "pmdec": -229.291,
+    "pmra": 61.427,
+    "ra_2000": 87.14558439635,
+    "rv": 31.456,
+    "rv_bibcode": "2018A&A...616A...7S",
+    "simbad_main_id": "HD  38858"
+   }
+  },
+  "HD 45184": {
+   "deposited_dec": "-28.780970",
+   "deposited_ra": "96.181511",
+   "dist_pc": 21.8923,
+   "target": {
+    "dec_2016": -28.780657042949517,
+    "gaia_dr3": "2898239468873596800",
+    "parallax": 45.678236401815006,
+    "pmdec": -121.85155201671665,
+    "pmra": -165.12174891818395,
+    "ra_2016": 96.18199432228883,
+    "ruwe": 1.0133407,
+    "rv_dr3": -3.8458424,
+    "rv_dr3_err": 0.11934986
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(96.1815110,-28.7809700),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(96.1815110,-28.7809700,0.05000)) AND parallax BETWEEN 36.5425 AND 54.8138 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -28.780115479430002,
+    "gaia_dr3": "2898239468873596800",
+    "parallax": 45.6782,
+    "pmdec": -121.852,
+    "pmra": -165.122,
+    "ra_2000": 96.18283162327,
+    "rv": -3.828,
+    "rv_bibcode": "2018A&A...616A...7S",
+    "simbad_main_id": "HD  45184"
+   }
+  },
+  "HD 48370": {
+   "deposited_dec": "-2.889046",
+   "deposited_ra": "100.754337",
+   "dist_pc": 35.9519,
+   "target": {
+    "dec_2016": -2.8890154549152767,
+    "gaia_dr3": "3105749748629384576",
+    "parallax": 27.814957019921465,
+    "pmdec": -71.13678685898252,
+    "pmra": 14.310372872125994,
+    "ra_2016": 100.7543305015117,
+    "ruwe": 1.1124347,
+    "rv_dr3": 23.629623,
+    "rv_dr3_err": 0.1775681
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(100.7543370,-2.8890460),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(100.7543370,-2.8890460,0.05000)) AND parallax BETWEEN 22.2520 AND 33.3779 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -2.8886992880200006,
+    "gaia_dr3": "3105749748629384576",
+    "parallax": 27.815,
+    "pmdec": -71.137,
+    "pmra": 14.31,
+    "ra_2000": 100.75426681825,
+    "rv": 23.615,
+    "rv_bibcode": "2021A&A...645A..30Z",
+    "simbad_main_id": "HD  48370"
+   }
+  },
+  "HD 69830": {
+   "deposited_dec": "-12.638997",
+   "deposited_ra": "124.601753",
+   "dist_pc": 12.5692,
+   "target": {
+    "dec_2016": -12.63656179358332,
+    "gaia_dr3": "5726982995343100928",
+    "parallax": 79.49527095617434,
+    "pmdec": -987.8286619313131,
+    "pmra": 278.7903645043099,
+    "ra_2016": 124.60104883936589,
+    "ruwe": 0.98585457,
+    "rv_dr3": 30.085953,
+    "rv_dr3_err": 0.123888075
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(124.6017530,-12.6389970),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(124.6017530,-12.6389970,0.05000)) AND parallax BETWEEN 63.6476 AND 95.4715 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -12.632171440980558,
+    "gaia_dr3": "5726982995343100928",
+    "parallax": 79.4953,
+    "pmdec": -987.829,
+    "pmra": 278.79,
+    "ra_2000": 124.59977903433628,
+    "rv": 30.115,
+    "rv_bibcode": "2018A&A...616A...7S",
+    "simbad_main_id": "HD  69830"
+   }
+  },
+  "HD 89452": {
+   "deposited_dec": "6.582637",
+   "deposited_ra": "154.868804",
+   "dist_pc": 36.227,
+   "target": {
+    "dec_2016": 6.5827594949605075,
+    "gaia_dr3": "3861752365967697664",
+    "parallax": 27.603738314437503,
+    "pmdec": -47.93085656871941,
+    "pmra": -41.70317751684498,
+    "ra_2016": 154.86891161055314,
+    "ruwe": 1.1463413,
+    "rv_dr3": 1.7995944,
+    "rv_dr3_err": 0.14418784
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(154.8688040,6.5826370),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(154.8688040,6.5826370,0.05000)) AND parallax BETWEEN 22.0830 AND 33.1245 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": 6.582972521139999,
+    "gaia_dr3": "3861752365967697664",
+    "parallax": 27.6037,
+    "pmdec": -47.931,
+    "pmra": -41.703,
+    "ra_2000": 154.8690981883,
+    "rv": 1.93,
+    "rv_bibcode": "2018yCat.1345....0G",
+    "simbad_main_id": "HD  89452"
+   }
+  },
+  "HD110411": {
+   "deposited_dec": "10.235033",
+   "deposited_ra": "190.471617",
+   "dist_pc": 38.9225,
+   "target": {
+    "dec_2016": 10.235224279652359,
+    "gaia_dr3": "3903402278745164672",
+    "parallax": 25.6920732884807,
+    "pmdec": -90.32270815151948,
+    "pmra": 81.91215352600656,
+    "ra_2016": 190.47144055614368,
+    "ruwe": 1.056852,
+    "rv_dr3": -5.07784,
+    "rv_dr3_err": 0.3432493
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(190.4716170,10.2350330),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(190.4716170,10.2350330,0.05000)) AND parallax BETWEEN 20.5537 AND 30.8305 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": 10.2356257137,
+    "gaia_dr3": "3903402278745164672",
+    "parallax": 25.6921,
+    "pmdec": -90.323,
+    "pmra": 81.912,
+    "ra_2000": 190.47107061461998,
+    "rv": 1.6,
+    "rv_bibcode": "1953GCRV..C......0W",
+    "simbad_main_id": "* rho Vir"
+   }
+  },
+  "HD14055": {
+   "deposited_dec": "33.846863",
+   "deposited_ra": "34.328959",
+   "dist_pc": 35.7405,
+   "target": {
+    "dec_2016": 33.846962660907664,
+    "gaia_dr3": "326109689896765568",
+    "parallax": 27.979464525783225,
+    "pmdec": -52.68543639346999,
+    "pmra": 45.25343798552453,
+    "ra_2016": 34.3288558064912,
+    "ruwe": 1.6677171,
+    "rv_dr3": 5.113197,
+    "rv_dr3_err": 1.7381403
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(34.3289590,33.8468630),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(34.3289590,33.8468630,0.05000)) AND parallax BETWEEN 22.3836 AND 33.5754 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": 33.84719681816611,
+    "gaia_dr3": "326109689896765568",
+    "parallax": 27.9795,
+    "pmdec": -52.685,
+    "pmra": 45.253,
+    "ra_2000": 34.32861363899208,
+    "rv": 5.11,
+    "rv_bibcode": "2022yCat.1355....0G",
+    "simbad_main_id": "* gam Tri"
+   }
+  },
+  "HD161868": {
+   "deposited_dec": "2.706899",
+   "deposited_ra": "266.973047",
+   "dist_pc": 29.7465,
+   "target": {
+    "dec_2016": 2.7069481817732406,
+    "gaia_dr3": "4472097420946809600",
+    "parallax": 33.61738000890459,
+    "pmdec": -74.4615293942277,
+    "pmra": -23.936396789147118,
+    "ra_2016": 266.97306262165563,
+    "ruwe": 2.879308,
+    "rv_dr3": -12.307996,
+    "rv_dr3_err": 0.49037793
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(266.9730470,2.7068990),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(266.9730470,2.7068990,0.05000)) AND parallax BETWEEN 26.8939 AND 40.3409 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": 2.7072791218991665,
+    "gaia_dr3": "4472097420946809600",
+    "parallax": 33.6174,
+    "pmdec": -74.462,
+    "pmra": -23.936,
+    "ra_2000": 266.9731691245113,
+    "rv": -12.31,
+    "rv_bibcode": "2022yCat.1355....0G",
+    "simbad_main_id": "* gam Oph"
+   }
+  },
+  "HD170773": {
+   "deposited_dec": "-39.892532",
+   "deposited_ra": "278.254540",
+   "dist_pc": 36.9345,
+   "target": {
+    "dec_2016": -39.892376094961435,
+    "gaia_dr3": "6723753061177741312",
+    "parallax": 27.074940281554632,
+    "pmdec": -79.92652570898933,
+    "pmra": 86.35334912822485,
+    "ra_2016": 278.25431992088164,
+    "ruwe": 0.9481802,
+    "rv_dr3": -17.747908,
+    "rv_dr3_err": 0.15660599
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(278.2545400,-39.8925320),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(278.2545400,-39.8925320,0.05000)) AND parallax BETWEEN 21.6600 AND 32.4899 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -39.892020867490004,
+    "gaia_dr3": "6723753061177741312",
+    "parallax": 27.0749,
+    "pmdec": -79.927,
+    "pmra": 86.353,
+    "ra_2000": 278.25381970894,
+    "rv": -16.55,
+    "rv_bibcode": "2018yCat.1345....0G",
+    "simbad_main_id": "HD 170773"
+   }
+  },
+  "HD172555": {
+   "deposited_dec": "-64.872232",
+   "deposited_ra": "281.362576",
+   "dist_pc": 28.789,
+   "target": {
+    "dec_2016": -64.87192513545952,
+    "gaia_dr3": "6438274350302427776",
+    "parallax": 34.7354715858406,
+    "pmdec": -149.7298949001875,
+    "pmra": 31.952325282703374,
+    "ra_2016": 281.3624218338677,
+    "ruwe": 1.0692656,
+    "rv_dr3": 2.7978919,
+    "rv_dr3_err": 0.23729119
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(281.3625760,-64.8722320),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(281.3625760,-64.8722320,0.05000)) AND parallax BETWEEN 27.7884 AND 41.6826 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -64.87125966888472,
+    "gaia_dr3": "6438274350302427776",
+    "parallax": 34.7355,
+    "pmdec": -149.73,
+    "pmra": 31.952,
+    "ra_2000": 281.3620874193479,
+    "rv": 2.8,
+    "rv_bibcode": "2022yCat.1355....0G",
+    "simbad_main_id": "HD 172555"
+   }
+  },
+  "HD202628": {
+   "deposited_dec": "-43.334551",
+   "deposited_ra": "319.615176",
+   "dist_pc": 23.794,
+   "target": {
+    "dec_2016": -43.334555635071645,
+    "gaia_dr3": "6577318075351824512",
+    "parallax": 42.02738752624135,
+    "pmdec": 21.4254775956858,
+    "pmra": 241.97817465600454,
+    "ra_2016": 319.61510203083486,
+    "ruwe": 0.9381807,
+    "rv_dr3": 11.94833,
+    "rv_dr3_err": 0.12009703
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(319.6151760,-43.3345510),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(319.6151760,-43.3345510,0.05000)) AND parallax BETWEEN 33.6219 AND 50.4329 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -43.334650850680006,
+    "gaia_dr3": "6577318075351824512",
+    "parallax": 42.0274,
+    "pmdec": 21.425,
+    "pmra": 241.978,
+    "ra_2000": 319.61362343624995,
+    "rv": 12.071,
+    "rv_bibcode": "2018A&A...616A...7S",
+    "simbad_main_id": "HD 202628"
+   }
+  },
+  "HD377": {
+   "deposited_dec": "6.616790",
+   "deposited_ra": "2.107885",
+   "dist_pc": 38.4045,
+   "target": {
+    "dec_2016": 6.616794493147512,
+    "gaia_dr3": "2745647973856851712",
+    "parallax": 26.03863506376948,
+    "pmdec": -1.8270634766019807,
+    "pmra": 87.52487887794223,
+    "ra_2016": 2.1076643394278456,
+    "ruwe": 1.025372,
+    "rv_dr3": 0.92887235,
+    "rv_dr3_err": 0.13919483
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(2.1078850,6.6167900),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(2.1078850,6.6167900,0.05000)) AND parallax BETWEEN 20.8309 AND 31.2463 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": 6.61680261328,
+    "gaia_dr3": "2745647973856851712",
+    "parallax": 26.0386,
+    "pmdec": -1.827,
+    "pmra": 87.525,
+    "ra_2000": 2.10727273132,
+    "rv": 1.176,
+    "rv_bibcode": "2018A&A...616A...7S",
+    "simbad_main_id": "HD    377"
+   }
+  },
+  "HD53143 Gaia DR3 5479222240596469632": {
+   "deposited_dec": "-61.334450",
+   "deposited_ra": "104.996356",
+   "dist_pc": 18.3401,
+   "target": {
+    "dec_2016": -61.33500424765096,
+    "gaia_dr3": "5479222240596469632",
+    "parallax": 54.52523915853711,
+    "pmdec": 264.83561051555023,
+    "pmra": -161.87264540008795,
+    "ra_2016": 104.99706286126714,
+    "ruwe": 1.0370343,
+    "rv_dr3": 22.031446,
+    "rv_dr3_err": 0.12571768
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(104.9963560,-61.3344500),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(104.9963560,-61.3344500,0.05000)) AND parallax BETWEEN 43.6203 AND 65.4304 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -61.33618128654611,
+    "gaia_dr3": "5479222240596469632",
+    "parallax": 54.5252,
+    "pmdec": 264.836,
+    "pmra": -161.873,
+    "ra_2000": 104.99856271477168,
+    "rv": 22.04,
+    "rv_bibcode": "2018yCat.1345....0G",
+    "simbad_main_id": "HD  53143"
+   }
+  },
+  "HD61005": {
+   "deposited_dec": "-32.203420",
+   "deposited_ra": "113.947338",
+   "dist_pc": 36.4506,
+   "target": {
+    "dec_2016": -32.203571103935936,
+    "gaia_dr3": "5592237639209047424",
+    "parallax": 27.434398619579948,
+    "pmdec": 74.31883665511522,
+    "pmra": -55.049850187522495,
+    "ra_2016": 113.94747066258135,
+    "ruwe": 0.9400348,
+    "rv_dr3": 22.345459,
+    "rv_dr3_err": 0.14067063
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(113.9473380,-32.2034200),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(113.9473380,-32.2034200,0.05000)) AND parallax BETWEEN 21.9475 AND 32.9213 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -32.20390141288,
+    "gaia_dr3": "5592237639209047424",
+    "parallax": 27.4344,
+    "pmdec": 74.319,
+    "pmra": -55.05,
+    "ra_2000": 113.94775981519,
+    "rv": 22.64,
+    "rv_bibcode": "2015A&A...573A.126D",
+    "simbad_main_id": "HD  61005"
+   }
+  },
+  "HIP 490": {
+   "deposited_dec": "-41.753364",
+   "deposited_ra": "1.469444",
+   "dist_pc": 38.8298,
+   "target": {
+    "dec_2016": -41.753408063428445,
+    "gaia_dr3": "4995853014646189696",
+    "parallax": 25.753415493475273,
+    "pmdec": -76.50209606515111,
+    "pmra": 97.86264909476063,
+    "ra_2016": 1.4695196103890231,
+    "ruwe": 0.9126392,
+    "rv_dr3": 2.046356,
+    "rv_dr3_err": 0.15698043
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(1.4694440,-41.7533640),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(1.4694440,-41.7533640,0.05000)) AND parallax BETWEEN 20.6027 AND 30.9041 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -41.753068052319996,
+    "gaia_dr3": "4995853014646189696",
+    "parallax": 25.7534,
+    "pmdec": -76.502,
+    "pmra": 97.863,
+    "ra_2000": 1.4689365904799998,
+    "rv": 2.078,
+    "rv_bibcode": "2018A&A...616A...7S",
+    "simbad_main_id": "HD    105"
+   }
+  },
+  "HIP10679": {
+   "deposited_dec": "28.741471",
+   "deposited_ra": "34.353497",
+   "dist_pc": 39.6344,
+   "target": {
+    "dec_2016": 28.741464648683994,
+    "gaia_dr3": "107774198474602368",
+    "parallax": 25.230631889461055,
+    "pmdec": -71.14201493603882,
+    "pmra": 85.87906275155008,
+    "ra_2016": 34.353505939597916,
+    "ruwe": 0.9191679,
+    "rv_dr3": 4.996837,
+    "rv_dr3_err": 0.15971628
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(34.3534970,28.7414710),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(34.3534970,28.7414710,0.05000)) AND parallax BETWEEN 20.1845 AND 30.2767 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": 28.74178083533,
+    "gaia_dr3": "107774198474602368",
+    "parallax": 25.2306,
+    "pmdec": -71.142,
+    "pmra": 85.879,
+    "ra_2000": 34.35307062104,
+    "rv": 5.257,
+    "rv_bibcode": "2018A&A...616A...7S",
+    "simbad_main_id": "HD  14082B"
+   }
+  },
+  "HN Lib": {
+   "deposited_dec": "-12.516367",
+   "deposited_ra": "218.568090",
+   "dist_pc": 6.253,
+   "target": {
+    "dec_2016": -12.516923853592898,
+    "gaia_dr3": "6324325225803432320",
+    "parallax": 159.9225477824956,
+    "pmdec": 593.0401507540619,
+    "pmra": -355.1381150377546,
+    "ra_2016": 218.56843175696892,
+    "ruwe": 1.4434574,
+    "rv_dr3": -1.359221,
+    "rv_dr3_err": 0.19820952
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(218.5680900,-12.5163670),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(218.5680900,-12.5163670,0.05000)) AND parallax BETWEEN 127.9386 AND 191.9079 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -12.519559582093887,
+    "gaia_dr3": "6324325225803432320",
+    "parallax": 159.9225,
+    "pmdec": 593.04,
+    "pmra": -355.138,
+    "ra_2000": 218.57004859310788,
+    "rv": -1.28,
+    "rv_bibcode": "2018MNRAS.475.1960F",
+    "simbad_main_id": "BD-11  3759"
+   }
+  },
+  "HR 1010 Gaia DR3 4722135642226902656": {
+   "deposited_dec": "-62.503157",
+   "deposited_ra": "49.567683",
+   "dist_pc": 12.0394,
+   "target": {
+    "dec_2016": -62.5034842270098,
+    "gaia_dr3": "4722135642226902656",
+    "parallax": 83.06064664354982,
+    "pmdec": 647.7253950157487,
+    "pmra": 1331.0270879085913,
+    "ra_2016": 49.56622620807744,
+    "ruwe": 1.2022415,
+    "rv_dr3": 11.936549,
+    "rv_dr3_err": 0.12755975
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(49.5676830,-62.5031570),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(49.5676830,-62.5031570,0.05000)) AND parallax BETWEEN 66.4485 AND 99.6727 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -62.506362419731104,
+    "gaia_dr3": "4722135642226902656",
+    "parallax": 83.0606,
+    "pmdec": 647.725,
+    "pmra": 1331.027,
+    "ra_2000": 49.55341201004875,
+    "rv": 11.953,
+    "rv_bibcode": "2018A&A...616A...7S",
+    "simbad_main_id": "* zet02 Ret"
+   }
+  },
+  "HR 2562": {
+   "deposited_dec": "-60.248591",
+   "deposited_ra": "102.504279",
+   "dist_pc": 33.9284,
+   "target": {
+    "dec_2016": -60.24866244574327,
+    "gaia_dr3": "5480006192386819456",
+    "parallax": 29.473827526783968,
+    "pmdec": 108.52711029707115,
+    "pmra": 4.8304672413127,
+    "ra_2016": 102.5042729562954,
+    "ruwe": 0.9429927,
+    "rv_dr3": 26.185656,
+    "rv_dr3_err": 0.1583944
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(102.5042790,-60.2485910),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(102.5042790,-60.2485910,0.05000)) AND parallax BETWEEN 23.5791 AND 35.3686 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -60.249144794660005,
+    "gaia_dr3": "5480006192386819456",
+    "parallax": 29.4738,
+    "pmdec": 108.527,
+    "pmra": 4.83,
+    "ra_2000": 102.504229692,
+    "rv": 26.69,
+    "rv_bibcode": "2018yCat.1345....0G",
+    "simbad_main_id": "HD  50571"
+   }
+  },
+  "L 836-122": {
+   "deposited_dec": "-15.354554",
+   "deposited_ra": "213.570219",
+   "dist_pc": 28.6967,
+   "target": {
+    "dec_2016": -15.354424665434726,
+    "gaia_dr3": "6298167942962279680",
+    "parallax": 34.847262514471424,
+    "pmdec": -197.31305204030417,
+    "pmra": -120.12639591574222,
+    "ra_2016": 213.5703012153189,
+    "ruwe": 1.741758,
+    "rv_dr3": -1.4254652,
+    "rv_dr3_err": 3.6015363
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(213.5702190,-15.3545540),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(213.5702190,-15.3545540,0.05000)) AND parallax BETWEEN 27.8778 AND 41.8167 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -15.35604309661052,
+    "gaia_dr3": null,
+    "parallax": 33.14,
+    "pmdec": -172.84,
+    "pmra": -207.86,
+    "ra_2000": 213.58898603018397,
+    "rv": -9.54,
+    "rv_bibcode": "2018MNRAS.475.1960F",
+    "simbad_main_id": "HD 124498"
+   },
+   "vel_object_r27": {
+    "dec_2000": null,
+    "gaia_dr3": "6298167942962279680",
+    "note": "the target itself",
+    "parallax": 34.847262514471424,
+    "pmdec": -197.31305204030417,
+    "pmra": -120.12639591574222,
+    "ra_2000": null,
+    "rv": -1.4254652,
+    "rv_bibcode": "2023A&A...674A...1G",
+    "rv_err": 3.6015363,
+    "simbad_main_id": "L  836-122"
+   }
+  },
+  "LHS 1140": {
+   "deposited_dec": "-15.274725",
+   "deposited_ra": "11.248973",
+   "dist_pc": 14.9636,
+   "target": {
+    "dec_2016": -15.274191339893132,
+    "gaia_dr3": "2371032916186181760",
+    "parallax": 66.82874472085788,
+    "pmdec": -596.6229051027706,
+    "pmra": 318.1520629418195,
+    "ra_2016": 11.2486779084442,
+    "ruwe": 1.529972,
+    "rv_dr3": -13.741822,
+    "rv_dr3_err": 0.42318383
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(11.2489730,-15.2747250),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(11.2489730,-15.2747250,0.05000)) AND parallax BETWEEN 53.4631 AND 80.1946 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -15.271539677775003,
+    "gaia_dr3": "2371032916186181760",
+    "parallax": 66.8287,
+    "pmdec": -596.623,
+    "pmra": 318.152,
+    "ra_2000": 11.247212140629582,
+    "rv": -13.329,
+    "rv_bibcode": "2022ApJ...935..104M",
+    "simbad_main_id": "G 268-38"
+   }
+  },
+  "LP 349-25": {
+   "deposited_dec": "22.324861",
+   "deposited_ra": "6.985339",
+   "dist_pc": 14.1281,
+   "target": {
+    "dec_2016": 22.324902794590333,
+    "gaia_dr3": "2799992744809482112",
+    "parallax": 70.78101071168312,
+    "pmdec": -186.5883308135825,
+    "pmra": 392.7166624409269,
+    "ra_2016": 6.985243946351337,
+    "ruwe": 6.43927,
+    "rv_dr3": null,
+    "rv_dr3_err": null
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(6.9853390,22.3248610),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(6.9853390,22.3248610,0.05000)) AND parallax BETWEEN 56.6247 AND 84.9371 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": 22.325732065143338,
+    "gaia_dr3": "2799992744809482112",
+    "parallax": 70.781,
+    "pmdec": -186.588,
+    "pmra": 392.717,
+    "ra_2000": 6.983357099422916,
+    "rv": -15.8,
+    "rv_bibcode": "2012AJ....144...99D",
+    "simbad_main_id": "LP  349-25"
+   }
+  },
+  "LP 353-51": {
+   "deposited_dec": "22.734628",
+   "deposited_ra": "35.861581",
+   "dist_pc": 27.0991,
+   "target": {
+    "dec_2016": 22.73471064102162,
+    "gaia_dr3": "101612981989146752",
+    "parallax": 36.901598862538435,
+    "pmdec": -112.5796152979364,
+    "pmra": 98.67335793040262,
+    "ra_2016": 35.861502297689235,
+    "ruwe": 1.2667778,
+    "rv_dr3": 12.151989,
+    "rv_dr3_err": 0.29269916
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(35.8615810,22.7346280),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(35.8615810,22.7346280,0.05000)) AND parallax BETWEEN 29.5213 AND 44.2819 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": 22.73521099782,
+    "gaia_dr3": "101612981989146752",
+    "parallax": 36.9016,
+    "pmdec": -112.58,
+    "pmra": 98.673,
+    "ra_2000": 35.86102680045,
+    "rv": 12.24,
+    "rv_bibcode": "2018MNRAS.475.1960F",
+    "simbad_main_id": "LP  353-51"
+   }
+  },
+  "LP 476-207 384128": {
+   "deposited_dec": "9.982115",
+   "deposited_ra": "75.495395",
+   "dist_pc": 23.7525,
+   "target": {
+    "dec_2016": 9.98252583775703,
+    "gaia_dr3": "3291643148740384128",
+    "parallax": 42.03882255030138,
+    "pmdec": -121.56604123955785,
+    "pmra": 31.659601361197897,
+    "ra_2016": 75.49514106880602,
+    "ruwe": 1.2535954,
+    "rv_dr3": null,
+    "rv_dr3_err": null
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(75.4953950,9.9821150),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(75.4953950,9.9821150,0.05000)) AND parallax BETWEEN 33.6807 AND 50.5210 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": 9.983134872359784,
+    "gaia_dr3": null,
+    "parallax": 30.12,
+    "pmdec": -74.41,
+    "pmra": 12.09,
+    "ra_2000": 75.49497578718676,
+    "rv": 18.085,
+    "rv_bibcode": "2021A&A...645A..30Z",
+    "simbad_main_id": "LP  476-207"
+   }
+  },
+  "LP 476-207 783296": {
+   "deposited_dec": "9.982115",
+   "deposited_ra": "75.495395",
+   "dist_pc": 23.7525,
+   "target": {
+    "dec_2016": 9.982201206120338,
+    "gaia_dr3": "3291643148741783296",
+    "parallax": 42.10082724059061,
+    "pmdec": -117.65519696749398,
+    "pmra": 50.7705362914874,
+    "ra_2016": 75.49535739653825,
+    "ruwe": 1.3857672,
+    "rv_dr3": 15.201383,
+    "rv_dr3_err": 1.697696
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(75.4953950,9.9821150),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(75.4953950,9.9821150,0.05000)) AND parallax BETWEEN 33.6807 AND 50.5210 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": 9.983134872359784,
+    "gaia_dr3": null,
+    "parallax": 30.12,
+    "pmdec": -74.41,
+    "pmra": 12.09,
+    "ra_2000": 75.49497578718676,
+    "rv": 18.085,
+    "rv_bibcode": "2021A&A...645A..30Z",
+    "simbad_main_id": "LP  476-207"
+   }
+  },
+  "LP 736-15": {
+   "deposited_dec": "-12.957104",
+   "deposited_ra": "194.007401",
+   "dist_pc": 21.1536,
+   "target": {
+    "dec_2016": -12.956935593723335,
+    "gaia_dr3": "3526198184723289472",
+    "parallax": 47.2733194934019,
+    "pmdec": -190.23873707184504,
+    "pmra": -272.4615398226702,
+    "ra_2016": 194.00764786266586,
+    "ruwe": 7.2967715,
+    "rv_dr3": null,
+    "rv_dr3_err": null
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(194.0074010,-12.9571040),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(194.0074010,-12.9571040,0.05000)) AND parallax BETWEEN 37.8186 AND 56.7279 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -12.93540360044,
+    "gaia_dr3": "3526198489665449216",
+    "parallax": 1.3728,
+    "pmdec": -0.608,
+    "pmra": 4.707,
+    "ra_2000": 194.00117416335,
+    "rv": -17.11,
+    "rv_bibcode": "2018yCat.1345....0G",
+    "simbad_main_id": "UCAC2  27300936"
+   },
+   "vel_object_r27": {
+    "dec_2000": -12.956090085281389,
+    "gaia_dr3": "3526198184723289472",
+    "parallax": 47.2733,
+    "pmdec": -190.239,
+    "pmra": -272.462,
+    "ra_2000": 194.00889043605875,
+    "rv": -1.4,
+    "rv_bibcode": "2015ApJ...804...96G",
+    "rv_err": 5.0,
+    "simbad_main_id": "LP  736-15"
+   }
+  },
+  "LSR J1835+3259": {
+   "deposited_dec": "32.994609",
+   "deposited_ra": "278.907428",
+   "dist_pc": 5.6885,
+   "target": {
+    "dec_2016": 32.994787158699616,
+    "gaia_dr3": "2091177593123254016",
+    "parallax": 175.79296679952537,
+    "pmdec": -755.1456226325628,
+    "pmra": -72.65040524928749,
+    "ra_2016": 278.90744884954285,
+    "ruwe": 1.0964748,
+    "rv_dr3": null,
+    "rv_dr3_err": null
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(278.9074280,32.9946090),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(278.9074280,32.9946090,0.05000)) AND parallax BETWEEN 140.6346 AND 210.9519 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": 32.99814336087223,
+    "gaia_dr3": "2091177593123254016",
+    "parallax": 175.793,
+    "pmdec": -755.146,
+    "pmra": -72.65,
+    "ra_2000": 278.90783384444705,
+    "rv": 8.4,
+    "rv_bibcode": "2012AJ....144...99D",
+    "simbad_main_id": "LSR J1835+3259"
+   }
+  },
+  "NAME AT Mic AB Gaia DR3 6792436799475128960": {
+   "deposited_dec": "-32.437312",
+   "deposited_ra": "310.464527",
+   "dist_pc": 9.9214,
+   "target": {
+    "dec_2016": -32.437036784381455,
+    "gaia_dr3": "6792436799475128960",
+    "parallax": 100.79210677742213,
+    "pmdec": -417.19484095650307,
+    "pmra": 246.92898678851384,
+    "ra_2016": 310.464334034236,
+    "ruwe": 2.331419,
+    "rv_dr3": -4.064287,
+    "rv_dr3_err": 0.50497
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(310.4645270,-32.4373120),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(310.4645270,-32.4373120,0.05000)) AND parallax BETWEEN 80.6338 AND 120.9507 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -32.43617522686639,
+    "gaia_dr3": "6792436799477051904",
+    "parallax": 101.9724,
+    "pmdec": -301.429,
+    "pmra": 296.908,
+    "ra_2000": 310.4631677013837,
+    "rv": -5.2,
+    "rv_bibcode": "2006A&A...460..695T",
+    "simbad_main_id": "V* AT Mic B"
+   }
+  },
+  "NAME Barnards star": {
+   "deposited_dec": "4.758638",
+   "deposited_ra": "269.447011",
+   "dist_pc": 1.8282,
+   "target": {
+    "dec_2016": 4.739420051112412,
+    "gaia_dr3": "4472832130942575872",
+    "parallax": 546.975939730948,
+    "pmdec": 10362.394206546573,
+    "pmra": -801.5509783684709,
+    "ra_2016": 269.44850252543836,
+    "ruwe": 1.0848505,
+    "rv_dr3": -110.46822,
+    "rv_dr3_err": 0.13125522
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(269.4470110,4.7586380),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(269.4470110,4.7586380,0.05000)) AND parallax BETWEEN 437.5889 AND 656.3833 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": 4.693364966576667,
+    "gaia_dr3": "4472832130942575872",
+    "parallax": 546.9759,
+    "pmdec": 10362.394,
+    "pmra": -801.551,
+    "ra_2000": 269.4520769586187,
+    "rv": -110.11,
+    "rv_bibcode": "2018MNRAS.475.1960F",
+    "simbad_main_id": "NAME Barnard's star"
+   }
+  },
+  "PM J03433+1958": {
+   "deposited_dec": "19.971179",
+   "deposited_ra": "55.846703",
+   "dist_pc": 20.7567,
+   "target": {
+    "dec_2016": 19.971163897614996,
+    "gaia_dr3": "63126196662620416",
+    "parallax": 48.17731638628854,
+    "pmdec": 161.81394929017478,
+    "pmra": 75.52925494088046,
+    "ra_2016": 55.84669517197853,
+    "ruwe": 0.96272284,
+    "rv_dr3": null,
+    "rv_dr3_err": null
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(55.8467030,19.9711790),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(55.8467030,19.9711790,0.05000)) AND parallax BETWEEN 38.5418 AND 57.8127 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": 19.945867563079442,
+    "gaia_dr3": "63125990504192768",
+    "parallax": 0.3404,
+    "pmdec": -1.044,
+    "pmra": -1.438,
+    "ra_2000": 55.83263299461708,
+    "rv": 29.8489,
+    "rv_bibcode": "2022ApJS..259...35A",
+    "simbad_main_id": "UCAC4 550-007537"
+   },
+   "vel_object_r27": null
+  },
+  "Proxima Cen": {
+   "deposited_dec": "-62.674505",
+   "deposited_ra": "217.375520",
+   "dist_pc": 1.3016,
+   "target": {
+    "dec_2016": -62.67607511676666,
+    "gaia_dr3": "5853498713190525696",
+    "parallax": 768.0665391873573,
+    "pmdec": 769.4650146478623,
+    "pmra": -3781.741008265163,
+    "ra_2016": 217.39232147200883,
+    "ruwe": 0.97145325,
+    "rv_dr3": -21.942726,
+    "rv_dr3_err": 0.21612652
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(217.3755200,-62.6745050),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(217.3755200,-62.6745050,0.05000)) AND parallax BETWEEN 614.6281 AND 921.9422 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -62.67949018907555,
+    "gaia_dr3": "5853498713190525696",
+    "parallax": 768.0665,
+    "pmdec": 769.465,
+    "pmra": -3781.741,
+    "ra_2000": 217.42894222160578,
+    "rv": -20.578199,
+    "rv_bibcode": "2020AJ....160..120J",
+    "simbad_main_id": "NAME Proxima Centauri"
+   }
+  },
+  "TRAPPIST-1": {
+   "deposited_dec": "-5.044783",
+   "deposited_ra": "346.628968",
+   "dist_pc": 12.4669,
+   "target": {
+    "dec_2016": -5.043528319429532,
+    "gaia_dr3": "2635476908753563008",
+    "parallax": 80.21231612635748,
+    "pmdec": -479.0375409528857,
+    "pmra": 930.7875225817781,
+    "ra_2016": 346.62652162764437,
+    "ruwe": 1.0505682,
+    "rv_dr3": null,
+    "rv_dr3_err": null
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(346.6289680,-5.0447830),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(346.6289680,-5.0447830,0.05000)) AND parallax BETWEEN 64.1699 AND 96.2549 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -5.041399250518334,
+    "gaia_dr3": "2635476908753563008",
+    "parallax": 80.2123,
+    "pmdec": -479.038,
+    "pmra": 930.788,
+    "ra_2000": 346.62236872857875,
+    "rv": -52.003101,
+    "rv_bibcode": "2020AJ....160..120J",
+    "simbad_main_id": "TRAPPIST-1"
+   }
+  },
+  "TWA 3A 696000": {
+   "deposited_dec": "-37.531070",
+   "deposited_ra": "167.615540",
+   "dist_pc": 37.0547,
+   "target": {
+    "dec_2016": -37.53105714841606,
+    "gaia_dr3": "5396978667759696000",
+    "parallax": 26.98712630072148,
+    "pmdec": -16.88624931365088,
+    "pmra": -115.52364841987226,
+    "ra_2016": 167.6156531439757,
+    "ruwe": 1.2857323,
+    "rv_dr3": null,
+    "rv_dr3_err": null
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(167.6155400,-37.5310700),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(167.6155400,-37.5310700,0.05000)) AND parallax BETWEEN 21.5897 AND 32.3846 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -37.53131907914,
+    "gaia_dr3": "5396978667757576064",
+    "parallax": 26.9323,
+    "pmdec": -27.45,
+    "pmra": -105.738,
+    "ra_2000": 167.61600271216,
+    "rv": 5.25,
+    "rv_bibcode": "2022yCat.1355....0G",
+    "simbad_main_id": "TWA 3B"
+   }
+  },
+  "TWA 3A [576064]": {
+   "deposited_dec": "-37.531070",
+   "deposited_ra": "167.615540",
+   "dist_pc": 37.0547,
+   "target": {
+    "dec_2016": -37.531441078575,
+    "gaia_dr3": "5396978667757576064",
+    "parallax": 26.93233658152493,
+    "pmdec": -27.449539955113494,
+    "pmra": -105.73843333562495,
+    "ra_2016": 167.61541010627627,
+    "ruwe": 1.2028022,
+    "rv_dr3": 5.2483487,
+    "rv_dr3_err": 2.9585936
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(167.6155400,-37.5310700),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(167.6155400,-37.5310700,0.05000)) AND parallax BETWEEN 21.5897 AND 32.3846 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -37.53131907914,
+    "gaia_dr3": "5396978667757576064",
+    "parallax": 26.9323,
+    "pmdec": -27.45,
+    "pmra": -105.738,
+    "ra_2000": 167.61600271216,
+    "rv": 5.25,
+    "rv_bibcode": "2022yCat.1355....0G",
+    "simbad_main_id": "TWA 3B"
+   }
+  },
+  "TWA 7": {
+   "deposited_dec": "-33.671266",
+   "deposited_ra": "160.624764",
+   "dist_pc": 34.0975,
+   "target": {
+    "dec_2016": -33.67126227095639,
+    "gaia_dr3": "5444751795151480320",
+    "parallax": 29.32767206565099,
+    "pmdec": -19.647775126946925,
+    "pmra": -118.75057501508036,
+    "ra_2016": 160.62479038000887,
+    "ruwe": 1.1870896,
+    "rv_dr3": 10.805363,
+    "rv_dr3_err": 4.405266
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(160.6247640,-33.6712660),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(160.6247640,-33.6712660,0.05000)) AND parallax BETWEEN 23.4621 AND 35.1932 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -33.67117494589,
+    "gaia_dr3": "5444751795151480320",
+    "parallax": 29.3277,
+    "pmdec": -19.648,
+    "pmra": -118.751,
+    "ra_2000": 160.62542455365,
+    "rv": 11.796,
+    "rv_bibcode": "2018A&A...616A...7S",
+    "simbad_main_id": "V* CE Ant"
+   }
+  },
+  "TYC 2211-1309-1": {
+   "deposited_dec": "27.253678",
+   "deposited_ra": "330.173715",
+   "dist_pc": 35.4239,
+   "target": {
+    "dec_2016": 27.253691211852217,
+    "gaia_dr3": "1892968735059453440",
+    "parallax": 28.22949999027627,
+    "pmdec": -17.7688232256748,
+    "pmra": 75.83796382417367,
+    "ra_2016": 330.1736510918951,
+    "ruwe": 1.0898057,
+    "rv_dr3": -2.054279,
+    "rv_dr3_err": 2.2772162
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(330.1737150,27.2536780),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(330.1737150,27.2536780,0.05000)) AND parallax BETWEEN 22.5836 AND 33.8754 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": 27.253770183890005,
+    "gaia_dr3": "1892968735059453440",
+    "parallax": 28.2295,
+    "pmdec": -17.769,
+    "pmra": 75.838,
+    "ra_2000": 330.17327194393,
+    "rv": -0.41,
+    "rv_bibcode": "2018MNRAS.475.1960F",
+    "simbad_main_id": "RX J2200.7+2715"
+   }
+  },
+  "UCAC2 20312880": {
+   "deposited_dec": "-27.701555",
+   "deposited_ra": "93.305414",
+   "dist_pc": 33.766,
+   "target": {
+    "dec_2016": -27.701553789338497,
+    "gaia_dr3": "2899492637251200512",
+    "parallax": 29.61558836599469,
+    "pmdec": -1.234794293616982,
+    "pmra": -14.16228325446633,
+    "ra_2016": 93.30542437726922,
+    "ruwe": 12.638136,
+    "rv_dr3": 23.046762,
+    "rv_dr3_err": 1.2221546
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(93.3054140,-27.7015550),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(93.3054140,-27.7015550,0.05000)) AND parallax BETWEEN 23.6925 AND 35.5387 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -27.701548301350005,
+    "gaia_dr3": "2899492637251200512",
+    "parallax": 29.6156,
+    "pmdec": -1.235,
+    "pmra": -14.162,
+    "ra_2000": 93.30549546924,
+    "rv": 22.8,
+    "rv_bibcode": "2020A&A...642A.179M",
+    "simbad_main_id": "RX J0613.2-2742"
+   }
+  },
+  "UCAC3 176-23654": {
+   "deposited_dec": "-2.359298",
+   "deposited_ra": "83.499308",
+   "dist_pc": 34.3459,
+   "target": {
+    "dec_2016": -2.3592553593286123,
+    "gaia_dr3": "3216922640621225088",
+    "parallax": 29.115544126510095,
+    "pmdec": -58.41319216784366,
+    "pmra": 9.524594919115954,
+    "ra_2016": 83.49930047922183,
+    "ruwe": 1.2362465,
+    "rv_dr3": 19.984293,
+    "rv_dr3_err": 0.56612414
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(83.4993080,-2.3592980),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(83.4993080,-2.3592980,0.05000)) AND parallax BETWEEN 23.2924 AND 34.9387 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -2.35899574514,
+    "gaia_dr3": "3216922640621225088",
+    "parallax": 29.1155,
+    "pmdec": -58.413,
+    "pmra": 9.525,
+    "ra_2000": 83.49925811178,
+    "rv": 21.09,
+    "rv_bibcode": "2018MNRAS.475.1960F",
+    "simbad_main_id": "RX J0534.0-0221"
+   }
+  },
+  "V AT Mic B": {
+   "deposited_dec": "-32.437714",
+   "deposited_ra": "310.464964",
+   "dist_pc": 9.8066,
+   "target": {
+    "dec_2016": -32.437514921328194,
+    "gaia_dr3": "6792436799477051904",
+    "parallax": 101.97239029860124,
+    "pmdec": -301.4290811285728,
+    "pmra": 296.9075913988356,
+    "ra_2016": 310.4647312153549,
+    "ruwe": 2.2641666,
+    "rv_dr3": -8.083389,
+    "rv_dr3_err": 1.6008917
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(310.4649640,-32.4377140),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(310.4649640,-32.4377140,0.05000)) AND parallax BETWEEN 81.5777 AND 122.3666 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -32.43617522686639,
+    "gaia_dr3": "6792436799477051904",
+    "parallax": 101.9724,
+    "pmdec": -301.429,
+    "pmra": 296.908,
+    "ra_2000": 310.4631677013837,
+    "rv": -5.2,
+    "rv_bibcode": "2006A&A...460..695T",
+    "simbad_main_id": "V* AT Mic B"
+   }
+  },
+  "V star TX PsA": {
+   "deposited_dec": "-33.257864",
+   "deposited_ra": "341.251346",
+   "dist_pc": 20.835,
+   "target": {
+    "dec_2016": -33.257784893413394,
+    "gaia_dr3": "6603693808817829760",
+    "parallax": 47.99616934587578,
+    "pmdec": -120.87940157960739,
+    "pmra": 176.82148538319268,
+    "ra_2016": 341.25120712754585,
+    "ruwe": 1.1698489,
+    "rv_dr3": -4.651194,
+    "rv_dr3_err": 3.8287978
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(341.2513460,-33.2578640),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(341.2513460,-33.2578640,0.05000)) AND parallax BETWEEN 38.3969 AND 57.5954 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -33.25724764809,
+    "gaia_dr3": "6603693808817829760",
+    "parallax": 47.9962,
+    "pmdec": -120.879,
+    "pmra": 176.821,
+    "ra_2000": 341.25026733146,
+    "rv": 1.84,
+    "rv_bibcode": "2018MNRAS.475.1960F",
+    "simbad_main_id": "V* TX PsA"
+   }
+  },
+  "V star WW PsA": {
+   "deposited_dec": "-33.251113",
+   "deposited_ra": "341.242609",
+   "dist_pc": 20.8673,
+   "target": {
+    "dec_2016": -33.251032101917744,
+    "gaia_dr3": "6603693881832177792",
+    "parallax": 47.92184273110373,
+    "pmdec": -123.18825355296836,
+    "pmra": 179.9451085900137,
+    "ra_2016": 341.24246814684966,
+    "ruwe": 1.138691,
+    "rv_dr3": null,
+    "rv_dr3_err": null
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(341.2426090,-33.2511130),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(341.2426090,-33.2511130,0.05000)) AND parallax BETWEEN 38.3375 AND 57.5062 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -33.25048459491,
+    "gaia_dr3": "6603693881832177792",
+    "parallax": 47.9218,
+    "pmdec": -123.188,
+    "pmra": 179.945,
+    "ra_2000": 341.24151182290996,
+    "rv": 1.835,
+    "rv_bibcode": "2021A&A...645A..30Z",
+    "simbad_main_id": "V* WW PsA"
+   }
+  },
+  "WD 0407+179": {
+   "deposited_dec": "18.039555",
+   "deposited_ra": "62.543355",
+   "dist_pc": 34.1102,
+   "target": {
+    "dec_2016": 18.039562944974314,
+    "gaia_dr3": "46896958359881728",
+    "parallax": 29.316745473424746,
+    "pmdec": -86.17316229550332,
+    "pmra": 71.94107817041217,
+    "ra_2016": 62.54334799500532,
+    "ruwe": 1.1182599,
+    "rv_dr3": null,
+    "rv_dr3_err": null
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(62.5433550,18.0395550),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(62.5433550,18.0395550,0.05000)) AND parallax BETWEEN 23.4534 AND 35.1801 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": 18.03994593652,
+    "gaia_dr3": "46896958359881728",
+    "parallax": 29.3167,
+    "pmdec": -86.173,
+    "pmra": 71.941,
+    "ra_2000": 62.54301172619001,
+    "rv": 61.9,
+    "rv_bibcode": "2020A&A...638A.131N",
+    "simbad_main_id": "HZ 10"
+   }
+  },
+  "WD0346-011": {
+   "deposited_dec": "-0.976539",
+   "deposited_ra": "57.209577",
+   "dist_pc": 31.0396,
+   "target": {
+    "dec_2016": -0.9763603962606229,
+    "gaia_dr3": "3251244858154433536",
+    "parallax": 32.21690425047798,
+    "pmdec": -162.95242500416975,
+    "pmra": 84.62182086558782,
+    "ra_2016": 57.209484369964336,
+    "ruwe": 1.1730634,
+    "rv_dr3": null,
+    "rv_dr3_err": null
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(57.2095770,-0.9765390),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(57.2095770,-0.9765390,0.05000)) AND parallax BETWEEN 25.7735 AND 38.6603 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -0.9756361632400001,
+    "gaia_dr3": "3251244858154433536",
+    "parallax": 32.2169,
+    "pmdec": -162.952,
+    "pmra": 84.622,
+    "ra_2000": 57.20910821845,
+    "rv": 176.2,
+    "rv_bibcode": "2020A&A...638A.131N",
+    "simbad_main_id": "GD 50"
+   }
+  },
+  "WD2039-202": {
+   "deposited_dec": "-20.077182",
+   "deposited_ra": "310.646911",
+   "dist_pc": 21.7709,
+   "target": {
+    "dec_2016": -20.077075762089112,
+    "gaia_dr3": "6857939315643803776",
+    "parallax": 45.93297534758786,
+    "pmdec": -96.27613537295704,
+    "pmra": 357.7992312254921,
+    "ra_2016": 310.6464920929421,
+    "ruwe": 0.8619241,
+    "rv_dr3": null,
+    "rv_dr3_err": null
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(310.6469110,-20.0771820),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(310.6469110,-20.0771820,0.05000)) AND parallax BETWEEN 36.7463 AND 55.1194 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -20.076647860088613,
+    "gaia_dr3": "6857939315643803776",
+    "parallax": 45.933,
+    "pmdec": -96.276,
+    "pmra": 357.799,
+    "ra_2000": 310.6447989915437,
+    "rv": -2.3,
+    "rv_bibcode": "2020A&A...638A.131N",
+    "simbad_main_id": "EGGR 141"
+   }
+  },
+  "Wolf 219": {
+   "deposited_dec": "18.430936",
+   "deposited_ra": "56.147170",
+   "dist_pc": 18.883,
+   "target": {
+    "dec_2016": 18.43104008150184,
+    "gaia_dr3": "44901791432527232",
+    "parallax": 52.9577347158701,
+    "pmdec": -1129.7758796278197,
+    "pmra": 412.51764655794017,
+    "ra_2016": 56.14712981451253,
+    "ruwe": 0.983954,
+    "rv_dr3": null,
+    "rv_dr3_err": null
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(56.1471700,18.4309360),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(56.1471700,18.4309360,0.05000)) AND parallax BETWEEN 42.3661 AND 63.5492 ORDER BY sep",
+   "vel_object": null
+  },
+  "Wolf 28": {
+   "deposited_dec": "5.377072",
+   "deposited_ra": "12.296505",
+   "dist_pc": 4.3144,
+   "target": {
+    "dec_2016": 5.376556608426358,
+    "gaia_dr3": "2552928187080872832",
+    "parallax": 231.7799995322092,
+    "pmdec": -2711.8825044849837,
+    "pmra": 1231.3994653791733,
+    "ra_2016": 12.296740250462333,
+    "ruwe": 1.2103684,
+    "rv_dr3": null,
+    "rv_dr3_err": null
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(12.2965050,5.3770720),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(12.2965050,5.3770720,0.05000)) AND parallax BETWEEN 185.4256 AND 278.1383 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": 5.388609396929721,
+    "gaia_dr3": "2552928187080872832",
+    "parallax": 231.78,
+    "pmdec": -2711.883,
+    "pmra": 1231.399,
+    "ra_2000": 12.291243072220414,
+    "rv": 263.0,
+    "rv_bibcode": "2006AstL...32..759G",
+    "simbad_main_id": "Wolf   28"
+   }
+  },
+  "Wolf 359": {
+   "deposited_dec": "6.997732",
+   "deposited_ra": "164.095982",
+   "dist_pc": 2.4086,
+   "target": {
+    "dec_2016": 7.002726940984864,
+    "gaia_dr3": "3864972938605115520",
+    "parallax": 415.17941567802137,
+    "pmdec": -2699.214987679166,
+    "pmra": -3866.3382751436793,
+    "ra_2016": 164.10319030755974,
+    "ruwe": 0.8353354,
+    "rv_dr3": null,
+    "rv_dr3_err": null
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(164.0959820,6.9977320),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(164.0959820,6.9977320,0.05000)) AND parallax BETWEEN 332.1432 AND 498.2147 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": 7.014723134801666,
+    "gaia_dr3": "3864972938605115520",
+    "parallax": 415.1794,
+    "pmdec": -2699.215,
+    "pmra": -3866.338,
+    "ra_2000": 164.1205036259475,
+    "rv": 19.57,
+    "rv_bibcode": "2018MNRAS.475.1960F",
+    "simbad_main_id": "Wolf  359"
+   }
+  },
+  "alf CMa B": {
+   "deposited_dec": "-16.721457",
+   "deposited_ra": "101.286349",
+   "dist_pc": 2.6703,
+   "target": {
+    "dec_2016": -16.720932526023173,
+    "gaia_dr3": "2947050466531873024",
+    "parallax": 374.48958852876103,
+    "pmdec": -914.5196209016666,
+    "pmra": -461.570505530133,
+    "ra_2016": 101.28662552099249,
+    "ruwe": 2.4190555,
+    "rv_dr3": null,
+    "rv_dr3_err": null
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(101.2863490,-16.7214570),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(101.2863490,-16.7214570,0.05000)) AND parallax BETWEEN 299.5918 AND 449.3877 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -16.71611586111111,
+    "gaia_dr3": null,
+    "parallax": 379.21,
+    "pmdec": -1223.07,
+    "pmra": -546.01,
+    "ra_2000": 101.28715533333335,
+    "rv": -5.5,
+    "rv_bibcode": "2006AstL...32..759G",
+    "simbad_main_id": "* alf CMa"
+   }
+  },
+  "bet Pic": {
+   "deposited_dec": "-51.066188",
+   "deposited_ra": "86.821229",
+   "dist_pc": 19.6345,
+   "target": {
+    "dec_2016": -51.066136257823345,
+    "gaia_dr3": "4792774797545800832",
+    "parallax": 50.930690628822894,
+    "pmdec": 84.0405295978282,
+    "pmra": 5.160196860824648,
+    "ra_2016": 86.82123452009108,
+    "ruwe": 3.0716627,
+    "rv_dr3": 16.84059,
+    "rv_dr3_err": 0.33607236
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(86.8212290,-51.0661880),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(86.8212290,-51.0661880,0.05000)) AND parallax BETWEEN 40.7446 AND 61.1169 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -51.066511426388885,
+    "gaia_dr3": "4792774797545800832",
+    "parallax": 50.9307,
+    "pmdec": 84.041,
+    "pmra": 5.16,
+    "ra_2000": 86.82119870875,
+    "rv": 16.84,
+    "rv_bibcode": "2022yCat.1355....0G",
+    "simbad_main_id": "* bet Pic"
+   }
+  },
+  "chi01 Ori": {
+   "deposited_dec": "20.275905",
+   "deposited_ra": "88.594935",
+   "dist_pc": 8.6995,
+   "target": {
+    "dec_2016": 20.275852148021837,
+    "gaia_dr3": "3399063235755057792",
+    "parallax": 114.94966074779107,
+    "pmdec": -90.72993621907472,
+    "pmra": -179.01353012437752,
+    "ra_2016": 88.59482419468164,
+    "ruwe": 5.6246004,
+    "rv_dr3": -15.424911,
+    "rv_dr3_err": 0.18918045
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(88.5949350,20.2759050),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(88.5949350,20.2759050,0.05000)) AND parallax BETWEEN 91.9593 AND 137.9390 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": 20.276172788333334,
+    "gaia_dr3": "3399063235755057792",
+    "parallax": 115.43,
+    "pmdec": -99.51,
+    "pmra": -162.54,
+    "ra_2000": 88.59576245541668,
+    "rv": 5.7,
+    "rv_bibcode": "2023MNRAS.519.5472M",
+    "simbad_main_id": "* chi01 Ori"
+   }
+  },
+  "eps Eri": {
+   "deposited_dec": null,
+   "deposited_ra": null,
+   "dist_pc": 3.2198,
+   "target": {
+    "dec_2016": -9.458168216292322,
+    "gaia_dr3": "5164707970261890560",
+    "parallax": 310.5772928005821,
+    "pmdec": 20.875840089774208,
+    "pmra": -974.758145249517,
+    "ra_2016": 53.22829341517546,
+    "ruwe": 2.7166147,
+    "rv_dr3": null,
+    "rv_dr3_err": null
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,0.0 AS sep FROM gaiadr3.gaia_source WHERE source_id=5164707970261890560",
+   "vel_object": {
+    "dec_2000": -9.458260970518056,
+    "gaia_dr3": "5164707970261890560",
+    "parallax": 310.5773,
+    "pmdec": 20.876,
+    "pmra": -974.758,
+    "ra_2000": 53.23268537982792,
+    "rv": 16.376,
+    "rv_bibcode": "2018A&A...616A...7S",
+    "simbad_main_id": "* eps Eri"
+   }
+  },
+  "eta Cru": {
+   "deposited_dec": "-64.613907",
+   "deposited_ra": "181.720792",
+   "dist_pc": 19.6882,
+   "target": {
+    "dec_2016": -64.61389471172151,
+    "gaia_dr3": "6053245135154609280",
+    "parallax": 50.79192327463149,
+    "pmdec": -36.90243212526111,
+    "pmra": 34.27029065373058,
+    "ra_2016": 181.72076420594314,
+    "ruwe": 1.5433817,
+    "rv_dr3": 13.127231,
+    "rv_dr3_err": 0.2633267
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(181.7207920,-64.6139070),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(181.7207920,-64.6139070,0.05000)) AND parallax BETWEEN 40.6335 AND 60.9502 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -64.61373070048556,
+    "gaia_dr3": "6053245135154609280",
+    "parallax": 50.7919,
+    "pmdec": -36.902,
+    "pmra": 34.27,
+    "ra_2000": 181.72040893237084,
+    "rv": 13.13,
+    "rv_bibcode": "2022yCat.1355....0G",
+    "simbad_main_id": "* eta Cru"
+   }
+  },
+  "eta Crv": {
+   "deposited_dec": "-16.196405",
+   "deposited_ra": "188.014571",
+   "dist_pc": 18.2437,
+   "target": {
+    "dec_2016": -16.196264029437497,
+    "gaia_dr3": "3526420114274019456",
+    "parallax": 54.81347232361327,
+    "pmdec": -58.2411313459339,
+    "pmra": -424.596782433152,
+    "ra_2016": 188.0156449228337,
+    "ruwe": 1.89663,
+    "rv_dr3": -1.1636719,
+    "rv_dr3_err": 0.13460574
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(188.0145710,-16.1964050),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(188.0145710,-16.1964050,0.05000)) AND parallax BETWEEN 43.8508 AND 65.7761 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -16.196005170938612,
+    "gaia_dr3": "3526420114274019456",
+    "parallax": 54.8135,
+    "pmdec": -58.241,
+    "pmra": -424.597,
+    "ra_2000": 188.01761000770082,
+    "rv": 0.69,
+    "rv_bibcode": "2018yCat.1345....0G",
+    "simbad_main_id": "* eta Crv"
+   }
+  },
+  "gam Lep": {
+   "deposited_dec": "-22.450302",
+   "deposited_ra": "86.114152",
+   "dist_pc": 8.905,
+   "target": {
+    "dec_2016": -22.45002336420253,
+    "gaia_dr3": "2964000159821218432",
+    "parallax": 112.29602820037746,
+    "pmdec": -368.5208157670237,
+    "pmra": -291.75677673534847,
+    "ra_2016": 86.11439122579156,
+    "ruwe": 3.2323093,
+    "rv_dr3": -8.989398,
+    "rv_dr3_err": 0.14734523
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(86.1141520,-22.4503020),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(86.1141520,-22.4503020,0.05000)) AND parallax BETWEEN 89.8372 AND 134.7558 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -22.448385487848334,
+    "gaia_dr3": "2964000159821218432",
+    "parallax": 112.296,
+    "pmdec": -368.521,
+    "pmra": -291.757,
+    "ra_2000": 86.115794237325,
+    "rv": -9.199,
+    "rv_bibcode": "2018A&A...616A...7S",
+    "simbad_main_id": "* gam Lep"
+   }
+  },
+  "gam Vir": {
+   "deposited_dec": "-1.448952",
+   "deposited_ra": "190.411928",
+   "dist_pc": 12.0202,
+   "target": {
+    "dec_2016": -1.4490230625523142,
+    "gaia_dr3": "3683687763520080384",
+    "parallax": 83.19347753572258,
+    "pmdec": 85.70058806691729,
+    "pmra": -605.1760034503509,
+    "ra_2016": 190.41242708810614,
+    "ruwe": 1.483704,
+    "rv_dr3": null,
+    "rv_dr3_err": null
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(190.4119280,-1.4489520),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(190.4119280,-1.4489520,0.05000)) AND parallax BETWEEN 66.5546 AND 99.8319 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -1.4494021269330557,
+    "gaia_dr3": "3683687763520080256",
+    "parallax": 78.5233,
+    "pmdec": -64.27,
+    "pmra": -534.318,
+    "ra_2000": 190.4147607686542,
+    "rv": -19.8,
+    "rv_bibcode": "1979IAUS...30...57E",
+    "simbad_main_id": "* gam Vir B"
+   }
+  },
+  "hd107146": {
+   "deposited_dec": "16.547601",
+   "deposited_ra": "184.776241",
+   "dist_pc": 27.4697,
+   "target": {
+    "dec_2016": 16.547634275964707,
+    "gaia_dr3": "3946438125929224320",
+    "parallax": 36.40379214500465,
+    "pmdec": -149.0213066316967,
+    "pmra": -174.68330451425365,
+    "ra_2016": 184.77628126563016,
+    "ruwe": 0.9931154,
+    "rv_dr3": 1.7595692,
+    "rv_dr3_err": 0.1405633
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(184.7762410,16.5476010),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(184.7762410,16.5476010,0.05000)) AND parallax BETWEEN 29.1230 AND 43.6845 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": 16.548296591979998,
+    "gaia_dr3": "3946438125929224320",
+    "parallax": 36.4038,
+    "pmdec": -149.021,
+    "pmra": -174.683,
+    "ra_2000": 184.77709118346,
+    "rv": 1.8,
+    "rv_bibcode": "2018A&A...616A...7S",
+    "simbad_main_id": "HD 107146"
+   }
+  },
+  "hd92945": {
+   "deposited_dec": "-29.064520",
+   "deposited_ra": "160.866647",
+   "dist_pc": 21.5085,
+   "target": {
+    "dec_2016": -29.064508603284192,
+    "gaia_dr3": "5455707157211784832",
+    "parallax": 46.49314598007356,
+    "pmdec": -49.892190985041225,
+    "pmra": -215.48354092175197,
+    "ra_2016": 160.86670251334388,
+    "ruwe": 0.98025006,
+    "rv_dr3": 22.5697,
+    "rv_dr3_err": 0.12848103
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(160.8666470,-29.0645200),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(160.8666470,-29.0645200,0.05000)) AND parallax BETWEEN 37.1946 AND 55.7919 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -29.064286855764724,
+    "gaia_dr3": "5455707157211784832",
+    "parallax": 46.4931,
+    "pmdec": -49.892,
+    "pmra": -215.484,
+    "ra_2000": 160.86779819096418,
+    "rv": 22.881,
+    "rv_bibcode": "2018A&A...616A...7S",
+    "simbad_main_id": "V* V419 Hya"
+   }
+  },
+  "kap CrB": {
+   "deposited_dec": "35.655454",
+   "deposited_ra": "237.807988",
+   "dist_pc": 29.9911,
+   "target": {
+    "dec_2016": 35.65583336071889,
+    "gaia_dr3": "1372702716380418688",
+    "parallax": 33.34325692137492,
+    "pmdec": -348.3495377967055,
+    "pmra": -8.66850860804631,
+    "ra_2016": 237.80799964337655,
+    "ruwe": 1.1718425,
+    "rv_dr3": -25.117205,
+    "rv_dr3_err": 0.119755246
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(237.8079880,35.6554540),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(237.8079880,35.6554540,0.05000)) AND parallax BETWEEN 26.6746 AND 40.0119 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": 35.65738158087722,
+    "gaia_dr3": "1372702716380418688",
+    "parallax": 33.3433,
+    "pmdec": -348.35,
+    "pmra": -8.669,
+    "ra_2000": 237.8080470598467,
+    "rv": -24.996,
+    "rv_bibcode": "2018A&A...616A...7S",
+    "simbad_main_id": "* kap CrB"
+   }
+  },
+  "lp 876-10 Gaia DR3 6623351805412369024": {
+   "deposited_dec": "-24.369749",
+   "deposited_ra": "342.020579",
+   "dist_pc": 7.6763,
+   "target": {
+    "dec_2016": -24.369627417603155,
+    "gaia_dr3": "6623351805412369024",
+    "parallax": 130.27065669284806,
+    "pmdec": -183.8049429101332,
+    "pmra": 331.60870305798755,
+    "ra_2016": 342.0203381724408,
+    "ruwe": 1.2056623,
+    "rv_dr3": 5.773293,
+    "rv_dr3_err": 0.57990056
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(342.0205790,-24.3697490),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(342.0205790,-24.3697490,0.05000)) AND parallax BETWEEN 104.2169 AND 156.3253 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -24.368810498159718,
+    "gaia_dr3": "6623351805412369024",
+    "parallax": 130.2707,
+    "pmdec": -183.805,
+    "pmra": 331.609,
+    "ra_2000": 342.0187202090404,
+    "rv": 6.646,
+    "rv_bibcode": "2022ApJ...935..104M",
+    "simbad_main_id": "* alf PsA C"
+   }
+  },
+  "tau Cet": {
+   "deposited_dec": "-15.934033",
+   "deposited_ra": "26.009795",
+   "dist_pc": 3.6522,
+   "target": {
+    "dec_2016": -15.933680200693857,
+    "gaia_dr3": "2452378776434477184",
+    "parallax": 273.80974511859966,
+    "pmdec": 854.9631570589582,
+    "pmra": -1721.7277944720731,
+    "ra_2016": 26.009055057160104,
+    "ruwe": 2.634341,
+    "rv_dr3": null,
+    "rv_dr3_err": null
+   },
+   "target_query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,radial_velocity,radial_velocity_error,ruwe,DISTANCE(POINT(26.0097950,-15.9340330),POINT(ra,dec))*3600 AS sep FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(26.0097950,-15.9340330,0.05000)) AND parallax BETWEEN 219.0461 AND 328.5691 ORDER BY sep",
+   "vel_object": {
+    "dec_2000": -15.93747989102139,
+    "gaia_dr3": "2452378776434477184",
+    "parallax": 273.8097,
+    "pmdec": 854.963,
+    "pmra": -1721.728,
+    "ra_2000": 26.01701307163417,
+    "rv": -16.597,
+    "rv_bibcode": "2018A&A...616A...7S",
+    "simbad_main_id": "* tau Cet"
+   }
+  }
+ },
+ "companions": {
+  "G 272-61A": "BL Cet / UV Cet (Luyten 726-8 AB), a 4 arcsec (11 au) bound pair; B carries the catalogued velocity",
+  "NAME AT Mic AB Gaia DR3 6792436799475128960": "AT Mic A and B, a 3.6 arcsec (36 au) bound M-dwarf pair; B carries the catalogued velocity",
+  "TWA 3A 696000": "TWA 3A and 3B, a 1.5 arcsec (55 au) bound pair in the TW Hya association; 3B carries the catalogued velocity",
+  "alf CMa B": "Sirius B, white-dwarf companion of Sirius A at 6 arcsec (17 au); the system velocity is the primary's, and a white dwarf's own line velocity would carry its gravitational redshift",
+  "gam Vir": "gamma Vir A and B, a 1.3 arcsec (15 au) visual binary of near-equal F stars"
+ },
+ "supersede": {
+  "2MASS J05241914-1601153 551040": {
+   "note": "Velocity unchanged (19.68 km/s).",
+   "plx_match": 4.174366867825853e-07,
+   "plx_ok": true,
+   "resolved_by": "r27: the velocity object PM J05243-1601 is the SYSTEM of which SIMBAD component PM J05243-1601B = Gaia DR3 2983928739350551040 is the target; identity by position at J2000 and proper motion (see astrometry), parallax from the component",
+   "superseded": {
+    "plx_match": null,
+    "plx_ok": false,
+    "resolved_by": "identifier (proper motion exceeds the cone)",
+    "why": "resolved by IDENTIFIER, and the parent object carries no parallax at all"
+   }
+  },
+  "2MASS J05241914-1601153 717696": {
+   "note": "Velocity unchanged (19.68 km/s).",
+   "plx_match": 0.006564495433935521,
+   "plx_ok": true,
+   "resolved_by": "r27: the velocity object PM J05243-1601 is the SYSTEM of which SIMBAD component PM J05243-1601A = Gaia DR3 2983928735054717696 is the target; identity by position at J2000 and proper motion (see astrometry), parallax from the component",
+   "superseded": {
+    "plx_match": null,
+    "plx_ok": false,
+    "resolved_by": "identifier (proper motion exceeds the cone)",
+    "why": "resolved by IDENTIFIER, and the parent object carries no parallax at all"
+   }
+  },
+  "L 836-122": {
+   "bibcode": "2023A&A...674A...1G",
+   "main_id": "L  836-122",
+   "n_rv_in_cone": null,
+   "note": "Gaia DR3 radial_velocity -1.43 +- 3.60 km/s for the target itself; the companion value -9.54 differs by 2.2 sigma.",
+   "plx_match": 2.513909999858444e-06,
+   "plx_ok": true,
+   "resolved_by": "r27: the target's own Gaia DR3 radial velocity (6298167942962279680)",
+   "rvz_type": "v",
+   "sep_arcsec": 0.0,
+   "superseded": {
+    "main_id": "HD 124498",
+    "v_sys_kms": -9.54,
+    "why": "HD 124498 is a wide common-proper-motion companion 64 arcsec (1,830 au projected) away; it passed the parallax test, but the star has its own measurement and a companion at that separation is not the star"
+   },
+   "v_sys_err_kms": 3.6,
+   "v_sys_kms": -1.43
+  },
+  "LP 476-207 384128": {
+   "note": "Velocity unchanged (18.085 km/s).",
+   "plx_match": 0.0014728673739664334,
+   "plx_ok": true,
+   "resolved_by": "r27: the velocity object LP  476-207 is the SYSTEM of which SIMBAD component LP  476-207 A = Gaia DR3 3291643148740384128 is the target; identity by position at J2000 and proper motion (see astrometry), parallax from the component",
+   "superseded": {
+    "plx_match": 0.2845747,
+    "plx_ok": false,
+    "resolved_by": "identifier (proper motion exceeds the cone)",
+    "why": "resolved by IDENTIFIER, and the parent object carries a stale pre-Gaia parallax (30.12 mas against 42.0-42.1)"
+   }
+  },
+  "LP 476-207 783296": {
+   "note": "Velocity unchanged (18.085 km/s).",
+   "plx_match": 1.009678715360529e-07,
+   "plx_ok": true,
+   "resolved_by": "r27: the velocity object LP  476-207 is the SYSTEM of which SIMBAD component LP  476-207 B = Gaia DR3 3291643148741783296 is the target; identity by position at J2000 and proper motion (see astrometry), parallax from the component",
+   "superseded": {
+    "plx_match": 0.2845747,
+    "plx_ok": false,
+    "resolved_by": "identifier (proper motion exceeds the cone)",
+    "why": "resolved by IDENTIFIER, and the parent object carries a stale pre-Gaia parallax (30.12 mas against 42.0-42.1)"
+   }
+  },
+  "LP 736-15": {
+   "bibcode": "2015ApJ...804...96G",
+   "main_id": "LP  736-15",
+   "n_rv_in_cone": null,
+   "note": "LP 736-15 = VHS J1256-1257 AB (M7.5 binary, GJ 11870/11871). Heliocentric velocity -1.4 +- 5.0 km/s from VLT/UVES cross-correlation against GJ 406 (Gauza et al. 2015, ApJ 804, 96, Sec. 4.4; Table 2 prints +-4.5). Blended equal-mass pair, so the value is close to systemic. Gaia DR3, SIMBAD and 10 VizieR RV columns carry nothing usable (J/A+A/684/A29 prints 1172 +- 60, warning 9, a failed template fit).",
+   "plx_match": 4.788800000503443e-07,
+   "plx_ok": true,
+   "resolved_by": "r27: position and parallax against Gaia DR3 3526198184723289472; SIMBAD carries no velocity for this object, so the value is the literature one",
+   "rvz_type": "v",
+   "sep_arcsec": null,
+   "superseded": {
+    "main_id": "UCAC2  27300936",
+    "v_sys_kms": -17.11,
+    "why": "UCAC2 27300936 lies 79 arcsec from the target at J2000 with parallax 1.37 mas against 47.27; the snapshot had rejected it (plx_ok false) and unmask_r26.py used it anyway"
+   },
+   "v_sys_err_kms": 5.0,
+   "v_sys_kms": -1.4
+  },
+  "PM J03433+1958": {
+   "bibcode": null,
+   "main_id": "LSPM J0343+1958",
+   "n_rv_in_cone": 0,
+   "note": "A DA white dwarf (SIMBAD WD* DA; LAMOST DR11 subclass WD). No velocity in Gaia DR3 or SIMBAD. The LAMOST-derived values in VizieR (J/ApJS/245/34: 191 +- 43 km/s with an A1IV template; J/A+A/684/A29: 53 +- 342) are stellar-template fits to a white-dwarf spectrum and are not velocities; any white-dwarf line velocity also carries the gravitational redshift, which is not the system motion a transmitter would share. Left missing: unmask_r26.py then evaluates the window over +-50 km/s and withholds what depends on it.",
+   "plx_match": 1.7629100000548498e-06,
+   "plx_ok": true,
+   "resolved_by": "r27: position and parallax against Gaia DR3 63126196662620416; no systemic velocity exists",
+   "rvz_type": null,
+   "sep_arcsec": null,
+   "superseded": {
+    "main_id": "UCAC4 550-007537",
+    "v_sys_kms": 29.8489,
+    "why": "UCAC4 550-007537 lies 100 arcsec from the target at J2000 with parallax 0.34 mas against 48.18; the snapshot had rejected it (plx_ok false) and unmask_r26.py used it anyway"
+   },
+   "v_sys_kms": null
+  }
+ }
+}

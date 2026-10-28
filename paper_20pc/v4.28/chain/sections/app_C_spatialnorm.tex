@@ -1,0 +1,107 @@
+%% APPENDIX B -- the spatial rank as a diagnostic: what it can and cannot
+%% support, and the reserved hold-out that calibrates it.
+%% Owner: r11-chain.  Carries \label{app:radius} (cited by 04_method.tex)
+%% and \label{sec:heldout} (cited from the other appendices)
+%% and \label{sec:nullscatter} (v4.23: cited by 05_results.tex's
+%% false-alarm sentence, which quotes the MEASURED scatter of this very
+%% null -- the reference used to read `app:spatialnorm`, a label that has
+%% never existed in this tree and which stopped the build at `labelcheck`).
+\section{The spatial rank, and what it can support}
+\label{app:radius}
+
+The spatial rank asks whether an excess sits at the star or anywhere else in
+the field. It is a diagnostic on which no disposition rests
+(\S\ref{sec:summary}), and this appendix is the measurement that settles why.
+
+The star lies inside the control annulus at the phase centre, and the
+displacement is real: the star carries more above-threshold cells than a
+control position at every level below the trigger
+(Appendix~\ref{app:falsealarm}). \emph{It is not a primary-beam effect}:
+spectra are extracted in apparent flux density from phase-rotated visibilities
+(Appendix~\ref{app:conventions}), and a noise rise toward the field edge would
+put the stellar rank \emph{above} one half, the opposite of what is measured;
+the ensemble's own weak rise with radius is removed by standardising each
+probe within its radius bin. The full treatment is in
+\texttt{documentation/\allowbreak appendix\_B\_spatial\_normalisation.md} of the data
+archive \citep{SIdeposit}.
+
+\emph{A calibration error that varied with frequency would explain the
+displacement, and it is the only mechanism on offer.} A bandpass residual, or
+a coarse-mode system temperature interpolated near a telluric line
+\citep{ALMATsys2018}, survives the per-integration median along frequency,
+multiplies the continuum, so acts at the star and not on empty sky, and stands
+still in topocentric frequency, stacking at near-zero drift and putting the
+stellar rank \emph{below} one half, the sign observed. \emph{Amplitude excludes
+it.} A fractional error $\epsilon$ needs $\epsilon=5\sigma/S_{\rm c}$ to reach
+the trigger, with the continuum $S_{\rm c}$ measured for \CyNWinMeas{} of the
+\CyNWinTot{} windows and checked against independent continuum images. No
+window requires as little as the \CySpecTsysLo--\CySpecTsysHi{} per cent a
+coarse system temperature leaves at an ozone line -- the least anywhere is
+\CyEpsMinPct{} per cent, the median \CyEpsMedPct, and \CyCrossEpsLoPct{} for
+the least demanding of the \CyNCrossMeas{} crossings with a continuum -- the
+bandpass branch needs $\CyMarginBp\times$ the \CdSpecBpWorst{} per cent quoted
+for the worst bands \citep{ALMAKBBandpass,ALMATechNote15}, and \ScNInRad{}
+crossing lies within \ScRadMHz\,MHz of an atmospheric transition
+(Appendix~\ref{app:rfi}). The stellar statistic over the median control
+statistic has median \NsrMed{} (\NsrLo--\NsrHi) over \NsrNWin{} census windows
+without an adopted crossing, so the two noise scales agree.
+
+\subsection{The reserved hold-out, and what it calibrates}
+\label{sec:heldout}
+
+The statistic and the mask are set on the searched sample and cannot
+calibrate themselves, so a further sample is held out by an identifier rule,
+$\mathrm{sha256}(\textsc{uid})_{[:8]} \bmod 5 = 0$, with two guards using
+identifiers alone: a block on a named list stays in the survey, and no system
+loses every block. Its independence of the statistic and the mask is our
+assertion, not something a reader can check. \NEbHeldOut{} of
+\NEbProcessedAll{} blocks are reserved, \HoWin{} windows toward \HoStars{}
+stars, with no star or system lost. Because the rule hashes the block and not
+the session, \HsSharePct{} per cent of the reserved set shares calibrators,
+weather and setup with a searched block -- a session-level hash would have
+been stronger -- so every quantity from it is also given over the
+\HsIndBlocks{} blocks that share no session; on those the control level has a
+radial slope of $\HoRadSlope\pm\HoRadSlopeSe$.
+
+\subsection{The recurrence statistic under the null}
+\label{sec:nullscatter}
+
+The bound in the crossing ledger is one formula. Writing $S$ and
+$\sigma_{\rm d}$ for the discovery amplitude and its error, and $\bar{a}$ and
+$\bar{\sigma}=(\sum_i\sigma_i^{-2})^{-1/2}$ for the inverse-variance
+combination of the repeat readings at the predicted channel,
+\begin{equation}
+\sigma_{\rm excl}=\frac{S-\bar{a}}
+{\sqrt{\sigma_{\rm d}^{2}+\bar{\sigma}^{2}}}
+=\frac{T_{\rm pers}-T_{\rm rep}}{\sqrt{1+(T_{\rm pers}/T_\star)^{2}}},
+\label{eq:excl}
+\end{equation}
+with $T_{\rm pers}=S/\bar{\sigma}$ and $T_{\rm rep}=\bar{a}/\bar{\sigma}$, so
+every bound follows from Eq.~\ref{eq:excl} and three columns of that table.
+$T_{\rm rep}$ is one cell at the carried drift; the maximum over every drift
+at that cell, tabulated beside it, is never compared with $T_{\rm pers}$,
+being positive on average whatever is there, and as an amplitude selected
+from $10^{\TuCellsDecLo}$ to $10^{\TuCellsDecHi}$ cells at $T_\star\simeq5$ is
+biased high, the limit is stated as $(T_{\rm rep}+5)/T_{\rm pers}$. The reading
+is centred on zero, scattering by \NuNullSd{} about \NuNullMean{} over
+\NuNullN{} single-cell readings of every repeat block in the census and
+hold-out, less the \NuNullNRecExcl{} of the crossing that recurs, a molecular line. The bound's power is $\Phi(T_{\rm pers}-5)$ at the discovery
+amplitude and $\Phi(5T_{\rm pers}/T_\star-5)$ at the trigger amplitude
+$5S/T_\star$, the faintest that could have produced the crossing, and the
+\HjNPowerLo{} where these are smallest are reported as untested; each
+crossing's measured recovery chance accompanies this paper as data.
+
+%% fig:bpiccontrol belongs here, where the spatial statistic is characterised.
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{figures/bpic_control.pdf}
+\caption{The $\beta$~Pictoris positive control.
+\emph{(a)}~Stellar statistic against the maximum over the window's \NCtrl{}
+control positions, filled for blocks recovering its CO.
+\emph{(b)}~Offset from the nearest masked transition in the star's own frame,
+$\pm\MaskHalfKms$\,km\,s$^{-1}$ marked: its \BpicPanelNCo{} CO crossings lie
+\BpicDvCoLo--\BpicDvCoHi\,km\,s$^{-1}$ from CO, its \BpicPanelNCs{}
+unattributed ones \BpicDvCsLo--\BpicDvCsHi\,km\,s$^{-1}$ from any; grey, the other
+quality-passing crossings.}
+\label{fig:bpiccontrol}
+\end{figure}

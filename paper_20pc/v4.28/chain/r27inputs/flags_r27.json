@@ -1,0 +1,25 @@
+{
+ "_doc": "Frozen measurement record for the two declared calibration omissions (rows 57 and 60). Values are the owning agents' measurements: FLAGS.md (r27-flags, verdict 2026-10-28 00:05 UTC, cluster scratch /data/paper_build/flags_r27/) and LEGACY.md (row 60). Nothing here is recomputed by the build; the generator only emits it and checks its internal consistency.",
+ "flags": {
+  "source": "FLAGS.md",
+  "n_eb_recalibrated": 41,
+  "n_crossings_measured": 33,
+  "n_crossings_below_trigger": 6,
+  "fallen": [
+   {"star": "BD+05 1668", "eb": "A002_Xc7fa6f_X28a8", "n": 4, "class": "B", "status": "unattributed; block failing the quality criterion"},
+   {"star": "HD 14055", "eb": "A002_X1001fdc_X29ae", "n": 1, "class": "A", "status": "unattributed; no recurrence"},
+   {"star": "HD 14055", "eb": "A002_Xff99e1_X2c3bb", "n": 1, "class": "A", "status": "unattributed; no recurrence"}
+  ],
+  "n_new_crossings": 0,
+  "max_rms_increase_pct": 21,
+  "deepest_limit_window": "Proxima Cen A002_X1077d5b_Xa63d",
+  "deepest_limit_change_pct": 0.01
+ },
+ "legacy_flux": {
+  "source": "LEGACY.md",
+  "n_eb_affected": 4,
+  "n_windows_affected": 16,
+  "max_too_bright_pct": 7.6,
+  "n_crossings_affected": 0
+ }
+}

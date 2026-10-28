@@ -1,0 +1,68 @@
+{
+ "agree_pct": 2.0602626955630434,
+ "drive": null,
+ "e_emp_same_windows": 35.87109375,
+ "e_model": 36.610132513021696,
+ "e_trig_A": 36.462890625,
+ "e_trig_A_released_extraction": 35.513671875,
+ "flagged": {
+  "b_clean_expected": 0.1328125,
+  "b_clean_observed": 0,
+  "block": "A002_Xc7fa6f_X28a8",
+  "expected": 4.0,
+  "windows": 4
+ },
+ "grid_frac": 0.18867924528301888,
+ "holdout": {
+  "blocks_hit": 6,
+  "coarse_expected": 0.0390625,
+  "coarse_observed": 0,
+  "coarse_windows": 253,
+  "expected": 6.30859375,
+  "fine_windows": 62,
+  "interval": [
+   0.3608079518199604,
+   1.5509953047456542
+  ],
+  "observed": 6,
+  "ratio": 0.9510835913312693
+ },
+ "hours": {
+  "telescope": 281.2082416666669,
+  "telescope_A": 152.99791388888917,
+  "telescope_B": 276.71616388888907,
+  "window": 1097.7145472222212,
+  "window_A": 228.085180555556,
+  "window_B": 869.6293666666664
+ },
+ "ledger_unattributed_A": 38,
+ "n_win_A": 405,
+ "nind_frac": 0.8090383183458388,
+ "observed": 32,
+ "observed_routes": [
+  32,
+  32
+ ],
+ "outside": [
+  [
+   "HD~14055",
+   "A002_X1190de8_Xd526",
+   344.467647
+  ],
+  [
+   "HD~14055",
+   "A002_X11adad7_X25c5e",
+   345.456382
+  ]
+ ],
+ "repair": {
+  "adopted_rows": 8,
+  "attributed": 0,
+  "dt_abs": 0.36439999999999984,
+  "dt_signed": 0.07380000000000031,
+  "fell": 4,
+  "n_windows": 157,
+  "onsource_ratio": 2.130434782608696
+ },
+ "round": 260
+}

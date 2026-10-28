@@ -1,0 +1,39 @@
+{
+ "n_frozen": 12,
+ "n_corrected": 11,
+ "n_frozen_unattrib": 2,
+ "n_corrected_unattrib": 1,
+ "n_lost": 2,
+ "n_gained": 1,
+ "lost": [
+  [
+   "61 Vir",
+   "7"
+  ],
+  [
+   "CP-72 2713",
+   "7"
+  ]
+ ],
+ "gained": [
+  [
+   "BD05 1668",
+   "6"
+  ]
+ ],
+ "n_windows": 1626,
+ "n_eligible": 464,
+ "mean": 1.26585,
+ "p": 0.71465,
+ "p_lo": 0.81545,
+ "p_hi": 0.6664,
+ "tail": 1.4,
+ "tail_lo": 1.2,
+ "tail_hi": 1.9,
+ "frozen_p": 0.36515,
+ "frozen_mean": 1.2726,
+ "q95": [
+  0,
+  4
+ ]
+}

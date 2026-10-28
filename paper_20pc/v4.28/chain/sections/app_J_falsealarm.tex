@@ -1,0 +1,247 @@
+%% APPENDIX D -- the false-alarm expectation, the control ensemble, and the
+%% execution-block quality criterion.  Carries \label{app:falsealarm}
+%% (04_method.tex, 05_results.tex, 08_backmatter.tex) and
+%% \label{sec:blockquality} (04_method.tex, 05_results.tex).
+%%
+%% ★★★★ WHAT THIS APPENDIX IS FOR, AND WHAT IT MAY NOT GROW BACK INTO.  Four
+%% things and no more: the expectation's definition, the resampling the count
+%% is compared through, the principal numbers, and the control model's
+%% limitations.  Everything else that stood here is either stated once in
+%% \S\ref{sec:trigunif} -- the extraction geometry, the two probabilities and
+%% their correction, the bound's qualifications -- or is a diagnostic that
+%% decided nothing: the threshold scan's margins and its counts at the next
+%% and median blocks, the unscaled form of the block rule, the cell-grain
+%% reading of the same expectation, the clean coarse windows' addition to it,
+%% the systemic-velocity sensitivity, the near-band ratio read half-level by
+%% half-level and its value at the trigger itself, the reserved blocks that
+%% share no session, and the scrambling control.  Each was measured and each
+%% is in the generators; none of them changes a disposition, and a limitation
+%% is condensed here, never deleted.
+\section{The false-alarm expectation and the control ensemble}
+\label{app:falsealarm}
+
+\subsection{The expectation, and what it is conditional on}
+
+\emph{One attribution set serves both sides of the comparison}: the mask of
+Appendix~\ref{app:linemask}, which holds no sulphur monoxide, so the
+\SoNCrossWord{} crossings on SO transitions are unattributed and a control
+maximum on one is an unattributed exceedance. Each of the \CeNWin{} Class~A
+windows of the primary census contributes the fraction of its own \NCtrl{}
+control positions that reaches the trigger -- no cell count enters it and no
+form is assumed for the tail -- and summed over the windows \CeExpTrig{} are
+expected to trigger by chance. How many of those would be attributed is
+measured on the channels the control maxima land on. The channel of a maximum exists only for the
+\RcNRetCtrl{} control positions per window that retain a dynamic spectrum
+(\S\ref{sec:vistest}), so the share is measured on the \CeNExcPos{} such
+positions of \CeNExcWin{} of the \CeNWin{} windows, which carry
+\CeExcCovPct{} per cent of the expectation above. The full ensemble holds
+\CeNExcFull{} exceedances, which divided by \NCtrl{} is the \CeExpTrig{}
+above; the \RcNRetCtrl{} are indistinguishable from a uniform draw from
+their window's own \NCtrl{} by rank ($P=\CeRetKsP$) and their exceedance
+rate from the full ensemble's by \CeRetZ{} standard deviations.
+\CeNExcAttr{} of \CeNExc{} exceedances fall inside the mask, carried to the
+star's frame exactly as a stellar cell, so the attribution takes \CeMaskPct{}
+per cent of the expectation where a uniform landing would take \CeUnifPct.
+The atmospheric screen (Appendix~\ref{app:rfi}) then takes \CeTlCtrlCut{} of
+\CeTlCtrlSurv, leaving \CeExp{} expected unattributed Class~A crossings
+against \CeObs{} observed, a sum over rows with nothing carried at an assumed
+rate. Both sides are read over the whole primary beam \S\ref{sec:statistic}
+defines, with each block on its own antenna geometry; the narrower field of
+\S\ref{sec:trigunif} disagrees with it on \FrNFlag{} of the \CeNWin{} windows
+and in both directions: the whole beam holds a crossing the narrower field
+does not toward \FrUpStars, both attributed to carbon monoxide, and the
+narrower field one the whole beam does not toward \FrDownStars. System by
+system \MtNSysLowP{} of \MtNSysChance{} fall below one chance in twenty
+against \MtNSysLowPExp{} expected; the \CeNWinTail{} untabulated archival-tail
+windows, with the \CeNTailCrossWord{} unattributed crossings toward
+\CeTailStar, enter neither side.
+
+\emph{A count is compared with the distribution of counts chance delivers.}
+Over \CeNBoot{} resamplings -- each window's rate and attributed share redrawn
+from its own probes, and the execution blocks resampled because windows share
+them -- a count of \CeObs{} or more arises with probability \CeProbNull{},
+conditional on the control-position model and not on an independently
+established null. Added to each resampled rate, \CeAddLim{} further crossings
+still leave \CeObs{} credible at \CeProbAtLim{} and one more does not
+(\CeProbAboveLim{} against \CeAlphaPct{} per cent). The uncertainty in
+\CeExp{} is carried inside that bound by the same resampling.
+
+\emph{The one assumption the searched data cannot test is that a star behaves
+like a control position in its own field.} The star carries \CeNear{} times a
+control position's cells in the band $\CeNearBandLo\le T<\CeNearBandHi$
+(\CeNearIntLo--\CeNearIntHi{} at \CeCovPct{} per cent, blocks resampled).
+Calibrating the stellar rate against that ratio instead, the sensitivity
+test of \S\ref{sec:trigunif}, lowers the bound to \CeAddLimNear; the
+whole-beam conclusion that there is no significant excess is unchanged under
+it, and the control positions' own rate is adopted as the smaller of the two
+and the more demanding of the count under test. The \CeObs{} would stand
+above chance at \CeAlphaPct{} per cent only if stars triggered at \CeRCrit{}
+times a control position's rate or less, and every ratio measured is an
+excess in the census. The reserved blocks trigger in \StHoObs{} of \StHoNFine{} windows
+against \StHoExpFine{} predicted, \HsShareObs{} of them in blocks sharing a session with a
+searched one, and the \HsIndBlocks{} sharing none hold \HsIndObsWord{}
+trigger \HsIndObsNoun{} against \HsIndExp{} expected, so they neither confirm nor contradict the ratio
+(Appendix~\ref{sec:heldout}).
+
+Near a band edge the exceedance rate is $\times\VnEdgeRatio$ the interior
+rate, pooled -- and the excess is one object: the window along the sightline
+to HD~48370 contributes \VnEdgeDomPct{} per cent of every near-edge
+exceedance in the survey, without it the ratio is
+$\times\VnEdgeNoDomRatio$, and on a held-out half it is
+$\times\VnEdgeHalfCleanRatio$ ($\pv{\VnEdgeHalfCleanP}$). No edge
+correction is therefore applied to any limit.
+
+\subsection{Execution-block quality}
+\label{sec:blockquality}
+
+The comparison assumes each block's control ensemble behaves like noise, and
+one block makes that false: all \NCtrl{} of its probes exceed the trigger, the
+smallest at \BqFailCtrlMin. Every block is therefore judged on the median of
+its windows' control ensembles divided by its class median, which also flags
+\DqNWin{} of the \NWindows{} windows individually at \BqFactor{} the survey
+median. \emph{The criterion is post hoc}, written after the condition was
+seen; it is trustworthy because the failing block sits at \BqFailQ{} and the
+next at \BqNextQ, a factor \QsRatio{} apart, and all \QsNStep{} thresholds
+between select the same block. \BqNFail{} of \BqNBlocks{} census blocks fails;
+its \BqFailNWin{} coarse-channel windows hold the entire Class~B crossing
+population, \EvNCrossFlag{} of the \EvNCrossRaw, listed in the ledger and
+entering no count elsewhere.
+
+\subsection{What the ensemble can resolve, and in what unit}
+
+Ranking the star against \NCtrl{} control positions decides which windows
+deserve examination, but $1/(\NCtrl+1)=\RankFloorVal$ is the ensemble's
+\emph{resolution}, not the probability that noise produced the window: a
+survey of \NWindows{} windows would need a rank \BonfRankRatio{} times finer,
+and correlated controls inside the beam leave an annulus resolving no better
+than \RankEffLo--\RankEffHi. That floor is the design's central limitation:
+no window can be significant on the rank alone, which is why confirmation
+requires independent recurrence.
+
+The widened recurrence window of \S\ref{sec:etacrv} is counted in windows, a
+window covering several crossings being one measurement, so the \WuNRead{}
+pairings are \WuNWin{} distinct windows, each one's chance formed from its
+independent channel--drift cells (\WuExpWinCtrl{}, $P=\WuProbWinCtrl$, with
+its control positions supplying the rate instead; the larger $P$ is quoted).
+Of the \WuNWinExc{} windows above the trigger,
+\WuNWinExcTwo{} are toward \WuTwoStars{} alone, and
+over the other \WuNWinRest{} windows the comparison is \WuNWinRestExc{}
+against \WuExpRest{} at $P=\WuProbRest$; those two hold \TwNWinTwo{} of the
+windows and \TwExpTwo{} of the expectation, and \S\ref{sec:twostars} splits
+the departure between them. The full treatment is in
+\texttt{documentation/\allowbreak appendix\_D\_false\_alarm.md} of the data archive
+\citep{SIdeposit}.
+
+%% The chance expectation here is summed from the measured control exceedance
+%% rates and each window's own masked grid share (chance_v414.py, round 310),
+%% so no cell count and no Gaussian tail enters it and nothing in it is
+%% conditioned on the crossings; the cell-count route is a cross-check only,
+%% and the rank-conditioned expectation (\ClustStageMean against
+%% \ClustStageNObs) is a pipeline diagnostic that must not be reachable as
+%% "the" expectation.  tab:ctrlsep, tab:excess, tab:arraysplit and
+%% fig:ctrldiag are generated and nothing cites them; r15-deposit, 2026-10-08:
+%% they used to be described as "in the data release", and there is no data
+%% release, so they are simply unpublished diagnostics.
+\subsection{The registration of the predicted cell}
+\label{sec:regbudget}
+
+The recurrence test of \S\ref{sec:etacrv} reads one channel at one drift,
+registered between epochs to \RgBudgetChMed{} of a channel in every window,
+the frame correction moving it by up to \ZtFrameChanMax{} channels. Widening
+each reading to the worst cell within \RgTolKms\,km\,s$^{-1}$, pinning it at
+every anchor along the discovery track, and raising the bar to \ZtTrialThr{}
+to hold one false confirmation over all \RcNRepeatMeas{} readings each
+changes no disposition. What the
+recoveries establish about the registration of a single cell rests on the
+\RgRegNUnres{} recovery readings of \RgRegStar{} alone, whose line is confined
+to one channel and which register to \RgRegMaxCh{} of a channel,
+\RgRegMaxKms\,km\,s$^{-1}$; the rest test the frame correction only to the
+width of a resolved line, up to \RgResFwhmChMax{} channels.
+
+\subsection{From the widened window's exceedances to the pairs}
+\label{sec:pairacct}
+
+Two counts of \S\ref{sec:etacrv} are counts of different objects. The
+\WdNExc{} above-trigger readings are window readings, one per pairing of an
+unattributed crossing with a window covering its frequency in another block
+-- \WdNCov{} such pairings over the \PaNCovWinCross{} crossings a later
+catalogued block covers, row 2.3.3 of Table~\ref{tab:counts} -- so a pair of
+unattributed crossings is read twice: \PaNPairTwice{} readings are second
+readings of \PaNPairRead{} pairs, \PaNPairBeyond{} outside the interval the
+pair test admits and \PaNPairInside{} inside it, the set of
+Table~\ref{tab:pairs}, the other \TjNCandLost{} of the \TjNCandPair{} wanting
+a discovery spectrum or a fitted drift. The accounting for each pair is in
+the data archive \citep{SIdeposit},
+\texttt{candidates/\allowbreak drift\_pair\_accounting.csv}. A
+catalogued window covers \WdNOrbTot{} of the \RcNExcl{} crossings that carry an
+amplitude bound and spans the orbital excursion of \S\ref{sec:etacrv} in
+\EcNSpan; for \EcNShort, toward \EcShortStarList, the widest covering window is
+narrower, and \WdNNoCov{} -- \WdNoCovStar{} -- is covered only by the
+uncatalogued tail block \texttt{\WdNoCovEb}, \WdNoCovSepD\,d later. Of the
+\TjNPower{} pairs whose epochs are close enough together for the
+predicted offset to be tighter than the searched window, every one fails a
+drift changing at a constant rate, by \TjSigMin{} times that resolution in
+the mildest case. The control row is a line that does not drift: the
+\TjCtlLine{} line of \TjCtlStar{} is recovered at one stellar-frame frequency
+\TjCtlDtD{} days apart, within \TjCtlNSig{} of the comparison's own
+resolution of the prediction, so between these two blocks it resolves a mean
+drift to \TjCtlDriftResHzS\,Hz\,s$^{-1}$: a grid step carried over the gap,
+which is why a longer gap does not sharpen it.
+
+$\beta$~Pictoris is the closest case, and it is the one the comparison
+cannot dismiss; its orbit is argued here and nowhere else, the methanol
+identification of its two crossings being excluded in
+Appendix~\ref{app:linemask}. Its two crossings, \TjBpDvKms\,km\,s$^{-1}$ apart
+in the star's frame in blocks \TjBpDtH\,h apart, have negative fitted drifts
+($\TjBpDriftLo$ and $\TjBpDriftHi$\,Hz\,s$^{-1}$), so a single carrier would
+have had to rise in frequency between the epochs and under constant
+acceleration misses by \TjBpNSig{} times that resolution -- but the mean
+acceleration it needs, \TjBpAccelReq\,m\,s$^{-2}$, is inside the
+\WdAGrid\,m\,s$^{-2}$ ceiling. The pair fixes three numbers and a circular
+orbit about a \EcMassBp\,M$_\odot$ star \citep{Crifo1997} has three
+parameters: one orbit (\ObDayBp\,d, \ObIncBp$^\circ$, \ObAuBp\,au) reproduces
+all three, eccentric ones fit to $e\approx\ObEccMaxBp$, and the pair is not
+separable.
+
+%% ★★ r27-cut-results (row 34, R2-D8): Table D1 (tab:pairacct) MOVED TO THE
+%% DEPOSIT as candidates/drift_pair_accounting.csv, generated from
+%% pairacct_r23.json; the one-line pointer is in the paragraph above.  The
+%% float's removal renumbers the appendix tables after it; every citation is
+%% a \ref, so nothing prints a stale number.  tab_pairacct_r23.tex is still
+%% generated and is now uncited: retire it from cleanregen.PRODUCTS or keep it
+%% as the deposit emitter's source, but do not \input it.
+
+%% ★★ v4.23: THIS SUBSECTION AND ITS TABLE SIT AT THE END OF THE
+%% APPENDIX FOR A REASON THAT IS NOT STYLE.  Placed next to the
+%% registration budget, where it belongs by subject, its float took
+%% the number Table~D1 and pushed the crossing ledger's sample to D2
+%% and the recurrence positive controls to D3 -- and the positive
+%% controls are the table Referee 2's first point is about, which he
+%% and the response letter both call Table~D2.  Renumbering the
+%% table a referee is reading about is a cost with no benefit, so the
+%% new float goes last and takes the new number.  \S\ref{sec:edge}
+%% is cited from \S4 and \S5.6 and the pointer is unaffected.
+\subsection{The drift grid's edges}
+\label{sec:edge}
+
+The drift trials run from $-\dot\nu_{\max}$ in half-channel steps to the
+first trial at or beyond $+\dot\nu_{\max}$, so the searched interval is
+asymmetric by up to one step; \EgNEdge{} of the \EgNDrift{} crossings with a
+fitted drift lie on an outermost trial (Table~\ref{tab:edge}), toward
+\EgEdgeStars, and are reported as lower bounds, \EgNEdgeOut{} of them carrying
+no amplitude bound, which is why the table reaches beyond
+\S\ref{sec:etacrv}'s range.
+
+\begin{table}
+%% ★ v4.26 (r25-captions): 6 printed lines -> the author's 3.  DELETED after
+%% checking: "a maximum at the boundary of the interval searched is a lower
+%% bound" is \S\ref{sec:etacrv}'s own definition of \emph{edge-limited}, and
+%% "Table~\ref{tab:pairs} gives them in the star's frame" is now a clause of
+%% that same paragraph, which is where a reader meets both tables.
+\caption{The crossings whose fitted drift lies on an outermost trial of
+their window's own grid, with that grid. Rates are in the observatory
+frame.}
+\label{tab:edge}
+\footnotesize
+\input{tab_edge_v423}
+\end{table}
