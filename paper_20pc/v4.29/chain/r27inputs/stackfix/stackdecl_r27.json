@@ -1,0 +1,89 @@
+{
+ "_doc": "stackprov_r27.py R5: windows that no provenance rule (ring geometry, extractor version, published record, byte-identical content) decides. kind='winner': a declared winner among tied products; kind='prerepair': a CENSUS window whose only product in the stack's inventory is on the pre-repair annulus, declared with the reason no repaired product can be read. Every declaration must be used (a stale one stops the build).",
+ "declarations": [
+  {
+   "identity": "A002_Xb9c01c_X2004|229539283|231538795|53.228070|-9.458164",
+   "kind": "prerepair",
+   "winner": "/data/SETI/targets/GaiaDR3_5164707970261890560_B6_EB_X2004/products/A002_Xb9c01c_X2004_spw2_srcspec.npz",
+   "reason": "eps Eri census block; no repaired product exists or can be made (no MS remains, ACA.md row 49), the census itself carries this block on the pre-repair annulus as a declared, bounded exception (ACA.md: 'cannot move'). The stack reads the same product the census does."
+  },
+  {
+   "identity": "A002_Xb9c01c_X2004|231500961|233485336|53.228070|-9.458164",
+   "kind": "prerepair",
+   "winner": "/data/SETI/targets/GaiaDR3_5164707970261890560_B6_EB_X2004/products/A002_Xb9c01c_X2004_spw3_srcspec.npz",
+   "reason": "eps Eri census block; no repaired product exists or can be made (no MS remains, ACA.md row 49), the census itself carries this block on the pre-repair annulus as a declared, bounded exception (ACA.md: 'cannot move'). The stack reads the same product the census does."
+  },
+  {
+   "identity": "A002_Xb9c01c_X2004|244000592|245984967|53.228070|-9.458164",
+   "kind": "prerepair",
+   "winner": "/data/SETI/targets/GaiaDR3_5164707970261890560_B6_EB_X2004/products/A002_Xb9c01c_X2004_spw0_srcspec.npz",
+   "reason": "eps Eri census block; no repaired product exists or can be made (no MS remains, ACA.md row 49), the census itself carries this block on the pre-repair annulus as a declared, bounded exception (ACA.md: 'cannot move'). The stack reads the same product the census does."
+  },
+  {
+   "identity": "A002_Xb9c01c_X2004|246000534|247984909|53.228070|-9.458164",
+   "kind": "prerepair",
+   "winner": "/data/SETI/targets/GaiaDR3_5164707970261890560_B6_EB_X2004/products/A002_Xb9c01c_X2004_spw1_srcspec.npz",
+   "reason": "eps Eri census block; no repaired product exists or can be made (no MS remains, ACA.md row 49), the census itself carries this block on the pre-repair annulus as a declared, bounded exception (ACA.md: 'cannot move'). The stack reads the same product the census does."
+  },
+  {
+   "identity": "A002_Xbf792a_X26ec|677002388|678986762|311.291302|-31.342631",
+   "kind": "winner",
+   "winner": "/data/SETI/targets/AU_Mic_B9/products/A002_Xbf792a_X26ec_spw1_srcspec.npz",
+   "reason": "12 m block (no ring repair applies); two runs of the same extractor version: every array the stack reads equal to one float32 ulp (I_star max|d| 8.9e-8 of 0.45, W/freqs/times/pb identical), result rms and T* identical. Neither product enters any stack group (single Band 9 epoch); the winner is declared only so the inventory is total."
+  },
+  {
+   "identity": "A002_Xbf792a_X26ec|679002388|680986762|311.291302|-31.342631",
+   "kind": "winner",
+   "winner": "/data/SETI/targets/AU_Mic_B9/products/A002_Xbf792a_X26ec_spw2_srcspec.npz",
+   "reason": "12 m block (no ring repair applies); two runs of the same extractor version: every array the stack reads equal to one float32 ulp (I_star max|d| 8.9e-8 of 0.45, W/freqs/times/pb identical), result rms and T* identical. Neither product enters any stack group (single Band 9 epoch); the winner is declared only so the inventory is total."
+  },
+  {
+   "identity": "A002_Xbf792a_X26ec|680939888|682924262|311.291302|-31.342631",
+   "kind": "winner",
+   "winner": "/data/SETI/targets/AU_Mic_B9/products/A002_Xbf792a_X26ec_spw3_srcspec.npz",
+   "reason": "12 m block (no ring repair applies); two runs of the same extractor version: every array the stack reads equal to one float32 ulp (I_star max|d| 8.9e-8 of 0.45, W/freqs/times/pb identical), result rms and T* identical. Neither product enters any stack group (single Band 9 epoch); the winner is declared only so the inventory is total."
+  },
+  {
+   "identity": "A002_Xbf894a_X700d|252607812|254592188|184.776215|16.547580",
+   "kind": "winner",
+   "winner": "/data/SETI/targets/GaiaDR3_3946438125929224320_B6_EB_X700d/products/A002_Xbf894a_X700d_spw17_srcspec.npz",
+   "reason": "12 m block (no ring repair applies); two runs of the same extractor version: every array the stack reads equal to one float32 ulp (I_star max|d| 1.5e-8 of 0.14, W/freqs/times/pb identical), result rms and T* identical. Winner = the product the deposited stack6 already read (continuity: the choice cannot move a printed digit)."
+  },
+  {
+   "identity": "A002_Xbf894a_X700d|254607812|256592188|184.776215|16.547580",
+   "kind": "winner",
+   "winner": "/data/SETI/targets/GaiaDR3_3946438125929224320_B6_EB_X700d/products/A002_Xbf894a_X700d_spw19_srcspec.npz",
+   "reason": "12 m block (no ring repair applies); two runs of the same extractor version: every array the stack reads equal to one float32 ulp (I_star max|d| 1.5e-8 of 0.14, W/freqs/times/pb identical), result rms and T* identical. Winner = the product the deposited stack6 already read (continuity: the choice cannot move a printed digit)."
+  },
+  {
+   "identity": "A002_Xbf894a_X700d|268607813|270592188|184.776215|16.547580",
+   "kind": "winner",
+   "winner": "/data/SETI/targets/GaiaDR3_3946438125929224320_B6_EB_X700d/products/A002_Xbf894a_X700d_spw21_srcspec.npz",
+   "reason": "12 m block (no ring repair applies); two runs of the same extractor version: every array the stack reads equal to one float32 ulp (I_star max|d| 1.5e-8 of 0.14, W/freqs/times/pb identical), result rms and T* identical. Winner = the product the deposited stack6 already read (continuity: the choice cannot move a printed digit)."
+  },
+  {
+   "identity": "A002_Xbf894a_X700d|270607813|272592188|184.776215|16.547580",
+   "kind": "winner",
+   "winner": "/data/SETI/targets/GaiaDR3_3946438125929224320_B6_EB_X700d/products/A002_Xbf894a_X700d_spw23_srcspec.npz",
+   "reason": "12 m block (no ring repair applies); two runs of the same extractor version: every array the stack reads equal to one float32 ulp (I_star max|d| 1.5e-8 of 0.14, W/freqs/times/pb identical), result rms and T* identical. Winner = the product the deposited stack6 already read (continuity: the choice cannot move a printed digit)."
+  },
+  {
+   "identity": "A002_Xd98580_X3bf6|211968366|213952741|70.736099|18.952210",
+   "kind": "prerepair",
+   "winner": "/data/SETI/targets/HD_285968_B6/products/A002_Xd98580_X3bf6_spw0_srcspec.npz",
+   "reason": "HD 285968 census block; the repaired coarse-window products the census fold acafull_v399 was measured from were deleted from disk (ringgeom_r27 route 'block'); only the pre-repair product remains. Its star row differs from the repaired one only through the primary-beam response at the star's offset (star spectrum identical to float32 rounding in every twin measured, srcspec_diff.json)."
+  },
+  {
+   "identity": "A002_Xd98580_X3bf6|213967996|215952371|70.736099|18.952210",
+   "kind": "prerepair",
+   "winner": "/data/SETI/targets/HD_285968_B6/products/A002_Xd98580_X3bf6_spw1_srcspec.npz",
+   "reason": "HD 285968 census block; the repaired coarse-window products the census fold acafull_v399 was measured from were deleted from disk (ringgeom_r27 route 'block'); only the pre-repair product remains. Its star row differs from the repaired one only through the primary-beam response at the star's offset (star spectrum identical to float32 rounding in every twin measured, srcspec_diff.json)."
+  },
+  {
+   "identity": "A002_Xd98580_X3bf6|226965584|228949959|70.736099|18.952210",
+   "kind": "prerepair",
+   "winner": "/data/SETI/targets/HD_285968_B6/products/A002_Xd98580_X3bf6_spw2_srcspec.npz",
+   "reason": "HD 285968 census block; the repaired coarse-window products the census fold acafull_v399 was measured from were deleted from disk (ringgeom_r27 route 'block'); only the pre-repair product remains. Its star row differs from the repaired one only through the primary-beam response at the star's offset (star spectrum identical to float32 rounding in every twin measured, srcspec_diff.json)."
+  }
+ ]
+}

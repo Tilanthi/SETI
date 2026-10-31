@@ -1,0 +1,96 @@
+{
+ "round": 205,
+ "drive": null,
+ "census": {
+  "crossings": 51,
+  "attributed": 23,
+  "unattributed": 28,
+  "rank_flagged": 1,
+  "recurring": 0
+ },
+ "by_class": {
+  "A": 51,
+  "B": 0,
+  "A_unattr": 28,
+  "B_unattr": 0
+ },
+ "dispositions": {
+  "tested": 28,
+  "flagged": 0,
+  "no_recurrence": 28,
+  "not_read": 0
+ },
+ "reconciliation": {
+  "released_column": 34,
+  "released_covered": 34,
+  "fell": [
+   [
+    "tau Cet",
+    "A002_Xba460f_X7e6",
+    231.033401
+   ],
+   [
+    "HR 1010 Gaia DR3 4722135642226902656",
+    "A002_Xc66ce1_X1345",
+    345.62056
+   ],
+   [
+    "HR 1010 Gaia DR3 4722135642226902656",
+    "A002_Xc6a3db_X7b5b",
+    345.478187
+   ]
+  ],
+  "attributed_by_rebuilt_mask": [
+   [
+    "eta Crv",
+    "A002_X75bfbf_X1430",
+    345.8455497602863,
+    "CO(3-2)",
+    15.614424198596653
+   ],
+   [
+    "HIP10679",
+    "A002_Xa95c04_X14cd",
+    230.5775284,
+    "CO(2-1)",
+    30.916512897610332
+   ],
+   [
+    "CD-57 1054",
+    "A002_Xcf525f_X5aa4",
+    346.50989599999997,
+    "SO(9(8)-8(7))",
+    -1.681718089550739
+   ],
+   [
+    "CP-72 2713",
+    "A002_Xff0235_X4a6d",
+    344.2697461,
+    "SO(8(8)-7(7))",
+    -12.326846969899371
+   ],
+   [
+    "HD161868",
+    "A002_Xff45a6_X10ca8",
+    345.6338357,
+    "SO(2(3)-2(1))",
+    -48.04161937447921
+   ]
+  ],
+  "arrived": [
+   [
+    "HD 14055",
+    "A002_X1190de8_Xd526",
+    344.467647,
+    "tail"
+   ],
+   [
+    "HD 14055",
+    "A002_X11adad7_X25c5e",
+    345.456382,
+    "tail"
+   ]
+  ],
+  "ledger": 28
+ }
+}

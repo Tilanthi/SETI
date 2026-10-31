@@ -1,0 +1,3620 @@
+{
+"_provenance": "r28-mask, 2026-10-28: for every census Class A (fine) window, the observers' own transition names for the spectral window that contains it, read from the ALMA pipeline weblog spectral-setup page (t2-2-2.html, \"Transitions\" column = the SOURCE-table transitions the scheduling block carried), streamed from each member OUS's _auxiliary.tar on the ALMA archive (almascience.eso.org) on 2026-10-28.  A window is matched to the science spectral window whose TOPO start-end range contains its centre.  have_setup=false: the delivery carries no weblog spectral-setup page (pre-Cycle-3 deliveries) or no matching spw.",
+"extractor": "referee_r28/mask/cl/auxsetup.py + cl/tuned.py",
+"n_windows": 405,
+"windows": [
+{
+"eb": "A002_Xe539c7_X12189",
+"flo_GHz": 229.11226,
+"fhi_GHz": 230.837846,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xb9c01c_X2004",
+"flo_GHz": 229.618873,
+"fhi_GHz": 231.459205,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_2_1(ID=0)"
+]
+},
+{
+"eb": "A002_X99c183_X4f1e",
+"flo_GHz": 229.652822,
+"fhi_GHz": 231.37792,
+"have_setup": false,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xbaa732_X1627",
+"flo_GHz": 229.626443,
+"fhi_GHz": 231.466775,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xba4d35_Xb3a3",
+"flo_GHz": 229.62838,
+"fhi_GHz": 231.468712,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xba460f_X7e6",
+"flo_GHz": 229.629104,
+"fhi_GHz": 231.469436,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xb9cc97_X193f",
+"flo_GHz": 229.633486,
+"fhi_GHz": 231.473818,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xb9cc97_X1734",
+"flo_GHz": 229.63364,
+"fhi_GHz": 231.473972,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xb9cc97_X150a",
+"flo_GHz": 229.633788,
+"fhi_GHz": 231.474121,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xda2c82_X765d",
+"flo_GHz": 229.036592,
+"fhi_GHz": 230.876925,
+"have_setup": true,
+"observer_transitions": [
+"Continuum___CO_2_1_(ID=0)"
+]
+},
+{
+"eb": "A002_Xdaef5a_X7167",
+"flo_GHz": 229.038339,
+"fhi_GHz": 230.878671,
+"have_setup": true,
+"observer_transitions": [
+"Continuum___CO_2_1_(ID=0)"
+]
+},
+{
+"eb": "A002_Xdaef5a_X6873",
+"flo_GHz": 229.03845,
+"fhi_GHz": 230.878782,
+"have_setup": true,
+"observer_transitions": [
+"Continuum___CO_2_1_(ID=0)"
+]
+},
+{
+"eb": "A002_Xdb3eb4_X899",
+"flo_GHz": 229.039303,
+"fhi_GHz": 230.879635,
+"have_setup": true,
+"observer_transitions": [
+"Continuum___CO_2_1_(ID=0)"
+]
+},
+{
+"eb": "A002_Xdd0d37_X18197",
+"flo_GHz": 229.051775,
+"fhi_GHz": 230.892107,
+"have_setup": true,
+"observer_transitions": [
+"Continuum___CO_2_1_(ID=0)"
+]
+},
+{
+"eb": "A002_Xdd0d37_X17f99",
+"flo_GHz": 229.051853,
+"fhi_GHz": 230.892185,
+"have_setup": true,
+"observer_transitions": [
+"Continuum___CO_2_1_(ID=0)"
+]
+},
+{
+"eb": "A002_Xdcf222_X4da7",
+"flo_GHz": 229.07042,
+"fhi_GHz": 230.910752,
+"have_setup": true,
+"observer_transitions": [
+"Continuum___CO_2_1_(ID=0)"
+]
+},
+{
+"eb": "A002_Xdcbe57_X2dd3",
+"flo_GHz": 229.071779,
+"fhi_GHz": 230.912111,
+"have_setup": true,
+"observer_transitions": [
+"Continuum___CO_2_1_(ID=0)"
+]
+},
+{
+"eb": "A002_Xdcad18_X305b",
+"flo_GHz": 229.072114,
+"fhi_GHz": 230.912446,
+"have_setup": true,
+"observer_transitions": [
+"Continuum___CO_2_1_(ID=0)"
+]
+},
+{
+"eb": "A002_Xdc946c_X226",
+"flo_GHz": 229.072732,
+"fhi_GHz": 230.913064,
+"have_setup": true,
+"observer_transitions": [
+"Continuum___CO_2_1_(ID=0)"
+]
+},
+{
+"eb": "A002_Xdc621b_X2bb0",
+"flo_GHz": 229.074003,
+"fhi_GHz": 230.914335,
+"have_setup": true,
+"observer_transitions": [
+"Continuum___CO_2_1_(ID=0)"
+]
+},
+{
+"eb": "A002_Xce574d_X8706",
+"flo_GHz": 344.970549,
+"fhi_GHz": 346.695647,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_3_2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xce0587_Xe4d0",
+"flo_GHz": 344.971034,
+"fhi_GHz": 346.696132,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_3_2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xcda49e_Xdebb",
+"flo_GHz": 344.9711,
+"fhi_GHz": 346.696198,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_3_2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xc079b5_X82f",
+"flo_GHz": 344.872405,
+"fhi_GHz": 346.712737,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xc079b5_X1ae",
+"flo_GHz": 344.872653,
+"fhi_GHz": 346.712986,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xc074d4_X2e6",
+"flo_GHz": 344.872899,
+"fhi_GHz": 346.713231,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xc067f7_X822",
+"flo_GHz": 344.873837,
+"fhi_GHz": 346.714169,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_X9db5ce_X224b",
+"flo_GHz": 344.932017,
+"fhi_GHz": 346.657115,
+"have_setup": false,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xd86f11_X584b",
+"flo_GHz": 229.079042,
+"fhi_GHz": 230.919374,
+"have_setup": true,
+"observer_transitions": [
+"Continuum___CO_2_1_(ID=0)"
+]
+},
+{
+"eb": "A002_Xd95042_X67d7",
+"flo_GHz": 229.097428,
+"fhi_GHz": 230.93776,
+"have_setup": true,
+"observer_transitions": [
+"Continuum___CO_2_1_(ID=0)"
+]
+},
+{
+"eb": "A002_Xd95042_X5feb",
+"flo_GHz": 229.097516,
+"fhi_GHz": 230.937848,
+"have_setup": true,
+"observer_transitions": [
+"Continuum___CO_2_1_(ID=0)"
+]
+},
+{
+"eb": "A002_Xd9668b_X88ad",
+"flo_GHz": 229.098494,
+"fhi_GHz": 230.938826,
+"have_setup": true,
+"observer_transitions": [
+"Continuum___CO_2_1_(ID=0)"
+]
+},
+{
+"eb": "A002_Xd9668b_X841a",
+"flo_GHz": 229.09859,
+"fhi_GHz": 230.938922,
+"have_setup": true,
+"observer_transitions": [
+"Continuum___CO_2_1_(ID=0)"
+]
+},
+{
+"eb": "A002_Xd9668b_X7c83",
+"flo_GHz": 229.098674,
+"fhi_GHz": 230.939006,
+"have_setup": true,
+"observer_transitions": [
+"Continuum___CO_2_1_(ID=0)"
+]
+},
+{
+"eb": "A002_Xd98580_X3bf6",
+"flo_GHz": 229.037235,
+"fhi_GHz": 230.877567,
+"have_setup": true,
+"observer_transitions": [
+"Continuum___CO_2_1_(ID=0)"
+]
+},
+{
+"eb": "A002_Xda2c82_X7136",
+"flo_GHz": 229.038992,
+"fhi_GHz": 230.879324,
+"have_setup": true,
+"observer_transitions": [
+"Continuum___CO_2_1_(ID=0)"
+]
+},
+{
+"eb": "A002_Xdb4b9a_X108f",
+"flo_GHz": 229.045178,
+"fhi_GHz": 230.88551,
+"have_setup": true,
+"observer_transitions": [
+"Continuum___CO_2_1_(ID=0)"
+]
+},
+{
+"eb": "A002_Xdb7ab7_X5b4e",
+"flo_GHz": 229.046726,
+"fhi_GHz": 230.887058,
+"have_setup": true,
+"observer_transitions": [
+"Continuum___CO_2_1_(ID=0)"
+]
+},
+{
+"eb": "A002_X1237e23_Xdb0",
+"flo_GHz": 114.012927,
+"fhi_GHz": 115.738512,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_1-0(ID=3768098)"
+]
+},
+{
+"eb": "A002_X1240efd_X14e83",
+"flo_GHz": 114.015065,
+"fhi_GHz": 115.740651,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_1-0(ID=3768098)"
+]
+},
+{
+"eb": "A002_X1240efd_X14140",
+"flo_GHz": 114.015115,
+"fhi_GHz": 115.740701,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_1-0(ID=3768098)"
+]
+},
+{
+"eb": "A002_X1240efd_X13b03",
+"flo_GHz": 114.015139,
+"fhi_GHz": 115.740725,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_1-0(ID=3768098)"
+]
+},
+{
+"eb": "A002_X12a079b_Xf640",
+"flo_GHz": 114.024952,
+"fhi_GHz": 115.750538,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_1-0(ID=3768098)"
+]
+},
+{
+"eb": "A002_X129754b_X2b51b",
+"flo_GHz": 114.025596,
+"fhi_GHz": 115.751182,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_1-0(ID=3768098)"
+]
+},
+{
+"eb": "A002_X129754b_X23b68",
+"flo_GHz": 114.025647,
+"fhi_GHz": 115.751233,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_1-0(ID=3768098)"
+]
+},
+{
+"eb": "A002_X129754b_X2363e",
+"flo_GHz": 114.025714,
+"fhi_GHz": 115.7513,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_1-0(ID=3768098)"
+]
+},
+{
+"eb": "A002_X129754b_X1a931",
+"flo_GHz": 114.025776,
+"fhi_GHz": 115.751362,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_1-0(ID=3768098)"
+]
+},
+{
+"eb": "A002_X12925a3_Xa4b1",
+"flo_GHz": 114.0265,
+"fhi_GHz": 115.752086,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_1-0(ID=3768098)"
+]
+},
+{
+"eb": "A002_X899169_X1838",
+"flo_GHz": 229.675816,
+"fhi_GHz": 231.400913,
+"have_setup": false,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xa42f75_X319",
+"flo_GHz": 229.695158,
+"fhi_GHz": 231.420255,
+"have_setup": false,
+"observer_transitions": []
+},
+{
+"eb": "A002_X7d80c7_X15c6",
+"flo_GHz": 229.702047,
+"fhi_GHz": 231.427144,
+"have_setup": false,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xcd97a1_X3f1e",
+"flo_GHz": 345.175825,
+"fhi_GHz": 346.900923,
+"have_setup": true,
+"observer_transitions": [
+"CO_3_2(ID=0)"
+]
+},
+{
+"eb": "A002_Xcd97a1_X3f1e",
+"flo_GHz": 345.175825,
+"fhi_GHz": 346.900923,
+"have_setup": true,
+"observer_transitions": [
+"CO_3_2(ID=0)"
+]
+},
+{
+"eb": "A002_Xc6fa08_X1053",
+"flo_GHz": 229.609959,
+"fhi_GHz": 231.45078,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xc6e968_X1339",
+"flo_GHz": 229.610125,
+"fhi_GHz": 231.450945,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xc6d2f9_X7060",
+"flo_GHz": 229.610174,
+"fhi_GHz": 231.450995,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xc694dd_X41ca",
+"flo_GHz": 229.610626,
+"fhi_GHz": 231.451446,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xc694dd_X3e5f",
+"flo_GHz": 229.610685,
+"fhi_GHz": 231.451506,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xc68b3e_X107b",
+"flo_GHz": 229.610807,
+"fhi_GHz": 231.451627,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xc67b7e_X1f16",
+"flo_GHz": 229.61088,
+"fhi_GHz": 231.4517,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xc66ce1_Xaa9",
+"flo_GHz": 229.611119,
+"fhi_GHz": 231.451939,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xc7111c_X61dc",
+"flo_GHz": 345.313596,
+"fhi_GHz": 346.234006,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_3_2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xc6c0d5_X121e",
+"flo_GHz": 345.314486,
+"fhi_GHz": 346.234896,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_3_2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xc6a3db_X7b5b",
+"flo_GHz": 345.314613,
+"fhi_GHz": 346.235023,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_3_2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xc66ce1_X1345",
+"flo_GHz": 345.315385,
+"fhi_GHz": 346.235795,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_3_2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xc6141c_X3af0",
+"flo_GHz": 345.316593,
+"fhi_GHz": 346.237003,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_3_2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xd0e450_Xc7a1",
+"flo_GHz": 345.714486,
+"fhi_GHz": 347.439584,
+"have_setup": true,
+"observer_transitions": [
+"CO_3_2(ID=0)"
+]
+},
+{
+"eb": "A002_Xd0e450_Xc008",
+"flo_GHz": 345.714667,
+"fhi_GHz": 347.439764,
+"have_setup": true,
+"observer_transitions": [
+"CO_3_2(ID=0)"
+]
+},
+{
+"eb": "A002_Xd0e450_X1e19",
+"flo_GHz": 345.715295,
+"fhi_GHz": 347.440393,
+"have_setup": true,
+"observer_transitions": [
+"CO_3_2(ID=0)"
+]
+},
+{
+"eb": "A002_Xcccc19_X5564",
+"flo_GHz": 345.732016,
+"fhi_GHz": 347.457114,
+"have_setup": true,
+"observer_transitions": [
+"CO_3_2(ID=0)"
+]
+},
+{
+"eb": "A002_Xcccc19_X4dfa",
+"flo_GHz": 345.732152,
+"fhi_GHz": 347.457249,
+"have_setup": true,
+"observer_transitions": [
+"CO_3_2(ID=0)"
+]
+},
+{
+"eb": "A002_Xcbc47c_Xd4",
+"flo_GHz": 226.302271,
+"fhi_GHz": 228.027368,
+"have_setup": true,
+"observer_transitions": [
+"CN_N_2_1(ID=0)",
+"CN_v_0_N_2_1__J_3_2_3_2__F_5_2_3_2(ID=28180)",
+"CN_v_0_N_2_1__J_3_2_3_2__F_5_2_5_2(ID=28181)",
+"CN_v_0_N_2_1__J_3_2_1_2__F_5_2_3_2(ID=28184)"
+]
+},
+{
+"eb": "A002_Xcbb583_Xb78",
+"flo_GHz": 226.302308,
+"fhi_GHz": 228.027406,
+"have_setup": true,
+"observer_transitions": [
+"CN_N_2_1(ID=0)",
+"CN_v_0_N_2_1__J_3_2_3_2__F_5_2_3_2(ID=28180)",
+"CN_v_0_N_2_1__J_3_2_3_2__F_5_2_5_2(ID=28181)",
+"CN_v_0_N_2_1__J_3_2_1_2__F_5_2_3_2(ID=28184)"
+]
+},
+{
+"eb": "A002_Xcbc47c_Xd4",
+"flo_GHz": 229.195027,
+"fhi_GHz": 230.920125,
+"have_setup": true,
+"observer_transitions": [
+"CO_J_2_1(ID=0)",
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xcbb583_Xb78",
+"flo_GHz": 229.195064,
+"fhi_GHz": 230.920162,
+"have_setup": true,
+"observer_transitions": [
+"CO_J_2_1(ID=0)",
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X12277ed_X178c6",
+"flo_GHz": 321.157558,
+"fhi_GHz": 321.265224,
+"have_setup": true,
+"observer_transitions": [
+"H2O_v=0_10(2,9)-9(3,6)(ID=7084360)"
+]
+},
+{
+"eb": "A002_X12235df_X8337",
+"flo_GHz": 321.159626,
+"fhi_GHz": 321.267292,
+"have_setup": true,
+"observer_transitions": [
+"H2O_v=0_10(2,9)-9(3,6)(ID=7084360)"
+]
+},
+{
+"eb": "A002_X12235df_X7876",
+"flo_GHz": 321.159833,
+"fhi_GHz": 321.267499,
+"have_setup": true,
+"observer_transitions": [
+"H2O_v=0_10(2,9)-9(3,6)(ID=7084360)"
+]
+},
+{
+"eb": "A002_X12209f7_X16edb",
+"flo_GHz": 321.160099,
+"fhi_GHz": 321.267765,
+"have_setup": true,
+"observer_transitions": [
+"H2O_v=0_10(2,9)-9(3,6)(ID=7084360)"
+]
+},
+{
+"eb": "A002_X12209f7_X163ba",
+"flo_GHz": 321.160299,
+"fhi_GHz": 321.267965,
+"have_setup": true,
+"observer_transitions": [
+"H2O_v=0_10(2,9)-9(3,6)(ID=7084360)"
+]
+},
+{
+"eb": "A002_X1207c39_X9417",
+"flo_GHz": 321.166506,
+"fhi_GHz": 321.274172,
+"have_setup": true,
+"observer_transitions": [
+"H2O_v=0_10(2,9)-9(3,6)(ID=7084360)"
+]
+},
+{
+"eb": "A002_X12277ed_X178c6",
+"flo_GHz": 322.396991,
+"fhi_GHz": 322.504657,
+"have_setup": true,
+"observer_transitions": [
+"H218O_v=0_5(1,5)-4(2,2)(ID=819949)"
+]
+},
+{
+"eb": "A002_X12235df_X8337",
+"flo_GHz": 322.399059,
+"fhi_GHz": 322.506725,
+"have_setup": true,
+"observer_transitions": [
+"H218O_v=0_5(1,5)-4(2,2)(ID=819949)"
+]
+},
+{
+"eb": "A002_X12235df_X7876",
+"flo_GHz": 322.399266,
+"fhi_GHz": 322.506932,
+"have_setup": true,
+"observer_transitions": [
+"H218O_v=0_5(1,5)-4(2,2)(ID=819949)"
+]
+},
+{
+"eb": "A002_X12209f7_X16edb",
+"flo_GHz": 322.399532,
+"fhi_GHz": 322.507198,
+"have_setup": true,
+"observer_transitions": [
+"H218O_v=0_5(1,5)-4(2,2)(ID=819949)"
+]
+},
+{
+"eb": "A002_X12209f7_X163ba",
+"flo_GHz": 322.399732,
+"fhi_GHz": 322.507398,
+"have_setup": true,
+"observer_transitions": [
+"H218O_v=0_5(1,5)-4(2,2)(ID=819949)"
+]
+},
+{
+"eb": "A002_X1207c39_X9417",
+"flo_GHz": 322.406,
+"fhi_GHz": 322.513666,
+"have_setup": true,
+"observer_transitions": [
+"H218O_v=0_5(1,5)-4(2,2)(ID=819949)"
+]
+},
+{
+"eb": "A002_X12277ed_X178c6",
+"flo_GHz": 335.326748,
+"fhi_GHz": 335.434414,
+"have_setup": true,
+"observer_transitions": [
+"HDO_3(3,1)-4(2,2)(ID=816649)"
+]
+},
+{
+"eb": "A002_X12235df_X8337",
+"flo_GHz": 335.328876,
+"fhi_GHz": 335.436542,
+"have_setup": true,
+"observer_transitions": [
+"HDO_3(3,1)-4(2,2)(ID=816649)"
+]
+},
+{
+"eb": "A002_X12235df_X7876",
+"flo_GHz": 335.329114,
+"fhi_GHz": 335.43678,
+"have_setup": true,
+"observer_transitions": [
+"HDO_3(3,1)-4(2,2)(ID=816649)"
+]
+},
+{
+"eb": "A002_X12209f7_X16edb",
+"flo_GHz": 335.32938,
+"fhi_GHz": 335.437046,
+"have_setup": true,
+"observer_transitions": [
+"HDO_3(3,1)-4(2,2)(ID=816649)"
+]
+},
+{
+"eb": "A002_X12209f7_X163ba",
+"flo_GHz": 335.32958,
+"fhi_GHz": 335.437246,
+"have_setup": true,
+"observer_transitions": [
+"HDO_3(3,1)-4(2,2)(ID=816649)"
+]
+},
+{
+"eb": "A002_X1207c39_X9417",
+"flo_GHz": 335.336092,
+"fhi_GHz": 335.443758,
+"have_setup": true,
+"observer_transitions": [
+"HDO_3(3,1)-4(2,2)(ID=816649)"
+]
+},
+{
+"eb": "A002_Xd09670_X1d79",
+"flo_GHz": 226.360464,
+"fhi_GHz": 228.085562,
+"have_setup": true,
+"observer_transitions": [
+"CN_N_2_1(ID=0)",
+"CN_v_0_N_2_1__J_5_2_3_2__F_7_2_5_2(ID=28188)"
+]
+},
+{
+"eb": "A002_Xcf196f_Xabc5",
+"flo_GHz": 226.361799,
+"fhi_GHz": 228.086896,
+"have_setup": true,
+"observer_transitions": [
+"CN_N_2_1(ID=0)",
+"CN_v_0_N_2_1__J_5_2_3_2__F_7_2_5_2(ID=28188)"
+]
+},
+{
+"eb": "A002_Xd09670_X1d79",
+"flo_GHz": 229.251676,
+"fhi_GHz": 230.976774,
+"have_setup": true,
+"observer_transitions": [
+"_CO_J_2_1(ID=0)",
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xcf196f_Xabc5",
+"flo_GHz": 229.252975,
+"fhi_GHz": 230.978073,
+"have_setup": true,
+"observer_transitions": [
+"_CO_J_2_1(ID=0)",
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xd9d7c7_X6fd2",
+"flo_GHz": 229.078335,
+"fhi_GHz": 230.918668,
+"have_setup": true,
+"observer_transitions": [
+"Continuum___CO_2_1_(ID=0)"
+]
+},
+{
+"eb": "A002_Xda1250_X72ef",
+"flo_GHz": 229.080002,
+"fhi_GHz": 230.920334,
+"have_setup": true,
+"observer_transitions": [
+"Continuum___CO_2_1_(ID=0)"
+]
+},
+{
+"eb": "A002_Xda1250_X6f6b",
+"flo_GHz": 229.080093,
+"fhi_GHz": 230.920425,
+"have_setup": true,
+"observer_transitions": [
+"Continuum___CO_2_1_(ID=0)"
+]
+},
+{
+"eb": "A002_Xda2c82_X62d7",
+"flo_GHz": 229.080855,
+"fhi_GHz": 230.921187,
+"have_setup": true,
+"observer_transitions": [
+"Continuum___CO_2_1_(ID=0)"
+]
+},
+{
+"eb": "A002_Xc20718_X2fcf",
+"flo_GHz": 229.609322,
+"fhi_GHz": 231.449654,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xc23361_Xb5c9",
+"flo_GHz": 229.611241,
+"fhi_GHz": 231.451573,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xb0be8b_X785f",
+"flo_GHz": 229.637299,
+"fhi_GHz": 231.362397,
+"have_setup": false,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xb0ebd1_X1855",
+"flo_GHz": 229.637305,
+"fhi_GHz": 231.362403,
+"have_setup": false,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xc19d6f_X1c16",
+"flo_GHz": 229.641337,
+"fhi_GHz": 231.481669,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xc19d6f_X5706",
+"flo_GHz": 229.641368,
+"fhi_GHz": 231.4817,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xc19d6f_X19ce",
+"flo_GHz": 229.641448,
+"fhi_GHz": 231.48178,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xb28642_Xcff3",
+"flo_GHz": 229.708703,
+"fhi_GHz": 231.4338,
+"have_setup": false,
+"observer_transitions": []
+},
+{
+"eb": "A002_X10b22d7_X2445",
+"flo_GHz": 229.609717,
+"fhi_GHz": 231.450537,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X10b33b1_Xf94",
+"flo_GHz": 229.609831,
+"fhi_GHz": 231.450652,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X10b22d7_X1d34",
+"flo_GHz": 229.609862,
+"fhi_GHz": 231.450683,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X10b0d7d_X323f",
+"flo_GHz": 229.609863,
+"fhi_GHz": 231.450683,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xb39557_X3789",
+"flo_GHz": 229.673192,
+"fhi_GHz": 231.39829,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xb3d48f_X26f7",
+"flo_GHz": 229.673509,
+"fhi_GHz": 231.398606,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xff294f_Xc10b",
+"flo_GHz": 330.350193,
+"fhi_GHz": 332.190525,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_Xff294f_Xaf70",
+"flo_GHz": 330.350395,
+"fhi_GHz": 332.190727,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_Xff294f_X2db6",
+"flo_GHz": 330.350741,
+"fhi_GHz": 332.191073,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_Xfffde1_Xffdf",
+"flo_GHz": 330.403386,
+"fhi_GHz": 332.128483,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_X1171dca_X5df0",
+"flo_GHz": 330.429839,
+"fhi_GHz": 332.154936,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_Xff294f_Xc10b",
+"flo_GHz": 344.18319,
+"fhi_GHz": 346.023522,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xff294f_Xaf70",
+"flo_GHz": 344.183392,
+"fhi_GHz": 346.023724,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xfffde1_Xffdf",
+"flo_GHz": 344.236386,
+"fhi_GHz": 345.961483,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_X1171dca_X5df0",
+"flo_GHz": 344.262839,
+"fhi_GHz": 345.987936,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xcf749a_X36e0",
+"flo_GHz": 344.923839,
+"fhi_GHz": 346.648937,
+"have_setup": true,
+"observer_transitions": [
+"CO_3_2(ID=0)"
+]
+},
+{
+"eb": "A002_Xcf0c6b_X6513",
+"flo_GHz": 344.925059,
+"fhi_GHz": 346.650157,
+"have_setup": true,
+"observer_transitions": [
+"CO_3_2(ID=0)"
+]
+},
+{
+"eb": "A002_Xb54d65_X727",
+"flo_GHz": 344.954509,
+"fhi_GHz": 346.679606,
+"have_setup": false,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xb2f730_X5b37",
+"flo_GHz": 229.691625,
+"fhi_GHz": 231.416722,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xb2e94e_X361a",
+"flo_GHz": 229.692208,
+"fhi_GHz": 231.417306,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_X75bfbf_X1430",
+"flo_GHz": 344.971526,
+"fhi_GHz": 346.696624,
+"have_setup": false,
+"observer_transitions": []
+},
+{
+"eb": "A002_X122b6ff_X1041e",
+"flo_GHz": 342.47413,
+"fhi_GHz": 344.199228,
+"have_setup": true,
+"observer_transitions": [
+"Continuum_1_and_CS(ID=0)"
+]
+},
+{
+"eb": "A002_X11e10bc_X12662",
+"flo_GHz": 342.482582,
+"fhi_GHz": 344.20768,
+"have_setup": true,
+"observer_transitions": [
+"Continuum_1_and_CS(ID=0)"
+]
+},
+{
+"eb": "A002_X11e10bc_X12662",
+"flo_GHz": 345.768158,
+"fhi_GHz": 345.822052,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_X122b6ff_X1041e",
+"flo_GHz": 345.80594,
+"fhi_GHz": 345.859834,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_X11e10bc_X12662",
+"flo_GHz": 354.315582,
+"fhi_GHz": 356.04068,
+"have_setup": true,
+"observer_transitions": [
+"HCN_J=4-3(ID=0)"
+]
+},
+{
+"eb": "A002_X122b6ff_X1041e",
+"flo_GHz": 354.395914,
+"fhi_GHz": 356.121012,
+"have_setup": true,
+"observer_transitions": [
+"HCN_J=4-3(ID=0)"
+]
+},
+{
+"eb": "A002_X11e10bc_X12662",
+"flo_GHz": 356.190582,
+"fhi_GHz": 357.91568,
+"have_setup": true,
+"observer_transitions": [
+"Continuum_2_and_HCO+(ID=0)"
+]
+},
+{
+"eb": "A002_X122b6ff_X1041e",
+"flo_GHz": 356.275605,
+"fhi_GHz": 358.000702,
+"have_setup": true,
+"observer_transitions": [
+"Continuum_2_and_HCO+(ID=0)"
+]
+},
+{
+"eb": "A002_X128b034_X11ca9",
+"flo_GHz": 492.111272,
+"fhi_GHz": 492.165166,
+"have_setup": true,
+"observer_transitions": [
+"CI_3P1-3P0(ID=188084)"
+]
+},
+{
+"eb": "A002_X12277ed_X22e53",
+"flo_GHz": 492.185959,
+"fhi_GHz": 492.239853,
+"have_setup": true,
+"observer_transitions": [
+"CI_3P1-3P0(ID=188084)"
+]
+},
+{
+"eb": "A002_X122b6ff_X18e15",
+"flo_GHz": 492.186016,
+"fhi_GHz": 492.23991,
+"have_setup": true,
+"observer_transitions": [
+"CI_3P1-3P0(ID=188084)"
+]
+},
+{
+"eb": "A002_X10a341d_X82d2",
+"flo_GHz": 229.601226,
+"fhi_GHz": 231.442047,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X10a341d_Xdc45",
+"flo_GHz": 229.601271,
+"fhi_GHz": 231.442091,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X10a513c_X3b99",
+"flo_GHz": 229.601331,
+"fhi_GHz": 231.442151,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X10a513c_X389e",
+"flo_GHz": 229.601374,
+"fhi_GHz": 231.442195,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X10b33b1_X1ca0",
+"flo_GHz": 229.60246,
+"fhi_GHz": 231.443281,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xd9668b_X3f6e",
+"flo_GHz": 229.664382,
+"fhi_GHz": 231.389968,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xb25e1a_Xed74",
+"flo_GHz": 229.264212,
+"fhi_GHz": 230.98931,
+"have_setup": false,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xb2f730_X9e28",
+"flo_GHz": 229.269395,
+"fhi_GHz": 230.994493,
+"have_setup": false,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xf5d76d_Xeb8",
+"flo_GHz": 114.829173,
+"fhi_GHz": 115.691722,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_1-0(ID=3768098)"
+]
+},
+{
+"eb": "A002_Xf5d76d_Xe19",
+"flo_GHz": 114.829193,
+"fhi_GHz": 115.691742,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_1-0(ID=3768098)"
+]
+},
+{
+"eb": "A002_Xf5d76d_Xcc5",
+"flo_GHz": 114.82922,
+"fhi_GHz": 115.691769,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_1-0(ID=3768098)"
+]
+},
+{
+"eb": "A002_Xf5d76d_X32f1",
+"flo_GHz": 114.829247,
+"fhi_GHz": 115.691796,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_1-0(ID=3768098)"
+]
+},
+{
+"eb": "A002_Xf4df6f_Xc7",
+"flo_GHz": 114.830886,
+"fhi_GHz": 115.693435,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_1-0(ID=3768098)"
+]
+},
+{
+"eb": "A002_X75bfbf_Xace",
+"flo_GHz": 215.675404,
+"fhi_GHz": 217.400502,
+"have_setup": false,
+"observer_transitions": []
+},
+{
+"eb": "A002_X7116f1_X1785",
+"flo_GHz": 215.679396,
+"fhi_GHz": 217.404493,
+"have_setup": true,
+"observer_transitions": [
+"Cont___SiO_5_4(ID=0)"
+]
+},
+{
+"eb": "A002_Xa7a216_X23e4",
+"flo_GHz": 215.680155,
+"fhi_GHz": 217.405253,
+"have_setup": false,
+"observer_transitions": []
+},
+{
+"eb": "A002_X6f1341_X1484",
+"flo_GHz": 215.680975,
+"fhi_GHz": 217.406073,
+"have_setup": true,
+"observer_transitions": [
+"Cont___SiO_5_4(ID=0)"
+]
+},
+{
+"eb": "A002_Xd9668b_Xa9df",
+"flo_GHz": 225.622661,
+"fhi_GHz": 225.73045,
+"have_setup": true,
+"observer_transitions": [
+"H2CO_3_1_2__2_1_1_(ID=3974789)"
+]
+},
+{
+"eb": "A002_Xd9668b_X3a90",
+"flo_GHz": 225.622688,
+"fhi_GHz": 225.730476,
+"have_setup": true,
+"observer_transitions": [
+"H2CO_3_1_2__2_1_1_(ID=3974789)"
+]
+},
+{
+"eb": "A002_Xd9668b_Xa9df",
+"flo_GHz": 226.239391,
+"fhi_GHz": 226.347179,
+"have_setup": true,
+"observer_transitions": [
+"CN_v_0_N_2_1__J_3_2_3_2__F_3_2_3_2(ID=28178)"
+]
+},
+{
+"eb": "A002_Xd9668b_X3a90",
+"flo_GHz": 226.239417,
+"fhi_GHz": 226.347206,
+"have_setup": true,
+"observer_transitions": [
+"CN_v_0_N_2_1__J_3_2_3_2__F_3_2_3_2(ID=28178)"
+]
+},
+{
+"eb": "A002_Xd9668b_Xa9df",
+"flo_GHz": 226.584392,
+"fhi_GHz": 226.69218,
+"have_setup": true,
+"observer_transitions": [
+"CN_v_0_N_2_1__J_3_2_1_2__F_5_2_3_2(ID=28184)"
+]
+},
+{
+"eb": "A002_Xd9668b_X3a90",
+"flo_GHz": 226.584419,
+"fhi_GHz": 226.692207,
+"have_setup": true,
+"observer_transitions": [
+"CN_v_0_N_2_1__J_3_2_1_2__F_5_2_3_2(ID=28184)"
+]
+},
+{
+"eb": "A002_Xd9668b_Xa9df",
+"flo_GHz": 226.799602,
+"fhi_GHz": 226.90739,
+"have_setup": true,
+"observer_transitions": [
+"CN_v_0_N_2_1__J_5_2_3_2__F_7_2_5_2(ID=28188)"
+]
+},
+{
+"eb": "A002_Xd9668b_X3a90",
+"flo_GHz": 226.799629,
+"fhi_GHz": 226.907417,
+"have_setup": true,
+"observer_transitions": [
+"CN_v_0_N_2_1__J_5_2_3_2__F_7_2_5_2(ID=28188)"
+]
+},
+{
+"eb": "A002_X7116f1_X1785",
+"flo_GHz": 230.082117,
+"fhi_GHz": 231.002283,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X6f1341_X1484",
+"flo_GHz": 230.083798,
+"fhi_GHz": 231.003964,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X75bfbf_Xace",
+"flo_GHz": 230.106675,
+"fhi_GHz": 230.969224,
+"have_setup": false,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xa7a216_X23e4",
+"flo_GHz": 230.111734,
+"fhi_GHz": 230.974283,
+"have_setup": false,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xd9668b_Xa9df",
+"flo_GHz": 230.489384,
+"fhi_GHz": 230.543293,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xd9668b_X3a90",
+"flo_GHz": 230.48941,
+"fhi_GHz": 230.543319,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xd9668b_Xa9df",
+"flo_GHz": 241.553089,
+"fhi_GHz": 241.984364,
+"have_setup": true,
+"observer_transitions": [
+"CH3OH_v_t_0_5_0_5__4_0_4____(ID=38470)"
+]
+},
+{
+"eb": "A002_Xd9668b_X3a90",
+"flo_GHz": 241.553115,
+"fhi_GHz": 241.98439,
+"have_setup": true,
+"observer_transitions": [
+"CH3OH_v_t_0_5_0_5__4_0_4____(ID=38470)"
+]
+},
+{
+"eb": "A002_Xb25e1a_Xed74",
+"flo_GHz": 229.264212,
+"fhi_GHz": 230.98931,
+"have_setup": false,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xcd2acd_X6125",
+"flo_GHz": 345.167948,
+"fhi_GHz": 346.893045,
+"have_setup": true,
+"observer_transitions": [
+"CO_3_2(ID=0)"
+]
+},
+{
+"eb": "A002_Xcd2acd_X6125",
+"flo_GHz": 345.167948,
+"fhi_GHz": 346.893045,
+"have_setup": true,
+"observer_transitions": [
+"CO_3_2(ID=0)"
+]
+},
+{
+"eb": "A002_Xd9398d_X37e8",
+"flo_GHz": 344.955202,
+"fhi_GHz": 346.680788,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_3_2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xd9398d_X322a",
+"flo_GHz": 344.955354,
+"fhi_GHz": 346.68094,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_3_2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xb9c01c_X41a2",
+"flo_GHz": 344.069784,
+"fhi_GHz": 345.910604,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xbbcb1f_X7dd5",
+"flo_GHz": 344.138865,
+"fhi_GHz": 345.864451,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xbbadbe_X3846",
+"flo_GHz": 344.139024,
+"fhi_GHz": 345.86461,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xb9c01c_X41a2",
+"flo_GHz": 354.176153,
+"fhi_GHz": 356.016485,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xbbcb1f_X7dd5",
+"flo_GHz": 354.245399,
+"fhi_GHz": 355.970497,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xbbadbe_X3846",
+"flo_GHz": 354.245561,
+"fhi_GHz": 355.970658,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_X126fc6d_Xc894",
+"flo_GHz": 229.665836,
+"fhi_GHz": 231.391422,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X126c7ed_Xe9d",
+"flo_GHz": 229.665871,
+"fhi_GHz": 231.391457,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X12754c1_X9b5",
+"flo_GHz": 229.666036,
+"fhi_GHz": 231.391622,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X1275eb2_Xe05",
+"flo_GHz": 229.666141,
+"fhi_GHz": 231.391727,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X12771d5_X9f13",
+"flo_GHz": 229.666312,
+"fhi_GHz": 231.391898,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X12771d5_X3b63",
+"flo_GHz": 229.666331,
+"fhi_GHz": 231.391917,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X12771d5_X10e06",
+"flo_GHz": 229.666447,
+"fhi_GHz": 231.392033,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xd10f82_X2635",
+"flo_GHz": 345.154398,
+"fhi_GHz": 346.879496,
+"have_setup": true,
+"observer_transitions": [
+"CO_3_2(ID=0)"
+]
+},
+{
+"eb": "A002_Xd10f82_X2635",
+"flo_GHz": 345.154398,
+"fhi_GHz": 346.879496,
+"have_setup": true,
+"observer_transitions": [
+"CO_3_2(ID=0)"
+]
+},
+{
+"eb": "A002_Xb99071_X3ca",
+"flo_GHz": 229.59518,
+"fhi_GHz": 231.435512,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xbf1cbb_X6176",
+"flo_GHz": 229.694521,
+"fhi_GHz": 231.419618,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xd64dca_X820",
+"flo_GHz": 230.080684,
+"fhi_GHz": 230.943477,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xd64dca_X410",
+"flo_GHz": 230.080755,
+"fhi_GHz": 230.943548,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xd659d4_X211",
+"flo_GHz": 230.080939,
+"fhi_GHz": 230.943732,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X128b034_X187cc",
+"flo_GHz": 229.651114,
+"fhi_GHz": 231.3767,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X1294347_X5c2e",
+"flo_GHz": 229.653127,
+"fhi_GHz": 231.378713,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X1294347_X1b730",
+"flo_GHz": 229.653524,
+"fhi_GHz": 231.37911,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X1294347_X1af7f",
+"flo_GHz": 229.653576,
+"fhi_GHz": 231.379162,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X129691d_X6985",
+"flo_GHz": 229.653731,
+"fhi_GHz": 231.379317,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X129754b_X70a9",
+"flo_GHz": 229.653877,
+"fhi_GHz": 231.379462,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X129754b_X6946",
+"flo_GHz": 229.653946,
+"fhi_GHz": 231.379532,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X12b3da5_X4411",
+"flo_GHz": 229.661666,
+"fhi_GHz": 231.387252,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X12b3da5_X2f34",
+"flo_GHz": 229.661899,
+"fhi_GHz": 231.387485,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xcf525f_X5aa4",
+"flo_GHz": 345.123177,
+"fhi_GHz": 346.848275,
+"have_setup": true,
+"observer_transitions": [
+"CO_3_2(ID=0)"
+]
+},
+{
+"eb": "A002_Xd10f82_X7829",
+"flo_GHz": 345.158988,
+"fhi_GHz": 346.884086,
+"have_setup": true,
+"observer_transitions": [
+"CO_3_2(ID=0)"
+]
+},
+{
+"eb": "A002_Xd10f82_X706f",
+"flo_GHz": 345.15911,
+"fhi_GHz": 346.884208,
+"have_setup": true,
+"observer_transitions": [
+"CO_3_2(ID=0)"
+]
+},
+{
+"eb": "A002_Xbe2ed7_X7c91",
+"flo_GHz": 344.074232,
+"fhi_GHz": 345.915052,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xb999fd_X148",
+"flo_GHz": 344.092739,
+"fhi_GHz": 345.933559,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xba0af7_X8a66",
+"flo_GHz": 344.099097,
+"fhi_GHz": 345.939917,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xbb9cd7_X40d5",
+"flo_GHz": 344.16714,
+"fhi_GHz": 345.892726,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xbe2ed7_X7c91",
+"flo_GHz": 354.180664,
+"fhi_GHz": 356.020996,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xb999fd_X148",
+"flo_GHz": 354.199439,
+"fhi_GHz": 356.039771,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xba0af7_X8a66",
+"flo_GHz": 354.205889,
+"fhi_GHz": 356.046221,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xbb9cd7_X40d5",
+"flo_GHz": 354.274082,
+"fhi_GHz": 355.99918,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xcd64ec_X21c9",
+"flo_GHz": 345.137454,
+"fhi_GHz": 346.862552,
+"have_setup": true,
+"observer_transitions": [
+"CO_3_2(ID=0)"
+]
+},
+{
+"eb": "A002_Xa68906_X1590",
+"flo_GHz": 220.363563,
+"fhi_GHz": 220.417472,
+"have_setup": false,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xa68906_X1590",
+"flo_GHz": 230.50248,
+"fhi_GHz": 230.556389,
+"have_setup": false,
+"observer_transitions": []
+},
+{
+"eb": "A002_X107376c_X4442",
+"flo_GHz": 328.032897,
+"fhi_GHz": 329.757994,
+"have_setup": true,
+"observer_transitions": [
+"C18O_3-2(ID=0)",
+"C18O_3-2(ID=3768340)"
+]
+},
+{
+"eb": "A002_X107376c_X4442",
+"flo_GHz": 330.032897,
+"fhi_GHz": 331.757994,
+"have_setup": true,
+"observer_transitions": [
+"13CO_3-2(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_X107376c_X4442",
+"flo_GHz": 340.074897,
+"fhi_GHz": 341.799994,
+"have_setup": true,
+"observer_transitions": [
+"CN_3-2(ID=0)",
+"CN_v=0_N=3-2,_J=7/2-5/2,_F=9/2-7/2(ID=28216)"
+]
+},
+{
+"eb": "A002_Xcd97a1_X2b1e",
+"flo_GHz": 226.304572,
+"fhi_GHz": 228.144904,
+"have_setup": true,
+"observer_transitions": [
+"CN_N_2_1(ID=0)",
+"CN_v_0_N_2_1__J_5_2_3_2__F_7_2_5_2(ID=28188)"
+]
+},
+{
+"eb": "A002_Xcd97a1_X2377",
+"flo_GHz": 226.304678,
+"fhi_GHz": 228.145011,
+"have_setup": true,
+"observer_transitions": [
+"CN_N_2_1(ID=0)",
+"CN_v_0_N_2_1__J_5_2_3_2__F_7_2_5_2(ID=28188)"
+]
+},
+{
+"eb": "A002_Xce1e34_X7be",
+"flo_GHz": 226.358202,
+"fhi_GHz": 228.083299,
+"have_setup": true,
+"observer_transitions": [
+"CN_N_2_1(ID=0)",
+"CN_v_0_N_2_1__J_5_2_3_2__F_7_2_5_2(ID=28188)"
+]
+},
+{
+"eb": "A002_Xcd97a1_X2b1e",
+"flo_GHz": 229.195739,
+"fhi_GHz": 231.036071,
+"have_setup": true,
+"observer_transitions": [
+"_CO_J_2_1(ID=0)",
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xcd97a1_X2377",
+"flo_GHz": 229.195842,
+"fhi_GHz": 231.036174,
+"have_setup": true,
+"observer_transitions": [
+"_CO_J_2_1(ID=0)",
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xce1e34_X7be",
+"flo_GHz": 229.249474,
+"fhi_GHz": 230.974572,
+"have_setup": true,
+"observer_transitions": [
+"_CO_J_2_1(ID=0)",
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xff294f_X812c",
+"flo_GHz": 330.367843,
+"fhi_GHz": 332.208175,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_Xff45a6_X8474",
+"flo_GHz": 330.367943,
+"fhi_GHz": 332.208275,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_Xff294f_X7bf4",
+"flo_GHz": 330.368031,
+"fhi_GHz": 332.208363,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_Xff45a6_X111c3",
+"flo_GHz": 330.368047,
+"fhi_GHz": 332.208379,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_Xff45a6_X10ca8",
+"flo_GHz": 330.368222,
+"fhi_GHz": 332.208554,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_Xff699e_Xd7",
+"flo_GHz": 330.36839,
+"fhi_GHz": 332.208722,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_Xff699e_X7543",
+"flo_GHz": 330.368406,
+"fhi_GHz": 332.208738,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_Xff45a6_X107fe",
+"flo_GHz": 330.368411,
+"fhi_GHz": 332.208743,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_Xff81e8_X734e",
+"flo_GHz": 330.368964,
+"fhi_GHz": 332.209296,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_Xff294f_X812c",
+"flo_GHz": 344.200839,
+"fhi_GHz": 346.041171,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xff45a6_X8474",
+"flo_GHz": 344.200939,
+"fhi_GHz": 346.041271,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xff294f_X7bf4",
+"flo_GHz": 344.201027,
+"fhi_GHz": 346.041359,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xff45a6_X111c3",
+"flo_GHz": 344.201044,
+"fhi_GHz": 346.041376,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xff45a6_X10ca8",
+"flo_GHz": 344.201219,
+"fhi_GHz": 346.041551,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xff699e_Xd7",
+"flo_GHz": 344.201386,
+"fhi_GHz": 346.041718,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xff699e_X7543",
+"flo_GHz": 344.201402,
+"fhi_GHz": 346.041734,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xff45a6_X107fe",
+"flo_GHz": 344.201408,
+"fhi_GHz": 346.04174,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xff81e8_X734e",
+"flo_GHz": 344.201961,
+"fhi_GHz": 346.042293,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xb95160_X3e24",
+"flo_GHz": 229.662803,
+"fhi_GHz": 231.387413,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xe48598_Xff51",
+"flo_GHz": 229.703284,
+"fhi_GHz": 231.42887,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xccea8d_X2ff5",
+"flo_GHz": 345.152317,
+"fhi_GHz": 346.877415,
+"have_setup": true,
+"observer_transitions": [
+"CO_3_2(ID=0)"
+]
+},
+{
+"eb": "A002_Xcdd033_X85ff",
+"flo_GHz": 345.101337,
+"fhi_GHz": 346.826435,
+"have_setup": true,
+"observer_transitions": [
+"CO_3_2(ID=0)"
+]
+},
+{
+"eb": "A002_Xb77b17_X3940",
+"flo_GHz": 345.547794,
+"fhi_GHz": 346.410343,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xb825df_X2265",
+"flo_GHz": 345.554038,
+"fhi_GHz": 346.416587,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xb25e1a_Xed74",
+"flo_GHz": 229.264212,
+"fhi_GHz": 230.98931,
+"have_setup": false,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xd12f5c_Xd7c6",
+"flo_GHz": 345.152801,
+"fhi_GHz": 346.877898,
+"have_setup": true,
+"observer_transitions": [
+"CO_3_2(ID=0)"
+]
+},
+{
+"eb": "A002_Xcdb7b8_Xfb16",
+"flo_GHz": 345.155605,
+"fhi_GHz": 346.880703,
+"have_setup": true,
+"observer_transitions": [
+"CO_3_2(ID=0)"
+]
+},
+{
+"eb": "A002_Xfe62c1_X398",
+"flo_GHz": 216.068221,
+"fhi_GHz": 217.908553,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_Xff0235_X8392",
+"flo_GHz": 216.071602,
+"fhi_GHz": 217.911934,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_Xf8f6a9_X10359",
+"flo_GHz": 216.091061,
+"fhi_GHz": 217.931393,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_X1009c59_X1ba4d",
+"flo_GHz": 216.098099,
+"fhi_GHz": 217.938431,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_X1015532_X20dc8",
+"flo_GHz": 216.102295,
+"fhi_GHz": 217.942627,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_X1018459_X73b0",
+"flo_GHz": 216.102688,
+"fhi_GHz": 217.94302,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_X1020da2_X78cd",
+"flo_GHz": 216.105778,
+"fhi_GHz": 217.94611,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_Xfe62c1_X398",
+"flo_GHz": 218.318221,
+"fhi_GHz": 220.158553,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_Xff0235_X8392",
+"flo_GHz": 218.321602,
+"fhi_GHz": 220.161934,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_Xf8f6a9_X10359",
+"flo_GHz": 218.341061,
+"fhi_GHz": 220.181393,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_X1009c59_X1ba4d",
+"flo_GHz": 218.348099,
+"fhi_GHz": 220.188431,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_X1015532_X20dc8",
+"flo_GHz": 218.352295,
+"fhi_GHz": 220.192627,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_X1018459_X73b0",
+"flo_GHz": 218.352688,
+"fhi_GHz": 220.19302,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_X1020da2_X78cd",
+"flo_GHz": 218.355778,
+"fhi_GHz": 220.19611,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_Xfe62c1_X398",
+"flo_GHz": 230.292452,
+"fhi_GHz": 230.752657,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xff0235_X8392",
+"flo_GHz": 230.295833,
+"fhi_GHz": 230.756038,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xf8f6a9_X10359",
+"flo_GHz": 230.315292,
+"fhi_GHz": 230.775497,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X1009c59_X1ba4d",
+"flo_GHz": 230.322331,
+"fhi_GHz": 230.782536,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X1015532_X20dc8",
+"flo_GHz": 230.326526,
+"fhi_GHz": 230.786731,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X1018459_X73b0",
+"flo_GHz": 230.32692,
+"fhi_GHz": 230.787125,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X1020da2_X78cd",
+"flo_GHz": 230.33001,
+"fhi_GHz": 230.790215,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xfe62c1_X398",
+"flo_GHz": 230.774874,
+"fhi_GHz": 231.235079,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_Xff0235_X8392",
+"flo_GHz": 230.778255,
+"fhi_GHz": 231.23846,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_Xf8f6a9_X10359",
+"flo_GHz": 230.797714,
+"fhi_GHz": 231.257919,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_X1009c59_X1ba4d",
+"flo_GHz": 230.804753,
+"fhi_GHz": 231.264958,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_X1015532_X20dc8",
+"flo_GHz": 230.808948,
+"fhi_GHz": 231.269153,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_X1018459_X73b0",
+"flo_GHz": 230.809341,
+"fhi_GHz": 231.269546,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_X1020da2_X78cd",
+"flo_GHz": 230.812432,
+"fhi_GHz": 231.272637,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_Xfe62c1_X398",
+"flo_GHz": 232.568217,
+"fhi_GHz": 234.408549,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_Xff0235_X8392",
+"flo_GHz": 232.571598,
+"fhi_GHz": 234.41193,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_Xf8f6a9_X10359",
+"flo_GHz": 232.591057,
+"fhi_GHz": 234.431389,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_X1009c59_X1ba4d",
+"flo_GHz": 232.598096,
+"fhi_GHz": 234.438428,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_X1015532_X20dc8",
+"flo_GHz": 232.602291,
+"fhi_GHz": 234.442623,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_X1018459_X73b0",
+"flo_GHz": 232.602684,
+"fhi_GHz": 234.443016,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_X1020da2_X78cd",
+"flo_GHz": 232.605775,
+"fhi_GHz": 234.446107,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_Xd9d7c7_Xbb64",
+"flo_GHz": 333.166882,
+"fhi_GHz": 334.892468,
+"have_setup": true,
+"observer_transitions": [
+"Continuum1(ID=0)"
+]
+},
+{
+"eb": "A002_Xd9d7c7_Xb3d2",
+"flo_GHz": 333.16701,
+"fhi_GHz": 334.892596,
+"have_setup": true,
+"observer_transitions": [
+"Continuum1(ID=0)"
+]
+},
+{
+"eb": "A002_Xd9d7c7_Xbb64",
+"flo_GHz": 335.058996,
+"fhi_GHz": 336.784582,
+"have_setup": true,
+"observer_transitions": [
+"Continuum2(ID=0)"
+]
+},
+{
+"eb": "A002_Xd9d7c7_Xb3d2",
+"flo_GHz": 335.059127,
+"fhi_GHz": 336.784712,
+"have_setup": true,
+"observer_transitions": [
+"Continuum2(ID=0)"
+]
+},
+{
+"eb": "A002_Xd9d7c7_Xbb64",
+"flo_GHz": 345.118188,
+"fhi_GHz": 346.843286,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_3_2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xd9d7c7_Xb3d2",
+"flo_GHz": 345.11832,
+"fhi_GHz": 346.843418,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_3_2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xd9d7c7_Xbb64",
+"flo_GHz": 346.976241,
+"fhi_GHz": 348.701338,
+"have_setup": true,
+"observer_transitions": [
+"H13CO__4_3(ID=3737028)"
+]
+},
+{
+"eb": "A002_Xd9d7c7_Xb3d2",
+"flo_GHz": 346.976371,
+"fhi_GHz": 348.701468,
+"have_setup": true,
+"observer_transitions": [
+"H13CO__4_3(ID=3737028)"
+]
+},
+{
+"eb": "A002_Xcdb7b8_Xfb16",
+"flo_GHz": 345.155605,
+"fhi_GHz": 346.880703,
+"have_setup": true,
+"observer_transitions": [
+"CO_3_2(ID=0)"
+]
+},
+{
+"eb": "A002_Xd189ef_X867b",
+"flo_GHz": 345.140648,
+"fhi_GHz": 346.865745,
+"have_setup": true,
+"observer_transitions": [
+"CO_3_2(ID=0)"
+]
+},
+{
+"eb": "A002_Xd09670_X23c5",
+"flo_GHz": 226.35992,
+"fhi_GHz": 228.085018,
+"have_setup": true,
+"observer_transitions": [
+"CN_N_2_1(ID=0)",
+"CN_v_0_N_2_1__J_5_2_3_2__F_7_2_5_2(ID=28188)"
+]
+},
+{
+"eb": "A002_Xd09670_X23c5",
+"flo_GHz": 229.251147,
+"fhi_GHz": 230.976245,
+"have_setup": true,
+"observer_transitions": [
+"_CO_J_2_1(ID=0)",
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X101088d_Xbf80",
+"flo_GHz": 330.353206,
+"fhi_GHz": 332.193538,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_X1006d51_X228e",
+"flo_GHz": 330.381315,
+"fhi_GHz": 332.221647,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_X1003af4_X14e08",
+"flo_GHz": 330.382391,
+"fhi_GHz": 332.222723,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_X1003af4_X3a2c",
+"flo_GHz": 330.383423,
+"fhi_GHz": 332.223755,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_X1001fdc_Xc06e",
+"flo_GHz": 330.384098,
+"fhi_GHz": 332.22443,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_X1001fdc_X29ae",
+"flo_GHz": 330.384371,
+"fhi_GHz": 332.224703,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_X1001fdc_X2085",
+"flo_GHz": 330.384586,
+"fhi_GHz": 332.224918,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_Xfffde1_X9bd6",
+"flo_GHz": 330.385469,
+"fhi_GHz": 332.225801,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_Xfffde1_X3835",
+"flo_GHz": 330.385894,
+"fhi_GHz": 332.226226,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_Xfff3d8_Xd46",
+"flo_GHz": 330.386622,
+"fhi_GHz": 332.226954,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_Xff99e1_X2c3bb",
+"flo_GHz": 330.386951,
+"fhi_GHz": 332.227283,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_Xff99e1_X2b2ee",
+"flo_GHz": 330.387234,
+"fhi_GHz": 332.227566,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_Xff99e1_X24be0",
+"flo_GHz": 330.387449,
+"fhi_GHz": 332.227781,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_Xff99e1_X1b0c4",
+"flo_GHz": 330.388286,
+"fhi_GHz": 332.228618,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_X107fa96_X9a88",
+"flo_GHz": 330.391113,
+"fhi_GHz": 332.231445,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_X107fa96_X150f6",
+"flo_GHz": 330.392117,
+"fhi_GHz": 332.232449,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_X1086384_X10bc1",
+"flo_GHz": 330.395189,
+"fhi_GHz": 332.235521,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_X1088045_X3c7b",
+"flo_GHz": 330.39577,
+"fhi_GHz": 332.236103,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_X101088d_Xbf80",
+"flo_GHz": 344.186202,
+"fhi_GHz": 346.026534,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_X1006d51_X228e",
+"flo_GHz": 344.214311,
+"fhi_GHz": 346.054643,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_X1003af4_X14e08",
+"flo_GHz": 344.215387,
+"fhi_GHz": 346.055719,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_X1003af4_X3a2c",
+"flo_GHz": 344.216419,
+"fhi_GHz": 346.056751,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_X1001fdc_Xc06e",
+"flo_GHz": 344.217094,
+"fhi_GHz": 346.057426,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_X1001fdc_X29ae",
+"flo_GHz": 344.217367,
+"fhi_GHz": 346.057699,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_X1001fdc_X2085",
+"flo_GHz": 344.217582,
+"fhi_GHz": 346.057914,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xfffde1_X9bd6",
+"flo_GHz": 344.218465,
+"fhi_GHz": 346.058797,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xfffde1_X3835",
+"flo_GHz": 344.21889,
+"fhi_GHz": 346.059222,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xfff3d8_Xd46",
+"flo_GHz": 344.219618,
+"fhi_GHz": 346.05995,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xff99e1_X2c3bb",
+"flo_GHz": 344.219947,
+"fhi_GHz": 346.060279,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xff99e1_X2b2ee",
+"flo_GHz": 344.22023,
+"fhi_GHz": 346.060562,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xff99e1_X24be0",
+"flo_GHz": 344.220445,
+"fhi_GHz": 346.060777,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xff99e1_X1b0c4",
+"flo_GHz": 344.221282,
+"fhi_GHz": 346.061614,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_X107fa96_X9a88",
+"flo_GHz": 344.22411,
+"fhi_GHz": 346.064442,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_X107fa96_X150f6",
+"flo_GHz": 344.225113,
+"fhi_GHz": 346.065445,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_X1086384_X10bc1",
+"flo_GHz": 344.228185,
+"fhi_GHz": 346.068517,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_X1088045_X3c7b",
+"flo_GHz": 344.228767,
+"fhi_GHz": 346.069099,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xc26103_X155a",
+"flo_GHz": 218.560028,
+"fhi_GHz": 220.40036,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xc26103_X155a",
+"flo_GHz": 230.500443,
+"fhi_GHz": 230.960526,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xe64b7b_X1704c",
+"flo_GHz": 491.657082,
+"fhi_GHz": 492.577492,
+"have_setup": true,
+"observer_transitions": [
+"CI_3P1-3P0(ID=188084)"
+]
+},
+{
+"eb": "A002_Xf05a48_X269c",
+"flo_GHz": 491.700986,
+"fhi_GHz": 492.621396,
+"have_setup": true,
+"observer_transitions": [
+"CI_3P1-3P0(ID=188084)"
+]
+},
+{
+"eb": "A002_X12694b3_Xab7",
+"flo_GHz": 229.664145,
+"fhi_GHz": 231.38973,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X126787e_X227e",
+"flo_GHz": 229.664778,
+"fhi_GHz": 231.390364,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X126787e_X1c15",
+"flo_GHz": 229.664906,
+"fhi_GHz": 231.390492,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X126787e_X1170",
+"flo_GHz": 229.665051,
+"fhi_GHz": 231.390637,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X1264cde_X2d40",
+"flo_GHz": 229.665932,
+"fhi_GHz": 231.391518,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X1264cde_X258b",
+"flo_GHz": 229.666066,
+"fhi_GHz": 231.391652,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X1263402_X856c",
+"flo_GHz": 229.666276,
+"fhi_GHz": 231.391862,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X1263402_X816f",
+"flo_GHz": 229.666403,
+"fhi_GHz": 231.391989,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X7d194b_X58f",
+"flo_GHz": 230.087999,
+"fhi_GHz": 230.950548,
+"have_setup": false,
+"observer_transitions": []
+},
+{
+"eb": "A002_X74fea5_Xd70",
+"flo_GHz": 230.108722,
+"fhi_GHz": 230.971271,
+"have_setup": false,
+"observer_transitions": []
+},
+{
+"eb": "A002_X1066403_Xbbde",
+"flo_GHz": 330.400026,
+"fhi_GHz": 332.125123,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_Xff0235_X26e3",
+"flo_GHz": 330.438712,
+"fhi_GHz": 332.16381,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_X1066403_Xbbde",
+"flo_GHz": 344.233026,
+"fhi_GHz": 345.958123,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xff0235_X26e3",
+"flo_GHz": 344.271712,
+"fhi_GHz": 345.99681,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xe4f0a6_X3658",
+"flo_GHz": 491.714012,
+"fhi_GHz": 492.576804,
+"have_setup": true,
+"observer_transitions": [
+"CI_3P1-3P0(ID=188084)"
+]
+},
+{
+"eb": "A002_X11d9ce7_X5257",
+"flo_GHz": 849.408207,
+"fhi_GHz": 851.133793,
+"have_setup": true,
+"observer_transitions": [
+"Single_Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_X11d9ce7_X5257",
+"flo_GHz": 851.408207,
+"fhi_GHz": 853.133793,
+"have_setup": true,
+"observer_transitions": [
+"Single_Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_X11d9ce7_X5257",
+"flo_GHz": 853.366207,
+"fhi_GHz": 855.091793,
+"have_setup": true,
+"observer_transitions": [
+"Single_Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_X11d9ce7_X5257",
+"flo_GHz": 855.366207,
+"fhi_GHz": 857.091793,
+"have_setup": true,
+"observer_transitions": [
+"Single_Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_X11d9ce7_X5257",
+"flo_GHz": 865.408207,
+"fhi_GHz": 867.133793,
+"have_setup": true,
+"observer_transitions": [
+"Single_Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_X11d9ce7_X5257",
+"flo_GHz": 867.408207,
+"fhi_GHz": 869.133793,
+"have_setup": true,
+"observer_transitions": [
+"Single_Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_X11d9ce7_X5257",
+"flo_GHz": 869.366207,
+"fhi_GHz": 871.091793,
+"have_setup": true,
+"observer_transitions": [
+"Single_Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_X11d9ce7_X5257",
+"flo_GHz": 871.366207,
+"fhi_GHz": 873.091793,
+"have_setup": true,
+"observer_transitions": [
+"Single_Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_Xc296d2_X148c",
+"flo_GHz": 218.565445,
+"fhi_GHz": 220.405777,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xc296d2_X148c",
+"flo_GHz": 230.506541,
+"fhi_GHz": 230.966624,
+"have_setup": true,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xff0235_X4a6d",
+"flo_GHz": 330.419656,
+"fhi_GHz": 332.144754,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_Xff0235_X4a6d",
+"flo_GHz": 344.252656,
+"fhi_GHz": 345.977754,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xff0235_X502d",
+"flo_GHz": 330.419569,
+"fhi_GHz": 332.144666,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_Xff0235_X502d",
+"flo_GHz": 344.252569,
+"fhi_GHz": 345.977666,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xcca365_X3822",
+"flo_GHz": 226.326975,
+"fhi_GHz": 228.167307,
+"have_setup": true,
+"observer_transitions": [
+"CN_N_2_1(ID=0)",
+"CN_v_0_N_2_1__J_5_2_3_2__F_7_2_5_2(ID=28188)"
+]
+},
+{
+"eb": "A002_Xce574d_X123f",
+"flo_GHz": 226.374448,
+"fhi_GHz": 228.099546,
+"have_setup": true,
+"observer_transitions": [
+"CN_N_2_1(ID=0)",
+"CN_v_0_N_2_1__J_5_2_3_2__F_7_2_5_2(ID=28188)"
+]
+},
+{
+"eb": "A002_Xcca365_X3822",
+"flo_GHz": 229.217546,
+"fhi_GHz": 231.057878,
+"have_setup": true,
+"observer_transitions": [
+"_CO_J_2_1(ID=0)",
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xce574d_X123f",
+"flo_GHz": 229.265289,
+"fhi_GHz": 230.990386,
+"have_setup": true,
+"observer_transitions": [
+"_CO_J_2_1(ID=0)",
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xff0235_X8c42",
+"flo_GHz": 330.374882,
+"fhi_GHz": 332.215214,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_X10228b9_X423",
+"flo_GHz": 330.474324,
+"fhi_GHz": 332.199422,
+"have_setup": true,
+"observer_transitions": [
+"13CO(ID=0)",
+"13CO_v=0_3-2(ID=7312)"
+]
+},
+{
+"eb": "A002_Xff0235_X8c42",
+"flo_GHz": 344.207878,
+"fhi_GHz": 346.04821,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_X10228b9_X423",
+"flo_GHz": 344.307324,
+"fhi_GHz": 346.032422,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_3-2(ID=0)",
+"CO_v=0_3-2(ID=3768104)"
+]
+},
+{
+"eb": "A002_Xd3607d_X6487",
+"flo_GHz": 220.288446,
+"fhi_GHz": 220.504144,
+"have_setup": true,
+"observer_transitions": [
+"13CO_v_0_2_1(ID=7311)"
+]
+},
+{
+"eb": "A002_Xd40be0_X749c",
+"flo_GHz": 220.291517,
+"fhi_GHz": 220.507215,
+"have_setup": true,
+"observer_transitions": [
+"13CO_v_0_2_1(ID=7311)"
+]
+},
+{
+"eb": "A002_Xd3607d_X6487",
+"flo_GHz": 230.427679,
+"fhi_GHz": 230.643377,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xd40be0_X749c",
+"flo_GHz": 230.430903,
+"fhi_GHz": 230.646602,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xd3607d_X6487",
+"flo_GHz": 220.288446,
+"fhi_GHz": 220.504144,
+"have_setup": true,
+"observer_transitions": [
+"13CO_v_0_2_1(ID=7311)"
+]
+},
+{
+"eb": "A002_Xd3607d_X6487",
+"flo_GHz": 230.427679,
+"fhi_GHz": 230.643377,
+"have_setup": true,
+"observer_transitions": [
+"CO_v_0_2_1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xce1e34_X1fb8",
+"flo_GHz": 345.157358,
+"fhi_GHz": 346.882455,
+"have_setup": true,
+"observer_transitions": [
+"CO_3_2(ID=0)"
+]
+},
+{
+"eb": "A002_X1239f8e_Xa43b",
+"flo_GHz": 229.653766,
+"fhi_GHz": 231.379352,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_X1263402_Xb082",
+"flo_GHz": 229.67413,
+"fhi_GHz": 231.399716,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xcd8029_Xb6b0",
+"flo_GHz": 345.144857,
+"fhi_GHz": 346.869955,
+"have_setup": true,
+"observer_transitions": [
+"CO_3_2(ID=0)"
+]
+},
+{
+"eb": "A002_X74c92c_X6d5",
+"flo_GHz": 230.096768,
+"fhi_GHz": 230.959317,
+"have_setup": false,
+"observer_transitions": []
+},
+{
+"eb": "A002_X10b6f7c_X850c",
+"flo_GHz": 216.561857,
+"fhi_GHz": 218.402678,
+"have_setup": true,
+"observer_transitions": [
+"Continuum(ID=0)"
+]
+},
+{
+"eb": "A002_Xe3da01_X4265",
+"flo_GHz": 219.367908,
+"fhi_GHz": 219.799305,
+"have_setup": true,
+"observer_transitions": [
+"C18O_2-1(ID=3768339)"
+]
+},
+{
+"eb": "A002_Xe45e29_Xb7d4",
+"flo_GHz": 219.369801,
+"fhi_GHz": 219.801197,
+"have_setup": true,
+"observer_transitions": [
+"C18O_2-1(ID=3768339)"
+]
+},
+{
+"eb": "A002_Xe3da01_X4265",
+"flo_GHz": 220.206257,
+"fhi_GHz": 220.637653,
+"have_setup": true,
+"observer_transitions": [
+"13CO_v=0_2-1(ID=7311)"
+]
+},
+{
+"eb": "A002_Xe45e29_Xb7d4",
+"flo_GHz": 220.208149,
+"fhi_GHz": 220.639545,
+"have_setup": true,
+"observer_transitions": [
+"13CO_v=0_2-1(ID=7311)"
+]
+},
+{
+"eb": "A002_X10b6f7c_X850c",
+"flo_GHz": 229.603853,
+"fhi_GHz": 231.444674,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xe3da01_X4265",
+"flo_GHz": 230.346699,
+"fhi_GHz": 230.778095,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xe45e29_Xb7d4",
+"flo_GHz": 230.348682,
+"fhi_GHz": 230.780079,
+"have_setup": true,
+"observer_transitions": [
+"CO_v=0_2-1(ID=3768101)"
+]
+},
+{
+"eb": "A002_Xe3da01_X4265",
+"flo_GHz": 231.205982,
+"fhi_GHz": 231.637379,
+"have_setup": true,
+"observer_transitions": [
+"Continuum1(ID=0)"
+]
+},
+{
+"eb": "A002_Xe45e29_Xb7d4",
+"flo_GHz": 231.207966,
+"fhi_GHz": 231.639362,
+"have_setup": true,
+"observer_transitions": [
+"Continuum1(ID=0)"
+]
+},
+{
+"eb": "A002_Xa95c04_X14cd",
+"flo_GHz": 220.386514,
+"fhi_GHz": 220.440423,
+"have_setup": false,
+"observer_transitions": []
+},
+{
+"eb": "A002_Xa95c04_X14cd",
+"flo_GHz": 230.526503,
+"fhi_GHz": 230.580412,
+"have_setup": false,
+"observer_transitions": []
+}
+]
+}

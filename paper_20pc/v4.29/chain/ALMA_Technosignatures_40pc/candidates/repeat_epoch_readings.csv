@@ -1,0 +1,27 @@
+quantity,star,value
+"as delivered, topocentric",61 Vir,346.313811
+"as delivered, topocentric",CP-72 2713,344.269746
+of them in the primary census,61 Vir,3
+of them in the primary census,CP-72 2713,1
+"further census repeats, no spectrum",61 Vir,1
+"further census repeats, no spectrum",CP-72 2713,0
+covering epochs more than a day away,61 Vir,2
+covering epochs more than a day away,CP-72 2713,4
+Longest baseline (d),61 Vir,3
+Longest baseline (d),CP-72 2713,2
+largest single epoch,61 Vir,+1.54
+largest single epoch,CP-72 2713,+0.34
+maximised over every drift,61 Vir,2.70
+maximised over every drift,CP-72 2713,3.60
+"Nearest block alone, T_pers",61 Vir,5.27
+"Nearest block alone, T_pers",CP-72 2713,6.21
+T_rep,61 Vir,+0.02
+T_rep,CP-72 2713,-0.57
+from the nearest block alone,61 Vir,0.95 S
+from the nearest block alone,CP-72 2713,0.71 S
+from separated blocks alone,61 Vir,0.67 S (n=2)
+from separated blocks alone,CP-72 2713,10.86 S (n=1)
+over the matched registration tolerance,61 Vir,0.67 S
+over the matched registration tolerance,CP-72 2713,0.85 S
+Displacement permitted (km s^-1),61 Vir,±0.211
+Displacement permitted (km s^-1),CP-72 2713,±0.213

@@ -1,0 +1,130 @@
+{
+ "n": 12,
+ "n_same": 11,
+ "n_lost": 1,
+ "rows": [
+  {
+   "star": "bet Pic",
+   "band": "3",
+   "eb": "A002_Xf5d76d_Xeb8",
+   "tstar": 30.765357971191406,
+   "rank_global": 0.001949317738791423,
+   "rank_local": 0.001949317738791423,
+   "flag_global": true,
+   "flag_local": true
+  },
+  {
+   "star": "bet Pic",
+   "band": "3",
+   "eb": "A002_Xf5d76d_Xe19",
+   "tstar": 27.80084991455078,
+   "rank_global": 0.001949317738791423,
+   "rank_local": 0.001949317738791423,
+   "flag_global": true,
+   "flag_local": true
+  },
+  {
+   "star": "HD 48370",
+   "band": "6",
+   "eb": "A002_Xc26103_X155a",
+   "tstar": 26.858444213867188,
+   "rank_global": 0.001949317738791423,
+   "rank_local": 0.001949317738791423,
+   "flag_global": true,
+   "flag_local": true
+  },
+  {
+   "star": "bet Pic",
+   "band": "3",
+   "eb": "A002_Xf4df6f_Xc7",
+   "tstar": 17.725908279418945,
+   "rank_global": 0.001949317738791423,
+   "rank_local": 0.001949317738791423,
+   "flag_global": true,
+   "flag_local": true
+  },
+  {
+   "star": "bet Pic",
+   "band": "3",
+   "eb": "A002_Xf5d76d_Xcc5",
+   "tstar": 17.346166610717773,
+   "rank_global": 0.001949317738791423,
+   "rank_local": 0.001949317738791423,
+   "flag_global": true,
+   "flag_local": true
+  },
+  {
+   "star": "bet Pic",
+   "band": "3",
+   "eb": "A002_Xf5d76d_X32f1",
+   "tstar": 14.617521286010742,
+   "rank_global": 0.001949317738791423,
+   "rank_local": 0.001949317738791423,
+   "flag_global": true,
+   "flag_local": true
+  },
+  {
+   "star": "bet Pic",
+   "band": "6",
+   "eb": "A002_Xd9668b_X3a90",
+   "tstar": 11.680971145629883,
+   "rank_global": 0.001949317738791423,
+   "rank_local": 0.001949317738791423,
+   "flag_global": true,
+   "flag_local": true
+  },
+  {
+   "star": "bet Pic",
+   "band": "6",
+   "eb": "A002_X6f1341_X1484",
+   "tstar": 9.723108291625977,
+   "rank_global": 0.001949317738791423,
+   "rank_local": 0.001949317738791423,
+   "flag_global": true,
+   "flag_local": true
+  },
+  {
+   "star": "bet Pic",
+   "band": "6",
+   "eb": "A002_Xd9668b_Xa9df",
+   "tstar": 8.94759750366211,
+   "rank_global": 0.001949317738791423,
+   "rank_local": 0.001949317738791423,
+   "flag_global": true,
+   "flag_local": true
+  },
+  {
+   "star": "bet Pic",
+   "band": "6",
+   "eb": "A002_Xa7a216_X23e4",
+   "tstar": 7.987889766693115,
+   "rank_global": 0.001949317738791423,
+   "rank_local": 0.001949317738791423,
+   "flag_global": true,
+   "flag_local": true
+  },
+  {
+   "star": "61 Vir",
+   "band": "7",
+   "eb": "A002_Xc079b5_X82f",
+   "tstar": 5.946630001068115,
+   "rank_global": 0.001949317738791423,
+   "rank_local": 0.001949317738791423,
+   "flag_global": true,
+   "flag_local": true
+  },
+  {
+   "star": "CP-72 2713",
+   "band": "7",
+   "eb": "A002_Xff0235_X4a6d",
+   "tstar": 5.80891227722168,
+   "rank_global": 0.001949317738791423,
+   "rank_local": 0.007797270955165692,
+   "flag_global": true,
+   "flag_local": false
+  }
+ ],
+ "lost": [
+  "CP-72 2713"
+ ]
+}

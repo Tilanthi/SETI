@@ -1,0 +1,13 @@
+literal sweep of technosignatures_40pc_v4.29.tex
+
+8 prose literals equal to a generated macro:
+  25         == BdNBlocks,BmArcsec,BpSixGapD,CkLo           m. A star enters if its Gaia~DR3 parallax is at least 25\,mas and measured to better than 
+  30         == CfgChanOut,CovNHalf,EcWitIncBp,FrUnattrWTwentyFive  ally to a factor of two {under}-representation beyond 30\,pc. Colour comes second. A~stars
+  15         == AnBandKms,AppMTubeObs,BgPcOffNStar,CdNStarNoPhot  ed search would pick: of the {} sample systems within 15\,pc with a confirmed planet, {} h
+  10.4       == EpGapD,VisStarMJy                           mated from each block's phase-calibrator phase rms [ 10.4.11, 11.3.1]{ALMAHandbook} with t
+  11.3       == CpRecFluxOne,RcCpFlux                       m each block's phase-calibrator phase rms [ 10.4.11, 11.3.1]{ALMAHandbook} with the phase-
+  6.7        == BpRecOffChan,TuQuantAlignPct,ZmOffLoMHz     lied on. {Software.} The pipeline depends on {casa}~6.7.0 , {python}~3 with {astropy} , {n
+  3.2        == BootPoisson,EcReqRateHd,ExpDistinctDen,ExpStageOneAll  artition the hours as they partition the windows. Rows~3.2 to 3.5 are the archival gap, ov
+  3.5        == BpicbCeiling,BpicbFhi,EpsEriCorrMax,EpsEriPbHi  n the hours as they partition the windows. Rows~3.2 to 3.5 are the archival gap, over whic
+
+0 prose literals within 5 per cent of a macro (possible stale value):

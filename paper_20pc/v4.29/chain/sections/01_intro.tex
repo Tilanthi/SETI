@@ -1,0 +1,73 @@
+\section{Introduction}
+\label{sec:intro}
+
+The public ALMA archive holds thousands of hours of millimetre and
+submillimetre observations taken for other reasons, mostly studies of dust
+discs and planet formation. This paper searches them for a narrowband
+transmitter at the position of a star in the field. No such signal was found.
+
+Searches for \emph{technosignatures} -- detectable imprints of technology,
+intended or not \citep{Sheikh2020,SETIreview2025} -- have examined many
+thousands of stars since the first proposals
+\citep{CocconiMorrison1959,Drake1960}, from Project Phoenix
+\citep{Tarter2001,Backus2002} to the targeted, commensal and
+machine-learning-assisted surveys of today
+\citep{Zhang2020,Czech2021,FAST3IATLAS2025,LOFARdualsite2023,Choza2024,Morrison2023,Tremblay2024,SRT2025,Ma2023,GLOBULAR2025,AnomalyParkesGBT2025}.
+The last published accounting of that effort covers only \HaystackFrac{} of
+the space of transmitter position, power, frequency, bandwidth, polarisation
+and repetition rate \citep{Wright2018}. Essentially all of it lies below
+${\sim}30$\,GHz, and above that the record is nearly empty.
+\citet{Steffes1994} and \citet{Mauersberger1996} observed \SbPriorNStarA{} and
+\SbPriorNStarB{} nearby targets at \SbPriorFreqGHz\,GHz, each in no more than
+\SbPriorBandMHz\,MHz of a single line, \SbPriorRatio{} times less than the
+union searched here, and with no search over drift and no test of
+persistence. Of ALMA's receiver bands only Band~3 has been searched
+\citep{Mason2025}. The lower Band~1 holds observations of only \SbBoneNStar{}
+stars of this sample, proprietary until \SbBoneRelYear{} and in channels too
+coarse for a carrier search.
+
+At these frequencies interstellar dispersion and scintillation are negligible
+and an aperture delivers far more gain per watt. But system temperatures are
+higher, the atmosphere is opaque in places at both ends of the link, and the
+narrow beam -- \BmArcsec{} arcsec for the \BenchDiam\,m benchmark of
+\S\ref{sec:mmdifferent} -- must be aimed at the Earth deliberately. Limits are
+therefore stated as EIRP, which needs no transmitter model. The targets were
+chosen by other programmes, so the sample supports no bound on the fraction of
+stars hosting a transmitter \citep{Wright2018,Margot2023,EarthDetectingEarth2025}
+(\S\ref{sec:bias}).
+
+The signal sought is an \emph{unresolved spectral carrier}: emission confined
+to a few channels at the stellar position, present at more than one epoch, and
+allowed to drift as it must for a transmitter on a rotating, orbiting body
+(\S\ref{sec:statistic}). Broadband planetary-scale leakage \citep{BRaTs2026} is
+outside the search by construction. Recurrence, not brightness, separates an
+interesting event from a detection \citep{Sheikh2021}. \citet{Mason2025}
+identified the obstacles in this band: drift rates that scale with frequency,
+and the molecular line forest. The method meets them with a drift search, a
+line catalogue against which every event is compared, and a recurrence test in
+a separated epoch. In place of interference rejection it compares the star
+with control positions inside its own primary beam, which a single dish cannot
+resolve, and every window was re-reduced from the raw archive
+(\S\ref{sec:method}).
+
+Experiments are compared here on the minimum detectable received flux
+$F_{\rm min}=S_{\rm min}\,\delta\nu$ at each one's own channel width, because
+$F_{\rm min}$ rises as $\delta\nu^{1/2}$. A limit holds only for a signal
+narrower than the channel that set it, and the channels searched here span
+\LtChanSpanDex{} orders of magnitude, from \LtChanNarrow{} to \LtChanWide.
+Figure~\ref{fig:context} draws each published threshold beside its value
+rescaled to a common $\LtCommonSnr\sigma$, an arithmetic convention and not a
+matched false-alarm probability (values in \texttt{figures/figure\_data.csv}
+of the data archive; \citealt{SIdeposit}). Only this survey's
+$\mathrm{EIRP}_{90}$ is calibrated with injected carriers, the step
+\citet{Price2020} name as missing from their limits and \citet{Margot2023}
+measure but do not fold into theirs. No plotted limit carries a confirmation
+criterion. At a bare $\LtCommonSnr\sigma$ threshold \citet{Mason2025} reach a
+median \MasonFluxMed\,W\,m$^{-2}$ in a \MasonChanKHz\,kHz channel. The deepest
+window here outside the line mask reaches \FluxTrigBest\,W\,m$^{-2}$ in
+\FluxChanBestKHz\,kHz, a factor \FluxNatBestRatio{} deeper, and the median
+window \FluxTrigMed\,W\,m$^{-2}$ in \FluxChanMedKHz\,kHz, a factor
+\FluxNatMedRatio{} shallower. Per channel this survey is therefore the
+shallower except in its finest windows. What distinguishes it is its frequency
+range and its \NSysClassA{} systems within 40\,pc, against distant stars in
+\MasonNCal{} calibrator fields.

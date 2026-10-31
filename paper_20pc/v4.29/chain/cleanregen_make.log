@@ -1,0 +1,540 @@
+
+===== cleanregen pass 1 of 2 BEGIN =====
+manuscript technosignatures_40pc_v4.29.tex: \inputs 198 macro file(s); 0 on disk
+ok   M1 no frozen pre-repair macro file is present (rounds 5-7, deleted at v4.01; 12 of their macros were typeset from an extraction two revisions old)
+     checked 3 name(s)
+ok   M2 every macro file on disk is one the manuscript \inputs -- adopted_e90._texval() reads anything else LAST, so it would override the published value
+     checked 0 file(s) on disk against 198 \input line(s)
+---  M2b skipped: --pre (a clean tree has no macro file yet)
+ok   M3 no drive artefact is present in the build root (Ruling 13: a _driveN round file silently overrode a published macro)
+     scanned 750 entr(y|ies)
+ok   M4 the manuscript does \input at least one macro file (this gate is not measuring an empty set)
+     198 \input line(s)
+
+macrosource: 0 clause(s) failed
+stackprov_r27 --check (drive 0)
+  P1 every window of the inventory has exactly one product chosen by a provenance rule or a declared winner (an undeclared tie, a stale declaration or a census window off its own ring stops the build) PASS  2739 windows
+  P2 the stack's windows read only provenance winners                            PASS  0 of 2739 windows are not winners
+  P3 no window identity appears twice in the stack's windows (one observation, one product) PASS  max 1
+  P4 every group path is a winner, and no identity enters two groups             PASS  2306 group-paths, 2306 distinct, 2306 identities
+  P5 every census window the stack can read is on its own dish's ring, except the declared ones whose repaired product does not exist PASS  0 off-ring undeclared, 7 declared
+  P6 where a census window has more than one product and the published row identifies one of them, the winner is that one PASS  0 not; 13 of 353 windows where no product carries a matching result (A002_X74c92c_X6d5, A002_X74c92c_X6d5, A002_X74c92c_X6d5, A002_X74c92c_X6d5, A002_Xd98580_X3bf6, A002_Xe48598_Xff51, A002_Xe48598_Xff51, A002_Xe48598_Xff51, A002_Xe48598_Xff51, A002_Xf5d76d_X32f1, A002_Xf5d76d_X32f1, A002_Xf5d76d_X32f1, A002_Xf5d76d_X32f1)
+  P7 every excluded (bad-weight) product is named by its winner, so the exclusion still applies PASS  27 of 27
+  P11 groups.py's frame arithmetic, re-done here from the NAME lookup, reproduces every deposited frame exactly (so the identity frame below differs from it only in which velocity is attached) PASS  2739 windows
+  P9 the frozen windows are exactly the deposited windows with each identity's product replaced by its winner, framed by STELLAR IDENTITY (row 61); nothing else differs PASS  2739 windows
+  P12 every frozen window carries the velocity of the star it IS (position at its epoch + parallax), and none lacks one its identity has PASS  {'with v_sys': 785, 'without v_sys': 1894, 'framed by identity, name key had none': 60}
+  P13 stack_v408/frame_r61.json lists exactly the windows framed by identity whose name key had no velocity PASS  60 windows
+  P10 the frozen groups are exactly groups3.build() on those windows             PASS  370 groups
+  P8 the windows left on pre-repair products are hold-out / extension / control windows only (Ruling 25), and are counted PASS  {'oos': 29, 'holdout': 229, 'extension': 340}
+stackprov_r27: 0 FAIL
+  stackprov_r27: window A002_Xcf749a_X4871|346897585|348881960|81.079889|-16.021030: 2 products and no provenance rule separates them, and no declared winner: ['/data/SETI/targets/2MASS_J05241914-1601153_551040_B7/products/A002_Xcf749a_X4871_spw0_srcspec.npz', '/data/SETI/targets/DRIVE1_COPY_2MASS_J05241914-1601153_551040_B7/products/A002_Xcf749a_X4871_spw0_srcspec.npz']
+  stackprov_r27: 1 declaration(s) decide nothing (stale): ['A002_Xdrive_X2|1|2|0.000000|0.000000']
+  stackprov_r27: census window A002_X1001fdc_X2085|330304996|332304507|34.328959|33.846863 (7m block) has no product on its own dish's ring: ['/data/SETI/targets/HD14055_B7/products/A002_X1001fdc_X2085_spw0_srcspec.npz']
+prodident: 701 record(s) naming a product; 445 under the released tree and in the catalogue, 441 of those reproducing its published statistic; 4 under the re-extraction tree, which must not; 683 reached under a per-block stem
+prodident: 94 hold-out / beyond-40 pc window record(s) checked against the hold-out exports (P2h), 94 reproducing them
+prodident: 393 of those under the re-flag trees (catalogue, or the field-truncation record for a field-repaired window)
+prodident: 3 window(s) named by a record and absent from the deposited catalogue (the declared archival tail): [('A002_X1190de8_Xd526', 3), ('A002_X11adad7_X25c5e', 3), ('A002_Xc6b674_X28f5', 0)]
+prodident: 0 FAIL
+  J1 the channel response used here is the one the 400 retained response trials measure PASS  largest deviation 0.0030 over fractional offsets 0.000, 0.125, 0.250, 0.375, 0.500
+  J2 the crossings measured are the ledger's own rank-leading pair, in the order the rest of the paper prints them PASS  ['U02', 'A01'] at ['346.3232', '344.2965'] against ['346.3232', '344.2965']
+  J3 U02: the retained repeat rows are the frozen record's own blocks, keyed on the execution block PASS  3 retained, 3 in the record, 3 published
+  J4 U02: the modelled recovery probability reproduced here is the one the paper prints for this crossing PASS  computed 0.9992 against published 1.00
+
+U02 61 Vir  3 repeat blocks  T*=5.947  T_pers=9.694  trigger-amplitude T=8.151
+   modelled                0.999
+   carrier centred         1.000 +- 0.000
+   sub-channel phase       1.000 +- 0.000
+   no carrier              0.0000
+   the band's own null     +0.139 +- 0.864 over 92 cells
+   de-drift: half a step of 70.9 Hz/s over a 3430 s dwell takes T 3.93 to 3.94 (1.001)
+  J3 A01: the retained repeat rows are the frozen record's own blocks, keyed on the execution block PASS  5 retained, 5 in the record, 5 published
+  J4 A01: the modelled recovery probability reproduced here is the one the paper prints for this crossing PASS  computed 0.6616 against published 0.66
+
+A01 CP$-$72 2713  5 repeat blocks  T*=5.809  T_pers=6.293  trigger-amplitude T=5.417
+   modelled                0.662
+   carrier centred         0.701 +- 0.014
+   sub-channel phase       0.654 +- 0.015
+   no carrier              0.0000
+   the band's own null     +0.108 +- 1.009 over 66 cells
+   de-drift: half a step of 64.7 Hz/s over a 3745 s dwell takes T 3.98 to 3.96 (0.996)
+  J5 the measured recovery agrees with the model it tests, for both crossings and with the carrier centred or at a random sub-channel position PASS  largest departure 2.72 binomial errors; 61 Vir 1.000+-0.000 and 1.000+-0.000 against 0.999; CP$-$72 2713 0.701+-0.014 and 0.654+-0.015 against 0.662
+  J6 the same reading confirms nothing when the carrier is removed PASS  0 of 2000 carrier-free readings reach the trigger
+  J7 half a step of error in the carried drift costs little inside one block, which is what a grid stepping by half a channel across the dwell is for PASS  the statistic keeps 0.996 of its value at worst, over grids of 70.9, 64.7 Hz/s
+  J8 every retained per-integration product is measured here, and the crossings with nothing to inject into are the rest of those carrying an exclusion PASS  retained ['A01', 'U02']; measured ['A01', 'U02']; 27 of 28 carry an exclusion with nothing to inject into
+
+13 macros -> survey_numbers_round750.tex
+all checks pass
+
+1  the blocks with no phase-stability record
+  B1 the published median longest baseline of the unrecorded blocks is PASS  278.8 m over 125 of 128 unrecorded against a published 279; 46.0 m over 279 recorded against 46
+  B2 the set is bimodal and the published median is a property of the  PASS  modes at 44 m (n=58) and 456 m (n=67), nothing between 49 and 271 m; 5 blocks of mix move the median from 279 m to below 271 m
+  B3 the real difference is the share of 12 m blocks, and within each  PASS  12 m share 54 per cent against 26; 7 m medians 44/44 m; 12 m medians 456/448 m
+  B4 and the archive-derived baselines use a conversion the blocks mea PASS  k = 1.257 over 23 measured against 1.220 assumed on 116 derived
+
+2  the median of a window's own control ensemble
+  B5 the two published values are the same quantity over two different PASS  2.7461 over 1581 rows carrying ctrl_med (published 2.75) against 2.7409 over 1663 windows with a stored ensemble (published 2.74, and 2.74 as the survey median of the quality rule); the results section cites the row field
+  B6 and the value to keep is the one the quality rule itself uses, wh PASS  1663 windows in the owner against 1663 in the census and 1581 carrying ctrl_med
+
+3  the predicted-cell offset
+  B7 the offset column is centred on zero and its typical size is a fr PASS  signed median -0.001, absolute median 0.059, largest 41.08 channels over 13 readings
+  B8 and the same column in velocity agrees with the registration resi PASS  median |offset| 0.0375 km/s against a published 0.04 in the table and 0.06 as the residual
+
+4  the 3.9 per cent
+  B9 every published value of the four is reproduced by the repair rec PASS  worst difference 0.0e+00 over 4 rows against the deposited repair record
+  B10 and the value the audit found on disk is the PRE-REPAIR extracti PASS  the pre-repair export reproduces the surviving product to 4.9e-06 and differs from the published value by up to 0.2329
+  B11 the difference decomposes into the window noise and the recovere PASS  3.91 per cent in the statistic = 1.16 per cent in the noise and 2.72 per cent in the amplitude
+  B12 and the repair moved this window's control ensemble, which is wh PASS  largest control 10.854 before against 8.117 published
+  B15 and the window belongs to the compact array, which is where a co PASS  7m, 12 x 7 m and 0 x 12 m antennas
+
+5  the closest two sessions
+  B13 the closest two sessions to recover one transition are the two t PASS  25.13 d between sessions X6f1341 and X7116f1 on CO(2-1), against a published 25
+  B14 and both of those blocks are already in the recurrence table, so PASS  blocks A002_X6f1341_X1484, A002_X7116f1_X1785; the table pairs them at 25 d instead
+
+assertions failed: 0 []
+
+1  R1-1: where the 405 is named, is the 391 named with it
+  A1 the two subsets of the carrier search close on its own size, so PASS  391 + 14 == 405, and the catalogue holds 405 Class A windows
+  A2 every section that introduces the carrier search by its size al PASS  missing in: none (checked in 05_results.tex, 07_conclusions.tex, 03_sample.tex)
+
+2  R1-2: the calibration uncertainty and the transfer
+  A3 every individual Class A limit carries the SAME class factor -- PASS  smallest adopted/nominal ratio 3.028836 against the class factor 3.028749, largest 4.390 over 405 windows
+  A4 the published calibration interval is narrower than the measure PASS  calibration x0.89-1.11 against dispersion x0.80-1.58, the latter being the 49 windows' own range 2.41-4.80 over the adopted 3.03
+  A5 and that dispersion is the 49 measured points themselves, so no PASS  49 measured points spanning 2.41-4.80 P_trig against the published 2.41-4.80
+  A6 some configurations of the population hold no injected window a PASS  62 of 405 Class A windows in 12 such configurations; 8 systems, the deepest being HD 38858 Gaia DR3 3023711269067191296 at 1.26e+15 W
+  A7 the deepest limit in the survey is supported by injections in i PASS  deepest system lp 876-10 Gaia DR3 6623351805412369024 at 8.67e+13 W, band 7, 488 kHz channels; 13 injected window(s) in that configuration; extrapolated False
+  A13 the noun the extrapolated-system count governs is generated fr PASS  8 -> 'systems' / plural; typed noun beside the macro in: nowhere
+
+3  R1-3: the decorrelation behind each system's own best window
+  A8 a majority of the systems take their headline limit from a bloc PASS  measured 27, imputed 32, none 1 of 60 systems
+  A9 and the deepest limits are no better supported than the rest: o PASS  3 of the 10 deepest measured, 6 imputed, 1 with no estimate
+  A10 the pooled per-system median the text quotes lies between the  PASS  measured 4.1 per cent, imputed 3.0, pooled 3.0 against a published 3
+  A11 and Table F1 marks exactly those systems, so the reader can se PASS  32 starred rows against 32 imputed; 6 daggered against 6 injected
+  A12 the class of a star's own deepest window is the class of its c PASS  66 stars carrier-searched and 24 coarse-only, of 90
+
+assertions failed: 0 []
+ledgergate: tab_ledger.tex -- 51 data rows against 51 adopted crossings
+ledgergate: 0 FAIL
+fragstale: 11 generated fragments the manuscript inputs, 7 spine inputs
+fragstale: 0 FAIL
+included (9):
+    bpic_control.pdf
+    classa_sensitivity.pdf
+    completeness_map.pdf
+    coverage_r27.pdf
+    drift_acceleration.pdf
+    eirp_context_a.pdf
+    eirp_context_b.pdf
+    event_crossings.pdf
+    sens_ring.pdf
+orphaned (8):
+    appm_power.pdf                 appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge.
+    calib_cont.pdf                 calibration (calib_r15.py, round 530) 2026-10-08: built but not a figure of the paper; Ruling 3 asked for a coefficient and a sentence and Appendix B carries both.  It is not distributed anywhere -- see AUTHOR_ACTIONS.md item 1.
+    control_diagnostics.pdf        appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge.
+    ledger_vis_v403.pdf            appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge; already uncited before it.
+    rank_cdf.pdf                   appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge.
+    selection_bias.pdf             appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge; fig:selbias was already uncited before it.
+    sensitivity_2d.pdf             appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge; fig:sens2d was already uncited before it.
+    stratified_completeness.pdf    appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge.
+note: 3 .png sibling(s) in figures/ that LaTeX does not use: appm_power.png, calib_cont.png, ledger_vis_v403.png
+orphan table fragments: 49 not \input anywhere, of which 1 are generated AND carry a caption
+    tab_maskband_v411              mask (maskframe_v411.py, round 170) 2026-10-20, round 25: the band-by-band mask cost. Superseded as an article table by Table C1 (tab_maskspecies_v414.tex), which is the mask by species, and the article states the cost as a single pair of figures. KEPT because `cleanregen.py` lists it as a product of `maskframe_v411.py` and retiring a product mid-close is a build change, not a prose change. ITS CAPTION IS CORRECT AND DERIVED: it no longer names SO, and it now reads \FrMaskWorstBand and \FrMaskWorstPct, which were computed and cited by no sentence in the paper. TO DO: retire the fragment or give it a float.
+figorphan: 9 included, 8 pending, 0 unexpected orphans, 0 missing files
+labelcheck: 228 files, 62 labels, 53 distinct \ref targets, 24 floats/maths environments, 64 aux entries
+  note: F4 (not a failure) 9 unreferenced sectioning label(s); F4 fires only on floats, equations and appendices
+  note: F6 (unreferenced) sec:data is on a starred section
+labelcheck: 0 FAIL
+wordcase: 30 prose sources, 198 macro-layer files
+  W1  no lower-case macro value opens a sentence                   PASS  none
+  W2  the sweep found, and searched for, every such macro          PASS  165 lower-case-valued macros in the layer, 33 of them cited; not searched: none
+  W3  every prose source the manuscript inputs was read            PASS  30 prose sources swept, 198 macro-layer files read
+wordcase: 165 lower-case-valued macros, 33 cited, 0 FAIL
+citegate: 228 source files
+  G1   every bibitem is cited somewhere                               PASS  none
+  G2   every citation has a bibitem                                   PASS  none
+  G3   no key is declared twice                                       PASS  none
+  G4   the comparison was not vacuous                                 PASS  67 bibitems, 67 cited keys, 228 source files
+  G6   no two bibitems print the same label to the reader             PASS  67 printed labels, all distinct
+  G5   a citation only in a macro body lives in a used macro          PASS  1 cited only from the macro layer, each in a referenced macro: ALMAPropGuide (BudFluxSource)
+citegate: 67 bibitems, 67 cited keys, 0 FAIL
+retired: the superseded column is deposited as eirp_p90_superseded_rankgated_W; the old name eirp_p90_sel_W is indexed in 0 live line(s)
+retired: 2 generator(s) read the retired catalogue column eirp_p90_superseded_rankgated_W; 0 of them emit a macro the manuscript still cites
+retired: 6 generator-declared supersession(s): BudPlxWorstPct->SfPlxWorstPct, BudPlxWorstStar->SfPlxWorstStar, InjPeakAtNinety->RpMarginNinety, NClassAM->SfMClassAStars, NMCensus->SfMCensus, NMSearched->SfMSearched
+retired: 57 retired names, 51 of them aliased to a replacement, 0 uses in the manuscript
+requestsweep --selftest: PASS, 5 markers, boundary-matched both ways
+manuscript technosignatures_40pc_v4.29.tex: \inputs 198 macro file(s); 198 on disk
+ok   M1 no frozen pre-repair macro file is present (rounds 5-7, deleted at v4.01; 12 of their macros were typeset from an extraction two revisions old)
+     checked 3 name(s)
+ok   M2 every macro file on disk is one the manuscript \inputs -- adopted_e90._texval() reads anything else LAST, so it would override the published value
+     checked 198 file(s) on disk against 198 \input line(s)
+ok   M2b every macro file the manuscript \inputs exists on disk
+     checked 198 \input line(s)
+ok   M3 no drive artefact is present in the build root (Ruling 13: a _driveN round file silently overrode a published macro)
+     scanned 1021 entr(y|ies)
+ok   M4 the manuscript does \input at least one macro file (this gate is not measuring an empty set)
+     198 \input line(s)
+
+macrosource: 0 clause(s) failed
+V1   PASS 24 csv files parse, 9452 rows in total; no defects
+V2   PASS 24 tables described, 421 columns, order and names identical to the written headers; no defects
+V3   PASS windows 1663; Class A 405; Class B 1258; crossings 51; searched positions 90; primary-census blocks 407; count rows 29; Class A crossings by search_class 51; Class B crossings by search_class 0
+V4   PASS swept 36 files with the packaging gate own pattern plus a cross-reference clause; no mention of versions, edits, rounds, referees or corrections, and no reference into a numbered section, table or figure
+V5   PASS 49 crossings resolve to a window by containment, 2 lie in archival-tail blocks and say so, 49 flagged windows + 2 = 51 crossings, 9 rows where the two trigger readings differ, 1 crossing whose position the sample counts under another designation, 28 recurrence rows and 405 control rows all join on the documented four-field key (distinct keys/rows: spectral_windows 1663/1663, class_A_limits 405/405, class_B_limits 1258/1258, control_field_statistics 405/405); no defects
+      windows / A / B                                      published 1663 / 405 / 1258 rebuilt 1663 / 405 / 1258 ok
+      crossings / attributed / unattributed                published 51 / 23 / 28     rebuilt 51 / 23 / 28     ok
+      unattributed, quality-passing, in the window catalogue published 26               rebuilt 26               ok
+      the count compared with chance                       published 26               rebuilt 26               ok
+      Class A windows reaching the trigger                 published 36.5             rebuilt 36.4512          ok
+      chance expectation                                   published 23.8             rebuilt 23.8189          ok
+      its probability                                      published 0.36             rebuilt 0.3540           ok
+      added-population bound                               published 12               rebuilt 12 (12.26)       ok
+      per-system EIRP90 median                             published 1.8\times10^{15} rebuilt 1.769e+15        ok
+      per-system EIRP90 span                               published 8.7\times10^{13} - 4.0\times10^{16} rebuilt 8.671e+13 - 4.034e+16 ok
+V6   PASS 10 of 10 principal statistics rebuild from the deposited tables alone
+      NOT rebuildable from the deposit, and the README says so: the interval on the chance expectation (it folds in the resampling of the attributed share and the sub-trigger transfer band) and the per-window completeness of the directly injected windows (their spectra are not deposited).
+V7   PASS 4 reference implementations run their own known-answer tests and the two that check themselves against the deposited tables agree with them
+      search_statistic.py        rc=0  search_statistic: 6 known-answer tests pass
+                                       demo: amplitude 2.0 sigma per integration over 30 integrations
+                                             recovered T = 5.955 at channel 400, drift 0.400 channels/int
+                                             injected                channel 400, drift 0.370
+      control_positions.py       rc=0  control_positions: 9 known-answer tests pass, including that the check refuses a 7 m window described with a 12 m annulus
+                                       control_positions: 405 rows checked; 0 fault(s); 1 row(s) declared frozen-geometry on an annulus built for a different dish than their array:
+                                           A002_Xb9c01c_X2004 229.618873-231.459205 GHz
+      line_mask.py               rc=0  line_mask: 6 known-answer tests pass
+                                       line_mask: nu_star rebuilt from nu_topo, v_bary and v_sys on all 51 crossings, worst difference 0.8 kHz
+                                       line_mask: 51 deposited crossings carry a nearest masked transition; this rule names the same one on 51 of them, and reproduces the deposited offset to 0.0015 km/s
+                                       line_mask: the mask (111 of the 111 deposited transitions) attributes 23 crossings, and the deposited attributed flag is set on 23
+      injection_recovery.py      rc=0  injection_recovery: 8 known-answer tests pass
+                                       deposited trials: 4032 over 28 windows
+                                       amplitude (sigma)   recovered fraction   trials
+                                            3.0               0.241                448
+V8   PASS 36 files in 7 directories = 43 entries as `unzip -l` lists them, identical to the tree byte for byte, one timestamp over every member so the archive is reproducible; 495432 bytes, sha256 46b656647dd02fb40c7bfe1d3aa9464f529e462312bd3621db2972cbf2612e80
+      the line table distinguishes the mask from the article in_mask present  deposit present                  ok
+      mask bandwidth, archival union                 article 5.04             deposit 5.041                    ok
+      masked fraction of that union                  article 4.3              deposit 4.27                     ok
+      searched union                                 article 118.1            deposit 118.125                  ok
+      transitions in the mask                        article 111              deposit 111 by in_mask, 111 by i ok
+      species in the mask                            article 12               deposit 12                       ok
+      mask cost of the Class A union                 article 3.05             deposit 3.052                    ok
+      that cost as a percentage                      article 6.4              deposit 6.39                     ok
+      attributions / coincidences                    article 23 / 23          deposit 23 / 23                  ok
+      the step is deposited under one test name      article one              deposit sub-trigger step         ok
+      the adopted band                               article 4 - 5            deposit 4 - 5                    ok
+      the ratio over it                              article 1.108            deposit 1.108                    ok
+      the band is a pair of rungs of the deposited l article both present     deposit both present             ok
+      its cell counts, rebuilt from that ladder      article 1\,910 stellar   deposit 1910 / 13787             ok
+      and the ratio rebuilt from those counts        article 1.108            deposit 1.1083                   ok
+      the one sensitivity test: expected_with_step   article 26.4             deposit 26.4                     ok
+      the one sensitivity test: probability_with_ste article 0.55             deposit 0.55                     ok
+      the one sensitivity test: added_population_bou article 9                deposit 9                        ok
+      no superseded band survives                    article none             deposit 0 row(s)                 ok
+      Class A completeness multiplier                article 3.03             deposit 3.028748770              ok
+      its factorisation into response x margin       article 2.29 x 1.325     deposit 2.286 x 1.326            ok
+      injected windows: declared against deposited   article 49 injected      deposit 49 declared / 28 deposit ok
+V9   PASS 22 of 22 deposited quantities that also appear in the article agree with the macro the article prints them from
+V10  PASS 11 deposit paths cited by the article, 11 of them members of the zip
+
+ALL GATES PASS
+ok   C1 every shipped .py compiles
+     scanned 392 file(s); 0 failed
+ok   C2 the scan is not measuring an empty set
+     392 file(s) >= 100
+
+pycompile: 0 clause(s) failed
+requestsweep: 229 shipped .tex, 491212 characters, 0 open REQUEST/TODO/FIXME/XXX/PLEASE markers
+synmacro: 822 cited macros with a numeric value, 12 same-stem group(s) of two or more, 11 differing
+  declared  bsnwin                 \BsNWinA = 38; \BsNWinB = 374
+            reason: the same channelisation split over the BRIGHT STARS THE SAMPLE EXCLUDES -- the holding that would be admitted if the Gaia DR3 parallax requirement were dropped -- and not a second count of the searched windows: 38 fine and 374 coarse, in neither \NWinA nor \NWinB
+  declared  fracmax                \HoFracMax = 1.06; \RcFracMax = 0.997
+            reason: the largest fraction of the discovery amplitude the repeat coverage still excludes, in the reserved hold-out search against the primary census.  Two populations, and the difference is the point: every hold-out crossing is excluded at 0.47 of its amplitude or less, while in the census the individual limits run all the way to 1.00, which is why the census median is reported as a median and never as a bound on the set
+  declared  fracmed                \HoFracMed = 0.42; \RcFracMed = 0.39; \RfiFracMed = 0.5
+            reason: TWO DIFFERENT FRACTIONS OF TWO DIFFERENT THINGS, and only the word "frac" is shared.  RcFracMed is the median fraction of the DISCOVERY AMPLITUDE that the repeat coverage excludes, over the crossings that carry an exclusion.  RfiFracMed is the median fractional POSITION of a released peak inside its own spectral window, which is the fixed-intermediate-frequency test of the interference appendix and is 0.50 because the positions are uniform.  Neither is a bound and they are not the same quantity in any sense
+  declared  ninetymult             \EirpNinetyMultA = 3.03; \EirpNinetyMultB = 4.17
+            reason: the completeness multiplier measured separately per class, which is the whole point of measuring it per class
+  declared  nstar                  \HoNStar = 36; \SfNStar = 90
+            reason: stars reached by the reserved hold-out against stars in the searched sample.  The same distinction the (HoStars, NStars) entry above records, under the names the hold-out and selection-function generators publish: the two are disjoint in EXECUTION BLOCKS and not in stars, 27 of the 36 hold-out stars being census stars too, so neither is a subset of the other and the out-of-sample claim is about windows the pipeline had never seen and never about stars
+  declared  nwin                   \DqNWin = 5; \HoNWin = 315; \PbNWin = 1663
+            reason: windows flagged by the data-quality rule; the reserved hold-out's windows; and the windows of the primary-beam audit, which is the whole release -- three sets, three counts.  'ScrNWinA' and 'PxaNWin' left this group when Ruling 1 removed the screen cost from the paper and the parallax row from the budget
+  declared  sbpriornstar           \SbPriorNStarA = 40; \SbPriorNStarB = 17
+            reason: the star counts of the TWO PUBLISHED SEARCHES above 30 GHz, not of two classes of this one: Steffes & DeBoer's 40 solar-type stars within 23 pc and Mauersberger et al.'s 17 Vega-like and solar-type targets.  The A/B suffix here distinguishes two other people's papers, which is the one case where the class heuristic means something else
+  declared  stars                  \HoStars = 36; \NStars = 90
+            reason: stars reached by the reserved hold-out against stars in the primary census.  ★ The two are disjoint in EXECUTION BLOCKS and not in stars -- H4 proves no shared block, and 27 of the 36 hold-out stars are census stars -- so neither count is a subset of the other and the out-of-sample claim the paper makes is about windows the pipeline had never seen, never about unseen stars
+  declared  tmax                   \HoTMax = 8.64; \RcTMax = 4.71
+            reason: the largest stellar statistic reached in the hold-out against the largest reached at a predicted recurrence cell in the census: one is a search maximum over all windows, the other a single predicted channel, and they are not comparable numbers
+  declared  twhdexcl               \TwHDExclA = 11.8; \TwHDExclB = 12.7
+            reason: HD 14055's two crossings, events A and B, each excluded as a persistent carrier over its own covering epochs: two measurements at two frequencies, not two names for one quantity
+  declared  win                    \HoWin = 315; \NWinA = 405; \NWinB = 1258
+            reason: the window count split by channelisation class: A fine enough to resolve a drift, B not
+synmacro: 0 FAIL
+generators OK
+
+===== cleanregen pass 1 of 2 END rc=0 =====
+
+===== cleanregen pass 2 of 2 BEGIN =====
+manuscript technosignatures_40pc_v4.29.tex: \inputs 198 macro file(s); 198 on disk
+ok   M1 no frozen pre-repair macro file is present (rounds 5-7, deleted at v4.01; 12 of their macros were typeset from an extraction two revisions old)
+     checked 3 name(s)
+ok   M2 every macro file on disk is one the manuscript \inputs -- adopted_e90._texval() reads anything else LAST, so it would override the published value
+     checked 198 file(s) on disk against 198 \input line(s)
+---  M2b skipped: --pre (a clean tree has no macro file yet)
+ok   M3 no drive artefact is present in the build root (Ruling 13: a _driveN round file silently overrode a published macro)
+     scanned 1021 entr(y|ies)
+ok   M4 the manuscript does \input at least one macro file (this gate is not measuring an empty set)
+     198 \input line(s)
+
+macrosource: 0 clause(s) failed
+stackprov_r27 --check (drive 0)
+  P1 every window of the inventory has exactly one product chosen by a provenance rule or a declared winner (an undeclared tie, a stale declaration or a census window off its own ring stops the build) PASS  2739 windows
+  P2 the stack's windows read only provenance winners                            PASS  0 of 2739 windows are not winners
+  P3 no window identity appears twice in the stack's windows (one observation, one product) PASS  max 1
+  P4 every group path is a winner, and no identity enters two groups             PASS  2306 group-paths, 2306 distinct, 2306 identities
+  P5 every census window the stack can read is on its own dish's ring, except the declared ones whose repaired product does not exist PASS  0 off-ring undeclared, 7 declared
+  P6 where a census window has more than one product and the published row identifies one of them, the winner is that one PASS  0 not; 13 of 353 windows where no product carries a matching result (A002_X74c92c_X6d5, A002_X74c92c_X6d5, A002_X74c92c_X6d5, A002_X74c92c_X6d5, A002_Xd98580_X3bf6, A002_Xe48598_Xff51, A002_Xe48598_Xff51, A002_Xe48598_Xff51, A002_Xe48598_Xff51, A002_Xf5d76d_X32f1, A002_Xf5d76d_X32f1, A002_Xf5d76d_X32f1, A002_Xf5d76d_X32f1)
+  P7 every excluded (bad-weight) product is named by its winner, so the exclusion still applies PASS  27 of 27
+  P11 groups.py's frame arithmetic, re-done here from the NAME lookup, reproduces every deposited frame exactly (so the identity frame below differs from it only in which velocity is attached) PASS  2739 windows
+  P9 the frozen windows are exactly the deposited windows with each identity's product replaced by its winner, framed by STELLAR IDENTITY (row 61); nothing else differs PASS  2739 windows
+  P12 every frozen window carries the velocity of the star it IS (position at its epoch + parallax), and none lacks one its identity has PASS  {'with v_sys': 785, 'without v_sys': 1894, 'framed by identity, name key had none': 60}
+  P13 stack_v408/frame_r61.json lists exactly the windows framed by identity whose name key had no velocity PASS  60 windows
+  P10 the frozen groups are exactly groups3.build() on those windows             PASS  370 groups
+  P8 the windows left on pre-repair products are hold-out / extension / control windows only (Ruling 25), and are counted PASS  {'oos': 29, 'holdout': 229, 'extension': 340}
+stackprov_r27: 0 FAIL
+  stackprov_r27: window A002_Xcf749a_X4871|346897585|348881960|81.079889|-16.021030: 2 products and no provenance rule separates them, and no declared winner: ['/data/SETI/targets/2MASS_J05241914-1601153_551040_B7/products/A002_Xcf749a_X4871_spw0_srcspec.npz', '/data/SETI/targets/DRIVE1_COPY_2MASS_J05241914-1601153_551040_B7/products/A002_Xcf749a_X4871_spw0_srcspec.npz']
+  stackprov_r27: 1 declaration(s) decide nothing (stale): ['A002_Xdrive_X2|1|2|0.000000|0.000000']
+  stackprov_r27: census window A002_X1001fdc_X2085|330304996|332304507|34.328959|33.846863 (7m block) has no product on its own dish's ring: ['/data/SETI/targets/HD14055_B7/products/A002_X1001fdc_X2085_spw0_srcspec.npz']
+prodident: 701 record(s) naming a product; 445 under the released tree and in the catalogue, 441 of those reproducing its published statistic; 4 under the re-extraction tree, which must not; 683 reached under a per-block stem
+prodident: 94 hold-out / beyond-40 pc window record(s) checked against the hold-out exports (P2h), 94 reproducing them
+prodident: 393 of those under the re-flag trees (catalogue, or the field-truncation record for a field-repaired window)
+prodident: 3 window(s) named by a record and absent from the deposited catalogue (the declared archival tail): [('A002_X1190de8_Xd526', 3), ('A002_X11adad7_X25c5e', 3), ('A002_Xc6b674_X28f5', 0)]
+prodident: 0 FAIL
+  J1 the channel response used here is the one the 400 retained response trials measure PASS  largest deviation 0.0030 over fractional offsets 0.000, 0.125, 0.250, 0.375, 0.500
+  J2 the crossings measured are the ledger's own rank-leading pair, in the order the rest of the paper prints them PASS  ['U02', 'A01'] at ['346.3232', '344.2965'] against ['346.3232', '344.2965']
+  J3 U02: the retained repeat rows are the frozen record's own blocks, keyed on the execution block PASS  3 retained, 3 in the record, 3 published
+  J4 U02: the modelled recovery probability reproduced here is the one the paper prints for this crossing PASS  computed 0.9992 against published 1.00
+
+U02 61 Vir  3 repeat blocks  T*=5.947  T_pers=9.694  trigger-amplitude T=8.151
+   modelled                0.999
+   carrier centred         1.000 +- 0.000
+   sub-channel phase       1.000 +- 0.000
+   no carrier              0.0000
+   the band's own null     +0.139 +- 0.864 over 92 cells
+   de-drift: half a step of 70.9 Hz/s over a 3430 s dwell takes T 3.93 to 3.94 (1.001)
+  J3 A01: the retained repeat rows are the frozen record's own blocks, keyed on the execution block PASS  5 retained, 5 in the record, 5 published
+  J4 A01: the modelled recovery probability reproduced here is the one the paper prints for this crossing PASS  computed 0.6616 against published 0.66
+
+A01 CP$-$72 2713  5 repeat blocks  T*=5.809  T_pers=6.293  trigger-amplitude T=5.417
+   modelled                0.662
+   carrier centred         0.701 +- 0.014
+   sub-channel phase       0.654 +- 0.015
+   no carrier              0.0000
+   the band's own null     +0.108 +- 1.009 over 66 cells
+   de-drift: half a step of 64.7 Hz/s over a 3745 s dwell takes T 3.98 to 3.96 (0.996)
+  J5 the measured recovery agrees with the model it tests, for both crossings and with the carrier centred or at a random sub-channel position PASS  largest departure 2.72 binomial errors; 61 Vir 1.000+-0.000 and 1.000+-0.000 against 0.999; CP$-$72 2713 0.701+-0.014 and 0.654+-0.015 against 0.662
+  J6 the same reading confirms nothing when the carrier is removed PASS  0 of 2000 carrier-free readings reach the trigger
+  J7 half a step of error in the carried drift costs little inside one block, which is what a grid stepping by half a channel across the dwell is for PASS  the statistic keeps 0.996 of its value at worst, over grids of 70.9, 64.7 Hz/s
+  J8 every retained per-integration product is measured here, and the crossings with nothing to inject into are the rest of those carrying an exclusion PASS  retained ['A01', 'U02']; measured ['A01', 'U02']; 27 of 28 carry an exclusion with nothing to inject into
+
+13 macros -> survey_numbers_round750.tex
+all checks pass
+
+1  the blocks with no phase-stability record
+  B1 the published median longest baseline of the unrecorded blocks is PASS  278.8 m over 125 of 128 unrecorded against a published 279; 46.0 m over 279 recorded against 46
+  B2 the set is bimodal and the published median is a property of the  PASS  modes at 44 m (n=58) and 456 m (n=67), nothing between 49 and 271 m; 5 blocks of mix move the median from 279 m to below 271 m
+  B3 the real difference is the share of 12 m blocks, and within each  PASS  12 m share 54 per cent against 26; 7 m medians 44/44 m; 12 m medians 456/448 m
+  B4 and the archive-derived baselines use a conversion the blocks mea PASS  k = 1.257 over 23 measured against 1.220 assumed on 116 derived
+
+2  the median of a window's own control ensemble
+  B5 the two published values are the same quantity over two different PASS  2.7461 over 1581 rows carrying ctrl_med (published 2.75) against 2.7409 over 1663 windows with a stored ensemble (published 2.74, and 2.74 as the survey median of the quality rule); the results section cites the row field
+  B6 and the value to keep is the one the quality rule itself uses, wh PASS  1663 windows in the owner against 1663 in the census and 1581 carrying ctrl_med
+
+3  the predicted-cell offset
+  B7 the offset column is centred on zero and its typical size is a fr PASS  signed median -0.001, absolute median 0.059, largest 41.08 channels over 13 readings
+  B8 and the same column in velocity agrees with the registration resi PASS  median |offset| 0.0375 km/s against a published 0.04 in the table and 0.06 as the residual
+
+4  the 3.9 per cent
+  B9 every published value of the four is reproduced by the repair rec PASS  worst difference 0.0e+00 over 4 rows against the deposited repair record
+  B10 and the value the audit found on disk is the PRE-REPAIR extracti PASS  the pre-repair export reproduces the surviving product to 4.9e-06 and differs from the published value by up to 0.2329
+  B11 the difference decomposes into the window noise and the recovere PASS  3.91 per cent in the statistic = 1.16 per cent in the noise and 2.72 per cent in the amplitude
+  B12 and the repair moved this window's control ensemble, which is wh PASS  largest control 10.854 before against 8.117 published
+  B15 and the window belongs to the compact array, which is where a co PASS  7m, 12 x 7 m and 0 x 12 m antennas
+
+5  the closest two sessions
+  B13 the closest two sessions to recover one transition are the two t PASS  25.13 d between sessions X6f1341 and X7116f1 on CO(2-1), against a published 25
+  B14 and both of those blocks are already in the recurrence table, so PASS  blocks A002_X6f1341_X1484, A002_X7116f1_X1785; the table pairs them at 25 d instead
+
+assertions failed: 0 []
+
+1  R1-1: where the 405 is named, is the 391 named with it
+  A1 the two subsets of the carrier search close on its own size, so PASS  391 + 14 == 405, and the catalogue holds 405 Class A windows
+  A2 every section that introduces the carrier search by its size al PASS  missing in: none (checked in 05_results.tex, 07_conclusions.tex, 03_sample.tex)
+
+2  R1-2: the calibration uncertainty and the transfer
+  A3 every individual Class A limit carries the SAME class factor -- PASS  smallest adopted/nominal ratio 3.028836 against the class factor 3.028749, largest 4.390 over 405 windows
+  A4 the published calibration interval is narrower than the measure PASS  calibration x0.89-1.11 against dispersion x0.80-1.58, the latter being the 49 windows' own range 2.41-4.80 over the adopted 3.03
+  A5 and that dispersion is the 49 measured points themselves, so no PASS  49 measured points spanning 2.41-4.80 P_trig against the published 2.41-4.80
+  A6 some configurations of the population hold no injected window a PASS  62 of 405 Class A windows in 12 such configurations; 8 systems, the deepest being HD 38858 Gaia DR3 3023711269067191296 at 1.26e+15 W
+  A7 the deepest limit in the survey is supported by injections in i PASS  deepest system lp 876-10 Gaia DR3 6623351805412369024 at 8.67e+13 W, band 7, 488 kHz channels; 13 injected window(s) in that configuration; extrapolated False
+  A13 the noun the extrapolated-system count governs is generated fr PASS  8 -> 'systems' / plural; typed noun beside the macro in: nowhere
+
+3  R1-3: the decorrelation behind each system's own best window
+  A8 a majority of the systems take their headline limit from a bloc PASS  measured 27, imputed 32, none 1 of 60 systems
+  A9 and the deepest limits are no better supported than the rest: o PASS  3 of the 10 deepest measured, 6 imputed, 1 with no estimate
+  A10 the pooled per-system median the text quotes lies between the  PASS  measured 4.1 per cent, imputed 3.0, pooled 3.0 against a published 3
+  A11 and Table F1 marks exactly those systems, so the reader can se PASS  32 starred rows against 32 imputed; 6 daggered against 6 injected
+  A12 the class of a star's own deepest window is the class of its c PASS  66 stars carrier-searched and 24 coarse-only, of 90
+
+assertions failed: 0 []
+ledgergate: tab_ledger.tex -- 51 data rows against 51 adopted crossings
+ledgergate: 0 FAIL
+fragstale: 11 generated fragments the manuscript inputs, 7 spine inputs
+fragstale: 0 FAIL
+included (9):
+    bpic_control.pdf
+    classa_sensitivity.pdf
+    completeness_map.pdf
+    coverage_r27.pdf
+    drift_acceleration.pdf
+    eirp_context_a.pdf
+    eirp_context_b.pdf
+    event_crossings.pdf
+    sens_ring.pdf
+orphaned (8):
+    appm_power.pdf                 appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge.
+    calib_cont.pdf                 calibration (calib_r15.py, round 530) 2026-10-08: built but not a figure of the paper; Ruling 3 asked for a coefficient and a sentence and Appendix B carries both.  It is not distributed anywhere -- see AUTHOR_ACTIONS.md item 1.
+    control_diagnostics.pdf        appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge.
+    ledger_vis_v403.pdf            appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge; already uncited before it.
+    rank_cdf.pdf                   appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge.
+    selection_bias.pdf             appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge; fig:selbias was already uncited before it.
+    sensitivity_2d.pdf             appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge; fig:sens2d was already uncited before it.
+    stratified_completeness.pdf    appendix-triage              2026-10-04 08:4x: orphaned by the appendix purge.
+note: 3 .png sibling(s) in figures/ that LaTeX does not use: appm_power.png, calib_cont.png, ledger_vis_v403.png
+orphan table fragments: 49 not \input anywhere, of which 1 are generated AND carry a caption
+    tab_maskband_v411              mask (maskframe_v411.py, round 170) 2026-10-20, round 25: the band-by-band mask cost. Superseded as an article table by Table C1 (tab_maskspecies_v414.tex), which is the mask by species, and the article states the cost as a single pair of figures. KEPT because `cleanregen.py` lists it as a product of `maskframe_v411.py` and retiring a product mid-close is a build change, not a prose change. ITS CAPTION IS CORRECT AND DERIVED: it no longer names SO, and it now reads \FrMaskWorstBand and \FrMaskWorstPct, which were computed and cited by no sentence in the paper. TO DO: retire the fragment or give it a float.
+figorphan: 9 included, 8 pending, 0 unexpected orphans, 0 missing files
+labelcheck: 229 files, 62 labels, 53 distinct \ref targets, 24 floats/maths environments, 64 aux entries
+  note: F4 (not a failure) 9 unreferenced sectioning label(s); F4 fires only on floats, equations and appendices
+  note: F6 (unreferenced) sec:data is on a starred section
+labelcheck: 0 FAIL
+wordcase: 30 prose sources, 199 macro-layer files
+  W1  no lower-case macro value opens a sentence                   PASS  none
+  W2  the sweep found, and searched for, every such macro          PASS  165 lower-case-valued macros in the layer, 33 of them cited; not searched: none
+  W3  every prose source the manuscript inputs was read            PASS  30 prose sources swept, 199 macro-layer files read
+wordcase: 165 lower-case-valued macros, 33 cited, 0 FAIL
+citegate: 229 source files
+  G1   every bibitem is cited somewhere                               PASS  none
+  G2   every citation has a bibitem                                   PASS  none
+  G3   no key is declared twice                                       PASS  none
+  G4   the comparison was not vacuous                                 PASS  67 bibitems, 67 cited keys, 229 source files
+  G6   no two bibitems print the same label to the reader             PASS  67 printed labels, all distinct
+  G5   a citation only in a macro body lives in a used macro          PASS  1 cited only from the macro layer, each in a referenced macro: ALMAPropGuide (BudFluxSource)
+citegate: 67 bibitems, 67 cited keys, 0 FAIL
+retired: the superseded column is deposited as eirp_p90_superseded_rankgated_W; the old name eirp_p90_sel_W is indexed in 0 live line(s)
+retired: 2 generator(s) read the retired catalogue column eirp_p90_superseded_rankgated_W; 0 of them emit a macro the manuscript still cites
+retired: 6 generator-declared supersession(s): BudPlxWorstPct->SfPlxWorstPct, BudPlxWorstStar->SfPlxWorstStar, InjPeakAtNinety->RpMarginNinety, NClassAM->SfMClassAStars, NMCensus->SfMCensus, NMSearched->SfMSearched
+retired: 57 retired names, 51 of them aliased to a replacement, 0 uses in the manuscript
+requestsweep --selftest: PASS, 5 markers, boundary-matched both ways
+manuscript technosignatures_40pc_v4.29.tex: \inputs 198 macro file(s); 198 on disk
+ok   M1 no frozen pre-repair macro file is present (rounds 5-7, deleted at v4.01; 12 of their macros were typeset from an extraction two revisions old)
+     checked 3 name(s)
+ok   M2 every macro file on disk is one the manuscript \inputs -- adopted_e90._texval() reads anything else LAST, so it would override the published value
+     checked 198 file(s) on disk against 198 \input line(s)
+ok   M2b every macro file the manuscript \inputs exists on disk
+     checked 198 \input line(s)
+ok   M3 no drive artefact is present in the build root (Ruling 13: a _driveN round file silently overrode a published macro)
+     scanned 1021 entr(y|ies)
+ok   M4 the manuscript does \input at least one macro file (this gate is not measuring an empty set)
+     198 \input line(s)
+
+macrosource: 0 clause(s) failed
+V1   PASS 24 csv files parse, 9452 rows in total; no defects
+V2   PASS 24 tables described, 421 columns, order and names identical to the written headers; no defects
+V3   PASS windows 1663; Class A 405; Class B 1258; crossings 51; searched positions 90; primary-census blocks 407; count rows 29; Class A crossings by search_class 51; Class B crossings by search_class 0
+V4   PASS swept 36 files with the packaging gate own pattern plus a cross-reference clause; no mention of versions, edits, rounds, referees or corrections, and no reference into a numbered section, table or figure
+V5   PASS 49 crossings resolve to a window by containment, 2 lie in archival-tail blocks and say so, 49 flagged windows + 2 = 51 crossings, 9 rows where the two trigger readings differ, 1 crossing whose position the sample counts under another designation, 28 recurrence rows and 405 control rows all join on the documented four-field key (distinct keys/rows: spectral_windows 1663/1663, class_A_limits 405/405, class_B_limits 1258/1258, control_field_statistics 405/405); no defects
+      windows / A / B                                      published 1663 / 405 / 1258 rebuilt 1663 / 405 / 1258 ok
+      crossings / attributed / unattributed                published 51 / 23 / 28     rebuilt 51 / 23 / 28     ok
+      unattributed, quality-passing, in the window catalogue published 26               rebuilt 26               ok
+      the count compared with chance                       published 26               rebuilt 26               ok
+      Class A windows reaching the trigger                 published 36.5             rebuilt 36.4512          ok
+      chance expectation                                   published 23.8             rebuilt 23.8189          ok
+      its probability                                      published 0.36             rebuilt 0.3540           ok
+      added-population bound                               published 12               rebuilt 12 (12.26)       ok
+      per-system EIRP90 median                             published 1.8\times10^{15} rebuilt 1.769e+15        ok
+      per-system EIRP90 span                               published 8.7\times10^{13} - 4.0\times10^{16} rebuilt 8.671e+13 - 4.034e+16 ok
+V6   PASS 10 of 10 principal statistics rebuild from the deposited tables alone
+      NOT rebuildable from the deposit, and the README says so: the interval on the chance expectation (it folds in the resampling of the attributed share and the sub-trigger transfer band) and the per-window completeness of the directly injected windows (their spectra are not deposited).
+V7   PASS 4 reference implementations run their own known-answer tests and the two that check themselves against the deposited tables agree with them
+      search_statistic.py        rc=0  search_statistic: 6 known-answer tests pass
+                                       demo: amplitude 2.0 sigma per integration over 30 integrations
+                                             recovered T = 5.955 at channel 400, drift 0.400 channels/int
+                                             injected                channel 400, drift 0.370
+      control_positions.py       rc=0  control_positions: 9 known-answer tests pass, including that the check refuses a 7 m window described with a 12 m annulus
+                                       control_positions: 405 rows checked; 0 fault(s); 1 row(s) declared frozen-geometry on an annulus built for a different dish than their array:
+                                           A002_Xb9c01c_X2004 229.618873-231.459205 GHz
+      line_mask.py               rc=0  line_mask: 6 known-answer tests pass
+                                       line_mask: nu_star rebuilt from nu_topo, v_bary and v_sys on all 51 crossings, worst difference 0.8 kHz
+                                       line_mask: 51 deposited crossings carry a nearest masked transition; this rule names the same one on 51 of them, and reproduces the deposited offset to 0.0015 km/s
+                                       line_mask: the mask (111 of the 111 deposited transitions) attributes 23 crossings, and the deposited attributed flag is set on 23
+      injection_recovery.py      rc=0  injection_recovery: 8 known-answer tests pass
+                                       deposited trials: 4032 over 28 windows
+                                       amplitude (sigma)   recovered fraction   trials
+                                            3.0               0.241                448
+V8   PASS 36 files in 7 directories = 43 entries as `unzip -l` lists them, identical to the tree byte for byte, one timestamp over every member so the archive is reproducible; 495432 bytes, sha256 46b656647dd02fb40c7bfe1d3aa9464f529e462312bd3621db2972cbf2612e80
+      the line table distinguishes the mask from the article in_mask present  deposit present                  ok
+      mask bandwidth, archival union                 article 5.04             deposit 5.041                    ok
+      masked fraction of that union                  article 4.3              deposit 4.27                     ok
+      searched union                                 article 118.1            deposit 118.125                  ok
+      transitions in the mask                        article 111              deposit 111 by in_mask, 111 by i ok
+      species in the mask                            article 12               deposit 12                       ok
+      mask cost of the Class A union                 article 3.05             deposit 3.052                    ok
+      that cost as a percentage                      article 6.4              deposit 6.39                     ok
+      attributions / coincidences                    article 23 / 23          deposit 23 / 23                  ok
+      the step is deposited under one test name      article one              deposit sub-trigger step         ok
+      the adopted band                               article 4 - 5            deposit 4 - 5                    ok
+      the ratio over it                              article 1.108            deposit 1.108                    ok
+      the band is a pair of rungs of the deposited l article both present     deposit both present             ok
+      its cell counts, rebuilt from that ladder      article 1\,910 stellar   deposit 1910 / 13787             ok
+      and the ratio rebuilt from those counts        article 1.108            deposit 1.1083                   ok
+      the one sensitivity test: expected_with_step   article 26.4             deposit 26.4                     ok
+      the one sensitivity test: probability_with_ste article 0.55             deposit 0.55                     ok
+      the one sensitivity test: added_population_bou article 9                deposit 9                        ok
+      no superseded band survives                    article none             deposit 0 row(s)                 ok
+      Class A completeness multiplier                article 3.03             deposit 3.028748770              ok
+      its factorisation into response x margin       article 2.29 x 1.325     deposit 2.286 x 1.326            ok
+      injected windows: declared against deposited   article 49 injected      deposit 49 declared / 28 deposit ok
+V9   PASS 22 of 22 deposited quantities that also appear in the article agree with the macro the article prints them from
+V10  PASS 11 deposit paths cited by the article, 11 of them members of the zip
+
+ALL GATES PASS
+ok   C1 every shipped .py compiles
+     scanned 392 file(s); 0 failed
+ok   C2 the scan is not measuring an empty set
+     392 file(s) >= 100
+
+pycompile: 0 clause(s) failed
+requestsweep: 229 shipped .tex, 491243 characters, 0 open REQUEST/TODO/FIXME/XXX/PLEASE markers
+synmacro: 822 cited macros with a numeric value, 12 same-stem group(s) of two or more, 11 differing
+  declared  bsnwin                 \BsNWinA = 38; \BsNWinB = 374
+            reason: the same channelisation split over the BRIGHT STARS THE SAMPLE EXCLUDES -- the holding that would be admitted if the Gaia DR3 parallax requirement were dropped -- and not a second count of the searched windows: 38 fine and 374 coarse, in neither \NWinA nor \NWinB
+  declared  fracmax                \HoFracMax = 1.06; \RcFracMax = 0.997
+            reason: the largest fraction of the discovery amplitude the repeat coverage still excludes, in the reserved hold-out search against the primary census.  Two populations, and the difference is the point: every hold-out crossing is excluded at 0.47 of its amplitude or less, while in the census the individual limits run all the way to 1.00, which is why the census median is reported as a median and never as a bound on the set
+  declared  fracmed                \HoFracMed = 0.42; \RcFracMed = 0.39; \RfiFracMed = 0.5
+            reason: TWO DIFFERENT FRACTIONS OF TWO DIFFERENT THINGS, and only the word "frac" is shared.  RcFracMed is the median fraction of the DISCOVERY AMPLITUDE that the repeat coverage excludes, over the crossings that carry an exclusion.  RfiFracMed is the median fractional POSITION of a released peak inside its own spectral window, which is the fixed-intermediate-frequency test of the interference appendix and is 0.50 because the positions are uniform.  Neither is a bound and they are not the same quantity in any sense
+  declared  ninetymult             \EirpNinetyMultA = 3.03; \EirpNinetyMultB = 4.17
+            reason: the completeness multiplier measured separately per class, which is the whole point of measuring it per class
+  declared  nstar                  \HoNStar = 36; \SfNStar = 90
+            reason: stars reached by the reserved hold-out against stars in the searched sample.  The same distinction the (HoStars, NStars) entry above records, under the names the hold-out and selection-function generators publish: the two are disjoint in EXECUTION BLOCKS and not in stars, 27 of the 36 hold-out stars being census stars too, so neither is a subset of the other and the out-of-sample claim is about windows the pipeline had never seen and never about stars
+  declared  nwin                   \DqNWin = 5; \HoNWin = 315; \PbNWin = 1663
+            reason: windows flagged by the data-quality rule; the reserved hold-out's windows; and the windows of the primary-beam audit, which is the whole release -- three sets, three counts.  'ScrNWinA' and 'PxaNWin' left this group when Ruling 1 removed the screen cost from the paper and the parallax row from the budget
+  declared  sbpriornstar           \SbPriorNStarA = 40; \SbPriorNStarB = 17
+            reason: the star counts of the TWO PUBLISHED SEARCHES above 30 GHz, not of two classes of this one: Steffes & DeBoer's 40 solar-type stars within 23 pc and Mauersberger et al.'s 17 Vega-like and solar-type targets.  The A/B suffix here distinguishes two other people's papers, which is the one case where the class heuristic means something else
+  declared  stars                  \HoStars = 36; \NStars = 90
+            reason: stars reached by the reserved hold-out against stars in the primary census.  ★ The two are disjoint in EXECUTION BLOCKS and not in stars -- H4 proves no shared block, and 27 of the 36 hold-out stars are census stars -- so neither count is a subset of the other and the out-of-sample claim the paper makes is about windows the pipeline had never seen, never about unseen stars
+  declared  tmax                   \HoTMax = 8.64; \RcTMax = 4.71
+            reason: the largest stellar statistic reached in the hold-out against the largest reached at a predicted recurrence cell in the census: one is a search maximum over all windows, the other a single predicted channel, and they are not comparable numbers
+  declared  twhdexcl               \TwHDExclA = 11.8; \TwHDExclB = 12.7
+            reason: HD 14055's two crossings, events A and B, each excluded as a persistent carrier over its own covering epochs: two measurements at two frequencies, not two names for one quantity
+  declared  win                    \HoWin = 315; \NWinA = 405; \NWinB = 1258
+            reason: the window count split by channelisation class: A fine enough to resolve a drift, B not
+synmacro: 0 FAIL
+generators OK
+
+===== cleanregen pass 2 of 2 END rc=0 =====

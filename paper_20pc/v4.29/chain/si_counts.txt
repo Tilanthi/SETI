@@ -1,0 +1,41 @@
+# The master count table of the ALMA 40 pc technosignature search: one row per published count.
+# Accompanies the arXiv submission as an ancillary file (anc/).  Tab-separated; the rows are the table's own.
+# The article prints the 18 accounting rows; this file carries all 29, itemisation included.
+#
+# Columns:
+#   1  row              the row number, as in the master count table of the article
+#   2  count            what is counted
+#   3  value            the published value
+#   4  what_it_counts   the note the table carries, in plain text
+#   5  in_article       1 where the article prints this row, 0 where the row is in this file only
+#
+row	count	value	what_it_counts	in_article
+1	Threshold crossings at T* >= 5	51	rows 1.1 and 1.2	1
+1.1	in the primary census	49	rows 1.1.1 and 1.1.2	1
+1.1.1	Class A, fine channels	49	the carrier experiment	1
+1.1.2	Class B, coarse channels	0	the released catalogue's 4, all in the one block that fails the quality criterion, fall below the trigger on recalibration	1
+1.2	in the archival tail	2	both unattributed, toward HD 14055, in windows no expectation covers (the table cited in the paper)	1
+2	Quality-passing crossings of the census	49	the same rows as 1.1.1	1
+2.1	attributed to a transition	23	of 23 coincidences inside the mask in the star's own frame; rows 2.1.1 and 2.1.2	1
+2.1.1	with evidence beyond the coincidence	16	recurrence at the predicted cell, a second transition of the same species, or catalogued gas on the sightline	1
+2.1.2	on the frequency coincidence alone	7	eta Crv, CD-57 1054, CP-72 2713, HD 161868, HIP 10679 and HR 1010: consistent with molecular emission, not identified as it	1
+2.2	unattributed	26	rows 2.2.1 and 2.2.2	1
+2.2.1	in the primary census	26	against 23.8 expected by chance at the 405 windows' own control positions -- a count chance delivers with probability 0.36	1
+2.2.2	coincident with an atmospheric transition	0	within 62.5 MHz of one in the topocentric frame (the atmospheric screen), and counted as atmospheric on both sides of that comparison	1
+2.2.3	recovered in a later block	0	no confirmed signal; 13 attributed ones do	1
+2.2.4	above all 512 controls	1	the two events of Table 5	0
+2.3	All unattributed crossings, both quality classes	28	rows 2.2, 1.1.2 and 1.2 together, every crossing of the failing block being unattributed: the population the recurrence test and the interference screens of the atmospheric screen are formed over	0
+2.3.1	whose predicted cell was read	28	the remaining 0 was not read at its repeat epochs, so no amplitude could be carried to a repeat epoch for it	0
+2.3.2	carrying an amplitude bound	28	row 2.3.1 less the 0 of row 1.1.2, whose discovery amplitude comes from the block that fails the quality criterion	0
+2.3.3	a catalogued window of a later block covers	28	the set the drift-pair accounting of the data archive is formed over; 0 is covered by no catalogued window at all	0
+2.3.4	in a block the per-window catalogue describes	26	the image-sideband population of the table cited in the paper; the 2 of row 1.2 lie outside it	0
+2.3.5	with both an amplitude bound and a catalogued covering window	28	rows 2.3.2 and 2.3.3 together, the set the section cited in the paper sets against the orbital excursion	0
+2.4	Unattributed crossings of the census and the reserved hold-out in a searched window	30	row 2.3.4 with the 4 of the section cited in the paper: the population of the sky-frequency occupancy test of the atmospheric screen	0
+3	Class A systems	61	of 83 surveyed; rows 3.1 and 3.2	1
+3.1	with same-frequency coverage in a separated session	40	the only confirmation count quoted: a later block in another session, among the census and the repeat blocks the recurrence test reads, covering a frequency the first covered; 13 of them over a year later. For an accelerating carrier, confirmation further requires the repeat to fall at a matching orbital phase	1
+3.2	with no separated second block at a covered frequency	21	confirmation impossible over the 142 blocks the recurrence test reads; 36 of all 83	1
+3.2.1	counting census blocks alone	23	the two systems the archive retests outside the census are the difference	0
+3.3	observed again more than 1 day later	40	over the census blocks, at any frequency and whatever the session, so not a confirmation count; rows 3.3 and 3.4 split row 3 a second way	0
+3.4	observed once, or all within one day	21	over the census blocks: 18 in a single block, 3 within a day	0
+4	Class A union bandwidth	47.7 GHz	26 disjoint islands	1
+4.1	removed by the line mask	6.4 %	3.05 GHz: the figure the text quotes, against 4.3 per cent of the 118.1 GHz archival union	1

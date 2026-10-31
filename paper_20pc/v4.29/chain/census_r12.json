@@ -1,0 +1,44 @@
+{
+ "census": {
+  "attributed": 23,
+  "rank_leading": 1,
+  "unattributed": 28
+ },
+ "disagreements": [],
+ "failblock": "A002_Xc7fa6f_X28a8",
+ "flagged": 0,
+ "flagged_split": {
+  "attributed": 0,
+  "rank_leading": 0,
+  "unattributed": 0
+ },
+ "ledger_summary": {
+  "delta": {
+   "added": 4,
+   "fell": 7,
+   "released": 54
+  },
+  "epoch_conventions": 1,
+  "frame": "stellar",
+  "generator": "ledger_v410.py",
+  "mask_half_kms": 50.0,
+  "n_attributed": 23,
+  "n_crossings": 51,
+  "n_rank_flagged_unattributed": 1,
+  "n_unattributed": 28
+ },
+ "macros_compared": 34,
+ "occupancy": {
+  "band_average_pct": 4.3,
+  "n_crossings_with_frequency": 53,
+  "n_expected_in_window": 5.8,
+  "per_window_pct": 10.943396226415095
+ },
+ "quality_passing": 51,
+ "quality_passing_split": {
+  "attributed": 23,
+  "rank_leading": 1,
+  "unattributed": 28
+ },
+ "raw": 51
+}

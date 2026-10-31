@@ -1,0 +1,57 @@
+{
+ "_doc": "Table 7 rows moved to the deposit (r27, R2-D7); each value is the cell the article printed through v4.27.",
+ "rows": {
+  "\\quad as delivered, topocentric": {
+   "61 Vir": "346.313811",
+   "CP$-$72 2713": "344.269746"
+  },
+  "\\quad of them in the primary census": {
+   "61 Vir": "3",
+   "CP$-$72 2713": "1"
+  },
+  "\\quad further census repeats, no spectrum": {
+   "61 Vir": "1",
+   "CP$-$72 2713": "0"
+  },
+  "\\quad covering epochs more than a day away": {
+   "61 Vir": "2",
+   "CP$-$72 2713": "4"
+  },
+  "Longest baseline (d)": {
+   "61 Vir": "3",
+   "CP$-$72 2713": "2"
+  },
+  "\\quad largest single epoch": {
+   "61 Vir": "$+1.54$",
+   "CP$-$72 2713": "$+0.34$"
+  },
+  "\\quad maximised over every drift": {
+   "61 Vir": "2.70",
+   "CP$-$72 2713": "3.60"
+  },
+  "Nearest block alone, $T_{\\rm pers}$": {
+   "61 Vir": "5.27",
+   "CP$-$72 2713": "6.21"
+  },
+  "\\quad $T_{\\rm rep}$": {
+   "61 Vir": "$+0.02$",
+   "CP$-$72 2713": "$-0.57$"
+  },
+  "\\quad from the nearest block alone": {
+   "61 Vir": "0.95 $S$",
+   "CP$-$72 2713": "0.71 $S$"
+  },
+  "\\quad from separated blocks alone": {
+   "61 Vir": "\\SpSxFracSep{} $S$ ($n=\\SpSxNSep$)",
+   "CP$-$72 2713": "\\SpCpFracSep{} $S$ ($n=\\SpCpNSep$)"
+  },
+  "\\quad over the matched registration tolerance": {
+   "61 Vir": "\\SpSxFracTol{} $S$",
+   "CP$-$72 2713": "\\SpCpFracTol{} $S$"
+  },
+  "Displacement permitted (km\\,s$^{-1}$)": {
+   "61 Vir": "$\\pm$0.211",
+   "CP$-$72 2713": "$\\pm$0.213"
+  }
+ }
+}

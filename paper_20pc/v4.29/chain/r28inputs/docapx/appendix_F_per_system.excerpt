@@ -1,0 +1,46 @@
+% EXCERPT SOURCE for documentation/appendix_F_per_system.md -- row 37, r27-cut-apx.
+%% Each block is the FULL paragraph as it stood before the cut (pristine v4.27
+%% plus the Phase-1 / r27-cut-results records it depends on). Macros must be
+%% expanded by zdeposit.py from the SAME build's macro files; \ref/\S\ref must be
+%% rendered as words (CODE.md rule 1: no section/table numbers in the deposit).
+
+%% ---- X-F1 (sections/app_P_persys.tex); printed text kept in the paper: see CUT_APX.md
+The limit Table~\ref{tab:persys} quotes for a system is that of its best
+window, so a system whose coverage is wide is not penalised for the
+shallowest window in it; the window-by-window distribution is the per-window
+result of \S\ref{sec:pninetysel}. Each row is one system, a gravitationally
+bound pair appearing under its primary's name. A window inside the attribution mask
+constrains nothing (\S\ref{sec:summary}) and cannot be a best window: a
+double dagger marks a row keeping less than half its channels, and
+\NSysALostName{}, whose \UmNWinALostWin{} windows are all inside it, is
+tabulated with dashes. Beside each limit the table
+gives that window's centre frequency $\nu$ and native channel width
+$\Delta\nu$, the system's merged coverage $\Delta\nu_{\rm cov}$, the
+percentage \emph{dec.} by which atmospheric decorrelation leaves the limit
+optimistic, and whether two blocks of different observing sessions cover a
+common frequency more than a day (d) or more than a year (yr) apart, over the
+primary census together with the \ZcNRecEB{} blocks the recurrence
+test of \S\ref{sec:etacrv} reads, of which \ZcNRecEBOut{} lie outside the
+census -- \ZcNRecEBOutExt{} in the archival extension, \ZcNRecEBOutHold{} in
+the reserved hold-out and \ZcNRecEBOutEpoch{} in the epoch-extension
+campaign. The frequency at which a system's best limit falls is set by what the
+archive holds toward it and not by any property of the star, and for
+\ZcNoRepSys{} of the \NSysClassA{} systems no sensitivity would have been
+enough.
+
+%% ---- X-F2 (sections/app_P_persys.tex); printed text kept in the paper: see CUT_APX.md
+\emph{Because a system's limit is its best window, a minimum over several
+estimates could favour windows whose own completeness factor falls below the
+class average}: drawing each window's factor from the \SensNInj{} measured
+ones instead, over \ScRsNTrial{} trials, shifts the per-system median by
+\ScRsMedShiftPct{} per cent of the adopted $\EirpNinetyMultA$. A dagger marks
+the \SmcNMeasSys{} of the \NSysALim{} systems whose own best window was
+one of the \SensNInj{} injected into; the other \SmcNEstSys{} limits are
+transferred from the class average and carry the dispersion observed between
+injected windows, $\times\SmcDispLo$ to $\times\SmcDispHi$, and for the
+\NgNExtrapSys{} \NgExtrapSysNoun{} whose best window lies outside the injected
+range in band, channel width, array configuration or integration time that
+dispersion is itself transferred. A dagger marks where the class factor was
+calibrated by injection, not a different convention: every limit, daggered or
+not, carries the one class factor.
+

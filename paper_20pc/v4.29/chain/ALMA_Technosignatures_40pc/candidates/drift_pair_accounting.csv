@@ -1,0 +1,11 @@
+block,subset_of_previous,quantity,count
+1,0,"Covering windows read, over the 28 unattributed crossings a later block covers",194
+1,1,"holding a statistic above the trigger, in 14 windows of 12 blocks",18
+2,0,Distinct crossing pairs those readings represent,12
+2,1,readings that are the second reading of such a pair,6
+2,0,"Pairs separated by more than ±801 km s^-1 in the star's frame, to 2105 km s^-1",2
+2,0,Pairs inside that interval,10
+3,0,Pairs with at least one unattributed member,10
+3,1,with a fitted drift and a block epoch for both members,9
+4,1,separated by the bounded-trajectory criterion,0
+4,1,open,9

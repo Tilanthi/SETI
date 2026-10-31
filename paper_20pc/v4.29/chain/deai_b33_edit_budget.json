@@ -1,0 +1,52 @@
+{
+ "abstract": {
+  "changed": 3,
+  "of": 12,
+  "fraction": 0.25
+ },
+ "Introduction": {
+  "changed": 2,
+  "of": 17,
+  "fraction": 0.1176
+ },
+ "Background": {
+  "changed": 5,
+  "of": 37,
+  "fraction": 0.1351
+ },
+ "The sample": {
+  "changed": 4,
+  "of": 55,
+  "fraction": 0.0727
+ },
+ "Data and methodology": {
+  "changed": 8,
+  "of": 98,
+  "fraction": 0.0816
+ },
+ "Results": {
+  "changed": 41,
+  "of": 296,
+  "fraction": 0.1385
+ },
+ "Discussion": {
+  "changed": 11,
+  "of": 68,
+  "fraction": 0.1618
+ },
+ "Conclusions": {
+  "changed": 6,
+  "of": 38,
+  "fraction": 0.1579
+ },
+ "Acknowledgements": {
+  "changed": 0,
+  "of": 28,
+  "fraction": 0.0
+ },
+ "Data availability": {
+  "changed": 1,
+  "of": 12,
+  "fraction": 0.0833
+ }
+}

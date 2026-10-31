@@ -1,0 +1,105 @@
+%% The line mask, reported in two layers: the frequency coincidence, which is
+%% a velocity criterion and nothing else, and the one species we do not read
+%% as emission, which is an argument and is set out as one.
+%% Owner: r16-mask.  Carries \label{app:linemask} (cited by 04_method.tex and
+%% app_C_spatialnorm.tex) and \label{tab:masklines}.
+%%
+%% ★ THIS APPENDIX IS THE PAPER'S ONLY DEFINITION OF THE ATTRIBUTION RULE.
+%% It owns the species list, the half-width and the FRAME.  The rule is the
+%% star's own rest frame; the local standard of rest is evaluated as a check
+%% and changes no disposition (masklsr_v520.py, L10).  Sec. 5.3 states the
+%% rule in one clause and Appendix D points here; nothing else in the paper
+%% may name a frame of its own, or there are two rules again.
+\section{The line mask}
+\label{app:linemask}
+
+A crossing that falls on a known molecular transition has an astrophysical
+explanation to hand, and the mask says which crossings those are.
+
+\emph{The list, by one rule.} The mask holds every transition of the
+\FrNSpec{} species these setups cover that are detected in discs or molecular
+clouds -- the three CO isotopologues, HCN, HCO$^{+}$, CS, CN, SiO, H$_2$CO, SO,
+[C\,\textsc{i}] and hydrogen recombination -- inside the \McNIsland{}
+searched intervals below \McEuMax\,K in upper-state energy, \FrNTrans{}
+transitions (Table~\ref{tab:masklines}), main hyperfine components only and no
+strength cut, from one Splatalogue query \citep{Splatalogue2007} of CDMS and
+JPL \citep{Pickett1998,CDMS2005} dated \MkListDate.
+
+\emph{The windows were placed for the observers' own lines, and that is a
+limitation}: \TnCenPct{} per cent of the \NWinA{} Class~A windows are centred
+within $\pm\MaskHalfKms$\,km\,s$^{-1}$ of a listed transition, against
+\TnCtrlCenLo--\TnCtrlCenHi{} per cent for the same windows displaced, so
+\emph{unattributed} means unattributed against a list these setups shaped.
+The list is not the tuning, though: in the \TuNWinSetup{} windows whose setup
+the archive records, the observers named the species in \TuNPairTuned{} of
+the \TuNPair{} cases of a listed species inside a window, and in
+\TuNSOTuned{} of the \TuNSOWin{} windows holding an SO transition. A wider
+list, every transition below \XlEuMax\,K of all \XlNSpecies{} species with an
+interstellar or circumstellar detection, would cover \XlBandPct{} per cent of
+the Class~A union and attribute every unattributed crossing and
+\XlShareWidePct{} per cent of the control exceedances alike, so at that
+density proximity is not an identification. The closest approach to one, the
+\ZmNCross{} unattributed crossings of $\beta$~Pictoris \ZmDvLo{} and
+\ZmDvHi\,km\,s$^{-1}$ from methanol $5_K\to4_K$ components, fails three
+spectroscopic tests
+(\texttt{documentation/\allowbreak appendix\_C\_line\_mask.md} of the data
+archive, \citealt{SIdeposit}).
+
+\emph{Attribution is decided in the star's own rest frame.} A crossing's
+frequency is carried from the topocentric value to the barycentre using its
+own block's pointing and mid-time, and then to the stellar rest frame using
+the star's systemic velocity; an offset $\Delta v_\star =
+c\,(\nu_\star-\nu_0)/\nu_0$ is positive for a crossing above the transition
+in frequency. \emph{Every crossing is also read in the local standard of rest,
+where interstellar gas is at rest.} Toward \LsCloudStars{} the CO($1\to0$)
+survey of \citet{DameThaddeus2022,Dame2001} shows emission at the crossing's
+own LSR velocity (within \LsCloudDvMax\,km\,s$^{-1}$ of its peak,
+$\ge$\LsCloudTMin\,K), so \LsNCloud{} of the \MkNCoinc{} coincidences are
+interstellar; elsewhere the Planck CO map \citep{PlanckCO2016} stays below
+\LsPlanckMax\,K\,km\,s$^{-1}$. HD~48370's coincidence is
+\LsHdDvStar\,km\,s$^{-1}$ from the star's own CO($2\to1$) but at
+\LsHdVfeat\,km\,s$^{-1}$ in the LSR on a cloud line peaking at \LsHdVco, so
+its extended emission is a cloud and not a disc.
+
+Table~\ref{tab:masklines} gives the mask species by species; the hydrogen
+recombination lines have no tabulated upper-state energy.
+
+\begin{table}
+\centering
+\footnotesize
+%% ★ v4.26 (r25-captions): 4 printed lines -> the author's 3.  The hydrogen
+%% recombination lines' missing $E_{\rm u}$ MOVED to the paragraph above: it
+%% explains a blank cell, which is a fact about the catalogue and not a
+%% definition of a column.
+\caption{The line mask, by species: the number $N$ of transitions, the
+frequency range they span inside the searched intervals and their
+upper-state energies.}
+\label{tab:masklines}
+\input{tab_maskspecies_v414}
+\end{table}
+
+\emph{The coincidences.} \MkNCoinc{} of the
+\CsNCrossQp{} quality-passing census crossings fall within the mask in their own star's frame, and these
+are the \MkAttr{} attributions. The \SoNCrossWord{} on sulphur monoxide
+(\SoStars, at \SoDvList\,km\,s$^{-1}$) rest on the coincidence alone: in the
+LSR their offsets are \SoDvLsrList\,km\,s$^{-1}$, none within the cloud test,
+and no CO($3\to2$) feature above the trigger accompanies any.
+The hold-out is treated identically, \HoNAttr{} attributed and \HoNUnattr{}
+unattributed (\S\ref{sec:holdoutsearch}).
+
+\emph{The half-width, and what it costs.} Keplerian motion where these
+molecules survive, $\lesssim$\EcKepVKms\,km\,s$^{-1}$ beyond \EcKepRAu\,au, sets it at
+$\pm\MaskHalfKms$\,km\,s$^{-1}$. \emph{The cost is stated on the union of
+searched sky frequencies}: the frequencies within that half-width of a
+listed transition's rest frequency, merged where transitions overlap, are \MkMaskAGHz\,GHz of the
+\CvUnionA\,GHz Class~A union, \MkMaskAPct{} per cent, and \FrMaskLostGHz\,GHz
+of \FrMaskUnionGHz\,GHz over both classes, \FrMaskPct{} per cent; the wider
+list's share is measured the same way. A union over windows toward different
+stars has no single rest frame, so this describes the coverage and not any one
+star; a limit is formed instead over its own window's channels outside the
+mask in that star's own frame (\S\ref{sec:summary}).
+
+Of the \MkAttrExcl{} labelled crossings not recovered (\S\ref{sec:etacrv}),
+one rests on a velocity instead, its sightline carrying interstellar emission
+\LsLupDv\,km\,s$^{-1}$ from the crossing, with \RqAjNgeLo--\RqAjNgeHi{} of
+the \NCtrl{} control positions above the star in every repeat block.

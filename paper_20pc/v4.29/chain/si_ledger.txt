@@ -1,0 +1,78 @@
+# The crossing ledger of the ALMA 40 pc technosignature search: one row per threshold crossing.
+# Accompanies the arXiv submission as an ancillary file (anc/).  Tab-separated; an empty field is a value withheld, not a zero.
+#
+# Columns:
+#   1  star                             star name as in the paper, in plain text: one spelling per star, Bayer letters spelled out, and the same string the per-window catalogue is keyed on
+#   2  eb                               ALMA execution block (asdm) identifier
+#   3  band                             ALMA receiver band
+#   4  nu_topo_GHz                      crossing frequency as delivered by the correlator
+#   5  nu_star_GHz                      the same frequency in the star's rest frame
+#   6  T_star                           de-drifted search statistic at the stellar position
+#   7  T_ctrl                           largest statistic among the window's control positions
+#   8  line                             nearest masked transition in the stellar frame
+#   9  dv_star_kms                      stellar-frame offset from that transition, km/s
+#  10  mask_coincident_not_attributed   1 where the crossing lies inside the mask and is not attributed
+#  11  n_rep                            number of covering repeat execution blocks
+#  12  dt_min_d                         shortest interval to a covering repeat, days
+#  13  dt_max_d                         longest interval to a covering repeat, days
+#  14  dt_from_unit_stamp               1 where an interval above is measured from the observing unit's stamp rather than from the blocks' own, as the double dagger marks in the paper
+#  15  T_pers                           statistic a carrier persisting at the discovery flux would give at the predicted cell (empty where withheld)
+#  16  T_rep                            statistic measured at that cell at the carried drift
+#  17  T_rep_is_upper_bound             1 where T_rep is a window maximum and so bounds the cell from above, which bounds sigma_excl from below
+#  18  sigma_excl                       bound on a line-like emitter at the discovery flux (empty where withheld)
+#  19  attributed                       1 where the crossing is attributed to the mask
+#  20  quality_flagged                  1 where the window is data-quality flagged
+#  21  disposition                      the disposition printed in the ledger
+#
+star	eb	band	nu_topo_GHz	nu_star_GHz	T_star	T_ctrl	line	dv_star_kms	mask_coincident_not_attributed	n_rep	dt_min_d	dt_max_d	dt_from_unit_stamp	T_pers	T_rep	T_rep_is_upper_bound	sigma_excl	attributed	quality_flagged	disposition
+beta Pic	A002_Xf5d76d_Xeb8	3	115.260326	115.271109	30.7654	6.9971	CO(1-0)	-0.243	0	4	52.840	52.840	1			0		1	0	attributed; recurs
+beta Pic	A002_Xf5d76d_Xe19	3	115.260345	115.271108	27.8008	6.1972	CO(1-0)	-0.243	0	4	52.840	52.840	1			0		1	0	attributed; recurs
+HD 48370	A002_Xc26103_X155a	6	230.511674	230.524286	26.8584	18.3764	CO(2-1)	-17.834	0				0			0		1	1	attributed; flagged
+beta Pic	A002_Xf4df6f_Xc7	3	115.262039	115.271113	17.7259	5.8011	CO(1-0)	-0.231	0	4	52.840	52.840	0			0		1	0	attributed; recurs
+beta Pic	A002_Xf5d76d_Xcc5	3	115.260372	115.271107	17.3462	5.5206	CO(1-0)	-0.247	0	4	52.840	52.840	1			0		1	0	attributed; recurs
+beta Pic	A002_Xf5d76d_X32f1	3	115.260644	115.271345	14.6175	7.0705	CO(1-0)	+0.373	0	4	52.840	52.840	1			0		1	0	attributed; recurs
+beta Pic	A002_Xd9668b_X3a90	6	230.516128	230.537779	11.6810	9.1167	CO(2-1)	-0.287	0	5	1.020	1982.750	0			0		1	0	attributed; recurs
+beta Pic	A002_X6f1341_X1484	6	230.528379	230.537916	9.7231	8.2388	CO(2-1)	-0.110	0	5	25.130	1983.770	0			0		1	0	attributed; recurs
+beta Pic	A002_X7116f1_X1785	6	230.527185	230.538407	9.6787	14.1092	CO(2-1)	+0.529	0	5	25.130	1958.640	0			0		1	0	attributed; recurs
+beta Pic	A002_Xd9668b_Xa9df	6	230.516025	230.537701	8.9476	8.4072	CO(2-1)	-0.389	0	5	1.020	1983.770	0			0		1	0	attributed; recurs
+beta Pic	A002_Xa7a216_X23e4	6	230.527261	230.537659	7.9879	6.0292	CO(2-1)	-0.444	0	5	601.270	1312.600	0			0		1	0	attributed; recurs
+HD 285968	A002_Xd98580_X3bf6	6	230.502079	230.544697	5.9862	8.2036	CO(2-1)	+8.709	0	3	12.920	43.890	0			0		1	0	attributed; recurs
+61 Vir	A002_Xc079b5_X82f	7	346.313811	346.323236	5.9466	5.5850	SO(9(8)-8(7))	-177.564	0	3	0.082	2.995	0	9.700	+0.3600	0	4.900	0	0	unattributed; no recurrence
+HD 285968	A002_Xdb7ab7_X5b4e	6	230.511570	230.544671	5.8712	7.1825	CO(2-1)	+8.675	0	3	4.990	43.890	0			0		1	0	attributed; recurs
+HD 285968	A002_Xdb4b9a_X108f	6	230.510022	230.544673	5.8219	7.9780	CO(2-1)	+8.678	0	3	4.990	38.900	0			0		1	0	attributed; recurs
+CP-72 2713	A002_Xff0235_X4a6d	7	344.269746	344.296455	5.8089	5.6832	SO(8(8)-7(7))	-12.327	0	5	0.085	2.104	0	6.300	-0.8800	0	4.900	1	0	attributed
+HD 139084 B	A002_Xcd8029_Xb6b0	7	345.824056	345.824095	5.7635	17.6982	CO(3-2)	+24.366	0				0			0		1	0	attributed
+CD-57 1054	A002_Xcf525f_X5aa4	7	346.509896	346.526537	5.6924	5.7566	SO(9(8)-8(7))	-1.682	0	1	38.821	38.821	0	7.000	-0.2700	0	4.600	1	0	attributed
+HD 14055	A002_Xfff3d8_Xd46	7	331.769922	331.766431	5.5739	5.9887	13CO(J=3-2,F=7/2-5/2)	+1068.672	0	31	0.934	650.192	0	170.400	+0.0000	0	5.600	0	0	unattributed; no recurrence
+HIP 10679	A002_Xa95c04_X14cd	6	220.418512	220.403452	5.5545	6.7395	13CO(J=2-1,F=5/2-3/2)	+6.463	0				0			0		1	0	attributed
+HD 23484	A002_X10b22d7_X2445	6	230.790381	230.800606	5.4923	5.5177	CO(2-1)	+341.494	0	4	0.097	2.065	0	10.300	+1.2000	0	4.300	0	0	unattributed; no recurrence
+HD 14055	A002_X11adad7_X25c5e	7	345.456382	345.430291	5.4477	6.8241	SO(2(3)-2(1))	-237.770	0	31	0.054	653.168	0	14.000	+0.0600	0	5.100	0	0	unattributed; no recurrence
+HD 207129	A002_Xc19d6f_X5706	6	230.422618	230.407028	5.4474	5.5190	CO(2-1)	-170.316	0	4	0.802	424.761	0	69.900	-0.9200	0	5.500	0	0	unattributed; no recurrence
+beta Pic	A002_Xd9668b_X3a90	6	241.751236	241.773942	5.4199	5.8117	CS(5-4)	-3869.705	0	1	1.017	1.017	0	5.700	+0.7200	0	3.400	0	0	unattributed; no recurrence
+ALMA J153702653-33192492	A002_Xff0235_X8392	6	230.522151	230.539192	5.3936	13.4226	CO(2-1)	+1.550	0	6	18.030	140.690	0	6.200	+4.1700	1	1.300	1	0	attributed; not recovered
+HD 110411	A002_Xe45e29_Xb7d4	6	219.453785	219.435679	5.3922	5.8658	C18O(2-1)	-170.234	0	1	10.025	10.025	0	6.700	+0.6000	0	3.800	0	0	unattributed; no recurrence
+AU Mic	A002_Xa42f75_X319	6	230.686369	230.670469	5.2915	5.9434	CO(2-1)	+172.264	0	2	309.935	454.752	0	6.400	-0.2100	0	4.200	0	0	unattributed; no recurrence
+HD 161868	A002_Xff45a6_X10ca8	7	345.633836	345.649075	5.2727	6.3858	SO(2(3)-2(1))	-48.042	0	13	0.019	6.110	0	92.300	+0.2400	0	5.300	1	0	attributed
+ALMA J153702653-33192492	A002_Xfe62c1_X398	6	216.184432	216.203564	5.2535	6.0323	SiO(5-4)	-1244.649	0	7	18.026	126.499	0	11.000	+1.0700	0	4.300	0	0	unattributed; no recurrence
+HD 31392	A002_X129754b_X6946	6	231.199845	231.223086	5.2502	5.8123	H(30a)	-876.287	0	8	0.055	41.036	0	15.600	-0.2600	0	5.100	0	0	unattributed; no recurrence
+HD 161868	A002_Xff699e_Xd7	7	344.573945	344.588966	5.2023	5.9082	SO(8(8)-7(7))	+242.364	0	13	0.927	7.105	0	92.100	+1.3200	0	5.100	0	0	unattributed; no recurrence
+HD 10647	A002_Xff294f_Xaf70	7	331.657036	331.694327	5.1980	5.9097	13CO(J=3-2,F=7/2-5/2)	+1003.285	0	10	0.100	592.307	0	127.700	+0.4200	0	5.200	0	0	unattributed; no recurrence
+LHS 1140	A002_Xd9d7c7_X6fd2	6	230.635464	230.626810	5.1876	5.6769	CO(2-1)	+115.488	0	4	5.025	26.976	0	7.300	+0.2000	0	4.100	0	0	unattributed; no recurrence
+HD 14055	A002_Xff99e1_X2b2ee	7	344.700699	344.696451	5.1798	5.9249	SO(8(8)-7(7))	+335.951	0	31	0.093	651.219	0	211.000	-0.0500	0	5.200	0	0	unattributed; no recurrence
+HD 14055	A002_Xfffde1_X3835	7	345.094866	345.091971	5.1695	5.8858	SO(2(3)-2(1))	-531.158	0	31	0.072	649.127	0	207.900	+1.1500	0	5.100	0	0	unattributed; no recurrence
+ALMA J153702653-33192492	A002_Xfe62c1_X398	6	218.872908	218.892278	5.1092	5.5499	H2CO(3(2,1)-2(2,0))	+181.186	0	7	18.026	126.499	0	10.400	-0.9200	0	5.000	0	0	unattributed; no recurrence
+HD 14055	A002_Xff99e1_X24be0	7	331.258055	331.253749	5.0980	5.7778	13CO(J=3-2,F=7/2-5/2)	+603.748	0	31	0.898	652.117	0	258.700	-0.8000	0	5.100	0	0	unattributed; no recurrence
+ALMA J153702653-33192492	A002_Xf8f6a9_X10359	6	217.729244	217.726868	5.0901	5.4094	H2CO(3(0,3)-2(0,2))	-680.474	0	7	3.838	242.385	0	11.400	+0.4000	0	4.500	0	0	unattributed; no recurrence
+GJ 849	A002_Xd9668b_X841a	6	230.876910	230.858104	5.0838	5.7982	CO(2-1)	+416.264	0	5	0.052	50.841	0	9.200	-1.6800	0	5.300	0	0	unattributed; no recurrence
+beta Pic	A002_Xd9668b_Xa9df	6	241.836658	241.859398	5.0791	5.9903	CS(5-4)	-3765.110	0	1	1.017	1.017	0	4.800	-0.6300	0	3.900	0	0	unattributed; no recurrence
+HIP 10679	A002_Xa95c04_X14cd	6	230.577528	230.561775	5.0785	6.2399	CO(2-1)	+30.917	0				0			0		1	0	attributed
+HD 69830	A002_X12209f7_X16edb	7	322.432491	322.444417	5.0775	5.4667	C18O(3-2)	-6268.510	0	5	0.066	28.954	0	8.600	-0.3800	0	4.600	0	0	unattributed; no recurrence
+HR 1010	A002_Xc66ce1_Xaa9	6	230.834752	230.849103	5.0555	5.6808	CO(2-1)	+404.560	0	7	1.148	14.096	0	10.300	-1.6000	0	5.200	0	0	unattributed; no recurrence
+HD 170773	A002_Xff0235_X8c42	7	331.010135	331.023389	5.0532	5.7363	13CO(J=3-2,F=7/2-5/2)	+394.847	0	4	0.882	112.574	0	75.200	+1.4900	0	4.900	0	0	unattributed; no recurrence
+GJ 3379	A002_Xdaef5a_X6873	6	229.888548	229.931146	5.0472	5.6639	CO(2-1)	-789.155	0	6	0.058	49.820	0	9.600	-1.6500	0	5.200	0	0	unattributed; no recurrence
+ALMA J153702653-33192492	A002_Xf8f6a9_X10359	6	218.671139	218.668752	5.0470	5.7676	H2CO(3(2,1)-2(2,0))	-125.138	0	7	3.838	242.385	0	11.500	-0.3800	0	4.800	0	0	unattributed; no recurrence
+61 Vir	A002_Xc067f7_X822	7	345.559872	345.567825	5.0407	5.8391	SO(2(3)-2(1))	-118.501	0	3	1.990	2.995	0	9.300	+0.4400	0	4.200	0	0	unattributed; no recurrence
+HR 1010	A002_Xc6fa08_X1053	6	230.513280	230.528745	5.0346	5.3819	CO(2-1)	-12.035	0	7	2.030	14.100	0	7.900	+4.6200	1	1.700	1	0	attributed; not recovered
+ALMA J153702653-33192492	A002_Xd9d7c7_Xbb64	7	347.217940	347.189031	5.0087	5.6821	SiO(8-7)	-122.176	0	1	0.051	0.051	0	5.000	-2.0600	0	5.000	0	0	unattributed; no recurrence
+eta Crv	A002_X75bfbf_X1430	7	345.845550	345.814000	5.0081	5.8832	CO(3-2)	+15.614	0	2	3940.310	4027.050	0	7.300	+4.8300	1	1.400	1	0	attributed; not recovered
+HD 14055	A002_X1190de8_Xd526	7	344.467647	344.451541	5.0061	5.9564	SO(8(8)-7(7))	+122.708	0	31	19.890	611.355	0	11.600	-0.6300	0	4.800	0	0	unattributed; no recurrence

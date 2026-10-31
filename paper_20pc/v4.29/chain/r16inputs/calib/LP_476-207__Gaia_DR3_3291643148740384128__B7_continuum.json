@@ -1,0 +1,10 @@
+{
+ "star_name": "LP 476-207 (Gaia DR3 3291643148740384128) [B7]",
+ "image_rms_mJy": 0.3704486007336527,
+ "image_peak_mJy": 22.054508328437805,
+ "peak_snr": 59.53459930419922,
+ "peak_offset_arcsec": 0.0,
+ "continuum_source_detected": true,
+ "sig_threshold": 5.0,
+ "pos_tol_arcsec": 3.0
+}

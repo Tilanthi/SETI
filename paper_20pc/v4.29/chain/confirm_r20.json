@@ -1,0 +1,3321 @@
+{
+ "round": 910,
+ "drive": 0,
+ "definition": "a confirmed signal requires recovery at the predicted stellar-frame cell in a block that is an execution of a DIFFERENT observing session AND more than 1 d from the discovery block; a recovery in any block of the discovery's own session is a within-session repeat, whatever the interval",
+ "n_systems": 61,
+ "counts": {
+  "day": {
+   "census": [
+    38,
+    12,
+    24
+   ],
+   "recur": [
+    40,
+    13,
+    25
+   ]
+  },
+  "adopted": {
+   "census": [
+    38,
+    12,
+    24
+   ],
+   "recur": [
+    40,
+    13,
+    25
+   ]
+  },
+  "or": {
+   "census": [
+    39,
+    39,
+    39
+   ],
+   "recur": [
+    41,
+    41,
+    41
+   ]
+  }
+ },
+ "dropped_pairs": [
+  {
+   "system": "AU Mic",
+   "a": "A002_X1240efd_X13b03",
+   "b": "A002_X1240efd_X14e83",
+   "sess": "X1240efd",
+   "dt": 12.860128000000259
+  },
+  {
+   "system": "AU Mic",
+   "a": "A002_X1240efd_X14140",
+   "b": "A002_X1240efd_X14e83",
+   "sess": "X1240efd",
+   "dt": 12.905026000000362
+  },
+  {
+   "system": "AU Mic",
+   "a": "A002_X129754b_X1a931",
+   "b": "A002_X129754b_X2363e",
+   "sess": "X129754b",
+   "dt": 8.097655999998096
+  },
+  {
+   "system": "AU Mic",
+   "a": "A002_X129754b_X1a931",
+   "b": "A002_X129754b_X23b68",
+   "sess": "X129754b",
+   "dt": 8.097655999998096
+  },
+  {
+   "system": "AU Mic",
+   "a": "A002_X129754b_X1a931",
+   "b": "A002_X129754b_X2b51b",
+   "sess": "X129754b",
+   "dt": 8.097655999998096
+  },
+  {
+   "system": "GJ 849",
+   "a": "A002_Xd95042_X5feb",
+   "b": "A002_Xd95042_X67d7",
+   "sess": "Xd95042",
+   "dt": 0.053192777777439915
+  },
+  {
+   "system": "GL 3379 Gaia DR3 3316364602541746048",
+   "a": "A002_Xdaef5a_X6873",
+   "b": "A002_Xdaef5a_X7167",
+   "sess": "Xdaef5a",
+   "dt": 0.05845499999122694
+  },
+  {
+   "system": "HD 10647",
+   "a": "A002_Xff294f_X2db6",
+   "b": "A002_Xff294f_Xaf70",
+   "sess": "Xff294f",
+   "dt": 1.0250733333232347
+  },
+  {
+   "system": "HD 10647",
+   "a": "A002_Xff294f_X2db6",
+   "b": "A002_Xff294f_Xc10b",
+   "sess": "Xff294f",
+   "dt": 1.1253988888856838
+  },
+  {
+   "system": "HD 10647",
+   "a": "A002_Xff294f_Xaf70",
+   "b": "A002_Xff294f_Xc10b",
+   "sess": "Xff294f",
+   "dt": 0.10032555556244915
+  },
+  {
+   "system": "HD 23484 Gaia DR3 4856592239127350400",
+   "a": "A002_X10b22d7_X1d34",
+   "b": "A002_X10b22d7_X2445",
+   "sess": "X10b22d7",
+   "dt": 0.09712388889602153
+  },
+  {
+   "system": "HD 31392",
+   "a": "A002_X1294347_X1af7f",
+   "b": "A002_X1294347_X5c2e",
+   "sess": "X1294347",
+   "dt": 1.9557666666587465
+  },
+  {
+   "system": "HD 31392",
+   "a": "A002_X1294347_X1b730",
+   "b": "A002_X1294347_X5c2e",
+   "sess": "X1294347",
+   "dt": 2.0104633333394304
+  },
+  {
+   "system": "HD 69830",
+   "a": "A002_X12235df_X7876",
+   "b": "A002_X12235df_X8337",
+   "sess": "X12235df",
+   "dt": 0.06564277777943062
+  },
+  {
+   "system": "HD 89452",
+   "a": "A002_X126787e_X1170",
+   "b": "A002_X126787e_X227e",
+   "sess": "X126787e",
+   "dt": 4.075681000002078
+  },
+  {
+   "system": "HD 89452",
+   "a": "A002_X126787e_X1c15",
+   "b": "A002_X126787e_X227e",
+   "sess": "X126787e",
+   "dt": 4.075681000002078
+  },
+  {
+   "system": "HD14055",
+   "a": "A002_X1001fdc_X2085",
+   "b": "A002_X1001fdc_X29ae",
+   "sess": "X1001fdc",
+   "dt": 0.0721072222222574
+  },
+  {
+   "system": "HD14055",
+   "a": "A002_X1001fdc_X29ae",
+   "b": "A002_X1001fdc_Xc06e",
+   "sess": "X1001fdc",
+   "dt": 0.9091744444449432
+  },
+  {
+   "system": "HD14055",
+   "a": "A002_X1003af4_X14e08",
+   "b": "A002_X1003af4_X3a2c",
+   "sess": "X1003af4",
+   "dt": 1.9760483333375305
+  },
+  {
+   "system": "HD14055",
+   "a": "A002_X107fa96_X150f6",
+   "b": "A002_X107fa96_X9a88",
+   "sess": "X107fa96",
+   "dt": 1.9584677777675097
+  },
+  {
+   "system": "HD14055",
+   "a": "A002_Xff99e1_X1b0c4",
+   "b": "A002_Xff99e1_X24be0",
+   "sess": "Xff99e1",
+   "dt": 1.1047055555609404
+  },
+  {
+   "system": "HD14055",
+   "a": "A002_Xff99e1_X1b0c4",
+   "b": "A002_Xff99e1_X2b2ee",
+   "sess": "Xff99e1",
+   "dt": 2.0029705555571127
+  },
+  {
+   "system": "HD14055",
+   "a": "A002_Xff99e1_X1b0c4",
+   "b": "A002_Xff99e1_X2c3bb",
+   "sess": "Xff99e1",
+   "dt": 2.095764444442466
+  },
+  {
+   "system": "HD161868",
+   "a": "A002_Xff45a6_X111c3",
+   "b": "A002_Xff45a6_X8474",
+   "sess": "Xff45a6",
+   "dt": 1.018060555550619
+  },
+  {
+   "system": "HD161868",
+   "a": "A002_Xff699e_X7543",
+   "b": "A002_Xff699e_Xd7",
+   "sess": "Xff699e",
+   "dt": 1.055916666664416
+  },
+  {
+   "system": "HD53143 Gaia DR3 5479222240596469632",
+   "a": "A002_X10a513c_X389e",
+   "b": "A002_X10a513c_X3b99",
+   "sess": "X10a513c",
+   "dt": 1.9239230000021053
+  },
+  {
+   "system": "LHS 1140",
+   "a": "A002_Xda1250_X6f6b",
+   "b": "A002_Xda1250_X72ef",
+   "sess": "Xda1250",
+   "dt": 0.05922611110872822
+  },
+  {
+   "system": "TRAPPIST-1",
+   "a": "A002_Xd0e450_X1e19",
+   "b": "A002_Xd0e450_Xc008",
+   "sess": "Xd0e450",
+   "dt": 1.0290277777748997
+  },
+  {
+   "system": "TRAPPIST-1",
+   "a": "A002_Xd0e450_X1e19",
+   "b": "A002_Xd0e450_Xc7a1",
+   "sess": "Xd0e450",
+   "dt": 1.0837666666557197
+  },
+  {
+   "system": "bet Pic",
+   "a": "A002_Xd9668b_X3a90",
+   "b": "A002_Xd9668b_Xa9df",
+   "sess": "Xd9668b",
+   "dt": 1.0171522222299245
+  },
+  {
+   "system": "eta Crv",
+   "a": "A002_X122b6ff_X1041e",
+   "b": "A002_X122b6ff_X18e15",
+   "sess": "X122b6ff",
+   "dt": 1.1259869999994407
+  }
+ ],
+ "dropped_systems": [
+  "AU Mic",
+  "GJ 849",
+  "GL 3379 Gaia DR3 3316364602541746048",
+  "HD 10647",
+  "HD 23484 Gaia DR3 4856592239127350400",
+  "HD 31392",
+  "HD 69830",
+  "HD 89452",
+  "HD14055",
+  "HD161868",
+  "HD53143 Gaia DR3 5479222240596469632",
+  "LHS 1140",
+  "TRAPPIST-1",
+  "bet Pic",
+  "eta Crv"
+ ],
+ "kept_through": {
+  "AU Mic": [
+   "A002_X1237e23_Xdb0",
+   "A002_X1240efd_X14e83"
+  ],
+  "GJ 849": [
+   "A002_Xd86f11_X584b",
+   "A002_Xd95042_X67d7"
+  ],
+  "GL 3379 Gaia DR3 3316364602541746048": [
+   "A002_Xda2c82_X765d",
+   "A002_Xdaef5a_X7167"
+  ],
+  "HD 10647": [
+   "A002_Xff294f_X2db6",
+   "A002_Xfffde1_Xffdf"
+  ],
+  "HD 23484 Gaia DR3 4856592239127350400": [
+   "A002_X10b22d7_X1d34",
+   "A002_X10b33b1_Xf94"
+  ],
+  "HD 31392": [
+   "A002_X128b034_X187cc",
+   "A002_X1294347_X5c2e"
+  ],
+  "HD 69830": [
+   "A002_X12235df_X8337",
+   "A002_X12277ed_X178c6"
+  ],
+  "HD 89452": [
+   "A002_X126787e_X227e",
+   "A002_X12694b3_Xab7"
+  ],
+  "HD14055": [
+   "A002_X1006d51_X228e",
+   "A002_X101088d_Xbf80"
+  ],
+  "HD161868": [
+   "A002_Xcd97a1_X2377",
+   "A002_Xce1e34_X7be"
+  ],
+  "HD53143 Gaia DR3 5479222240596469632": [
+   "A002_X10a341d_X82d2",
+   "A002_X10a513c_X389e"
+  ],
+  "LHS 1140": [
+   "A002_Xd9d7c7_X6fd2",
+   "A002_Xda1250_X72ef"
+  ],
+  "TRAPPIST-1": [
+   "A002_Xcccc19_X5564",
+   "A002_Xd0e450_X1e19"
+  ],
+  "bet Pic": [
+   "A002_Xf4df6f_Xc7",
+   "A002_Xf5d76d_X32f1"
+  ],
+  "eta Crv": [
+   "A002_X11e10bc_X12662",
+   "A002_X122b6ff_X1041e"
+  ]
+ },
+ "moved_marks": [],
+ "or_only_census": [
+  "HD 139664"
+ ],
+ "or_only_recur": [
+  "HD 139664"
+ ],
+ "controls": [
+  {
+   "star": "$\\beta$~Pic",
+   "line": "CO(1-0)",
+   "eb": "A002_Xf5d76d_Xcc5",
+   "freq": 115.2603721,
+   "fstar": 115.2711071472584,
+   "tstar": 17.3462,
+   "n_cand": 4,
+   "n_indep": 1,
+   "n_unrec": 3,
+   "n_apart": 1,
+   "n_diff": 1,
+   "named": "A002_Xf5d76d_Xeb8",
+   "named_t": 30.77,
+   "best": {
+    "eb": "A002_Xf4df6f_Xc7",
+    "t": 17.73,
+    "sep": -52.83634799999709,
+    "unrec": false,
+    "apart": true,
+    "diff_sess": true,
+    "both": true,
+    "approx": true
+   }
+  },
+  {
+   "star": "$\\beta$~Pic",
+   "line": "CO(1-0)",
+   "eb": "A002_Xf5d76d_Xe19",
+   "freq": 115.2603454,
+   "fstar": 115.27110839114692,
+   "tstar": 27.8008,
+   "n_cand": 4,
+   "n_indep": 1,
+   "n_unrec": 3,
+   "n_apart": 1,
+   "n_diff": 1,
+   "named": "A002_Xf5d76d_Xeb8",
+   "named_t": 30.77,
+   "best": {
+    "eb": "A002_Xf4df6f_Xc7",
+    "t": 17.73,
+    "sep": -52.83634799999709,
+    "unrec": false,
+    "apart": true,
+    "diff_sess": true,
+    "both": true,
+    "approx": true
+   }
+  },
+  {
+   "star": "$\\beta$~Pic",
+   "line": "CO(1-0)",
+   "eb": "A002_Xf5d76d_Xeb8",
+   "freq": 115.26032550000001,
+   "fstar": 115.27110869377768,
+   "tstar": 30.7654,
+   "n_cand": 4,
+   "n_indep": 1,
+   "n_unrec": 3,
+   "n_apart": 1,
+   "n_diff": 1,
+   "named": "A002_Xf5d76d_Xe19",
+   "named_t": 27.8,
+   "best": {
+    "eb": "A002_Xf4df6f_Xc7",
+    "t": 17.73,
+    "sep": -52.83634799999709,
+    "unrec": false,
+    "apart": true,
+    "diff_sess": true,
+    "both": true,
+    "approx": true
+   }
+  },
+  {
+   "star": "$\\beta$~Pic",
+   "line": "CO(1-0)",
+   "eb": "A002_Xf4df6f_Xc7",
+   "freq": 115.2620386,
+   "fstar": 115.27111317142669,
+   "tstar": 17.7259,
+   "n_cand": 4,
+   "n_indep": 4,
+   "n_unrec": 0,
+   "n_apart": 4,
+   "n_diff": 4,
+   "named": "A002_Xf5d76d_Xeb8",
+   "named_t": 30.77,
+   "best": {
+    "eb": "A002_Xf5d76d_Xeb8",
+    "t": 30.77,
+    "sep": 52.83634799999709,
+    "unrec": false,
+    "apart": true,
+    "diff_sess": true,
+    "both": true,
+    "approx": true
+   }
+  },
+  {
+   "star": "$\\beta$~Pic",
+   "line": "CO(1-0)",
+   "eb": "A002_Xf5d76d_X32f1",
+   "freq": 115.2606437,
+   "fstar": 115.27134527319329,
+   "tstar": 14.6175,
+   "n_cand": 4,
+   "n_indep": 1,
+   "n_unrec": 3,
+   "n_apart": 1,
+   "n_diff": 1,
+   "named": "A002_Xf5d76d_Xeb8",
+   "named_t": 30.77,
+   "best": {
+    "eb": "A002_Xf4df6f_Xc7",
+    "t": 17.73,
+    "sep": -52.83634799999709,
+    "unrec": false,
+    "apart": true,
+    "diff_sess": true,
+    "both": true,
+    "approx": false
+   }
+  },
+  {
+   "star": "$\\beta$~Pic",
+   "line": "CO(2-1)",
+   "eb": "A002_Xa7a216_X23e4",
+   "freq": 230.5272612,
+   "fstar": 230.5376587353208,
+   "tstar": 7.9879,
+   "n_cand": 4,
+   "n_indep": 4,
+   "n_unrec": 0,
+   "n_apart": 4,
+   "n_diff": 4,
+   "named": "A002_Xd9668b_X3a90",
+   "named_t": 11.68,
+   "best": {
+    "eb": "A002_Xd9668b_X3a90",
+    "t": 11.68,
+    "sep": 1311.5798799999975,
+    "unrec": false,
+    "apart": true,
+    "diff_sess": true,
+    "both": true,
+    "approx": false
+   }
+  },
+  {
+   "star": "$\\beta$~Pic",
+   "line": "CO(2-1)",
+   "eb": "A002_Xd9668b_Xa9df",
+   "freq": 230.51602540000002,
+   "fstar": 230.53770059770102,
+   "tstar": 8.9476,
+   "n_cand": 4,
+   "n_indep": 3,
+   "n_unrec": 0,
+   "n_apart": 4,
+   "n_diff": 3,
+   "named": "A002_Xd9668b_X3a90",
+   "named_t": 11.68,
+   "best": {
+    "eb": "A002_X6f1341_X1484",
+    "t": 9.72,
+    "sep": -1983.7660142222303,
+    "unrec": false,
+    "apart": true,
+    "diff_sess": true,
+    "both": true,
+    "approx": false
+   }
+  },
+  {
+   "star": "$\\beta$~Pic",
+   "line": "CO(2-1)",
+   "eb": "A002_Xd9668b_X3a90",
+   "freq": 230.51612790000001,
+   "fstar": 230.53777899976728,
+   "tstar": 11.681,
+   "n_cand": 4,
+   "n_indep": 3,
+   "n_unrec": 0,
+   "n_apart": 4,
+   "n_diff": 3,
+   "named": "A002_X6f1341_X1484",
+   "named_t": 9.72,
+   "best": {
+    "eb": "A002_X6f1341_X1484",
+    "t": 9.72,
+    "sep": -1982.7488620000004,
+    "unrec": false,
+    "apart": true,
+    "diff_sess": true,
+    "both": true,
+    "approx": false
+   }
+  },
+  {
+   "star": "$\\beta$~Pic",
+   "line": "CO(2-1)",
+   "eb": "A002_X6f1341_X1484",
+   "freq": 230.5283785,
+   "fstar": 230.5379156777931,
+   "tstar": 9.7231,
+   "n_cand": 4,
+   "n_indep": 4,
+   "n_unrec": 0,
+   "n_apart": 4,
+   "n_diff": 4,
+   "named": "A002_Xd9668b_X3a90",
+   "named_t": 11.68,
+   "best": {
+    "eb": "A002_Xd9668b_X3a90",
+    "t": 11.68,
+    "sep": 1982.7488620000004,
+    "unrec": false,
+    "apart": true,
+    "diff_sess": true,
+    "both": true,
+    "approx": false
+   }
+  },
+  {
+   "star": "$\\beta$~Pic",
+   "line": "CO(2-1)",
+   "eb": "A002_X7116f1_X1785",
+   "freq": 230.527185,
+   "fstar": 230.5384065994498,
+   "tstar": 9.6787,
+   "n_cand": 4,
+   "n_indep": 4,
+   "n_unrec": 0,
+   "n_apart": 4,
+   "n_diff": 4,
+   "named": "A002_Xd9668b_X3a90",
+   "named_t": 11.68,
+   "best": {
+    "eb": "A002_Xd9668b_X3a90",
+    "t": 11.68,
+    "sep": 1957.6186710000038,
+    "unrec": false,
+    "apart": true,
+    "diff_sess": true,
+    "both": true,
+    "approx": false
+   }
+  },
+  {
+   "star": "HD 285968",
+   "line": "CO(2-1)",
+   "eb": "A002_Xdb7ab7_X5b4e",
+   "freq": 230.5115699,
+   "fstar": 230.54467075865543,
+   "tstar": 5.8712,
+   "n_cand": 2,
+   "n_indep": 2,
+   "n_unrec": 0,
+   "n_apart": 2,
+   "n_diff": 2,
+   "named": "A002_Xd98580_X3bf6",
+   "named_t": 5.99,
+   "best": {
+    "eb": "A002_Xd98580_X3bf6",
+    "t": 5.99,
+    "sep": -43.88572111110989,
+    "unrec": false,
+    "apart": true,
+    "diff_sess": true,
+    "both": true,
+    "approx": false
+   }
+  },
+  {
+   "star": "HD 285968",
+   "line": "CO(2-1)",
+   "eb": "A002_Xdb4b9a_X108f",
+   "freq": 230.51002160000002,
+   "fstar": 230.54467317388347,
+   "tstar": 5.8219,
+   "n_cand": 2,
+   "n_indep": 2,
+   "n_unrec": 0,
+   "n_apart": 2,
+   "n_diff": 2,
+   "named": "A002_Xd98580_X3bf6",
+   "named_t": 5.99,
+   "best": {
+    "eb": "A002_Xd98580_X3bf6",
+    "t": 5.99,
+    "sep": -38.89729222222377,
+    "unrec": false,
+    "apart": true,
+    "diff_sess": true,
+    "both": true,
+    "approx": false
+   }
+  },
+  {
+   "star": "HD 285968",
+   "line": "CO(2-1)",
+   "eb": "A002_Xd98580_X3bf6",
+   "freq": 230.5020791,
+   "fstar": 230.54469734219387,
+   "tstar": 5.9862,
+   "n_cand": 2,
+   "n_indep": 2,
+   "n_unrec": 0,
+   "n_apart": 2,
+   "n_diff": 2,
+   "named": "A002_Xdb7ab7_X5b4e",
+   "named_t": 5.87,
+   "best": {
+    "eb": "A002_Xdb7ab7_X5b4e",
+    "t": 5.87,
+    "sep": 43.88572111110989,
+    "unrec": false,
+    "apart": true,
+    "diff_sess": true,
+    "both": true,
+    "approx": false
+   }
+  }
+ ],
+ "unattributed_recovered": [],
+ "exclusions": [
+  {
+   "cid": "U01",
+   "star": "61 Vir",
+   "eb": "A002_Xc067f7_X822",
+   "p": 0.99,
+   "n_block": 3,
+   "n_indep": 3,
+   "power": true
+  },
+  {
+   "cid": "U02",
+   "star": "61 Vir",
+   "eb": "A002_Xc079b5_X82f",
+   "p": 0.99,
+   "n_block": 3,
+   "n_indep": 2,
+   "power": true
+  },
+  {
+   "cid": "U03",
+   "star": "ALMA J153702653-33192492",
+   "eb": "A002_Xd9d7c7_Xbb64",
+   "p": 0.4928571428571429,
+   "n_block": 1,
+   "n_indep": 0,
+   "power": false
+  },
+  {
+   "cid": "U04",
+   "star": "ALMA J153702653-33192492",
+   "eb": "A002_Xf8f6a9_X10359",
+   "p": 0.99,
+   "n_block": 7,
+   "n_indep": 7,
+   "power": true
+  },
+  {
+   "cid": "U05",
+   "star": "ALMA J153702653-33192492",
+   "eb": "A002_Xf8f6a9_X10359",
+   "p": 0.995,
+   "n_block": 7,
+   "n_indep": 7,
+   "power": true
+  },
+  {
+   "cid": "U06",
+   "star": "ALMA J153702653-33192492",
+   "eb": "A002_Xfe62c1_X398",
+   "p": 1.0,
+   "n_block": 7,
+   "n_indep": 7,
+   "power": true
+  },
+  {
+   "cid": "U07",
+   "star": "ALMA J153702653-33192492",
+   "eb": "A002_Xfe62c1_X398",
+   "p": 0.995,
+   "n_block": 7,
+   "n_indep": 7,
+   "power": true
+  },
+  {
+   "cid": "U09",
+   "star": "AU Mic",
+   "eb": "A002_Xa42f75_X319",
+   "p": 0.62,
+   "n_block": 2,
+   "n_indep": 2,
+   "power": false
+  },
+  {
+   "cid": "U15",
+   "star": "GJ 849",
+   "eb": "A002_Xd9668b_X841a",
+   "p": 1.0,
+   "n_block": 5,
+   "n_indep": 3,
+   "power": true
+  },
+  {
+   "cid": "U16",
+   "star": "HD 10647",
+   "eb": "A002_Xff294f_Xaf70",
+   "p": 1.0,
+   "n_block": 10,
+   "n_indep": 6,
+   "power": true
+  },
+  {
+   "cid": "U17",
+   "star": "HD 14055",
+   "eb": "A002_X1190de8_Xd526",
+   "p": 0.985,
+   "n_block": 31,
+   "n_indep": 31,
+   "power": true
+  },
+  {
+   "cid": "U18",
+   "star": "HD 14055",
+   "eb": "A002_X11adad7_X25c5e",
+   "p": 1.0,
+   "n_block": 31,
+   "n_indep": 28,
+   "power": true
+  },
+  {
+   "cid": "U19",
+   "star": "HD 207129 Gaia DR3 6564091190988411520",
+   "eb": "A002_Xc19d6f_X5706",
+   "p": 0.97,
+   "n_block": 4,
+   "n_indep": 2,
+   "power": true
+  },
+  {
+   "cid": "U20",
+   "star": "HD 23484 Gaia DR3 4856592239127350400",
+   "eb": "A002_X10b22d7_X2445",
+   "p": 0.985,
+   "n_block": 4,
+   "n_indep": 1,
+   "power": true
+  },
+  {
+   "cid": "U21",
+   "star": "HD 31392",
+   "eb": "A002_X129754b_X6946",
+   "p": 0.99,
+   "n_block": 8,
+   "n_indep": 6,
+   "power": true
+  },
+  {
+   "cid": "U22",
+   "star": "HD 69830",
+   "eb": "A002_X12209f7_X16edb",
+   "p": 0.955,
+   "n_block": 5,
+   "n_indep": 3,
+   "power": true
+  },
+  {
+   "cid": "U24",
+   "star": "HD110411",
+   "eb": "A002_Xe45e29_Xb7d4",
+   "p": 0.8428571428571429,
+   "n_block": 1,
+   "n_indep": 1,
+   "power": false
+  },
+  {
+   "cid": "U27",
+   "star": "HD14055",
+   "eb": "A002_Xff99e1_X2b2ee",
+   "p": 1.0,
+   "n_block": 31,
+   "n_indep": 28,
+   "power": true
+  },
+  {
+   "cid": "U29",
+   "star": "HD14055",
+   "eb": "A002_Xfff3d8_Xd46",
+   "p": 1.0,
+   "n_block": 31,
+   "n_indep": 29,
+   "power": true
+  },
+  {
+   "cid": "U32",
+   "star": "HD170773",
+   "eb": "A002_Xff0235_X8c42",
+   "p": 1.0,
+   "n_block": 4,
+   "n_indep": 2,
+   "power": true
+  },
+  {
+   "cid": "U33",
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "eb": "A002_Xc66ce1_Xaa9",
+   "p": 0.99,
+   "n_block": 8,
+   "n_indep": 8,
+   "power": true
+  },
+  {
+   "cid": "U34",
+   "star": "LHS 1140",
+   "eb": "A002_Xd9d7c7_X6fd2",
+   "p": 0.94,
+   "n_block": 4,
+   "n_indep": 4,
+   "power": true
+  },
+  {
+   "cid": "U35",
+   "star": "bet Pic",
+   "eb": "A002_Xd9668b_X3a90",
+   "p": 0.5514285714285714,
+   "n_block": 1,
+   "n_indep": 0,
+   "power": false
+  },
+  {
+   "cid": "U36",
+   "star": "bet Pic",
+   "eb": "A002_Xd9668b_Xa9df",
+   "p": 0.3485714285714286,
+   "n_block": 1,
+   "n_indep": 0,
+   "power": false
+  },
+  {
+   "cid": "U38",
+   "star": "GL 3379 Gaia DR3 3316364602541746048",
+   "eb": "A002_Xdaef5a_X6873",
+   "p": 0.985,
+   "n_block": 6,
+   "n_indep": 5,
+   "power": true
+  },
+  {
+   "cid": "U39",
+   "star": "HD161868",
+   "eb": "A002_Xff699e_Xd7",
+   "p": 0.99,
+   "n_block": 13,
+   "n_indep": 9,
+   "power": true
+  },
+  {
+   "cid": "U40",
+   "star": "HD14055",
+   "eb": "A002_Xff99e1_X24be0",
+   "p": 0.995,
+   "n_block": 31,
+   "n_indep": 28,
+   "power": true
+  },
+  {
+   "cid": "U41",
+   "star": "HD14055",
+   "eb": "A002_Xfffde1_X3835",
+   "p": 0.995,
+   "n_block": 31,
+   "n_indep": 29,
+   "power": true
+  }
+ ],
+ "same_session_only": [
+  {
+   "cid": "U03",
+   "star": "ALMA J153702653-33192492",
+   "eb": "A002_Xd9d7c7_Xbb64",
+   "p": 0.4928571428571429,
+   "n_block": 1,
+   "n_indep": 0,
+   "power": false
+  },
+  {
+   "cid": "U35",
+   "star": "bet Pic",
+   "eb": "A002_Xd9668b_X3a90",
+   "p": 0.5514285714285714,
+   "n_block": 1,
+   "n_indep": 0,
+   "power": false
+  },
+  {
+   "cid": "U36",
+   "star": "bet Pic",
+   "eb": "A002_Xd9668b_Xa9df",
+   "p": 0.3485714285714286,
+   "n_block": 1,
+   "n_indep": 0,
+   "power": false
+  }
+ ],
+ "support": {
+  "day_Day": 24.682153000000042,
+  "day_Yr": 8.54677799999996,
+  "adopted_Day": 24.017832000000013,
+  "adopted_Yr": 8.54677799999996
+ },
+ "persys_support": {
+  "day_Day": 99.04236499999986,
+  "day_Yr": 19.58150399999991,
+  "adopted_Day": 98.02157299999998,
+  "adopted_Yr": 19.58150399999991
+ },
+ "n_repeat_readings": 297,
+ "n_repeat_readings_independent": 258,
+ "coverage_macros": {
+  "day": {
+   "CvConfGHzDay": "24.7",
+   "CvConfGHzYr": "8.5",
+   "CvConfPctDay": "52",
+   "CvConfPctYr": "18",
+   "CvConfNMaxDay": "27",
+   "CvConfNuMaxDay": "231"
+  },
+  "adopted": {
+   "CvConfGHzDay": "24.0",
+   "CvConfGHzYr": "8.5",
+   "CvConfPctDay": "50",
+   "CvConfPctYr": "18",
+   "CvConfNMaxDay": "27",
+   "CvConfNuMaxDay": "231"
+  },
+  "moved": [
+   "CvConfGHzDay",
+   "CvConfPctDay"
+  ]
+ },
+ "bandwidth_loss": {
+  "bet Pic": 0.8622949999999889,
+  "HD 10647": 0.14177599999993618,
+  "TRAPPIST-1": 0.01672099999996135
+ },
+ "per_system": {
+  "51 Eri": {
+   "day": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   }
+  },
+  "61 Vir": {
+   "day": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "ALMA J153702653-33192492": {
+   "day": {
+    "census": [
+     true,
+     false,
+     true
+    ],
+    "recur": [
+     true,
+     false,
+     true
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     false,
+     true
+    ],
+    "recur": [
+     true,
+     false,
+     true
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "AU Mic": {
+   "day": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "Barta 161 12": {
+   "day": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   }
+  },
+  "CD-57 1054": {
+   "day": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     true
+    ]
+   },
+   "adopted": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     true
+    ]
+   },
+   "or": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "CP-72 2713": {
+   "day": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "GJ 2006A": {
+   "day": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   }
+  },
+  "GJ 849": {
+   "day": {
+    "census": [
+     true,
+     false,
+     true
+    ],
+    "recur": [
+     true,
+     false,
+     true
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     false,
+     true
+    ],
+    "recur": [
+     true,
+     false,
+     true
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "GJ14 Gaia DR3 383426372059603712": {
+   "day": {
+    "census": [
+     true,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "GL 3379 Gaia DR3 3316364602541746048": {
+   "day": {
+    "census": [
+     true,
+     false,
+     true
+    ],
+    "recur": [
+     true,
+     false,
+     true
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     false,
+     true
+    ],
+    "recur": [
+     true,
+     false,
+     true
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "HD 10647": {
+   "day": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "HD 139084": {
+   "day": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   }
+  },
+  "HD 139664": {
+   "day": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "HD 155555C": {
+   "day": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   }
+  },
+  "HD 207129 Gaia DR3 6564091190988411520": {
+   "day": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "HD 23484 Gaia DR3 4856592239127350400": {
+   "day": {
+    "census": [
+     true,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "HD 285968": {
+   "day": {
+    "census": [
+     true,
+     false,
+     true
+    ],
+    "recur": [
+     true,
+     false,
+     true
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     false,
+     true
+    ],
+    "recur": [
+     true,
+     false,
+     true
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "HD 31392": {
+   "day": {
+    "census": [
+     true,
+     false,
+     true
+    ],
+    "recur": [
+     true,
+     false,
+     true
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     false,
+     true
+    ],
+    "recur": [
+     true,
+     false,
+     true
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "HD 38858 Gaia DR3 3023711269067191296": {
+   "day": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "HD 45184": {
+   "day": {
+    "census": [
+     true,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "HD 48370": {
+   "day": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "HD 69830": {
+   "day": {
+    "census": [
+     true,
+     false,
+     true
+    ],
+    "recur": [
+     true,
+     false,
+     true
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     false,
+     true
+    ],
+    "recur": [
+     true,
+     false,
+     true
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "HD 89452": {
+   "day": {
+    "census": [
+     true,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "HD110411": {
+   "day": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "HD14055": {
+   "day": {
+    "census": [
+     true,
+     false,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     false,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "HD161868": {
+   "day": {
+    "census": [
+     true,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "HD170773": {
+   "day": {
+    "census": [
+     true,
+     false,
+     true
+    ],
+    "recur": [
+     true,
+     false,
+     true
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     false,
+     true
+    ],
+    "recur": [
+     true,
+     false,
+     true
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "HD172555": {
+   "day": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   }
+  },
+  "HD202628": {
+   "day": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "HD377": {
+   "day": {
+    "census": [
+     true,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "HD53143 Gaia DR3 5479222240596469632": {
+   "day": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "HD61005": {
+   "day": {
+    "census": [
+     true,
+     false,
+     true
+    ],
+    "recur": [
+     true,
+     false,
+     true
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     false,
+     true
+    ],
+    "recur": [
+     true,
+     false,
+     true
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "HIP 490": {
+   "day": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   }
+  },
+  "HIP10679": {
+   "day": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   }
+  },
+  "HN Lib": {
+   "day": {
+    "census": [
+     true,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "HR 1010 Gaia DR3 4722135642226902656": {
+   "day": {
+    "census": [
+     true,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "L 836-122": {
+   "day": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   }
+  },
+  "LHS 1140": {
+   "day": {
+    "census": [
+     true,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "LP 353-51": {
+   "day": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   }
+  },
+  "LP 476-207 384128": {
+   "day": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   }
+  },
+  "NAME AT Mic AB Gaia DR3 6792436799475128960": {
+   "day": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   }
+  },
+  "PM J034331958": {
+   "day": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   }
+  },
+  "TRAPPIST-1": {
+   "day": {
+    "census": [
+     true,
+     false,
+     true
+    ],
+    "recur": [
+     true,
+     false,
+     true
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     false,
+     true
+    ],
+    "recur": [
+     true,
+     false,
+     true
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "TWA 3A 696000": {
+   "day": {
+    "census": [
+     true,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "TWA 7": {
+   "day": {
+    "census": [
+     true,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "TYC 2211-1309-1": {
+   "day": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   }
+  },
+  "UCAC2 20312880": {
+   "day": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   }
+  },
+  "UCAC3 176-23654": {
+   "day": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   }
+  },
+  "V star TX PsA": {
+   "day": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   }
+  },
+  "WD 0407179": {
+   "day": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   }
+  },
+  "Wolf 219": {
+   "day": {
+    "census": [
+     true,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "bet Pic": {
+   "day": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "eps Eri": {
+   "day": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "eta Crv": {
+   "day": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "hd107146": {
+   "day": {
+    "census": [
+     true,
+     false,
+     true
+    ],
+    "recur": [
+     true,
+     false,
+     true
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     false,
+     true
+    ],
+    "recur": [
+     true,
+     false,
+     true
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "hd92945": {
+   "day": {
+    "census": [
+     true,
+     false,
+     true
+    ],
+    "recur": [
+     true,
+     false,
+     true
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     false,
+     true
+    ],
+    "recur": [
+     true,
+     false,
+     true
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "j1256-1257": {
+   "day": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   }
+  },
+  "kap CrB": {
+   "day": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     false,
+     false,
+     false
+    ],
+    "recur": [
+     false,
+     false,
+     false
+    ]
+   }
+  },
+  "lp 876-10 Gaia DR3 6623351805412369024": {
+   "day": {
+    "census": [
+     true,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  "tau Cet": {
+   "day": {
+    "census": [
+     true,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "adopted": {
+    "census": [
+     true,
+     false,
+     false
+    ],
+    "recur": [
+     true,
+     false,
+     false
+    ]
+   },
+   "or": {
+    "census": [
+     true,
+     true,
+     true
+    ],
+    "recur": [
+     true,
+     true,
+     true
+    ]
+   }
+  }
+ }
+}

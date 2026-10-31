@@ -1,0 +1,877 @@
+%% `numberedappendix` AND `appendixfloats` are both required, not cosmetic.
+%% Without `numberedappendix` the class sets
+%% `\AppendixApjSectionMarkInTitle#1{\relax}`, so an appendix heading prints
+%% its title and NO LETTER -- while the body cites "Appendix~D.2" and
+%% "\S D.2", and the reader is then sent to a label that is nowhere on the
+%% page.  The letters and the subsection numbers are in
+%% `\thesection`/`\thesubsection` either way and are simply not typeset
+%% without it.  `appendixfloats` makes the appendix floats carry their
+%% appendix's letter (A1, B1, D1, D2, E1) and restart at one in each;
+%% without it an appendix figure cited seventh from the main text prints as
+%% "Figure 10" and the main-text sequence looks wrong when it is not.
+%% Every reference is a \ref, so nothing in the prose is typed.
+\documentclass[twocolumn,twocolappendix,numberedappendix,appendixfloats]{openjournal}
+
+%% ★★★ v4.25: PIN THE TRAILER /ID.  pdfTeX derives the PDF's trailer /ID from
+%% an MD5 of the OUTPUT FILENAME and the build timestamp, so the same source
+%% built as a different .tex name produced a PDF differing in exactly those 32
+%% hex digits and in nothing else.  That made two things we need mutually
+%% exclusive: `arxivset.sh`'s A8 proof that the stripped package is
+%% byte-identical to the in-tree build, and a submission package whose
+%% top-level filename carries no internal version string.  With the ID pinned
+%% the PDF is a function of the source alone -- SOURCE_DATE_EPOCH already pins
+%% the timestamp half of the same hash.  Guarded, because \pdftrailerid is a
+%% pdfTeX primitive and the paper must still compile under an engine without
+%% it (the ID is then filename-derived again, which is the old behaviour).
+\ifdefined\pdftrailerid
+  \pdftrailerid{alma-narrowband-carrier-search-40pc}
+\fi
+
+%% ★★★★ v4.25: AND THE PDF ITSELF CARRIED A VERSION STRING, WHERE NO TEXT
+%% SWEEP COULD SEE IT.  For every included PDF figure pdfTeX writes the path
+%% it was included from into the XObject dictionary as `/PTEX.FileName`, so
+%% the shipped file held eleven local paths -- among them
+%% `./figures/chain_v412.pdf`, the one occurrence of `_v4` anywhere in the
+%% binary.  `pdftotext` cannot see it (it is a dictionary entry, not a text
+%% stream), so `genai_sweep`, `prose_v412` and the forbidden-mention sweep all
+%% passed a PDF that named an internal revision.  Suppressing the three PTEX
+%% entries removes it, removes ten other local build paths with it, and makes
+%% the output independent of where the figures sit -- which is also what lets
+%% `arxivset.sh`'s A15 rename them in the package and A8 still prove the
+%% clean build byte-identical.
+\ifdefined\pdfsuppressptexinfo
+  \pdfsuppressptexinfo=-1
+\fi
+
+%% ★★★★ AND THE DEFECT THE OPTION ABOVE CREATED, FOUND BY `labelcheck` F7 AND
+%% NOT BY pdflatex.  `appendixfloats` resets the float counters in each
+%% appendix, so the PRINTED numbers are right -- A1, C1, D1, D2 -- while the
+%% HYPERREF ANCHOR is built from the bare counter and is `table.1` for all
+%% four of the appendix tables at once.  Every body hyperlink to Table D1 then
+%% lands on Table 1, which is the fifth defect of this project that the log
+%% cannot see and a reader can.  `\theH...` is hyperref's own hook for exactly
+%% this: it must carry whatever makes the number unique, which here is the
+%% appendix letter.
+\makeatletter
+\AtBeginDocument{%
+  \renewcommand{\theHtable}{\thesection.\arabic{table}}%
+  \renewcommand{\theHfigure}{\thesection.\arabic{figure}}%
+  \renewcommand{\theHequation}{\thesection.\arabic{equation}}%
+}
+\makeatother
+
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{array}
+
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage{booktabs}
+%% The crossing ledger is fifteen columns wide and is set landscape, which
+%% is what lets every one of its rows print at the same size as the rest of
+%% the tables in this paper rather than two points below the body text.
+\usepackage{rotating}
+%% ★★★★ AND THE SIDEWAYS FLOAT HAS TO BE PUT BACK ON THE PAGE.  `rotating`
+%% places a rotated double float with `\@@line`, which is `\hbox to \hsize`,
+%% and sets `\hsize\textwidth` itself when it opens the float -- but this
+%% class is derived from revtex4, whose own float machinery leaves \hsize at
+%% the COLUMN width by the time the box is placed.  The rotated box was
+%% therefore centred on column one instead of on the page: measured on the
+%% shipped v4.19 build, the crossing ledger's caption ran from x = -5.9 pt,
+%% i.e. off the left edge of the paper, with the first word or two missing
+%% from every line of a nineteen-line caption, and 133 pt of the page's width
+%% stood empty on the right.  No gate saw it: rotation hides the overflow
+%% from `Overfull \hbox`, and nothing in this build had ever measured ink
+%% against the text block.  `rotfit_r18.py` measures it now.
+%% The patch restores the width the package meant to use, at the one point
+%% where it is read.  `\patchcmd` fails loudly rather than silently doing
+%% nothing, because a patch that stops applying after a package update would
+%% put the caption back off the page.
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\end@rotdblfloat}{\vbox to \textheight}%
+  {\hsize\textwidth\linewidth\textwidth\vbox to \textheight}%
+  {}{\ClassError{technosignatures}{rotating's \string\end@rotdblfloat\space
+      could not be patched: the sideways ledger would print off the page}{}}
+\makeatother
+
+%% ★★★ v4.11: SUPPRESS THE CLASS'S PREPRINT VERSION STAMP (referee 2, first
+%% minor).  `openjournal.cls` sets `\submitted{Version \today}` and then
+%% `\journalinfo{\@submitted}`, so the line is typeset twice -- once as the
+%% title-page slug and once in the journal-info header -- and it was the
+%% first thing on page 1.  The build pins SOURCE_DATE_EPOCH so that the
+%% figures and the PDF are byte-identical run to run, which means `\today`
+%% reads "January 1, 2020" and would read that for ever.
+%%
+%% The date is therefore NOT unfrozen: a reproducible build is worth more
+%% than a date, and a date that must never change should not be printed at
+%% all.  A journal submission does not want a preprint version stamp
+%% either.  Both are emptied here rather than in the class, which is a
+%% third-party template the journal may replace.  `abswords.py` and the
+%% LaTeX-log gate both read page 1, so a regression shows up there.
+\submitted{}
+\journalinfo{}
+% suppress the class's end-of-document template advertisement;
+% delete this block to restore it
+\makeatletter
+\renewenvironment{bottompar}{\setbox\z@\vbox\bgroup}{\egroup}
+%% ★ v4.16: AND THE SAME ADVERTISEMENT AT THE TOP OF PAGE 1, which the
+%% end-of-document suppression above did not reach.  "Preprint typeset using
+%% LaTeX style openjournal v. 09/06/15" was the first line of the paper --
+%% above the title -- and it is a property of the template, not of the work.
+%% Referee 2's first minor point was about exactly this kind of slug printed
+%% where a reader looks first; \submitted and \journalinfo were emptied for it
+%% and this line was left.  The \vspace that follows it is kept, so the title
+%% block does not move and no page count changes.
+\long\def\frontmatter@title@above{%
+  \vspace*{-\headsep}\vspace*{\headheight}%
+  \footnotesize
+  {\footnotesize\textsc{\@journalinfo}}\par
+  \par\vspace*{-\baselineskip}\vspace*{0.625in}%
+}%
+\makeatother
+
+% ---------------------------------------------------------------
+% \pv{\Macro} -- print a probability with its relational symbol.
+% Generated p-value macros are of two kinds: an ordinary value such as
+% 0.186, and a bound such as <10^{-4} for a probability too small for the
+% ensemble to resolve. Writing "$p=\Macro$" at the use site is right for
+% the first and produces "p =< 10^-4" for the second; writing "$p\Macro$"
+% is right for the second and produces "p0.186" for the first. Both
+% mistakes were in the manuscript. The relation therefore belongs with
+% the value, decided once, here: \pv inspects the first token of the
+% expanded macro and supplies "=" unless the value already carries its
+% own relational symbol.
+\makeatletter
+\def\@pvlt{<}\def\@pvgt{>}\def\@pveq{=}
+\def\@pvfirst#1#2\@nil{%
+  \def\@pvA{#1}%
+  \ifx\@pvA\@pvlt <#2%
+  \else\ifx\@pvA\@pvgt >#2%
+  \else\ifx\@pvA\@pveq =#2%
+  \else =#1#2\fi\fi\fi}
+\DeclareRobustCommand{\pv}[1]{p\,\expandafter\@pvfirst#1\@nil}
+\makeatother
+% ---------------------------------------------------------------
+% \rankstatus -- the status of the star-versus-control rank, in ONE
+% formulation used verbatim wherever the question arises (referee 1, item 1).
+% Earlier versions stated this in several incompatible ways: the main text
+% denied exchangeability while Appendix A asserted that star and controls
+% "remain exchangeable in signal-to-noise ratio", and a table caption called
+% the ensemble a "calibrated screen".  A macro makes the use sites identical
+% by construction rather than by proof-reading.
+% ---------------------------------------------------------------
+\shorttitle{An ALMA Archival Technosignature Search within 40\,pc}
+\shortauthors{White \& Dey}
+
+\input{numbers/survey_numbers}
+\input{numbers/survey_numbers_round8}
+\input{numbers/survey_numbers_round9}
+\input{numbers/survey_numbers_round10}
+\input{numbers/survey_numbers_round11}
+\input{numbers/survey_numbers_round12}
+\input{numbers/survey_numbers_round13}
+\input{numbers/survey_numbers_pointing}
+\input{numbers/survey_numbers_round15}
+\input{numbers/survey_numbers_round16}
+\input{numbers/survey_numbers_round17}
+\input{numbers/survey_numbers_recurrence}
+\input{numbers/survey_numbers_round14}
+\input{numbers/survey_numbers_localnull}
+\input{numbers/survey_numbers_round18}
+\input{numbers/survey_numbers_round19}
+\input{numbers/survey_numbers_round20}
+\input{numbers/survey_numbers_round21}
+\input{numbers/survey_numbers_round22}
+\input{numbers/survey_numbers_round23}
+\input{numbers/survey_numbers_round24}
+\input{numbers/survey_numbers_round25}
+\input{numbers/survey_numbers_round26}
+\input{numbers/survey_numbers_hd23484}
+\input{numbers/survey_numbers_bpicctrl}
+\input{numbers/survey_numbers_round27}
+\input{numbers/survey_numbers_round28}
+\input{numbers/survey_numbers_round29}
+\input{numbers/survey_numbers_round30}
+\input{numbers/survey_numbers_round31}
+\input{numbers/survey_numbers_round32}
+\input{numbers/survey_numbers_round33}
+\input{numbers/survey_numbers_round34}
+\input{numbers/survey_numbers_round35}
+\input{numbers/survey_numbers_round36}
+\input{numbers/survey_numbers_round37}
+\input{numbers/survey_numbers_round38}
+\input{numbers/survey_numbers_round39}
+\input{numbers/survey_numbers_round40}
+\input{numbers/survey_numbers_round41}
+\input{numbers/survey_numbers_round42}
+\input{numbers/survey_numbers_round43}
+\input{numbers/survey_numbers_round44}
+\input{numbers/survey_numbers_round45}
+\input{numbers/survey_numbers_round46}
+\input{numbers/survey_numbers_round47}
+\input{numbers/survey_numbers_round48}
+\input{numbers/survey_numbers_round49}
+\input{numbers/survey_numbers_round50}
+\input{numbers/survey_numbers_round1280}
+\input{numbers/survey_numbers_round51}
+\input{numbers/survey_numbers_round52}
+\input{numbers/survey_numbers_round53}
+\input{numbers/survey_numbers_round54}
+\input{numbers/survey_numbers_round55}
+\input{numbers/survey_numbers_round56}
+\input{numbers/survey_numbers_round57}
+\input{numbers/survey_numbers_round58}
+\input{numbers/survey_numbers_round59}
+\input{numbers/survey_numbers_round60}
+\input{numbers/survey_numbers_round61}
+\input{numbers/survey_numbers_round62}
+\input{numbers/survey_numbers_round63}
+\input{numbers/survey_numbers_round64}
+\input{numbers/survey_numbers_round75}
+\input{numbers/survey_numbers_round80}
+\input{numbers/survey_numbers_round81}
+\input{ledger_legend_v403}
+\input{numbers/survey_numbers_round77}
+\input{numbers/survey_numbers_round78}
+\input{numbers/survey_numbers_round79}
+\input{numbers/survey_numbers_round66}
+\input{numbers/survey_numbers_round67}
+\input{numbers/survey_numbers_round68}
+\input{numbers/survey_numbers_round69}
+\input{numbers/survey_numbers_round70}
+\input{numbers/survey_numbers_round71}
+\input{numbers/survey_numbers_round73}
+\input{numbers/survey_numbers_round74}
+% R2-4 (v3.99): a visually distinct symbol for tail quantities computed
+% against the screen's own exchangeability-violating null, so they cannot
+% be read as calibrated significance levels. p stays for genuine tests.
+\input{peff_range_v372}
+\input{numbers/survey_numbers_round82}
+\input{numbers/survey_numbers_round83}
+\input{numbers/survey_numbers_round84}
+\input{numbers/survey_numbers_round85}
+\input{numbers/survey_numbers_round86}
+\input{numbers/survey_numbers_round87}
+%% round 88 RETIRED (v4.11): maskframe_v404.py existed to PROVE the line mask
+%% was evaluated topocentrically, which is the defect R2-M3 asks us to fix and
+%% not a result.  The mask is evaluated in each star own rest frame by
+%% maskframe_v411.py (round 160) and \MaskNOffsetsMHz goes with the claim.
+\input{numbers/survey_numbers_round89}
+\input{numbers/survey_numbers_round90}
+\input{numbers/survey_numbers_round91}
+\input{numbers/survey_numbers_round92}
+%% round 93 RETIRED (v4.11): ladder_v405.py emitted a two-frame mask ladder
+%% nothing inputs.  The single-frame ladder and the robustness table are
+%% maskframe_v411.py (Table maskrobust, tab_maskrobust_v411.tex).
+\input{numbers/survey_numbers_round94}
+% v4.06 (DECISIONS_R8 D16/D17/D18 and the v4.05 residue)
+\input{numbers/survey_numbers_round95}
+\input{numbers/survey_numbers_round96}
+\input{numbers/survey_numbers_round97}
+\input{numbers/survey_numbers_round98}
+\input{numbers/survey_numbers_round99}
+\input{numbers/survey_numbers_round100}
+\input{numbers/survey_numbers_round101}
+\input{numbers/survey_numbers_round102}
+\input{regen_count}
+%% round 104 (figures owner): the quantities the beta Pic positive-control
+%% figure draws, emitted by its own generator so the figure and the caption
+%% cannot disagree.  Before round 103, which must stay last.
+\input{numbers/survey_numbers_round104}
+%% round 65 (sensitivity owner): what the injected carriers deposit -- the
+%% correlator's three-point channel response at random sub-channel phase.  The
+%% two-stratum completeness it also measured is SUPERSEDED by round 180: with
+%% the rank out of the chain there is nothing to stratify on.  Before 103.
+\input{numbers/survey_numbers_round65}
+%% round 72 (sensitivity owner): the omitted annual parallax, applied -- the
+%% shallower limits it gives and the corrected per-window trigger.  Before
+%% round 103.
+\input{numbers/survey_numbers_round72}
+%% round 105 RETIRED with screencost_v410.py: Ruling 1 takes the spatial rank
+%% out of the disposition chain, so the completeness is not charged for it and
+%% there is no screen cost to publish.  The like-for-like rank cost that
+%% survives is sens_r11.py's, measured over the same injected windows as the
+%% completeness itself (round 180, cited as \SensCostLike in Sec. 5.1).
+%% round 110 (ledger owner): the block and window ledger -- every set of
+%% execution blocks the paper uses, in rows that sum, each count asserted
+%% equal to the macro the rest of the paper already uses for it.  Before 103.
+\input{numbers/survey_numbers_round110}
+%% round 111 (ledger owner): the selection function on one parallax cut, every
+%% searched star classified, confirmed planets from a dated catalogue.
+\input{numbers/survey_numbers_round111}
+%% round 120 (recurrence owner): the stellar-frame recurrence test applied to
+%% every unattributed crossing, and the separation of what the survey could
+%% search from what it could confirm.  Before round 103.
+\input{numbers/survey_numbers_round120}
+%% round 130 (statistics owner): the on-star noise ratio, the direction of the
+%% spatial rank and the data-quality disposition.  Before round 103.
+\input{numbers/survey_numbers_round130}
+%% round 135 (cover owner): the survey-completeness map N*(nu, EIRP), Fig. covmap.
+\input{numbers/survey_numbers_round135}
+%% round 140 (stack owner): every stack tolerance computed from that stack's
+%% own channel width, paired with the width macro so the two can never be
+%% printed apart, plus the stacking weight pathology.  Before round 103.
+\input{numbers/survey_numbers_round140}
+%% round 170 (line-mask owner): the line list itself -- the catalogue query,
+%% its rule, and the rest frequencies the mask table prints.  Before 160,
+%% which measures attribution against it.
+\input{numbers/survey_numbers_round170}
+%% round 160 (line-mask and frame owner): the mask evaluated in each star's
+%% own rest frame -- the frame chain, what the mask costs, and the one line
+%% coincidence reported as a note rather than as a disposition.  Before 103.
+\input{numbers/survey_numbers_round160}
+%% round 175 (detection-chain owner): the execution-block quality criterion,
+%% the class decomposition of the crossings, and the chance expectation with
+%% its measured tail factor.  Before 103.
+\input{numbers/survey_numbers_round175}
+%% Round 11.  One generator per file, each in its own reserved block:
+%% 180 sensitivity, 185 coverage, 190/191 events, 195 consistency, 200 prose,
+%% 205 the crossing census, 210 the stack.  Each must be input or its macros
+%% are undefined.
+%% ★ These go BEFORE round 103, not after.  Round 103 is the retirement pass
+%% and its \renewcommands are what make a superseded value unreachable; a
+%% macro file input after it can silently restore a name 103 exists to kill.
+%% I put them after it first, and only the comment below stopped me.
+\input{numbers/survey_numbers_round180}
+\input{numbers/survey_numbers_round185}
+\input{numbers/survey_numbers_round190}
+\input{numbers/survey_numbers_round191}
+\input{numbers/survey_numbers_round1270}
+\input{numbers/survey_numbers_round2900}
+\input{numbers/survey_numbers_round1300}
+\input{numbers/survey_numbers_round195}
+\input{numbers/survey_numbers_round200}
+\input{numbers/survey_numbers_round205}
+\input{numbers/survey_numbers_round210}
+%% Round 12.  One generator per file, each in its own reserved block:
+%% 220 the measured recurrence null and the widened window
+%% (recurnull_v413.py), 230 the quality-passing/flagged crossing split
+%% (events_r12.py), 240 the uniform species rule and the recurrence test on
+%% the attributed crossings (maskrecur_v413.py), 250 the intermittency
+%% campaign and the drift-grid relation (sens_r12.py), 260 the chance
+%% comparison over one stated population (stats_v413.py), 270 the
+%% census-only stacked limit (stackfix_v413.py), 300 the census closure
+%% (census_r12.py).
+%% ★ Same rule as the round-11 block above, and it matters more with seven
+%% files: every one of these is input BEFORE round 103, because round 103 is
+%% the retirement pass and a macro file read after it can silently restore a
+%% name 103 exists to kill.
+\input{numbers/survey_numbers_round220}
+\input{numbers/survey_numbers_round230}
+\input{numbers/survey_numbers_round330}
+\input{numbers/survey_numbers_round250}
+\input{numbers/survey_numbers_round260}
+\input{numbers/survey_numbers_round270}
+\input{numbers/survey_numbers_round300}
+\input{numbers/survey_numbers_round310}
+\input{numbers/survey_numbers_round311}
+\input{numbers/survey_numbers_round980}
+\input{numbers/survey_numbers_round981}
+\input{numbers/survey_numbers_round982}
+%% round 985 (r25-lines): the two unattributed crossings of beta Pictoris
+%% against the methanol 5_K->4_K ladder, and the four measurements that
+%% decide the question against it at every excitation temperature.
+\input{numbers/survey_numbers_round985}
+%% round 986 (r25-lines): the three crossings that fall on transitions of the
+%% one species the mask leaves out, with each sightline's own catalogued CO.
+\input{numbers/survey_numbers_round986}
+%% round 990: the unmasked fraction of every searched window, in the star's
+%% own rest frame, and the rule that follows from it -- a window the
+%% attribution mask leaves nothing of carries no limit.
+\input{numbers/survey_numbers_round990}
+\input{numbers/survey_numbers_round340}
+\input{numbers/survey_numbers_round350}
+%% round 14.  These five go here, ABOVE round 103, because round 103's
+%% \renewcommands are the retirement pass and must see every definition.
+\input{numbers/survey_numbers_round410}
+\input{numbers/survey_numbers_round420}
+\input{numbers/survey_numbers_round421}
+\input{numbers/survey_numbers_round440}
+\input{numbers/survey_numbers_round450}
+\input{numbers/survey_numbers_round460}
+%% round 510 (r15-cells): every above-trigger cell of every window, the chance
+%% expectation at the same grain, and the recurrence test run on each cell the
+%% attribution leaves unattributed.
+\input{numbers/survey_numbers_round510}
+%% round 520 (r15-lsr): the LSR evaluation of the line mask.  This \input was
+%% missing, which left roundcollide failing on an orphan round file and every
+%% \Ls... macro undefined; added by r15-recur because \S5.6 cites two of them.
+%% Rounds 530 (r15-calib) and 540 (r15-smear) were missing their \input lines
+%% too, and \S5.3.1 and \S5.1 already cite \Cd... and \Sm... macros, so the
+%% build stopped on an undefined control sequence rather than on a warning.
+%% All three added here by r15-recur; each owner should confirm the placement.
+\input{numbers/survey_numbers_round520}
+\input{numbers/survey_numbers_round530}
+\input{numbers/survey_numbers_round540}
+%% round 550 (r15-recur): what the recurrence test permits, the four recovery
+%% probabilities singly, and the two attributed crossings not recovered.
+\input{numbers/survey_numbers_round550}
+%% round 560 (counts owner): the master count table.  Every value in it is
+%% read out of the macro layer, so this input adds arithmetic between the
+%% published counts and the per-system decomposition of the chance
+%% expectation, and no count of its own except the Class A crossing total.
+\input{numbers/survey_numbers_round560}
+%% round 570 (figures owner): the comparison programmes of Figure 1 -- each
+%% one's own published detection threshold, the factor that puts it on the
+%% common 5 sigma basis, and its channel width.  Table~\ref{tab:litthresh}
+%% and the figure are generated together from this, so they cannot disagree.
+\input{numbers/survey_numbers_round570}
+%% round 600 (integrator): the two published searches above 30 GHz that
+%% reached nearby stars, read out of the sentence of each paper that
+%% states each number.  Section 1 typed five of their values; a number
+%% typed into LaTeX is checked by nothing, and this round has already
+%% been caught mis-attributing two external constants.  Before 103.
+\input{numbers/survey_numbers_round600}
+%% round 620 (sensitivity and conventions): where the channel response is
+%% applied, the representativeness of the injected set against the whole
+%% Class A population, the proxy test on the blocks with no phase-stability
+%% record, and the consequences of adopting ALMA's primary-beam width.
+\input{numbers/survey_numbers_round620}
+%% round 630 (the calibration mechanism, on the measured continuum): the
+%% continuum actually present at each extraction position, the noise of the
+%% de-drifted stack, which windows admit a channel-dependent residual once
+%% both are right, and what those windows then measure the residual to be.
+\input{numbers/survey_numbers_round630}
+%% round 640 (r21-calib): the calibration-residual census over the whole
+%% survey, on the continuum measured at the extraction position in each
+%% window's own execution block, with the fraction a residual would have to
+%% reach at the least demanding window anywhere.
+\input{numbers/survey_numbers_round640}
+%% round 953 (r21-calib/r21-integrate): how closely the injection scorer
+%% matched the injected track, what the same scorer returns with nothing
+%% injected, and the configurations of the survey the completeness transfer
+%% never saw.
+\input{numbers/survey_numbers_round953}
+%% round 950 (r21-scope): the two classes divided on channel width, the
+%% Class A windows the drift criterion fails and why, and what the Class B
+%% windows that meet it would add.
+\input{numbers/survey_numbers_round950}
+%% round 951 (r21-scope): what "unattributed" means against a line list
+%% chosen differently, measured as band coverage and as crossings attributed.
+\input{numbers/survey_numbers_round951}
+%% round 952 (r21-scope): the image sideband, bounded from each block's own
+%% spectral windows.
+\input{numbers/survey_numbers_round952}
+%% ---- round 22 ----
+%% round 960 (r22-edge): the drift grid's own edges -- the fitted drifts are
+%% grid trials, the grid is asymmetric, and the crossings whose maximum lies
+%% on an outermost trial are reported as lower bounds.
+\input{numbers/survey_numbers_round960}
+%% round 961 (r22-edge): Proxima b's orbit against the stacked limit's
+%% one-channel tolerance, and the single-epoch limit that applies at any
+%% inclination.
+\input{numbers/survey_numbers_round961}
+%% round 962 (r22-edge): the eps Eri Band 6 windows outside the archival
+%% extension -- which rule removes them, where each one's primary-beam offset
+%% comes from, and the deepest limit on that star.
+\input{numbers/survey_numbers_round962}
+%% round 971 (r22-num): the unrecorded decorrelation set as an array mix, the
+%% registration median in channels, one owner for the survey control median,
+%% and the provenance of the one superseded extraction.
+\input{numbers/survey_numbers_round971}
+%% round 972 (r22-num): referee 1's issues 1-3 audited -- the drift-resolving
+%% subset, the imputed and measured decorrelation corrections per system, and
+%% the configurations the completeness transfer never saw.
+\input{numbers/survey_numbers_round972}
+%% round 660 (the line mask and the interference screens): the rank-passing
+%% crossings the adopted attribution leaves alone, the cross-target occupancy
+%% screen run on each of them, and the arithmetic that reconciles the densest
+%% band of the clustering test with the crossing ledger.  Added here by
+%% r16-mask with its own round file; integrator to confirm the placement,
+%% which only has to precede round 103.
+\input{numbers/survey_numbers_round660}
+\input{numbers/survey_numbers_round700}
+\input{numbers/survey_numbers_round730}
+%% round 680 (the figure of merit): the comparison programmes' limits as their
+%% own papers state them, their figures of merit on the common threshold, and
+%% the gap between them and this experiment on that same bare threshold.  Read
+%% out of the literature table Table~\ref{tab:litthresh} and
+%% Figure~\ref{fig:context} are both generated from, so one external constant
+%% cannot carry two values.  Added by r16-fig; only has to precede round 103.
+\input{numbers/survey_numbers_round680}
+%% round 720 (beam owner): the primary-beam response that is applied, the
+%% level below which a window is not used -- solved for from the agreement
+%% between the Gaussian and the blocked-aperture forms rather than chosen --
+%% and the limits of the one star this survey covers far off axis.
+%% Only has to precede round 103.
+\input{numbers/survey_numbers_round720}
+%% round 721 (beam owner): the figure of merit on the star-bandwidth product
+%% the survey actually searched, which is the sum of the per-system
+%% fractional bandwidths and not a star count times one of them.
+%% Only has to precede round 103.
+\input{numbers/survey_numbers_round721}
+%% round 740 (sensitivity, r18-sens): the three things the sensitivity
+%% section stated more strongly than it measured -- which systems' limits
+%% were measured and which transferred, the tail of the decorrelation
+%% correction and the systems it touches, and the swept-carrier attenuation
+%% through the delivered channel response rather than through a sinc.
+%% Only has to precede round 103.
+\input{numbers/survey_numbers_round740}
+%% round 750 (R1-2.4-6 / R2-3: the recurrence recovery probability measured
+%% rather than modelled): the recovery fraction of synthetic carriers injected
+%% at the trigger amplitude into the covering repeat blocks of the crossings
+%% whose per-integration spectra survive, beside the probability the reading's
+%% own model gives, the carrier-free readings that confirmed nothing, and the
+%% register of the crossings for which no such product remains.
+%% Only has to precede round 103.
+\input{numbers/survey_numbers_round750}
+%% round 790 (line-mask tuning): the measurement behind the statement that
+%% these spectral setups are tuned to the twelve masked species, with the
+%% displaced-window controls, and the distance from each crossing to the
+%% nearest transition of any carrier in the cross-check list.
+%% Only has to precede round 103.
+\input{numbers/survey_numbers_round790}
+\input{numbers/survey_numbers_round2870}
+%% round 800 (confirmability over the recurrence test's own block set): the
+%% systems for which a repeat observation of a frequency the first block
+%% covered exists, counted over the primary census TOGETHER WITH every repeat
+%% execution block the recurrence test reads -- one owner for a predicate four
+%% generators used to carry.  Only has to precede round 103.
+\input{numbers/survey_numbers_round800}
+%% round 810 (R2-6: orbital motion in the extraction position): the departure
+%% from linear propagation at each block's epoch for every searched component
+%% of a multiple -- from a published visual orbit where one exists, from the
+%% acceleration ceiling the projected separation implies where it does not,
+%% and from the Hipparcos-Gaia proper-motion anomaly where neither -- with the
+%% three stars it cannot be computed for flagged.  Only has to precede
+%% round 103.
+\input{numbers/survey_numbers_round810}
+%% rounds 803-805 (recurrence, round 18): the orbital-reversal bound
+%% re-derived at each host's own mass, over eccentricity and over
+%% orientation, and withdrawn; the anchor of the predicted cell along the
+%% drifting track and what the exclusions do when it is swept; and the
+%% positive-control recoveries with the block and the separation that
+%% satisfied each one.  Only have to precede round 103.
+\input{numbers/survey_numbers_round803}
+\input{numbers/survey_numbers_round804}
+\input{numbers/survey_numbers_round805}
+%% round 806 (one definition of a confirmed signal): the separation and the
+%% observing session of the block that recovers each of the recurrence stage's
+%% positive controls, the crossings whose nearest covering block is a block of
+%% their own session, and the table those baselines are printed in.
+%% Only has to precede round 103.
+\input{numbers/survey_numbers_round806}
+%% round 820 (evidential support for the molecular attributions): which
+%% attributions carry evidence beyond the frequency coincidence -- a second
+%% transition of the same species, catalogued gas on the sightline, or the
+%% crossing's own recurrence -- and the Band 5 coverage toward the one star
+%% that has any.  Only has to precede round 103.
+\input{numbers/survey_numbers_round820}
+%% round 830 (the two machine-readable tables that accompany the arXiv
+%% submission as ancillary files): the row and column counts of the per-window
+%% catalogue and of the crossing ledger as they are actually written, and the
+%% column lists themselves.  The lists are generated from the headers of the
+%% files on disk, so a sentence describing what the files carry cannot promise
+%% a column they do not have.  Only has to precede round 103.
+\input{numbers/survey_numbers_round830}
+%% round 840 (R1-4 / R2 minors 9-11): how far the block-quality line may be
+%% moved before it selects a different set, the archival bookkeeping block by
+%% block, the pair-separation statistic behind the clustering comparison, and
+%% the archival extension's unattributed crossings against the expectation its
+%% own control positions give.  Only has to precede round 103.
+\input{numbers/survey_numbers_round840}
+%% round 850 (the reserved blocks that share no observing session with a
+%% searched one): the session-sharing fraction of the reserved set, and the
+%% rank displacement, the trigger-level ratio and the dispositions measured
+%% over the session-independent subset alone.  MUST follow round 310.
+%% Only has to precede round 103.
+\input{numbers/survey_numbers_round850}
+%% round 860 (R2-4: the orbit the beta Pic pair determines): the single
+%% circular orbit about the host that reproduces both fitted drifts and the
+%% stellar-frame offset between the epochs while keeping the line-of-sight
+%% acceleration inside the searched drift grid, the eccentric family that does
+%% the same, and the factor by which the orbit it replaces could not.
+%% Only has to precede round 103.
+\input{numbers/survey_numbers_round860}
+%% round 870 (R2-3: the recurrence recovery probability measured rather than
+%% calculated, over every crossing whose repeat spectra are retained): the
+%% measured recovery beside the calculated one, the median and largest
+%% difference between them, the sub-channel reading loss that explains it, and
+%% the agreement of the two independently built harnesses where they overlap.
+%% Only has to precede round 103.
+\input{numbers/survey_numbers_round870}
+%% rounds 900-902 (R1-3 and R2 minors 12-13): the primary-beam response the
+%% limits are formed on and its departure from a blocked circular aperture,
+%% the windows of each class that can and cannot discriminate a drifting
+%% carrier, and the precision to which the most demanding known planet's
+%% acceleration is known.  Only have to precede round 103.
+\input{numbers/survey_numbers_round900}
+\input{numbers/survey_numbers_round901}
+\input{numbers/survey_numbers_round902}
+%% round 930 (r20-fixes): every adopted systemic velocity against the
+%% barycentric correction of every block its star was observed in, and the
+%% one agreement that sweep finds.  Only has to precede round 103.
+\input{numbers/survey_numbers_round930}
+%% round 910 (r20-confirm): what the second conjunct of the confirmation
+%% criterion costs -- the pairs it rejects, the systems that hold one, and
+%% the confirmable bandwidth that goes with it.
+\input{numbers/survey_numbers_round910}
+%% round 920 (r20-inject): the predicted-cell reading measured on the real
+%% recurring lines, and what each injected realisation was injected into.
+\input{numbers/survey_numbers_round920}
+%% round 940 (r21-recur): the registration of the predicted cell measured on
+%% real recurring lines, the exclusions at a tolerance matched to it, one
+%% drift model, and the depths over separated blocks alone.
+\input{numbers/survey_numbers_round940}
+%% round 990: the unit of the widened recurrence comparison, the rank's
+%% reserved-set counts, and the channel count of the broadband flare
+%% prediction.  MUST precede round 103, which renews values.
+\input{numbers/survey_numbers_round991}
+\input{numbers/survey_numbers_round994}
+%% round 2820: the chance expectation by window, configuration, block and
+%% phase-centre position (bkg_r28.py).  Defines new names only.
+\input{numbers/survey_numbers_round2820}
+%% round 2810 (r28): the rank's chance rate conditional on the trigger, and the
+%% chance expectation of open pairs.  MUST FOLLOW rounds 310 and 420.
+\input{numbers/survey_numbers_round2810}
+
+%% round 992: the two objects that carry the widened-window excess, examined
+%% one at a time.  MUST FOLLOW round 991, whose four published values this
+%% generator asserts against before splitting them.
+\input{numbers/survey_numbers_round992}
+
+%% round 103 (numbers owner): the adopted sensitivity, the stellar-frame
+%% attribution counts, the one benchmark, the one uncertainty interval, and
+%% the retirement of every superseded synonym.  MUST be the last macro
+%% input: its \renewcommands are what make a superseded value unreachable.
+\input{numbers/survey_numbers_round103}
+
+%% Two-column measure (v3.61): the narrow column cannot always justify a line
+%% of technical text, so allow the paragraph builder a last-resort stretch
+%% rather than shipping underfull boxes.
+\setlength{\emergencystretch}{1.2em}
+
+%% ★★★ REFERENCE-LIST LEADING IS THE CLASS'S, AND MUST STAY THE CLASS'S.
+%% This file used to carry \setlength{\bibbaselineskip}{2.52mm} -- a 6.7 per
+%% cent tightening of the 2.7mm the class sets for this style -- with a
+%% comment saying plainly that it was done so the list would not spill a
+%% page.  Compressing the reference list to buy length is one of the three
+%% things the author has forbidden outright (the others being shrinking a
+%% figure and resetting a table smaller), no approval for it is recorded
+%% anywhere, and it bought about 0.08 of a page against headroom measured in
+%% whole pages.  It is deleted rather than reduced: the list falls where it
+%% falls.  Do not reintroduce it, and do not claw the page back elsewhere.
+
+\usepackage{enumitem}
+
+
+
+%% ★★ FLOAT PLACEMENT, v4.22.  The paper is 243.7 kB of typeset text over 38
+%% pages whose fullest hold 7.2 kB, so it is long by float geometry and not
+%% by volume: three pages carry 1.4-1.8 kB less than they could because the
+%% class's default float fractions refuse to put a tall float and text on one
+%% page.  Loosening those fractions is a placement change and nothing else --
+%% no figure is resized, no table is reset smaller, and the bibliography's
+%% line spacing is untouched, which are the three things the author has
+%% forbidden.  LaTeX's own defaults (0.7/0.3/0.2/0.5) are conservative for a
+%% two-column paper whose floats are mostly tables.
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.6}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.75}
+\renewcommand{\dbltopfraction}{0.9}
+\renewcommand{\dblfloatpagefraction}{0.75}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{5}
+\setcounter{dbltopnumber}{3}
+\begin{document}
+
+%% TITLE SCOPE.  No count leads the title: the carrier experiment -- which is
+%% the paper's result -- covers \NSysClassA{} systems while the archival
+%% harvest covers \NSystems{}, and a title contradicted by the abstract
+%% immediately below it is the easiest point a reader can make.
+%% ★★★★ THE RANGE IN THE TITLE IS THE CARRIER SEARCH'S,
+%% \SurvFreqLoA--\SurvFreqHiA, BECAUSE THE TITLE SAYS "CARRIER".  The word
+%% in the title names the experiment the paper is about, and that experiment
+%% is the Class A one: Table~3 states in its own row that the windows below
+%% \SurvFreqLoA{} GHz are coarse-channel and were never searched for a
+%% carrier, so a title advertising them under that word claims a search that
+%% was not made -- and it is the first line of the paper, where the claim is
+%% least qualified and most quoted.
+%% ★ NOTHING IS LOST BY IT, which is the condition under which the narrower
+%% range is right.  The paper publishes limits from the coarse windows and
+%% Barnard's Star, Wolf 359 and Proxima get theirs from them below
+%% \SurvFreqLoA{} GHz (conclusion 2); the abstract states that coverage in
+%% the same sentence that describes those windows, and the comparison with
+%% the published sub-\SurvFreqLoA{} GHz limits is made in the body, where a
+%% reader meets it beside the measurement rather than in a title.  So the
+%% whole search's extent, \SurvFreqLo--\SurvFreqHi, is published where it
+%% can be qualified, and the title carries only what the title's own noun
+%% supports.  Adding a parenthesis -- "(carrier search)" -- after the wider
+%% range was considered and not taken: it spends the first line of the paper
+%% on a distinction the abstract's second sentence makes in words.
+%% The coarse experiment's inability to discriminate a drift is stated
+%% wherever its limits are.
+%% ★ THE TITLE IS HELD IN A MACRO ON PURPOSE, and it must stay in one.  The
+%% class defines `\@title` as `\uppercase{#2}`, and `\uppercase` is the TeX
+%% primitive: it capitalises character tokens and leaves control sequences
+%% alone.  Written out as characters the title therefore typesets as
+%% "...WITHIN 40 PC AT 114--873 GHZ" -- two mangled units on the first line
+%% of the paper.  Passing it as a single control sequence is what keeps the
+%% units readable, so the indirection is load-bearing, not decoration.
+\newcommand{\PaperTitle}{An Archival ALMA Search for Unresolved
+Spectral-Carrier Technosignatures toward Stars within 40\,pc
+at \SurvFreqLoA--\SurvFreqHiA\,GHz}
+\title{\PaperTitle}
+
+\author{Glenn J. White\altaffilmark{1,2} and Robin Dey\altaffilmark{3}}
+\altaffiltext{1}{School of Physical Sciences, The Open University, Walton Hall, Milton Keynes, MK7 6AA, UK; glenn.white@open.ac.uk}
+\altaffiltext{2}{RAL Space, STFC Rutherford Appleton Laboratory, Harwell Campus, Didcot, OX11 0QX, UK}
+\altaffiltext{3}{VBRL Holdings, 50/5 Huay Kaew Road, Chang Phueak, Chiang Mai, Thailand}
+
+%% THE BODY.
+\input{sections/abstract}%
+\enlargethispage{0\baselineskip}
+\input{sections/01_intro}%
+\input{sections/02_background}%
+\input{sections/03_sample}%
+\input{sections/04_method}%
+\input{sections/05_results}%
+\input{sections/05b_stack}%
+\input{sections/06_discussion}%
+\input{sections/07_conclusions}%
+\input{sections/08_backmatter}%
+
+%% THE APPENDICES.  One document: a single pdflatex run typesets the whole
+%% paper, body and appendices together, and nothing refers to a second file.
+\appendix
+%% ★ gate.sh printed "appendix starts p. None" for four versions, because it
+%% looked for a \newlabel{page:appstart} nobody had ever written.  A \label
+%% here would be one `labelcheck` F4 fails on -- never referenced, which is
+%% right, since no sentence should cite it -- so the gate now LOCATES the
+%% class's own "APPENDIX" divider in the rendered PDF instead.  Nothing to
+%% declare in the source; see gate.sh.
+
+\input{sections/app_A_reproducibility}%
+\input{sections/app_C_spatialnorm}%
+\input{sections/app_I_linemask}%
+\input{sections/app_J_falsealarm}%
+\input{sections/app_N_rfi}%
+%% ★ r27 merge: with Tables A1 and A2 full width, Table F1 queued behind them
+%% and was deferred past the last page (tabfloor: 12 captions against 13).
+%% A page break before the last appendix flushes the queue: measured +0.04 pp
+%% (appendices 6.78 -> 6.82), where one before the references cost 1.8 pp.
+%% ★ r28 (integrate, note 8): REMOVED.  After the text pass the break left a
+%% page carrying six lines of the preceding appendix; without it the paper is
+%% 21 pp (appendices 6.71 -> 5.74), tabfloor sees all 13 floats, floatfit and
+%% capmeasure pass, and the per-system table sets on the page after the last
+%% appendix exactly as it did with the break.  Re-measure if the appendices grow.
+\input{sections/app_P_persys}%
+%% ★★★ r20-blockers, 2026-10-15: THE BIBLIOGRAPHY NOW STARTS ON ITS OWN
+%% PAGE, AND IT COSTS NOTHING.  Flowing it on from the appendices was right
+%% while it happened to begin high in a column; with this round's restored
+%% definition in D.2 the REFERENCES heading landed 23 pt from the bottom of a
+%% column and the first entry -- the one web source, four lines of URL the
+%% list cannot break any further -- was set 37 pt BELOW the text block, 18 pt
+%% from the paper's edge.  pdflatex reported no overfull box for it (the
+%% bibliography is set ragged-bottom), so only `floatfit_r18.py`'s ink
+%% measurement could see it: ink in the margin of a submitted PDF, which is
+%% the defect Glenn found by eye two rounds ago in another guise.
+%% ★★ MEASURED, from a clean `.aux`: with `\clearpage` the paper is 37 pages,
+%% exactly as without it, with 0 overfull boxes, `floatfit` clean and
+%% `tabfloor` stable -- so the old comment's "a \clearpage would waste one" is
+%% not true at this length.  Re-measure if the appendices change again.
+%% ★ v4.22, re-measured as that note asks: the appendices changed, and with
+%% the \clearpage the last appendix leaves a page carrying one paragraph.
+%% Flowed on, the paper is a page shorter and `floatfit`'s ink measurement
+%% is clean, so the clause that justified it no longer applies.
+%% ★★★ v4.25, RE-MEASURED AGAIN BECAUSE THE APPENDICES CHANGED AGAIN, which
+%% is what the note above asks for.  The figure-of-merit arithmetic moved out
+%% of the discussion into an appendix of its own, and flowed on the REFERENCES
+%% heading landed 73 pt from the bottom of a column with the one web source --
+%% four lines of URL the list cannot break any further -- set to within 7 pt
+%% of the paper's edge: `floatfit` F2 FAIL on p.40, ink at y 785 of 792, and
+%% TWO overfull \vbox of 32.65 pt in the log.  So the \clearpage is back.
+%% The trade is measured below in the build notes, not assumed.
+%% ★ r27 merge: the note above says the \clearpage is back; it is not, and no
+%% \clearpage has been here.  Measured: one here costs 1.8 pp of white space;
+%% the float queue is flushed before the last appendix instead (see there).
+\begin{thebibliography}{99}
+\bibitem[Akeson et al.(2013)]{NEA2013} Akeson R.~L., et al., 2013, PASP, 125, 989
+%% ★ THE ONE URL IN THIS LIST CARRIES ITS OWN BREAK POINTS, and that is not
+%% decoration.  The class redefines \url to typeset its argument and nothing
+%% else, so the 101-character address is one unbreakable run: set as \url it
+%% leaves an Overfull \hbox of 68-77 pt in the bibliography, and this paper
+%% ships with none.  \href keeps the link live for a reader who clicks and
+%% \allowbreak lets the line break at the path separators, where a reader who
+%% retypes it expects a break.  The three alternatives were worse: drop the
+%% URL and the one web-only source is unreachable; make the whole
+%% bibliography ragged right and 63 other entries re-break; leave the box
+%% overfull and the gate is right to fail.
+\bibitem[ALMA Science Portal(2026)]{ALMAKBBandpass} ALMA Science Portal, 2026, What is the tested capability of ALMA for bandpass calibration precision? ALMA Knowledgebase, General ALMA Queries, \href{https://help.almascience.org/kb/articles/what-is-the-tested-capability-of-alma-for-bandpass-calibration-precision}{\texttt{https://help.almascience.org/\allowbreak kb/\allowbreak articles/\allowbreak what-is-the-tested-\allowbreak capability-of-alma-for-\allowbreak bandpass-calibration-\allowbreak precision}}, accessed 2026 October 14
+\bibitem[Anglada-Escud\'e et al.(2016)]{AngladaEscude2016} Anglada-Escud\'e G., et al., 2016, Nature, 536, 437
+\bibitem[Astropy Collaboration et al.(2022)]{Astropy2022} Astropy Collaboration, 2022, ApJ, 935, 167
+\bibitem[Backus \& Project Phoenix Team(2002)]{Backus2002} Backus P.~R., Project Phoenix Team, 2002, in Stanimirovi\'{c} S., Altschuler D., Goldsmith P., Salter C., eds, ASP Conf. Ser. Vol. 278, Single-Dish Radio Astronomy: Techniques and Applications. Astron. Soc. Pac., San Francisco, p.~525
+\bibitem[Blomme et al.(2023)]{Blomme2023} Blomme R., et al., 2023, A\&A, 674, A7
+\bibitem[Burton et al.(2022)]{Burton2022} Burton K., MacGregor M.~A., Osten R.~A., 2022, ApJ, 939, L6
+\bibitem[CASA Team(2022)]{CASA2022} CASA Team, 2022, PASP, 134, 114501
+\bibitem[Cataldi et al.(2023)]{Cataldi2023} Cataldi G., et al., 2023, ApJ, 951, 111
+\bibitem[Chen et al.(2022)]{Chen2022} Chen T.~X., et al., 2022, ApJS, 260, 5
+\bibitem[Choza et al.(2024)]{Choza2024} Choza C., et al., 2024, AJ, 167, 10
+\bibitem[Cocconi \& Morrison(1959)]{CocconiMorrison1959} Cocconi G., Morrison P., 1959, Nature, 184, 844
+\bibitem[Cortes et al.(2026)]{ALMAHandbook} Cortes P.~C., et al., 2026, ALMA Cycle~13 Technical Handbook, ALMA Doc. 13.3, ver. 1.0, doi:10.5281/zenodo.18793803
+\bibitem[Crifo et al.(1997)]{Crifo1997} Crifo F., Vidal-Madjar A., Lallement R., Ferlet R., Gerbaldi M., 1997, A\&A, 320, L29
+\bibitem[Czech et al.(2021)]{Czech2021} Czech D.~J., et al., 2021, PASP, 133, 064502
+\bibitem[Dame et al.(2001)]{Dame2001} Dame T.~M., Hartmann D., Thaddeus P., 2001, ApJ, 547, 792
+\bibitem[Dame \& Thaddeus(2022)]{DameThaddeus2022} Dame T.~M., Thaddeus P., 2022, ApJS, 262, 5
+\bibitem[Dent et al.(2014)]{Dent2014} Dent W. R. F., et al., 2014, Science, 343, 1490
+\bibitem[Drake(1961)]{Drake1960} Drake F.~D., 1961, Physics Today, 14, 40
+\bibitem[Emerson(2004)]{ALMAMemo504} Emerson D., 2004, The CloudSat radar and implications for ALMA, ALMA Memo 504
+\bibitem[Enriquez et al.(2017)]{Enriquez2017} Enriquez J.~E., et al., 2017, ApJ, 849, 104
+\bibitem[Gaia Collaboration et al.(2023)]{GaiaDR3} Gaia Collaboration, Vallenari A., et al., 2023, A\&A, 674, A1
+\bibitem[Garrett(2026)]{BRaTs2026} Garrett M.~A., 2026, MNRAS, 549, stag991
+\bibitem[Ginsburg et al.(2019)]{Ginsburg2019} Ginsburg A., et al., 2019, AJ, 157, 98
+\bibitem[Harris et al.(2020)]{Harris2020} Harris C.~R., et al., 2020, Nature, 585, 357
+\bibitem[Hunter et al.(2018)]{ALMATsys2018} Hunter T.~R., Phillips N.~M., Brogui\`{e}re D., Gonz\'{a}lez J., 2018, Improving the Calibration of Atmospheric Spectral Features in ALMA Data. NA ALMA 2016 Development Study Final Report, 2018 March 2
+\bibitem[International Telecommunication Union(2024)]{ITU2024} International Telecommunication Union, 2024, Radio Regulations, Edition of 2024. ITU, Geneva
+\bibitem[Jacobson-Bell et al.(2025)]{GLOBULAR2025} Jacobson-Bell B., et al., 2025, AJ, 169, 206
+\bibitem[Johnson et al.(2023)]{LOFARdualsite2023} Johnson O.~A., et al., 2023, AJ, 166, 193
+\bibitem[Kameno(2014)]{ALMATechNote15} Kameno S., 2014, ALMA Cross Correlation Bandpass Stability. ALMA Technical Note 15 (draft), 2014 December 17
+\bibitem[Kervella et al.(2017)]{Kervella2017} Kervella P., Th\'evenin F., Lovis C., 2017, A\&A, 598, L7
+\bibitem[Kervella et al.(2022)]{kervella2022} Kervella P., Arenou F., Th\'evenin F., 2022, A\&A, 657, A7
+\bibitem[Li et al.(2026)]{FAST3IATLAS2025} Li J.-K., Tao Z.-Z., Zhang T.-J., 2026, ApJ, 1006, 163
+\bibitem[Ma et al.(2023)]{Ma2023} Ma P.~X., et al., 2023, Nature Astronomy, 7, 492
+\bibitem[MacGregor et al.(2020)]{MacGregor2020} MacGregor M.~A., Osten R.~A., Hughes A.~M., 2020, ApJ, 891, 80
+\bibitem[Manunza et al.(2025)]{SRT2025} Manunza L., et al., 2025, Acta Astronautica, 233, 155
+\bibitem[Margot et al.(2023)]{Margot2023} Margot J.-L., et al., 2023, AJ, 166, 206
+\bibitem[Mason et al.(2001)]{wds} Mason B.~D., Wycoff G.~L., Hartkopf W.~I., Douglass G.~G., Worley C.~E., 2001, AJ, 122, 3466
+\bibitem[Mason et al.(2025)]{Mason2025} Mason L.~A., Garrett M.~A., Wandia K., Siemion A.~P.~V., 2025, MNRAS, 536, 2127
+\bibitem[Matrà et al.(2017)]{Matra2017} Matrà L., et al., 2017, MNRAS, 464, 1415
+\bibitem[Matson et al.(2026)]{orb6} Matson R.~A., Williams S.~J., Hartkopf W.~I., Mason B.~D., 2026, Sixth Catalog of Orbits of Visual Binary Stars, U.S. Naval Observatory, accessed 2026 October 14
+\bibitem[Mauersberger et al.(1996)]{Mauersberger1996} Mauersberger R., Wilson T.~L., Rood R.~T., Bania T.~M., Hein H., Linhart A., 1996, A\&A, 306, 141
+\bibitem[Morrison et al.(2023)]{Morrison2023} Morrison I.~S., et al., 2023, PASA, 40, e019
+\bibitem[M\"uller et al.(2005)]{CDMS2005} M\"uller H.~S.~P., Schl\"oder F., Stutzki J., Winnewisser G., 2005, J. Mol. Struct., 742, 215
+\bibitem[Pardo et al.(2025)]{AnomalyParkesGBT2025} Pardo S., Poznanski D., Croft S., Siemion A.~P.~V., Lebofsky M., 2025, AJ, 170, 12
+\bibitem[Pecaut \& Mamajek(2013)]{pecaut2013} Pecaut M.~J., Mamajek E.~E., 2013, ApJS, 208, 9
+\bibitem[Pickett et al.(1998)]{Pickett1998} Pickett H.~M., Poynter R.~L., Cohen E.~A., Delitsky M.~L., Pearson J.~C., M\"uller H.~S.~P., 1998, J. Quant. Spectrosc. Radiat. Transfer, 60, 883
+\bibitem[Planck Collaboration et al.(2016)]{PlanckCO2016} Planck Collaboration, Adam R., et al., 2016, A\&A, 594, A10
+\bibitem[Price et al.(2020)]{Price2020} Price D.~C., et al., 2020, AJ, 159, 86
+\bibitem[Privon et al.(2026)]{ALMAPropGuide} Privon G., et al., 2026, ALMA Cycle~13 Proposer's Guide, ALMA Doc. 13.2, ver. 1.0, doi:10.5281/zenodo.18793859
+\bibitem[Remijan et al.(2007)]{Splatalogue2007} Remijan A.~J., Markwick-Kemper A., ALMA Working Group on Spectral Line Frequencies, 2007, in American Astronomical Society Meeting Abstracts 211, 132.11
+\bibitem[Richards et al.(2022)]{Richards2022} Richards A.~M.~S., Moravec E., Etoka S., Fomalont E.~B., P\'erez-S\'anchez A.~F., Toribio M.~C., Laing R.~A., 2022, Self-calibration and improving image fidelity for ALMA and other radio interferometers, ALMA Memo 620
+\bibitem[Sheikh(2020)]{Sheikh2020} Sheikh S.~Z., 2020, International Journal of Astrobiology, 19, 237
+\bibitem[Sheikh et al.(2019)]{Sheikh2019} Sheikh S.~Z., Wright J.~T., Siemion A.~P.~V., Enriquez J.~E., 2019, ApJ, 884, 14
+\bibitem[Sheikh et al.(2021)]{Sheikh2021} Sheikh S.~Z., et al., 2021, Nature Astronomy, 5, 1153
+\bibitem[Sheikh et al.(2025)]{EarthDetectingEarth2025} Sheikh S.~Z., Huston M.~J., Fan P., Wright J.~T., Beatty T., Martini C., Kopparapu R., Frank A., 2025, AJ, 169, 118
+\bibitem[Steffes \& DeBoer(1994)]{Steffes1994} Steffes P.~G., DeBoer D.~R., 1994, Icarus, 107, 215
+\bibitem[Stephens et al.(2002)]{CloudSat2002} Stephens G.~L., et al., 2002, Bull. Am. Meteorol. Soc., 83, 1771
+\bibitem[Tarter(2001)]{Tarter2001} Tarter J., 2001, ARA\&A, 39, 511
+\bibitem[Tremblay \& Tingay(2024)]{Tremblay2024} Tremblay C.~D., Tingay S.~J., 2024, ApJ, 972, 76
+\bibitem[Vidal et al.(2026)]{SETIreview2025} Vidal C., et al., 2026, arXiv:2605.21093 (preprint)
+\bibitem[Virtanen et al.(2020)]{Virtanen2020} Virtanen P., et al., 2020, Nature Methods, 17, 261
+\bibitem[Wehr et al.(2023)]{EarthCARE2023} Wehr T., et al., 2023, Atmos. Meas. Tech., 16, 3581
+\bibitem[Wenger et al.(2000)]{SIMBAD2000} Wenger M., et al., 2000, A\&AS, 143, 9
+\bibitem[White \& Dey(2026)]{SIdeposit} White G.~J., Dey R., 2026, Supplementary Data for an Archival ALMA Search for Technosignatures toward Stars within 40 pc. Zenodo, \href{https://doi.org/10.5281/zenodo.0000000}{doi:10.5281/zenodo.0000000}
+%% AUTHOR ACTION: replace both occurrences of 10.5281/zenodo.0000000 with the
+%% VERSION-SPECIFIC DOI of the uploaded archive, not the concept DOI, and
+%% publish the record before the final arXiv version.
+\bibitem[Wright et al.(2018)]{Wright2018} Wright J.~T., Kanodia S., Lubar E., 2018, AJ, 156, 260
+\bibitem[Zhang et al.(2020)]{Zhang2020} Zhang Z.-S., et al., 2020, ApJ, 891, 174
+\end{thebibliography}
+
+\end{document}
+
+

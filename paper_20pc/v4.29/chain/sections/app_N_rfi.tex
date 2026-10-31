@@ -1,0 +1,97 @@
+%% APPENDIX E -- radio-frequency interference screening.
+%% Owner: appendix-triage.  Carries \label{app:rfi}.
+\section{Radio-frequency interference screening}
+\label{app:rfi}
+
+Interference is the first alternative explanation for an unattributed
+crossing. An interferometer is a poor detector of it -- a signal not in the
+far field at the phase centre is suppressed in the correlation by its rapidly
+varying geometric phase -- though allocations exist across the searched bands
+\citep{ITU2024}, and the documented hazard, spaceborne cloud radar at
+\RadarLo--\RadarHi\,GHz \citep{CloudSat2002,EarthCARE2023,ALMAMemo504},
+overlaps \RadarNWin{} of the \RadarNTot{} census windows, with
+\RadarNCross{} crossings and \RadarNStage{} rank-passing events. The
+population tests of Table~\ref{tab:rfitests} find none of the signatures
+interference leaves, but \emph{no per-channel interference flag exists, and
+none can be recovered}, because the correlator flagging was not retained.
+The one concentration a reader will notice, \TlBandAll{} crossings between
+\TlBandLo{} and \TlBandHi\,GHz, is the carbon monoxide tuning: \TlBandObs{} of
+the \TlBandNSub{} unattributed crossings the census and the reserved hold-out
+place in a searched window, against \TlBandNull$\,\pm\,$\TlBandNullSd{}
+expected from where the windows were tuned. The image-sideband test is a
+bound, not a clearance, and \ImNDsb{} crossings lie where the receivers are
+double-sideband (\texttt{documentation/\allowbreak appendix\_E\_rfi.md} of the
+data archive, \citealt{SIdeposit}).
+
+\begin{table}
+\centering
+\footnotesize
+%% ★ v4.26 (r25-captions): 4 printed lines -> the author's 3.  The reason the
+%% five populations differ MOVED to the paragraph above, where the record
+%% that is or is not retained is the subject.
+\caption{The interference tests, each of which could have failed. $p$ is
+against the same peaks redrawn on their own channel grids.}
+\label{tab:rfitests}
+\begin{tabular}{@{}p{0.20\columnwidth}p{0.22\columnwidth}p{0.33\columnwidth}r@{}}
+\hline
+Test & Population & Result & $p$ \\
+\hline
+Clustering in sky frequency &
+\AppMNCrossF{} \AppMPopLabel{} &
+\AppMTubeObs{} within $\pm\DispoHalfKms$\,km\,s$^{-1}$ of a searched
+transition against \AppMTubeNull{} expected: they cluster on the survey's own
+lines &
+\AppMTubeP \\
+Crowding on one another &
+\QcNQP{} unattributed, quality-passing, of the census and the archival tail &
+no crowding beyond chance over six separations from \QcTolLo{} to
+\QcTolHi\,MHz once the six are allowed for (the smallest single one
+$p=\QcPQPMin$), where the \QcNAttr{} attributed crossings crowd at every one &
+\QcPQPCorr \\
+Atmospheric transitions &
+\TlNCross{} crossings of the census and the hold-out, against \TlNLine{}
+telluric lines &
+none inside the \ScRadMHz\,MHz screening radius; \TlTubeObs{} inside
+$\pm\TlTubeHalf$\,km\,s$^{-1}$ against \TlTubeNull{} expected &
+-- \\
+Fixed intermediate frequency &
+\IfPopNWin{} census windows with a released peak frequency &
+peak positions within their own windows uniform, median \RfiFracMed &
+-- \\
+Cross-target occupancy &
+\RfiOccNWin{} extracted windows toward \RfiOccNStars{} stars, every block set
+of Table~\ref{tab:blockledger} together &
+\RfiOccObs{} cross-star coincidences within \RfiOccTol\,MHz against
+\RfiOccNull$\,\pm\,$\RfiOccNullSd{} expected; \emph{below} the null over the
+\RfiOccSigN{} above-trigger windows, \RfiOccSigObs{} against
+\RfiOccSigNull$\,\pm\,$\RfiOccSigNullSd &
+\RfiOccP \\
+Image sideband &
+the \ImNScreen{} unattributed crossings lying in a catalogued block &
+\ImNNoParent{} have no catalogued transition in the image interval and
+\ImNParentAbsent{} have one the same block observed with nothing bright
+enough to leak; for \ImNLeft{} the parent frequency was not observed &
+-- \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\emph{None of this substitutes for the ON/OFF
+cadence a dedicated search uses}: these are statements about the population,
+not a clearance of any one crossing.
+
+%% "The null result rests on internal validation alone" lives once, in the
+%% discussion's lessons subsection, and not here.  fig:appm is not included
+%% -- it compared our own two statistics and the paper states only the one it
+%% uses -- so figures/appm_power.pdf and the \AppMPowerOld* and
+%% \RfiOcc{Prior,Dir,Stale}* families will be retired.
+%%
+%% ★ r16-mask: the cross-target screen of the fourth test is now scoped to
+%% the ADOPTED attribution (round 660, maskrfi_v660.py), which makes it two
+%% events and not one.  round 49's \RfiEventLead, \RfiFreqThem,
+%% \RfiSameChanClause, \RfiNotTestableClause, \RfiOtherWin,
+%% \RfiOtherStarsRange and \RfiOtherBlocksRange are therefore unreferenced
+%% and will be retired; rfi_v399.py still reproduces them and its grammar
+%% selftest still runs, so nothing breaks if the scope is ever restored.

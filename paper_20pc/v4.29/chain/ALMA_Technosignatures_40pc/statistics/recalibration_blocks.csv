@@ -1,0 +1,286 @@
+eb,stars,role,carries_limit,carries_crossing,fate,how,asdm_GB
+A002_X1001fdc_X29ae,HD 14055;HD14055,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,3.36
+A002_X106a1f1_X6a0c,Proxima Cen,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.33
+A002_X106b646_X1295,Proxima Cen,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.33
+A002_X106b646_X19c5,Proxima Cen,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.33
+A002_X106ccd1_X1a38,Proxima Cen,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.14
+A002_X106ccd1_Xbe52,Proxima Cen,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.14
+A002_X106ccd1_Xc4a6,Proxima Cen,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.14
+A002_X106f040_X13932,Proxima Cen,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.33
+A002_X106f040_X148f3,Proxima Cen,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.33
+A002_X106f040_X26c7,Proxima Cen,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.33
+A002_X106f040_X2b06,Proxima Cen,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.33
+A002_X106f040_X2e59,Proxima Cen,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.33
+A002_X107376c_X12b9,Proxima Cen,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.33
+A002_X107376c_X4442,HD172555,limit or crossing,1,0,exceeds the disk space available (estimated),calibration needs more disk than is available (peak about 191 GB),70.85
+A002_X107376c_X6126,HD 14055;HD14055,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,2.53
+A002_X1074d99_X167,Proxima Cen,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.53
+A002_X1074d99_X74e,Proxima Cen,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.53
+A002_X1076174_X11cc,Proxima Cen,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.41
+A002_X107649f_X868f,Proxima Cen,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.53
+A002_X107649f_X8f30,Proxima Cen,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.53
+A002_X1077d5b_X9976,Proxima Cen,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.53
+A002_X1077d5b_Xa63d,Proxima Cen,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.53
+A002_X107fa96_X1300f,HD172555,limit or crossing,0,1,exceeds the disk space available (estimated),calibration needs more disk than is available (peak about 221 GB),81.85
+A002_X108c378_X26b3,GJ 674,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.59
+A002_X10b22d7_X2445,HD 23484;HD 23484 Gaia DR3 4856592239127350400,limit or crossing,1,1,recalibrated,the pipeline's final flag version restored,0.90
+A002_X10b33b1_Xf94,HD 23484;HD 23484 Gaia DR3 4856592239127350400,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,0.95
+A002_X1190de8_Xd526,HD 14055;HD14055,limit or crossing,0,1,exceeds the disk space available (estimated),calibration needs more disk than is available (peak about 141 GB),52.21
+A002_X11adad7_X25c5e,HD 14055;HD14055,limit or crossing,0,1,exceeds the disk space available (estimated),calibration needs more disk than is available (peak about 165 GB),61.01
+A002_X11e10bc_X12662,eta Crv,limit or crossing,1,0,exceeds the disk space available (estimated),calibration needs more disk than is available (peak about 189 GB),70.18
+A002_X12209f7_X16edb,HD 69830,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,12.90
+A002_X12277ed_X178c6,HD 69830,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,15.91
+A002_X122b6ff_X1041e,eta Crv,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,19.25
+A002_X1240efd_X14e83,AU Mic,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,10.46
+A002_X1263402_X856c,HD 89452,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.21
+A002_X1263402_Xb082,HD377,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,0.97
+A002_X126c7ed_Xe9d,HD 45184,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,0.94
+A002_X1294347_X5c2e,HD 31392,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.25
+A002_X129754b_X6946,HD 31392,limit or crossing,1,1,recalibrated,the pipeline's final flag version restored,1.00
+A002_X6f1341_X1484,bet Pic;beta Pic,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,0.72
+A002_X7116f1_X1785,bet Pic;beta Pic,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,0.71
+A002_X74c92c_X6d5,HIP 490,limit or crossing,1,0,recalibrated,legacy calibration script with its online flags; no flux scaling delivered for it,6.22
+A002_X74deb6_Xff1,chi01 Ori,limit or crossing,1,0,recalibrated,legacy calibration script with its online flags and flux scaling,4.01
+A002_X75bfbf_X1430,eta Crv,limit or crossing,1,0,recalibrated,legacy calibration script with its online flags and flux scaling,8.55
+A002_X7d194b_X58f,HD61005,limit or crossing,1,0,recalibrated,legacy calibration script with its online flags and flux scaling,6.30
+A002_X7d80c7_X15c6,AU Mic,limit or crossing,1,0,recalibrated,legacy calibration script with its online flags; no flux scaling delivered for it,8.23
+A002_X835491_Xcb0,GaiaDR3 6643589352010758400,limit or crossing,0,1,exceeds the disk space available (measured),legacy calibration needs more disk than is available,11.60
+A002_X877e41_X14c1,G 272-61A;G 272-61B,limit or crossing,1,0,recalibrated,"flags delivered only as inline lists, replayed",3.17
+A002_X899169_X1838,AU Mic,limit or crossing,0,1,recalibrated,"flags delivered only as inline lists, replayed",10.97
+A002_X9707f1_Xa89,tau Cet,limit or crossing,1,0,recalibrated,legacy calibration script with its online flags; no flux scaling delivered for it,5.50
+A002_X97db9c_X2eb1,* eta Crv,limit or crossing,0,1,exceeds the disk space available (measured),legacy calibration needs more disk than is available,22.52
+A002_X987623_X354b,* eta Crv,limit or crossing,0,1,exceeds the disk space available (measured),legacy calibration needs more disk than is available,19.33
+A002_X9db5ce_X224b,61 Vir,limit or crossing,1,0,exceeds the disk space available (estimated),legacy calibration needs more disk than is available (peak about 243 GB),18.70
+A002_X9f2ff8_X25b0,Wolf 28,limit or crossing,1,0,recalibrated,"flags delivered only as inline lists, replayed",7.89
+A002_Xa42f75_X319,AU Mic,limit or crossing,1,1,recalibrated,"flags delivered only as inline lists, replayed",14.00
+A002_Xa66f35_X1dee,GaiaDR3 6643602576214115584,limit or crossing,0,1,exceeds the disk space available (measured),legacy calibration needs more disk than is available,17.64
+A002_Xa68906_X1590,HD172555,limit or crossing,1,0,recalibrated,"flags delivered only as inline lists, replayed",13.82
+A002_Xa7a216_X23e4,bet Pic;beta Pic,limit or crossing,0,1,exceeds the disk space available (estimated),legacy calibration needs more disk than is available (peak about 384 GB),29.56
+A002_Xa95c04_X14cd,HIP 10679;HIP10679,limit or crossing,1,1,recalibrated,"only the online and template flags delivered, applied (a lower bound)",13.38
+A002_Xb0ebd1_X1855,HD 38858 Gaia DR3 3023711269067191296,limit or crossing,1,0,recalibrated,"only the online and template flags delivered, applied (a lower bound)",27.92
+A002_Xb20b6d_Xc4c,,limit or crossing,0,1,recalibrated,"only the online and template flags delivered, applied (a lower bound)",0.00
+A002_Xb25e1a_Xed74,PM J03433+1958;WD 0407+179;Wolf 219,limit or crossing,1,0,exceeds the disk space available (estimated),legacy calibration needs more disk than is available (peak about 341 GB),26.21
+A002_Xb28642_Xcff3,HD 207129;HD 207129 Gaia DR3 6564091190988411520,limit or crossing,1,0,exceeds the disk space available (estimated),legacy calibration needs more disk than is available (peak about 399 GB),30.71
+A002_Xb2e94e_X361a,HD 139664,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,26.15
+A002_Xb47876_X3918,HD61005,limit or crossing,1,0,recalibrated,"only the online and template flags delivered, applied (a lower bound)",11.64
+A002_Xb825df_X2265,TWA 7,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,28.24
+A002_Xb95160_X3e24,51 Eri,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,7.55
+A002_Xb9b1b9_X971,LP 349-25,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,12.48
+A002_Xb9cc97_X6b4d,GaiaDR3 2832463659640297472,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,2.12
+A002_Xb9fa0c_Xbbf,HD202628,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,1.62
+A002_Xba0af7_X9e4,HD202628,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,1.62
+A002_Xba3ea7_X2ab4,LSR J1835+3259,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,12.11
+A002_Xba4d35_Xb3a3,tau Cet,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.69
+A002_Xbb9cd7_X40d5,hd107146,limit or crossing,1,0,exceeds the disk space available (estimated),calibration needs more disk than is available (peak about 152 GB),56.37
+A002_Xbbadbe_X3846,hd92945,limit or crossing,1,0,exceeds the disk space available (estimated),calibration needs more disk than is available (peak about 155 GB),57.24
+A002_Xbcef34_X2720,Proxima Cen,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.13
+A002_Xbe7502_X2047,eta Cru,limit or crossing,1,0,exceeds the disk space available (measured),legacy calibration needs more disk than is available,12.99
+A002_Xbf9c0a_X1d95,Proxima Cen,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,15.92
+A002_Xc067f7_X822,61 Vir,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,1.73
+A002_Xc079b5_X82f,61 Vir,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,1.97
+A002_Xc19d6f_X5706,HD 207129;HD 207129 Gaia DR3 6564091190988411520,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,1.60
+A002_Xc26103_X155a,HD 48370,limit or crossing,1,1,recalibrated,the pipeline's final flag version restored,1.38
+A002_Xc66ce1_Xaa9,HR 1010;HR 1010 Gaia DR3 4722135642226902656,limit or crossing,1,1,recalibrated,the pipeline's final flag version restored,1.03
+A002_Xc6e968_X1339,HR 1010;HR 1010 Gaia DR3 4722135642226902656,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.03
+A002_Xc6fa08_X1053,HR 1010;HR 1010 Gaia DR3 4722135642226902656,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,0.96
+A002_Xc7fa6f_X28a8,BD+05 1668;BD05 1668,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,1.40
+A002_Xc9831a_X13c7,BD05 1668,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.78
+A002_Xc9831a_X443,TRAPPIST-1,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,15.77
+A002_Xcbb583_Xb78,HD 69830,limit or crossing,1,0,exceeds the disk space available (estimated),calibration needs more disk than is available (peak about 161 GB),59.46
+A002_Xcc626d_X579,alf CMa B,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,4.46
+A002_Xccea8d_X2ff5,HD 155555C,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,24.70
+A002_Xcd2acd_X6125,V star TX PsA;V star WW PsA,limit or crossing,1,0,recalibration not finished in the time available,,33.36
+A002_Xcd4e14_X2b17,GaiaDR3 2832463659640297472,limit or crossing,0,1,exceeds the disk space available (estimated),calibration needs more disk than is available (peak about 116 GB),43.03
+A002_Xcd64ec_X21c9,L 836-122,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,21.20
+A002_Xcd64ec_X9149,HR 2562,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,14.50
+A002_Xcd8029_Xb6b0,HD 139084;HD 139084 B,limit or crossing,1,1,recalibrated,the pipeline's final flag version restored,25.07
+A002_Xcd97a1_X3f1e,NAME AT Mic AB Gaia DR3 6792436799475128960;V AT Mic B,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,22.12
+A002_Xcdb7b8_Xfb16,GJ 2006A;GJ 2006B,limit or crossing,1,0,recalibration not finished in the time available,,31.45
+A002_Xcdd033_X85ff,UCAC2 20312880,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,21.20
+A002_Xce1e34_X1fb8,Barta 161 12,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,21.07
+A002_Xce1e34_X7be,HD161868,limit or crossing,1,0,recalibration not finished in the time available,,30.74
+A002_Xce574d_X123f,HD170773,limit or crossing,1,0,recalibration not finished in the time available,,34.18
+A002_Xce574d_X8706,lp 876-10 Gaia DR3 6623351805412369024,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,39.39
+A002_Xcf525f_X5aa4,CD-57 1054,limit or crossing,1,1,recalibrated,the pipeline's final flag version restored,23.05
+A002_Xcf749a_X36e0,HD 10647,limit or crossing,1,0,recalibration not finished in the time available,,36.87
+A002_Xcf749a_X4871,2MASS J05241914-1601153 551040;2MASS J05241914-1601153 717696,limit or crossing,1,0,recalibration not finished in the time available,,29.18
+A002_Xd09670_X1d79,GJ14 Gaia DR3 383426372059603712,limit or crossing,1,0,exceeds the disk space available (estimated),calibration needs more disk than is available (peak about 181 GB),66.92
+A002_Xd09670_X23c5,HD14055,limit or crossing,1,0,recalibration not finished in the time available,,34.85
+A002_Xd0e450_X1e19,TRAPPIST-1,limit or crossing,1,0,exceeds the disk space available (estimated),calibration needs more disk than is available (peak about 135 GB),50.00
+A002_Xd0e450_X259b,TRAPPIST-1,limit or crossing,0,1,exceeds the disk space available (estimated),calibration needs more disk than is available (peak about 135 GB),50.05
+A002_Xd10f82_X2635,LP 476-207 384128;LP 476-207 783296,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,20.96
+A002_Xd10f82_X7829,LP 353-51,limit or crossing,1,0,recalibration not finished in the time available,,29.81
+A002_Xd12f5c_X5deb,HD 33793,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.34
+A002_Xd12f5c_Xd7c6,UCAC3 176-23654,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,28.10
+A002_Xd189ef_X867b,TYC 2211-1309-1,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,28.91
+A002_Xd21a3a_X8a5a,GJ 581,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.79
+A002_Xd28a9e_Xbcdf,gam Lep,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,17.04
+A002_Xd40be0_X749c,TWA 3A 696000,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,20.45
+A002_Xd64dca_X410,HD202628,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,16.34
+A002_Xd9398d_X322a,LP 736-15,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,12.05
+A002_Xd95042_X2d99,gam Vir,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,7.15
+A002_Xd9668b_X3a90,bet Pic;beta Pic,limit or crossing,1,1,exceeds the disk space available (measured),calibration needs more disk than is available (peak about 89.9 GB),45.18
+A002_Xd9668b_X3f6e,HD53143 Gaia DR3 5479222240596469632,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,13.86
+A002_Xd9668b_X7c83,GJ 849,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.36
+A002_Xd9668b_X841a,GJ 849,limit or crossing,1,1,recalibrated,the pipeline's final flag version restored,1.36
+A002_Xd9668b_Xa9df,bet Pic;beta Pic,limit or crossing,1,1,exceeds the disk space available (measured),calibration needs more disk than is available,48.93
+A002_Xd98580_X3bf6,HD 285968,limit or crossing,1,1,recalibrated,the pipeline's final flag version restored,1.41
+A002_Xd9d7c7_X6fd2,LHS 1140,limit or crossing,1,1,recalibrated,the pipeline's final flag version restored,1.34
+A002_Xd9d7c7_Xbb64,ALMA J153702653-33192492,limit or crossing,1,1,exceeds the disk space available (estimated),calibration needs more disk than is available (peak about 147 GB),54.55
+A002_Xdaef5a_X6873,GL 3379 Gaia DR3 3316364602541746048,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.39
+A002_Xdaef5a_Xdd9b,HD 285968,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,1.41
+A002_Xdb4b9a_X108f,HD 285968,limit or crossing,1,1,recalibrated,the pipeline's final flag version restored,1.23
+A002_Xdb7ab7_X140ee,Proxima Cen,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.23
+A002_Xdb7ab7_X5b4e,HD 285968,limit or crossing,1,1,recalibrated,the pipeline's final flag version restored,1.06
+A002_Xdb7ab7_X8bda,Proxima Cen,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.23
+A002_Xdbc154_X138c,Proxima Cen,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.23
+A002_Xdc0d09_X1938,Proxima Cen,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.43
+A002_Xdc21b9_X252f,Proxima Cen,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.65
+A002_Xdcbe57_X2dd3,HN Lib,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.56
+A002_Xe3da01_X4265,HD 110411;HD110411,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,21.84
+A002_Xe45e29_Xb7d4,HD 110411;HD110411,limit or crossing,1,1,recalibrated,the pipeline's final flag version restored,19.04
+A002_Xe48598_Xff51,kap CrB,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,11.81
+A002_Xe50c9e_X17ab,WD0346-011,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,2.59
+A002_Xe539c7_X113b1,WD2039-202,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,2.80
+A002_Xe539c7_X12189,eps Eri,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,11.79
+A002_Xe5808e_X80a1,CD-38 10980,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,2.74
+A002_Xeba1ac_Xbc74,hd107146,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,8.44
+A002_Xf4df6f_Xc7,bet Pic;beta Pic,limit or crossing,1,1,recalibrated,the pipeline's final flag version restored,18.87
+A002_Xf5d76d_X32f1,bet Pic;beta Pic,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,14.17
+A002_Xf5d76d_Xcc5,bet Pic;beta Pic,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,13.06
+A002_Xf5d76d_Xe19,bet Pic;beta Pic,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,13.66
+A002_Xf5d76d_Xeb8,bet Pic;beta Pic,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,13.66
+A002_Xf8d29c_X173e,ALMA J153702653-33192492,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,3.61
+A002_Xf8f6a9_X10359,ALMA J153702653-33192492,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,4.26
+A002_Xf934b1_X65fd,bet Pic,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,18.01
+A002_Xf934b1_X7e7d,bet Pic,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,20.65
+A002_Xf934b1_Xeeec,bet Pic,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,19.74
+A002_Xfdc8ec_X4cec,Wolf 359,limit or crossing,0,0,recalibrated,the pipeline's final flag version restored,1.37
+A002_Xfddca6_Xcf25,Wolf 359,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.38
+A002_Xfdf45f_X478e,NAME Barnards star,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.52
+A002_Xfe3986_X5c7e,NAME Barnards star,limit or crossing,0,0,recalibrated,the pipeline's final flag version restored,1.53
+A002_Xfe62c1_X398,ALMA J153702653-33192492,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,4.21
+A002_Xfec857_X6b2,CD-23 14742,limit or crossing,1,0,recalibrated,the pipeline's final flag version restored,1.35
+A002_Xff0235_X4a6d,CP-72 2713,limit or crossing,1,1,exceeds the disk space available (measured),calibration needs more disk than is available (peak about 49.3 GB),49.33
+A002_Xff0235_X502d,CP-72 2713,limit or crossing,1,0,exceeds the disk space available (estimated),calibration needs more disk than is available (peak about 134 GB),49.46
+A002_Xff0235_X8392,ALMA J153702653-33192492,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,4.95
+A002_Xff0235_X8c42,HD 170773;HD170773,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,3.29
+A002_Xff0235_X99ed,CP-72 2713,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,3.27
+A002_Xff0235_Xa6a3,CP-72 2713,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,3.23
+A002_Xff294f_X1e10,CP-72 2713,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,3.23
+A002_Xff294f_Xaf70,HD 10647,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,3.07
+A002_Xff45a6_X10ca8,HD 161868;HD161868,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,2.70
+A002_Xff45a6_X1fc3,GaiaDR3 2517397846786452224,limit or crossing,0,1,exceeds the disk space available (measured),calibration needs more disk than is available,30.84
+A002_Xff99e1_X24be0,HD 14055;HD14055,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,3.34
+A002_Xff99e1_X2b2ee,HD 14055;HD14055,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,3.36
+A002_Xff99e1_X2c3bb,HD 14055;HD14055,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,3.34
+A002_Xfff3d8_Xd46,HD 14055;HD14055,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,3.34
+A002_Xfffde1_X3835,HD 14055;HD14055,limit or crossing,0,1,recalibrated,the pipeline's final flag version restored,2.90
+A002_Xfffde1_Xffdf,HD 10647,limit or crossing,1,0,recalibration not finished in the time available,,36.40
+A002_X1001fdc_X2085,HD 14055;HD14055,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,3.35
+A002_X1001fdc_Xc06e,HD 14055;HD14055,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,2.92
+A002_X1003af4_X14e08,HD 14055;HD14055,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,3.35
+A002_X1003af4_X3a2c,HD 14055;HD14055,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,2.74
+A002_X1006d51_X228e,HD 14055;HD14055,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,2.91
+A002_X1009c59_X1ba4d,ALMA J153702653-33192492,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,3.57
+A002_X101088d_Xbf80,HD 14055;HD14055,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,3.37
+A002_X1015532_X20dc8,ALMA J153702653-33192492,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,2.96
+A002_X1018459_X73b0,ALMA J153702653-33192492,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,4.26
+A002_X1020da2_X78cd,ALMA J153702653-33192492,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,4.24
+A002_X105e6e0_X7c5e,HD 14055;HD14055,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,2.92
+A002_X107fa96_X150f6,HD 14055;HD14055,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,3.36
+A002_X107fa96_X9a88,HD 14055;HD14055,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,2.92
+A002_X1086384_X10bc1,HD 14055;HD14055,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,4.01
+A002_X1088045_X3c7b,HD 14055;HD14055,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,2.91
+A002_X10b0d7d_X323f,HD 23484;HD 23484 Gaia DR3 4856592239127350400,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,0.90
+A002_X10b22d7_X1d34,HD 23484;HD 23484 Gaia DR3 4856592239127350400,repeat epoch,1,0,recalibrated,the pipeline's final flag version restored,0.95
+A002_X10b33b1_X145d,HD 23484;HD 23484  Gaia DR3 4856592239127350400,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,0.95
+A002_X128b034_X187cc,HD 31392,repeat epoch,1,0,recalibrated,the pipeline's final flag version restored,1.00
+A002_X1294347_X1af7f,HD 31392,repeat epoch,1,0,recalibrated,the pipeline's final flag version restored,1.09
+A002_X1294347_X1b730,HD 31392,repeat epoch,1,0,recalibrated,the pipeline's final flag version restored,1.09
+A002_X129691d_X6985,HD 31392,repeat epoch,1,0,recalibrated,the pipeline's final flag version restored,0.86
+A002_X129754b_X70a9,HD 31392,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,1.00
+A002_X12b3da5_X2f34,HD 31392,repeat epoch,1,0,recalibrated,the pipeline's final flag version restored,0.98
+A002_X12b3da5_X4411,HD 31392,repeat epoch,1,0,recalibrated,the pipeline's final flag version restored,0.99
+A002_Xc074d4_X2e6,61 Vir,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,1.97
+A002_Xc079b5_X1ae,61 Vir,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,1.97
+A002_Xc19d6f_X19ce,HD 207129;HD 207129 Gaia DR3 6564091190988411520,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,1.59
+A002_Xc19d6f_X1c16,HD 207129;HD 207129 Gaia DR3 6564091190988411520,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,1.64
+A002_Xc67b7e_X1f16,HR 1010;HR 1010 Gaia DR3 4722135642226902656,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,0.92
+A002_Xc68b3e_X107b,HR 1010;HR 1010 Gaia DR3 4722135642226902656,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,0.92
+A002_Xc694dd_X3e5f,HR 1010;HR 1010 Gaia DR3 4722135642226902656,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,0.92
+A002_Xc694dd_X41ca,HR 1010;HR 1010 Gaia DR3 4722135642226902656,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,0.92
+A002_Xc6b674_X28f5,HR 1010;HR 1010 Gaia DR3 4722135642226902656,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,0.92
+A002_Xc6d2f9_X7060,HR 1010;HR 1010 Gaia DR3 4722135642226902656,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,1.03
+A002_Xd86f11_X584b,GJ 849,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,1.36
+A002_Xd95042_X5feb,GJ 849,repeat epoch,1,0,recalibrated,the pipeline's final flag version restored,1.18
+A002_Xd95042_X67d7,GJ 849,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,0.77
+A002_Xd9668b_X88ad,GJ 849,repeat epoch,1,0,recalibrated,the pipeline's final flag version restored,1.36
+A002_Xda1250_X6f6b,LHS 1140,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,1.39
+A002_Xda1250_X72ef,LHS 1140,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,1.39
+A002_Xda2c82_X62d7,LHS 1140,repeat epoch,1,0,recalibrated,the pipeline's final flag version restored,1.59
+A002_Xda2c82_X7136,HD 285968,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,1.41
+A002_Xdaef5a_X14fed,LHS 1140,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,1.39
+A002_Xdb4b9a_Xa7c,HD 285968,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,1.23
+A002_Xff0235_Xb32c,CP-72 2713,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,2.52
+A002_Xff294f_X1fb,HD 170773;HD170773,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,3.34
+A002_Xff294f_X2db6,HD 10647,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,3.04
+A002_Xff294f_X40a2,HD 10647,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,2.62
+A002_Xff294f_X634,HD 170773;HD170773,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,3.29
+A002_Xff294f_X7bf4,HD 161868;HD161868,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,3.08
+A002_Xff294f_X812c,HD 161868;HD161868,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,3.11
+A002_Xff294f_Xc10b,HD 10647,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,3.03
+A002_Xff45a6_X107fe,HD 161868;HD161868,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,2.67
+A002_Xff45a6_X111c3,HD 161868;HD161868,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,2.70
+A002_Xff45a6_X13fc,HD 10647,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,2.66
+A002_Xff45a6_X7d88,HD 161868;HD161868,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,2.60
+A002_Xff45a6_X8474,HD 161868;HD161868,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,2.70
+A002_Xff699e_X7543,HD 161868;HD161868,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,3.11
+A002_Xff699e_Xd7,HD 161868;HD161868,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,2.70
+A002_Xff81e8_X6f26,HD 161868;HD161868,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,3.07
+A002_Xff81e8_X734e,HD 161868;HD161868,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,1.52
+A002_Xff99e1_X1b0c4,HD 14055;HD14055,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,3.36
+A002_Xff99e1_X9cdf,HD 10647,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,3.03
+A002_Xfffde1_X2b1a,HD 14055;HD14055,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,2.90
+A002_Xfffde1_X9bd6,HD 14055;HD14055,repeat epoch,0,0,recalibrated,the pipeline's final flag version restored,4.84
+A002_X107fa96_Xce38,GJ 674,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.38
+A002_X10854a6_X3ac1,GJ 674,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.33
+A002_X1086384_Xdeeb,GJ 674,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.38
+A002_X108c378_X1ced,GJ 674,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.59
+A002_X108c378_X2a0f,GJ 674,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.59
+A002_X108c378_X331a,GJ 674,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.53
+A002_X1093ae8_X14a7,GJ 674,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.59
+A002_X1093ae8_X1c39,GJ 674,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.59
+A002_X1093ae8_X2228,GJ 674,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.59
+A002_X1093ae8_Xe18,GJ 674,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.43
+A002_X1097a87_X1ba1,GJ 674,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.38
+A002_X1097a87_X1e64,GJ 674,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.33
+A002_X1097a87_X75ae,GJ 674,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.38
+A002_X1097a87_X795f,GJ 674,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.38
+A002_X1239f8e_Xa43b,HD377,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,0.87
+A002_X1263402_X816f,HD 89452,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.21
+A002_X1264cde_X258b,HD 89452,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,0.95
+A002_X1264cde_X2d40,HD 89452,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,0.97
+A002_X126787e_X1c15,HD 89452,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,0.97
+A002_X126787e_X227e,HD 89452,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,0.96
+A002_X12694b3_Xab7,HD 89452,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.11
+A002_X1275eb2_Xe05,HD 45184,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.12
+A002_X12771d5_X9f13,HD 45184,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.20
+A002_Xc94c38_Xa4bc,HD 33793,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.55
+A002_Xc96f17_X2a84,BD05 1668,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.58
+A002_Xc9831a_Xa0b7,BD05 1668,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.64
+A002_Xcbc47c_X2d9,BD05 1668,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.87
+A002_Xd1f23d_X53b2,HD 33793,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.78
+A002_Xd248b5_X2fa,GJ 581,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.57
+A002_Xd28a9e_Xb92f,HD 33793,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.55
+A002_Xd28a9e_Xbb59,HD 33793,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.55
+A002_Xd29c1f_X445c,HD 33793,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.78
+A002_Xdc621b_X2bb0,HN Lib,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.11
+A002_Xdcad18_X305b,HN Lib,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.53
+A002_Xdcf222_X4da7,HN Lib,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.34
+A002_Xdd0d37_X17f99,GL 3379 Gaia DR3 3316364602541746048,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.39
+A002_Xdd0d37_X18197,GL 3379 Gaia DR3 3316364602541746048,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.39
+A002_Xfdb69b_X667a,Wolf 359,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.58
+A002_Xfeb5e6_X13ee,CD-23 14742,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.35
+A002_Xfec857_X11fd,CD-23 14742,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.35
+A002_Xfee03e_X82ee,CD-23 14742,runner-up window,1,0,recalibrated,the pipeline's final flag version restored,1.16
