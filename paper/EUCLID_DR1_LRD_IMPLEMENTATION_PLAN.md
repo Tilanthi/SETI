@@ -1,6 +1,6 @@
-# Euclid DR1 Little Red Dots — IMPLEMENTATION PLAN v3 (2026-11-04)
+# Euclid DR1 Little Red Dots — IMPLEMENTATION PLAN v4 (2026-11-04)
 
-Authors: Glenn J. White (Open University) with ASTRA PA. Status: plan agreed in outline; work packages not yet launched.
+Authors: Glenn J. White (Open University) with ASTRA PA. Status: plan v4 AGREED by Glenn 2026-11-04. Work packages NOT to be launched until Glenn gives the go-ahead.
 Context: Q1 reproduction of Bisigello et al. 2025 (A&A 711, A24) completed 2026-11-04 (images: paper/LRD_Q1_reproduction_images.zip).
 
 Decisions (Glenn, 2026-11-04): work Letter 1 (hot-dust / screened-quasar test) and Letter 2 (grism Balmer lines) TOGETHER, decide
@@ -8,7 +8,23 @@ later whether one Letter or two; selection = safest well-defined, justifiable ch
 space (cluster root ~119 GB free, Taurus /shared ≤3 GB; /data and SETI untouchable; no extra disk); public data only; Glenn's
 likelihood re-implemented from paper_v1_06. Release: DR1-Foundation Thu 12 Nov 2026 (~1900 deg²).
 
-## 1. Science goal and the paper decision
+## 0. Paper portfolio (v4 — adds Letter A, Glenn's original Project-5 programme)
+ Letter A (FIRST, fastest): "The wide-area incidence of compact red V-shaped sources at 0.5<z<4 from Euclid DR1" — Glenn's original
+   programme: VIS+Y/J/H catalogues; colour–colour selection ("V–J excess") + VIS-FWHM size cut; small morphological cutouts;
+   cross-match to available spectra; surface density vs z and magnitude over ~1900 deg² (bright end, rare objects, field-to-field
+   variance from independent N/S patches); "are JWST LRDs the tip of a ubiquitous population?" via (i) injection of JWST LRD SEDs
+   → predicted Euclid density vs observed and (ii) Euclid∩JWST compactness/resolved fraction; exclusion-curve comparison only as
+   context + pointer to Letter B. Defines and publishes the frozen sample that Letter B uses. Draft target Tue 17 – Thu 19 Nov.
+ Letter B (= Letters 1+2 below): hot dust + Balmer lines on the same frozen sample; one Letter or two by the rule in §1. Draft ≥ Sun 22 Nov.
+ Paper C (= Paper 3 below): full MNRAS census paper.
+ Why A first: selection-based, no new machinery → numbers within 2–3 days of release; it is the paper the Euclid Consortium is most
+ likely to race on; Q1 (63 deg²) only partly filled the wide-field gap (single-object bright-end bins) — DR1 is ~30× the area.
+ Letter A safeguards: "V–J" defined in OBSERVED Euclid colours (rest V–J is not reachable from Euclid at z>0.6; rest J needs WISE);
+   colour box designed a priori from redshifted JWST LRD SEDs + star/brown-dwarf/quasar/dusty-galaxy loci and pre-registered;
+   contamination measured (GOODS-S/JWST, deep fields with IRAC) and densities quoted as upper limits where purity is uncertain;
+   no overlap of results with Letter B (the full hot-dust test lives only in B).
+
+## 1. Science goal and the paper decision (Letter B, and Paper C)
 Question: what makes the red optical light of compact V-shaped sources at cosmic noon, and are they the same phenomenon as JWST LRDs?
 Two independent tests on ONE frozen sample:
  T1 (hot dust, continuum-normalised, "P-test"): rest ~1.5–3 µm (WISE W1/W2, W3 for the brightest) per unit observed rest-optical
@@ -39,8 +55,10 @@ S4 Compactness: MUMAX_MINUS_MAG<−2.6 (Euclid pipeline point-source criterion, 
 S5 Mid-IR: NOT used in selection (it is the test). Line-emitter veto: as written in Bisigello (conservative); reversed version = systematic.
 S6 χ²<100. No visual inspection in the main sample (irreproducible); an automatic artefact flag set + a visual check of a random 5%
    to quantify residual artefacts.
-Companion sample (reported, not tested): simple observed colour box (IE−YE vs JE−HE, "V–J excess") + S1, S4 — for readers who want a
-catalogue-only selection; overlap with the primary sample quoted.
+Letter-A colour sample (pre-registered with the rest): observed colour–colour box — red IE−JE / JE−HE ("V–J excess") together with a
+blue rest-UV (IE−YE or ground g/r−IE) — + S1 + VIS-FWHM size cut (VIS FWHM / local PSF FWHM ≤ threshold, threshold set on GOODS-S where JWST
+resolves the sources) + S4. Box boundaries derived beforehand from JWST LRD SED tracks at z=0.5–4 and contaminant loci; never tuned on DR1.
+Its overlap with the fit-based (S1–S6) sample is quoted; both are published so readers can reproduce either from the catalogue alone.
 Controls (needed for the tests): (i) compact non-V-shaped sources matched in HE and z; (ii) SDSS/DESI/Milliquas quasars inside DR1
 (Euclid photometry + WISE measured identically); (iii) blank-sky positions for WISE and grism noise models.
 
@@ -71,6 +89,10 @@ WP-E Grism engine (Thu 5 – Mon 9)
     [SII]), z registration; stacking in z/M bins with bootstrap; Balmer decrement and broad fraction. DESI/SDSS spectrum fetch.
 WP-F Selection, controls, selection function (Thu 5 – Tue 10)
  F1 Implement S1–S6 + companion + controls; Gaia/brown-dwarf rejection.
+ F3 Letter-A colour box: JWST LRD SED tracks (Kocevski/RUBIES/DJA spectra) through Euclid+ground filters at z=0.5–4 vs loci of stars,
+    brown dwarfs, quasars (Milliquas/SDSS), dusty star-forming galaxies, line emitters; choose box + VIS-FWHM threshold on Q1/GOODS-S; freeze.
+ F4 Letter-A census pipeline: HEALPix surface-density maps vs z and magnitude (N/S, field-to-field/jackknife variance, depth/mask
+    corrections), cutout galleries, spectra cross-match counts (Euclid grism, DESI, SDSS, JWST/DJA); run end-to-end on Q1.
  F2 LRD-SED injection (Kocevski β distributions + DJA LRD spectra) through Euclid Wide depths/PSF and WISE depths → completeness and
     predicted JWST-like density at 0.5<z<4; GOODS-S compactness contamination measurement.
 WP-G Q1 pilot = full dress run of the science on Q1 (Sun 8 – Mon 9)
@@ -83,9 +105,9 @@ WP-H Freeze & rehearsal (Tue 10 – Wed 11)
 ## 4. Release day and after
 Thu 12 Nov (day 0): watch IRSA bucket + ESA archive; schema diff; DR1 MOC → footprint; launch ingest with pre-cuts (~6–7 TB read,
  ~5–8 h at Q1 throughput; stored: candidate superset + controls + count maps only).
-Day 1–2: frozen selection; WISE forced photometry for sample + controls + quasars; grism spectra; Euclid cutouts; first numbers.
+Day 1–2: Letter-A census numbers first (densities, maps, galleries, spectra matches); frozen selection; WISE forced photometry for sample + controls + quasars; grism spectra; Euclid cutouts; first numbers.
 Day 2–5: T1 likelihood + mocks; T2 fits + stacks; joint exclusion curve; one-vs-two-Letter decision (Tue 17 Nov).
-Day 5–10: Letter draft(s) to Glenn with my own referee pass; then Paper 3.
+Day 5–7: Letter A draft to Glenn (target Tue 17 – Thu 19 Nov). Day 7–10+: Letter B draft(s); then Paper C.
 
 ## 5. Disk plan (hard limit ~119 GB free on cluster root; keep ≥30 GB free → ≤85 GB in use; Taurus ≤3 GB)
 | item | peak GB | lifetime |
@@ -118,5 +140,6 @@ floor + stacks. WISE 6″ blending → neighbour-modelled forced photometry, val
 
 ## 8. Calendar
 Wed 4–Fri 6: WP-A, WP-B, WP-C start; D/E start Thu.  Sat 7–Mon 9: C/D/E/F complete; Q1 pilot (WP-G) Sun–Mon; report to Glenn Mon 9.
-Tue 10–Wed 11: freeze + pre-register selection, rehearsal, Letter skeleton.  Thu 12: DR1.  Tue 17: one-or-two-Letter decision.
-~Sun 22: Letter draft.
+Tue 10–Wed 11: freeze + pre-register selection (incl. Letter-A colour box), rehearsal, Letter A + B skeletons.  Thu 12: DR1.
+Tue 17: Letter-B one-or-two decision.  Tue 17–Thu 19: Letter A draft.  ~Sun 22 onwards: Letter B draft(s); then Paper C.
+NOTHING is launched until Glenn gives the go-ahead.
