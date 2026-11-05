@@ -1,0 +1,9 @@
+{
+ "_doc": "Raw ASDM volume transferred from the ALMA Science Archive for this survey, from the download campaign's own per-block ledger (size_bytes recorded from Alma.get_data_info at queue time, verified against the transferred files). Recorded 2026-09-20 on completion.",
+ "blocks_downloaded": 440,
+ "tb_downloaded": 4.099,
+ "blocks_searched": 428,
+ "tb_searched": 4.016,
+ "blocks_never_downloaded": 20,
+ "note": "20 blocks were never downloaded: the archive offers their raw ASDM but carries no pipeline calibration for them, which is detectable from the delivery listing before any transfer."
+}

@@ -1,0 +1,69 @@
+paper v3.89 -- the radius-corrected statistic becomes the primary analysis
+
+Two referee reports, 28 items, worked in order. 13 closed in this
+increment, including both referees' central requirement.
+
+THE CENTRAL CHANGE (R1-1, R2-2). Both referees required that the
+radius-corrected normalisation replace the originally frozen screen as the
+primary statistic, on the grounds that the radial displacement is not a
+post-hoc rationalisation but a characterised instrumental effect with a
+known mechanism. They were right. Images are primary-beam corrected, so
+the true noise rises with distance from the pointing centre, while the
+search divided every position by one global scale; the control probes
+therefore sat at systematically different effective noise from the star,
+which is at the phase centre. The displacement is measured three times
+independently -- pre-registered hold-out, radial profile of the control
+ensemble, prospectively searched extension -- and pseudo-stars reproduce
+it where no star is present.
+
+New primary_v389.py reruns candidate selection and computes the correctly
+conditioned null FOR THE CORRECTED STATISTIC:
+
+                      primary (corrected)   robustness (frozen)
+  stage-1 windows            10                    13
+  attributed to CO            8                     9
+  unattributed                2                     4
+  expected                 1.26                  1.26
+  tail probability       P ~ 0.4               P ~ 0.04
+
+The apparent excess vanishes. Four events lost (HD 23484, HD 14055,
+HD 48370, CP-72 2713), one gained (HD 207129 B6). Reported as a
+methodological correction found during validation, with the frozen list
+published beside it, and the manuscript states that the decision does not
+depend on which events survive.
+
+ABSTRACT rewritten to carry six requirements inside the 1920-character
+limit: leads with the narrowband experiment (403 windows / 60 systems /
+47.7 GHz) rather than the 1655-window total; quotes only P90sel and
+per-system on each system's best window; states in bold that this is an
+upper bound on reach with the x0.48-1.35 transfer uncertainty and the
+one-sided +5/+20 per cent decorrelation bias given numerically; gives the
+corrected result BEFORE the old probability, which now appears only as an
+artefact that does not survive correcting the screen's measured bias; and
+adds the sample caveat, including that the sample does not constrain the
+local habitable-zone planet population. Ten other phrases trimmed to pay
+for it; both counters pass with 2 characters of headroom.
+
+ALSO CLOSED. R2-5: probabilities to one significant figure with the
+1.2-1.9 tail-factor uncertainty folded into the range instead of appended
+as a caveat. R1-8: CWTFM demoted to a literature convention, per-system
+value preferred. R2-m4: title now "An Archival ALMA Search ... toward 82
+Stellar Systems within 40 Parsecs". R2-m3:
+REFEREE_VERIFICATION_v389.txt ships the verbatim regeneration and audit
+output so the count chain can be checked mechanically. R1-6 and R1-9 also
+applied in the conclusions.
+
+STILL OPEN, with what each needs, in BUILD_NOTES_v389.md: R1-2 (one
+ordered procedure), R1-4 (visibility test as principal spatial test),
+R1-5 (new host computation: joint drift x dwell injections), R1-7
+(N_eff(P) and f95(P)), R1-10 (search the full coverage; line mask as a
+flag), R1-11 (P(0 repeats | duty cycle)), R1-12/R2-1 (the large
+restructure and de-jargonising), R2-6 (new host computation: per-hand
+polarisation on the 13 stage-1 windows), R2-m1, R2-m2, R2-m5. R1-5 and
+R2-6 are queued behind the archive-mining campaign rather than run against
+a loaded machine.
+
+Gates: 47 pages, 0 errors / 0 undefined / 0 multiply-defined / 0 overfull
+/ 0 Type 3, 1156 macros 0 unused, abstract 1918/1920 on both counters,
+clean regeneration 91/91 byte-identical, number audit 49/49, catalogue
+self-sufficiency 36/36, roundcollide 47/47, xrefcheck 0 misplaced.

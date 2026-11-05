@@ -1,0 +1,314 @@
+{
+ "generator": "linesupport_r18.py",
+ "round": 820,
+ "drive": 0,
+ "macros": {
+  "LnAttrSupp": "16",
+  "LnAttrCoinc": "7",
+  "LnAttrCoincWord": "seven",
+  "LnCoincStars": "$\\eta$~Crv, CD$-$57~1054, CP$-$72~2713, HD~161868, HIP~10679 and HR~1010",
+  "LnBFiveWin": "4",
+  "LnBFiveStars": "$\\alpha$~CMa~B"
+ },
+ "diagnostics": {
+  "n_coincidence_only": 7,
+  "n_recurrence": 13,
+  "n_second_transition": 10,
+  "n_catalogued_gas": 6,
+  "band5_GHz": "6.94",
+  "coincidence_only": [
+   "$\\eta$~Crv A002_X75bfbf_X1430 CO(3-2) +15.6 km/s T*=5.01",
+   "CD$-$57 1054 A002_Xcf525f_X5aa4 SO(9(8)-8(7)) -1.7 km/s T*=5.69",
+   "HD 161868 A002_Xff45a6_X10ca8 SO(2(3)-2(1)) -48.0 km/s T*=5.27",
+   "CP$-$72 2713 A002_Xff0235_X4a6d SO(8(8)-7(7)) -12.3 km/s T*=5.81",
+   "HIP 10679 A002_Xa95c04_X14cd 13CO(J=2-1,F=5/2-3/2) +6.5 km/s T*=5.55",
+   "HIP 10679 A002_Xa95c04_X14cd CO(2-1) +30.9 km/s T*=5.08",
+   "HR~1010 A002_Xc6fa08_X1053 CO(2-1) -12.0 km/s T*=5.03"
+  ],
+  "band5": [
+   "alf CMa B 195.127-196.862",
+   "alf CMa B 197.065-198.799",
+   "alf CMa B 207.127-208.862",
+   "alf CMa B 209.127-210.862"
+  ],
+  "positronium_GHz": 203.3942
+ },
+ "failed": [],
+ "rows": [
+  {
+   "star": "HD 285968",
+   "display": "HD 285968",
+   "eb": "A002_Xd98580_X3bf6",
+   "freq": 230.5020791,
+   "line": "CO(2-1)",
+   "tstar": 5.9862,
+   "dv_stellar": 8.709248273015131,
+   "routes": [
+    "recurrence",
+    "gas"
+   ]
+  },
+  {
+   "star": "HD 285968",
+   "display": "HD 285968",
+   "eb": "A002_Xdb4b9a_X108f",
+   "freq": 230.51002160000002,
+   "line": "CO(2-1)",
+   "tstar": 5.8219,
+   "dv_stellar": 8.677819713811816,
+   "routes": [
+    "recurrence",
+    "gas"
+   ]
+  },
+  {
+   "star": "HD 285968",
+   "display": "HD 285968",
+   "eb": "A002_Xdb7ab7_X5b4e",
+   "freq": 230.5115699,
+   "line": "CO(2-1)",
+   "tstar": 5.8712,
+   "dv_stellar": 8.67467894244045,
+   "routes": [
+    "recurrence",
+    "gas"
+   ]
+  },
+  {
+   "star": "eta Crv",
+   "display": "$\\eta$~Crv",
+   "eb": "A002_X75bfbf_X1430",
+   "freq": 345.8455497602863,
+   "line": "CO(3-2)",
+   "tstar": 5.0081,
+   "dv_stellar": 15.614424198596653,
+   "routes": []
+  },
+  {
+   "star": "bet Pic",
+   "display": "$\\beta$~Pic",
+   "eb": "A002_Xf5d76d_Xeb8",
+   "freq": 115.26032550000001,
+   "line": "CO(1-0)",
+   "tstar": 30.7654,
+   "dv_stellar": -0.24266686954149053,
+   "routes": [
+    "recurrence",
+    "transition"
+   ]
+  },
+  {
+   "star": "bet Pic",
+   "display": "$\\beta$~Pic",
+   "eb": "A002_Xf5d76d_Xe19",
+   "freq": 115.2603454,
+   "line": "CO(1-0)",
+   "tstar": 27.8008,
+   "dv_stellar": -0.24345393877970084,
+   "routes": [
+    "recurrence",
+    "transition"
+   ]
+  },
+  {
+   "star": "bet Pic",
+   "display": "$\\beta$~Pic",
+   "eb": "A002_Xf5d76d_Xcc5",
+   "freq": 115.2603721,
+   "line": "CO(1-0)",
+   "tstar": 17.3462,
+   "dv_stellar": -0.24668899133583075,
+   "routes": [
+    "recurrence",
+    "transition"
+   ]
+  },
+  {
+   "star": "bet Pic",
+   "display": "$\\beta$~Pic",
+   "eb": "A002_Xf5d76d_X32f1",
+   "freq": 115.2606437,
+   "line": "CO(1-0)",
+   "tstar": 14.6175,
+   "dv_stellar": 0.3726188504681111,
+   "routes": [
+    "recurrence",
+    "transition"
+   ]
+  },
+  {
+   "star": "bet Pic",
+   "display": "$\\beta$~Pic",
+   "eb": "A002_Xf4df6f_Xc7",
+   "freq": 115.2620386,
+   "line": "CO(1-0)",
+   "tstar": 17.7259,
+   "dv_stellar": -0.23102158970795084,
+   "routes": [
+    "recurrence",
+    "transition"
+   ]
+  },
+  {
+   "star": "bet Pic",
+   "display": "$\\beta$~Pic",
+   "eb": "A002_X7116f1_X1785",
+   "freq": 230.527185,
+   "line": "CO(2-1)",
+   "tstar": 9.6787,
+   "dv_stellar": 0.5287434109323069,
+   "routes": [
+    "recurrence",
+    "transition"
+   ]
+  },
+  {
+   "star": "bet Pic",
+   "display": "$\\beta$~Pic",
+   "eb": "A002_X6f1341_X1484",
+   "freq": 230.5283785,
+   "line": "CO(2-1)",
+   "tstar": 9.7231,
+   "dv_stellar": -0.10965290612050087,
+   "routes": [
+    "recurrence",
+    "transition"
+   ]
+  },
+  {
+   "star": "bet Pic",
+   "display": "$\\beta$~Pic",
+   "eb": "A002_Xa7a216_X23e4",
+   "freq": 230.5272612,
+   "line": "CO(2-1)",
+   "tstar": 7.9879,
+   "dv_stellar": -0.44378183643516816,
+   "routes": [
+    "recurrence",
+    "transition"
+   ]
+  },
+  {
+   "star": "bet Pic",
+   "display": "$\\beta$~Pic",
+   "eb": "A002_Xd9668b_Xa9df",
+   "freq": 230.51602540000002,
+   "line": "CO(2-1)",
+   "tstar": 8.9476,
+   "dv_stellar": -0.3893438441635639,
+   "routes": [
+    "recurrence",
+    "transition"
+   ]
+  },
+  {
+   "star": "bet Pic",
+   "display": "$\\beta$~Pic",
+   "eb": "A002_Xd9668b_X3a90",
+   "freq": 230.51612790000001,
+   "line": "CO(2-1)",
+   "tstar": 11.681,
+   "dv_stellar": -0.2873895105706008,
+   "routes": [
+    "recurrence",
+    "transition"
+   ]
+  },
+  {
+   "star": "CD-57 1054",
+   "display": "CD$-$57 1054",
+   "eb": "A002_Xcf525f_X5aa4",
+   "freq": 346.50989599999997,
+   "line": "SO(9(8)-8(7))",
+   "tstar": 5.6924,
+   "dv_stellar": -1.681718089550739,
+   "routes": []
+  },
+  {
+   "star": "HD161868",
+   "display": "HD 161868",
+   "eb": "A002_Xff45a6_X10ca8",
+   "freq": 345.6338357,
+   "line": "SO(2(3)-2(1))",
+   "tstar": 5.2727,
+   "dv_stellar": -48.04161937447921,
+   "routes": []
+  },
+  {
+   "star": "ALMA J153702653-33192492",
+   "display": "ALMA J153702653-33192492",
+   "eb": "A002_Xff0235_X8392",
+   "freq": 230.5221514,
+   "line": "CO(2-1)",
+   "tstar": 5.3936,
+   "dv_stellar": 1.5502237131414773,
+   "routes": [
+    "gas"
+   ]
+  },
+  {
+   "star": "HD 48370",
+   "display": "HD 48370",
+   "eb": "A002_Xc26103_X155a",
+   "freq": 230.51167370000002,
+   "line": "CO(2-1)",
+   "tstar": 26.8584,
+   "dv_stellar": -17.83420491869258,
+   "routes": [
+    "gas"
+   ]
+  },
+  {
+   "star": "CP-72 2713",
+   "display": "CP$-$72 2713",
+   "eb": "A002_Xff0235_X4a6d",
+   "freq": 344.2697461,
+   "line": "SO(8(8)-7(7))",
+   "tstar": 5.8089,
+   "dv_stellar": -12.326846969899371,
+   "routes": []
+  },
+  {
+   "star": "HIP10679",
+   "display": "HIP 10679",
+   "eb": "A002_Xa95c04_X14cd",
+   "freq": 220.4185118,
+   "line": "13CO(J=2-1,F=5/2-3/2)",
+   "tstar": 5.5545,
+   "dv_stellar": 6.462510427144909,
+   "routes": []
+  },
+  {
+   "star": "HIP10679",
+   "display": "HIP 10679",
+   "eb": "A002_Xa95c04_X14cd",
+   "freq": 230.5775284,
+   "line": "CO(2-1)",
+   "tstar": 5.0785,
+   "dv_stellar": 30.916512897610332,
+   "routes": []
+  },
+  {
+   "star": "HR 1010",
+   "display": "HR~1010",
+   "eb": "A002_Xc6fa08_X1053",
+   "freq": 230.51328,
+   "line": "CO(2-1)",
+   "tstar": 5.0346,
+   "dv_stellar": -12.03461314048279,
+   "routes": []
+  },
+  {
+   "star": "HD 139084 B",
+   "display": "HD~139084~B",
+   "eb": "A002_Xcd8029_Xb6b0",
+   "freq": 345.824056,
+   "line": "CO(3-2)",
+   "tstar": 5.7635,
+   "dv_stellar": 24.366043813347122,
+   "routes": [
+    "gas"
+   ]
+  }
+ ]
+}

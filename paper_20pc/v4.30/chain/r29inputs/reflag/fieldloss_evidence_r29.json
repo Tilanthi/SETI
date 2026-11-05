@@ -1,0 +1,761 @@
+{
+ "_doc": "FIELD-LOSS evidence for build_fold.py FIELD-COVER guard and fieldcover_r27 C2/C5 (r28-fold29-x28a8, make_evidence_all.py). Each entry: every new integration is a reference integration; every lost integration lies in a listobs scan that Pipeline_Final flags 100 % on target; FIELD rows no longer kept lost all their integrations.",
+ "fold_windows": "/data/paper_build/fold29/refold/harv_r10/out/fold_windows.json",
+ "fold_windows_md5": "48f88a639a75be9a6de5aaaa09efc4de",
+ "base_fieldfix_md5": "daf419f85666a48f8f938d65f7667417",
+ "tol": 0.01,
+ "windows": [
+  {
+   "eb": "A002_Xb2e94e_X361a",
+   "spw": 17,
+   "flo": 244.14172150714316,
+   "fhi": 245.87609650714316,
+   "target_dir": "HD_139664_B6_EB_X361a",
+   "pos_key": "HD_139664_B6_EB_X361a|17.3986|235.296323|-44.662417",
+   "old": {
+    "n_fields": 6,
+    "kept_fields": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ],
+    "n_int": 443,
+    "onsrc": 2334.5280000000002
+   },
+   "new": {
+    "n_fields": 6,
+    "kept_fields": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ],
+    "n_int": 380,
+    "onsrc": 2298.2400000000002
+   },
+   "flagged_out_fields": [],
+   "new_srcspec_md5": "013b64ee450853f53563c51a50c49e6a",
+   "reference_srcspec": "/data/paper_build/fieldtrunc_r27/harvroot/HD_139664_B6_EB_X361a/products/A002_Xb2e94e_X361a_spw17_srcspec.npz",
+   "reference_srcspec_md5": "b41eff15799b0cdd36e139068518b9db",
+   "new_product": "/tmp/reflag_r27/targets/_g_Lup_B6_EB_X361a/products/A002_Xb2e94e_X361a_spw17_result.json",
+   "lost": {
+    "n_int": 63,
+    "expos_s": 36.288,
+    "scans": {
+     "9": {
+      "field": 4,
+      "name": "HD_139664",
+      "intents": [
+       "CALIBRATE_ATMOSPHERE#AMBIENT",
+       "CALIBRATE_ATMOSPHERE#HOT",
+       "CALIBRATE_ATMOSPHERE#OFF_SOURCE",
+       "CALIBRATE_WVR#AMBIENT",
+       "CALIBRATE_WVR#HOT",
+       "CALIBRATE_WVR#OFF_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 21,
+      "expos_s": 12.096
+     },
+     "14": {
+      "field": 6,
+      "name": "HD_139664",
+      "intents": [
+       "CALIBRATE_ATMOSPHERE#AMBIENT",
+       "CALIBRATE_ATMOSPHERE#HOT",
+       "CALIBRATE_ATMOSPHERE#OFF_SOURCE",
+       "CALIBRATE_WVR#AMBIENT",
+       "CALIBRATE_WVR#HOT",
+       "CALIBRATE_WVR#OFF_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 21,
+      "expos_s": 12.096
+     },
+     "19": {
+      "field": 8,
+      "name": "HD_139664",
+      "intents": [
+       "CALIBRATE_ATMOSPHERE#AMBIENT",
+       "CALIBRATE_ATMOSPHERE#HOT",
+       "CALIBRATE_ATMOSPHERE#OFF_SOURCE",
+       "CALIBRATE_WVR#AMBIENT",
+       "CALIBRATE_WVR#HOT",
+       "CALIBRATE_WVR#OFF_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 21,
+      "expos_s": 12.096
+     }
+    }
+   },
+   "listobs": "/data/paper_build/fold29/x28a8/listobs/A002_Xb2e94e_X361a/listobs.txt",
+   "listobs_md5": "c06c639b357ad87a5e766fa3b0768f66",
+   "pf_flags": "/tmp/reflag_r27/targets/_g_Lup_B6_EB_X361a/logs/flags_r27_A002_Xb2e94e_X361a_pf.json",
+   "pf_flags_md5": "3f53a0b284f0fe70bc79adfcce291493",
+   "intents_lost": [
+    "CALIBRATE_ATMOSPHERE#AMBIENT",
+    "CALIBRATE_ATMOSPHERE#HOT",
+    "CALIBRATE_ATMOSPHERE#OFF_SOURCE",
+    "CALIBRATE_WVR#AMBIENT",
+    "CALIBRATE_WVR#HOT",
+    "CALIBRATE_WVR#OFF_SOURCE"
+   ]
+  },
+  {
+   "eb": "A002_Xb2e94e_X361a",
+   "spw": 19,
+   "flo": 246.14179423373128,
+   "fhi": 247.87616923373128,
+   "target_dir": "HD_139664_B6_EB_X361a",
+   "pos_key": "HD_139664_B6_EB_X361a|17.3986|235.296323|-44.662417",
+   "old": {
+    "n_fields": 6,
+    "kept_fields": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ],
+    "n_int": 443,
+    "onsrc": 2334.5280000000002
+   },
+   "new": {
+    "n_fields": 6,
+    "kept_fields": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ],
+    "n_int": 380,
+    "onsrc": 2298.2400000000002
+   },
+   "flagged_out_fields": [],
+   "new_srcspec_md5": "8bf82b3ef69b4ad5bb8e8afa97f1426e",
+   "reference_srcspec": "/data/paper_build/fieldtrunc_r27/harvroot/HD_139664_B6_EB_X361a/products/A002_Xb2e94e_X361a_spw19_srcspec.npz",
+   "reference_srcspec_md5": "6ed26fd9c821f8ea397195eed7b61620",
+   "new_product": "/tmp/reflag_r27/targets/_g_Lup_B6_EB_X361a/products/A002_Xb2e94e_X361a_spw19_result.json",
+   "lost": {
+    "n_int": 63,
+    "expos_s": 36.288,
+    "scans": {
+     "9": {
+      "field": 4,
+      "name": "HD_139664",
+      "intents": [
+       "CALIBRATE_ATMOSPHERE#AMBIENT",
+       "CALIBRATE_ATMOSPHERE#HOT",
+       "CALIBRATE_ATMOSPHERE#OFF_SOURCE",
+       "CALIBRATE_WVR#AMBIENT",
+       "CALIBRATE_WVR#HOT",
+       "CALIBRATE_WVR#OFF_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 21,
+      "expos_s": 12.096
+     },
+     "14": {
+      "field": 6,
+      "name": "HD_139664",
+      "intents": [
+       "CALIBRATE_ATMOSPHERE#AMBIENT",
+       "CALIBRATE_ATMOSPHERE#HOT",
+       "CALIBRATE_ATMOSPHERE#OFF_SOURCE",
+       "CALIBRATE_WVR#AMBIENT",
+       "CALIBRATE_WVR#HOT",
+       "CALIBRATE_WVR#OFF_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 21,
+      "expos_s": 12.096
+     },
+     "19": {
+      "field": 8,
+      "name": "HD_139664",
+      "intents": [
+       "CALIBRATE_ATMOSPHERE#AMBIENT",
+       "CALIBRATE_ATMOSPHERE#HOT",
+       "CALIBRATE_ATMOSPHERE#OFF_SOURCE",
+       "CALIBRATE_WVR#AMBIENT",
+       "CALIBRATE_WVR#HOT",
+       "CALIBRATE_WVR#OFF_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 21,
+      "expos_s": 12.096
+     }
+    }
+   },
+   "listobs": "/data/paper_build/fold29/x28a8/listobs/A002_Xb2e94e_X361a/listobs.txt",
+   "listobs_md5": "c06c639b357ad87a5e766fa3b0768f66",
+   "pf_flags": "/tmp/reflag_r27/targets/_g_Lup_B6_EB_X361a/logs/flags_r27_A002_Xb2e94e_X361a_pf.json",
+   "pf_flags_md5": "3f53a0b284f0fe70bc79adfcce291493",
+   "intents_lost": [
+    "CALIBRATE_ATMOSPHERE#AMBIENT",
+    "CALIBRATE_ATMOSPHERE#HOT",
+    "CALIBRATE_ATMOSPHERE#OFF_SOURCE",
+    "CALIBRATE_WVR#AMBIENT",
+    "CALIBRATE_WVR#HOT",
+    "CALIBRATE_WVR#OFF_SOURCE"
+   ]
+  },
+  {
+   "eb": "A002_Xc7fa6f_X28a8",
+   "spw": 0,
+   "flo": 224.86718940734863,
+   "fhi": 223.13281440734863,
+   "target_dir": "Bd05_1668_B6_EB_X28a8",
+   "pos_key": "Bd05_1668_B6_EB_X28a8|3.7861|111.854940|5.207376",
+   "old": {
+    "n_fields": 3,
+    "kept_fields": [
+     1,
+     2,
+     3
+    ],
+    "n_int": 2940,
+    "onsrc": 2963.519999999999
+   },
+   "new": {
+    "n_fields": 1,
+    "kept_fields": [
+     1
+    ],
+    "n_int": 930,
+    "onsrc": 937.4399999999996
+   },
+   "flagged_out_fields": [
+    2,
+    3
+   ],
+   "new_srcspec_md5": "c19fd151c03b8c73f15f21fd7d67dc81",
+   "reference_srcspec": "/data/SETI/r8reext/targets/Bd05_1668_B6_EB_X28a8/products/A002_Xc7fa6f_X28a8_spw0_srcspec.npz",
+   "reference_srcspec_md5": "68d7518403e6cfe78dd323b97324019b",
+   "new_product": "/data/paper_build/reflag_r27/targets_D/BD05__1668_B6_EB_X28a8/products/A002_Xc7fa6f_X28a8_spw0_result.json",
+   "lost": {
+    "n_int": 2010,
+    "expos_s": 2026.08,
+    "scans": {
+     "14": {
+      "field": 2,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 390,
+      "expos_s": 393.12
+     },
+     "15": {
+      "field": 2,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 90,
+      "expos_s": 90.72
+     },
+     "18": {
+      "field": 3,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 390,
+      "expos_s": 393.12
+     },
+     "19": {
+      "field": 3,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 60,
+      "expos_s": 60.48
+     },
+     "21": {
+      "field": 3,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 390,
+      "expos_s": 393.12
+     },
+     "23": {
+      "field": 3,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 90,
+      "expos_s": 90.72
+     },
+     "25": {
+      "field": 3,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 390,
+      "expos_s": 393.12
+     },
+     "26": {
+      "field": 3,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 90,
+      "expos_s": 90.72
+     },
+     "29": {
+      "field": 4,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 120,
+      "expos_s": 120.96
+     }
+    }
+   },
+   "listobs": "/data/paper_build/fold29/x28a8/listobs/A002_Xc7fa6f_X28a8/listobs.txt",
+   "listobs_md5": "4d5523f2459e9e5c195686f99e86e625",
+   "pf_flags": "/data/paper_build/reflag_r27/targets_D/BD05__1668_B6_EB_X28a8/logs/flags_r27_A002_Xc7fa6f_X28a8_pf.json",
+   "pf_flags_md5": "e713ae4452ac3a39984f68f98ac0b92f",
+   "intents_lost": [
+    "OBSERVE_TARGET#ON_SOURCE"
+   ]
+  },
+  {
+   "eb": "A002_Xc7fa6f_X28a8",
+   "spw": 1,
+   "flo": 226.86718940734863,
+   "fhi": 225.13281440734863,
+   "target_dir": "Bd05_1668_B6_EB_X28a8",
+   "pos_key": "Bd05_1668_B6_EB_X28a8|3.7861|111.854940|5.207376",
+   "old": {
+    "n_fields": 3,
+    "kept_fields": [
+     1,
+     2,
+     3
+    ],
+    "n_int": 2940,
+    "onsrc": 2963.519999999999
+   },
+   "new": {
+    "n_fields": 1,
+    "kept_fields": [
+     1
+    ],
+    "n_int": 930,
+    "onsrc": 937.4399999999996
+   },
+   "flagged_out_fields": [
+    2,
+    3
+   ],
+   "new_srcspec_md5": "affaec2f61adc0f20173cb51edff8016",
+   "reference_srcspec": "/data/SETI/r8reext/targets/Bd05_1668_B6_EB_X28a8/products/A002_Xc7fa6f_X28a8_spw1_srcspec.npz",
+   "reference_srcspec_md5": "d6e32181d93954a84f8355ce5de70190",
+   "new_product": "/data/paper_build/reflag_r27/targets_D/BD05__1668_B6_EB_X28a8/products/A002_Xc7fa6f_X28a8_spw1_result.json",
+   "lost": {
+    "n_int": 2010,
+    "expos_s": 2026.08,
+    "scans": {
+     "14": {
+      "field": 2,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 390,
+      "expos_s": 393.12
+     },
+     "15": {
+      "field": 2,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 90,
+      "expos_s": 90.72
+     },
+     "18": {
+      "field": 3,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 390,
+      "expos_s": 393.12
+     },
+     "19": {
+      "field": 3,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 60,
+      "expos_s": 60.48
+     },
+     "21": {
+      "field": 3,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 390,
+      "expos_s": 393.12
+     },
+     "23": {
+      "field": 3,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 90,
+      "expos_s": 90.72
+     },
+     "25": {
+      "field": 3,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 390,
+      "expos_s": 393.12
+     },
+     "26": {
+      "field": 3,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 90,
+      "expos_s": 90.72
+     },
+     "29": {
+      "field": 4,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 120,
+      "expos_s": 120.96
+     }
+    }
+   },
+   "listobs": "/data/paper_build/fold29/x28a8/listobs/A002_Xc7fa6f_X28a8/listobs.txt",
+   "listobs_md5": "4d5523f2459e9e5c195686f99e86e625",
+   "pf_flags": "/data/paper_build/reflag_r27/targets_D/BD05__1668_B6_EB_X28a8/logs/flags_r27_A002_Xc7fa6f_X28a8_pf.json",
+   "pf_flags_md5": "e713ae4452ac3a39984f68f98ac0b92f",
+   "intents_lost": [
+    "OBSERVE_TARGET#ON_SOURCE"
+   ]
+  },
+  {
+   "eb": "A002_Xc7fa6f_X28a8",
+   "spw": 2,
+   "flo": 239.13281059285134,
+   "fhi": 240.86718559285134,
+   "target_dir": "Bd05_1668_B6_EB_X28a8",
+   "pos_key": "Bd05_1668_B6_EB_X28a8|3.7861|111.854940|5.207376",
+   "old": {
+    "n_fields": 3,
+    "kept_fields": [
+     1,
+     2,
+     3
+    ],
+    "n_int": 2940,
+    "onsrc": 2963.519999999999
+   },
+   "new": {
+    "n_fields": 1,
+    "kept_fields": [
+     1
+    ],
+    "n_int": 930,
+    "onsrc": 937.4399999999996
+   },
+   "flagged_out_fields": [
+    2,
+    3
+   ],
+   "new_srcspec_md5": "c10d4c52d602fa7371e8acfc2a206153",
+   "reference_srcspec": "/data/SETI/r8reext/targets/Bd05_1668_B6_EB_X28a8/products/A002_Xc7fa6f_X28a8_spw2_srcspec.npz",
+   "reference_srcspec_md5": "319a624fba679ef0bcab881bc0ddf370",
+   "new_product": "/data/paper_build/reflag_r27/targets_D/BD05__1668_B6_EB_X28a8/products/A002_Xc7fa6f_X28a8_spw2_result.json",
+   "lost": {
+    "n_int": 2010,
+    "expos_s": 2026.08,
+    "scans": {
+     "14": {
+      "field": 2,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 390,
+      "expos_s": 393.12
+     },
+     "15": {
+      "field": 2,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 90,
+      "expos_s": 90.72
+     },
+     "18": {
+      "field": 3,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 390,
+      "expos_s": 393.12
+     },
+     "19": {
+      "field": 3,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 60,
+      "expos_s": 60.48
+     },
+     "21": {
+      "field": 3,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 390,
+      "expos_s": 393.12
+     },
+     "23": {
+      "field": 3,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 90,
+      "expos_s": 90.72
+     },
+     "25": {
+      "field": 3,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 390,
+      "expos_s": 393.12
+     },
+     "26": {
+      "field": 3,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 90,
+      "expos_s": 90.72
+     },
+     "29": {
+      "field": 4,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 120,
+      "expos_s": 120.96
+     }
+    }
+   },
+   "listobs": "/data/paper_build/fold29/x28a8/listobs/A002_Xc7fa6f_X28a8/listobs.txt",
+   "listobs_md5": "4d5523f2459e9e5c195686f99e86e625",
+   "pf_flags": "/data/paper_build/reflag_r27/targets_D/BD05__1668_B6_EB_X28a8/logs/flags_r27_A002_Xc7fa6f_X28a8_pf.json",
+   "pf_flags_md5": "e713ae4452ac3a39984f68f98ac0b92f",
+   "intents_lost": [
+    "OBSERVE_TARGET#ON_SOURCE"
+   ]
+  },
+  {
+   "eb": "A002_Xc7fa6f_X28a8",
+   "spw": 3,
+   "flo": 241.1328105926514,
+   "fhi": 242.8671855926514,
+   "target_dir": "Bd05_1668_B6_EB_X28a8",
+   "pos_key": "Bd05_1668_B6_EB_X28a8|3.7861|111.854940|5.207376",
+   "old": {
+    "n_fields": 3,
+    "kept_fields": [
+     1,
+     2,
+     3
+    ],
+    "n_int": 2940,
+    "onsrc": 2963.519999999999
+   },
+   "new": {
+    "n_fields": 1,
+    "kept_fields": [
+     1
+    ],
+    "n_int": 930,
+    "onsrc": 937.4399999999996
+   },
+   "flagged_out_fields": [
+    2,
+    3
+   ],
+   "new_srcspec_md5": "cd3ad57dd8ebd886c7a457589f1fd228",
+   "reference_srcspec": "/data/SETI/r8reext/targets/Bd05_1668_B6_EB_X28a8/products/A002_Xc7fa6f_X28a8_spw3_srcspec.npz",
+   "reference_srcspec_md5": "c8a862e5843a3f3ab7303bc576db39ea",
+   "new_product": "/data/paper_build/reflag_r27/targets_D/BD05__1668_B6_EB_X28a8/products/A002_Xc7fa6f_X28a8_spw3_result.json",
+   "lost": {
+    "n_int": 2010,
+    "expos_s": 2026.08,
+    "scans": {
+     "14": {
+      "field": 2,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 390,
+      "expos_s": 393.12
+     },
+     "15": {
+      "field": 2,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 90,
+      "expos_s": 90.72
+     },
+     "18": {
+      "field": 3,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 390,
+      "expos_s": 393.12
+     },
+     "19": {
+      "field": 3,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 60,
+      "expos_s": 60.48
+     },
+     "21": {
+      "field": 3,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 390,
+      "expos_s": 393.12
+     },
+     "23": {
+      "field": 3,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 90,
+      "expos_s": 90.72
+     },
+     "25": {
+      "field": 3,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 390,
+      "expos_s": 393.12
+     },
+     "26": {
+      "field": 3,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 90,
+      "expos_s": 90.72
+     },
+     "29": {
+      "field": 4,
+      "name": "GJ_273",
+      "intents": [
+       "OBSERVE_TARGET#ON_SOURCE"
+      ],
+      "pf_target_flag_fraction": 1.0,
+      "n_int": 120,
+      "expos_s": 120.96
+     }
+    }
+   },
+   "listobs": "/data/paper_build/fold29/x28a8/listobs/A002_Xc7fa6f_X28a8/listobs.txt",
+   "listobs_md5": "4d5523f2459e9e5c195686f99e86e625",
+   "pf_flags": "/data/paper_build/reflag_r27/targets_D/BD05__1668_B6_EB_X28a8/logs/flags_r27_A002_Xc7fa6f_X28a8_pf.json",
+   "pf_flags_md5": "e713ae4452ac3a39984f68f98ac0b92f",
+   "intents_lost": [
+    "OBSERVE_TARGET#ON_SOURCE"
+   ]
+  }
+ ]
+}

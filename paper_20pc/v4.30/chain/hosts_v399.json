@@ -1,0 +1,62 @@
+{
+ "queried": "2026-09-26",
+ "hosts": {
+  "61 Vir": {
+   "main_id": "*  61 Vir",
+   "sp_type": "G6.5V",
+   "plx": 117.1726,
+   "otypes": [
+    "*",
+    "**",
+    "IR",
+    "MIR",
+    "NIR",
+    "PM*",
+    "Ro*",
+    "UV"
+   ],
+   "otype": "PM*",
+   "n_parents": 0,
+   "n_parents_any": 0,
+   "parent_types_discarded": [],
+   "n_siblings": 0,
+   "children": [
+    [
+     5187170,
+     "Pl"
+    ],
+    [
+     5187191,
+     "Pl"
+    ],
+    [
+     5187192,
+     "Pl"
+    ]
+   ]
+  },
+  "CP$-$72 2713": {
+   "main_id": "CPD-72  2713",
+   "sp_type": "K7Ve",
+   "plx": 27.2315,
+   "otypes": [
+    "*",
+    "Er*",
+    "MIR",
+    "NIR",
+    "PM*",
+    "Ro*",
+    "V*",
+    "X"
+   ],
+   "otype": "PM*",
+   "n_parents": 0,
+   "n_parents_any": 11,
+   "parent_types_discarded": [
+    "MGr"
+   ],
+   "n_siblings": 0,
+   "children": []
+  }
+ }
+}

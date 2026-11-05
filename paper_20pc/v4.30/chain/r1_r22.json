@@ -1,0 +1,108 @@
+{
+ "drive": null,
+ "macros": {
+  "NgDecImpMedPct": "3",
+  "NgDecMeasMedPct": "4",
+  "NgDeepNInjCfg": "7",
+  "NgExtrapSys": "51~Eri, ALMA~J153702653-33192492, HD~172555, PM~J03433+1958, TWA~7 and WD~0407+179",
+  "NgExtrapSysNoun": "systems",
+  "NgExtrapTakeClause": "} systems take their headline limit from one of them",
+  "NgNDecBOnly": "24",
+  "NgNDecImpSys": "33",
+  "NgNDecMeasSys": "26",
+  "NgNDecNoneSys": "1",
+  "NgNDeep": "10",
+  "NgNDeepImp": "6",
+  "NgNDeepMeas": "3",
+  "NgNExtrapSys": "6",
+  "NgNExtrapWin": "57",
+  "NgNInterpWin": "299",
+  "NgNMeasSysChk": "7",
+  "NgNStarA": "66",
+  "NgNWinADrift": "396",
+  "NgNWinANoDrift": "9"
+ },
+ "r1_1": {
+  "n_a": 405,
+  "n_drift": 396,
+  "n_nodrift": 9,
+  "sections_missing": []
+ },
+ "r1_2": {
+  "calib": [
+   0.89,
+   1.11
+  ],
+  "deepest_system": "eps~Eri",
+  "dispersion": [
+   0.81,
+   1.12
+  ],
+  "extrap_systems": [
+   "PM~J03433+1958",
+   "HD~172555",
+   "51~Eri",
+   "TWA~7",
+   "WD~0407+179",
+   "ALMA~J153702653-33192492"
+  ],
+  "mult_a": 2.992381132432177,
+  "n_extrap_win": 57,
+  "ratio_max": 4.337672642593877,
+  "ratio_min": 2.9924676494459033
+ },
+ "r1_3": {
+  "basis": {
+   "matched": 33,
+   "measured": 26,
+   "none": 1
+  },
+  "deepest_basis": [
+   [
+    "eps~Eri",
+    "none"
+   ],
+   [
+    "lp~876-10",
+    "matched"
+   ],
+   [
+    "tau~Cet",
+    "matched"
+   ],
+   [
+    "HD~69830",
+    "measured"
+   ],
+   [
+    "AU~Mic",
+    "matched"
+   ],
+   [
+    "61~Vir",
+    "matched"
+   ],
+   [
+    "TRAPPIST-1",
+    "measured"
+   ],
+   [
+    "$\\beta$~Pic",
+    "matched"
+   ],
+   [
+    "V~AT~Mic~B",
+    "measured"
+   ],
+   [
+    "HD~38858",
+    "matched"
+   ]
+  ],
+  "med_imputed": 0.030315501406880774,
+  "med_measured": 0.04440684643183279,
+  "med_pooled": 0.03050246826004188,
+  "n_dagger": 7,
+  "n_star": 33
+ }
+}

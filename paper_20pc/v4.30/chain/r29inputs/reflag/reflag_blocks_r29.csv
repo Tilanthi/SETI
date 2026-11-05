@@ -1,0 +1,286 @@
+eb,tier,set,stars,reasons,fate,how,size_gb,carries_limit,carries_crossing,n_windows_folded,lane,flag_frac
+A002_X1001fdc_X2085,2-recurrence-only,census,HD 14055;HD14055,recurrence_epoch,recalibrated,pipeline_final,3.35,False,False,4,D3,0.4705678139637541
+A002_X1001fdc_X29ae,1-core,census,HD 14055;HD14055,crossing_census,recalibrated,pipeline_final,3.36,False,True,4,proofR0(adopted),0.46500554847095177
+A002_X1001fdc_Xc06e,2-recurrence-only,census,HD 14055;HD14055,recurrence_epoch,recalibrated,pipeline_final,2.92,False,False,4,D3,0.5274219375500401
+A002_X1003af4_X14e08,2-recurrence-only,census,HD 14055;HD14055,recurrence_epoch,recalibrated,pipeline_final,3.35,False,False,4,D4,0.4412176288103588
+A002_X1003af4_X3a2c,2-recurrence-only,census,HD 14055;HD14055,recurrence_epoch,recalibrated,pipeline_final,2.74,False,False,4,D3,0.494209593350864
+A002_X1006d51_X228e,2-recurrence-only,census,HD 14055;HD14055,recurrence_epoch,recalibrated,pipeline_final,2.91,False,False,4,D4,0.46497197758206565
+A002_X1009c59_X1ba4d,2-recurrence-only,census,ALMA J153702653-33192492,recurrence_epoch,recalibrated,pipeline_final,3.57,False,False,5,D3,0.4810763888888889
+A002_X101088d_Xbf80,2-recurrence-only,census,HD 14055;HD14055,recurrence_epoch,recalibrated,pipeline_final,3.37,False,False,4,D4,0.5583061402056715
+A002_X1015532_X20dc8,2-recurrence-only,census,ALMA J153702653-33192492,recurrence_epoch,recalibrated,pipeline_final,2.96,False,False,5,D4,0.3608019406392694
+A002_X1018459_X73b0,2-recurrence-only,census,ALMA J153702653-33192492,recurrence_epoch,recalibrated,pipeline_final,4.26,False,False,5,D4,0.3098060344827586
+A002_X1020da2_X78cd,2-recurrence-only,census,ALMA J153702653-33192492,recurrence_epoch,recalibrated,pipeline_final,4.24,False,False,5,D3,0.2917707661723619
+A002_X105e6e0_X7c5e,2-recurrence-only,hold-out,HD 14055;HD14055,recurrence_epoch,recalibrated,pipeline_final,2.92,False,False,4,D4,0.46713370696557244
+A002_X106a1f1_X6a0c,1-core,census,Proxima Cen,proxima_stack,recalibrated,pipeline_final,1.33,True,False,4,D2,0.3401609661762475
+A002_X106b646_X1295,1-core,census,Proxima Cen,proxima_stack,recalibrated,pipeline_final,1.33,True,False,4,D1,0.23853898073714547
+A002_X106b646_X19c5,1-core,census,Proxima Cen,proxima_stack,recalibrated,pipeline_final,1.33,True,False,4,D1,0.23853898073714547
+A002_X106ccd1_X1a38,1-core,census,Proxima Cen,"limit_runnerup,proxima_stack",recalibrated,pipeline_final,1.14,True,False,4,D1,0.25600547404690455
+A002_X106ccd1_Xbe52,1-core,census,Proxima Cen,proxima_stack,recalibrated,pipeline_final,1.14,True,False,4,D1,0.25600200066688894
+A002_X106ccd1_Xc4a6,1-core,census,Proxima Cen,proxima_stack,recalibrated,pipeline_final,1.14,True,False,4,D2,0.25600200066688894
+A002_X106f040_X13932,1-core,census,Proxima Cen,proxima_stack,recalibrated,pipeline_final,1.33,True,False,4,D1,0.23853898073714547
+A002_X106f040_X148f3,1-core,census,Proxima Cen,proxima_stack,recalibrated,pipeline_final,1.33,True,False,4,D2,0.33338957985742457
+A002_X106f040_X26c7,1-core,census,Proxima Cen,"limit_runnerup,proxima_stack",recalibrated,pipeline_final,1.33,True,False,4,D1,0.23859017139390262
+A002_X106f040_X2b06,1-core,census,Proxima Cen,"limit_runnerup,proxima_stack",recalibrated,pipeline_final,1.33,True,False,4,D2,0.23853898073714547
+A002_X106f040_X2e59,1-core,census,Proxima Cen,"limit_runnerup,proxima_stack",recalibrated,pipeline_final,1.33,True,False,4,D1,0.3038013802517822
+A002_X107376c_X12b9,1-core,census,Proxima Cen,proxima_stack,recalibrated,pipeline_final,1.33,True,False,4,D2,0.3908311845897164
+A002_X107376c_X4442,1-core,census,HD172555,limit_best_A,infeasible_estimated,target-list peak estimate 191 GB (ASDM 70.8 GB) > usable volume,70.85,True,False,0,,
+A002_X107376c_X6126,1-core,hold-out,HD 14055;HD14055,"crossing_holdout,recurrence_epoch",recalibrated,pipeline_final,2.53,False,True,4,D2,0.537463768115942
+A002_X1074d99_X167,1-core,census,Proxima Cen,"limit_runnerup,proxima_stack",recalibrated,pipeline_final,1.53,True,False,4,D1,0.2239670283806344
+A002_X1074d99_X74e,1-core,census,Proxima Cen,proxima_stack,recalibrated,pipeline_final,1.53,True,False,4,D2,0.36531055547124
+A002_X1076174_X11cc,1-core,census,Proxima Cen,"limit_runnerup,proxima_stack",recalibrated,pipeline_final,1.41,True,False,4,D2,0.36438095674486803
+A002_X107649f_X868f,1-core,census,Proxima Cen,proxima_stack,recalibrated,pipeline_final,1.53,True,False,4,D2,0.2239670283806344
+A002_X107649f_X8f30,1-core,census,Proxima Cen,proxima_stack,recalibrated,pipeline_final,1.53,True,False,4,D1,0.22401445591136743
+A002_X1077d5b_X9976,1-core,census,Proxima Cen,"limit_runnerup,proxima_stack",recalibrated,pipeline_final,1.53,True,False,4,D2,0.36510661708908787
+A002_X1077d5b_Xa63d,1-core,census,Proxima Cen,"limit_best_B,proxima_stack",recalibrated,pipeline_final,1.53,True,False,4,D1,0.22405714068902716
+A002_X107fa96_X1300f,1-core,hold-out,HD172555,crossing_holdout,infeasible_estimated,target-list peak estimate 221 GB (ASDM 81.8 GB) > usable volume,81.85,False,True,0,,
+A002_X107fa96_X150f6,2-recurrence-only,census,HD 14055;HD14055,recurrence_epoch,recalibrated,pipeline_final,3.36,False,False,4,D3,0.6501888319395738
+A002_X107fa96_X9a88,2-recurrence-only,census,HD 14055;HD14055,recurrence_epoch,recalibrated,pipeline_final,2.92,False,False,4,D3,0.48330907149962393
+A002_X107fa96_Xce38,3-runnerup-only,census,GJ 674,limit_runnerup,recalibrated,pipeline_final,1.38,True,False,4,D4,0.28589033823752463
+A002_X10854a6_X3ac1,3-runnerup-only,census,GJ 674,limit_runnerup,recalibrated,pipeline_final,1.33,True,False,4,D3,0.24902168967086305
+A002_X1086384_X10bc1,2-recurrence-only,census,HD 14055;HD14055,recurrence_epoch,recalibrated,pipeline_final,4.01,False,False,4,D4,0.4120540342087077
+A002_X1086384_Xdeeb,3-runnerup-only,census,GJ 674,limit_runnerup,recalibrated,pipeline_final,1.38,True,False,4,D3,0.23853898073714547
+A002_X1088045_X3c7b,2-recurrence-only,census,HD 14055;HD14055,recurrence_epoch,recalibrated,pipeline_final,2.91,False,False,4,D3,0.49619695756605287
+A002_X108c378_X1ced,3-runnerup-only,census,GJ 674,limit_runnerup,recalibrated,pipeline_final,1.59,True,False,4,D4,0.25745086507816056
+A002_X108c378_X26b3,1-core,census,GJ 674,limit_best_B,recalibrated,pipeline_final,1.59,True,False,4,D2,0.22401445591136743
+A002_X108c378_X2a0f,3-runnerup-only,census,GJ 674,limit_runnerup,recalibrated,pipeline_final,1.59,True,False,4,D3,0.2239670283806344
+A002_X108c378_X331a,3-runnerup-only,census,GJ 674,limit_runnerup,recalibrated,pipeline_final,1.53,True,False,4,D3,0.36506393231142814
+A002_X1093ae8_X14a7,3-runnerup-only,census,GJ 674,limit_runnerup,recalibrated,pipeline_final,1.59,True,False,4,D4,0.22419230915161634
+A002_X1093ae8_X1c39,3-runnerup-only,census,GJ 674,limit_runnerup,recalibrated,pipeline_final,1.59,True,False,4,D3,0.2239670283806344
+A002_X1093ae8_X2228,3-runnerup-only,census,GJ 674,limit_runnerup,recalibrated,pipeline_final,1.59,True,False,4,D3,0.23345253452724238
+A002_X1093ae8_Xe18,3-runnerup-only,census,GJ 674,limit_runnerup,recalibrated,pipeline_final,1.43,True,False,4,D3,0.24586082600195502
+A002_X1097a87_X1ba1,3-runnerup-only,census,GJ 674,limit_runnerup,recalibrated,pipeline_final,1.38,True,False,4,D4,0.23853898073714547
+A002_X1097a87_X1e64,3-runnerup-only,census,GJ 674,limit_runnerup,recalibrated,pipeline_final,1.33,True,False,4,D4,0.23859017139390262
+A002_X1097a87_X75ae,3-runnerup-only,census,GJ 674,limit_runnerup,recalibrated,pipeline_final,1.38,True,False,4,D4,0.23853898073714547
+A002_X1097a87_X795f,3-runnerup-only,census,GJ 674,limit_runnerup,recalibrated,pipeline_final,1.38,True,False,4,D3,0.23868686485666615
+A002_X10b0d7d_X323f,2-recurrence-only,census,HD 23484;HD 23484 Gaia DR3 4856592239127350400,recurrence_epoch,recalibrated,pipeline_final,0.9,False,False,4,D4,0.39461886027212917
+A002_X10b22d7_X1d34,2-recurrence-only,census,HD 23484;HD 23484 Gaia DR3 4856592239127350400,"limit_runnerup,recurrence_epoch",recalibrated,pipeline_final,0.95,True,False,4,D4,0.2594401041666667
+A002_X10b22d7_X2445,1-core,census,HD 23484;HD 23484 Gaia DR3 4856592239127350400,"limit_runnerup,crossing_census",recalibrated,pipeline_final,0.9,True,True,4,D1,0.2594401041666667
+A002_X10b33b1_X145d,2-recurrence-only,hold-out,HD 23484;HD 23484  Gaia DR3 4856592239127350400,recurrence_epoch,recalibrated,pipeline_final,0.95,False,False,4,D4,0.39408735795454547
+A002_X10b33b1_Xf94,1-core,census,HD 23484;HD 23484 Gaia DR3 4856592239127350400,"limit_best_A,limit_best_B,recurrence_epoch",recalibrated,pipeline_final,0.95,True,False,4,D2,0.27688428279505584
+A002_X1190de8_Xd526,1-core,archival-tail,HD 14055;HD14055,"crossing_census,recurrence_epoch",infeasible_estimated,target-list peak estimate 141 GB (ASDM 52.2 GB) > usable volume,52.21,False,True,0,,
+A002_X11adad7_X25c5e,1-core,archival-tail,HD 14055;HD14055,"crossing_census,recurrence_epoch",infeasible_estimated,target-list peak estimate 165 GB (ASDM 61.0 GB) > usable volume,61.01,False,True,0,,
+A002_X11e10bc_X12662,1-core,census,eta Crv,"limit_best_A,recurrence_epoch",infeasible_estimated,target-list peak estimate 189 GB (ASDM 70.2 GB) > usable volume,70.18,True,False,0,,
+A002_X12209f7_X16edb,1-core,census,HD 69830,"crossing_census,recurrence_epoch",recalibrated,pipeline_final,12.9,False,True,4,R1,0.13494425626024723
+A002_X12277ed_X178c6,1-core,census,HD 69830,"crossing_census,recurrence_epoch",recalibrated,pipeline_final,15.91,False,True,4,R1,0.21218713190792898
+A002_X122b6ff_X1041e,1-core,census,eta Crv,crossing_census,recalibrated,pipeline_final,19.25,False,True,4,R1,0.08921300921300922
+A002_X1239f8e_Xa43b,3-runnerup-only,census,HD377,limit_runnerup,recalibrated,pipeline_final,0.87,True,False,4,D3,0.3758877840909091
+A002_X1240efd_X14e83,1-core,census,AU Mic,limit_best_B,recalibrated,pipeline_final,10.46,True,False,4,R1,0.10711902075214083
+A002_X1263402_X816f,3-runnerup-only,census,HD 89452,limit_runnerup,recalibrated,pipeline_final,1.21,True,False,4,D3,0.22095597262292063
+A002_X1263402_X856c,1-core,census,HD 89452,"limit_best_A,limit_best_B",recalibrated,pipeline_final,1.21,True,False,4,D1,0.22095597262292063
+A002_X1263402_Xb082,1-core,census,HD377,"limit_best_A,limit_best_B",recalibrated,pipeline_final,0.97,True,False,4,D1,0.3007830995501894
+A002_X1264cde_X258b,3-runnerup-only,census,HD 89452,limit_runnerup,recalibrated,pipeline_final,0.95,True,False,4,D3,0.23826806212018906
+A002_X1264cde_X2d40,3-runnerup-only,census,HD 89452,limit_runnerup,recalibrated,pipeline_final,0.97,True,False,4,D4,0.23826806212018906
+A002_X126787e_X1c15,3-runnerup-only,census,HD 89452,limit_runnerup,recalibrated,pipeline_final,0.97,True,False,4,D3,0.23893624803060995
+A002_X126787e_X227e,3-runnerup-only,census,HD 89452,limit_runnerup,recalibrated,pipeline_final,0.96,True,False,4,D3,0.23827040663215546
+A002_X12694b3_Xab7,3-runnerup-only,census,HD 89452,limit_runnerup,recalibrated,pipeline_final,1.11,True,False,4,D4,0.2216120096986066
+A002_X126c7ed_Xe9d,1-core,census,HD 45184,"limit_best_A,limit_best_B",recalibrated,pipeline_final,0.94,True,False,4,D1,0.23872159717626296
+A002_X1275eb2_Xe05,3-runnerup-only,census,HD 45184,limit_runnerup,recalibrated,pipeline_final,1.12,True,False,4,D3,0.3550233890860959
+A002_X12771d5_X9f13,3-runnerup-only,census,HD 45184,limit_runnerup,recalibrated,pipeline_final,1.2,True,False,4,D4,0.3550233890860959
+A002_X128b034_X187cc,2-recurrence-only,census,HD 31392,"limit_runnerup,recurrence_epoch",recalibrated,pipeline_final,1.0,True,False,4,D3,0.23738532110091742
+A002_X1294347_X1af7f,2-recurrence-only,census,HD 31392,"limit_runnerup,recurrence_epoch",recalibrated,pipeline_final,1.09,True,False,4,D4,0.23738532110091742
+A002_X1294347_X1b730,2-recurrence-only,census,HD 31392,"limit_runnerup,recurrence_epoch",recalibrated,pipeline_final,1.09,True,False,4,D3,0.23803380297072957
+A002_X1294347_X5c2e,1-core,census,HD 31392,"limit_best_A,limit_best_B,recurrence_epoch",recalibrated,pipeline_final,1.25,True,False,4,D2,0.2206544888597641
+A002_X129691d_X6985,2-recurrence-only,census,HD 31392,"limit_runnerup,recurrence_epoch",recalibrated,pipeline_final,0.86,True,False,4,D4,0.2585690621814475
+A002_X129754b_X6946,1-core,census,HD 31392,"limit_runnerup,crossing_census",recalibrated,pipeline_final,1.0,True,True,4,D1,0.23738532110091742
+A002_X129754b_X70a9,2-recurrence-only,census,HD 31392,recurrence_epoch,recalibrated,pipeline_final,1.0,False,False,4,D4,0.23738532110091742
+A002_X12b3da5_X2f34,2-recurrence-only,census,HD 31392,"limit_runnerup,recurrence_epoch",recalibrated,pipeline_final,0.98,True,False,4,D4,0.406855249745158
+A002_X12b3da5_X4411,2-recurrence-only,census,HD 31392,"limit_runnerup,recurrence_epoch",recalibrated,pipeline_final,0.99,True,False,4,D3,0.406855249745158
+A002_X6f1341_X1484,1-core,census,bet Pic;beta Pic,crossing_census,recalibrated,pipeline_final,0.72,False,True,4,D2,0.2901214182106482
+A002_X7116f1_X1785,1-core,census,bet Pic;beta Pic,crossing_census,recalibrated,pipeline_final,0.71,False,True,4,D1,0.48029277240746776
+A002_X74c92c_X6d5,1-core,census,HIP 490,"limit_best_A,limit_best_B",recalibrated,legacy_noflux,6.22,True,False,4,R1,
+A002_X74deb6_Xff1,1-core,census,chi01 Ori,limit_best_B,recalibrated,legacy_flux,4.01,True,False,4,R1,
+A002_X75bfbf_X1430,1-core,census,eta Crv,limit_best_B,recalibrated,legacy_flux,8.55,True,False,4,R1,
+A002_X7d194b_X58f,1-core,census,HD61005,limit_best_A,recalibrated,legacy_flux,6.3,True,False,4,R1,
+A002_X7d80c7_X15c6,1-core,census,AU Mic,"limit_best_A,recurrence_epoch",recalibrated,legacy_noflux,8.23,True,False,4,R1,
+A002_X835491_Xcb0,1-core,beyond-40pc,GaiaDR3 6643589352010758400,crossing_beyond40pc,infeasible_measured,"legacy; measured >=117.5 GB (x10.1) without D-6 and >=113.5 GB (x9.8) WITH D-6 (2nd abort at the / floor watchdog, 14:14)",11.6,False,True,0,,
+A002_X877e41_X14c1,1-core,census,G 272-61A;G 272-61B,limit_best_B,recalibrated,replay_inline_no_pf,3.17,True,False,8,D1,0.26770073496905394
+A002_X899169_X1838,1-core,census,AU Mic,"crossing_census,recurrence_epoch",recalibrated,replay_inline_no_pf,10.97,False,True,4,X2,0.30017417027417026
+A002_X9707f1_Xa89,1-core,census,tau Cet,limit_best_B,recalibrated,legacy_noflux,5.5,True,False,4,R1,
+A002_X97db9c_X2eb1,1-core,extension,* eta Crv,crossing_extension,infeasible_measured,"legacy (2012.1.00385.S, same MOUS as X354b/X1728); 22.5 GB x13 >> any volume",22.52,False,True,0,,
+A002_X987623_X354b,1-core,extension,* eta Crv,crossing_extension,infeasible_measured,legacy (2012.1.00385.S); r27-fieldtrunc S1 aborted at >=112 GB on 19.3 GB,19.33,False,True,0,,
+A002_X9db5ce_X224b,1-core,census,61 Vir,"limit_best_A,limit_best_B",infeasible_estimated,"target-list peak estimate 243 GB (ASDM 18.7 GB, legacy) > usable volume",18.7,True,False,0,,
+A002_X9f2ff8_X25b0,1-core,census,Wolf 28,limit_best_B,recalibrated,replay_inline_no_pf,7.89,True,False,1,X2,0.5358256772791261
+A002_Xa42f75_X319,1-core,census,AU Mic,"limit_runnerup,crossing_census,printed_other,recurrence_epoch",recalibrated,replay_inline_no_pf,14.0,True,True,4,R1,0.27166232297811244
+A002_Xa66f35_X1dee,1-core,beyond-40pc,GaiaDR3 6643602576214115584,crossing_beyond40pc,infeasible_measured,"Cycle-2 MOUS (legacy scriptForCalibration path suspected, like X835491_Xcb0 measured >=117.5 GB at abort on 11.6 GB); 17.6 GB x13 >> any volume",17.64,False,True,0,,
+A002_Xa68906_X1590,1-core,census,HD172555,limit_best_B,recalibrated,replay_inline_no_pf,13.82,True,False,4,R1,0.09595144998370805
+A002_Xa7a216_X23e4,1-core,census,bet Pic;beta Pic,crossing_census,infeasible_estimated,"target-list peak estimate 384 GB (ASDM 29.6 GB, legacy) > usable volume",29.56,False,True,0,,
+A002_Xa95c04_X14cd,1-core,census,HIP 10679;HIP10679,"limit_best_B,crossing_census",recalibrated,reconstructed_no_pf,13.38,True,True,4,X3,0.0
+A002_Xb0ebd1_X1855,1-core,census,HD 38858 Gaia DR3 3023711269067191296,"limit_best_A,limit_best_B",recalibrated,reconstructed_no_pf,27.92,True,False,4,R1,0.001200636959417588
+A002_Xb20b6d_Xc4c,1-core,hold-out,,crossing_holdout,recalibrated,reconstructed_no_pf,0,False,True,4,R1,0.011847008725634564
+A002_Xb25e1a_Xed74,1-core,census,PM J03433+1958;WD 0407+179;Wolf 219,"limit_best_A,limit_best_B",infeasible_estimated,"target-list peak estimate 341 GB (ASDM 26.2 GB, legacy) > usable volume",26.21,True,False,0,,
+A002_Xb28642_Xcff3,1-core,census,HD 207129;HD 207129 Gaia DR3 6564091190988411520,"limit_best_A,limit_best_B,recurrence_epoch",infeasible_estimated,"target-list peak estimate 399 GB (ASDM 30.7 GB, legacy) > usable volume",30.71,True,False,0,,
+A002_Xb2e94e_X361a,1-core,census,HD 139664,"limit_best_A,limit_best_B",recalibrated,pipeline_final,26.15,True,False,3,R1,0.27495718926819673
+A002_Xb47876_X3918,1-core,census,HD61005,limit_best_B,recalibrated,reconstructed_no_pf,11.64,True,False,4,R1,0.0
+A002_Xb825df_X2265,1-core,census,TWA 7,"limit_best_A,limit_best_B",recalibrated,pipeline_final,28.24,True,False,4,R1,0.14793385406673498
+A002_Xb95160_X3e24,1-core,census,51 Eri,"limit_best_A,limit_best_B",recalibrated,pipeline_final,7.55,True,False,4,R1,0.40667079381430615
+A002_Xb9b1b9_X971,1-core,census,LP 349-25,limit_best_B,recalibrated,pipeline_final,12.48,True,False,4,R1,0.22735727258128705
+A002_Xb9cc97_X6b4d,1-core,beyond-40pc,GaiaDR3 2832463659640297472,crossing_beyond40pc,recalibrated,pipeline_final,2.12,False,True,4,D1,0.5079292921064322
+A002_Xb9fa0c_Xbbf,1-core,extension,HD202628,crossing_extension,recalibrated,pipeline_final,1.62,False,True,4,D1,0.2674479493508486
+A002_Xba0af7_X9e4,1-core,extension,HD202628,crossing_extension,recalibrated,pipeline_final,1.62,False,True,4,D2,0.2759909146690095
+A002_Xba3ea7_X2ab4,1-core,census,LSR J1835+3259,limit_best_B,recalibrated,pipeline_final,12.11,True,False,4,R1,0.23855172721689172
+A002_Xba4d35_Xb3a3,1-core,census,tau Cet,limit_best_A,recalibrated,pipeline_final,1.69,True,False,4,D1,0.2526409722892389
+A002_Xbb9cd7_X40d5,1-core,census,hd107146,"limit_best_A,limit_runnerup",infeasible_estimated,target-list peak estimate 152 GB (ASDM 56.4 GB) > usable volume,56.37,True,False,0,,
+A002_Xbbadbe_X3846,1-core,census,hd92945,"limit_best_A,limit_best_B",infeasible_estimated,target-list peak estimate 155 GB (ASDM 57.2 GB) > usable volume,57.24,True,False,0,,
+A002_Xbcef34_X2720,1-core,census,Proxima Cen,proxima_stack,recalibrated,pipeline_final,1.13,True,False,4,D2,0.36535471727979185
+A002_Xbe7502_X2047,1-core,census,eta Cru,limit_best_B,infeasible_measured,legacy 13.0 GB; not attempted: x9.8 (Xcb0 with D-6) -> ~127 GB > 115 GB usable on /,12.99,True,False,0,,
+A002_Xbf9c0a_X1d95,1-core,hold-out,Proxima Cen,proxima_single,recalibrated,pipeline_final,15.92,True,False,4,R1,0.219302211117709
+A002_Xc067f7_X822,1-core,census,61 Vir,"crossing_census,recurrence_epoch",recalibrated,pipeline_final,1.73,False,True,4,D1,0.31269636693291236
+A002_Xc074d4_X2e6,2-recurrence-only,census,61 Vir,recurrence_epoch,recalibrated,pipeline_final,1.97,False,False,4,D4,0.29312902042159683
+A002_Xc079b5_X1ae,2-recurrence-only,census,61 Vir,recurrence_epoch,recalibrated,pipeline_final,1.97,False,False,4,D3,0.29340158870726557
+A002_Xc079b5_X82f,1-core,census,61 Vir,"crossing_census,recurrence_epoch",recalibrated,pipeline_final,1.97,False,True,4,D2,0.2930562765715604
+A002_Xc19d6f_X19ce,2-recurrence-only,census,HD 207129;HD 207129 Gaia DR3 6564091190988411520,recurrence_epoch,recalibrated,pipeline_final,1.59,False,False,4,D3,0.32248290994011003
+A002_Xc19d6f_X1c16,2-recurrence-only,census,HD 207129;HD 207129 Gaia DR3 6564091190988411520,recurrence_epoch,recalibrated,pipeline_final,1.64,False,False,4,D3,0.5670093687648005
+A002_Xc19d6f_X5706,1-core,census,HD 207129;HD 207129 Gaia DR3 6564091190988411520,crossing_census,recalibrated,pipeline_final,1.6,False,True,4,D2,0.3201134990536761
+A002_Xc26103_X155a,1-core,census,HD 48370,"limit_best_A,limit_best_B,crossing_census",recalibrated,pipeline_final,1.38,True,True,4,D1,0.32539663875801517
+A002_Xc66ce1_Xaa9,1-core,census,HR 1010;HR 1010 Gaia DR3 4722135642226902656,"limit_runnerup,crossing_census",recalibrated,pipeline_final,1.03,True,True,4,D2,0.2741761972154223
+A002_Xc67b7e_X1f16,2-recurrence-only,census,HR 1010;HR 1010 Gaia DR3 4722135642226902656,recurrence_epoch,recalibrated,pipeline_final,0.92,False,False,4,D3,0.43107754908268303
+A002_Xc68b3e_X107b,2-recurrence-only,census,HR 1010;HR 1010 Gaia DR3 4722135642226902656,recurrence_epoch,recalibrated,pipeline_final,0.92,False,False,4,D3,0.3850907458907521
+A002_Xc694dd_X3e5f,2-recurrence-only,census,HR 1010;HR 1010 Gaia DR3 4722135642226902656,recurrence_epoch,recalibrated,pipeline_final,0.92,False,False,4,D4,0.29048932218163703
+A002_Xc694dd_X41ca,2-recurrence-only,census,HR 1010;HR 1010 Gaia DR3 4722135642226902656,recurrence_epoch,recalibrated,pipeline_final,0.92,False,False,4,D4,0.4326436161381371
+A002_Xc6b674_X28f5,2-recurrence-only,census,HR 1010;HR 1010 Gaia DR3 4722135642226902656,recurrence_epoch,recalibrated,pipeline_final,0.92,False,False,3,D3,0.9160312551884443
+A002_Xc6d2f9_X7060,2-recurrence-only,census,HR 1010;HR 1010 Gaia DR3 4722135642226902656,recurrence_epoch,recalibrated,pipeline_final,1.03,False,False,4,D4,0.27353073362913094
+A002_Xc6e968_X1339,1-core,census,HR 1010;HR 1010 Gaia DR3 4722135642226902656,"limit_best_A,limit_best_B,recurrence_epoch",recalibrated,pipeline_final,1.03,True,False,4,D2,0.27545118701550386
+A002_Xc6fa08_X1053,1-core,census,HR 1010;HR 1010 Gaia DR3 4722135642226902656,"crossing_census,recurrence_epoch",recalibrated,pipeline_final,0.96,False,True,4,D2,0.5056329121810207
+A002_Xc7fa6f_X28a8,1-core,census,BD+05 1668;BD05 1668,crossing_census,recalibrated,pipeline_final,1.4,False,True,4,D2,0.8690115304237948
+A002_Xc94c38_Xa4bc,3-runnerup-only,census,HD 33793,limit_runnerup,recalibrated,pipeline_final,1.55,True,False,4,D3,0.22533726812816188
+A002_Xc96f17_X2a84,3-runnerup-only,census,BD05 1668,limit_runnerup,recalibrated,pipeline_final,1.58,True,False,4,D4,0.41893000587774293
+A002_Xc9831a_X13c7,1-core,census,BD05 1668,limit_best_B,recalibrated,pipeline_final,1.78,True,False,4,D2,0.29758114550679204
+A002_Xc9831a_X443,1-core,census,TRAPPIST-1,limit_best_B,recalibrated,pipeline_final,15.77,True,False,4,R1,0.2589716908913596
+A002_Xc9831a_Xa0b7,3-runnerup-only,census,BD05 1668,limit_runnerup,recalibrated,pipeline_final,1.64,True,False,4,D4,0.3218834264252696
+A002_Xcbb583_Xb78,1-core,census,HD 69830,"limit_best_A,limit_best_B",infeasible_estimated,target-list peak estimate 161 GB (ASDM 59.5 GB) > usable volume,59.46,True,False,0,,
+A002_Xcbc47c_X2d9,3-runnerup-only,census,BD05 1668,limit_runnerup,recalibrated,pipeline_final,1.87,True,False,4,D4,0.29017420039164493
+A002_Xcc626d_X579,1-core,census,alf CMa B,limit_best_B,recalibrated,pipeline_final,4.46,True,False,4,D2,0.35476486013143693
+A002_Xccea8d_X2ff5,1-core,census,HD 155555C,"limit_best_A,limit_best_B",recalibrated,pipeline_final,24.7,True,False,4,R1,0.265145954184049
+A002_Xcd2acd_X6125,1-core,census,V star TX PsA;V star WW PsA,"limit_best_A,limit_best_B",pending,R1:None,33.36,True,False,0,,
+A002_Xcd4e14_X2b17,1-core,beyond-40pc,GaiaDR3 2832463659640297472,crossing_beyond40pc,infeasible_estimated,target-list peak estimate 116 GB (ASDM 43.0 GB) > usable volume,43.03,False,True,0,,
+A002_Xcd64ec_X21c9,1-core,census,L 836-122,"limit_best_A,limit_best_B",recalibrated,pipeline_final,21.2,True,False,4,R1,0.11621470045338408
+A002_Xcd64ec_X9149,1-core,census,HR 2562,limit_best_B,recalibrated,pipeline_final,14.5,True,False,4,R1,0.34207178785133946
+A002_Xcd8029_Xb6b0,1-core,census,HD 139084;HD 139084 B,"limit_best_A,limit_best_B,crossing_census",recalibrated,pipeline_final,25.07,True,True,4,R1,0.2504772490844262
+A002_Xcd97a1_X3f1e,1-core,census,NAME AT Mic AB Gaia DR3 6792436799475128960;V AT Mic B,"limit_best_A,limit_best_B",recalibrated,pipeline_final,22.12,True,False,8,R1,0.1570017234366836
+A002_Xcdb7b8_Xfb16,1-core,census,GJ 2006A;GJ 2006B,"limit_best_A,limit_best_B",pending,R1:None,31.45,True,False,0,,
+A002_Xcdd033_X85ff,1-core,census,UCAC2 20312880,"limit_best_A,limit_best_B",recalibrated,pipeline_final,21.2,True,False,4,R1,0.2808060822716006
+A002_Xce1e34_X1fb8,1-core,census,Barta 161 12,"limit_best_A,limit_best_B",recalibrated,pipeline_final,21.07,True,False,4,R1,0.17007878340746757
+A002_Xce1e34_X7be,1-core,census,HD161868,"limit_best_A,limit_best_B",pending,R1:None,30.74,True,False,0,,
+A002_Xce574d_X123f,1-core,census,HD170773,"limit_best_A,limit_best_B",pending,R1:None,34.18,True,False,0,,
+A002_Xce574d_X8706,1-core,census,lp 876-10 Gaia DR3 6623351805412369024,"limit_best_A,limit_best_B",recalibrated,pipeline_final,39.39,True,False,4,R1,0.14660140026359858
+A002_Xcf525f_X5aa4,1-core,census,CD-57 1054,"limit_best_A,limit_best_B,crossing_census",recalibrated,pipeline_final,23.05,True,True,4,R1,0.18361340928976713
+A002_Xcf749a_X36e0,1-core,census,HD 10647,"limit_best_A,limit_runnerup",pending,R1:None,36.87,True,False,0,,
+A002_Xcf749a_X4871,1-core,census,2MASS J05241914-1601153 551040;2MASS J05241914-1601153 717696,limit_best_B,pending,R1:running,29.18,True,False,0,,
+A002_Xd09670_X1d79,1-core,census,GJ14 Gaia DR3 383426372059603712,"limit_best_A,limit_best_B",infeasible_estimated,target-list peak estimate 181 GB (ASDM 66.9 GB) > usable volume,66.92,True,False,0,,
+A002_Xd09670_X23c5,1-core,census,HD14055,"limit_best_A,limit_best_B",pending,R1:None,34.85,True,False,0,,
+A002_Xd0e450_X1e19,1-core,census,TRAPPIST-1,"limit_best_A,recurrence_epoch",infeasible_estimated,target-list peak estimate 135 GB (ASDM 50.0 GB) > usable volume,50.0,True,False,0,,
+A002_Xd0e450_X259b,1-core,hold-out,TRAPPIST-1,crossing_holdout,infeasible_estimated,target-list peak estimate 135 GB (ASDM 50.1 GB) > usable volume,50.05,False,True,0,,
+A002_Xd10f82_X2635,1-core,census,LP 476-207 384128;LP 476-207 783296,"limit_best_A,limit_best_B",recalibrated,pipeline_final,20.96,True,False,8,R1,0.19046923003728622
+A002_Xd10f82_X7829,1-core,census,LP 353-51,"limit_best_A,limit_best_B",pending,R1:None,29.81,True,False,0,,
+A002_Xd12f5c_X5deb,1-core,census,HD 33793,limit_best_B,recalibrated,pipeline_final,1.34,True,False,4,D1,0.24000459558823528
+A002_Xd12f5c_Xd7c6,1-core,census,UCAC3 176-23654,"limit_best_A,limit_best_B",recalibrated,pipeline_final,28.1,True,False,4,R1,0.21969894415921173
+A002_Xd189ef_X867b,1-core,census,TYC 2211-1309-1,"limit_best_A,limit_best_B",recalibrated,pipeline_final,28.91,True,False,4,R1,0.20170554610675853
+A002_Xd1f23d_X53b2,3-runnerup-only,census,HD 33793,limit_runnerup,recalibrated,pipeline_final,1.78,True,False,4,D4,0.2129088785046729
+A002_Xd21a3a_X8a5a,1-core,census,GJ 581,limit_best_B,recalibrated,pipeline_final,1.79,True,False,4,D1,0.21283675432969854
+A002_Xd248b5_X2fa,3-runnerup-only,census,GJ 581,limit_runnerup,recalibrated,pipeline_final,1.57,True,False,4,D4,0.22526041666666666
+A002_Xd28a9e_Xb92f,3-runnerup-only,census,HD 33793,limit_runnerup,recalibrated,pipeline_final,1.55,True,False,4,D4,0.22533726812816188
+A002_Xd28a9e_Xbb59,3-runnerup-only,census,HD 33793,limit_runnerup,recalibrated,pipeline_final,1.55,True,False,4,D3,0.22533726812816188
+A002_Xd28a9e_Xbcdf,1-core,census,gam Lep,limit_best_B,recalibrated,pipeline_final,17.04,True,False,4,R1,0.20704101895188765
+A002_Xd29c1f_X445c,3-runnerup-only,census,HD 33793,limit_runnerup,recalibrated,pipeline_final,1.78,True,False,4,D3,0.2129088785046729
+A002_Xd40be0_X749c,1-core,census,TWA 3A 696000,"limit_best_A,limit_best_B",recalibrated,pipeline_final,20.45,True,False,4,R1,0.061380643638584996
+A002_Xd64dca_X410,1-core,census,HD202628,"limit_best_A,limit_best_B",recalibrated,pipeline_final,16.34,True,False,4,R1,0.1127982504610145
+A002_Xd86f11_X584b,2-recurrence-only,census,GJ 849,recurrence_epoch,recalibrated,pipeline_final,1.36,False,False,4,D3,0.2647277304535369
+A002_Xd9398d_X322a,1-core,census,LP 736-15,"limit_best_A,limit_best_B",recalibrated,pipeline_final,12.05,True,False,4,R1,0.13908859218684622
+A002_Xd95042_X2d99,1-core,census,gam Vir,limit_best_B,recalibrated,pipeline_final,7.15,True,False,4,D1,0.21998031496062992
+A002_Xd95042_X5feb,2-recurrence-only,census,GJ 849,"limit_runnerup,recurrence_epoch",recalibrated,pipeline_final,1.18,True,False,4,D3,0.2804752640355753
+A002_Xd95042_X67d7,2-recurrence-only,census,GJ 849,recurrence_epoch,recalibrated,pipeline_final,0.77,False,False,4,D3,0.2876509054325956
+A002_Xd9668b_X3a90,1-core,census,bet Pic;beta Pic,"limit_runnerup,crossing_census,recurrence_epoch",infeasible_measured,"CASA-5 route (Pipeline_Final needs it; lazy restore not conformant, peak 89.9 GB): floor watchdog stopped it at 118.9 GB (x2.63, still rising) with / at 9 GB free",45.18,True,True,0,,
+A002_Xd9668b_X3f6e,1-core,census,HD53143 Gaia DR3 5479222240596469632,"limit_best_A,limit_best_B",recalibrated,pipeline_final,13.86,True,False,4,R1,0.344220755999491
+A002_Xd9668b_X7c83,1-core,census,GJ 849,"limit_best_A,limit_best_B,recurrence_epoch",recalibrated,pipeline_final,1.36,True,False,4,D1,0.39711981566820276
+A002_Xd9668b_X841a,1-core,census,GJ 849,"limit_runnerup,crossing_census",recalibrated,pipeline_final,1.36,True,True,4,D2,0.3967741935483871
+A002_Xd9668b_X88ad,2-recurrence-only,census,GJ 849,"limit_runnerup,recurrence_epoch",recalibrated,pipeline_final,1.36,True,False,4,D4,0.3967741935483871
+A002_Xd9668b_Xa9df,1-core,census,bet Pic;beta Pic,"limit_best_A,crossing_census,printed_other,recurrence_epoch",infeasible_measured,"lazy restore not conformant (Cycle 6); CASA-5 route stopped by the floor watchdog at 115.2 GB (x2.36, still rising)",48.93,True,True,0,,
+A002_Xd98580_X3bf6,1-core,census,HD 285968,"limit_runnerup,crossing_census",recalibrated,pipeline_final,1.41,True,True,4,X1,0.2638732441028359
+A002_Xd9d7c7_X6fd2,1-core,census,LHS 1140,"limit_best_A,limit_best_B,crossing_census",recalibrated,pipeline_final,1.34,True,True,4,D1,0.32261039265612435
+A002_Xd9d7c7_Xbb64,1-core,census,ALMA J153702653-33192492,"limit_best_A,crossing_census",infeasible_estimated,target-list peak estimate 147 GB (ASDM 54.5 GB) > usable volume,54.55,True,True,0,,
+A002_Xda1250_X6f6b,2-recurrence-only,census,LHS 1140,recurrence_epoch,recalibrated,pipeline_final,1.39,False,False,4,D3,0.3205976949879389
+A002_Xda1250_X72ef,2-recurrence-only,census,LHS 1140,recurrence_epoch,recalibrated,pipeline_final,1.39,False,False,4,D4,0.32189426427231305
+A002_Xda2c82_X62d7,2-recurrence-only,census,LHS 1140,"limit_runnerup,recurrence_epoch",recalibrated,pipeline_final,1.59,True,False,4,D4,0.30231162067099565
+A002_Xda2c82_X7136,2-recurrence-only,census,HD 285968,recurrence_epoch,recalibrated,pipeline_final,1.41,False,False,4,D4,0.3576954862031393
+A002_Xdaef5a_X14fed,2-recurrence-only,hold-out,LHS 1140,recurrence_epoch,recalibrated,pipeline_final,1.39,False,False,4,D3,0.32280186277137496
+A002_Xdaef5a_X6873,1-core,census,GL 3379 Gaia DR3 3316364602541746048,"limit_best_A,limit_best_B",recalibrated,pipeline_final,1.39,True,False,4,D1,0.3968572443181818
+A002_Xdaef5a_Xdd9b,1-core,hold-out,HD 285968,crossing_holdout,recalibrated,pipeline_final,1.41,False,True,4,D1,0.27145084224165855
+A002_Xdb4b9a_X108f,1-core,census,HD 285968,"limit_runnerup,crossing_census,recurrence_epoch",recalibrated,pipeline_final,1.23,True,True,4,D2,0.2791763949347052
+A002_Xdb4b9a_Xa7c,2-recurrence-only,hold-out,HD 285968,recurrence_epoch,recalibrated,pipeline_final,1.23,False,False,4,D4,0.2782103284527107
+A002_Xdb7ab7_X140ee,1-core,census,Proxima Cen,proxima_stack,recalibrated,pipeline_final,1.23,True,False,4,D2,0.2605633802816901
+A002_Xdb7ab7_X5b4e,1-core,census,HD 285968,"limit_best_A,limit_best_B,crossing_census,recurrence_epoch",recalibrated,pipeline_final,1.06,True,True,4,D1,0.30022607022607023
+A002_Xdb7ab7_X8bda,1-core,census,Proxima Cen,proxima_stack,recalibrated,pipeline_final,1.23,True,False,4,D1,0.2605633802816901
+A002_Xdbc154_X138c,1-core,census,Proxima Cen,proxima_stack,recalibrated,pipeline_final,1.23,True,False,4,D2,0.2605633802816901
+A002_Xdc0d09_X1938,1-core,census,Proxima Cen,proxima_stack,recalibrated,pipeline_final,1.43,True,False,4,D1,0.3447802197802198
+A002_Xdc21b9_X252f,1-core,census,Proxima Cen,proxima_stack,recalibrated,pipeline_final,1.65,True,False,4,D2,0.36831550802139035
+A002_Xdc621b_X2bb0,3-runnerup-only,census,HN Lib,limit_runnerup,recalibrated,pipeline_final,1.11,True,False,4,D3,0.316993981628128
+A002_Xdcad18_X305b,3-runnerup-only,census,HN Lib,limit_runnerup,recalibrated,pipeline_final,1.53,True,False,4,D4,0.3241201073232323
+A002_Xdcbe57_X2dd3,1-core,census,HN Lib,"limit_best_A,limit_best_B",recalibrated,pipeline_final,1.56,True,False,4,D1,0.3080562413570226
+A002_Xdcf222_X4da7,3-runnerup-only,census,HN Lib,limit_runnerup,recalibrated,pipeline_final,1.34,True,False,4,D3,0.3224128919860627
+A002_Xdd0d37_X17f99,3-runnerup-only,census,GL 3379 Gaia DR3 3316364602541746048,limit_runnerup,recalibrated,pipeline_final,1.39,True,False,4,D3,0.332355643488456
+A002_Xdd0d37_X18197,3-runnerup-only,census,GL 3379 Gaia DR3 3316364602541746048,limit_runnerup,recalibrated,pipeline_final,1.39,True,False,4,D4,0.2626459911616162
+A002_Xe3da01_X4265,1-core,census,HD 110411;HD110411,"limit_best_A,limit_best_B,recurrence_epoch",recalibrated,pipeline_final,21.84,True,False,6,R1,0.05360906631433245
+A002_Xe45e29_Xb7d4,1-core,census,HD 110411;HD110411,"limit_runnerup,crossing_census",recalibrated,pipeline_final,19.04,True,True,6,R1,0.07138631631422285
+A002_Xe48598_Xff51,1-core,census,kap CrB,"limit_best_A,limit_best_B",recalibrated,pipeline_final,11.81,True,False,4,R1,0.6175516731778844
+A002_Xe50c9e_X17ab,1-core,census,WD0346-011,limit_best_B,recalibrated,pipeline_final,2.59,True,False,4,D2,0.212050616466776
+A002_Xe539c7_X113b1,1-core,census,WD2039-202,limit_best_B,recalibrated,pipeline_final,2.8,True,False,4,D2,0.17371018174711744
+A002_Xe539c7_X12189,1-core,census,eps Eri,"limit_best_A,limit_best_B",recalibrated,pipeline_final,11.79,True,False,4,R1,0.058635566629752674
+A002_Xe5808e_X80a1,1-core,census,CD-38 10980,limit_best_B,recalibrated,pipeline_final,2.74,True,False,4,D1,0.1671600487281329
+A002_Xeba1ac_Xbc74,1-core,census,hd107146,limit_best_B,recalibrated,pipeline_final,8.44,True,False,4,R1,0.3006854607058276
+A002_Xf4df6f_Xc7,1-core,census,bet Pic;beta Pic,"limit_best_B,crossing_census",recalibrated,pipeline_final,18.87,True,True,4,R1,0.07639974224025264
+A002_Xf5d76d_X32f1,1-core,census,bet Pic;beta Pic,crossing_census,recalibrated,pipeline_final,14.17,False,True,4,R1,0.4581365619269696
+A002_Xf5d76d_Xcc5,1-core,census,bet Pic;beta Pic,crossing_census,recalibrated,pipeline_final,13.06,False,True,4,R1,0.0742000114634054
+A002_Xf5d76d_Xe19,1-core,census,bet Pic;beta Pic,crossing_census,recalibrated,pipeline_final,13.66,False,True,4,T1,0.07305890465054576
+A002_Xf5d76d_Xeb8,1-core,census,bet Pic;beta Pic,crossing_census,recalibrated,pipeline_final,13.66,False,True,4,R1,0.08430811022601764
+A002_Xf8d29c_X173e,1-core,hold-out,ALMA J153702653-33192492,"crossing_holdout,recurrence_epoch",recalibrated,pipeline_final,3.61,False,True,5,D2,0.690234375
+A002_Xf8f6a9_X10359,1-core,census,ALMA J153702653-33192492,"crossing_census,recurrence_epoch",recalibrated,pipeline_final,4.26,False,True,5,D2,0.3098060344827586
+A002_Xf934b1_X65fd,1-core,extension,bet Pic,crossing_extension,recalibrated,pipeline_final,18.01,False,True,4,R1,0.07377443753639408
+A002_Xf934b1_X7e7d,1-core,extension,bet Pic,crossing_extension,recalibrated,pipeline_final,20.65,False,True,4,R1,0.10293391145301974
+A002_Xf934b1_Xeeec,1-core,extension,bet Pic,crossing_extension,recalibrated,pipeline_final,19.74,False,True,4,R1,0.0691322545770035
+A002_Xfdb69b_X667a,3-runnerup-only,census,Wolf 359,limit_runnerup,recalibrated,pipeline_final,1.58,True,False,4,D3,0.368228065539112
+A002_Xfdc8ec_X4cec,1-core,census,Wolf 359,printed_other,recalibrated,pipeline_final,1.37,False,False,4,D2,0.24267423442449843
+A002_Xfddca6_Xcf25,1-core,census,Wolf 359,"limit_best_B,printed_other",recalibrated,pipeline_final,1.38,True,False,4,D2,0.24267423442449843
+A002_Xfdf45f_X478e,1-core,census,NAME Barnards star,"limit_best_B,printed_other",recalibrated,pipeline_final,1.52,True,False,4,D2,0.7192432463196237
+A002_Xfe3986_X5c7e,1-core,census,NAME Barnards star,printed_other,recalibrated,pipeline_final,1.53,False,False,4,D1,0.43126327970860523
+A002_Xfe62c1_X398,1-core,census,ALMA J153702653-33192492,"crossing_census,recurrence_epoch",recalibrated,pipeline_final,4.21,False,True,5,D1,0.3098060344827586
+A002_Xfeb5e6_X13ee,3-runnerup-only,census,CD-23 14742,limit_runnerup,recalibrated,pipeline_final,1.35,True,False,4,D4,0.38961806079348316
+A002_Xfec857_X11fd,3-runnerup-only,census,CD-23 14742,limit_runnerup,recalibrated,pipeline_final,1.35,True,False,4,D3,0.35237403831648817
+A002_Xfec857_X6b2,1-core,census,CD-23 14742,limit_best_B,recalibrated,pipeline_final,1.35,True,False,4,D2,0.24267423442449843
+A002_Xfee03e_X82ee,3-runnerup-only,census,CD-23 14742,limit_runnerup,recalibrated,pipeline_final,1.16,True,False,4,D4,0.26046845652414097
+A002_Xff0235_X4a6d,1-core,census,CP-72 2713,"limit_runnerup,crossing_census,recurrence_epoch",infeasible_measured,"49.3 GB; the two comparable CASA-5 attempts peaked >= x2.36 and >= x2.63 (Xa9df, X3a90) -> >= 116-130 GB > 110 GB usable before the / abort threshold; stopped by me before reaching it",49.33,True,True,0,,
+A002_Xff0235_X502d,1-core,census,CP-72 2713,"limit_best_A,limit_best_B,recurrence_epoch",infeasible_estimated,target-list peak estimate 134 GB (ASDM 49.5 GB) > usable volume,49.46,True,False,0,,
+A002_Xff0235_X8392,1-core,census,ALMA J153702653-33192492,"crossing_census,recurrence_epoch",recalibrated,pipeline_final,4.95,False,True,5,D1,0.2902260638297872
+A002_Xff0235_X8c42,1-core,census,HD 170773;HD170773,crossing_census,recalibrated,pipeline_final,3.29,False,True,4,D1,0.312312874251497
+A002_Xff0235_X99ed,1-core,hold-out,CP-72 2713,"crossing_holdout,recurrence_epoch",recalibrated,pipeline_final,3.27,False,True,4,D2,0.4387472283813747
+A002_Xff0235_Xa6a3,1-core,extension,CP-72 2713,"crossing_extension,recurrence_epoch",recalibrated,pipeline_final,3.23,False,True,4,D2,0.46088553215077604
+A002_Xff0235_Xb32c,2-recurrence-only,extension,CP-72 2713,recurrence_epoch,recalibrated,pipeline_final,2.52,False,False,4,D3,0.5577134986225896
+A002_Xff294f_X1e10,1-core,extension,CP-72 2713,"crossing_extension,recurrence_epoch",recalibrated,pipeline_final,3.23,False,True,4,D1,0.4412038903446886
+A002_Xff294f_X1fb,2-recurrence-only,hold-out,HD 170773;HD170773,recurrence_epoch,recalibrated,pipeline_final,3.34,False,False,4,D3,0.312312874251497
+A002_Xff294f_X2db6,2-recurrence-only,census,HD 10647,recurrence_epoch,recalibrated,pipeline_final,3.04,False,False,1,D3,0.3139108568796069
+A002_Xff294f_X40a2,2-recurrence-only,hold-out,HD 10647,recurrence_epoch,recalibrated,pipeline_final,2.62,False,False,4,D3,0.43427650479268526
+A002_Xff294f_X634,2-recurrence-only,hold-out,HD 170773;HD170773,recurrence_epoch,recalibrated,pipeline_final,3.29,False,False,4,D4,0.312312874251497
+A002_Xff294f_X7bf4,2-recurrence-only,census,HD 161868;HD161868,recurrence_epoch,recalibrated,pipeline_final,3.08,False,False,4,D3,0.3075284090909091
+A002_Xff294f_X812c,2-recurrence-only,census,HD 161868;HD161868,recurrence_epoch,recalibrated,pipeline_final,3.11,False,False,4,D4,0.30797562028192194
+A002_Xff294f_Xaf70,1-core,census,HD 10647,crossing_census,recalibrated,pipeline_final,3.07,False,True,4,D1,0.5529298668503214
+A002_Xff294f_Xc10b,2-recurrence-only,census,HD 10647,recurrence_epoch,recalibrated,pipeline_final,3.03,False,False,4,D3,0.5515214336237063
+A002_Xff45a6_X107fe,2-recurrence-only,census,HD 161868;HD161868,recurrence_epoch,recalibrated,pipeline_final,2.67,False,False,4,D3,0.3270705521472393
+A002_Xff45a6_X10ca8,1-core,census,HD 161868;HD161868,crossing_census,recalibrated,pipeline_final,2.7,False,True,4,D1,0.3758764241893076
+A002_Xff45a6_X111c3,2-recurrence-only,census,HD 161868;HD161868,recurrence_epoch,recalibrated,pipeline_final,2.7,False,False,4,D4,0.8247948370647757
+A002_Xff45a6_X13fc,2-recurrence-only,hold-out,HD 10647,recurrence_epoch,recalibrated,pipeline_final,2.66,False,False,4,D4,0.33219731499129856
+A002_Xff45a6_X1fc3,1-core,beyond-40pc,GaiaDR3 2517397846786452224,crossing_beyond40pc,infeasible_measured,"Pipeline_Final not row-conformant with the lazy import (2 attempts, 2026-10-29 00:21 and 04:5x); standard import needed: 30.8 GB x3.9-4.7 (measured) = 120-145 GB > 115 GB usable on /",30.84,False,True,0,,
+A002_Xff45a6_X7d88,2-recurrence-only,hold-out,HD 161868;HD161868,recurrence_epoch,recalibrated,pipeline_final,2.6,False,False,4,D4,0.3270705521472393
+A002_Xff45a6_X8474,2-recurrence-only,census,HD 161868;HD161868,recurrence_epoch,recalibrated,pipeline_final,2.7,False,False,4,D4,0.6166050845882134
+A002_Xff699e_X7543,2-recurrence-only,census,HD 161868;HD161868,recurrence_epoch,recalibrated,pipeline_final,3.11,False,False,4,D3,0.6332560776000858
+A002_Xff699e_Xd7,2-recurrence-only,census,HD 161868;HD161868,recurrence_epoch,recalibrated,pipeline_final,2.7,False,False,4,D3,0.3657361299232465
+A002_Xff81e8_X6f26,2-recurrence-only,hold-out,HD 161868;HD161868,recurrence_epoch,recalibrated,pipeline_final,3.07,False,False,4,D4,0.3075284090909091
+A002_Xff81e8_X734e,2-recurrence-only,census,HD 161868;HD161868,recurrence_epoch,recalibrated,pipeline_final,1.52,False,False,4,D4,0.34475806451612906
+A002_Xff99e1_X1b0c4,2-recurrence-only,census,HD 14055;HD14055,recurrence_epoch,recalibrated,pipeline_final,3.36,False,False,4,D4,0.48104936606420284
+A002_Xff99e1_X24be0,1-core,census,HD 14055;HD14055,"crossing_census,recurrence_epoch",recalibrated,pipeline_final,3.34,False,True,4,D1,0.5961362852969948
+A002_Xff99e1_X2b2ee,1-core,census,HD 14055;HD14055,"crossing_census,recurrence_epoch",recalibrated,pipeline_final,3.36,False,True,4,D1,0.46625472079848934
+A002_Xff99e1_X2c3bb,1-core,census,HD 14055;HD14055,"crossing_census,recurrence_epoch",recalibrated,pipeline_final,3.34,False,True,4,D2,0.5448708320049701
+A002_Xff99e1_X9cdf,2-recurrence-only,hold-out,HD 10647,recurrence_epoch,recalibrated,pipeline_final,3.03,False,False,4,D4,0.3139108568796069
+A002_Xfff3d8_Xd46,1-core,census,HD 14055;HD14055,"crossing_census,recurrence_epoch",recalibrated,pipeline_final,3.34,False,True,4,D2,0.44463177771783113
+A002_Xfffde1_X2b1a,2-recurrence-only,hold-out,HD 14055;HD14055,recurrence_epoch,recalibrated,pipeline_final,2.9,False,False,4,D4,0.3713916587815707
+A002_Xfffde1_X3835,1-core,census,HD 14055;HD14055,"crossing_census,recurrence_epoch",recalibrated,pipeline_final,2.9,False,True,4,D2,0.6054525438532644
+A002_Xfffde1_X9bd6,2-recurrence-only,census,HD 14055;HD14055,recurrence_epoch,recalibrated,pipeline_final,4.84,False,False,4,D3,0.4209848567086409
+A002_Xfffde1_Xffdf,1-core,census,HD 10647,"limit_best_B,limit_runnerup,recurrence_epoch",pending,R1:None,36.4,True,False,0,,

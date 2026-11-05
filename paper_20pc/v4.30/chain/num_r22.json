@@ -1,0 +1,106 @@
+{
+ "ctrl_med": {
+  "fields": 2.7461,
+  "n_fields": 1581,
+  "n_owner": 1663,
+  "owner": 2.74085
+ },
+ "dc": {
+  "absolute": 0.05912882450502366,
+  "kms": 0.03754889949852072,
+  "n": 13,
+  "n_trigger": 11,
+  "signed": -0.0013044324587099254
+ },
+ "decor": {
+  "by_array": {
+   "meas_12m": {
+    "med": 447.97144827924535,
+    "n": 72
+   },
+   "meas_7m": {
+    "med": 44.0,
+    "n": 207
+   },
+   "unm_12m": {
+    "med": 455.6053110606311,
+    "n": 67
+   },
+   "unm_7m": {
+    "med": 44.0,
+    "n": 58
+   }
+  },
+  "gap": [
+   49.0,
+   270.516606203902
+  ],
+  "k_log": 1.2568635547084486,
+  "k_obscore": 1.220025571219661,
+  "med_recorded": 46.0,
+  "med_unrecorded": 278.7996085386624,
+  "n_unrecorded": 128,
+  "n_with_baseline": 125,
+  "swing": 5
+ },
+ "drive": null,
+ "macros": {
+  "NbCtrlMedDropped": "82",
+  "NbCtrlMedN": "1663",
+  "NbCtrlMedOne": "2.74",
+  "NbDcAbs": "0.06",
+  "NbDcAbsKms": "0.04",
+  "NbDcAbsTrig": "0.06",
+  "NbDcN": "13",
+  "NbDcNTrig": "11",
+  "NbDcSigned": "0.00",
+  "NbDecBlSevenMeas": "44",
+  "NbDecBlSevenUn": "44",
+  "NbDecBlTwelveMeas": "448",
+  "NbDecBlTwelveUn": "456",
+  "NbDecGapHi": "271",
+  "NbDecGapLo": "49",
+  "NbDecNTwelveMeas": "72",
+  "NbDecNTwelveUn": "67",
+  "NbDecNUnBl": "125",
+  "NbDecNUnNoBl": "3",
+  "NbDecPctTwelveMeas": "26",
+  "NbDecPctTwelveUn": "54",
+  "NbDecSwing": "5",
+  "NbProvAmpPct": "2.7",
+  "NbProvArray": "7m",
+  "NbProvCtrlPre": "10.85",
+  "NbProvCtrlPub": "8.12",
+  "NbProvN": "4",
+  "NbProvPct": "3.9",
+  "NbProvPctWorst": "3.9",
+  "NbProvPre": "6.1886",
+  "NbProvPub": "5.9557",
+  "NbProvRmsPct": "1.16",
+  "NbSessEbOne": "A002\\_X6f1341\\_X1484",
+  "NbSessEbTwo": "A002\\_X7116f1\\_X1785",
+  "NbSessGapD": "25",
+  "NbSessLine": "CO(2--1)"
+ },
+ "provenance": {
+  "amp_pct": 2.721716624494186,
+  "ctrl_pre": 10.854166984558105,
+  "ctrl_published": 8.1167,
+  "pct": 3.910988904827875,
+  "pre": 6.188626766204834,
+  "published": 5.9557,
+  "rms_pct": 1.157787555800427
+ },
+ "session": {
+  "blocks": [
+   "A002_X6f1341_X1484",
+   "A002_X7116f1_X1785"
+  ],
+  "gap_d": 25.130190999996557,
+  "line": "CO(2-1)",
+  "sessions": [
+   "X6f1341",
+   "X7116f1"
+  ]
+ }
+}

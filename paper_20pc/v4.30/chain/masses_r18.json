@@ -1,0 +1,89 @@
+{
+ "_doc": "Published stellar masses for the hosts of unattributed crossings. Frozen input to orbit_r18.py: nothing here is computed, every value is quoted from the cited paper, and the key is the ledger's own star string with the Gaia designation stripped (see `alias`). Only the hosts a published mass exists for are listed; orbit_r18.py asserts that every host it needs a mass for is present, that the sample ceiling is above all of them, and that the hosts absent from this file are of later spectral type than the ones in it (SIMBAD types frozen in hosts_sptype_r18.json).",
+ "ceiling_msun": 2.5,
+ "_ceiling_doc": "The mass the velocity-excursion bound of the widened recurrence window is evaluated at: above every mass below, and above the A0-A1 V types that are the earliest in this sample. The excursion scales as M^(1/4), so the choice is weak: 2.0 to 2.5 Msun moves it by 6 per cent.",
+ "alias": {
+  "HD 14055": "HD14055",
+  "HD14055": "HD14055",
+  "bet Pic": "bet Pic",
+  "HD110411": "HD110411",
+  "HD161868": "HD161868",
+  "HD170773": "HD170773",
+  "eta Crv": "eta Crv",
+  "BD05 1668": "BD05 1668"
+ },
+ "simbad": {
+  "HD14055": "HD14055",
+  "bet Pic": "bet Pic",
+  "HD110411": "HD110411",
+  "HD161868": "HD161868",
+  "HD170773": "HD170773",
+  "eta Crv": "eta Crv",
+  "BD05 1668": "BD+05 1668"
+ },
+ "stars": {
+  "bet Pic": {
+   "mass_msun": 1.75,
+   "sp_type": "A6V",
+   "source": "Crifo et al. 1997, A&A, 320, L29",
+   "bibkey": "Crifo1997",
+   "note": "Hipparcos-based stellar properties; the value adopted by subsequent work on the beta Pic planetary system. Modern determinations are slightly higher (about 1.8 Msun), so 1.75 is the conservative choice here: a lower mass permits a faster reversal and therefore weakens our own exclusion."
+  },
+  "HD14055": {
+   "mass_msun": 2.33,
+   "sp_type": "A1Vnn",
+   "source": "Pawellek et al. 2014, ApJ, 792, 65, Table 2",
+   "bibkey": "Pawellek2014",
+   "note": "gamma Trianguli; mass derived from the luminosity in that table. Heavier than the 2 Msun bound the published verdict assumed, so the correction raises the bound for this host."
+  },
+  "HD161868": {
+   "mass_msun": 2.36,
+   "sp_type": "A0V",
+   "source": "Pawellek et al. 2014, ApJ, 792, 65, Table 2",
+   "bibkey": "Pawellek2014",
+   "note": "gamma Ophiuchi; the most massive host of an unattributed crossing in this sample."
+  },
+  "HD110411": {
+   "mass_msun": 1.91,
+   "sp_type": "A0V",
+   "source": "Pawellek et al. 2014, ApJ, 792, 65, Table 2",
+   "bibkey": "Pawellek2014"
+  },
+  "HD170773": {
+   "mass_msun": 1.38,
+   "sp_type": "F5V",
+   "source": "Pawellek et al. 2014, ApJ, 792, 65, Table 2",
+   "bibkey": "Pawellek2014"
+  },
+  "eta Crv": {
+   "mass_msun": 1.52,
+   "sp_type": "F2V",
+   "source": "Pawellek et al. 2014, ApJ, 792, 65, Table 2",
+   "bibkey": "Pawellek2014"
+  },
+  "HD 10647": {
+   "mass_msun": 1.12,
+   "sp_type": "F9V",
+   "source": "Pawellek et al. 2014, ApJ, 792, 65, Table 2",
+   "bibkey": "Pawellek2014"
+  },
+  "HD 207129": {
+   "mass_msun": 1.06,
+   "sp_type": "G2V",
+   "source": "Pawellek et al. 2014, ApJ, 792, 65, Table 2",
+   "bibkey": "Pawellek2014"
+  },
+  "HD 23484": {
+   "mass_msun": 0.79,
+   "sp_type": "K2V",
+   "source": "Pawellek et al. 2014, ApJ, 792, 65, Table 2",
+   "bibkey": "Pawellek2014"
+  },
+  "AU Mic": {
+   "mass_msun": 0.48,
+   "sp_type": "M1Ve",
+   "source": "Pawellek et al. 2014, ApJ, 792, 65, Table 2",
+   "bibkey": "Pawellek2014"
+  }
+ }
+}
