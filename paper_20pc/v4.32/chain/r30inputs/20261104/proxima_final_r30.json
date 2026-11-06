@@ -1,0 +1,137 @@
+{
+ "_doc": "r29-inject-recomb 2026-11-04: Proxima Cen stellar-frame stack and best single epoch, nominal 5-sigma EIRP before the completeness factor, from merge29_r61/run_b stack2.py verbatim (pxfinal.py), on (asis) the v4.29 stack products, (final) every stacked window reading the product the census or hold-out search reads (24 field-recombined, 76 re-calibrated census, 4 hold-out X1d95), (census) final restricted to the 25 census blocks. Supersedes r29inputs/reflag/proxima_recombined_r29.json (harvest g8).",
+ "groups": [
+  {
+   "set": "asis",
+   "nu_lo_GHz": 223.0168492350989,
+   "nu_hi_GHz": 224.96991653845038,
+   "n_epochs": 66,
+   "on_source_h": 21.107527044084335,
+   "eirp_stack_nominal_W": 4497733507070.246,
+   "eirp_single_nominal_W": 14339324051023.63,
+   "single_block": "A002_X106b646_X19c5",
+   "single_census": true
+  },
+  {
+   "set": "asis",
+   "nu_lo_GHz": 225.01679015373082,
+   "nu_hi_GHz": 226.9698574570823,
+   "n_epochs": 66,
+   "on_source_h": 21.10780704418818,
+   "eirp_stack_nominal_W": 5223987763223.678,
+   "eirp_single_nominal_W": 18357535849032.85,
+   "single_block": "A002_X106b646_X19c5",
+   "single_census": true
+  },
+  {
+   "set": "asis",
+   "nu_lo_GHz": 239.01637658435422,
+   "nu_hi_GHz": 240.9694438877057,
+   "n_epochs": 66,
+   "on_source_h": 21.10780704418818,
+   "eirp_stack_nominal_W": 5974510206424.483,
+   "eirp_single_nominal_W": 19814367388418.1,
+   "single_block": "A002_Xdb7ab7_Xb27",
+   "single_census": false
+  },
+  {
+   "set": "asis",
+   "nu_lo_GHz": 241.0163175027862,
+   "nu_hi_GHz": 242.96938480613767,
+   "n_epochs": 66,
+   "on_source_h": 21.10780704418818,
+   "eirp_stack_nominal_W": 7692317449515.112,
+   "eirp_single_nominal_W": 18820899046798.746,
+   "single_block": "A002_X106b646_X19c5",
+   "single_census": true
+  },
+  {
+   "set": "final",
+   "nu_lo_GHz": 223.0168492350989,
+   "nu_hi_GHz": 224.96991653845038,
+   "n_epochs": 66,
+   "on_source_h": 28.945009707609813,
+   "eirp_stack_nominal_W": 2537640978798.7065,
+   "eirp_single_nominal_W": 2612342458402.1294,
+   "single_block": "A002_Xbf9c0a_X1d95",
+   "single_census": false
+  },
+  {
+   "set": "final",
+   "nu_lo_GHz": 225.01679015373082,
+   "nu_hi_GHz": 226.9698574570823,
+   "n_epochs": 66,
+   "on_source_h": 28.941369708114202,
+   "eirp_stack_nominal_W": 1550726405987.5535,
+   "eirp_single_nominal_W": 1777481739753.947,
+   "single_block": "A002_Xbf9c0a_X1d95",
+   "single_census": false
+  },
+  {
+   "set": "final",
+   "nu_lo_GHz": 239.01637658435422,
+   "nu_hi_GHz": 240.9694438877057,
+   "n_epochs": 66,
+   "on_source_h": 28.937449708514745,
+   "eirp_stack_nominal_W": 1802945146162.0564,
+   "eirp_single_nominal_W": 2469769494936.1055,
+   "single_block": "A002_Xbf9c0a_X1d95",
+   "single_census": false
+  },
+  {
+   "set": "final",
+   "nu_lo_GHz": 241.0163175027862,
+   "nu_hi_GHz": 242.96938480613767,
+   "n_epochs": 66,
+   "on_source_h": 28.949209707313113,
+   "eirp_stack_nominal_W": 2718338625681.824,
+   "eirp_single_nominal_W": 3587957406331.721,
+   "single_block": "A002_Xbf9c0a_X1d95",
+   "single_census": false
+  },
+  {
+   "set": "census",
+   "nu_lo_GHz": 223.00801786770472,
+   "nu_hi_GHz": 224.9767696638865,
+   "n_epochs": 25,
+   "on_source_h": 20.66792766518063,
+   "eirp_stack_nominal_W": 5254892918803.475,
+   "eirp_single_nominal_W": 18767847305676.227,
+   "single_block": "A002_Xdc21b9_X252f",
+   "single_census": true
+  },
+  {
+   "set": "census",
+   "nu_lo_GHz": 225.00801969239734,
+   "nu_hi_GHz": 226.97677148857912,
+   "n_epochs": 25,
+   "on_source_h": 20.668207665284474,
+   "eirp_stack_nominal_W": 4991160893641.801,
+   "eirp_single_nominal_W": 18713847575647.957,
+   "single_block": "A002_X1077d5b_Xa63d",
+   "single_census": true
+  },
+  {
+   "set": "census",
+   "nu_lo_GHz": 239.00802865074488,
+   "nu_hi_GHz": 240.97678044692665,
+   "n_epochs": 25,
+   "on_source_h": 20.668207665284474,
+   "eirp_stack_nominal_W": 10232649864881.586,
+   "eirp_single_nominal_W": 19971445971297.83,
+   "single_block": "A002_Xdc21b9_X252f",
+   "single_census": true
+  },
+  {
+   "set": "census",
+   "nu_lo_GHz": 241.00803047523755,
+   "nu_hi_GHz": 242.97678227141935,
+   "n_epochs": 25,
+   "on_source_h": 20.668207665284474,
+   "eirp_stack_nominal_W": 6495625518968.1045,
+   "eirp_single_nominal_W": 19996964816050.574,
+   "single_block": "A002_X1077d5b_Xa63d",
+   "single_census": true
+  }
+ ]
+}

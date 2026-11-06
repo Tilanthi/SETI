@@ -1,0 +1,5 @@
+{
+ "_doc": "v4.29 re-flag fold: hold-out / beyond-40 pc windows with no r27 holdfix row, applied by holdfix_r27.py r29 pass; side=new",
+ "side": "new",
+ "rows": []
+}

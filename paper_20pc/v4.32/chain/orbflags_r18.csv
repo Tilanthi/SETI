@@ -1,0 +1,44 @@
+star_name,released,flag,route,companion_arcsec,companion_source,max_displacement_arcsec,max_beams,retained,note
+2MASS J05241914-1601153 551040,2MASS J05241914-1601153 551040,component,B,0.444,GaiaDR3,0.00789,0.0102,0.9996,"acceleration ceiling at rho=0.444"" (GaiaDR3), M2<=0.37 Msun, P>=60.7 yr"
+2MASS J05241914-1601153 717696,2MASS J05241914-1601153 717696,component,B,0.444,GaiaDR3,0.00706,0.0092,0.9997,"acceleration ceiling at rho=0.444"" (GaiaDR3), M2<=0.34 Msun, P>=61.1 yr"
+51 Eri,51 Eri,component,C,66.700,WDS,0.00001,0.0001,1.0000,PMa 0.263+2x0.126 mas/yr over 24.75 yr (Kervella et al. 2022)
+Barta 161 12,Barta 161 12,unquantified,D,,,,,,"no companion located, no Hipparcos epoch, RUWE 1.49: flagged, not quantified"
+CD-38 10980,CD-38 10980,component,C,345.041,GaiaDR3,0.00024,0.0002,1.0000,PMa 0.128+2x0.123 mas/yr over 24.75 yr (Kervella et al. 2022)
+G 272-61A,G 272-61A,component,A,2.000,WDS,0.02337,0.0306,0.9978,"Msn2023 P=26.35yr a=2.022"" grade 2"
+G 272-61B,G 272-61B,component,A,2.000,WDS,0.02485,0.0325,0.9976,"Msn2023 P=26.35yr a=2.022"" grade 2"
+GJ 2006A,GJ 2006A,component,B,17.849,GaiaDR3,0.00000,0.0000,1.0000,"acceleration ceiling at rho=17.849"" (GaiaDR3), M2<=0.45 Msun, P>=16307.6 yr"
+GJ 2006B,GJ 2006B,component,B,17.849,GaiaDR3,0.00000,0.0000,1.0000,"acceleration ceiling at rho=17.849"" (GaiaDR3), M2<=0.47 Msun, P>=16276.4 yr"
+HD 139084,HD 139084,component,A,0.100,WDS,0.04612,0.0620,0.9923,"Nls2016 P=4.58yr a=0.0797"" grade 4"
+HD 139084B,HD 139084B,component,B,10.316,GaiaDR3,0.00002,0.0000,1.0000,"acceleration ceiling at rho=10.316"" (GaiaDR3), M2<=0.99 Msun, P>=7061.6 yr"
+HD 155555C,HD 155555C,unquantified,B,34.117,GaiaDR3,0.00000,0.0000,1.0000,"acceleration ceiling at rho=34.117"" (GaiaDR3), M2<=1.14 Msun, P>=26360.0 yr"
+HD14055,HD14055,indicated,C,,,0.00348,0.0014,0.9999,PMa 0.583+2x0.487 mas/yr over 24.75 yr (Kervella et al. 2022)
+HD161868,HD161868,indicated,C,,,0.00156,0.0003,1.0000,PMa 0.324+2x0.260 mas/yr over 24.75 yr (Kervella et al. 2022)
+HD172555,HD172555,component,C,71.340,GaiaDR3,0.00146,0.0220,0.9990,PMa 0.368+2x0.149 mas/yr over 24.75 yr (Kervella et al. 2022)
+HD202628,HD202628,indicated,C,,,0.00006,0.0001,1.0000,PMa 0.111+2x0.025 mas/yr over 24.75 yr (Kervella et al. 2022)
+HIP10679,HIP10679,component,C,13.752,GaiaDR3,0.00001,0.0000,1.0000,PMa 0.871+2x0.167 mas/yr over 24.75 yr (Kervella et al. 2022)
+HN Lib,HN Lib,indicated,C,,,0.00021,0.0000,1.0000,PMa 0.169+2x0.142 mas/yr over 24.75 yr (Kervella et al. 2022)
+HR 1010 Gaia DR3 4722135642226902656,HR 1010 Gaia DR3 4722135642226902656,component,C,309.115,GaiaDR3,0.00005,0.0000,1.0000,PMa 0.124+2x0.111 mas/yr over 24.75 yr (Kervella et al. 2022)
+L 836-122,L 836-122,component,B,1.600,WDS,0.00119,0.0016,0.9999,"acceleration ceiling at rho=1.600"" (WDS), M2<=0.65 Msun, P>=313.5 yr"
+LHS 1140,LHS 1140,unquantified,D,,,,,,"no companion located, no Hipparcos epoch, RUWE 1.53: flagged, not quantified"
+LP 349-25,LP 349-25,component,A,0.100,WDS,0.02638,0.0572,0.9935,"Dup2017 P=7.698yr a=0.146"" grade 2"
+LP 476-207 384128,LP 476-207 384128,component,C,1.398,GaiaDR3,0.00237,0.0050,0.9998,PMa 7.642+2x0.386 mas/yr over 24.75 yr (Kervella et al. 2022)
+LP 476-207 783296,LP 476-207 783296,component,B,1.398,GaiaDR3,0.00270,0.0057,0.9998,"acceleration ceiling at rho=1.398"" (GaiaDR3), M2<=0.51 Msun, P>=198.7 yr"
+LP 736-15,LP 736-15,component,B,0.100,WDS,0.20000,0.2714,0.8697,"orbit-extent ceiling, twice rho=0.100"" (WDS)"
+NAME AT Mic AB Gaia DR3 6792436799475128960,NAME AT Mic AB Gaia DR3 6792436799475128960,component,A,2.102,GaiaDR3,0.00973,0.0128,0.9995,"Tok2023e P=145.4yr a=2.529"" grade 4"
+Proxima Cen,Proxima Cen,component,C,,,0.00053,0.0001,1.0000,PMa 0.072+2x0.083 mas/yr over 24.75 yr (Kervella et al. 2022)
+TWA 3A 696000,TWA 3A 696000,component,A,1.500,WDS,0.00014,0.0009,1.0000,"Kll2017 P=748.5yr a=2.245"" grade 5"
+TWA 3A [576064],TWA 3A [576064],component,A,1.500,WDS,0.00015,0.0010,1.0000,"Kll2017 P=748.5yr a=2.245"" grade 5"
+UCAC2 20312880,UCAC2 20312880,component,B,0.100,WDS,0.20000,0.2779,0.8640,"orbit-extent ceiling, twice rho=0.100"" (WDS)"
+V AT Mic B,V AT Mic B,component,A,2.102,GaiaDR3,0.00981,0.0129,0.9995,"Tok2023e P=145.4yr a=2.529"" grade 4"
+V star TX PsA,V star TX PsA,component,B,35.821,GaiaDR3,0.00000,0.0000,1.0000,"acceleration ceiling at rho=35.821"" (GaiaDR3), M2<=0.45 Msun, P>=22773.4 yr"
+V star WW PsA,V star WW PsA,component,C,35.821,GaiaDR3,0.00008,0.0002,1.0000,PMa 0.119+2x0.129 mas/yr over 24.75 yr (Kervella et al. 2022)
+alf CMa B,alf CMa B,component,A,11.100,WDS,0.10039,0.1148,0.9751,"BdH2017 P=50.13yr a=7.496"" grade 2"
+bet Pic,bet Pic,indicated,C,,,0.00115,0.0012,1.0000,PMa 0.236+2x0.275 mas/yr over 24.75 yr (Kervella et al. 2022)
+chi01 Ori,chi01 Ori,indicated,C,,,0.00212,0.0012,1.0000,PMa 11.039+2x0.527 mas/yr over 24.75 yr (Kervella et al. 2022)
+eta Cru,eta Cru,indicated,C,,,0.00005,0.0000,1.0000,PMa 0.461+2x0.160 mas/yr over 24.75 yr (Kervella et al. 2022)
+eta Crv,eta Crv,indicated,C,,,0.00288,0.0066,0.9997,PMa 0.423+2x0.230 mas/yr over 24.75 yr (Kervella et al. 2022)
+gam Lep,gam Lep,component,C,97.430,GaiaDR3,0.00023,0.0014,0.9999,PMa 0.453+2x0.160 mas/yr over 24.75 yr (Kervella et al. 2022)
+gam Vir,gam Vir,component,A,6.500,WDS,0.03898,0.0826,0.9870,"Sca2007c P=169.1yr a=3.639"" grade 2"
+hd107146,hd107146,indicated,C,,,0.00040,0.0024,0.9999,PMa 0.280+2x0.035 mas/yr over 24.75 yr (Kervella et al. 2022)
+hd92945,hd92945,indicated,C,,,0.00001,0.0000,1.0000,PMa 0.108+2x0.033 mas/yr over 24.75 yr (Kervella et al. 2022)
+tau Cet,tau Cet,indicated,C,,,0.00003,0.0000,1.0000,PMa 0.241+2x0.201 mas/yr over 24.75 yr (Kervella et al. 2022)

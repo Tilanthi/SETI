@@ -1,0 +1,17 @@
+{
+ "_doc": "typed literals the re-calibration fold moves, per fold mode (REFLAG_CODEVERSION|REFLAG_LIMITREF); written by the fold procedure from a REFLAG_PINPROBE=1 pass and reviewed old -> new (FOLD29.md). Rebuilt from pins_probe_r29.log. Rebuilt from pins_probe_full.log.",
+ "pins": {
+  "census|r23a": {
+   "cells.NCenA": 49,
+   "cells.NNoProf": 0,
+   "ledger.NCross": 54,
+   "numbers.NMaskFrameDiff": 2,
+   "round10.DutyHalf": 7.62,
+   "round10.NOccSystems": 65,
+   "round10.OccMeasured": 5.76,
+   "round10.OccUniform": 8.06,
+   "round10.OccUnit": 3.38,
+   "v409.NDeltaRows": 11
+  }
+ }
+}

@@ -1,0 +1,34 @@
+{
+  "frozen": "2026-11-05",
+  "quantity": "EIRP of the Arecibo planetary radar (S band), the benchmark the abstract and conclusions compare the limits with",
+  "eirp_W": 2.0e13,
+  "frequency_GHz": 2.38,
+  "transmitter_power_W": 1.0e6,
+  "antenna_gain_dBi": 73.0,
+  "adopted_source": {
+    "bibkey": "EarthDetectingEarth2025",
+    "reference": "Sheikh S. Z., Huston M. J., Fan P., Wright J. T., Beatty T., Martini C., Kopparapu R., Frank A., 2025, AJ, 169, 118 (arXiv:2502.02614)",
+    "location": "Sec. IV",
+    "quote": "Arecibo's characteristic EIRP at S-band is 20 TW (Ekers et al. 2002)",
+    "secondary": "Ekers R. D., Cullers D. K., Billingham J., Scheffer L. K., 2002, SETI 2020 (SETI Press, Mountain View)"
+  },
+  "cross_checks": [
+    {
+      "bibkey": "Margot2023",
+      "reference": "Margot J.-L., et al., 2023, AJ, 166, 206 (arXiv:2308.02712)",
+      "location": "Sec. 3.6",
+      "quote": "an Arecibo Planetary Radar (EIRP=2.2 x 10^13 W) is detectable at 415 ly",
+      "eirp_W": 2.2e13
+    },
+    {
+      "bibkey": "Enriquez2017",
+      "reference": "Enriquez J. E., et al., 2017, ApJ, 849, 104 (arXiv:1709.03491)",
+      "location": "Sec. 5.2.2 (CWTFM normalisation) and abstract",
+      "quote": "L_AO is the EIRP of the Arecibo Planetary Radar at 10^13 W",
+      "eirp_W": 1.0e13,
+      "note": "an order-of-magnitude normalisation of the CWTFM (this paper's \\FomAreciboEirp), not a measured EIRP; consistent to within its own rounding"
+    }
+  ],
+  "transmitter_check": "P_tx G = 1 MW x 10^(73/10) = 2.0e13 W (the radar's ~1 MW klystron output at 2.38 GHz into the 305 m dish's ~73 dBi gain); the 2.38 GHz frequency is the physical radar frequency, Sheikh et al. write '2.4 GHz'",
+  "note": "The comparison is of EIRP only. The limits of this paper are isotropic-equivalent powers at 84-950 GHz; an Arecibo-sized dish at those frequencies is not a realisable transmitter, so the benchmark is not frequency-scaled (see numbers_v410.py / macromap ArecScaledW)."
+}

@@ -1,0 +1,111 @@
+%% APPENDIX D -- the false-alarm expectation and its resampling, block
+%% quality, registration, the pairs and the drift grid's edges.  Carries
+%% app:falsealarm (04_method.tex, 05_results.tex, 08_backmatter.tex,
+%% app_C, app_I), eq:expect, eq:pnull,
+%% sec:blockquality (04_method.tex, 05_results.tex),
+%% sec:regbudget (05_results.tex), sec:pairacct (cited by v4.30 Sec. 4; kept
+%% so the label resolves either way) and sec:edge (04_method.tex, 05_results.tex,
+%% pairs_v415.py).
+%% r30 (write-apx): D.1 about half its v4.30 length with the estimator and
+%% the resampling as two displayed equations; D.2 and D.3 short; the pair
+%% accounting kept short here because Sec. 4 cites it; Table D1 (tab:edge) is
+%% one sentence of D.5.  The control assumption is stated once, in
+%% Appendix B.  The band-edge sentence is REQUIRED on the page (v409 V7c).
+\section{The false-alarm expectation and the control ensemble}
+\label{app:falsealarm}
+
+\subsection{The expectation and its resampling}
+
+One attribution set serves both sides of the comparison, the mask of
+Appendix~\ref{app:linemask} being applied to a control maximum exactly as to a
+crossing. Over the \CeNWin{} Class~A windows $w$ of the primary census the
+expected number of unattributed crossings is
+\begin{equation*}
+\bar N=\tau\sum_{w}r_w\,(1-a_w),\qquad r_w=\frac{n_w}{N_{\rm ctrl}},
+\end{equation*}
+where $n_w$ of the window's $N_{\rm ctrl}=\NCtrl$ control positions reach the
+trigger, $a_w$ is the share of control exceedances that land inside the
+mask, and $\tau$ is the share the atmospheric screen leaves. The rates alone
+give \CeExpTrig{} expected crossings. The attributed share is measured where control maxima
+actually fall, on the \RcNRetCtrl{} positions per window that keep a dynamic
+spectrum. Of their \CeNExc{} exceedances, \CeNExcAttr{} lie inside the
+mask, so attribution takes \CeMaskPct{} per cent. The screen
+(Appendix~\ref{app:rfi}) then removes \CeTlCtrlCut{} of the \CeTlCtrlSurv{}
+that remain, leaving $\bar N=\CeExp$ against \CeObs{} observed. The
+\CeNWinTail{} Class~A windows of the archival tail and the \CeNWinComp{} of
+\OmXStar, a position the catalogue does not tabulate, enter neither side.
+Near a band edge the pooled exceedance rate is $\times\VnEdgeRatio$ the
+interior rate, but one window, toward HD~48370, holds \VnEdgeDomPct{} per
+cent of the near-edge exceedances; without it the ratio is
+$\times\VnEdgeNoDomRatio$ ($\times\VnEdgeHalfCleanRatio$ on a held-out half,
+$\pv{\VnEdgeHalfCleanP}$), so no edge correction is applied.
+
+Windows share execution blocks, so the count is compared through block
+resampling. In each of $B=\CeNBoot$ resamplings the blocks are drawn with
+replacement, each window's rate is redrawn binomially from its own probes,
+and the attributed share and the screen are redrawn from their own counts,
+giving $\bar N_b$; then
+\begin{equation*}
+P=\frac{1}{B}\sum_{b=1}^{B}\Pr\!\left(N\ge N_{\rm obs}\mid\bar N_b\right),
+\end{equation*}
+with $N$ a Poisson count and $N_{\rm obs}=\CeObs$, gives $P=\CeProbNull$,
+conditional on the control-position model (Appendix~\ref{app:radius}). With
+$k$ added to the mean $\bar N_b$ of every resampling, a count of \CeObs{} or
+more keeps a probability of \CeProbAtLim{} for $k=\CeAddLim$, but for one
+more it falls to \CeProbAboveLim, below the one-sided \CeAlphaPct{} per cent
+level. So \CeAddLim{} is the largest additional mean number of primary crossings
+compatible with the observed count, conditional on the mask and on the
+control-position model, as quoted in \S\ref{sec:trigunif}. It is not a
+confidence bound on a realised number of crossings. As a check, a pseudo-star read at one control position in every window of
+a block is no more dispersed than one read window by window (variance ratio
+\BgDisp) and reaches \CeObs{} with probability \BgPseudoP. The widened recurrence window
+of \S\ref{sec:etacrv} is read in the same way over its \WuNWin{} distinct
+windows.
+
+\subsection{Execution-block quality}
+\label{sec:blockquality}
+
+The comparison assumes that each block's control ensemble behaves like
+noise, and in one block all \NCtrl{} probes exceed the trigger. Every block
+is therefore judged on the median of its windows' control ensembles over its
+class median, which also flags \DqNWin{} of the \NWindows{} windows at
+\BqFactor{} the survey median. The criterion was written after the condition
+had been seen, but the choice is not a delicate one. The failing block sits
+at \BqFailQ{} and the next at \BqNextQ, and its \BqFailNWin{} coarse-channel
+windows hold no census crossing once ALMA's final flags are restored
+(\S\ref{sec:method}).
+
+\subsection{Registration}
+\label{sec:regbudget}
+
+Between epochs, the predicted cell is registered to \RgBudgetChMed{} of a
+channel in every window. Widening each reading to the worst cell within
+\RgTolKms\,km\,s$^{-1}$, re-anchoring it along the discovery track, or
+raising the bar to \ZtTrialThr{} changes no disposition, although
+registration to a single channel is tested only on the unresolved line of
+\RgRegStar, which registers to \RgRegMaxCh{} of a channel.
+
+\subsection{The pairs}
+\label{sec:pairacct}
+
+Where the epochs of a pair of crossings (\S\ref{sec:etacrv}) are close
+enough for the predicted offset to be tighter than the searched window, all
+\TjNPower{} such pairs fail a drift changing at a constant rate, by at least
+\TjSigMin{} times the resolution. The $\beta$~Pictoris pair, whose crossings
+lie \TjBpDvKms\,km\,s$^{-1}$ apart in the star's frame and \TjBpDtH\,h apart,
+cannot be dismissed in this way. Its mean acceleration,
+\TjBpAccelReq\,m\,s$^{-2}$, is inside the \WdAGrid\,m\,s$^{-2}$ ceiling, and
+a circular orbit of \ObDayBp\,d about the \EcMassBp\,M$_\odot$ star
+\citep{Crifo1997} reproduces it. Both blocks belong to one session and no
+block of another session covers the window, so the pair is \TjBpVerdict.
+
+\subsection{The drift grid's edges}
+\label{sec:edge}
+
+The drift trials run from $-\dot\nu_{\max}$ in half-channel steps to the
+first trial at or beyond $+\dot\nu_{\max}$, so the searched interval is
+asymmetric by up to one step. Of the \EgNDrift{} crossings of \EgDriftPop{}
+with a fitted drift, the \EgNEdge{} toward \EgEdgeStars{} lie on an
+outermost trial of their own window's grid. Their drift rates, in the
+observatory frame, and the accelerations they imply are lower bounds, and
+\EgNEdgeOut{} of them carry no amplitude bound.

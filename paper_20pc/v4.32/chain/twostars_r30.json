@@ -1,0 +1,1285 @@
+{
+ "generator": "twostars_r27.py",
+ "seed": 992,
+ "n_sim": 200000,
+ "numpy_version": "2.2.6",
+ "trigger": 5.0,
+ "hd": "HD 14055",
+ "jx": "ALMA J153702653-33192492",
+ "windows": [
+  {
+   "eb": "A002_Xda2c82_X765d",
+   "nu_lo_GHz": 229.0366,
+   "nu_hi_GHz": 230.8769,
+   "star": "GL 3379 Gaia DR3 3316364602541746048",
+   "object": "GL 3379 Gaia DR3 3316364602541746048",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xdb3eb4_X899",
+   "nu_lo_GHz": 229.0393,
+   "nu_hi_GHz": 230.8796,
+   "star": "GL 3379 Gaia DR3 3316364602541746048",
+   "object": "GL 3379 Gaia DR3 3316364602541746048",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xdd0d37_X18197",
+   "nu_lo_GHz": 229.0518,
+   "nu_hi_GHz": 230.8921,
+   "star": "GL 3379 Gaia DR3 3316364602541746048",
+   "object": "GL 3379 Gaia DR3 3316364602541746048",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xdd0d37_X17f99",
+   "nu_lo_GHz": 229.0519,
+   "nu_hi_GHz": 230.8922,
+   "star": "GL 3379 Gaia DR3 3316364602541746048",
+   "object": "GL 3379 Gaia DR3 3316364602541746048",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xc074d4_X2e6",
+   "nu_lo_GHz": 344.8729,
+   "nu_hi_GHz": 346.7132,
+   "star": "61 Vir",
+   "object": "61 Vir",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xc067f7_X822",
+   "nu_lo_GHz": 344.8738,
+   "nu_hi_GHz": 346.7142,
+   "star": "61 Vir",
+   "object": "61 Vir",
+   "search_class": "A",
+   "above_trigger": true
+  },
+  {
+   "eb": "A002_X9db5ce_X224b",
+   "nu_lo_GHz": 344.932,
+   "nu_hi_GHz": 346.6571,
+   "star": "61 Vir",
+   "object": "61 Vir",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xc079b5_X82f",
+   "nu_lo_GHz": 344.8724,
+   "nu_hi_GHz": 346.7127,
+   "star": "61 Vir",
+   "object": "61 Vir",
+   "search_class": "A",
+   "above_trigger": true
+  },
+  {
+   "eb": "A002_Xc079b5_X1ae",
+   "nu_lo_GHz": 344.8727,
+   "nu_hi_GHz": 346.713,
+   "star": "61 Vir",
+   "object": "61 Vir",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xd86f11_X584b",
+   "nu_lo_GHz": 229.079,
+   "nu_hi_GHz": 230.9194,
+   "star": "GJ 849",
+   "object": "GJ 849",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xd95042_X67d7",
+   "nu_lo_GHz": 229.0974,
+   "nu_hi_GHz": 230.9378,
+   "star": "GJ 849",
+   "object": "GJ 849",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xd95042_X5feb",
+   "nu_lo_GHz": 229.0975,
+   "nu_hi_GHz": 230.9378,
+   "star": "GJ 849",
+   "object": "GJ 849",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X899169_X1838",
+   "nu_lo_GHz": 229.6758,
+   "nu_hi_GHz": 231.4009,
+   "star": "AU Mic",
+   "object": "AU Mic",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X7d80c7_X15c6",
+   "nu_lo_GHz": 229.702,
+   "nu_hi_GHz": 231.4271,
+   "star": "AU Mic",
+   "object": "AU Mic",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xc6fa08_X1053",
+   "nu_lo_GHz": 229.61,
+   "nu_hi_GHz": 231.4508,
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "object": "HR 1010 Gaia DR3 4722135642226902656",
+   "search_class": "A",
+   "above_trigger": true
+  },
+  {
+   "eb": "A002_Xc6e968_X1339",
+   "nu_lo_GHz": 229.6101,
+   "nu_hi_GHz": 231.4509,
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "object": "HR 1010 Gaia DR3 4722135642226902656",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xc6d2f9_X7060",
+   "nu_lo_GHz": 229.6102,
+   "nu_hi_GHz": 231.451,
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "object": "HR 1010 Gaia DR3 4722135642226902656",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xc694dd_X41ca",
+   "nu_lo_GHz": 229.6106,
+   "nu_hi_GHz": 231.4514,
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "object": "HR 1010 Gaia DR3 4722135642226902656",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xc694dd_X3e5f",
+   "nu_lo_GHz": 229.6107,
+   "nu_hi_GHz": 231.4515,
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "object": "HR 1010 Gaia DR3 4722135642226902656",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xc68b3e_X107b",
+   "nu_lo_GHz": 229.6108,
+   "nu_hi_GHz": 231.4516,
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "object": "HR 1010 Gaia DR3 4722135642226902656",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xc67b7e_X1f16",
+   "nu_lo_GHz": 229.6109,
+   "nu_hi_GHz": 231.4517,
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "object": "HR 1010 Gaia DR3 4722135642226902656",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X12277ed_X178c6",
+   "nu_lo_GHz": 322.397,
+   "nu_hi_GHz": 322.5047,
+   "star": "HD 69830",
+   "object": "HD 69830",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X12235df_X8337",
+   "nu_lo_GHz": 322.3991,
+   "nu_hi_GHz": 322.5067,
+   "star": "HD 69830",
+   "object": "HD 69830",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X1207c39_X9417",
+   "nu_lo_GHz": 322.406,
+   "nu_hi_GHz": 322.5137,
+   "star": "HD 69830",
+   "object": "HD 69830",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xda1250_X72ef",
+   "nu_lo_GHz": 229.08,
+   "nu_hi_GHz": 230.9203,
+   "star": "LHS 1140",
+   "object": "LHS 1140",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xda1250_X6f6b",
+   "nu_lo_GHz": 229.0801,
+   "nu_hi_GHz": 230.9204,
+   "star": "LHS 1140",
+   "object": "LHS 1140",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xda2c82_X62d7",
+   "nu_lo_GHz": 229.0809,
+   "nu_hi_GHz": 230.9212,
+   "star": "LHS 1140",
+   "object": "LHS 1140",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xb28642_Xcff3",
+   "nu_lo_GHz": 229.7087,
+   "nu_hi_GHz": 231.4338,
+   "star": "HD 207129 Gaia DR3 6564091190988411520",
+   "object": "HD 207129 Gaia DR3 6564091190988411520",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X10b0d7d_X323f",
+   "nu_lo_GHz": 229.6099,
+   "nu_hi_GHz": 231.4507,
+   "star": "HD 23484 Gaia DR3 4856592239127350400",
+   "object": "HD 23484 Gaia DR3 4856592239127350400",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xfffde1_Xffdf",
+   "nu_lo_GHz": 330.4034,
+   "nu_hi_GHz": 332.1285,
+   "star": "HD 10647",
+   "object": "HD 10647",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X1171dca_X5df0",
+   "nu_lo_GHz": 330.4298,
+   "nu_hi_GHz": 332.1549,
+   "star": "HD 10647",
+   "object": "HD 10647",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X128b034_X187cc",
+   "nu_lo_GHz": 229.6511,
+   "nu_hi_GHz": 231.3767,
+   "star": "HD 31392",
+   "object": "HD 31392",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X1294347_X5c2e",
+   "nu_lo_GHz": 229.6531,
+   "nu_hi_GHz": 231.3787,
+   "star": "HD 31392",
+   "object": "HD 31392",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X1294347_X1b730",
+   "nu_lo_GHz": 229.6535,
+   "nu_hi_GHz": 231.3791,
+   "star": "HD 31392",
+   "object": "HD 31392",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X1294347_X1af7f",
+   "nu_lo_GHz": 229.6536,
+   "nu_hi_GHz": 231.3792,
+   "star": "HD 31392",
+   "object": "HD 31392",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X12b3da5_X4411",
+   "nu_lo_GHz": 229.6617,
+   "nu_hi_GHz": 231.3873,
+   "star": "HD 31392",
+   "object": "HD 31392",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X12b3da5_X2f34",
+   "nu_lo_GHz": 229.6619,
+   "nu_hi_GHz": 231.3875,
+   "star": "HD 31392",
+   "object": "HD 31392",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xff294f_X812c",
+   "nu_lo_GHz": 344.2008,
+   "nu_hi_GHz": 346.0412,
+   "star": "HD161868",
+   "object": "HD161868",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xff45a6_X8474",
+   "nu_lo_GHz": 344.2009,
+   "nu_hi_GHz": 346.0413,
+   "star": "HD161868",
+   "object": "HD161868",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xff294f_X7bf4",
+   "nu_lo_GHz": 344.201,
+   "nu_hi_GHz": 346.0414,
+   "star": "HD161868",
+   "object": "HD161868",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xff45a6_X107fe",
+   "nu_lo_GHz": 344.2014,
+   "nu_hi_GHz": 346.0417,
+   "star": "HD161868",
+   "object": "HD161868",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xff81e8_X734e",
+   "nu_lo_GHz": 344.202,
+   "nu_hi_GHz": 346.0423,
+   "star": "HD161868",
+   "object": "HD161868",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xff0235_X8392",
+   "nu_lo_GHz": 216.0716,
+   "nu_hi_GHz": 217.9119,
+   "star": "ALMA J153702653-33192492",
+   "object": "ALMA J153702653-33192492",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xf8f6a9_X10359",
+   "nu_lo_GHz": 216.0911,
+   "nu_hi_GHz": 217.9314,
+   "star": "ALMA J153702653-33192492",
+   "object": "ALMA J153702653-33192492",
+   "search_class": "A",
+   "above_trigger": true
+  },
+  {
+   "eb": "A002_X1009c59_X1ba4d",
+   "nu_lo_GHz": 216.0981,
+   "nu_hi_GHz": 217.9384,
+   "star": "ALMA J153702653-33192492",
+   "object": "ALMA J153702653-33192492",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X1015532_X20dc8",
+   "nu_lo_GHz": 216.1023,
+   "nu_hi_GHz": 217.9426,
+   "star": "ALMA J153702653-33192492",
+   "object": "ALMA J153702653-33192492",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X1018459_X73b0",
+   "nu_lo_GHz": 216.1027,
+   "nu_hi_GHz": 217.943,
+   "star": "ALMA J153702653-33192492",
+   "object": "ALMA J153702653-33192492",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X1020da2_X78cd",
+   "nu_lo_GHz": 216.1058,
+   "nu_hi_GHz": 217.9461,
+   "star": "ALMA J153702653-33192492",
+   "object": "ALMA J153702653-33192492",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xfe62c1_X398",
+   "nu_lo_GHz": 216.0682,
+   "nu_hi_GHz": 217.9086,
+   "star": "ALMA J153702653-33192492",
+   "object": "ALMA J153702653-33192492",
+   "search_class": "A",
+   "above_trigger": true
+  },
+  {
+   "eb": "A002_Xff0235_X8392",
+   "nu_lo_GHz": 218.3216,
+   "nu_hi_GHz": 220.1619,
+   "star": "ALMA J153702653-33192492",
+   "object": "ALMA J153702653-33192492",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xf8f6a9_X10359",
+   "nu_lo_GHz": 218.3411,
+   "nu_hi_GHz": 220.1814,
+   "star": "ALMA J153702653-33192492",
+   "object": "ALMA J153702653-33192492",
+   "search_class": "A",
+   "above_trigger": true
+  },
+  {
+   "eb": "A002_X1009c59_X1ba4d",
+   "nu_lo_GHz": 218.3481,
+   "nu_hi_GHz": 220.1884,
+   "star": "ALMA J153702653-33192492",
+   "object": "ALMA J153702653-33192492",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X1015532_X20dc8",
+   "nu_lo_GHz": 218.3523,
+   "nu_hi_GHz": 220.1926,
+   "star": "ALMA J153702653-33192492",
+   "object": "ALMA J153702653-33192492",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X1018459_X73b0",
+   "nu_lo_GHz": 218.3527,
+   "nu_hi_GHz": 220.193,
+   "star": "ALMA J153702653-33192492",
+   "object": "ALMA J153702653-33192492",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X1020da2_X78cd",
+   "nu_lo_GHz": 218.3558,
+   "nu_hi_GHz": 220.1961,
+   "star": "ALMA J153702653-33192492",
+   "object": "ALMA J153702653-33192492",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xfe62c1_X398",
+   "nu_lo_GHz": 218.3182,
+   "nu_hi_GHz": 220.1586,
+   "star": "ALMA J153702653-33192492",
+   "object": "ALMA J153702653-33192492",
+   "search_class": "A",
+   "above_trigger": true
+  },
+  {
+   "eb": "A002_X101088d_Xbf80",
+   "nu_lo_GHz": 330.3532,
+   "nu_hi_GHz": 332.1935,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X1006d51_X228e",
+   "nu_lo_GHz": 330.3813,
+   "nu_hi_GHz": 332.2216,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X1003af4_X14e08",
+   "nu_lo_GHz": 330.3824,
+   "nu_hi_GHz": 332.2227,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X1003af4_X3a2c",
+   "nu_lo_GHz": 330.3834,
+   "nu_hi_GHz": 332.2238,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X1001fdc_Xc06e",
+   "nu_lo_GHz": 330.3841,
+   "nu_hi_GHz": 332.2244,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X1001fdc_X29ae",
+   "nu_lo_GHz": 330.3844,
+   "nu_hi_GHz": 332.2247,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X1001fdc_X2085",
+   "nu_lo_GHz": 330.3846,
+   "nu_hi_GHz": 332.2249,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xfffde1_X9bd6",
+   "nu_lo_GHz": 330.3855,
+   "nu_hi_GHz": 332.2258,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xfffde1_X3835",
+   "nu_lo_GHz": 330.3859,
+   "nu_hi_GHz": 332.2262,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xff99e1_X2b2ee",
+   "nu_lo_GHz": 330.3872,
+   "nu_hi_GHz": 332.2276,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xff99e1_X24be0",
+   "nu_lo_GHz": 330.3874,
+   "nu_hi_GHz": 332.2278,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": true
+  },
+  {
+   "eb": "A002_Xff99e1_X1b0c4",
+   "nu_lo_GHz": 330.3883,
+   "nu_hi_GHz": 332.2286,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X107fa96_X9a88",
+   "nu_lo_GHz": 330.3911,
+   "nu_hi_GHz": 332.2314,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X107fa96_X150f6",
+   "nu_lo_GHz": 330.3921,
+   "nu_hi_GHz": 332.2324,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X1086384_X10bc1",
+   "nu_lo_GHz": 330.3952,
+   "nu_hi_GHz": 332.2355,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X1088045_X3c7b",
+   "nu_lo_GHz": 330.3958,
+   "nu_hi_GHz": 332.2361,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xfff3d8_Xd46",
+   "nu_lo_GHz": 330.3866,
+   "nu_hi_GHz": 332.227,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": true
+  },
+  {
+   "eb": "A002_X101088d_Xbf80",
+   "nu_lo_GHz": 344.1862,
+   "nu_hi_GHz": 346.0265,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X1006d51_X228e",
+   "nu_lo_GHz": 344.2143,
+   "nu_hi_GHz": 346.0546,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X1003af4_X14e08",
+   "nu_lo_GHz": 344.2154,
+   "nu_hi_GHz": 346.0557,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X1003af4_X3a2c",
+   "nu_lo_GHz": 344.2164,
+   "nu_hi_GHz": 346.0568,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X1001fdc_Xc06e",
+   "nu_lo_GHz": 344.2171,
+   "nu_hi_GHz": 346.0574,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X1001fdc_X29ae",
+   "nu_lo_GHz": 344.2174,
+   "nu_hi_GHz": 346.0577,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X1001fdc_X2085",
+   "nu_lo_GHz": 344.2176,
+   "nu_hi_GHz": 346.0579,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xfff3d8_Xd46",
+   "nu_lo_GHz": 344.2196,
+   "nu_hi_GHz": 346.06,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xff99e1_X2c3bb",
+   "nu_lo_GHz": 344.2199,
+   "nu_hi_GHz": 346.0603,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xff99e1_X2b2ee",
+   "nu_lo_GHz": 344.2202,
+   "nu_hi_GHz": 346.0606,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": true
+  },
+  {
+   "eb": "A002_Xff99e1_X24be0",
+   "nu_lo_GHz": 344.2204,
+   "nu_hi_GHz": 346.0608,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xff99e1_X1b0c4",
+   "nu_lo_GHz": 344.2213,
+   "nu_hi_GHz": 346.0616,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X107fa96_X9a88",
+   "nu_lo_GHz": 344.2241,
+   "nu_hi_GHz": 346.0644,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X107fa96_X150f6",
+   "nu_lo_GHz": 344.2251,
+   "nu_hi_GHz": 346.0654,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X1086384_X10bc1",
+   "nu_lo_GHz": 344.2282,
+   "nu_hi_GHz": 346.0685,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_X1088045_X3c7b",
+   "nu_lo_GHz": 344.2288,
+   "nu_hi_GHz": 346.0691,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xfffde1_X9bd6",
+   "nu_lo_GHz": 344.2185,
+   "nu_hi_GHz": 346.0588,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xfffde1_X3835",
+   "nu_lo_GHz": 344.2189,
+   "nu_hi_GHz": 346.0592,
+   "star": "HD14055",
+   "object": "HD 14055",
+   "search_class": "A",
+   "above_trigger": true
+  },
+  {
+   "eb": "A002_X10228b9_X423",
+   "nu_lo_GHz": 330.4743,
+   "nu_hi_GHz": 332.1994,
+   "star": "HD170773",
+   "object": "HD170773",
+   "search_class": "A",
+   "above_trigger": false
+  },
+  {
+   "eb": "A002_Xe3da01_X4265",
+   "nu_lo_GHz": 219.3679,
+   "nu_hi_GHz": 219.7993,
+   "star": "HD110411",
+   "object": "HD110411",
+   "search_class": "A",
+   "above_trigger": false
+  }
+ ],
+ "look_elsewhere": [
+  {
+   "label": "edge landing",
+   "p_obs": 1.0,
+   "names": [
+    "CP-72 2713",
+    "61 Vir",
+    "ALMA J153702653-33192492",
+    "AU Mic",
+    "CD-57 1054",
+    "GJ 849",
+    "HD 10647",
+    "HD 207129 Gaia DR3 6564091190988411520",
+    "HD 23484 Gaia DR3 4856592239127350400",
+    "HD 31392",
+    "HD 69830",
+    "HD110411",
+    "HD 14055",
+    "HD161868",
+    "HD170773",
+    "HR 1010 Gaia DR3 4722135642226902656",
+    "LHS 1140",
+    "bet Pic",
+    "GL 3379 Gaia DR3 3316364602541746048",
+    "HD 285968",
+    "TRAPPIST-1",
+    "TWA 7",
+    "tau Cet",
+    "HD 48370",
+    "HIP10679"
+   ],
+   "groups": [
+    [
+     0.015503875968992248,
+     0.015151515151515152
+    ],
+    [
+     0.01694915254237288,
+     0.01694915254237288
+    ],
+    [
+     0.020833333333333332,
+     0.02531645569620253,
+     0.02531645569620253,
+     0.02531645569620253,
+     0.02531645569620253,
+     0.011976047904191617
+    ],
+    [
+     0.03225806451612903
+    ],
+    [
+     0.044444444444444446
+    ],
+    [
+     0.02702702702702703
+    ],
+    [
+     0.01680672268907563
+    ],
+    [
+     0.023255813953488372
+    ],
+    [
+     0.05128205128205128
+    ],
+    [
+     0.047619047619047616
+    ],
+    [
+     0.007326007326007326
+    ],
+    [
+     0.02631578947368421
+    ],
+    [
+     0.014184397163120567,
+     0.014705882352941176,
+     0.014705882352941176,
+     0.014084507042253521
+    ],
+    [
+     0.015625,
+     0.015625
+    ],
+    [
+     0.014814814814814815,
+     0.014814814814814815
+    ],
+    [
+     0.047619047619047616,
+     0.015037593984962405
+    ],
+    [
+     0.02531645569620253
+    ],
+    [
+     0.0078125,
+     0.0078125,
+     0.023255813953488372,
+     0.017241379310344827
+    ],
+    [
+     0.02666666666666667
+    ],
+    [
+     0.025974025974025976,
+     0.025974025974025976,
+     0.025974025974025976,
+     0.025974025974025976
+    ],
+    [
+     0.014492753623188406
+    ],
+    [
+     0.00847457627118644
+    ],
+    [
+     0.023255813953488372
+    ],
+    [
+     0.009523809523809525
+    ],
+    [
+     0.0025906735751295338
+    ]
+   ]
+  },
+  {
+   "label": "control rates",
+   "p_obs": 0.01265645591212605,
+   "names": [
+    "GL 3379 Gaia DR3 3316364602541746048",
+    "61 Vir",
+    "GJ 849",
+    "AU Mic",
+    "HR 1010 Gaia DR3 4722135642226902656",
+    "HD 69830",
+    "LHS 1140",
+    "HD 207129 Gaia DR3 6564091190988411520",
+    "HD 23484 Gaia DR3 4856592239127350400",
+    "HD 10647",
+    "HD 31392",
+    "HD161868",
+    "ALMA J153702653-33192492",
+    "HD 14055",
+    "HD170773",
+    "HD110411"
+   ],
+   "groups": [
+    [
+     0.06054688,
+     0.04296875,
+     0.0625,
+     0.06054688
+    ],
+    [
+     0.11132812,
+     0.11132812,
+     0.12304688,
+     0.11328125,
+     0.10546875
+    ],
+    [
+     0.06835938,
+     0.04882812,
+     0.05664062
+    ],
+    [
+     0.05664062,
+     0.02734375
+    ],
+    [
+     0.04296875,
+     0.02734375,
+     0.02734375,
+     0.02539062,
+     0.0234375,
+     0.01171875,
+     0.02539062
+    ],
+    [
+     0.04296875,
+     0.04296875,
+     0.0546875
+    ],
+    [
+     0.09179688,
+     0.0546875,
+     0.07421875
+    ],
+    [
+     0.05664062
+    ],
+    [
+     0.01953125
+    ],
+    [
+     0.10546875,
+     0.08203125
+    ],
+    [
+     0.01367188,
+     0.0234375,
+     0.02539062,
+     0.02148438,
+     0.02539062,
+     0.01171875
+    ],
+    [
+     0.12890625,
+     0.11914062,
+     0.10546875,
+     0.11914062,
+     0.02734375
+    ],
+    [
+     0.08984375,
+     0.06835938,
+     0.04882812,
+     0.0390625,
+     0.07421875,
+     0.078125,
+     0.078125,
+     0.07226562,
+     0.08007812,
+     0.06640625,
+     0.05664062,
+     0.078125,
+     0.05664062,
+     0.07617188
+    ],
+    [
+     0.125,
+     0.14648438,
+     0.12304688,
+     0.12695312,
+     0.16210938,
+     0.12695312,
+     0.11523438,
+     0.08203125,
+     0.13671875,
+     0.15234375,
+     0.12890625,
+     0.14648438,
+     0.15429688,
+     0.140625,
+     0.13867188,
+     0.13671875,
+     0.15039062,
+     0.16210938,
+     0.15625,
+     0.12695312,
+     0.09570312,
+     0.12890625,
+     0.1171875,
+     0.15625,
+     0.11914062,
+     0.15234375,
+     0.14648438,
+     0.109375,
+     0.16015625,
+     0.15234375,
+     0.12109375,
+     0.1171875,
+     0.14648438,
+     0.12304688,
+     0.125
+    ],
+    [
+     0.06054688
+    ],
+    [
+     0.03320312
+    ]
+   ]
+  },
+  {
+   "label": "cell rates",
+   "p_obs": 0.018825968612515284,
+   "names": [
+    "GL 3379 Gaia DR3 3316364602541746048",
+    "61 Vir",
+    "GJ 849",
+    "AU Mic",
+    "HR 1010 Gaia DR3 4722135642226902656",
+    "HD 69830",
+    "LHS 1140",
+    "HD 207129 Gaia DR3 6564091190988411520",
+    "HD 23484 Gaia DR3 4856592239127350400",
+    "HD 10647",
+    "HD 31392",
+    "HD161868",
+    "ALMA J153702653-33192492",
+    "HD 14055",
+    "HD170773",
+    "HD110411"
+   ],
+   "groups": [
+    [
+     0.08571611259555784,
+     0.07098610951475706,
+     0.07854527314847554,
+     0.0860245064408812
+    ],
+    [
+     0.13887646801655362,
+     0.13470082280310755,
+     0.13577653125714814,
+     0.12333438402476701,
+     0.1291516535100715
+    ],
+    [
+     0.08081407612402572,
+     0.038286641247412746,
+     0.061510729987082534
+    ],
+    [
+     0.06988307905730348,
+     0.04129216155937714
+    ],
+    [
+     0.0011065103251349203,
+     0.021928046205489722,
+     0.023206875742099866,
+     0.030328527122558124,
+     0.024020170471662796,
+     0.022757445573267185,
+     0.018521484094206973
+    ],
+    [
+     0.05858952731727811,
+     0.033488157504229024,
+     0.05622706978494984
+    ],
+    [
+     0.08608999998606014,
+     0.07419848893006874,
+     0.08555783506619628
+    ],
+    [
+     0.00834082160303316
+    ],
+    [
+     0.02327614675002911
+    ],
+    [
+     0.10145077079578117,
+     0.1311237304275472
+    ],
+    [
+     0.019290970048466336,
+     0.025075060832025316,
+     0.028894632575396147,
+     0.028198573289906624,
+     0.025142802954273853,
+     0.027374097705446066
+    ],
+    [
+     0.12548754713494156,
+     0.13236831509207603,
+     0.13905763731006676,
+     0.10309999618008578,
+     0.030790409978601305
+    ],
+    [
+     0.073843097786464,
+     0.0770389514424459,
+     0.09734434088380967,
+     0.07138248794548258,
+     0.07151936999758068,
+     0.08185197559355513,
+     0.06934131003555154,
+     0.0808686740660071,
+     0.09126451460498455,
+     0.09138634720810114,
+     0.0706294203141432,
+     0.08620304947742383,
+     0.05634400814612052,
+     0.061533552463479156
+    ],
+    [
+     0.13117011748620602,
+     0.1297646106437027,
+     0.12040961792674743,
+     0.19172505313524435,
+     0.14290396237100736,
+     0.11592502944357994,
+     0.11918194814287116,
+     0.15069620741166662,
+     0.14323486171190686,
+     0.14648167596217415,
+     0.15836009067490397,
+     0.17942376018790238,
+     0.1646143677869112,
+     0.12177125404267393,
+     0.13346282015258826,
+     0.1312787300626191,
+     0.20589939035412386,
+     0.15215616806605667,
+     0.23785799302997843,
+     0.1262499289688515,
+     0.182860059644413,
+     0.1881718601873394,
+     0.19565921550147028,
+     0.1200544978208491,
+     0.16325520760237455,
+     0.1461742637743939,
+     0.21234706981918916,
+     0.1914788900549756,
+     0.12388083009388257,
+     0.13688041242303045,
+     0.18469228108386299,
+     0.1978167555698811,
+     0.15566069945025787
+    ],
+    [
+     0.08346905579996627
+    ],
+    [
+     0.0355066421805424
+    ]
+   ]
+  }
+ ],
+ "reference": {
+  "n_exc_hd": 4,
+  "n_exc_jx": 4,
+  "exp_ctrl_hd": 4.7089844,
+  "exp_ctrl_jx": 0.9628906100000001,
+  "p_ctrl_hd": 0.7115009096125896,
+  "p_ctrl_jx": 0.01265645591212605,
+  "exp_ctrl_two": 5.671875010000001,
+  "p_look_ctrl": 0.06821,
+  "n_look_ctrl": 16,
+  "p_look_cell": 0.11127
+ }
+}

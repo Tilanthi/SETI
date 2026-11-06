@@ -1,0 +1,134 @@
+[
+ {
+  "eb": "A002_X107e0e5_X252b",
+  "star": "HD172555 [B7]",
+  "gb": 67.8,
+  "status": "reset_by_parent",
+  "n_srcspec": 0,
+  "n_result": 0,
+  "max_T": null,
+  "done": false,
+  "verdict": "A002_X107e0e5_X252b HD172555 [B7]: DEFERRED -- 2 disk aborts; this block needs more free space than the volume has"
+ },
+ {
+  "eb": "A002_X1190de8_Xd526",
+  "star": "HD14055 [B7]",
+  "gb": 52.2,
+  "status": "done",
+  "n_srcspec": 4,
+  "n_result": 4,
+  "max_T": null,
+  "done": true,
+  "verdict": "A002_X1190de8_Xd526 HD14055 [B7] [B7] MOUS uid://A001/X2d20/X2e6d: SEARCHED 4/4 windows ok"
+ },
+ {
+  "eb": "A002_X11adad7_X25c5e",
+  "star": "HD14055 [B7]",
+  "gb": 61.0,
+  "status": "done",
+  "n_srcspec": 4,
+  "n_result": 4,
+  "max_T": null,
+  "done": true,
+  "verdict": "A002_X11adad7_X25c5e HD14055 [B7] [B7] MOUS uid://A001/X2d20/X2e6d: SEARCHED 4/4 windows ok"
+ },
+ {
+  "eb": "A002_X10756f7_X3067",
+  "star": "HD172555 [B7]",
+  "gb": 74.0,
+  "status": "reset_by_parent",
+  "n_srcspec": 0,
+  "n_result": 0,
+  "max_T": null,
+  "done": false,
+  "verdict": "A002_X10756f7_X3067 HD172555 [B7]: DEFERRED -- 2 disk aborts; this block needs more free space than the volume has"
+ },
+ {
+  "eb": "A002_X11adad7_X25dc7",
+  "star": "HD14055 [B7]",
+  "gb": 60.9,
+  "status": "done",
+  "n_srcspec": 4,
+  "n_result": 4,
+  "max_T": null,
+  "done": true,
+  "verdict": "A002_X11adad7_X25dc7 HD14055 [B7] [B7] MOUS uid://A001/X2d20/X2e6d: SEARCHED 4/4 windows ok"
+ },
+ {
+  "eb": "A002_Xff0235_X433c",
+  "star": "HD161868 [B7]",
+  "gb": 39.2,
+  "status": "done",
+  "n_srcspec": 4,
+  "n_result": 4,
+  "max_T": null,
+  "done": true,
+  "verdict": "A002_Xff0235_X433c HD161868 [B7] [B7] MOUS uid://A001/X2d20/X2e3b: SEARCHED 4/4 windows ok"
+ },
+ {
+  "eb": "A002_X106792c_X143f",
+  "star": "HD61005 [B7]",
+  "gb": 40.5,
+  "status": "done",
+  "n_srcspec": 4,
+  "n_result": 4,
+  "max_T": null,
+  "done": true,
+  "verdict": "A002_X106792c_X143f HD61005 [B7] [B7] MOUS uid://A001/X2d20/X2e53: SEARCHED 4/4 windows ok"
+ },
+ {
+  "eb": "A002_X1171dca_X606b",
+  "star": "HD 10647 [B7]",
+  "gb": 30.8,
+  "status": "done",
+  "n_srcspec": 4,
+  "n_result": 4,
+  "max_T": null,
+  "done": true,
+  "verdict": "A002_X1171dca_X606b HD 10647 [B7] [B7] MOUS uid://A001/X2d20/X2e5f: SEARCHED 4/4 windows ok"
+ },
+ {
+  "eb": "A002_Xa7a216_X2f0f",
+  "star": "bet Pic [B6]",
+  "gb": 29.7,
+  "status": "aborted_disk",
+  "n_srcspec": 0,
+  "n_result": 0,
+  "max_T": null,
+  "done": false,
+  "verdict": "A002_Xa7a216_X2f0f bet Pic [B6]: ABORTED (disk floor) during calibrate -- 44 GB free during calibrate [abort 1 of 2]"
+ },
+ {
+  "eb": "A002_Xb2b000_X7667",
+  "star": "HD 207129 (Gaia DR3 6564091190988411520) [B6]",
+  "gb": 30.7,
+  "status": "done",
+  "n_srcspec": 4,
+  "n_result": 4,
+  "max_T": null,
+  "done": true,
+  "verdict": "A002_Xb2b000_X7667 HD 207129 (Gaia DR3 6564091190988411520) [B6] [B6] MOUS uid://A001/X2d6/X15f: SEARCHED 4/4 windows ok"
+ },
+ {
+  "eb": "A002_Xa8666f_X16de",
+  "star": "bet Pic [B6]",
+  "gb": 25.4,
+  "status": "running",
+  "n_srcspec": 0,
+  "n_result": 0,
+  "max_T": null,
+  "done": false,
+  "verdict": "A002_Xa8666f_X16de bet Pic [B6]: ABORTED (disk floor) during calibrate -- 46 GB free during calibrate [abort 1 of 2]"
+ },
+ {
+  "eb": "A002_Xb54d65_X9d9",
+  "star": "HD 10647 [B7]",
+  "gb": 27.7,
+  "status": "done",
+  "n_srcspec": 4,
+  "n_result": 4,
+  "max_T": null,
+  "done": true,
+  "verdict": "A002_Xb54d65_X9d9 HD 10647 [B7] [B7] MOUS uid://A001/X2fa/X10d: SEARCHED 4/4 windows ok"
+ }
+]

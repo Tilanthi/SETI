@@ -1,0 +1,14 @@
+# Pinned to the versions that produced the deposited products.
+# Read from the running installation, not chosen.
+numpy==2.2.6
+scipy==1.15.3
+astropy==6.1.7
+astroquery==0.4.11
+matplotlib==3.10.8
+pandas==2.3.3
+# CASA, modular. Needed only for calibration, window splitting, visibility
+# extraction and the visibility-domain fit.
+casatools==6.7.0.31
+casatasks==6.7.0.31
+casaconfig==1.5.0
+casadata==2025.9.22

@@ -1,0 +1,106 @@
+{
+ "n_fell": 7,
+ "n_rose": 1,
+ "fell_unattributed_in_stellar": 7,
+ "fell_detail": [
+  {
+   "star": "BD05 1668",
+   "eb": "A002_Xc7fa6f_X28a8",
+   "nu": 240.101561,
+   "dv_stellar": -5911.9224286086865,
+   "line": "CS(5-4)",
+   "cls": "B"
+  },
+  {
+   "star": "BD05 1668",
+   "eb": "A002_Xc7fa6f_X28a8",
+   "nu": 224.742189,
+   "dv_stellar": -1264.4760992347408,
+   "line": "13CO(2-1)",
+   "cls": "B"
+  },
+  {
+   "star": "BD05 1668",
+   "eb": "A002_Xc7fa6f_X28a8",
+   "nu": 226.742189,
+   "dv_stellar": 87.97370523161594,
+   "line": "CO(2-1)",
+   "cls": "B"
+  },
+  {
+   "star": "BD05 1668",
+   "eb": "A002_Xc7fa6f_X28a8",
+   "nu": 242.195311,
+   "dv_stellar": -3349.2053441592157,
+   "line": "CS(5-4)",
+   "cls": "B"
+  },
+  {
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "eb": "A002_Xc66ce1_X1345",
+   "nu": 345.62056,
+   "dv_stellar": -53.995491574707,
+   "line": "CO(3-2)",
+   "cls": "A"
+  },
+  {
+   "star": "tau Cet",
+   "eb": "A002_Xba460f_X7e6",
+   "nu": 231.033401,
+   "dv_stellar": 640.3721799786168,
+   "line": "CO(2-1)",
+   "cls": "A"
+  },
+  {
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "eb": "A002_Xc6a3db_X7b5b",
+   "nu": 345.478187,
+   "dv_stellar": -176.79998657107444,
+   "line": "CO(3-2)",
+   "cls": "A"
+  }
+ ],
+ "risen_attributed": [
+  {
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "eb": "A002_Xc6fa08_X1053",
+   "nu": 230.51327974326387,
+   "cls": "A"
+  }
+ ],
+ "restored_cls": [
+  "A"
+ ],
+ "tail_cls": [
+  "A",
+  "A"
+ ],
+ "restored_attributed": [
+  [
+   "HD 139084 B",
+   345.82405647800766,
+   24.33269515647255
+  ]
+ ],
+ "restored_detail": [
+  {
+   "star": "HD 139084 B",
+   "eb": "A002_Xcd8029_Xb6b0",
+   "nu": 345.82405647800766
+  }
+ ],
+ "hd14055_unattributed": [
+  [
+   "HD 14055",
+   344.467647,
+   -1165.6412522388891
+  ],
+  [
+   "HD 14055",
+   345.456382,
+   -317.0693630476595
+  ]
+ ],
+ "n_crossings": 51,
+ "note": "catalogue -> census delta over the re-calibrated field records (v4.29 fold); replaces mask_r9.json v409"
+}

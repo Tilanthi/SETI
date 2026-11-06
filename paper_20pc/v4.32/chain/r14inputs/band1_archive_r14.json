@@ -1,0 +1,271 @@
+{
+ "_provenance": "ALMA Science Archive, ivoa.obscore via TAP at almascience.eso.org, harvested 2026-10-07 by harvest_band1.py. Every Band 1 and Band 2 observation whose pointing centre lies within the Band 1 half-power radius (68.5 arcsec: 1.13 lambda/D at 42.5 GHz on a 12 m dish) of one of the 89 stars this survey searched.  Positions are the release work list own Gaia DR3 coordinates.",
+ "harvested": "2026-10-07",
+ "hits": {
+  "1": [
+   {
+    "band_list": "1",
+    "chan_khz": [
+     31250.0
+    ],
+    "frequency_support": "[36.22..38.20GHz,31250.00kHz,517uJy/beam@10km/s,12.9uJy/beam@native, XX YY] U [38.16..40.14GHz,31250.00kHz,517.4uJy/beam@10km/s,13.2uJy/beam@native, XX YY] U [40.18..42.16GHz,31250.00kHz,542.4uJy/beam@10km/s,14.2uJy/beam@native, XX YY] U [42.12..44.10GHz,31250.00kHz,572.8uJy/beam@10km/s,15.4uJy/beam@native, XX YY]",
+    "mous": "uid://A001/X3833/X4a2a",
+    "proposal": "2025.1.00268.S",
+    "release": "2027-01-08T20:26:03.000",
+    "rights": "Proprietary",
+    "science": "T",
+    "sep_arcsec": 0.7873786675998674,
+    "star": "bet Pic",
+    "t_exptime": 13910.16,
+    "target": "HD39060"
+   },
+   {
+    "band_list": "1",
+    "chan_khz": [
+     31250.0
+    ],
+    "frequency_support": "[36.22..38.20GHz,31250.00kHz,517uJy/beam@10km/s,12.9uJy/beam@native, XX YY] U [38.16..40.14GHz,31250.00kHz,517.4uJy/beam@10km/s,13.2uJy/beam@native, XX YY] U [40.18..42.16GHz,31250.00kHz,542.4uJy/beam@10km/s,14.2uJy/beam@native, XX YY] U [42.12..44.10GHz,31250.00kHz,572.8uJy/beam@10km/s,15.4uJy/beam@native, XX YY]",
+    "mous": "uid://A001/X3833/X4a2a",
+    "proposal": "2025.1.00268.S",
+    "release": "2027-01-08T20:26:03.000",
+    "rights": "Proprietary",
+    "science": "T",
+    "sep_arcsec": 0.7873786675998674,
+    "star": "bet Pic",
+    "t_exptime": 13910.16,
+    "target": "HD39060"
+   },
+   {
+    "band_list": "1",
+    "chan_khz": [
+     31250.0
+    ],
+    "frequency_support": "[36.22..38.20GHz,31250.00kHz,517uJy/beam@10km/s,12.9uJy/beam@native, XX YY] U [38.16..40.14GHz,31250.00kHz,517.4uJy/beam@10km/s,13.2uJy/beam@native, XX YY] U [40.18..42.16GHz,31250.00kHz,542.4uJy/beam@10km/s,14.2uJy/beam@native, XX YY] U [42.12..44.10GHz,31250.00kHz,572.8uJy/beam@10km/s,15.4uJy/beam@native, XX YY]",
+    "mous": "uid://A001/X3833/X4a2a",
+    "proposal": "2025.1.00268.S",
+    "release": "2027-01-08T20:26:03.000",
+    "rights": "Proprietary",
+    "science": "T",
+    "sep_arcsec": 0.7873786675998674,
+    "star": "bet Pic",
+    "t_exptime": 13910.16,
+    "target": "HD39060"
+   },
+   {
+    "band_list": "1",
+    "chan_khz": [
+     31250.0
+    ],
+    "frequency_support": "[36.22..38.20GHz,31250.00kHz,517uJy/beam@10km/s,12.9uJy/beam@native, XX YY] U [38.16..40.14GHz,31250.00kHz,517.4uJy/beam@10km/s,13.2uJy/beam@native, XX YY] U [40.18..42.16GHz,31250.00kHz,542.4uJy/beam@10km/s,14.2uJy/beam@native, XX YY] U [42.12..44.10GHz,31250.00kHz,572.8uJy/beam@10km/s,15.4uJy/beam@native, XX YY]",
+    "mous": "uid://A001/X3833/X4a2a",
+    "proposal": "2025.1.00268.S",
+    "release": "2027-01-08T20:26:03.000",
+    "rights": "Proprietary",
+    "science": "T",
+    "sep_arcsec": 0.7873786675998674,
+    "star": "bet Pic",
+    "t_exptime": 13910.16,
+    "target": "HD39060"
+   },
+   {
+    "band_list": "1",
+    "chan_khz": [
+     31250.0
+    ],
+    "frequency_support": "[36.22..38.20GHz,31250.00kHz,496.1uJy/beam@10km/s,12.4uJy/beam@native, XX YY] U [38.16..40.14GHz,31250.00kHz,497.1uJy/beam@10km/s,12.7uJy/beam@native, XX YY] U [40.18..42.16GHz,31250.00kHz,522.8uJy/beam@10km/s,13.7uJy/beam@native, XX YY] U [42.12..44.10GHz,31250.00kHz,554.3uJy/beam@10km/s,14.9uJy/beam@native, XX YY]",
+    "mous": "uid://A001/X3833/X4a2e",
+    "proposal": "2025.1.00268.S",
+    "release": "2027-01-09T21:13:50.000",
+    "rights": "Proprietary",
+    "science": "T",
+    "sep_arcsec": 1.937525630500062,
+    "star": "HD 10647",
+    "t_exptime": 11248.941,
+    "target": "HD10647"
+   },
+   {
+    "band_list": "1",
+    "chan_khz": [
+     31250.0
+    ],
+    "frequency_support": "[36.22..38.20GHz,31250.00kHz,496.1uJy/beam@10km/s,12.4uJy/beam@native, XX YY] U [38.16..40.14GHz,31250.00kHz,497.1uJy/beam@10km/s,12.7uJy/beam@native, XX YY] U [40.18..42.16GHz,31250.00kHz,522.8uJy/beam@10km/s,13.7uJy/beam@native, XX YY] U [42.12..44.10GHz,31250.00kHz,554.3uJy/beam@10km/s,14.9uJy/beam@native, XX YY]",
+    "mous": "uid://A001/X3833/X4a2e",
+    "proposal": "2025.1.00268.S",
+    "release": "2027-01-09T21:13:50.000",
+    "rights": "Proprietary",
+    "science": "T",
+    "sep_arcsec": 1.937525630500062,
+    "star": "HD 10647",
+    "t_exptime": 11248.941,
+    "target": "HD10647"
+   },
+   {
+    "band_list": "1",
+    "chan_khz": [
+     31250.0
+    ],
+    "frequency_support": "[36.22..38.20GHz,31250.00kHz,496.1uJy/beam@10km/s,12.4uJy/beam@native, XX YY] U [38.16..40.14GHz,31250.00kHz,497.1uJy/beam@10km/s,12.7uJy/beam@native, XX YY] U [40.18..42.16GHz,31250.00kHz,522.8uJy/beam@10km/s,13.7uJy/beam@native, XX YY] U [42.12..44.10GHz,31250.00kHz,554.3uJy/beam@10km/s,14.9uJy/beam@native, XX YY]",
+    "mous": "uid://A001/X3833/X4a2e",
+    "proposal": "2025.1.00268.S",
+    "release": "2027-01-09T21:13:50.000",
+    "rights": "Proprietary",
+    "science": "T",
+    "sep_arcsec": 1.937525630500062,
+    "star": "HD 10647",
+    "t_exptime": 11248.941,
+    "target": "HD10647"
+   },
+   {
+    "band_list": "1",
+    "chan_khz": [
+     31250.0
+    ],
+    "frequency_support": "[36.22..38.20GHz,31250.00kHz,496.1uJy/beam@10km/s,12.4uJy/beam@native, XX YY] U [38.16..40.14GHz,31250.00kHz,497.1uJy/beam@10km/s,12.7uJy/beam@native, XX YY] U [40.18..42.16GHz,31250.00kHz,522.8uJy/beam@10km/s,13.7uJy/beam@native, XX YY] U [42.12..44.10GHz,31250.00kHz,554.3uJy/beam@10km/s,14.9uJy/beam@native, XX YY]",
+    "mous": "uid://A001/X3833/X4a2e",
+    "proposal": "2025.1.00268.S",
+    "release": "2027-01-09T21:13:50.000",
+    "rights": "Proprietary",
+    "science": "T",
+    "sep_arcsec": 1.937525630500062,
+    "star": "HD 10647",
+    "t_exptime": 11248.941,
+    "target": "HD10647"
+   },
+   {
+    "band_list": "1",
+    "chan_khz": [
+     31250.0
+    ],
+    "frequency_support": "[36.21..38.20GHz,31250.00kHz,511.6uJy/beam@10km/s,12.7uJy/beam@native, XX YY] U [38.15..40.13GHz,31250.00kHz,513.7uJy/beam@10km/s,13.1uJy/beam@native, XX YY] U [40.17..42.15GHz,31250.00kHz,539.1uJy/beam@10km/s,14.1uJy/beam@native, XX YY] U [42.11..44.09GHz,31250.00kHz,573uJy/beam@10km/s,15.4uJy/beam@native, XX YY]",
+    "mous": "uid://A001/X3833/X4a32",
+    "proposal": "2025.1.00268.S",
+    "release": "2027-01-27T10:15:40.000",
+    "rights": "Proprietary",
+    "science": "T",
+    "sep_arcsec": 2.2769754835318174,
+    "star": "hd107146",
+    "t_exptime": 13456.608,
+    "target": "HD107146"
+   },
+   {
+    "band_list": "1",
+    "chan_khz": [
+     31250.0
+    ],
+    "frequency_support": "[36.21..38.20GHz,31250.00kHz,511.6uJy/beam@10km/s,12.7uJy/beam@native, XX YY] U [38.15..40.13GHz,31250.00kHz,513.7uJy/beam@10km/s,13.1uJy/beam@native, XX YY] U [40.17..42.15GHz,31250.00kHz,539.1uJy/beam@10km/s,14.1uJy/beam@native, XX YY] U [42.11..44.09GHz,31250.00kHz,573uJy/beam@10km/s,15.4uJy/beam@native, XX YY]",
+    "mous": "uid://A001/X3833/X4a32",
+    "proposal": "2025.1.00268.S",
+    "release": "2027-01-27T10:15:40.000",
+    "rights": "Proprietary",
+    "science": "T",
+    "sep_arcsec": 2.2769754835318174,
+    "star": "hd107146",
+    "t_exptime": 13456.608,
+    "target": "HD107146"
+   },
+   {
+    "band_list": "1",
+    "chan_khz": [
+     31250.0
+    ],
+    "frequency_support": "[36.21..38.20GHz,31250.00kHz,511.6uJy/beam@10km/s,12.7uJy/beam@native, XX YY] U [38.15..40.13GHz,31250.00kHz,513.7uJy/beam@10km/s,13.1uJy/beam@native, XX YY] U [40.17..42.15GHz,31250.00kHz,539.1uJy/beam@10km/s,14.1uJy/beam@native, XX YY] U [42.11..44.09GHz,31250.00kHz,573uJy/beam@10km/s,15.4uJy/beam@native, XX YY]",
+    "mous": "uid://A001/X3833/X4a32",
+    "proposal": "2025.1.00268.S",
+    "release": "2027-01-27T10:15:40.000",
+    "rights": "Proprietary",
+    "science": "T",
+    "sep_arcsec": 2.2769754835318174,
+    "star": "hd107146",
+    "t_exptime": 13456.608,
+    "target": "HD107146"
+   },
+   {
+    "band_list": "1",
+    "chan_khz": [
+     31250.0
+    ],
+    "frequency_support": "[36.21..38.20GHz,31250.00kHz,511.6uJy/beam@10km/s,12.7uJy/beam@native, XX YY] U [38.15..40.13GHz,31250.00kHz,513.7uJy/beam@10km/s,13.1uJy/beam@native, XX YY] U [40.17..42.15GHz,31250.00kHz,539.1uJy/beam@10km/s,14.1uJy/beam@native, XX YY] U [42.11..44.09GHz,31250.00kHz,573uJy/beam@10km/s,15.4uJy/beam@native, XX YY]",
+    "mous": "uid://A001/X3833/X4a32",
+    "proposal": "2025.1.00268.S",
+    "release": "2027-01-27T10:15:40.000",
+    "rights": "Proprietary",
+    "science": "T",
+    "sep_arcsec": 2.2769754835318174,
+    "star": "hd107146",
+    "t_exptime": 13456.608,
+    "target": "HD107146"
+   },
+   {
+    "band_list": "1",
+    "chan_khz": [
+     31250.0
+    ],
+    "frequency_support": "[36.22..38.20GHz,31250.00kHz,505uJy/beam@10km/s,12.6uJy/beam@native, XX YY] U [38.15..40.14GHz,31250.00kHz,503.5uJy/beam@10km/s,12.9uJy/beam@native, XX YY] U [40.17..42.16GHz,31250.00kHz,526.9uJy/beam@10km/s,13.8uJy/beam@native, XX YY] U [42.11..44.10GHz,31250.00kHz,556uJy/beam@10km/s,14.9uJy/beam@native, XX YY]",
+    "mous": "uid://A001/X3833/X4a36",
+    "proposal": "2025.1.00268.S",
+    "release": "2027-04-09T16:13:14.000",
+    "rights": "Proprietary",
+    "science": "T",
+    "sep_arcsec": 4.387424029781235,
+    "star": "eta Crv",
+    "t_exptime": 10402.529,
+    "target": "HD109085"
+   },
+   {
+    "band_list": "1",
+    "chan_khz": [
+     31250.0
+    ],
+    "frequency_support": "[36.22..38.20GHz,31250.00kHz,505uJy/beam@10km/s,12.6uJy/beam@native, XX YY] U [38.15..40.14GHz,31250.00kHz,503.5uJy/beam@10km/s,12.9uJy/beam@native, XX YY] U [40.17..42.16GHz,31250.00kHz,526.9uJy/beam@10km/s,13.8uJy/beam@native, XX YY] U [42.11..44.10GHz,31250.00kHz,556uJy/beam@10km/s,14.9uJy/beam@native, XX YY]",
+    "mous": "uid://A001/X3833/X4a36",
+    "proposal": "2025.1.00268.S",
+    "release": "2027-04-09T16:13:14.000",
+    "rights": "Proprietary",
+    "science": "T",
+    "sep_arcsec": 4.387424029781235,
+    "star": "eta Crv",
+    "t_exptime": 10402.529,
+    "target": "HD109085"
+   },
+   {
+    "band_list": "1",
+    "chan_khz": [
+     31250.0
+    ],
+    "frequency_support": "[36.22..38.20GHz,31250.00kHz,505uJy/beam@10km/s,12.6uJy/beam@native, XX YY] U [38.15..40.14GHz,31250.00kHz,503.5uJy/beam@10km/s,12.9uJy/beam@native, XX YY] U [40.17..42.16GHz,31250.00kHz,526.9uJy/beam@10km/s,13.8uJy/beam@native, XX YY] U [42.11..44.10GHz,31250.00kHz,556uJy/beam@10km/s,14.9uJy/beam@native, XX YY]",
+    "mous": "uid://A001/X3833/X4a36",
+    "proposal": "2025.1.00268.S",
+    "release": "2027-04-09T16:13:14.000",
+    "rights": "Proprietary",
+    "science": "T",
+    "sep_arcsec": 4.387424029781235,
+    "star": "eta Crv",
+    "t_exptime": 10402.529,
+    "target": "HD109085"
+   },
+   {
+    "band_list": "1",
+    "chan_khz": [
+     31250.0
+    ],
+    "frequency_support": "[36.22..38.20GHz,31250.00kHz,505uJy/beam@10km/s,12.6uJy/beam@native, XX YY] U [38.15..40.14GHz,31250.00kHz,503.5uJy/beam@10km/s,12.9uJy/beam@native, XX YY] U [40.17..42.16GHz,31250.00kHz,526.9uJy/beam@10km/s,13.8uJy/beam@native, XX YY] U [42.11..44.10GHz,31250.00kHz,556uJy/beam@10km/s,14.9uJy/beam@native, XX YY]",
+    "mous": "uid://A001/X3833/X4a36",
+    "proposal": "2025.1.00268.S",
+    "release": "2027-04-09T16:13:14.000",
+    "rights": "Proprietary",
+    "science": "T",
+    "sep_arcsec": 4.387424029781235,
+    "star": "eta Crv",
+    "t_exptime": 10402.529,
+    "target": "HD109085"
+   }
+  ],
+  "2": []
+ },
+ "n_archive": {
+  "1": 12286,
+  "2": 0
+ },
+ "n_star": 89,
+ "pb_arcsec": 68.50528979215017
+}
