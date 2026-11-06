@@ -1,0 +1,79 @@
+%% APPENDIX C -- the line mask.  Carries app:linemask (04_method.tex,
+%% 05_results.tex, app_A, app_J), eq:mask and tab:masklines.
+%%
+%% ★ THIS APPENDIX IS THE PAPER'S ONLY DEFINITION OF THE ATTRIBUTION RULE.
+%% It owns the species list, the half-width and the FRAME.  The rule is the
+%% star's own rest frame; the local standard of rest is evaluated as a check
+%% and changes no disposition (masklsr_v520.py, L10).
+%% r30 (write-apx): Table C1, the rule as restated (list completed after the
+%% crossings were examined), the definition as one equation, the tuning
+%% caveat once, the LSR check and the half-width with its cost.  That the
+%% probabilities are conditional on this adopted mask is stated once, in
+%% Sec. 4.3.1, and not here.
+\section{The line mask}
+\label{app:linemask}
+
+A crossing that falls on a known molecular transition has an astrophysical
+explanation to hand, and the mask decides which crossings those are.
+
+The species list was assembled by hand. It holds the bright
+millimetre disc and cloud tracers the pipeline checked from its first search,
+with [C\,\textsc{i}] and hydrogen recombination added during the search and SO
+after a crossing was found on one of its lines. It was completed at the query
+below, after the crossings had been examined, and it omits other species seen
+in discs and clouds, such as CH$_3$OH, DCO$^{+}$ and N$_2$H$^{+}$. The mask
+contains every transition of these \FrNSpec{} species inside the
+\McNIsland{} searched intervals with an upper-state energy below
+\McEuMax\,K, \FrNTrans{} transitions in all (Table~\ref{tab:masklines}).
+Only main hyperfine components are included, with no strength cut, and all
+come from one Splatalogue query \citep{Splatalogue2007} of CDMS and JPL
+\citep{Pickett1998,CDMS2005} dated \MkListDate.
+
+Attribution is decided in the star's own rest frame. A crossing's
+topocentric frequency is carried to the barycentre with its own block's
+pointing and mid-time, and then to the star with its systemic velocity,
+giving $\nu_\star$. The crossing is attributed if, for any listed transition
+of rest frequency $\nu_0$,
+\begin{equation*}
+|\Delta v_\star|\le v_{\rm h},\qquad
+\Delta v_\star=c\,\frac{\nu_\star-\nu_0}{\nu_0},\qquad
+v_{\rm h}=\MaskHalfKms\,{\rm km\,s^{-1}},
+\end{equation*}
+so that $\Delta v_\star$ is positive for a crossing above the transition in
+frequency. The same test, in the same frame, decides whether a control
+maximum is attributed (Appendix~\ref{app:falsealarm}). Of the
+\CsNCrossQp{} quality-passing census crossings, \MkNCoinc{} meet it, and these
+are the \MkAttr{} attributions; the hold-out is treated identically.
+
+The windows were placed by their observers for their own lines, and that
+limits what ``unattributed'' means. Of the Class~A windows, \TnCenPct{} per
+cent are centred within $v_{\rm h}$ of a listed transition, against
+\TnCtrlCenLo--\TnCtrlCenHi{} per cent for the same windows displaced, so a
+crossing is unattributed against a list that these setups helped to shape.
+
+As a check that changes no disposition, every crossing is also read in the
+local standard of rest. Toward
+\LsCloudStars{} the CO($1\to0$) survey of \citet{DameThaddeus2022,Dame2001}
+shows emission at the crossing's own LSR velocity (within
+\LsCloudDvMax\,km\,s$^{-1}$ of its peak, and at least \LsCloudTMin\,K), so
+\LsNCloud{} of the coincidences are interstellar. Elsewhere the Planck CO
+map \citep{PlanckCO2016} stays below
+\LsPlanckMax\,K\,km\,s$^{-1}$.
+
+Keplerian motion where these molecules survive sets the half-width,
+$\lesssim$\EcKepVKms\,km\,s$^{-1}$ beyond \EcKepRAu\,au. It has a cost.
+Over the union of searched sky frequencies the mask removes \MkMaskAGHz\,GHz
+of the \CvUnionA\,GHz Class~A union, \MkMaskAPct{} per cent, and
+\FrMaskLostGHz\,GHz of \FrMaskUnionGHz\,GHz over both classes, \FrMaskPct{}
+per cent, although each limit is formed over its own window's channels
+outside the mask in its own star's frame (\S\ref{sec:summary}).
+
+\begin{table}
+\centering
+\footnotesize
+\caption{The line mask, by species: the number $N$ of transitions, the
+frequency range they span inside the searched intervals and their
+upper-state energies.}
+\label{tab:masklines}
+\input{tab_maskspecies_v414}
+\end{table}

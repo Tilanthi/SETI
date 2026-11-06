@@ -1,0 +1,172 @@
+{
+ "dups": [
+  [
+   "/data/SETI/targets/HD_139084B_921024_B7_EB_Xb6b0/products/A002_Xcd8029_Xb6b0_spw3",
+   "HD 139084B 921024",
+   "HD 139084B 805632"
+  ]
+ ],
+ "added": [
+  {
+   "stem": "/data/SETI/targets/HD_139084B_805632_B7/products/A002_Xcd8029_Xb6b0_spw3",
+   "star": "HD 139084 B",
+   "eb": "A002_Xcd8029_Xb6b0",
+   "band": "7",
+   "lo": 345.14485725925766,
+   "hi": 346.86995491550766,
+   "cw": 488281.25,
+   "cls": "A",
+   "crossing": true,
+   "fcross": 345.82405647800766,
+   "Tstar": 5.6634,
+   "lines": [
+    "CO(3-2)"
+   ],
+   "nch": 3534,
+   "nint": 170,
+   "pb_off": 5.0923
+  },
+  {
+   "stem": "/data/SETI/targets/HD14055_B7_EB_X25c5e/products/A002_X11adad7_X25c5e_spw3",
+   "star": "HD14055",
+   "eb": "A002_X11adad7_X25c5e",
+   "band": "7",
+   "lo": 344.2991558521377,
+   "hi": 346.0242535083877,
+   "cw": 488281.25,
+   "cls": "A",
+   "crossing": true,
+   "fcross": 345.4563824146377,
+   "Tstar": 5.4477,
+   "lines": [
+    "CO(3-2)"
+   ],
+   "nch": 3534,
+   "nint": 455,
+   "pb_off": 0.0199
+  },
+  {
+   "stem": "/data/SETI/targets/HD14055_B7_EB_X25dc7/products/A002_X11adad7_X25dc7_spw3",
+   "star": "HD14055",
+   "eb": "A002_X11adad7_X25dc7",
+   "band": "7",
+   "lo": 344.29903529851396,
+   "hi": 346.02413295476396,
+   "cw": 488281.25,
+   "cls": "A",
+   "crossing": false,
+   "fcross": 344.85860561101396,
+   "Tstar": 4.6515,
+   "lines": [
+    "CO(3-2)"
+   ],
+   "nch": 3534,
+   "nint": 455,
+   "pb_off": 0.0199
+  },
+  {
+   "stem": "/data/SETI/targets/HD14055_B7_EB_Xd526/products/A002_X1190de8_Xd526_spw3",
+   "star": "HD14055",
+   "eb": "A002_X1190de8_Xd526",
+   "band": "7",
+   "lo": 344.28942442669586,
+   "hi": 346.01452208294586,
+   "cw": 488281.25,
+   "cls": "A",
+   "crossing": true,
+   "fcross": 344.46764708294586,
+   "Tstar": 5.0061,
+   "lines": [
+    "CO(3-2)"
+   ],
+   "nch": 3534,
+   "nint": 455,
+   "pb_off": 0.0203
+  },
+  {
+   "stem": "/data/SETI/targets/HD161868_B7_EB_X433c/products/A002_Xff0235_X433c_spw3",
+   "star": "HD161868",
+   "eb": "A002_Xff0235_X433c",
+   "band": "7",
+   "lo": 344.2581039190665,
+   "hi": 345.9832015753165,
+   "cw": 488281.25,
+   "cls": "A",
+   "crossing": false,
+   "fcross": 345.0789047003165,
+   "Tstar": 4.4249,
+   "lines": [
+    "CO(3-2)"
+   ],
+   "nch": 3534,
+   "nint": 390,
+   "pb_off": 0.0273
+  },
+  {
+   "stem": "/data/SETI/targets/HD61005_B7_EB_X143f/products/A002_X106792c_X143f_spw3",
+   "star": "HD61005",
+   "eb": "A002_X106792c_X143f",
+   "band": "7",
+   "lo": 344.2331358735167,
+   "hi": 345.9582335297667,
+   "cw": 488281.25,
+   "cls": "A",
+   "crossing": false,
+   "fcross": 345.9128233735167,
+   "Tstar": 4.4539,
+   "lines": [
+    "CO(3-2)"
+   ],
+   "nch": 3534,
+   "nint": 345,
+   "pb_off": 0.0016
+  },
+  {
+   "stem": "/data/SETI/targets/HD_10647_B7_EB_X606b/products/A002_X1171dca_X606b_spw3",
+   "star": "HD 10647",
+   "eb": "A002_X1171dca_X606b",
+   "band": "7",
+   "lo": 344.2627635163873,
+   "hi": 345.9878611726373,
+   "cw": 488281.25,
+   "cls": "A",
+   "crossing": false,
+   "fcross": 345.4561228913873,
+   "Tstar": 4.5807,
+   "lines": [
+    "CO(3-2)"
+   ],
+   "nch": 3534,
+   "nint": 365,
+   "pb_off": 0.0019
+  },
+  {
+   "stem": "/data/SETI/targets/HD_10647_B7_EB_X9d9/products/A002_Xb54d65_X9d9_spw3",
+   "star": "HD 10647",
+   "eb": "A002_Xb54d65_X9d9",
+   "band": "7",
+   "lo": 344.9543823229306,
+   "hi": 346.6794799791806,
+   "cw": 488281.25,
+   "cls": "A",
+   "crossing": false,
+   "fcross": 346.2786010729306,
+   "Tstar": 4.8989,
+   "lines": [
+    "CO(3-2)"
+   ],
+   "nch": 3534,
+   "nint": 480,
+   "pb_off": 0.0281
+  }
+ ],
+ "n_old_entries": 274,
+ "n_old_distinct": 273,
+ "n_new": 281,
+ "n_co32": 97,
+ "n_co32_cross": 14,
+ "n_co32_stars": 34,
+ "fail": [
+  "A6 both D34 crossings present"
+ ]
+}

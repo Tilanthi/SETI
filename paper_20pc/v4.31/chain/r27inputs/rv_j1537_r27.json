@@ -1,0 +1,48 @@
+{
+ "_doc": "Radial-velocity search for the survey target carried as ALMA J153702653-33192492. Frozen so the build makes no network call; proposed destination r27inputs/rv_j1537_r27.json. Every catalogue named in the paper's clause is recorded here with its own query and its own result, so the clause 'no radial velocity in SIMBAD, VizieR or Gaia DR3' is read from a record and not typed. If any 'radial_velocity_kms' below becomes non-null on a refresh (Gaia DR4 is due 2026-12-02), bookkeep_r13.py's B11 fails and the prose must change.",
+ "queried_utc": "2026-10-27T14:00Z",
+ "identity": {
+  "match_basis": "products' own t1_ra/t1_dec (pbaudit_v408/pbgeom.json, 53 windows) against Gaia DR3 at ref_epoch 2016.0, propagated by proper motion",
+  "t1_ra_deg": 234.26228916020872,
+  "t1_dec_deg": -33.32480567320188,
+  "t1_minus_gaia2016_mas": [-789.03, -579.45],
+  "implied_epoch_offset_yr": [6.95997, 6.95995],
+  "gaia_dr3_source_id": 6015967739554000768,
+  "gaia_parallax_mas": 28.563467968785297,
+  "gaia_parallax_error_mas": 0.06296248,
+  "gaia_distance_pc": 35.0098,
+  "paper_distance_pc": 35.0098,
+  "gaia_pmra_masyr": -113.36685419076841,
+  "gaia_pmdec_masyr": -83.25542532076133,
+  "gaia_ruwe": 1.1384691,
+  "next_gaia_source_arcsec": 9.70,
+  "next_gaia_source_parallax_mas": 1.07,
+  "unique": true,
+  "pointing_centre_is_alma_designation": true,
+  "pointing_centre_to_star_arcsec": 5.74
+ },
+ "identifiers": {
+  "simbad_main_id": "2MASS J15370316-3319273",
+  "simbad_all": ["2MASS J15370316-3319273", "Gaia DR3 6015967739554000768", "Gaia DR2 6015967739554000768", "TIC 7868082", "SSTc2d J153703.1-331927"],
+  "other": ["SPECULOOS Sp1537-3319 (J/A+A/645/A100)"],
+  "paper_name_resolves_in_simbad_to": "ALMA J153702.653-331924.92 (otype '?', no parallax, no spectral type; 2021A&A...646A..10S) -- a DIFFERENT SIMBAD object, 6.8 arcsec from the star at J2000"
+ },
+ "sources": {
+  "gaia_dr3_gaia_source": {"query": "gea.esac.esa.int TAP, gaiadr3.gaia_source, 30 arcsec cone", "radial_velocity_kms": null, "grvs_mag": null, "vbroad": null},
+  "gaia_dr2": {"query": "VizieR I/345", "radial_velocity_kms": null},
+  "simbad_rvz": {"query": "simbad sim-tap basic.rvz_radvel", "radial_velocity_kms": null},
+  "simbad_mesVelocities": {"query": "simbad sim-tap mesVelocities", "radial_velocity_kms": null, "n_measurements": 0},
+  "vizier_all": {"query": "VizieR all-catalogue cone, 6 arcsec about the J2000 position", "n_catalogues_matched": 53, "n_with_rv_column": 8, "rv_catalogues": ["I/345", "I/350", "I/355", "J/A+A/629/A139", "J/A+A/649/A6", "J/A+A/657/A7", "J/MNRAS/486/251", "V/160"], "radial_velocity_kms": null},
+  "exofop_tess": {"query": "TIC 7868082", "radial_velocity_kms": null, "n_spectra": 0}
+ },
+ "why_gaia_dr3_has_none": {
+  "grvs_estimated": 13.90,
+  "grvs_estimate_basis": "G_RP 14.504 + mean(G_RVS - G_RP) = -0.606 +- 0.073 over 364 Gaia DR3 sources with parallax > 20 mas and G - G_RP in [1.34, 1.38]",
+  "dr3_faint_limit_grvs": 14.0,
+  "dr3_teff_floor_faint_K": 3100,
+  "teff_K": [{"value": 3039, "err": 104, "src": "J/A+A/645/A100"}, {"value": 2943, "err": 157, "src": "TIC v8.2"}],
+  "peers_with_rv": "37 of 253 Gaia DR3 sources with parallax > 20 mas, G in [15.76, 15.96], G - G_RP in [1.33, 1.39]",
+  "reading": "at the faint and cool edge of the DR3 RVS selection, not beyond the magnitude limit"
+ },
+ "kinematic_context_not_for_print": {"v_tan_kms": 23.34}
+}

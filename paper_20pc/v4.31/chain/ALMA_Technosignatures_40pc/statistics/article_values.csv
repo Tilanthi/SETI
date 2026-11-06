@@ -1,0 +1,74 @@
+program,reading,quantity,article_value,in_text
+chance_expectation.py,whole_beam,observed unattributed Class A crossings,26,1
+chance_expectation.py,whole_beam,expected to reach the trigger,36.5,1
+chance_expectation.py,whole_beam,chance expectation,23.8,1
+chance_expectation.py,whole_beam,P(count >= observed),0.36,1
+chance_expectation.py,whole_beam,added-population bound,12,1
+chance_expectation.py,whole_beam,P(count <= observed) at the bound,0.06,1
+chance_expectation.py,whole_beam,P(count <= observed) one above it,0.04,1
+chance_expectation.py,whole_beam,expectation interval low,21,0
+chance_expectation.py,whole_beam,expectation interval high,27,0
+chance_expectation.py,whole_beam,"expectation interval with transfer, low",23,0
+chance_expectation.py,whole_beam,"expectation interval with transfer, high",31,0
+chance_expectation.py,whole_beam,star-to-control ratio below the trigger,1.108,1
+chance_expectation.py,whole_beam,stellar-calibrated expectation,26.4,1
+chance_expectation.py,whole_beam,stellar-calibrated P(count >= observed),0.6,1
+chance_expectation.py,whole_beam,stellar-calibrated added-population bound,9,0
+chance_expectation.py,narrow_field,observed unattributed Class A crossings,29,1
+chance_expectation.py,narrow_field,chance expectation,23.2,1
+chance_expectation.py,narrow_field,P(count >= observed),0.15,1
+chance_expectation.py,narrow_field,added-population bound,16,1
+chance_expectation.py,both,smaller probability corrected for the two readings,0.29,1
+completeness.py,,injected windows,49,1
+completeness.py,,class factor (x P_trig),2.99,1
+completeness.py,,bootstrap interval low,2.97,0
+completeness.py,,bootstrap interval high,3.04,0
+completeness.py,,calibration interval low (x factor),0.89,1
+completeness.py,,calibration interval high (x factor),1.11,1
+completeness.py,,"per-window point, lowest (x factor)",0.81,1
+completeness.py,,"per-window point, highest (x factor)",1.12,1
+completeness.py,,windows within a tenth of the factor,40,1
+response_ratio.py,,"response ratio, class A, N = 1",0.91,1
+response_ratio.py,,"response ratio, class A, N = 2",0.64,1
+response_ratio.py,,"response ratio, class A, N = 4",0.68,1
+response_ratio.py,,"response ratio, class B, N = 1",0.88,1
+response_ratio.py,,"response ratio, class B, N = 2",0.41,1
+response_ratio.py,,"factor, class A, N = 1 (x P_trig)",2.74,1
+response_ratio.py,,"factor, class A, N = 2 (x P_trig)",1.90,1
+response_ratio.py,,"factor, class B, N = 1 (x P_trig)",3.65,1
+response_ratio.py,,"factor, class B, N = 2 (x P_trig)",1.71,1
+sensitivity_summary.py,,systems,60,0
+sensitivity_summary.py,,median best-window EIRP_90 (W),1.3e15,1
+sensitivity_summary.py,,deepest system (W),3.7e13,1
+sensitivity_summary.py,,shallowest system (W),2.5e16,1
+sensitivity_summary.py,,systems at or below the level,25,1
+sensitivity_summary.py,,median at the calibration interval low end (W),1.1e15,1
+sensitivity_summary.py,,median at the calibration interval high end (W),1.4e15,1
+sensitivity_summary.py,,count at the calibration interval high end,25,0
+sensitivity_summary.py,,count at the calibration interval low end,25,0
+sensitivity_summary.py,,window draw: count 5 per cent,25,0
+sensitivity_summary.py,,window draw: count 95 per cent,26,0
+sensitivity_summary.py,,block draw: count 5 per cent,25,1
+sensitivity_summary.py,,block draw: count 95 per cent,26,1
+sensitivity_summary.py,,block draw: median shift (per cent),2,1
+sensitivity_summary.py,,window_dec draw: count 5 per cent,24,0
+sensitivity_summary.py,,window_dec draw: count 95 per cent,26,0
+recurrence_expectation.py,,distinct covering windows,93,1
+recurrence_expectation.py,,windows at or above the trigger,11,1
+recurrence_expectation.py,,expected from the control positions,8.2,1
+recurrence_expectation.py,,P(count >= observed),0.20,1
+recurrence_expectation.py,,the two objects' share of the expectation,5.7,0
+recurrence_expectation.py,,windows toward the two objects at or above the trigger,8,1
+recurrence_expectation.py,,other windows,44,1
+recurrence_expectation.py,,other windows at or above the trigger,3,1
+recurrence_expectation.py,,other windows expected,2.6,1
+recurrence_expectation.py,,other windows P(count >= observed),0.48,1
+recurrence_expectation.py,HD 14055,at or above the trigger,4,1
+recurrence_expectation.py,HD 14055,expected from deposited control rates,4.7,1
+recurrence_expectation.py,HD 14055,P(count >= observed),0.71,1
+recurrence_expectation.py,ALMA J153702653-33192492,at or above the trigger,4,1
+recurrence_expectation.py,ALMA J153702653-33192492,expected from deposited control rates,1.0,1
+recurrence_expectation.py,ALMA J153702653-33192492,P(count >= observed),0.013,1
+recurrence_expectation.py,both,the two objects' expectation on deposited control rates,5.7,1
+recurrence_expectation.py,both,objects in the look-elsewhere simulation,16,1
+recurrence_expectation.py,both,look-elsewhere chance (per cent),7,1

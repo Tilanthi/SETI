@@ -1,0 +1,90 @@
+%% APPENDIX B -- the control assumption, the reserved hold-out and the
+%% recurrence bound.  Carries the labels app:radius (04_method.tex,
+%% 05_results.tex), sec:heldout (03_sample.tex, 05_results.tex,
+%% app_J_falsealarm.tex), sec:nullscatter (05_results.tex) and eq:excl.
+%% r30 (write-apx): the assumption that a star behaves like a control
+%% position is stated HERE once; Appendix D keeps the estimator and the
+%% resampling and points here.  The 7 m-array excess: two sentences, its only
+%% place.  Fig. B1 is deleted (the beta Pictoris control is in Sec. 4).
+%% Register row 2: the inference "a calibration residual cannot reach the
+%% trigger, so it is excluded" is withdrawn; a small continuum-coupled
+%% residual can change the RATE without making a crossing, so the
+%% probabilities rest on the background assumption (stated once, Sec. 4.3.1); the
+%% rescaling to the measured near-trigger ratio is a sensitivity check.
+%% eq:excl now labels the amplitude-fraction bound, the one the ledger uses.
+\section{The control assumption, the hold-out and the recurrence bound}
+\label{app:radius}
+
+The chance expectation of \S\ref{sec:trigunif} predicts how often the star
+should cross the trigger from how often control positions in its own field
+do. It therefore rests on one assumption the searched data cannot test,
+that the stellar position behaves like a control position. Below the trigger it does
+not quite do so. In the band $\CeNearBandLo\le T<\CeNearBandHi$ the star
+carries \CeNear{} times a control position's above-threshold cells
+(\CeNearIntLo--\CeNearIntHi{} at \CeCovPct{} per cent, blocks resampled).
+Rescaling the expectation by that ratio is a sensitivity check
+(\S\ref{sec:trigunif}); the control positions' own rate, the more demanding
+of the two, is kept for the count under test. For the \CeObs{}
+unattributed crossings to stand above chance at \CeAlphaPct{} per cent, stars
+would have to trigger at \CeRCrit{} times a control position's rate or less.
+
+The stellar excess is not a primary-beam effect, since a noise rise toward the field
+edge would put the stellar rank above one half, the opposite of what is
+seen, and the probes' radial slope on the reserved blocks,
+$\HoRadSlope\pm\HoRadSlopeSe$, is small and of the wrong sign. It appears
+only in the 7\,m-array data, \BgArrSevenRatio{}
+(\BgArrSevenRatioLo--\BgArrSevenRatioHi) against \BgArrTwelveRatio{}
+(\BgArrTwelveRatioLo--\BgArrTwelveRatioHi) on the 12\,m array, and its cause
+has not been identified.
+
+A calibration error that varies with frequency, such as a bandpass residual
+or a coarse system temperature interpolated across a telluric line
+\citep{ALMATsys2018}, would act in the sense observed: it multiplies the
+continuum, so it acts at the star and not on the empty sky around it. Such
+a residual matters even if it is too small to make a crossing by itself. A small
+error coupled to the continuum, added to noise already near the trigger,
+would still change how often the star crosses it, and the searched data
+cannot separate that from a real difference between star and controls. The
+probabilities therefore rest on the stellar-background model
+(\S\ref{sec:trigunif}).
+
+\subsection{The reserved hold-out}
+\label{sec:heldout}
+
+Because the statistic and the mask were set on the searched sample,
+\NEbHeldOut{} of \NEbProcessedAll{} blocks (\HoWin{} windows toward
+\HoStars{} stars) were held out by an identifier rule,
+$\mathrm{sha256}(\textsc{uid})_{[:8]} \bmod 5 = 0$. Two guards, which also
+use identifiers alone, keep a block on a named list in the survey and ensure
+that no system loses every block. Their independence of the statistic and the mask
+is our assertion, which a reader cannot check. Since the rule hashes the
+block and not the session, \HsSharePct{} per cent of them also share
+calibrators, weather and setup with a searched block. They trigger in \StHoObs{} of
+\StHoNFine{} windows against \StHoExpFine{} predicted, and the
+\HsIndBlocks{} that share no session hold \HsIndObsWord{} trigger
+\HsIndObsNoun{} against \HsIndExp, so they neither confirm nor contradict
+the stellar ratio.
+
+\subsection{The recurrence bound}
+\label{sec:nullscatter}
+
+A crossing is tested for recurrence by reading its predicted cell, one
+channel at the carried drift, in the later blocks that cover it. With $S$
+the discovery amplitude and $\bar{a}$ and $\bar{\sigma}=(\sum_i
+\sigma_i^{-2})^{-1/2}$ the inverse-variance combination of the repeat
+readings, the two signal-to-noise ratios are $T_{\rm pers}=S/\bar{\sigma}$
+and $T_{\rm rep}=\bar{a}/\bar{\sigma}$. A discovery amplitude selected from
+$10^{\TuCellsDecLo}$ to $10^{\TuCellsDecHi}$ cells at $T_\star\simeq5$ is
+biased high, so it is not compared with the repeat directly. The bound is
+instead the largest fraction of the discovery amplitude still allowed by the
+repeat readings,
+\begin{equation*}
+f_{\rm rep}=\frac{T_{\rm rep}+5}{T_{\rm pers}},
+\end{equation*}
+and $T_{\rm rep}$ is centred on zero under the null, scattering by
+\NuNullSd{} about \NuNullMean{} over \NuNullN{} single-cell repeat readings.
+The reading is conditional. Given an assumed true amplitude, the bound
+recovers a carrier with probability $\Phi(T_{\rm pers}-5)$ at the discovery
+amplitude and $\Phi(5T_{\rm pers}/T_\star-5)$ at the nominal
+threshold-equivalent amplitude $5S/T_\star$, and the \HjNPowerLo{} crossings
+where these are smallest are reported as untested.

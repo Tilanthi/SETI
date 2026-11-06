@@ -1,0 +1,298 @@
+[
+ {
+  "file": "sections/02_background.tex",
+  "line": 140,
+  "pattern": "version",
+  "match": "version",
+  "disposition": "COMMENT",
+  "text": "%% instead of asserting it, so please keep \\S1's version to one clause."
+ },
+ {
+  "file": "sections/03_sample.tex",
+  "line": 35,
+  "pattern": "previous",
+  "match": "previous",
+  "disposition": "CHECK",
+  "text": "This sample was not designed. It is whatever previous ALMA programmes"
+ },
+ {
+  "file": "sections/03_sample.tex",
+  "line": 170,
+  "pattern": "referee",
+  "match": "referee",
+  "disposition": "COMMENT",
+  "text": "%% referee_r9/sample/mk_interesting.py, which reads the released"
+ },
+ {
+  "file": "sections/03_sample.tex",
+  "line": 172,
+  "pattern": "build/gate",
+  "match": "macro",
+  "disposition": "COMMENT",
+  "text": "%% \\SelRatioRank out of the macro layer. It has eight assertions and five"
+ },
+ {
+  "file": "sections/03_sample.tex",
+  "line": 173,
+  "pattern": "build/gate",
+  "match": "regenerat",
+  "disposition": "COMMENT",
+  "text": "%% drives. Please adopt it into make_all.sh so the table regenerates with"
+ },
+ {
+  "file": "sections/04_method.tex",
+  "line": 259,
+  "pattern": "build/gate",
+  "match": "macro",
+  "disposition": "COMMENT",
+  "text": "%%    which the document cannot quote at all today. Also a macro for the"
+ },
+ {
+  "file": "sections/04_method.tex",
+  "line": 262,
+  "pattern": "earlier/this",
+  "match": "no longer",
+  "disposition": "COMMENT",
+  "text": "%% 6. app:notation is no longer cited from this file; every symbol it"
+ },
+ {
+  "file": "sections/04_method.tex",
+  "line": 264,
+  "pattern": "earlier/this",
+  "match": "no longer",
+  "disposition": "COMMENT",
+  "text": "%%    tab:p90budget are likewise no longer cited from the method."
+ },
+ {
+  "file": "sections/05_results.tex",
+  "line": 82,
+  "pattern": "build/gate",
+  "match": "the generator",
+  "disposition": "COMMENT",
+  "text": "%% whose header says not to; the proper fix is the generator's column spec."
+ },
+ {
+  "file": "sections/05_results.tex",
+  "line": 192,
+  "pattern": "referee",
+  "match": "report",
+  "disposition": "DELETE",
+  "text": "maximum, is the quality criterion this kind of search needs.} We report it"
+ },
+ {
+  "file": "sections/05_results.tex",
+  "line": 292,
+  "pattern": "referee",
+  "match": "report",
+  "disposition": "DELETE",
+  "text": "the prominent CO($2{\\to}1$) that \\citet{Cataldi2023} report toward the"
+ },
+ {
+  "file": "sections/05_results.tex",
+  "line": 449,
+  "pattern": "earlier/this",
+  "match": "superseded",
+  "disposition": "COMMENT",
+  "text": "%% quantity on the superseded localisation criterion and is cited nowhere"
+ },
+ {
+  "file": "sections/05_results.tex",
+  "line": 453,
+  "pattern": "earlier/this",
+  "match": "no longer",
+  "disposition": "COMMENT",
+  "text": "%% are nominal triggers and are no longer quoted here."
+ },
+ {
+  "file": "sections/05_results.tex",
+  "line": 461,
+  "pattern": "earlier/this",
+  "match": "no longer",
+  "disposition": "COMMENT",
+  "text": "%% legend macro is no longer referenced."
+ },
+ {
+  "file": "sections/05_results.tex",
+  "line": 506,
+  "pattern": "earlier/this",
+  "match": "no longer",
+  "disposition": "COMMENT",
+  "text": "%%   eq:tunif         no longer defined anywhere (app_L cites it)"
+ },
+ {
+  "file": "sections/05_results.tex",
+  "line": 507,
+  "pattern": "version",
+  "match": "revision",
+  "disposition": "COMMENT",
+  "text": "%%   tab:crossdelta   float deleted with the revision-history material;"
+ },
+ {
+  "file": "sections/05_results.tex",
+  "line": 510,
+  "pattern": "earlier/this",
+  "match": "no longer",
+  "disposition": "COMMENT",
+  "text": "%%   fig:ledgervis    no longer cited (float lives in app_K)"
+ },
+ {
+  "file": "sections/05_results.tex",
+  "line": 511,
+  "pattern": "earlier/this",
+  "match": "no longer",
+  "disposition": "COMMENT",
+  "text": "%%   tab:hosts        no longer cited from here"
+ },
+ {
+  "file": "sections/05_results.tex",
+  "line": 512,
+  "pattern": "earlier/this",
+  "match": "no longer",
+  "disposition": "COMMENT",
+  "text": "%%   app:etacrvrecur  no longer cited from here (app_M still cites it)"
+ },
+ {
+  "file": "sections/06_discussion.tex",
+  "line": 259,
+  "pattern": "earlier/this",
+  "match": "no longer",
+  "disposition": "COMMENT",
+  "text": "%%       sec:nocross    (app_A:225, app_D:25) -> no longer a subsection; the"
+ },
+ {
+  "file": "sections/06_discussion.tex",
+  "line": 262,
+  "pattern": "referee",
+  "match": "referee",
+  "disposition": "COMMENT",
+  "text": "%% R3. numbers_macros.tex (referee_r9/numbers/patch/) must be installed and"
+ },
+ {
+  "file": "sections/06_discussion.tex",
+  "line": 273,
+  "pattern": "build/gate",
+  "match": "the generator",
+  "disposition": "COMMENT",
+  "text": "%%     stacked limit); the generator must compute them, not transcribe them:"
+ },
+ {
+  "file": "sections/06_discussion.tex",
+  "line": 286,
+  "pattern": "earlier/this",
+  "match": "no longer",
+  "disposition": "COMMENT",
+  "text": "%%     \\StkNGroup groups and are no longer cited in any file I own."
+ },
+ {
+  "file": "sections/08_backmatter.tex",
+  "line": 6,
+  "pattern": "build/gate",
+  "match": "regenerat",
+  "disposition": "DELETE",
+  "text": "catalogue and its regeneration scripts. Both authors designed the candidate"
+ },
+ {
+  "file": "sections/08_backmatter.tex",
+  "line": 56,
+  "pattern": "build/gate",
+  "match": "regenerat",
+  "disposition": "DELETE",
+  "text": "in both cases: \\NRegenProducts{} generated products regenerate"
+ },
+ {
+  "file": "sections/08_backmatter.tex",
+  "line": 60,
+  "pattern": "version",
+  "match": "version",
+  "disposition": "DELETE",
+  "text": "frozen, carries a DOI minted on acceptance, and is the version any"
+ },
+ {
+  "file": "sections/abstract.tex",
+  "line": 40,
+  "pattern": "build/gate",
+  "match": "macro",
+  "disposition": "COMMENT",
+  "text": "%% number layer that are not in the frozen macro set --"
+ },
+ {
+  "file": "sections/app_A_reproducibility.tex",
+  "line": 91,
+  "pattern": "referee",
+  "match": "report",
+  "disposition": "DELETE",
+  "text": "time-division-mode ones; the other \\NHanOther{} report a smaller ratio, the"
+ },
+ {
+  "file": "sections/app_A_reproducibility.tex",
+  "line": 252,
+  "pattern": "earlier/this",
+  "match": "no longer",
+  "disposition": "COMMENT",
+  "text": "%%   \\label{app:repro} no longer exists.  08_backmatter.tex cites it in the"
+ },
+ {
+  "file": "sections/app_A_reproducibility.tex",
+  "line": 258,
+  "pattern": "build/gate",
+  "match": "macro",
+  "disposition": "COMMENT",
+  "text": "%%   because two of its four numbers are typed literals with no macro"
+ },
+ {
+  "file": "sections/app_C_spatialnorm.tex",
+  "line": 163,
+  "pattern": "previous",
+  "match": "previously",
+  "disposition": "COMMENT",
+  "text": "%%   this paragraph previously gave T_star = 5.81 against \"a ring maximum of"
+ },
+ {
+  "file": "sections/app_C_spatialnorm.tex",
+  "line": 166,
+  "pattern": "build/gate",
+  "match": "macro",
+  "disposition": "COMMENT",
+  "text": "%%   rank_screen = True for this row.  The ring maximum had no macro, so the"
+ },
+ {
+  "file": "sections/app_C_spatialnorm.tex",
+  "line": 172,
+  "pattern": "build/gate",
+  "match": "macro",
+  "disposition": "COMMENT",
+  "text": "%%   are deleted because no macro exists for them."
+ },
+ {
+  "file": "sections/app_J_falsealarm.tex",
+  "line": 194,
+  "pattern": "version",
+  "match": "revision",
+  "disposition": "COMMENT",
+  "text": "%%   revision adopts, and reports the trigger+localisation+attribution"
+ },
+ {
+  "file": "sections/app_J_falsealarm.tex",
+  "line": 196,
+  "pattern": "earlier/this",
+  "match": "superseded",
+  "disposition": "COMMENT",
+  "text": "%%   different conditioning rather than a superseded one.  If the \\Rsev"
+ },
+ {
+  "file": "sections/app_N_rfi.tex",
+  "line": 120,
+  "pattern": "earlier/this",
+  "match": "no longer",
+  "disposition": "COMMENT",
+  "text": "%% NOTE: per 06_discussion.tex's own R6, this appendix no longer ends on"
+ },
+ {
+  "file": "sections/app_N_rfi.tex",
+  "line": 127,
+  "pattern": "build/gate",
+  "match": "macro",
+  "disposition": "COMMENT",
+  "text": "%%   \\AppMPowerOld* and \\RfiOcc{Prior,Dir,Stale}* macro families are no"
+ }
+]

@@ -1,0 +1,28 @@
+{
+ "_doc": "The Gaia DR3 identity of the one survey target carried only under an ALMA source designation.  Queried live; frozen here so the appendix can name it without a network call at build time.",
+ "alma_dec_deg": -33.32358888888889,
+ "alma_designation": "ALMA J153702653-33192492",
+ "alma_ra_deg": 234.2610541666667,
+ "gaia": {
+  "dec": -33.324644713896944,
+  "parallax": 28.563467968785297,
+  "parallax_error": 0.06296248,
+  "phot_g_mean_mag": 15.862728,
+  "pmdec": -83.25542532076133,
+  "pmra": -113.36685419076841,
+  "ra": 234.262551465927,
+  "source_id": 6015967739554000768
+ },
+ "gaia_dr3_source_id": 6015967739554000768,
+ "otype": "PM*",
+ "queried_utc": "2026-10-07T08:04Z",
+ "simbad_ids": [
+  "TIC 7868082",
+  "Gaia DR3 6015967739554000768",
+  "2MASS J15370316-3319273",
+  "SSTc2d J153703.1-331927",
+  "Gaia DR2 6015967739554000768"
+ ],
+ "simbad_main_id": "2MASS J15370316-3319273",
+ "sp_type": "M5"
+}

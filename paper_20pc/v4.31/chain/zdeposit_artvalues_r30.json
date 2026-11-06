@@ -1,0 +1,440 @@
+[
+ {
+  "program": "chance_expectation.py",
+  "reading": "whole_beam",
+  "quantity": "observed unattributed Class A crossings",
+  "macro": "CeObs"
+ },
+ {
+  "program": "chance_expectation.py",
+  "reading": "whole_beam",
+  "quantity": "expected to reach the trigger",
+  "macro": "CeExpTrig"
+ },
+ {
+  "program": "chance_expectation.py",
+  "reading": "whole_beam",
+  "quantity": "chance expectation",
+  "macro": "CeExp"
+ },
+ {
+  "program": "chance_expectation.py",
+  "reading": "whole_beam",
+  "quantity": "P(count >= observed)",
+  "macro": "CeProbNull"
+ },
+ {
+  "program": "chance_expectation.py",
+  "reading": "whole_beam",
+  "quantity": "added-population bound",
+  "macro": "CeAddLim"
+ },
+ {
+  "program": "chance_expectation.py",
+  "reading": "whole_beam",
+  "quantity": "P(count <= observed) at the bound",
+  "macro": "CeProbAtLim"
+ },
+ {
+  "program": "chance_expectation.py",
+  "reading": "whole_beam",
+  "quantity": "P(count <= observed) one above it",
+  "macro": "CeProbAboveLim"
+ },
+ {
+  "program": "chance_expectation.py",
+  "reading": "whole_beam",
+  "quantity": "expectation interval low",
+  "macro": "CeLoNull"
+ },
+ {
+  "program": "chance_expectation.py",
+  "reading": "whole_beam",
+  "quantity": "expectation interval high",
+  "macro": "CeHiNull"
+ },
+ {
+  "program": "chance_expectation.py",
+  "reading": "whole_beam",
+  "quantity": "expectation interval with transfer, low",
+  "macro": "CeLo"
+ },
+ {
+  "program": "chance_expectation.py",
+  "reading": "whole_beam",
+  "quantity": "expectation interval with transfer, high",
+  "macro": "CeHi"
+ },
+ {
+  "program": "chance_expectation.py",
+  "reading": "whole_beam",
+  "quantity": "star-to-control ratio below the trigger",
+  "macro": "CeNear"
+ },
+ {
+  "program": "chance_expectation.py",
+  "reading": "whole_beam",
+  "quantity": "stellar-calibrated expectation",
+  "macro": "CeExpNear"
+ },
+ {
+  "program": "chance_expectation.py",
+  "reading": "whole_beam",
+  "quantity": "stellar-calibrated P(count >= observed)",
+  "macro": "CeProbNear"
+ },
+ {
+  "program": "chance_expectation.py",
+  "reading": "whole_beam",
+  "quantity": "stellar-calibrated added-population bound",
+  "macro": "CeAddLimNear"
+ },
+ {
+  "program": "chance_expectation.py",
+  "reading": "narrow_field",
+  "quantity": "observed unattributed Class A crossings",
+  "macro": "FrNarrowObs"
+ },
+ {
+  "program": "chance_expectation.py",
+  "reading": "narrow_field",
+  "quantity": "chance expectation",
+  "macro": "FrNarrowExp"
+ },
+ {
+  "program": "chance_expectation.py",
+  "reading": "narrow_field",
+  "quantity": "P(count >= observed)",
+  "macro": "FrNarrowProb"
+ },
+ {
+  "program": "chance_expectation.py",
+  "reading": "narrow_field",
+  "quantity": "added-population bound",
+  "macro": "FrNarrowAddLim"
+ },
+ {
+  "program": "chance_expectation.py",
+  "reading": "both",
+  "quantity": "smaller probability corrected for the two readings",
+  "macro": "FrTwoTrialP"
+ },
+ {
+  "program": "completeness.py",
+  "reading": "",
+  "quantity": "injected windows",
+  "macro": "SensNInj"
+ },
+ {
+  "program": "completeness.py",
+  "reading": "",
+  "quantity": "class factor (x P_trig)",
+  "macro": "EirpNinetyMultA"
+ },
+ {
+  "program": "completeness.py",
+  "reading": "",
+  "quantity": "bootstrap interval low",
+  "macro": "SensMultALo"
+ },
+ {
+  "program": "completeness.py",
+  "reading": "",
+  "quantity": "bootstrap interval high",
+  "macro": "SensMultAHi"
+ },
+ {
+  "program": "completeness.py",
+  "reading": "",
+  "quantity": "calibration interval low (x factor)",
+  "macro": "SensFacLo"
+ },
+ {
+  "program": "completeness.py",
+  "reading": "",
+  "quantity": "calibration interval high (x factor)",
+  "macro": "SensFacHi"
+ },
+ {
+  "program": "completeness.py",
+  "reading": "",
+  "quantity": "per-window point, lowest (x factor)",
+  "macro": "SensIndivFacLo"
+ },
+ {
+  "program": "completeness.py",
+  "reading": "",
+  "quantity": "per-window point, highest (x factor)",
+  "macro": "SensIndivFacHi"
+ },
+ {
+  "program": "completeness.py",
+  "reading": "",
+  "quantity": "windows within a tenth of the factor",
+  "macro": "NmDispNTenth"
+ },
+ {
+  "program": "response_ratio.py",
+  "reading": "",
+  "quantity": "response ratio, class A, N = 1",
+  "macro": "IjRatioNOne"
+ },
+ {
+  "program": "response_ratio.py",
+  "reading": "",
+  "quantity": "response ratio, class A, N = 2",
+  "macro": "IjRatioNTwo"
+ },
+ {
+  "program": "response_ratio.py",
+  "reading": "",
+  "quantity": "response ratio, class A, N = 4",
+  "macro": "IjRatioNFour"
+ },
+ {
+  "program": "response_ratio.py",
+  "reading": "",
+  "quantity": "response ratio, class B, N = 1",
+  "macro": "IjRatioBNOne"
+ },
+ {
+  "program": "response_ratio.py",
+  "reading": "",
+  "quantity": "response ratio, class B, N = 2",
+  "macro": "IjRatioBNTwo"
+ },
+ {
+  "program": "response_ratio.py",
+  "reading": "",
+  "quantity": "factor, class A, N = 1 (x P_trig)",
+  "macro": "IjFacNOne"
+ },
+ {
+  "program": "response_ratio.py",
+  "reading": "",
+  "quantity": "factor, class A, N = 2 (x P_trig)",
+  "macro": "IjFacNTwo"
+ },
+ {
+  "program": "response_ratio.py",
+  "reading": "",
+  "quantity": "factor, class B, N = 1 (x P_trig)",
+  "macro": "IjFacBNOne"
+ },
+ {
+  "program": "response_ratio.py",
+  "reading": "",
+  "quantity": "factor, class B, N = 2 (x P_trig)",
+  "macro": "IjFacBNTwo"
+ },
+ {
+  "program": "sensitivity_summary.py",
+  "reading": "",
+  "quantity": "systems",
+  "macro": "NSysALim"
+ },
+ {
+  "program": "sensitivity_summary.py",
+  "reading": "",
+  "quantity": "median best-window EIRP_90 (W)",
+  "macro": "EirpNinetySysMedA"
+ },
+ {
+  "program": "sensitivity_summary.py",
+  "reading": "",
+  "quantity": "deepest system (W)",
+  "macro": "EirpNinetySysLoA"
+ },
+ {
+  "program": "sensitivity_summary.py",
+  "reading": "",
+  "quantity": "shallowest system (W)",
+  "macro": "EirpNinetySysHiA"
+ },
+ {
+  "program": "sensitivity_summary.py",
+  "reading": "",
+  "quantity": "systems at or below the level",
+  "macro": "NSysEfifteen"
+ },
+ {
+  "program": "sensitivity_summary.py",
+  "reading": "",
+  "quantity": "median at the calibration interval low end (W)",
+  "macro": "TfMedCalLo"
+ },
+ {
+  "program": "sensitivity_summary.py",
+  "reading": "",
+  "quantity": "median at the calibration interval high end (W)",
+  "macro": "TfMedCalHi"
+ },
+ {
+  "program": "sensitivity_summary.py",
+  "reading": "",
+  "quantity": "count at the calibration interval high end",
+  "macro": "SvCalNLo"
+ },
+ {
+  "program": "sensitivity_summary.py",
+  "reading": "",
+  "quantity": "count at the calibration interval low end",
+  "macro": "SvCalNHi"
+ },
+ {
+  "program": "sensitivity_summary.py",
+  "reading": "",
+  "quantity": "window draw: count 5 per cent",
+  "macro": "SvRsNLo"
+ },
+ {
+  "program": "sensitivity_summary.py",
+  "reading": "",
+  "quantity": "window draw: count 95 per cent",
+  "macro": "SvRsNHi"
+ },
+ {
+  "program": "sensitivity_summary.py",
+  "reading": "",
+  "quantity": "block draw: count 5 per cent",
+  "macro": "SvRsBlkNLo"
+ },
+ {
+  "program": "sensitivity_summary.py",
+  "reading": "",
+  "quantity": "block draw: count 95 per cent",
+  "macro": "SvRsBlkNHi"
+ },
+ {
+  "program": "sensitivity_summary.py",
+  "reading": "",
+  "quantity": "block draw: median shift (per cent)",
+  "macro": "SvRsMedShiftPct"
+ },
+ {
+  "program": "sensitivity_summary.py",
+  "reading": "",
+  "quantity": "window_dec draw: count 5 per cent",
+  "macro": "SvRsDecNLo"
+ },
+ {
+  "program": "sensitivity_summary.py",
+  "reading": "",
+  "quantity": "window_dec draw: count 95 per cent",
+  "macro": "SvRsDecNHi"
+ },
+ {
+  "program": "recurrence_expectation.py",
+  "reading": "",
+  "quantity": "distinct covering windows",
+  "macro": "WuNWin"
+ },
+ {
+  "program": "recurrence_expectation.py",
+  "reading": "",
+  "quantity": "windows at or above the trigger",
+  "macro": "WuNWinExc"
+ },
+ {
+  "program": "recurrence_expectation.py",
+  "reading": "",
+  "quantity": "expected from the control positions",
+  "macro": "WuExpWinCtrl"
+ },
+ {
+  "program": "recurrence_expectation.py",
+  "reading": "",
+  "quantity": "P(count >= observed)",
+  "macro": "WuProbWinCtrl"
+ },
+ {
+  "program": "recurrence_expectation.py",
+  "reading": "",
+  "quantity": "the two objects' share of the expectation",
+  "macro": "WuExpTwoCtrl"
+ },
+ {
+  "program": "recurrence_expectation.py",
+  "reading": "",
+  "quantity": "windows toward the two objects at or above the trigger",
+  "macro": "WuNWinExcTwo"
+ },
+ {
+  "program": "recurrence_expectation.py",
+  "reading": "",
+  "quantity": "other windows",
+  "macro": "WuNWinRest"
+ },
+ {
+  "program": "recurrence_expectation.py",
+  "reading": "",
+  "quantity": "other windows at or above the trigger",
+  "macro": "WuNWinRestExc"
+ },
+ {
+  "program": "recurrence_expectation.py",
+  "reading": "",
+  "quantity": "other windows expected",
+  "macro": "WuExpRestCtrl"
+ },
+ {
+  "program": "recurrence_expectation.py",
+  "reading": "",
+  "quantity": "other windows P(count >= observed)",
+  "macro": "WuProbRestCtrl"
+ },
+ {
+  "program": "recurrence_expectation.py",
+  "reading": "HD 14055",
+  "quantity": "at or above the trigger",
+  "macro": "TwNExcHD"
+ },
+ {
+  "program": "recurrence_expectation.py",
+  "reading": "HD 14055",
+  "quantity": "expected from deposited control rates",
+  "macro": "TwExpCtrlHD"
+ },
+ {
+  "program": "recurrence_expectation.py",
+  "reading": "HD 14055",
+  "quantity": "P(count >= observed)",
+  "macro": "TwProbCtrlHD"
+ },
+ {
+  "program": "recurrence_expectation.py",
+  "reading": "ALMA J153702653-33192492",
+  "quantity": "at or above the trigger",
+  "macro": "TwNExcJx"
+ },
+ {
+  "program": "recurrence_expectation.py",
+  "reading": "ALMA J153702653-33192492",
+  "quantity": "expected from deposited control rates",
+  "macro": "TwExpCtrlJx"
+ },
+ {
+  "program": "recurrence_expectation.py",
+  "reading": "ALMA J153702653-33192492",
+  "quantity": "P(count >= observed)",
+  "macro": "TwProbCtrlJxRaw"
+ },
+ {
+  "program": "recurrence_expectation.py",
+  "reading": "both",
+  "quantity": "the two objects' expectation on deposited control rates",
+  "macro": "TwExpTwoCtrl"
+ },
+ {
+  "program": "recurrence_expectation.py",
+  "reading": "both",
+  "quantity": "objects in the look-elsewhere simulation",
+  "macro": "TwLookNStarCtrl"
+ },
+ {
+  "program": "recurrence_expectation.py",
+  "reading": "both",
+  "quantity": "look-elsewhere chance (per cent)",
+  "macro": "TwLookPctCtrl"
+ }
+]

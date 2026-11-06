@@ -1,0 +1,104 @@
+{
+ "n_star": 25,
+ "n_block": 222,
+ "n_comparison": 1051,
+ "tolerance_kms": 0.1,
+ "agreements": [
+  {
+   "star": "HD 139084 B",
+   "eb": "A002_Xcd8029_Xb6b0",
+   "win": 333.140219,
+   "v_sys": 4.55,
+   "v_bary": 4.516385092063961,
+   "v_sys_src": "SIMBAD 2021A&A...645A..30Z (Zuniga-Fernandez et al.)",
+   "v_bary_src": "bary_v405.json",
+   "route": "catalogue window",
+   "d": 0.033614907936038385
+  },
+  {
+   "star": "HD 139084 B",
+   "eb": "A002_Xcd8029_Xb6b0",
+   "win": 335.035719,
+   "v_sys": 4.55,
+   "v_bary": 4.516385092063961,
+   "v_sys_src": "SIMBAD 2021A&A...645A..30Z (Zuniga-Fernandez et al.)",
+   "v_bary_src": "bary_v405.json",
+   "route": "catalogue window",
+   "d": 0.033614907936038385
+  },
+  {
+   "star": "HD 139084 B",
+   "eb": "A002_Xcd8029_Xb6b0",
+   "win": 347.035719,
+   "v_sys": 4.55,
+   "v_bary": 4.516385092063961,
+   "v_sys_src": "SIMBAD 2021A&A...645A..30Z (Zuniga-Fernandez et al.)",
+   "v_bary_src": "bary_v405.json",
+   "route": "catalogue window",
+   "d": 0.033614907936038385
+  },
+  {
+   "star": "HD 139084 B",
+   "eb": "A002_Xcd8029_Xb6b0",
+   "win": 345.144857,
+   "v_sys": 4.55,
+   "v_bary": 4.516084430345381,
+   "v_sys_src": "SIMBAD 2021A&A...645A..30Z (Zuniga-Fernandez et al.)",
+   "v_bary_src": "bary_v405.json",
+   "route": "catalogue window",
+   "d": 0.03391556965461895
+  }
+ ],
+ "next_closest": {
+  "star": "HD 14055",
+  "eb": "A002_X107376c_X6126",
+  "win": null,
+  "v_sys": 5.11,
+  "v_bary": 5.243580903946061,
+  "v_sys_src": "recurrence inventory",
+  "v_bary_src": "recur_v411.json",
+  "route": "repeat block of U17",
+  "d": 0.13358090394606048
+ },
+ "named_row": {
+  "star": "HD 139084 B",
+  "eb": "A002_Xcd8029_Xb6b0",
+  "v_sys": 4.55,
+  "v_bary": 4.516084430345381,
+  "rv": {
+   "v": 4.55,
+   "err": 0.01,
+   "bib": "2021A&A...645A..30Z",
+   "qual": "A"
+  },
+  "primary": {
+   "v": 3.9,
+   "err": 0.19,
+   "bib": "2018yCat.1345....0G",
+   "qual": "A"
+  },
+  "dv_adopted": 24.366043813347122,
+  "dv_on_primary": 23.71600084957286
+ },
+ "macros": {
+  "VsNStar": "25",
+  "VsNBlock": "222",
+  "VsNComp": "1051",
+  "VsTolKms": "0.1",
+  "VsNAgree": "1",
+  "VsAgreeStar": "HD~139084~B",
+  "VsAgreeKms": "0.0339",
+  "VsNextKms": "0.13",
+  "VsRvErr": "0.01",
+  "VsRvRatio": "3.4",
+  "VsRvQual": "A",
+  "VsPrimV": "+3.90",
+  "VsPrimErr": "0.19",
+  "VsPrimDv": "+23.7",
+  "VsNWinVBary": "2",
+  "VsNStale": "5",
+  "VsStaleKHz": "1.4",
+  "VsStaleChan": "0.00277"
+ },
+ "failed": []
+}
