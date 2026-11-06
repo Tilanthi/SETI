@@ -1,6 +1,6 @@
-# Euclid DR1 Little Red Dots — IMPLEMENTATION PLAN v4 (2026-11-04)
+# Euclid DR1 Little Red Dots — IMPLEMENTATION PLAN v5 (2026-11-06)
 
-Authors: Glenn J. White (Open University) with ASTRA PA. Status: plan v4 AGREED by Glenn 2026-11-04. Work packages NOT to be launched until Glenn gives the go-ahead.
+Authors: Glenn J. White (Open University) with ASTRA PA. Status: plan v4 AGREED by Glenn 2026-11-04; v5 (2026-11-06) adds Programme D, the lensed-LRD search, at Glenn's request. Work packages NOT to be launched until Glenn gives the go-ahead.
 Context: Q1 reproduction of Bisigello et al. 2025 (A&A 711, A24) completed 2026-11-04 (images: paper/LRD_Q1_reproduction_images.zip).
 
 Decisions (Glenn, 2026-11-04): work Letter 1 (hot-dust / screened-quasar test) and Letter 2 (grism Balmer lines) TOGETHER, decide
@@ -17,6 +17,10 @@ likelihood re-implemented from paper_v1_06. Release: DR1-Foundation Thu 12 Nov 2
    context + pointer to Letter B. Defines and publishes the frozen sample that Letter B uses. Draft target Tue 17 – Thu 19 Nov.
  Letter B (= Letters 1+2 below): hot dust + Balmer lines on the same frozen sample; one Letter or two by the rule in §1. Draft ≥ Sun 22 Nov.
  Paper C (= Paper 3 below): full MNRAS census paper.
+ Programme D (v5): search for galaxy-scale strongly lensed LRDs (He, Li, Dye, Er & Shu 2026, ApJL 1011, L24 — first forecast:
+   3.70±1.89 doubles + 0.52±0.58 quads deg⁻² DETECTABLE AT JWST DEPTH for z=4.5–8.5 LRDs; none yet confirmed). Output: a Letter if
+   we find/confirm systems (very high impact: first galaxy-scale lensed LRD), otherwise a Euclid forecast + search-completeness section
+   in Paper C. See §9.
  Why A first: selection-based, no new machinery → numbers within 2–3 days of release; it is the paper the Euclid Consortium is most
  likely to race on; Q1 (63 deg²) only partly filled the wide-field gap (single-object bright-end bins) — DR1 is ~30× the area.
  Letter A safeguards: "V–J" defined in OBSERVED Euclid colours (rest V–J is not reachable from Euclid at z>0.6; rest J needs WISE);
@@ -141,5 +145,35 @@ floor + stacks. WISE 6″ blending → neighbour-modelled forced photometry, val
 ## 8. Calendar
 Wed 4–Fri 6: WP-A, WP-B, WP-C start; D/E start Thu.  Sat 7–Mon 9: C/D/E/F complete; Q1 pilot (WP-G) Sun–Mon; report to Glenn Mon 9.
 Tue 10–Wed 11: freeze + pre-register selection (incl. Letter-A colour box), rehearsal, Letter A + B skeletons.  Thu 12: DR1.
-Tue 17: Letter-B one-or-two decision.  Tue 17–Thu 19: Letter A draft.  ~Sun 22 onwards: Letter B draft(s); then Paper C.
+Tue 17: Letter-B one-or-two decision.  Tue 17–Thu 19: Letter A draft.  ~Sun 22 onwards: Letter B draft(s); then Paper C. Programme D: D1/D2 pre-release (low priority), D3 from ~day 3, decision ~3 weeks after release.
 NOTHING is launched until Glenn gives the go-ahead.
+
+## 9. Programme D — lensed LRDs (added v5; NOT launched until Glenn's go-ahead)
+Key caveat: He+26's ~3.7 deg⁻² is for JWST depth and resolution and z>4.5 sources. Euclid Wide is ~4–5 mag shallower in the red
+(HE 5σ≈24), NISP PSF ≈0.5″ (VIS ≈0.16–0.2″, but LRDs are faint in VIS), so the Euclid yield of high-z lensed LRDs will be MUCH lower
+and must be recomputed. Conversely, Euclid has a population He+26 did not model: the cosmic-noon (z≈0.5–4) compact V-shaped sources
+(Bisigello: ~57 deg⁻² at Q1 depth), whose lensed counterparts by z≈0.2–1 ETGs are a natural Euclid target. Median image separation
+in He+26 ≈1.2″ → resolvable in NISP and VIS.
+D1 Euclid forecast (pre-release; CPU-heavy, fills idle cores): re-implement the He+26 forward model (SIE+external shear, ETGs from
+   Choi+07 VDF + Hyde & Bernardi FP + Collett15 axis ratios, OM10 shear; their SimCsstLens code is public — reuse where licence allows)
+   with (a) the K24 high-z LRD UVLF (reproduce their 10.70 / 3.70 deg⁻² as the unit test with their JWST transfer function), then
+   (b) a Euclid transfer function (VIS/NISP PSFs, DR1 Wide depths per band, deblending limits) and (c) the cosmic-noon source
+   population from our Q1/DR1 LF. Output: expected numbers in ~1900 deg² (doubles/quads, by z_s, separation, magnitude),
+   nondetection probabilities — publishable on its own as the Euclid counterpart of He+26.
+D2 JWST-archive search (pre-release possible, public data): in the public JWST fields (COSMOS-Web, PRIMER, CEERS, JADES, UNCOVER etc.;
+   DJA catalogues/mosaics via cutouts only) look for pairs/quads of LRD-coloured compact sources around ETGs within 0.15–5″, and for
+   red residuals after ETG-light subtraction (Sérsic modelling) and blue–red difference imaging (F150W/F444W scaled), as He+26 propose.
+   He+26 predict P(0)≈1–9% for doubles in existing JWST data → a find here would be the headline result. Disk: catalogues + small
+   cutouts only (≤5 GB).
+D3 Euclid DR1 search (post-release, after the Letter-A census): catalogue stage — ETG lens candidates (PHZ/morphology: bright, red,
+   early-type, z≈0.2–1.5) with ≥1 compact red/V-shaped neighbour within 0.3–4″ (incl. sources the MER deblender split or merged);
+   image stage — range-read cutouts for the ~10⁴–10⁵ ETG–neighbour pairs only, ETG light subtraction + VIS/NISP colour-difference
+   imaging, colour consistency of the multiple images, simple SIE fit (image configuration and flux ratios); cross-check with the
+   public Euclid Strong Lensing Discovery Engine candidate lists (Q1 now; DR1 lens lists when released) for red/V-shaped image
+   colours. Grism spectra of any candidate (same Hα/Hβ z for both images is decisive); JWST/HST public imaging where it overlaps.
+D4 Deliverable: ranked candidate list with cutouts + models; Letter if ≥1 convincing system (or a strong limit vs the D1 forecast);
+   follow-up proposal material (JWST/NIRSpec, VLT) for Glenn.
+Resources: D1 ~10³ core-h (embarrassingly parallel MC; runs at low priority in idle cycles); D2/D3 disk ≤10 GB (catalogues + stamps);
+no change to the overall peak budget (§5 stays ≈45–60 GB).
+Schedule: D1 and D2 pre-release in parallel with WP-C..F (lower priority than the release-day chain); D3 starts after the Letter-A
+census numbers (~day 3); decision on a Programme-D Letter at ~release+3 weeks.
