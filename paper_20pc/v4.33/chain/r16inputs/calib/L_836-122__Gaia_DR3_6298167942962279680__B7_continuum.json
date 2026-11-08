@@ -1,0 +1,22 @@
+{
+ "star_name": "L 836-122 (Gaia DR3 6298167942962279680) [B7]",
+ "image_rms_mJy": 0.9566001244820654,
+ "image_peak_mJy": 63.069410622119904,
+ "peak_snr": 65.93080139160156,
+ "peak_offset_arcsec": 0.0,
+ "continuum_source_detected": true,
+ "sig_threshold": 5.0,
+ "pos_tol_arcsec": 3.0,
+ "variability": {
+  "n_epochs": 1,
+  "epochs": [
+   {
+    "eb": "A002_Xcd64ec_X21c9_target.ms",
+    "mjd": 58253.12531,
+    "flux_mJy": 0.03189237031619996,
+    "err_mJy": 0.04165240781709211,
+    "n_chan": 4176
+   }
+  ]
+ }
+}

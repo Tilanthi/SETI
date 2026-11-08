@@ -1,0 +1,167 @@
+\section{Discussion}
+\label{sec:discussion}
+
+An archival search can only be as good as the observations it inherits, so
+we ask three questions of the result: what new parameter space
+the archive allowed us to search, what the absence of a detection actually
+constrains, and what stops the search from saying more. The answer to the
+last one also says what a dedicated experiment should do differently.
+
+\subsection{What was searched}
+\label{sec:newspace}
+
+The parameter space opened here is millimetre and submillimetre frequency
+toward the nearest stars. The archive gives \CvUnionA\,GHz of sky frequency
+between \SurvFreqLoA{} and \SurvFreqHiA\,GHz toward systems within 40\,pc,
+whereas the only other search of nearby stars at these frequencies that
+covered more than a single line spanned \MasonBandMHz\,MHz of Band~3
+(\S\ref{sec:intro}). Most of this range had therefore not been searched at
+all for narrowband emission from the direction of a nearby star.
+
+The price of using an archive is that the channels were chosen by other
+observers, for other purposes. They range from \SzChanFinestKHz\,kHz to
+\SzChanWidestMHz\,MHz, while the centimetre-band carrier searches work with
+channels of about \SzChanLitHz\,Hz (Fig.~\ref{fig:context}b). A carrier much
+narrower than one of these channels is measured against the noise of the
+whole channel, and this is one reason why the limits reached here lie well
+above those of the centimetre surveys.
+
+Union bandwidth also overstates what was searched, because different
+frequencies were observed toward different stars, and to very different
+depths. Figure~\ref{fig:waterfall}c therefore counts, at each sky frequency
+and EIRP, the systems in which a carrier would have reached the threshold
+nine times in ten in a single epoch. At $\CovEirpRefTex$\,W the covered frequency falls to
+\CovUnionAtRef\,GHz, \CovFracAtRef{} per cent of the union, and
+\CovNSysAtRef{} systems are reached at some frequency, \CovNMaxAtRef{} of them
+near \CovNuMaxAtRef\,GHz. However high the power, no frequency is covered
+toward more than \CovNMaxFull{} of the \NSysClassA{} systems, and half of the
+sample is
+reached only above $\CovEirpHalf$\,W. The search is thus deep toward a few
+systems at a few frequencies, and shallow or absent almost everywhere else.
+
+The \NCoarse{} coarse-channel windows add a constraint of a weaker kind.
+Their channels are too wide to follow a drift, so they limit only an
+unresolved narrowband spectral excess, but they are numerous, and stacked in
+the star's own rest frame they can be deep. Toward Proxima Centauri, the
+nearest star, the stacked limit reaches $\SzProxEirpCensus$\,W for an
+emitter that stays within one channel in the stellar frame
+(\S\ref{sec:stack}).
+
+\subsection{What the non-detection constrains}
+\label{sec:excludes}
+
+Every limit in this paper applies to one kind of signal: an unresolved
+carrier at the stellar position, confined to a single
+\ChanLoA--\ChanHiA\,kHz channel, lying outside the molecular-line mask,
+radiating while an archival block was on sky, and drifting linearly within
+its window's ceiling of \DriftCeilLo--\DriftCeilHi\,nHz, a fractional drift
+rate that corresponds to a line-of-sight acceleration of
+\AccelCeilMed--\AccelCeilMax\,m\,s$^{-2}$. That ceiling covers
+the orbital acceleration of every known planet in the sample except
+\AccelWorstName, which is reached only as precisely as its host's mass and
+orbit are known (\S\ref{sec:statistic}). A transmitter on a rapidly rotating
+planet, however, uses most of the ceiling on the planet's spin.
+
+A signal that departs from this model is constrained less, or not at all.
+Emission as wide as the widest line in these fields needs \ScNBroadRatio{}
+times the power of a one-channel carrier to be found, and a carrier that is
+switched on for only part of a block is recovered at that fraction of its
+amplitude. Nothing is constrained inside the $\pm\MaskHalfKms$\,km\,s$^{-1}$
+mask around each listed transition. Nor does the survey say anything about
+the stars within 40\,pc that ALMA has not observed, which are almost all of
+the \NGaiaCensus{} that this volume holds.
+
+There are also two blind spots of a more specific kind. The analysis forms
+$(\mathrm{XX}+\mathrm{YY})/2$, which retains the full intensity of a
+circularly polarised carrier, so what is lost is not sensitivity but the
+discrimination that polarisation would offer against unpolarised
+astrophysical emission. ALMA's feeds are linear, and the circular signature
+lies in the cross-hand products, which this analysis does not extract. The
+other blind spot is historical. The \SbPriorFreqGHz\,GHz positronium
+hyperfine line that \citet{Steffes1994} and \citet{Mauersberger1996} looked
+for lies in ALMA Band~5, where this survey holds \LnBFiveWin{} coarse-channel
+windows, all toward \LnBFiveStars, and none of them covers it.
+
+\subsection{What prevents stronger conclusions}
+\label{sec:mmdifferent}
+
+Depth is not the main limit. As an illustration, a \BenchDiam\,m dish
+radiating \BenchPowerMW\,MW at \BenchFreqGHz\,GHz with an aperture efficiency
+of \BenchEta{} has a directive gain $G=\eta(\pi D\nu/c)^{2}=\BenchGain$, and
+hence an EIRP of $\BenchEirp$\,W. The gain grows as the square of the
+frequency, and the systems' best windows lie between \BenchTunedFreqLo{} and
+\BenchTunedFreqHi\,GHz, so the fair comparison is with the same dish tuned to
+each system's own best window, where its EIRP runs from
+$\BenchTunedEirpLo$ to $\BenchTunedEirpHi$\,W. Tuned in that way it lies
+above the single-epoch limit of \BenchNSysTuned{} of the \NSysALimSum{}
+Class~A systems that retain unmasked bandwidth and have a bounded position,
+so a transmitter of terrestrial scale would already have been within reach
+toward those systems. For comparison, the Arecibo planetary radar had an EIRP
+of about $\AroEirp$\,W at \AroFreqGHz\,GHz \citep{EarthDetectingEarth2025},
+some \AroMedMult{} times below the median limit. The dish's beam, however, has a solid
+angle $\Omega=4\pi/G=\BmOmegaSr$\,sr and covers only $\BmSkyFrac$ of the sky.
+EIRP is not transmitter power, and these limits apply to a beamed
+transmitter only if its beam happens to contain the Solar System. The
+archive is limited less by its depth than by the astrophysics that can
+imitate a carrier, and by the repeat coverage that it happens to hold.
+
+At these wavelengths the false positive is line emission. A
+catalogued molecular transition lies within the mask for \CsNAttrQp{} of the
+\CsNCrossQp{} crossings in the census's quality-passing data. For
+\LnAttrSupp{} of them there is support beyond the frequency match: a second
+transition of the same species, catalogued gas on the sightline, or the
+crossing's own recurrence. The other \LnAttrCoincWord{} rest on the
+coincidence alone, which is not an identification. None was identified as
+interference by the available diagnostics (Appendix~\ref{app:rfi}), which
+leaves \CsNUnattrQp{} for the comparison with chance of \S\ref{sec:trigunif},
+whose result is therefore conditional on the mask.
+
+Molecular lines also bring a test of their own that has no centimetre
+analogue. A line that fills the primary beam raises the star and its control
+annulus together, whereas a carrier from the star raises only the star, and
+\DiscFpWin{} of the \DiscFpOfFlags{} windows that reached this spatial stage
+hold disc or interstellar carbon monoxide (\S\ref{sec:bpicval}).
+
+An archive supplies repeat epochs only by accident. A single crossing,
+however strong, becomes a testable claim only when the star is observed
+again in a separated session, at the same frequency for an emitter at rest in
+its frame or at the frequency a trajectory predicts for one that drifts, and
+the archive holds such repeats only where observers happened to return.
+We describe this by the same-frequency coverage
+$C_{\rm conf}(\nu)$, the number of systems toward which two separated blocks
+(Table~\ref{tab:quantities}) both cover the sky frequency $\nu$. It measures
+coverage, and is not a completeness for an orbiting carrier, because a
+drifting carrier must also fall at its predicted frequency in the second
+block. Its support is \CvConfGHzDay\,GHz, \CvConfPctDay{} per cent of the
+\CvUnionA\,GHz searched, and only \CvConfGHzYr\,GHz beyond a year
+(Fig.~\ref{fig:waterfall}b). Of the \NSysClassA{} systems, \ZcConfSysDay{}
+have such a block and \ZcConfSysYr{} have one more than a year away. The
+other \ZcNoRepSys{} have none. For \ZcNoRepNoSep{} of them the archive holds
+no two separated sessions at all, so that a crossing there could not have been
+confirmed at any power. For the remaining \ZcNoRepNoFreqWord{} the separated
+sessions exist but share no covered frequency, so the same-frequency
+recurrence test cannot be applied. Even where a repeat exists it can be
+too shallow to test anything, as it was for \HjNPowerLo{} of the \RcNExcl{}
+crossings read at a predicted cell.
+
+\subsection{What a dedicated ALMA experiment should do differently}
+\label{sec:future}
+
+Each of these limits has a remedy on the same telescope. A dedicated search
+can choose its targets and its frequencies instead of inheriting them. This
+archive favours dusty discs, which are the worst case for line confusion, and
+covers least the M~dwarfs that host most of the nearby habitable-zone
+planets. Fine channels are needed in every window, since the \NCoarse{}
+coarse-channel windows of the archive cannot carry a carrier search at all.
+Tunings placed away from the bright molecular lines recover most of the
+\MkMaskAGHz\,GHz of Class~A coverage that the mask costs here, and probably
+remove many of the false positives as well. Above all, the recurrence
+observations have to be scheduled deliberately, at the same tuning and days
+to years apart, so that every crossing meets a separated epoch at the
+frequency it predicts. This is chiefly a matter of scheduling, and each
+additional epoch tests a trajectory predicted independently from the others.
+Indeed \PaNSysThree{} of the \NSysClassA{} systems already carry three epochs
+at a common frequency, but none of them has a crossing seen in more than one
+of those epochs. The obvious first target for such a programme is \BkAlmaName, the most
+discrepant of the objects whose repeat windows were compared with their own
+control positions (\S\ref{sec:twostars}).

@@ -1,0 +1,10 @@
+PIN29 census|r23a round10.OccMeasured 5.756397414426768 literal=5.74
+PIN29 census|r23a round10.NOccSystems 65 literal=66
+PIN29 census|r23a round10.OccUnit 3.384761068161951 literal=3.42
+PIN29 census|r23a round10.OccUniform 8.058954924195122 literal=8.06
+PIN29 census|r23a round10.DutyHalf 7.618429215792907 literal=7.6
+PIN29 census|r23a ledger.NCross 54 literal=56
+PIN29 census|r23a v409.NDeltaRows 11 literal=8
+PIN29 census|r23a numbers.NMaskFrameDiff 2 literal=1
+PIN29 census|r23a cells.NNoProf 0 literal=1
+PIN29 census|r23a cells.NCenA 49 literal=50

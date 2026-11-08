@@ -1,0 +1,67 @@
+--- v4.07/v342_calc.py
++++ v4.08/v342_calc.py
+@@ -1232,10 +1232,43 @@
+         # 1 per cent false alarm over the whole catalogue.  Blank for the
+         # windows whose retained products could not be re-reduced.
+         'scale_route_a', 'scale_route_b', 'n_search_cells', 'n_ind_cells',
+-        'trigger_1pct_window', 'trigger_1pct_survey']
++        'trigger_1pct_window', 'trigger_1pct_survey',
++        # v4.08 (D29): the release paired an APPARENT rms with a
++        # primary-beam-CORRECTED S_min and shipped no column for the response,
++        # so on 91 windows smin != 5 rms and nothing in the deposit explained
++        # the difference (x1.81 at worst).  These two columns close the chain:
++        # smin_mJy == 5 * rms_mJy / pb_atten, exactly, on every window whose
++        # product survives.  pb_atten is the response the pipeline APPLIED --
++        # its Gaussian at 1.22 lambda/D -- not the better blocked-Airy value,
++        # because it has to reproduce what was published; the <=7 per cent
++        # model difference is stated in the text instead.  Note that
++        # theta_pb_arcsec CANNOT be used to recompute pb_atten: it is
++        # 1.22 lambda / 12 m for every window, including the 1054 ACA rows.
++        'pb_offset_arcsec', 'pb_atten']
+ # v4.05: the records the disposition assertions are run over, collected as the
+ # catalogue is written so they cannot drift from what ships.
+ DISPO_RECS = []
++# v4.08 (D29): frozen input built by referee_r8/pbaudit/pbcat_v408.py, which
++# resolves each released window to its product BY POSITION (the (eb, window)
++# pair is not a key: two Gaia components share a block and their rms agree to
++# the five decimals printed here) and recovers Wolf 28's missing offset from
++# that product's own stored geometry.  Keyed on released_name(star), eb and the
++# window to 1 MHz.
++PBCAT = json.load(open('pbcat_v408.json'))
++PB_FTOL = 0.002          # GHz; windows are ~2 GHz wide
++
++
++def _pb(r):
++    lo, hi = min(r['flo'], r['fhi']), max(r['flo'], r['fhi'])
++    v = [e for e in PBCAT.get('%s|%s' % (released_name(r['star_name']), r['eb']), ())
++         if abs(e['flo'] - lo) < PB_FTOL and abs(e['fhi'] - hi) < PB_FTOL]
++    assert len(v) == 1, ('%d primary-beam entries for %s %s %.4f-%.4f GHz'
++                         % (len(v), r['star_name'], r['eb'], lo, hi))
++    return v[0]
++
++
++for _r in GOOD:
++    _r['pb'] = _pb(_r)
+ with open('per_target_results_v3.99.csv', 'w', newline='') as fh:
+     w = csv.writer(fh)
+     w.writerow(COLS)
+@@ -1327,6 +1360,8 @@
+             ('%.4g' % r['scale']['n_ind']) if r['scale'] else '',
+             ('%.4f' % r['t_win']) if r['t_win'] is not None else '',
+             ('%.4f' % r['t_survey']) if r['t_survey'] is not None else '',
++            '%.4f' % r['pb']['pb_offset_arcsec'],
++            '%.6f' % r['pb']['pb_atten'],
+         ])
+ # Every flagged window must carry a disposition, or the catalogue and the
+ # flagged-window table disagree on how many events the survey dispositioned.
+@@ -1432,6 +1467,10 @@
+ 
+ M('NCatRows', '%d' % len(GOOD))
+ M('NCatCols', '%d' % len(COLS))
++# v4.08 (D29): the count is pinned with == so adding a column is a deliberate
++# act.  Driven both ways in referee_r8/pbaudit/pbcols_v408.py.
++assert len(COLS) == 62, 'catalogue column count moved to %d' % len(COLS)
++assert 'pb_atten' in COLS and 'pb_offset_arcsec' in COLS
+ # A header list and a value list written in different orders silently
+ # shifts columns; that happened once here and the only symptom was a flag
+ # count of zero. Re-read the file and assert the two statistics agree with

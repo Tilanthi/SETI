@@ -1,0 +1,277 @@
+{
+ "pdf": "technosignatures_40pc_v4.11.pdf",
+ "col_pt_per_page": 1387.6000000000001,
+ "byfile": {
+  "sections/01_intro.tex": 1125.732019042969,
+  "sections/02_background.tex": 1042.2359436035154,
+  "sections/03_sample.tex": 2291.8111328125,
+  "sections/04_method.tex": 5399.30887451172,
+  "sections/05_results.tex": 5732.27469482422,
+  "sections/05b_stack.tex": 3076.532470703125,
+  "sections/06_discussion.tex": 2907.9818908691414,
+  "sections/07_conclusions.tex": 2051.7724670410134,
+  "technosignatures_40pc_v4.11.tex": 13.3199462890625,
+  "sections/app_A_reproducibility.tex": 3107.0288619995154,
+  "sections/app_C_spatialnorm.tex": 2215.4181350707986,
+  "sections/app_I_linemask.tex": 1177.7049072265618,
+  "sections/app_J_falsealarm.tex": 1955.1929687500015,
+  "sections/app_N_rfi.tex": 1938.4943908691384
+ },
+ "sections": [
+  {
+   "title": "Introduction",
+   "file": "sections/01_intro.tex:1",
+   "page": 1,
+   "pt": 1125.732019042969,
+   "pages": 0.8112799214780692
+  },
+  {
+   "title": "Background",
+   "file": "sections/02_background.tex:1",
+   "page": 2,
+   "pt": 1042.2359436035154,
+   "pages": 0.7511069066038594
+  },
+  {
+   "title": "The sample",
+   "file": "sections/03_sample.tex:1",
+   "page": 2,
+   "pt": 1192.192926025391,
+   "pages": 0.8591762222725503
+  },
+  {
+   "title": "The archival selection",
+   "file": "sections/03_sample.tex:50",
+   "page": 3,
+   "pt": 352.43783569335983,
+   "pages": 0.25399094529645416
+  },
+  {
+   "title": "Frequency coverage and archival scope",
+   "file": "sections/03_sample.tex:94",
+   "page": 3,
+   "pt": 747.1803710937493,
+   "pages": 0.538469566945625
+  },
+  {
+   "title": "Data and methodology",
+   "file": "sections/04_method.tex:1",
+   "page": 4,
+   "pt": 376.49464111328143,
+   "pages": 0.2713279339242443
+  },
+  {
+   "title": "The de-drifted search statistic",
+   "file": "sections/04_method.tex:11",
+   "page": 4,
+   "pt": 3728.116943359376,
+   "pages": 2.686737491610965
+  },
+  {
+   "title": "From a crossing to a candidate",
+   "file": "sections/04_method.tex:165",
+   "page": 7,
+   "pt": 1294.6972900390629,
+   "pages": 0.9330479172953753
+  },
+  {
+   "title": "Results",
+   "file": "sections/05_results.tex:1",
+   "page": 8,
+   "pt": 129.272705078125,
+   "pages": 0.0931628027371901
+  },
+  {
+   "title": "Sensitivity: the power at which a carrier would have been\nfound",
+   "file": "sections/05_results.tex:13",
+   "page": 8,
+   "pt": 1132.3750244140629,
+   "pages": 0.8160673280585635
+  },
+  {
+   "title": "The nearest stars: Barnard's Star and Wolf~359",
+   "file": "sections/05_results.tex:138",
+   "page": 9,
+   "pt": 171.05999755859375,
+   "pages": 0.12327759985485279
+  },
+  {
+   "title": "Threshold crossings and how each was disposed of",
+   "file": "sections/05_results.tex:155",
+   "page": 9,
+   "pt": 1429.6707397460941,
+   "pages": 1.0303190687129533
+  },
+  {
+   "title": "$\\beta$~Pictoris: an astrophysical positive control, and the\nobstacle it identifies",
+   "file": "sections/05_results.tex:241",
+   "page": 10,
+   "pt": 1769.4696411132809,
+   "pages": 1.2752015286201215
+  },
+  {
+   "title": "The crossings that survive the line mask",
+   "file": "sections/05_results.tex:336",
+   "page": 11,
+   "pt": 385.5859375,
+   "pages": 0.27787974740559235
+  },
+  {
+   "title": "Recurrence, applied to every unattributed crossing",
+   "file": "sections/05_results.tex:373",
+   "page": 11,
+   "pt": 714.8406494140636,
+   "pages": 0.5151633391568633
+  },
+  {
+   "title": "A stellar-frame multi-epoch stacked search",
+   "file": "sections/05b_stack.tex:1",
+   "page": 12,
+   "pt": 3076.532470703125,
+   "pages": 2.217160904225371
+  },
+  {
+   "title": "Discussion",
+   "file": "sections/06_discussion.tex:1",
+   "page": 14,
+   "pt": 13.728668212890625,
+   "pages": 0.00989382258063608
+  },
+  {
+   "title": "What is different about a millimetre technosignature search",
+   "file": "sections/06_discussion.tex:4",
+   "page": 14,
+   "pt": 820.0458801269524,
+   "pages": 0.5909814644904529
+  },
+  {
+   "title": "The search space this archive opens",
+   "file": "sections/06_discussion.tex:75",
+   "page": 15,
+   "pt": 935.772839355468,
+   "pages": 0.6743822710835023
+  },
+  {
+   "title": "What this experiment excludes, and what it does not",
+   "file": "sections/06_discussion.tex:152",
+   "page": 15,
+   "pt": 811.3411956787131,
+   "pages": 0.584708270163385
+  },
+  {
+   "title": "What a dedicated ALMA technosignature experiment should do\ndifferently",
+   "file": "sections/06_discussion.tex:218",
+   "page": 16,
+   "pt": 327.0933074951172,
+   "pages": 0.23572593506422396
+  },
+  {
+   "title": "Conclusions",
+   "file": "sections/07_conclusions.tex:1",
+   "page": 16,
+   "pt": 2051.7724670410134,
+   "pages": 1.4786483619494186
+  },
+  {
+   "title": "APPENDIX",
+   "file": "technosignatures_40pc_v4.11.tex:272",
+   "page": 18,
+   "pt": 13.3199462890625,
+   "pages": 0.009599269450174761
+  },
+  {
+   "title": "Spectral response, frequency conventions and the primary-beam\nresponse",
+   "file": "sections/app_A_reproducibility.tex:4",
+   "page": 18,
+   "pt": 138.15130615234375,
+   "pages": 0.09956133334703354
+  },
+  {
+   "title": "Frequency frames, linewidth and smearing",
+   "file": "sections/app_A_reproducibility.tex:32",
+   "page": 18,
+   "pt": 1840.5027221679702,
+   "pages": 1.3263928525280846
+  },
+  {
+   "title": "The primary-beam response, and the two columns that let a reader\nrecompute it",
+   "file": "sections/app_A_reproducibility.tex:150",
+   "page": 19,
+   "pt": 1128.3748336792014,
+   "pages": 0.8131845154793899
+  },
+  {
+   "title": "The spatial screen: calibration and validation",
+   "file": "sections/app_C_spatialnorm.tex:5",
+   "page": 20,
+   "pt": 1058.2303970336907,
+   "pages": 0.7626336098542019
+  },
+  {
+   "title": "The reserved hold-out, and what it calibrates",
+   "file": "sections/app_C_spatialnorm.tex:89",
+   "page": 21,
+   "pt": 830.5669372558586,
+   "pages": 0.5985636619024637
+  },
+  {
+   "title": "One crossing through the whole chain",
+   "file": "sections/app_C_spatialnorm.tex:162",
+   "page": 21,
+   "pt": 326.6208007812493,
+   "pages": 0.235385414226902
+  },
+  {
+   "title": "The velocity-space line mask, and what it costs",
+   "file": "sections/app_I_linemask.tex:4",
+   "page": 22,
+   "pt": 976.7752197265618,
+   "pages": 0.7039314065484014
+  },
+  {
+   "title": "The cost of the mask",
+   "file": "sections/app_I_linemask.tex:91",
+   "page": 22,
+   "pt": 200.9296875,
+   "pages": 0.1448037528826751
+  },
+  {
+   "title": "The false-alarm expectation and the control ensemble",
+   "file": "sections/app_J_falsealarm.tex:4",
+   "page": 22,
+   "pt": 103.6503875732451,
+   "pages": 0.074697598424074
+  },
+  {
+   "title": "What the expectation is conditioned on",
+   "file": "sections/app_J_falsealarm.tex:12",
+   "page": 23,
+   "pt": 610.1909332275391,
+   "pages": 0.4397455557996101
+  },
+  {
+   "title": "The control ensemble: its calibration, and its resolution",
+   "file": "sections/app_J_falsealarm.tex:68",
+   "page": 23,
+   "pt": 576.9989746093743,
+   "pages": 0.41582514745558824
+  },
+  {
+   "title": "The trials budget",
+   "file": "sections/app_J_falsealarm.tex:119",
+   "page": 23,
+   "pt": 664.352673339843,
+   "pages": 0.4787782310030578
+  },
+  {
+   "title": "Radio-frequency interference screening",
+   "file": "sections/app_N_rfi.tex:3",
+   "page": 24,
+   "pt": 1938.4943908691384,
+   "pages": 1.3970123889226997
+  }
+ ],
+ "main_pt": 23640.969439697266,
+ "appendix_pt": 10393.839263916016,
+ "pdf_pages": 25
+}

@@ -1,0 +1,46 @@
+{
+ "distance_ratio": {
+  "far_edge_pc": 38.9225,
+  "nearest_carrier_search": [
+   "eps Eri"
+  ],
+  "nearest_carrier_search_pc": 3.2198,
+  "nearest_surveyed": [
+   "Proxima Cen"
+  ],
+  "nearest_surveyed_pc": 1.3016,
+  "ratio_carrier_search": 313.6840797565066,
+  "ratio_far_edge": 25.94900122037382,
+  "ratio_surveyed": 775.9680393362015
+ },
+ "drive": null,
+ "failed": [],
+ "gap_to_enriquez": {
+  "at_five": 24249.146002454927,
+  "basis": "bare 5 sigma, both sides",
+  "eirp90_at_five": 65057.92731644715,
+  "eirp90_published": 13011.585463289432,
+  "published": 4849.829200490985
+ },
+ "margot": {
+  "N_star": 11680.0,
+  "cwtfm_at_five": 0.07174067076051015,
+  "cwtfm_published": 0.1434813415210203,
+  "eirp_W": 13500000000000.0,
+  "nu_hi_GHz": 1.73,
+  "nu_lo_GHz": 1.15,
+  "nu_rel": 0.40277777777777785,
+  "scale_to_common": 0.5,
+  "snr": 10.0,
+  "table1_eirp_W": 13500000000000.0,
+  "table1_eirp_five_W": 6750000000000.0
+ },
+ "survey": {
+  "cwtfm_bare_median": 4122.354820417338,
+  "cwtfm_bare_worst": 114908.13039563963,
+  "cwtfm_eirp90_median": 11059.847643796016,
+  "cwtfm_eirp90_worst": 218857.0309868978,
+  "n_systems": 60,
+  "nu_rel": 0.09660079429060037
+ }
+}

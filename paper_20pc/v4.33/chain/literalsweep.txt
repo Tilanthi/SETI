@@ -1,0 +1,13 @@
+literal sweep of technosignatures_40pc_v4.33.tex
+
+6 prose literals equal to a generated macro:
+  25         == BdNBlocks,BmArcsec,BpSixGapD,CeRCritPct     enters the sample if its Gaia~DR3 parallax is at least 25\,mas and measured to better than
+  30         == CeMaskPct,CfgChanOut,CovNHalf,EcWitIncBp    ally to a factor of two {under}-representation beyond 30\,pc. Colour comes second. A~stars
+  15         == AnBandKms,AppMTubeObs,BgPcOffNStar,CdNStarNoPhot  ed search would pick. Of the {} sample systems within 15\,pc with a confirmed planet, {} h
+  10.4       == EpGapD,VisStarMJy                           mated from each block's phase-calibrator phase rms [ 10.4.11, 11.3.1]{ALMAHandbook} with t
+  11.3       == CpRecFluxOne,CxOccPerWinPct                 m each block's phase-calibrator phase rms [ 10.4.11, 11.3.1]{ALMAHandbook} with the phase-
+  6.7        == BpRecOffChan,TuQuantAlignPct                lied on. {Software.} The pipeline depends on {casa}~6.7.0 , {python}~3 with {astropy} , {n
+
+2 prose literals within 5 per cent of a macro (possible stale value):
+  2610.36144 ~ BpicbArxiv=2609.17,VnHdfBDrift=2584,RcNeffMax=2558  thon based framework ASTRA [][ {https://arxiv.org/abs/2610.36144}{https:// arxiv.org/ abs/
+  2610.36144 ~ BpicbArxiv=2609.17,VnHdfBDrift=2584,RcNeffMax=2558  /arxiv.org/abs/2610.36144}{https:// arxiv.org/ abs/ 2610.36144}]{White2026ASTRA} to assist

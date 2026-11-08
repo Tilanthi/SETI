@@ -1,0 +1,70 @@
+{
+ "cross": {
+  "A002_X122b6ff_X1041e": {
+   "eb": "A002_X122b6ff_X1041e",
+   "spw": 3,
+   "fx": 357.281464,
+   "dv_cat": 9957.476,
+   "t_min_s": 5241750891.84,
+   "t_max_s": 5241751418.16,
+   "tstar": 5.0059,
+   "t_mid_iso": "2024-12-24T09:59:15.000",
+   "mjd": 60668.41614583333,
+   "vcorr": 29.20199675633797,
+   "vsys": 0.69,
+   "f_rest_stellar": 357.24748769759935,
+   "frozen_nearest": "CO(3-2)",
+   "frozen_dv_stellar": 9928.973377004348,
+   "frozen_in_mask": false,
+   "wide_nearest": "SO2 v = 0",
+   "wide_nearest_qn": "15( 4,12)-15( 3,13)",
+   "wide_nearest_f": 357.241193,
+   "wide_dv_stellar": 5.2829359465194745,
+   "wide_in_mask": true,
+   "wide_n_in_mask": 4
+  },
+  "A002_X75bfbf_X1430": {
+   "eb": "A002_X75bfbf_X1430",
+   "spw": 2,
+   "fx": 345.540374,
+   "dv_cat": -221.618,
+   "t_min_s": 4893813769.92,
+   "t_max_s": 4893816847.584,
+   "tstar": 5.0126,
+   "t_mid_iso": "2013-12-15T09:08:28.752",
+   "mjd": 56641.38088833333,
+   "vcorr": 28.03809439369057,
+   "vsys": 0.69,
+   "f_rest_stellar": 345.50885549931087,
+   "frozen_nearest": "CO(3-2)",
+   "frozen_dv_stellar": -248.9577174175028,
+   "frozen_in_mask": false,
+   "wide_nearest": "34SO2 v=0",
+   "wide_nearest_qn": "7(4,4)-7(3,5)",
+   "wide_nearest_f": 345.519655,
+   "wide_dv_stellar": -9.371114365455556,
+   "wide_in_mask": true,
+   "wide_n_in_mask": 10
+  }
+ },
+ "calibration": {
+  "A002_X122b6ff_X1041e": {
+   "window": [
+    356.275605,
+    358.000702
+   ],
+   "frac_in_mask": 0.77665,
+   "lines_per_GHz": 30.143232525475288,
+   "expected_lines_in_pm50": 3.592357965988
+  },
+  "A002_X75bfbf_X1430": {
+   "window": [
+    344.971526,
+    346.696624
+   ],
+   "frac_in_mask": 0.925605,
+   "lines_per_GHz": 37.679018815162905,
+   "expected_lines_in_pm50": 4.342878516758559
+  }
+ }
+}
