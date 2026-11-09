@@ -1,0 +1,179 @@
+{
+ "generated_by": "r35 J-recal (n2b) -- visibility fits of ALMA J1537 re-run with each window's own drift (visfit_r7y.py unmodified)",
+ "defect": "visfit_campaign_r7.py fit(): VF_DRIFT = {e[\"eb\"]: e[\"drift_Hz_s\"] for e in events}; visfit_r7y.py nudot = DRIFT.get(ev[\"eb\"]) -- drift keyed on the block, so in a block with several fitted windows every window used the LAST window's drift",
+ "inputs_sha256": {
+  "visfit_r7_result.json": "15b026124762dbcf8cc0bfd53b6a6d759a7cc2b793cf68fa243a2868d7a5b650",
+  "A002_Xfe62c1_X398.fit.json": "d6a12b0d0ea46541f4292c6146a751b4fcb44fb784326d520a94b93b5e566de9",
+  "A002_Xf8f6a9_X10359.fit.json": "b89c81d3fbc036a7665ce0d6ad9bd624f1634e2016b5002fa02f344e6e2bfa60",
+  "visfit_r7y.py": "5be61c30a392da85d0e7385ef60253c234ba0431dac3743d637c2701e5639995",
+  "visfit_campaign_r7.py": "aad116af2e81a45a5a7e0102d0fde9b8a21b876bcb0072f3614dda15aa8150cc"
+ },
+ "census_scan": {
+  "n_census_fitted": 37,
+  "n_census_wrong_drift": 2,
+  "census_wrong_drift": [
+   {
+    "star": "ALMA J153702653-33192492",
+    "eb": "A002_Xfe62c1_X398",
+    "f": 216.184432,
+    "status": "not localised",
+    "fit_key": "ALMA J153702653-33192492|A002_Xfe62c1_X398|216.068-217.909",
+    "wrong": 1
+   },
+   {
+    "star": "ALMA J153702653-33192492",
+    "eb": "A002_Xf8f6a9_X10359",
+    "f": 217.729244,
+    "status": "not localised",
+    "fit_key": "ALMA J153702653-33192492|A002_Xf8f6a9_X10359|216.091-217.931",
+    "wrong": 1
+   }
+  ],
+  "all_wrong_drift_fits": [
+   {
+    "key": "BD05 1668|A002_Xc7fa6f_X28a8|223.133-224.867",
+    "event_drift": -2688.0,
+    "drift_used": 6539.8720703125
+   },
+   {
+    "key": "BD05 1668|A002_Xc7fa6f_X28a8|225.133-226.867",
+    "event_drift": -2712.0,
+    "drift_used": 6539.8720703125
+   },
+   {
+    "key": "BD05 1668|A002_Xc7fa6f_X28a8|239.133-240.867",
+    "event_drift": -2880.0,
+    "drift_used": 6539.8720703125
+   },
+   {
+    "key": "ALMA J153702653-33192492|A002_Xf8f6a9_X10359|216.091-217.931",
+    "event_drift": -983.4454956054688,
+    "drift_used": -2023.376220703125
+   },
+   {
+    "key": "ALMA J153702653-33192492|A002_Xfe62c1_X398|216.068-217.909",
+    "event_drift": -2198.18212890625,
+    "drift_used": 2372.5087890625
+   }
+  ],
+  "note": "the three other wrong-drift fits (BD05 1668 X28a8) are of released crossings no longer in the census ledger"
+ },
+ "fits": [
+  {
+   "star": "ALMA J153702653-33192492",
+   "eb": "A002_Xfe62c1_X398",
+   "f_cross_GHz": 216.184432,
+   "event_drift_Hz_s": -2198.18,
+   "archived": {
+    "file": "/data/SETI/visfit_r7/out/A002_Xfe62c1_X398.fit.json",
+    "event_drift": -2198.18212890625,
+    "drift_used": 2372.5087890625,
+    "re": -0.5607,
+    "im": -0.1479,
+    "ring_max": 1.5883,
+    "status": "not localised"
+   },
+   "corrected": {
+    "drift": -2198.18212890625,
+    "re": 4.1229,
+    "im": -0.887,
+    "ring_max": 0.675,
+    "freq_max": 1.7866,
+    "n_vis": 945,
+    "offset_arcsec": 5.7463,
+    "status": "localised",
+    "ms": "re-calibrated census pipeline (r35 J-recal), deleted after the fit",
+    "fit_file": "/data/paper_build/r35/logs/jrecal/vf/X398_216.184_census.fit.json",
+    "fit_sha256": "2d11e889ef071eec308556853dc73d363d53d1cb94ef6384f54d2a5a9b43943c"
+   },
+   "drift_wrong_in_archive": 1
+  },
+  {
+   "star": "ALMA J153702653-33192492",
+   "eb": "A002_Xfe62c1_X398",
+   "f_cross_GHz": 218.872908,
+   "event_drift_Hz_s": 2372.51,
+   "archived": {
+    "file": "/data/SETI/visfit_r7/out/A002_Xfe62c1_X398.fit.json",
+    "event_drift": 2372.5087890625,
+    "drift_used": 2372.5087890625,
+    "re": 4.686,
+    "im": 0.0854,
+    "ring_max": 0.6386,
+    "status": "localised"
+   },
+   "corrected": {
+    "drift": 2372.5087890625,
+    "re": 4.686,
+    "im": 0.0854,
+    "ring_max": 0.6386,
+    "freq_max": 1.0506,
+    "n_vis": 945,
+    "offset_arcsec": 5.7463,
+    "status": "localised",
+    "ms": "re-calibrated census pipeline (r35 J-recal), deleted after the fit",
+    "fit_file": "/data/paper_build/r35/logs/jrecal/vf/X398_218.873_census.fit.json",
+    "fit_sha256": "4895b0b92f155b3c7b80df8a5fea3167c88bf75994c583b7b35485b9556be13c"
+   },
+   "drift_wrong_in_archive": 0
+  },
+  {
+   "star": "ALMA J153702653-33192492",
+   "eb": "A002_Xf8f6a9_X10359",
+   "f_cross_GHz": 217.729244,
+   "event_drift_Hz_s": -983.45,
+   "archived": {
+    "file": "/data/SETI/visfit_r7/out/A002_Xf8f6a9_X10359.fit.json",
+    "event_drift": -983.4454956054688,
+    "drift_used": -2023.376220703125,
+    "re": 1.7894,
+    "im": -0.8081,
+    "ring_max": 0.5303,
+    "status": "not localised"
+   },
+   "corrected": {
+    "drift": -983.4454956054688,
+    "re": 4.3438,
+    "im": 0.3523,
+    "ring_max": 0.8067,
+    "freq_max": 0.0633,
+    "n_vis": 945,
+    "offset_arcsec": 5.7501,
+    "status": "localised",
+    "ms": "re-calibrated census pipeline (r35 J-recal), deleted after the fit",
+    "fit_file": "/data/paper_build/r35/logs/jrecal/vf/X10359_217.729_census.fit.json",
+    "fit_sha256": "81b67ea50cf8257531b746bccd2ab9b1e5863994de81f6a73c0feec95c77d316"
+   },
+   "drift_wrong_in_archive": 1
+  },
+  {
+   "star": "ALMA J153702653-33192492",
+   "eb": "A002_Xf8f6a9_X10359",
+   "f_cross_GHz": 218.671139,
+   "event_drift_Hz_s": -2023.38,
+   "archived": {
+    "file": "/data/SETI/visfit_r7/out/A002_Xf8f6a9_X10359.fit.json",
+    "event_drift": -2023.376220703125,
+    "drift_used": -2023.376220703125,
+    "re": 4.4915,
+    "im": 0.5161,
+    "ring_max": 0.4462,
+    "status": "localised"
+   },
+   "corrected": {
+    "drift": -2023.376220703125,
+    "re": 4.4915,
+    "im": 0.5161,
+    "ring_max": 0.4462,
+    "freq_max": 1.4938,
+    "n_vis": 945,
+    "offset_arcsec": 5.7501,
+    "status": "localised",
+    "ms": "re-calibrated census pipeline (r35 J-recal), deleted after the fit",
+    "fit_file": "/data/paper_build/r35/logs/jrecal/vf/X10359_218.671_census.fit.json",
+    "fit_sha256": "c5a0d4389c1e49254e317643c4785bdb508b37919fbae8ba9e51a33d3822e08e"
+   },
+   "drift_wrong_in_archive": 0
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+parameter,value
+completeness_level,0.90000000000000002
+positive_control_amp,20
+bootstrap_seed,1800
+bootstrap_n,20000
+bootstrap_q_lo,0.16
+bootstrap_q_hi,0.83999999999999997
+spread_pct_lo,16
+spread_pct_hi,84
+instrumental_fraction,0.11113560852029673

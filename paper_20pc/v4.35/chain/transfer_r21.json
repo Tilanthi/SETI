@@ -1,0 +1,98 @@
+{
+ "configuration_axes": {
+  "array": {
+   "levels": {
+    "12m": 2.9,
+    "7m": 3.1
+   },
+   "spread": 0.20000000000000018,
+   "spread_frac": 0.06683640590844195
+  },
+  "band": {
+   "levels": {
+    "6": 3.1,
+    "7": 2.925,
+    "8": 2.9375
+   },
+   "spread": 0.17500000000000027,
+   "spread_frac": 0.05848185516988674
+  },
+  "channel width": {
+   "levels": {
+    "122070": 2.925,
+    "244141": 3.016101694915254,
+    "488281": 2.9325,
+    "61035": 3.1625,
+    "976562": 3.1
+   },
+   "spread": 0.23750000000000027,
+   "spread_frac": 0.07936823201627484
+  }
+ },
+ "dispersion": {
+  "hi": 3.3636363636363638,
+  "iqr": [
+   2.85,
+   3.191666666666667
+  ],
+  "lo": 2.4142857142857146,
+  "median": 2.9454545454545453,
+  "second_hi": 3.35,
+  "within_tenth": 40
+ },
+ "extrapolated_windows": {
+  "n": 30,
+  "n_class_a": 405,
+  "reasons": {
+   "band 10": 8,
+   "band 3": 15,
+   "channel width 15 kHz": 6,
+   "channel width 1953 kHz": 1
+  }
+ },
+ "interval": {
+  "budget_hi_pct": 9.16612965045509,
+  "budget_lo_pct": 5.292812827737836,
+  "full_hi": 1.1240668266419773,
+  "full_lo": 0.806810899894763,
+  "n": 49,
+  "p90": 2.992381132432177,
+  "published_hi": 1.091661296504551,
+  "published_lo": 0.9470718717226216
+ },
+ "levels_absent_from_injected_sample": {
+  "array": [],
+  "band": [
+   "10",
+   "3"
+  ],
+  "chanw": [
+   "15 kHz",
+   "1953 kHz"
+  ]
+ },
+ "systems": {
+  "extrapolated": {
+   "51 Eri": [
+    "channel width 1953 kHz"
+   ],
+   "HD172555": [
+    "channel width 15 kHz"
+   ],
+   "HIP10679": [
+    "channel width 15 kHz"
+   ],
+   "bet Pic": [
+    "channel width 15 kHz"
+   ]
+  },
+  "n": 61,
+  "n_best_window_extrapolated": 4,
+  "n_best_window_in_injected_block": 7
+ },
+ "widest_axis": {
+  "axis": "channel width",
+  "frac": 0.07936823201627484,
+  "transfer_halfwidth": 0.0916612965045509
+ }
+}

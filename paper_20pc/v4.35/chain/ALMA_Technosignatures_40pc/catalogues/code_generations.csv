@@ -1,0 +1,13 @@
+code,stage,file,in_use_from,in_use_to,differs_from_deposited,product_fingerprint,sha256
+E1,extraction,code/pipeline/extraction/earlier/E1/seti_extract_generic.py,2026-08-30,2026-09-23 10:13 UTC,control annulus from a 12 m dish for every window; barycentric (no parallax) phase centre; one FIELD row kept,srcspec without dish_m,43a1d9ab6eca745d745f3d85f16cde3194f47921543a5ae5cce27f01e9985d8d
+E2,extraction,code/pipeline/extraction/earlier/E2/seti_extract_generic.py,2026-09-23 10:13,2026-10-02 06:03 UTC,own-dish annulus floored at two synthesised beams; otherwise E1,"srcspec with dish_m, no extract_version",802ffb74cfb25fcdcf3acf248652b34ed82ef6f5f8200ddbd5eb2e0b54dfd7cc
+E3,extraction,code/pipeline/extraction/seti_extract_generic.py,2026-09-26,,apparent (parallax-displaced) phase centre; every in-beam FIELD row; EXPOSURE on-source time,extract_version r8-multifield-parallax-20260926,dd1300e028bc8985df2dfd374ea2757b79553cf0b8b8dad3c621a460397dbe48
+S-0830,search,code/pipeline/search/earlier/S0830/seti_drift_search_generic.py,2026-08-30 12:01,2026-09-09 12:31,,result.json 43 keys,1b5506a08243805301bea8e95ddf4439e9a2f475017d1ad05aae667991f2938d
+S-0909,search,code/pipeline/search/earlier/S0909/seti_drift_search_generic.py,2026-09-09,,,result.json 51 keys,d60ece66529e50b906e32a2d6d92584de88be583b46018f515df83b3c5ef1be2
+S-0911,search,code/pipeline/search/earlier/S0911/seti_drift_search_generic.py,2026-09-09,2026-09-13 20:43 (with the split-MS reclaim),,result.json 51 keys,d72c13684801dd3eda15db94de58c2a5bd95a1e7ea439af74c96bcad02bd4719
+S-0913,search,code/pipeline/search/earlier/S0913/seti_drift_search_generic.py,2026-09-13 20:43,2026-10-02 06:03,,result.json 52 keys (ctrl_all),0e5708cd6061ba5f4485bf6703992131de760dc745dda35a8af4aeb617a273b5
+S-final,search,code/pipeline/search/seti_drift_search_generic.py,2026-09-26,,,result.json extract_version,ccca9bd86ae45dc4407905b3ca2223b4ff7cc121bcf1e109e5a9796aaf03ea5c
+settings,orchestration,code/pipeline/orchestration/earlier/process_one_target_to_20260831T1131.sh,,2026-08-31 11:31 UTC,the per-target driver as it stood until then,,
+settings,orchestration,code/pipeline/orchestration/earlier/process_one_target_to_20260905T1836.sh,,2026-09-05 18:36 UTC,the per-target driver as it stood until then,,
+settings,orchestration,code/pipeline/orchestration/earlier/process_one_target_to_20260905T2132.sh,,2026-09-05 21:32 UTC,the per-target driver as it stood until then,,
+settings,window selection,code/pipeline/calibration/earlier/select_finest_spw_to_20260830.py,,2026-08-30 10:22 UTC,the spectral-window selection as it stood until then,,

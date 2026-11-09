@@ -1,0 +1,14 @@
+{
+  "_what": "The general maximum-drift-rate guideline the abstract and conclusion 8 compare our ceiling against. Frozen here so the build makes no network call and so the number is never typed into a generator or into LaTeX.",
+  "reference": "Sheikh S. Z., Wright J. T., Siemion A. P. V., Enriquez J. E., 2019, ApJ, 884, 14",
+  "bibkey": "Sheikh2019",
+  "doi": "10.3847/1538-4357/ab3fa8",
+  "arxiv": "1910.01148",
+  "quotation": "We determine that a normalized drift rate of 200 nHz (e.g., 200 Hz s^-1 at 1 GHz) is a generous, physically motivated guideline for the maximum drift rate that should be applied to future narrowband SETI projects if computational capabilities permit.",
+  "source_of_quotation": "abstract of the published paper (ADS 2019ApJ...884...14S), read 2026-10-08",
+  "normalised_drift_nHz": 200.0,
+  "normalised_drift_is_two_sided": true,
+  "_two_sided_note": "The recommendation is plus-or-minus 200 nHz, i.e. a full range of 400 nHz about zero. Our own ceiling macros \\DriftCeilLo and \\DriftCeilHi are likewise one-sided half-widths read off each window's own +-drift_max, so the ratio below compares like with like: one-sided half-width against one-sided half-width.",
+  "jupiter_equatorial_rotation_m_s2": 2.2,
+  "_jupiter_note": "Quoted by the reviewer as the acceleration of a transmitter on Jupiter's equator from the planet's rotation alone; recomputed here from omega^2 R_eq with R_eq = 71492 km and P = 9.925 h, which gives 2.21 m s^-2, so the figure is reproduced rather than taken on trust."
+}

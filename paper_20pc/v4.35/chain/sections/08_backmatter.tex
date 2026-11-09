@@ -1,0 +1,111 @@
+\section*{Acknowledgements}
+This paper makes use of the following ALMA data: the \NProjCodes{} projects
+listed in Table~\ref{tab:projcodes}, each cited as \texttt{ADS/JAO.ALMA\#}
+followed by its project code. The \NEB{} primary-census execution blocks
+searched span \PrEbDateFirst{} to \PrEbDateLast{}, and we thank the principal
+investigators and teams who proposed and obtained
+them.\ProjCodeUnresClause{} ALMA is a partnership of ESO
+(representing its member states), NSF (USA) and NINS (Japan), together with NRC
+(Canada), NSTC and ASIAA (Taiwan), and KASI (Republic of Korea), in cooperation
+with the Republic of Chile. The Joint ALMA Observatory is operated by ESO,
+AUI/NRAO and NAOJ. This work has made use of data from the European Space
+Agency (ESA) mission {\it Gaia} \citep{GaiaDR3}, processed by the {\it Gaia}
+Data Processing and Analysis Consortium (DPAC). This research has made use
+of the SIMBAD database \citep{SIMBAD2000} (CDS, Strasbourg, France); of the
+NASA Exoplanet Archive \citep{NEA2013}, which is operated by the California
+Institute of Technology under contract with the National Aeronautics and
+Space Administration under the Exoplanet Exploration Program; and of the
+Splatalogue spectral-line database \citep{Splatalogue2007}.
+
+\emph{Use of generative artificial intelligence.} Large language model
+assistance (Anthropic Claude) was used in manuscript preparation of this
+complex paper. Data analysis was done using the Python based framework ASTRA
+\citep[][\href{https://arxiv.org/abs/2610.36144}{https://\allowbreak arxiv.org/\allowbreak abs/\allowbreak 2610.36144}]{White2026ASTRA}
+to assist in the archival retrieval and calibration scripts, search and
+vetting pipeline, statistical tests, and the generators that produce every
+number, and carefully cross-checked and validated. The scientific content,
+analysis, and conclusions were designed, executed, and verified by the
+authors. All errors and omissions are the responsibility of the authors.
+
+\emph{Testing and validation.} No result here is accepted because a model
+reported it: every number in the text is written by the program that computes it from the
+data, and a separate audit re-derives the identities that must hold among the
+published values and stops the build where one does not. Every check in the
+analysis was first made to fail on deliberately wrong input before it was
+relied on.
+
+\emph{Software.} The pipeline depends on \textsc{casa}~6.7.0
+\citep{CASA2022}, \textsc{python}~3 with \textsc{astropy} \citep{Astropy2022}, \textsc{numpy}
+\citep{Harris2020} and \textsc{scipy} \citep{Virtanen2020}, and the ALMA Science
+Archive and SIMBAD TAP interfaces through \textsc{astroquery} \citep{Ginsburg2019};
+all are free and open-source, at the versions cited.
+
+\emph{Author contributions.} G.J.W.\ conceived the survey, defined the target
+sample and the selection criteria, and wrote the manuscript; R.D.\ built and
+operated the archival retrieval, calibration and search pipeline, implemented
+the spatial control statistic and the injection--recovery campaigns, and
+produced the per-window catalogue and its regeneration scripts. Both authors
+designed the vetting procedure, chose the masked species, carried out the
+statistical validation reported in \S\ref{sec:statistic} and
+Appendix~\ref{app:falsealarm}, and agreed the dispositions of the crossing
+ledger.
+%% Authors to confirm this division before submission.
+
+\emph{Funding.} This work received no dedicated funding. It used public archival data and
+no observing time was awarded for it.
+%% Authors to replace this if any grant supported the work.
+
+\emph{Competing interests.} The authors declare no competing interests. VBRL Holdings is a privately
+held company through which R.D.\ conducts independent research, named
+here solely as his affiliation; it had no role in the design of the
+survey, the selection of targets, the analysis, the decision to publish
+or the content of this paper, and provided no funding for the work.
+%% Authors to confirm this wording, which is accurate only if the company's
+%% involvement was indeed nil.
+
+\section*{Data availability}
+\label{sec:data}
+Every observation used here is public in the ALMA Science Archive under the
+\NProjCodes{} project codes of Table~\ref{tab:projcodes}, and is retrieved by
+the execution-block identifier \citep{Chen2022}, which the crossing ledger
+gives for each of the \EvNCrossRaw{} threshold crossings; the astrometry is
+Gaia~DR3, the planet counts come from the NASA Exoplanet Archive, and the line
+mask from one Splatalogue query of CDMS and JPL made on \McQueryDate. The data
+and software are held in a versioned Zenodo record \citep{SIdeposit}. It
+contains the per-window catalogue of all \NWindows{} windows, the Class~A and
+Class~B limits with the injection trials behind them, the crossing ledger, the
+control-field statistics, the execution-block and session accounting (every
+row of Table~\ref{tab:blockledger}), and the
+resampling inputs and seeds. From these one program,
+\texttt{code/reproduce.py}, rebuilds the chance expectation and its
+probability, the completeness factor, the sensitivity summaries and the
+repeat-window comparison, and checks each against the value printed here; the
+principal tables also accompany the arXiv submission as ancillary files. The
+record holds the search pipeline as it ran, which takes a public execution
+block to the statistics of this paper.
+
+Not every product was made by that final form of the pipeline. Two steps
+were repeated for the blocks that matter most, and they did not reach the
+same blocks. The first is recalibration with ALMA's final flags
+(\S\ref{sec:method}), the second a fresh extraction and search with the
+final extractor on the recalibrated data. Of
+the \XgNBlkPlan{} blocks that hold a crossing, set a system's best limit or
+come close to the threshold, \XgNBlkReDone{} went through both steps. The
+other \XgNBlkNotRe{} could not be recalibrated with the disk and software
+available to us: \XgNotReClause. \LrNotReClause. The windows of all these blocks keep
+the products of the first forms of the extractor
+(\texttt{catalogues/\allowbreak re\_extraction\_status.csv}), and
+Table~\ref{tab:recalrecon} sets this count beside that of the
+recalibration. The final extractor places the phase
+centre at the star's parallax-displaced position and keeps every field entry,
+which the first forms did not, and the very first also drew its control
+annulus differently. Those forms of the extractor are archived with their settings,
+together with a table that gives, for every window, the extractor forms that made
+its products; run again on freshly calibrated 7\,m and 12\,m blocks, they
+reproduce those products in every window tested. The dynamic spectra at the
+star and at its \RcNRetCtrl{} retained control positions, around each of the
+\DaNSpecCross{} crossings, form a second file of the same record
+(\DaSpecFileMB\,MB). The calibrated visibilities, of order a terabyte, and the
+per-window spectra were not kept, for lack of storage, so this execution of
+the search can be run again from the archive with the same code but cannot be
+repeated exactly.

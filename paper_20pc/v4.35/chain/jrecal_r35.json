@@ -1,0 +1,28 @@
+{
+ "generated_by": "jrecal_r35.py",
+ "round": 3530,
+ "verdicts": {
+  "A002_Xf8f6a9_X10359|217.729": "excluded",
+  "A002_Xf8f6a9_X10359|218.671": "excluded",
+  "A002_Xfe62c1_X398|216.184": "excluded",
+  "A002_Xfe62c1_X398|218.873": "excluded"
+ },
+ "macros": {
+  "JrBeamAbsMax": "0.10",
+  "JrPcTLo": "-1.9",
+  "JrPcTHi": "0.5",
+  "JrCubeSnrMax": "3.1",
+  "JrLeakTMax": "0.13",
+  "JrAloneLo": "5.06",
+  "JrAloneHi": "5.15",
+  "JrMapOffMax": "1.1",
+  "JrCtrlBeamMax": "0.34",
+  "JrVfReLo": "4.1",
+  "JrVfReHi": "4.7",
+  "JrVfImAbsMax": "0.9",
+  "JrVfRingMax": "0.8",
+  "JrVfNWrongDriftWord": "two",
+  "JrVfOldReLo": "-0.6",
+  "JrVfOldReHi": "1.8"
+ }
+}

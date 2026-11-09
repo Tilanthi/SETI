@@ -1,0 +1,5 @@
+parameter,value
+completeness_level,0.90000000000000002
+positive_control_amp,20
+amplitude_ladder,0.75;1;1.25;1.5;1.75;2;2.5;3;3.5;4;5;6;8
+class_level_B,4.1652173913043473

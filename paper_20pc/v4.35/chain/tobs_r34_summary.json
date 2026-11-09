@@ -1,0 +1,38 @@
+{
+ "generated_by": "tobs_r34.py --summary",
+ "median_after": 1245135845948277.8,
+ "median_before": 1245135845948277.8,
+ "moved": {
+  "AU Mic": {
+   "after": 106235025881798.42,
+   "before": 103219647103853.61,
+   "eb_after": "A002_X7d80c7_X15c6",
+   "eb_before": "A002_Xa42f75_X319",
+   "position_conditional": false
+  },
+  "CP-72 2713": {
+   "after": 2210493999426254.0,
+   "before": 2202515053449216.8,
+   "eb_after": "A002_Xff0235_X502d",
+   "eb_before": "A002_Xff0235_X502d",
+   "position_conditional": false
+  },
+  "GL 3379 Gaia DR3 3316364602541746048": {
+   "after": 202228490188231.4,
+   "before": 201825154261723.9,
+   "eb_after": "A002_Xdaef5a_X6873",
+   "eb_before": "A002_Xdaef5a_X6873",
+   "position_conditional": false
+  },
+  "LHS 1140": {
+   "after": 1793183776445934.2,
+   "before": 1721050916388647.2,
+   "eb_after": "A002_Xd9d7c7_X6fd2",
+   "eb_before": "A002_Xd9d7c7_X6fd2",
+   "position_conditional": true
+  }
+ },
+ "n1e15_after": 25,
+ "n1e15_before": 25,
+ "round": 3400
+}

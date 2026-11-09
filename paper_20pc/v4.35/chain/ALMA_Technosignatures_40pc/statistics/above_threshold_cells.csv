@@ -1,0 +1,8 @@
+threshold_sigma,n_star_cells,n_control_cells,ratio,n_windows,basis
+3.0,35174,268470,1.048132,399,"all cells of the fine-channel windows, star side against the pooled control side, normalised by the number of positions on each side"
+3.5,9693,73530,1.054590,399,"all cells of the fine-channel windows, star side against the pooled control side, normalised by the number of positions on each side"
+4.0,1935,14004,1.105398,399,"all cells of the fine-channel windows, star side against the pooled control side, normalised by the number of positions on each side"
+4.5,295,1988,1.187123,399,"all cells of the fine-channel windows, star side against the pooled control side, normalised by the number of positions on each side"
+5.0,34,207,1.314010,399,"all cells of the fine-channel windows, star side against the pooled control side, normalised by the number of positions on each side"
+5.5,3,11,2.181818,399,"all cells of the fine-channel windows, star side against the pooled control side, normalised by the number of positions on each side"
+6.0,0,0,,399,"all cells of the fine-channel windows, star side against the pooled control side, normalised by the number of positions on each side"

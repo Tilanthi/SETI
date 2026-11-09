@@ -1,0 +1,1531 @@
+{
+ "note": "R1-4: the ingredients for ONE Class A selection-function figure.\n\n\"For a transmitter of EIRP P, drift nudot, duty cycle f, at frequency nu, what\nfraction of the 60 Class A systems would this experiment have detected?\"\n\nRead-only on the released catalogue.  The only thing this script contributes is\nthe measured Class A multiplier from the round-7 campaign, applied the same way\nthe catalogue already applies the old one -- verified, not assumed: in\nper_target_results_v3.99.csv, eirp_p90_sel_W / eirp_nominal_W is EXACTLY 5.700\nin all 403 Class A rows and 4.554 in all 1,252 Class B rows, i.e. a flat\nper-class constant.  That flatness is itself R1-5's answer: every window's\nquoted sensitivity is the nominal trigger times a transferred constant.\n\nConditioning is stated, not compressed away (R1-4 is explicit that a single\nfigure of merit would be misleading):\n  * frequency -- a transmitter is only detectable if it radiates inside a\n    window this survey actually observed toward THAT system, so the union\n    bandwidth per system is reported alongside;\n  * drift -- recoverable only if |nudot| <= that window's drift ceiling;\n  * duty cycle -- the carrier must be on during that block's on-source time;\n    a duty cycle f multiplies the recoverable flux by 1/f in the limit where\n    the carrier is on for a contiguous fraction f of the dwell, so the EIRP\n    axis scales as 1/f and the curve is drawn for f = 1, 0.5, 0.1;\n  * linewidth -- unresolved, i.e. W <= the window's channel width.\n",
+ "n_systems": 60,
+ "n_windows": 402,
+ "multiplier_reference_v400_to_v404": 5.7,
+ "multiplier_in_catalogue_now": 2.877,
+ "multiplier_new": 2.8760799380125266,
+ "multiplier_old": 5.7,
+ "multiplier_new_ci68": [
+  2.8385590725423135,
+  2.911102377657241
+ ],
+ "improvement_factor": 1.9818642467701724,
+ "per_system_EIRP_new": {
+  "median": 1466517762120488.0,
+  "min": 64231838385226.32,
+  "max": 3.4734158564182864e+16,
+  "p16": 199846206865817.8,
+  "p84": 3318994177688900.5,
+  "n_below_1e15": 25,
+  "n_below_1e16": 57
+ },
+ "per_system_EIRP_old": {
+  "median": 2906439120000000.0,
+  "min": 127298784000000.0,
+  "max": 6.8838387e+16,
+  "p16": 396068052240000.0,
+  "p84": 6577795896000000.0,
+  "n_below_1e15": 14,
+  "n_below_1e16": 53
+ },
+ "curve_new": [
+  {
+   "EIRP_W": 10000000000000.0,
+   "n_systems": 0,
+   "frac_systems": 0.0
+  },
+  {
+   "EIRP_W": 17782794100389.227,
+   "n_systems": 0,
+   "frac_systems": 0.0
+  },
+  {
+   "EIRP_W": 31622776601683.793,
+   "n_systems": 0,
+   "frac_systems": 0.0
+  },
+  {
+   "EIRP_W": 56234132519034.91,
+   "n_systems": 0,
+   "frac_systems": 0.0
+  },
+  {
+   "EIRP_W": 100000000000000.0,
+   "n_systems": 2,
+   "frac_systems": 0.03333333333333333
+  },
+  {
+   "EIRP_W": 177827941003892.28,
+   "n_systems": 9,
+   "frac_systems": 0.15
+  },
+  {
+   "EIRP_W": 316227766016837.94,
+   "n_systems": 11,
+   "frac_systems": 0.18333333333333332
+  },
+  {
+   "EIRP_W": 562341325190349.06,
+   "n_systems": 16,
+   "frac_systems": 0.26666666666666666
+  },
+  {
+   "EIRP_W": 1000000000000000.0,
+   "n_systems": 25,
+   "frac_systems": 0.4166666666666667
+  },
+  {
+   "EIRP_W": 1778279410038922.8,
+   "n_systems": 32,
+   "frac_systems": 0.5333333333333333
+  },
+  {
+   "EIRP_W": 3162277660168379.5,
+   "n_systems": 50,
+   "frac_systems": 0.8333333333333334
+  },
+  {
+   "EIRP_W": 5623413251903491.0,
+   "n_systems": 53,
+   "frac_systems": 0.8833333333333333
+  },
+  {
+   "EIRP_W": 1e+16,
+   "n_systems": 57,
+   "frac_systems": 0.95
+  },
+  {
+   "EIRP_W": 1.7782794100389228e+16,
+   "n_systems": 58,
+   "frac_systems": 0.9666666666666667
+  },
+  {
+   "EIRP_W": 3.162277660168379e+16,
+   "n_systems": 59,
+   "frac_systems": 0.9833333333333333
+  },
+  {
+   "EIRP_W": 5.623413251903491e+16,
+   "n_systems": 60,
+   "frac_systems": 1.0
+  },
+  {
+   "EIRP_W": 1e+17,
+   "n_systems": 60,
+   "frac_systems": 1.0
+  }
+ ],
+ "curve_old": [
+  {
+   "EIRP_W": 10000000000000.0,
+   "n_systems": 0,
+   "frac_systems": 0.0
+  },
+  {
+   "EIRP_W": 17782794100389.227,
+   "n_systems": 0,
+   "frac_systems": 0.0
+  },
+  {
+   "EIRP_W": 31622776601683.793,
+   "n_systems": 0,
+   "frac_systems": 0.0
+  },
+  {
+   "EIRP_W": 56234132519034.91,
+   "n_systems": 0,
+   "frac_systems": 0.0
+  },
+  {
+   "EIRP_W": 100000000000000.0,
+   "n_systems": 0,
+   "frac_systems": 0.0
+  },
+  {
+   "EIRP_W": 177827941003892.28,
+   "n_systems": 2,
+   "frac_systems": 0.03333333333333333
+  },
+  {
+   "EIRP_W": 316227766016837.94,
+   "n_systems": 8,
+   "frac_systems": 0.13333333333333333
+  },
+  {
+   "EIRP_W": 562341325190349.06,
+   "n_systems": 10,
+   "frac_systems": 0.16666666666666666
+  },
+  {
+   "EIRP_W": 1000000000000000.0,
+   "n_systems": 14,
+   "frac_systems": 0.23333333333333334
+  },
+  {
+   "EIRP_W": 1778279410038922.8,
+   "n_systems": 24,
+   "frac_systems": 0.4
+  },
+  {
+   "EIRP_W": 3162277660168379.5,
+   "n_systems": 31,
+   "frac_systems": 0.5166666666666667
+  },
+  {
+   "EIRP_W": 5623413251903491.0,
+   "n_systems": 46,
+   "frac_systems": 0.7666666666666667
+  },
+  {
+   "EIRP_W": 1e+16,
+   "n_systems": 53,
+   "frac_systems": 0.8833333333333333
+  },
+  {
+   "EIRP_W": 1.7782794100389228e+16,
+   "n_systems": 57,
+   "frac_systems": 0.95
+  },
+  {
+   "EIRP_W": 3.162277660168379e+16,
+   "n_systems": 58,
+   "frac_systems": 0.9666666666666667
+  },
+  {
+   "EIRP_W": 5.623413251903491e+16,
+   "n_systems": 59,
+   "frac_systems": 0.9833333333333333
+  },
+  {
+   "EIRP_W": 1e+17,
+   "n_systems": 60,
+   "frac_systems": 1.0
+  }
+ ],
+ "curve_duty_0p5": [
+  {
+   "EIRP_W": 10000000000000.0,
+   "n_systems": 0,
+   "frac_systems": 0.0
+  },
+  {
+   "EIRP_W": 17782794100389.227,
+   "n_systems": 0,
+   "frac_systems": 0.0
+  },
+  {
+   "EIRP_W": 31622776601683.793,
+   "n_systems": 0,
+   "frac_systems": 0.0
+  },
+  {
+   "EIRP_W": 56234132519034.91,
+   "n_systems": 0,
+   "frac_systems": 0.0
+  },
+  {
+   "EIRP_W": 100000000000000.0,
+   "n_systems": 0,
+   "frac_systems": 0.0
+  },
+  {
+   "EIRP_W": 177827941003892.28,
+   "n_systems": 2,
+   "frac_systems": 0.03333333333333333
+  },
+  {
+   "EIRP_W": 316227766016837.94,
+   "n_systems": 8,
+   "frac_systems": 0.13333333333333333
+  },
+  {
+   "EIRP_W": 562341325190349.06,
+   "n_systems": 10,
+   "frac_systems": 0.16666666666666666
+  },
+  {
+   "EIRP_W": 1000000000000000.0,
+   "n_systems": 14,
+   "frac_systems": 0.23333333333333334
+  },
+  {
+   "EIRP_W": 1778279410038922.8,
+   "n_systems": 24,
+   "frac_systems": 0.4
+  },
+  {
+   "EIRP_W": 3162277660168379.5,
+   "n_systems": 31,
+   "frac_systems": 0.5166666666666667
+  },
+  {
+   "EIRP_W": 5623413251903491.0,
+   "n_systems": 46,
+   "frac_systems": 0.7666666666666667
+  },
+  {
+   "EIRP_W": 1e+16,
+   "n_systems": 53,
+   "frac_systems": 0.8833333333333333
+  },
+  {
+   "EIRP_W": 1.7782794100389228e+16,
+   "n_systems": 56,
+   "frac_systems": 0.9333333333333333
+  },
+  {
+   "EIRP_W": 3.162277660168379e+16,
+   "n_systems": 58,
+   "frac_systems": 0.9666666666666667
+  },
+  {
+   "EIRP_W": 5.623413251903491e+16,
+   "n_systems": 59,
+   "frac_systems": 0.9833333333333333
+  },
+  {
+   "EIRP_W": 1e+17,
+   "n_systems": 60,
+   "frac_systems": 1.0
+  }
+ ],
+ "curve_duty_0p1": [
+  {
+   "EIRP_W": 10000000000000.0,
+   "n_systems": 0,
+   "frac_systems": 0.0
+  },
+  {
+   "EIRP_W": 17782794100389.227,
+   "n_systems": 0,
+   "frac_systems": 0.0
+  },
+  {
+   "EIRP_W": 31622776601683.793,
+   "n_systems": 0,
+   "frac_systems": 0.0
+  },
+  {
+   "EIRP_W": 56234132519034.91,
+   "n_systems": 0,
+   "frac_systems": 0.0
+  },
+  {
+   "EIRP_W": 100000000000000.0,
+   "n_systems": 0,
+   "frac_systems": 0.0
+  },
+  {
+   "EIRP_W": 177827941003892.28,
+   "n_systems": 0,
+   "frac_systems": 0.0
+  },
+  {
+   "EIRP_W": 316227766016837.94,
+   "n_systems": 0,
+   "frac_systems": 0.0
+  },
+  {
+   "EIRP_W": 562341325190349.06,
+   "n_systems": 0,
+   "frac_systems": 0.0
+  },
+  {
+   "EIRP_W": 1000000000000000.0,
+   "n_systems": 2,
+   "frac_systems": 0.03333333333333333
+  },
+  {
+   "EIRP_W": 1778279410038922.8,
+   "n_systems": 9,
+   "frac_systems": 0.15
+  },
+  {
+   "EIRP_W": 3162277660168379.5,
+   "n_systems": 11,
+   "frac_systems": 0.18333333333333332
+  },
+  {
+   "EIRP_W": 5623413251903491.0,
+   "n_systems": 16,
+   "frac_systems": 0.26666666666666666
+  },
+  {
+   "EIRP_W": 1e+16,
+   "n_systems": 25,
+   "frac_systems": 0.4166666666666667
+  },
+  {
+   "EIRP_W": 1.7782794100389228e+16,
+   "n_systems": 32,
+   "frac_systems": 0.5333333333333333
+  },
+  {
+   "EIRP_W": 3.162277660168379e+16,
+   "n_systems": 50,
+   "frac_systems": 0.8333333333333334
+  },
+  {
+   "EIRP_W": 5.623413251903491e+16,
+   "n_systems": 53,
+   "frac_systems": 0.8833333333333333
+  },
+  {
+   "EIRP_W": 1e+17,
+   "n_systems": 57,
+   "frac_systems": 0.95
+  }
+ ],
+ "union_bandwidth_GHz_median": 7.0156249998,
+ "drift_ceiling_Hz_s_range": [
+  1378.5086,
+  10466.748
+ ],
+ "chanwidth_kHz_range": [
+  15.2587891,
+  1953.125
+ ],
+ "systems": [
+  {
+   "system_id": "bet Pic",
+   "star": "bet Pic",
+   "n_windows": 25,
+   "dist_pc": 19.6345,
+   "union_bandwidth_GHz_upper_bound": 16.611236571699997,
+   "freq_lo_GHz": 114.829173,
+   "freq_hi_GHz": 241.98439,
+   "drift_ceiling_Hz_s": [
+    1383.1254,
+    2901.225
+   ],
+   "chanwidth_kHz": [
+    15.2587891,
+    488.28125
+   ],
+   "on_source_s": 49319.040000000015,
+   "best_EIRP_W_new": 64231838385226.32
+  },
+  {
+   "system_id": "lp 876-10 Gaia DR3 6623351805412369024",
+   "star": "lp 876-10 Gaia DR3 6623351805412369024",
+   "n_windows": 3,
+   "dist_pc": 7.6763,
+   "union_bandwidth_GHz_upper_bound": 5.1752929686,
+   "freq_lo_GHz": 344.970549,
+   "freq_hi_GHz": 346.696198,
+   "drift_ceiling_Hz_s": [
+    4149.9972,
+    4150.0038
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 6078.24,
+   "best_EIRP_W_new": 77754591037773.61
+  },
+  {
+   "system_id": "AU Mic",
+   "star": "AU Mic",
+   "n_windows": 13,
+   "dist_pc": 9.7141,
+   "union_bandwidth_GHz_upper_bound": 22.4311523436,
+   "freq_lo_GHz": 114.012927,
+   "freq_hi_GHz": 231.427144,
+   "drift_ceiling_Hz_s": [
+    1378.5086,
+    2766.7751
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    976.5625
+   ],
+   "on_source_s": 32030.230000000003,
+   "best_EIRP_W_new": 108477739759604.83
+  },
+  {
+   "system_id": "HD 69830",
+   "star": "HD 69830",
+   "n_windows": 22,
+   "dist_pc": 12.5692,
+   "union_bandwidth_GHz_upper_bound": 8.838378905600006,
+   "freq_lo_GHz": 226.302271,
+   "freq_hi_GHz": 335.443758,
+   "drift_ceiling_Hz_s": [
+    2725.9778,
+    4024.6791
+   ],
+   "chanwidth_kHz": [
+    244.140625,
+    488.28125
+   ],
+   "on_source_s": 61810.56000000001,
+   "best_EIRP_W_new": 112430882873603.67
+  },
+  {
+   "system_id": "tau Cet",
+   "star": "tau Cet",
+   "n_windows": 6,
+   "dist_pc": 3.6522,
+   "union_bandwidth_GHz_upper_bound": 11.0419921872,
+   "freq_lo_GHz": 229.626443,
+   "freq_hi_GHz": 231.474121,
+   "drift_ceiling_Hz_s": [
+    2766.5593,
+    2766.6475
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 10463.04,
+   "best_EIRP_W_new": 113600670866791.5
+  },
+  {
+   "system_id": "61 Vir",
+   "star": "61 Vir",
+   "n_windows": 5,
+   "dist_pc": 8.5344,
+   "union_bandwidth_GHz_upper_bound": 9.086425781,
+   "freq_lo_GHz": 344.872405,
+   "freq_hi_GHz": 346.714169,
+   "drift_ceiling_Hz_s": [
+    4149.5109,
+    4149.5348
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 11823.84,
+   "best_EIRP_W_new": 119344633914993.22
+  },
+  {
+   "system_id": "eta Crv",
+   "star": "eta Crv",
+   "n_windows": 12,
+   "dist_pc": 18.2437,
+   "union_bandwidth_GHz_upper_bound": 12.345153808400001,
+   "freq_lo_GHz": 342.47413,
+   "freq_hi_GHz": 492.23991,
+   "drift_ceiling_Hz_s": [
+    4120.0401,
+    5906.5556
+   ],
+   "chanwidth_kHz": [
+    61.035156199999996,
+    488.28125
+   ],
+   "on_source_s": 20018.88,
+   "best_EIRP_W_new": 125473071329308.45
+  },
+  {
+   "system_id": "TRAPPIST-1",
+   "star": "TRAPPIST-1",
+   "n_windows": 5,
+   "dist_pc": 12.4669,
+   "union_bandwidth_GHz_upper_bound": 8.625488281,
+   "freq_lo_GHz": 345.714486,
+   "freq_hi_GHz": 347.457249,
+   "drift_ceiling_Hz_s": [
+    4623.3376,
+    4623.5733
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 13910.4,
+   "best_EIRP_W_new": 154377588423936.2
+  },
+  {
+   "system_id": "NAME AT Mic AB Gaia DR3 6792436799475128960",
+   "star": "V AT Mic B",
+   "n_windows": 2,
+   "dist_pc": 9.8066,
+   "union_bandwidth_GHz_upper_bound": 3.4501953124,
+   "freq_lo_GHz": 345.175825,
+   "freq_hi_GHz": 346.900923,
+   "drift_ceiling_Hz_s": [
+    4152.4605,
+    4152.4605
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 1753.92,
+   "best_EIRP_W_new": 160999647438012.53
+  },
+  {
+   "system_id": "GL 3379 Gaia DR3 3316364602541746048",
+   "star": "GL 3379 Gaia DR3 3316364602541746048",
+   "n_windows": 6,
+   "dist_pc": 5.208,
+   "union_bandwidth_GHz_upper_bound": 11.0419921872,
+   "freq_lo_GHz": 229.036592,
+   "freq_hi_GHz": 230.892185,
+   "drift_ceiling_Hz_s": [
+    2759.4811,
+    2759.6642
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 15210.720000000001,
+   "best_EIRP_W_new": 212113541421966.8
+  },
+  {
+   "system_id": "GJ14 Gaia DR3 383426372059603712",
+   "star": "GJ14 Gaia DR3 383426372059603712",
+   "n_windows": 4,
+   "dist_pc": 14.6876,
+   "union_bandwidth_GHz_upper_bound": 6.9003906248,
+   "freq_lo_GHz": 226.360464,
+   "freq_hi_GHz": 230.978073,
+   "drift_ceiling_Hz_s": [
+    2726.6762,
+    2761.3863
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 11249.28,
+   "best_EIRP_W_new": 293577872928585.25
+  },
+  {
+   "system_id": "HD172555",
+   "star": "HD172555",
+   "n_windows": 5,
+   "dist_pc": 28.789,
+   "union_bandwidth_GHz_upper_bound": 5.2831115722,
+   "freq_lo_GHz": 220.363563,
+   "freq_hi_GHz": 341.799994,
+   "drift_ceiling_Hz_s": [
+    2644.6862,
+    4091.2493
+   ],
+   "chanwidth_kHz": [
+    15.2587891,
+    488.28125
+   ],
+   "on_source_s": 9072.0,
+   "best_EIRP_W_new": 349308824319429.2
+  },
+  {
+   "system_id": "HN Lib",
+   "star": "HN Lib",
+   "n_windows": 5,
+   "dist_pc": 6.253,
+   "union_bandwidth_GHz_upper_bound": 9.201660156,
+   "freq_lo_GHz": 229.07042,
+   "freq_hi_GHz": 230.914335,
+   "drift_ceiling_Hz_s": [
+    2759.887,
+    2759.93
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 11854.08,
+   "best_EIRP_W_new": 366581697603151.0
+  },
+  {
+   "system_id": "HD 10647",
+   "star": "HD 10647",
+   "n_windows": 14,
+   "dist_pc": 17.3488,
+   "union_bandwidth_GHz_upper_bound": 24.727539061800005,
+   "freq_lo_GHz": 229.673192,
+   "freq_hi_GHz": 346.679606,
+   "drift_ceiling_Hz_s": [
+    2766.4289,
+    4149.8047
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 28123.199999999997,
+   "best_EIRP_W_new": 410054796298185.56
+  },
+  {
+   "system_id": "HD202628",
+   "star": "HD202628",
+   "n_windows": 5,
+   "dist_pc": 23.794,
+   "union_bandwidth_GHz_upper_bound": 6.1538085938,
+   "freq_lo_GHz": 229.59518,
+   "freq_hi_GHz": 231.435512,
+   "drift_ceiling_Hz_s": [
+    2766.145,
+    2766.6848
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 12398.400000000001,
+   "best_EIRP_W_new": 507993083603344.75
+  },
+  {
+   "system_id": "HD53143 Gaia DR3 5479222240596469632",
+   "star": "HD53143 Gaia DR3 5479222240596469632",
+   "n_windows": 6,
+   "dist_pc": 18.3401,
+   "union_bandwidth_GHz_upper_bound": 10.9296875,
+   "freq_lo_GHz": 229.601226,
+   "freq_hi_GHz": 231.443281,
+   "drift_ceiling_Hz_s": [
+    2766.2596,
+    2766.3261
+   ],
+   "chanwidth_kHz": [
+    976.5625,
+    976.5625
+   ],
+   "on_source_s": 13456.800000000001,
+   "best_EIRP_W_new": 512734013773164.56
+  },
+  {
+   "system_id": "HD 207129 Gaia DR3 6564091190988411520",
+   "star": "HD 207129 Gaia DR3 6564091190988411520",
+   "n_windows": 4,
+   "dist_pc": 15.559,
+   "union_bandwidth_GHz_upper_bound": 7.2460937498,
+   "freq_lo_GHz": 229.641337,
+   "freq_hi_GHz": 231.48178,
+   "drift_ceiling_Hz_s": [
+    2766.738,
+    2766.855
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 8981.28,
+   "best_EIRP_W_new": 586998999500548.9
+  },
+  {
+   "system_id": "GJ 849",
+   "star": "GJ 849",
+   "n_windows": 6,
+   "dist_pc": 8.8149,
+   "union_bandwidth_GHz_upper_bound": 11.0419921872,
+   "freq_lo_GHz": 229.079042,
+   "freq_hi_GHz": 230.939006,
+   "drift_ceiling_Hz_s": [
+    2759.9905,
+    2760.2261
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 14757.119999999999,
+   "best_EIRP_W_new": 644778870239232.9
+  },
+  {
+   "system_id": "TWA 3A 696000",
+   "star": "TWA 3A 696000",
+   "n_windows": 6,
+   "dist_pc": 37.0547,
+   "union_bandwidth_GHz_upper_bound": 1.2941894532,
+   "freq_lo_GHz": 220.288446,
+   "freq_hi_GHz": 230.646602,
+   "drift_ceiling_Hz_s": [
+    2644.7555,
+    2766.465
+   ],
+   "chanwidth_kHz": [
+    122.0703125,
+    122.0703125
+   ],
+   "on_source_s": 17236.8,
+   "best_EIRP_W_new": 711333373260799.4
+  },
+  {
+   "system_id": "HD 139664",
+   "star": "HD 139664",
+   "n_windows": 2,
+   "dist_pc": 17.3986,
+   "union_bandwidth_GHz_upper_bound": 3.4501953124,
+   "freq_lo_GHz": 229.691625,
+   "freq_hi_GHz": 231.417306,
+   "drift_ceiling_Hz_s": [
+    2766.6501,
+    2766.6571
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 786.24,
+   "best_EIRP_W_new": 732725080623749.0
+  },
+  {
+   "system_id": "hd92945",
+   "star": "hd92945",
+   "n_windows": 6,
+   "dist_pc": 21.5085,
+   "union_bandwidth_GHz_upper_bound": 10.5825195311,
+   "freq_lo_GHz": 344.069784,
+   "freq_hi_GHz": 356.016485,
+   "drift_ceiling_Hz_s": [
+    4139.8823,
+    4261.2973
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    976.5625
+   ],
+   "on_source_s": 17115.84,
+   "best_EIRP_W_new": 761712802710983.4
+  },
+  {
+   "system_id": "V star TX PsA",
+   "star": "V star TX PsA",
+   "n_windows": 2,
+   "dist_pc": 20.835,
+   "union_bandwidth_GHz_upper_bound": 3.4501953124,
+   "freq_lo_GHz": 345.167948,
+   "freq_hi_GHz": 346.893045,
+   "drift_ceiling_Hz_s": [
+    4152.366,
+    4152.366
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 1753.92,
+   "best_EIRP_W_new": 789694472035901.1
+  },
+  {
+   "system_id": "HIP10679",
+   "star": "HIP10679",
+   "n_windows": 2,
+   "dist_pc": 39.6344,
+   "union_bandwidth_GHz_upper_bound": 0.1078186036,
+   "freq_lo_GHz": 220.386514,
+   "freq_hi_GHz": 230.580412,
+   "drift_ceiling_Hz_s": [
+    2644.9616,
+    2766.6415
+   ],
+   "chanwidth_kHz": [
+    15.2587891,
+    15.2587891
+   ],
+   "on_source_s": 1028.16,
+   "best_EIRP_W_new": 844638240347711.0
+  },
+  {
+   "system_id": "HD 285968",
+   "star": "HD 285968",
+   "n_windows": 4,
+   "dist_pc": 9.4852,
+   "union_bandwidth_GHz_upper_bound": 7.3613281248,
+   "freq_lo_GHz": 229.037235,
+   "freq_hi_GHz": 230.887058,
+   "drift_ceiling_Hz_s": [
+    2759.4888,
+    2759.6027
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 11249.28,
+   "best_EIRP_W_new": 862284141199393.0
+  },
+  {
+   "system_id": "HD161868",
+   "star": "HD161868",
+   "n_windows": 24,
+   "dist_pc": 29.7465,
+   "union_bandwidth_GHz_upper_bound": 43.93749999879999,
+   "freq_lo_GHz": 226.304572,
+   "freq_hi_GHz": 346.042293,
+   "drift_ceiling_Hz_s": [
+    2726.649,
+    4141.4655
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 56064.95999999997,
+   "best_EIRP_W_new": 940961608767676.1
+  },
+  {
+   "system_id": "HD 38858 Gaia DR3 3023711269067191296",
+   "star": "HD 38858 Gaia DR3 3023711269067191296",
+   "n_windows": 4,
+   "dist_pc": 15.2104,
+   "union_bandwidth_GHz_upper_bound": 7.1308593748,
+   "freq_lo_GHz": 229.609322,
+   "freq_hi_GHz": 231.451573,
+   "drift_ceiling_Hz_s": [
+    2765.9982,
+    2766.3769
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 5745.6,
+   "best_EIRP_W_new": 1169528283169432.5
+  },
+  {
+   "system_id": "HD110411",
+   "star": "HD110411",
+   "n_windows": 10,
+   "dist_pc": 38.9225,
+   "union_bandwidth_GHz_upper_bound": 7.132812500199999,
+   "freq_lo_GHz": 216.561857,
+   "freq_hi_GHz": 231.639362,
+   "drift_ceiling_Hz_s": [
+    2609.7872,
+    2777.084
+   ],
+   "chanwidth_kHz": [
+    244.140625,
+    976.5625
+   ],
+   "on_source_s": 17418.239999999998,
+   "best_EIRP_W_new": 1187867031678181.8
+  },
+  {
+   "system_id": "HIP 490",
+   "star": "HIP 490",
+   "n_windows": 1,
+   "dist_pc": 38.8298,
+   "union_bandwidth_GHz_upper_bound": 0.8625488281,
+   "freq_lo_GHz": 230.096768,
+   "freq_hi_GHz": 230.959317,
+   "drift_ceiling_Hz_s": [
+    2766.3365,
+    2766.3365
+   ],
+   "chanwidth_kHz": [
+    244.140625,
+    244.140625
+   ],
+   "on_source_s": 2237.76,
+   "best_EIRP_W_new": 1254349057485310.2
+  },
+  {
+   "system_id": "hd107146",
+   "star": "hd107146",
+   "n_windows": 8,
+   "dist_pc": 27.4697,
+   "union_bandwidth_GHz_upper_bound": 14.494140624800004,
+   "freq_lo_GHz": 344.074232,
+   "freq_hi_GHz": 356.046221,
+   "drift_ceiling_Hz_s": [
+    4139.9357,
+    4261.6396
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    976.5625
+   ],
+   "on_source_s": 18446.399999999998,
+   "best_EIRP_W_new": 1305814494720087.8
+  },
+  {
+   "system_id": "LP 476-207 384128",
+   "star": "LP 476-207 783296",
+   "n_windows": 2,
+   "dist_pc": 23.7525,
+   "union_bandwidth_GHz_upper_bound": 3.4501953124,
+   "freq_lo_GHz": 345.154398,
+   "freq_hi_GHz": 346.879496,
+   "drift_ceiling_Hz_s": [
+    4152.2034,
+    4152.2034
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 2056.32,
+   "best_EIRP_W_new": 1359142768930716.0
+  },
+  {
+   "system_id": "HD170773",
+   "star": "HD170773",
+   "n_windows": 8,
+   "dist_pc": 36.9345,
+   "union_bandwidth_GHz_upper_bound": 14.261718749600002,
+   "freq_lo_GHz": 226.326975,
+   "freq_hi_GHz": 346.04821,
+   "drift_ceiling_Hz_s": [
+    2726.844,
+    4142.0385
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 15482.88,
+   "best_EIRP_W_new": 1573892755310260.2
+  },
+  {
+   "system_id": "HD61005",
+   "star": "HD61005",
+   "n_windows": 15,
+   "dist_pc": 36.4506,
+   "union_bandwidth_GHz_upper_bound": 23.2929687498,
+   "freq_lo_GHz": 230.087999,
+   "freq_hi_GHz": 873.091793,
+   "drift_ceiling_Hz_s": [
+    2766.2313,
+    10466.748
+   ],
+   "chanwidth_kHz": [
+    244.140625,
+    976.5625
+   ],
+   "on_source_s": 29941.92,
+   "best_EIRP_W_new": 1754670197854006.5
+  },
+  {
+   "system_id": "HR 1010 Gaia DR3 4722135642226902656",
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "n_windows": 13,
+   "dist_pc": 12.0394,
+   "union_bandwidth_GHz_upper_bound": 19.328613281000003,
+   "freq_lo_GHz": 229.609959,
+   "freq_hi_GHz": 346.237003,
+   "drift_ceiling_Hz_s": [
+    2766.3644,
+    4149.3216
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    976.5625
+   ],
+   "on_source_s": 27185.76,
+   "best_EIRP_W_new": 1796591939030477.2
+  },
+  {
+   "system_id": "LHS 1140",
+   "star": "LHS 1140",
+   "n_windows": 4,
+   "dist_pc": 14.9636,
+   "union_bandwidth_GHz_upper_bound": 7.3613281248,
+   "freq_lo_GHz": 229.078335,
+   "freq_hi_GHz": 230.921187,
+   "drift_ceiling_Hz_s": [
+    2759.982,
+    2760.0123
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 10402.56,
+   "best_EIRP_W_new": 1808406875415832.5
+  },
+  {
+   "system_id": "kap CrB",
+   "star": "kap CrB",
+   "n_windows": 1,
+   "dist_pc": 29.9911,
+   "union_bandwidth_GHz_upper_bound": 1.7255859375,
+   "freq_lo_GHz": 229.703284,
+   "freq_hi_GHz": 231.42887,
+   "drift_ceiling_Hz_s": [
+    2766.7929,
+    2766.7929
+   ],
+   "chanwidth_kHz": [
+    976.5625,
+    976.5625
+   ],
+   "on_source_s": 2963.52,
+   "best_EIRP_W_new": 1839425109939304.0
+  },
+  {
+   "system_id": "HD 155555C",
+   "star": "HD 155555C",
+   "n_windows": 1,
+   "dist_pc": 30.4116,
+   "union_bandwidth_GHz_upper_bound": 1.7250976562,
+   "freq_lo_GHz": 345.152317,
+   "freq_hi_GHz": 346.877415,
+   "drift_ceiling_Hz_s": [
+    4152.1784,
+    4152.1784
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 1270.08,
+   "best_EIRP_W_new": 1986875400985342.5
+  },
+  {
+   "system_id": "L 836-122",
+   "star": "L 836-122",
+   "n_windows": 1,
+   "dist_pc": 28.6967,
+   "union_bandwidth_GHz_upper_bound": 1.7250976562,
+   "freq_lo_GHz": 345.137454,
+   "freq_hi_GHz": 346.862552,
+   "drift_ceiling_Hz_s": [
+    4152.0,
+    4152.0
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 876.96,
+   "best_EIRP_W_new": 2044494498855491.8
+  },
+  {
+   "system_id": "TWA 7",
+   "star": "TWA 7",
+   "n_windows": 2,
+   "dist_pc": 34.0975,
+   "union_bandwidth_GHz_upper_bound": 1.7250976562,
+   "freq_lo_GHz": 345.547794,
+   "freq_hi_GHz": 346.416587,
+   "drift_ceiling_Hz_s": [
+    4151.7488,
+    4151.8238
+   ],
+   "chanwidth_kHz": [
+    244.140625,
+    244.140625
+   ],
+   "on_source_s": 4777.92,
+   "best_EIRP_W_new": 2046537666043455.8
+  },
+  {
+   "system_id": "CD-57 1054",
+   "star": "CD-57 1054",
+   "n_windows": 1,
+   "dist_pc": 26.8732,
+   "union_bandwidth_GHz_upper_bound": 1.7250976562,
+   "freq_lo_GHz": 345.123177,
+   "freq_hi_GHz": 346.848275,
+   "drift_ceiling_Hz_s": [
+    4151.8287,
+    4151.8287
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 1028.16,
+   "best_EIRP_W_new": 2194004350745141.0
+  },
+  {
+   "system_id": "CP-72 2713",
+   "star": "CP-72 2713",
+   "n_windows": 6,
+   "dist_pc": 36.7222,
+   "union_bandwidth_GHz_upper_bound": 9.200805663799999,
+   "freq_lo_GHz": 218.565445,
+   "freq_hi_GHz": 345.977754,
+   "drift_ceiling_Hz_s": [
+    2633.8273,
+    4141.3825
+   ],
+   "chanwidth_kHz": [
+    122.0703125,
+    488.28125
+   ],
+   "on_source_s": 15785.28,
+   "best_EIRP_W_new": 2225161499929618.2
+  },
+  {
+   "system_id": "HD14055",
+   "star": "HD14055",
+   "n_windows": 38,
+   "dist_pc": 35.7405,
+   "union_bandwidth_GHz_upper_bound": 69.70214843559997,
+   "freq_lo_GHz": 226.35992,
+   "freq_hi_GHz": 346.069099,
+   "drift_ceiling_Hz_s": [
+    2726.6696,
+    4141.7872
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 109105.91999999995,
+   "best_EIRP_W_new": 2257166805087815.5
+  },
+  {
+   "system_id": "GJ 2006A",
+   "star": "GJ 2006B",
+   "n_windows": 2,
+   "dist_pc": 34.9764,
+   "union_bandwidth_GHz_upper_bound": 3.4501953124,
+   "freq_lo_GHz": 345.155605,
+   "freq_hi_GHz": 346.880703,
+   "drift_ceiling_Hz_s": [
+    4152.2178,
+    4152.2178
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 1753.92,
+   "best_EIRP_W_new": 2287030293516175.0
+  },
+  {
+   "system_id": "j1256-1257",
+   "star": "LP 736-15",
+   "n_windows": 2,
+   "dist_pc": 21.1536,
+   "union_bandwidth_GHz_upper_bound": 3.451171875,
+   "freq_lo_GHz": 344.955202,
+   "freq_hi_GHz": 346.68094,
+   "drift_ceiling_Hz_s": [
+    4149.8159,
+    4149.8178
+   ],
+   "chanwidth_kHz": [
+    976.5625,
+    976.5625
+   ],
+   "on_source_s": 4354.56,
+   "best_EIRP_W_new": 2393866884541551.0
+  },
+  {
+   "system_id": "Wolf 219",
+   "star": "Wolf 219",
+   "n_windows": 2,
+   "dist_pc": 18.883,
+   "union_bandwidth_GHz_upper_bound": 3.4501953124,
+   "freq_lo_GHz": 229.264212,
+   "freq_hi_GHz": 230.994493,
+   "drift_ceiling_Hz_s": [
+    2761.5211,
+    2761.5833
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 120.96,
+   "best_EIRP_W_new": 2423513228934590.5
+  },
+  {
+   "system_id": "TYC 2211-1309-1",
+   "star": "TYC 2211-1309-1",
+   "n_windows": 1,
+   "dist_pc": 35.4239,
+   "union_bandwidth_GHz_upper_bound": 1.7250976562,
+   "freq_lo_GHz": 345.140648,
+   "freq_hi_GHz": 346.865745,
+   "drift_ceiling_Hz_s": [
+    4152.0384,
+    4152.0384
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 1391.04,
+   "best_EIRP_W_new": 2621713388526829.0
+  },
+  {
+   "system_id": "UCAC3 176-23654",
+   "star": "UCAC3 176-23654",
+   "n_windows": 1,
+   "dist_pc": 34.3459,
+   "union_bandwidth_GHz_upper_bound": 1.7250976562,
+   "freq_lo_GHz": 345.152801,
+   "freq_hi_GHz": 346.877898,
+   "drift_ceiling_Hz_s": [
+    4152.1842,
+    4152.1842
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 725.76,
+   "best_EIRP_W_new": 2709075179467941.0
+  },
+  {
+   "system_id": "PM J034331958",
+   "star": "PM J03433+1958",
+   "n_windows": 1,
+   "dist_pc": 20.7567,
+   "union_bandwidth_GHz_upper_bound": 1.7250976562,
+   "freq_lo_GHz": 229.264212,
+   "freq_hi_GHz": 230.98931,
+   "drift_ceiling_Hz_s": [
+    2761.5211,
+    2761.5211
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 60.48,
+   "best_EIRP_W_new": 2894440832336798.5
+  },
+  {
+   "system_id": "UCAC2 20312880",
+   "star": "UCAC2 20312880",
+   "n_windows": 1,
+   "dist_pc": 33.766,
+   "union_bandwidth_GHz_upper_bound": 1.7250976562,
+   "freq_lo_GHz": 345.101337,
+   "freq_hi_GHz": 346.826435,
+   "drift_ceiling_Hz_s": [
+    4151.5666,
+    4151.5666
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 876.96,
+   "best_EIRP_W_new": 3052909960841351.0
+  },
+  {
+   "system_id": "LP 353-51",
+   "star": "LP 353-51",
+   "n_windows": 2,
+   "dist_pc": 27.0991,
+   "union_bandwidth_GHz_upper_bound": 3.4501953124,
+   "freq_lo_GHz": 345.158988,
+   "freq_hi_GHz": 346.884208,
+   "drift_ceiling_Hz_s": [
+    4152.2584,
+    4152.2599
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 1512.0,
+   "best_EIRP_W_new": 3080048651136437.0
+  },
+  {
+   "system_id": "51 Eri",
+   "star": "51 Eri",
+   "n_windows": 1,
+   "dist_pc": 29.9052,
+   "union_bandwidth_GHz_upper_bound": 1.724609375,
+   "freq_lo_GHz": 229.662803,
+   "freq_hi_GHz": 231.387413,
+   "drift_ceiling_Hz_s": [
+    2766.3013,
+    2766.3013
+   ],
+   "chanwidth_kHz": [
+    1953.125,
+    1953.125
+   ],
+   "on_source_s": 1028.16,
+   "best_EIRP_W_new": 3147412195444566.5
+  },
+  {
+   "system_id": "Barta 161 12",
+   "star": "Barta 161 12",
+   "n_windows": 1,
+   "dist_pc": 37.2812,
+   "union_bandwidth_GHz_upper_bound": 1.7250976562,
+   "freq_lo_GHz": 345.157358,
+   "freq_hi_GHz": 346.882455,
+   "drift_ceiling_Hz_s": [
+    4152.2389,
+    4152.2389
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 876.96,
+   "best_EIRP_W_new": 3242843403867760.0
+  },
+  {
+   "system_id": "HD 23484 Gaia DR3 4856592239127350400",
+   "star": "HD 23484 Gaia DR3 4856592239127350400",
+   "n_windows": 4,
+   "dist_pc": 16.1696,
+   "union_bandwidth_GHz_upper_bound": 7.36328125,
+   "freq_lo_GHz": 229.609717,
+   "freq_hi_GHz": 231.450683,
+   "drift_ceiling_Hz_s": [
+    2766.3615,
+    2766.3633
+   ],
+   "chanwidth_kHz": [
+    976.5625,
+    976.5625
+   ],
+   "on_source_s": 11007.36,
+   "best_EIRP_W_new": 3560138294789178.0
+  },
+  {
+   "system_id": "HD 139084",
+   "star": "HD 139084",
+   "n_windows": 1,
+   "dist_pc": 38.7162,
+   "union_bandwidth_GHz_upper_bound": 1.7250976562,
+   "freq_lo_GHz": 345.144857,
+   "freq_hi_GHz": 346.869955,
+   "drift_ceiling_Hz_s": [
+    4152.0889,
+    4152.0889
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 1028.16,
+   "best_EIRP_W_new": 4930964275644089.0
+  },
+  {
+   "system_id": "WD 0407179",
+   "star": "WD 0407+179",
+   "n_windows": 1,
+   "dist_pc": 34.1102,
+   "union_bandwidth_GHz_upper_bound": 1.7250976562,
+   "freq_lo_GHz": 229.264212,
+   "freq_hi_GHz": 230.98931,
+   "drift_ceiling_Hz_s": [
+    2761.5211,
+    2761.5211
+   ],
+   "chanwidth_kHz": [
+    488.28125,
+    488.28125
+   ],
+   "on_source_s": 60.48,
+   "best_EIRP_W_new": 7928688014634855.0
+  },
+  {
+   "system_id": "HD 48370",
+   "star": "HD 48370",
+   "n_windows": 4,
+   "dist_pc": 35.9519,
+   "union_bandwidth_GHz_upper_bound": 4.1412353514,
+   "freq_lo_GHz": 218.560028,
+   "freq_hi_GHz": 492.621396,
+   "drift_ceiling_Hz_s": [
+    2633.7623,
+    5905.9343
+   ],
+   "chanwidth_kHz": [
+    122.0703125,
+    488.28125
+   ],
+   "on_source_s": 7922.879999999999,
+   "best_EIRP_W_new": 8326156509908310.0
+  },
+  {
+   "system_id": "HD 45184",
+   "star": "HD 45184",
+   "n_windows": 7,
+   "dist_pc": 21.8923,
+   "union_bandwidth_GHz_upper_bound": 12.0791015625,
+   "freq_lo_GHz": 229.665836,
+   "freq_hi_GHz": 231.392033,
+   "drift_ceiling_Hz_s": [
+    2766.3436,
+    2766.3509
+   ],
+   "chanwidth_kHz": [
+    976.5625,
+    976.5625
+   ],
+   "on_source_s": 20532.96,
+   "best_EIRP_W_new": 8790698065416155.0
+  },
+  {
+   "system_id": "ALMA J153702653-33192492",
+   "star": "ALMA J153702653-33192492",
+   "n_windows": 43,
+   "dist_pc": 35.0098,
+   "union_bandwidth_GHz_upper_bound": 58.89257812339996,
+   "freq_lo_GHz": 216.068221,
+   "freq_hi_GHz": 348.701468,
+   "drift_ceiling_Hz_s": [
+    2603.8606,
+    4174.067
+   ],
+   "chanwidth_kHz": [
+    244.140625,
+    976.5625
+   ],
+   "on_source_s": 8447.04,
+   "best_EIRP_W_new": 8931108287989927.0
+  },
+  {
+   "system_id": "HD 31392",
+   "star": "HD 31392",
+   "n_windows": 9,
+   "dist_pc": 25.7602,
+   "union_bandwidth_GHz_upper_bound": 15.5302734375,
+   "freq_lo_GHz": 229.651114,
+   "freq_hi_GHz": 231.387485,
+   "drift_ceiling_Hz_s": [
+    2766.1669,
+    2766.2963
+   ],
+   "chanwidth_kHz": [
+    976.5625,
+    976.5625
+   ],
+   "on_source_s": 26671.68,
+   "best_EIRP_W_new": 1.2357071701510944e+16
+  },
+  {
+   "system_id": "HD 89452",
+   "star": "HD 89452",
+   "n_windows": 8,
+   "dist_pc": 36.227,
+   "union_bandwidth_GHz_upper_bound": 13.8046875,
+   "freq_lo_GHz": 229.664145,
+   "freq_hi_GHz": 231.391989,
+   "drift_ceiling_Hz_s": [
+    2766.3232,
+    2766.3504
+   ],
+   "chanwidth_kHz": [
+    976.5625,
+    976.5625
+   ],
+   "on_source_s": 22982.399999999998,
+   "best_EIRP_W_new": 2.4424363968867436e+16
+  },
+  {
+   "system_id": "HD377",
+   "star": "HD377",
+   "n_windows": 2,
+   "dist_pc": 38.4045,
+   "union_bandwidth_GHz_upper_bound": 3.451171875,
+   "freq_lo_GHz": 229.653766,
+   "freq_hi_GHz": 231.399716,
+   "drift_ceiling_Hz_s": [
+    2766.1987,
+    2766.4431
+   ],
+   "chanwidth_kHz": [
+    976.5625,
+    976.5625
+   ],
+   "on_source_s": 4324.32,
+   "best_EIRP_W_new": 3.4734158564182864e+16
+  }
+ ]
+}

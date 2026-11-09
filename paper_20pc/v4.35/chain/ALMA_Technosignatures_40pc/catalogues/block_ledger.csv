@@ -1,0 +1,19 @@
+row,set,blocks,windows,stars,systems,hours,part_of_parent,sum_rule
+1,Archival scope: blocks the query exposes,656,,,,,1,"sum of rows 1.1, 1.2"
+1.1,processed with the same pipeline,479,,,,,1,
+1.2,not processed at the freeze,177,,,,,1,
+2,"Processed with the same pipeline, 5 of them outside the scope query",484,,,,,1,"sum of rows 2.1, 2.2"
+2.1,Primary census,407,1663,90,83,1178.39,1,"sum of rows 2.1.1, 2.1.2"
+2.1.1,"Class A, fine channels",,405,66,61,240.15,1,
+2.1.2,"Class B, coarse channels",,1258,89,82,938.25,1,
+2.2,Reserved hold-out,77,315,36,,236.92,1,
+3,Not processed at the freeze,177,,,,,1,"sum of rows 3.1, 3.2"
+3.1,Calibrated and searched,144,,,,,1,"sum of rows 3.1.1, 3.1.2, 3.1.3, 3.1.4"
+3.1.1,"Archival extension, reported",115,463,16,16,361.59,1,rows 3.1.1.1 are subsets
+3.1.1.1,"of which Class A, fine channels",,67,11,,48.46,0,
+3.1.2,"Archival tail, searched after the extension was frozen",8,32,5,5,22.69,1,rows 3.1.2.1 are subsets
+3.1.2.1,"of which Class A, fine channels",,14,5,,9.74,0,
+3.1.3,"eps Eri Band 6, withheld",8,32,1,,25.09,1,
+3.1.4,"Searched, no window reached an export",13,,,,,1,
+3.2,"Not searched: 18 without a delivered calibration, 11 failed to calibrate, 3 not attempted, 1 too large for the working disk",33,,,,,1,
+4,Beyond 40 pc: out-of-sample control,47,198,22,,86.70,1,

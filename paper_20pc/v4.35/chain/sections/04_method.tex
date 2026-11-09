@@ -1,0 +1,306 @@
+\section{Data and methodology}
+\label{sec:method}
+
+A carrier from an accelerating transmitter drifts in sky frequency, and over
+a long track its power spreads across many channels. The analysis therefore
+\emph{de-drifts} the data, shifting each integration's spectrum to follow a
+trial drift rate before adding the integrations together. This section
+describes that search, how its output is turned into a power, and the three
+steps through which every event then passes.
+
+\subsection{The de-drifted search statistic}
+\label{sec:statistic}
+
+The search statistic is the largest stacked signal-to-noise ratio anywhere on
+the channel$\times$drift grid of a window's dynamic spectrum,
+%
+\begin{equation}
+T(\mathbf{x})=\max_{\dot\nu,\;\nu}\;
+\frac{\sum_{t} I\!\left(\mathbf{x},t,\nu+\dot\nu t\right)
+       \big/\sigma^{2}(t,\nu+\dot\nu t)}
+     {\left[\sum_{t}1\big/\sigma^{2}(t,\nu+\dot\nu t)\right]^{1/2}},
+\label{eq:tstar}
+\end{equation}
+%
+where $I(\mathbf{x},t,\nu)$ is the spectrum at sky position $\mathbf{x}$ in
+integration $t$ and channel $\nu$, $\dot\nu$ is the trial drift rate, and
+$\sigma(t,\nu)$ is the noise scale, both evaluated at the channel the track
+occupies in that integration. $T_\star$ denotes the value at the star. The
+time $t$ runs from the first integration, so the frequency that labels a
+track is the one a carrier would occupy at the start of the block, and a
+repeat epoch is read at the cell the same convention fixes
+(\S\ref{sec:etacrv}).
+
+Equation~\ref{eq:tstar} is the matched filter, and $T$ an absolute
+signal-to-noise ratio, only if the noise is independent between integrations
+and channels. The analysis does not assume that. The trigger is instead set
+against the distribution $T$ actually takes in the data, measured in every
+window at \NCtrl{} control positions on the same visibilities and through the
+same stack. A value of $T$ is then converted into a power with injected
+carriers recovered through the unchanged pipeline (\S\ref{sec:pninetysel}).
+The controls lie, from a fixed seed, in an annulus set by each block's
+synthesised and primary beams. The noise scale $\sigma$ is their median
+absolute deviation at each integration and channel, scaled to a
+Gaussian-equivalent standard deviation, and the statistic is evaluated in the
+same way at the star and at each control. The field read over is the whole
+primary beam, that is every \texttt{FIELD} entry in which the star's
+primary-beam response reaches \BgFieldMinResp.
+
+Spectra are extracted at the star's apparent position, never from images. For
+each integration and native channel the pipeline forms the weighted vector
+average of the phase-shifted visibilities in total intensity, $I=(XX+YY)/2$.
+That is the dirty-map value at the star, an amplitude and not a deconvolved
+flux density, so it is not a point-source measurement where the field holds
+extended emission. The correction for the star's offset from the phase
+centre is measured with injected carriers (Appendix~\ref{app:pbresp}).
+The deposited extractor propagates each position to the observation epoch
+for proper motion and annual parallax. Some products were made by the first
+forms of the extractor, which propagated proper motion only, and for those
+windows the parallax loss is corrected window by window
+(Table~\ref{tab:p90budget}; Appendix~\ref{app:pbresp}).
+Orbital motion is bounded for every component of a multiple in
+Appendix~\ref{app:pbresp}.
+
+% FLAGS SENTENCE (one sentence; every number from reflagdecl_r29.py, round 2900)
+The data are the archive's deliveries, and most of the blocks that matter
+were recalibrated with ALMA's final flags, \RflNEbCore{} of the
+\RflNEbCoreAll{} that set a quoted limit or held a crossing when the
+recalibration was planned. The other \RflNEbNot{}, \RflNNotLim{} of them
+setting a limit and \RflNNotCross{} holding a crossing, kept the delivered
+calibration. Table~\ref{tab:recalrecon} sorts every block by what it holds
+now, which leaves
+\LrRecNCrossNotRec{} blocks with a crossing and \LrRecNBestNotRec{} with a
+system's best limit on the delivered calibration. It also sets out the
+\XgNBlkPlan{} blocks of the Data Availability statement
+(\texttt{catalogues/\allowbreak recalibration\_reconciled.csv}). Measured at
+the control positions, the mixed calibration keeps the chance expectation
+within \RflCeLo--\RflCeHi.
+
+Every delivered channel is searched, without regridding, deconvolution or
+edge trimming. A per-integration median along frequency removes the
+continuum, and none is taken along time, so no feature narrow against the
+band can be removed. The delivered channels are smoothed, so a correction
+computed from the correlator's own channel shape turns flux density times
+channel width into a radiated power (Appendix~\ref{app:conventions}).
+
+The search itself runs on the topocentric sky frequencies ALMA delivered, and
+every drift rate quoted is the apparent one at the telescope, except where a
+table gives it in the star's frame. Two later steps
+need the star's own frame: comparing a crossing with the line catalogue, and
+reading a repeat epoch at the \emph{predicted cell}, which is the single
+channel and drift rate of the discovery held fixed in the star's frame. An
+emitter at rest in that frame, as a line is, would be found again there,
+while a drifting carrier would by then have moved elsewhere. Both steps
+correct each block's frequency axis for the Earth's motion and then for the
+star's systemic velocity. That is the SIMBAD radial velocity \citep{SIMBAD2000},
+queried on \SimbadQueryDate, or zero where none exists, as it is,
+\FrZeroVsysClause. Toward $\beta$~Pic the value of the ALMA CO analysis of
+its disc \citep{Matra2017} is adopted.
+
+Two power quantities follow from the statistic, and both are defined in
+Table~\ref{tab:quantities}. The trigger level $P_{\rm trig}$ is an internal
+pipeline level. The sensitivity $\mathrm{EIRP}_{90}$ is measured by injecting
+synthetic carriers of known amplitude into the calibrated visibilities of
+\SensNInj{} windows and recovering them through the unmodified pipeline.
+Every carrier limit quoted is the $\mathrm{EIRP}_{90}$ of its own window,
+given beside its native channel width, except the labelled bare-threshold
+comparisons of \S\ref{sec:intro}, and its error budget is
+Table~\ref{tab:p90budget}. The
+amplitude scale is checked twice. An independent reduction of the same
+AU~Mic visibilities is reproduced to \PxJanRatio\,$\pm$\,\PxJanRatioErr,
+which tests the extraction and not ALMA's flux transfer. The quiescent flux
+density of $\epsilon$~Eridani \citep{Burton2022} is recovered to
+\PxEpsRatio\,$\pm$\,\PxEpsRatioErr, which measures the scale to \SbEpsPct{}
+per cent. That is consistent with ALMA's own flux-scale specification,
+$\pm\BudFlux$ per cent for the sample's bands. Combined in quadrature
+with the factor's sampling error and the distance and visibility scale, it
+gives the $\pm\BudComb$ per cent interval we adopt
+for the absolute scale (Table~\ref{tab:p90budget}).
+
+The drift range is bounded by an acceleration and not by a frequency, since
+drift rate and line-of-sight acceleration are one quantity in two sets of
+units,
+%
+\begin{equation}
+\frac{\dot\nu}{\nu}=\frac{a_{\rm los}}{c}
+\qquad\text{and so}\qquad
+a_{\rm los}=\frac{c\,\dot\nu}{\nu},
+\label{eq:accel}
+\end{equation}
+%
+and a ceiling on $\dot\nu/\nu$ is then the same physical limit in every band.
+The ceiling is \DriftCeilLo\,Hz\,s$^{-1}$\,GHz$^{-1}$, or
+\AccelCeilMed\,m\,s$^{-2}$ by Equation~\ref{eq:accel}, in \AccelNDefault{} of
+the \NWinA{} windows, and \DriftCeilHi\,Hz\,s$^{-1}$\,GHz$^{-1}$
+(\AccelCeilMax\,m\,s$^{-2}$) on the \AccelNWide{} \AccelWideStar{} windows,
+whose innermost planet demands more. The default is roughly the acceleration
+of a transmitter orbiting a solar-type star at a few hundredths of an au. It
+is the \citet{Mason2025} fiducial with a threefold margin, and
+\AccelSheikhPct{} per cent of the \AccelSheikhNHz\,nHz that
+\citet{Sheikh2019} recommend for a general search. The grid is uniform in
+$\dot\nu$ and runs from the negative ceiling to the first trial at or beyond
+the positive one (Appendix~\ref{sec:edge}), in steps of half a native channel
+over the span of the integrations searched. A carrier midway between two
+trials therefore loses \DriftGridSpanHalf{} of a channel over that span, and
+at most \DriftGridFineHalf{} over the longest on-source time.
+
+The survey does not constrain a transmitter whose apparent
+acceleration exceeds that range, whether it is chirped faster (a chirp is
+not distinguished from acceleration) or its orbital and
+rotational accelerations together exceed it. Transiting TRAPPIST-1~b is the
+most demanding known case. At the default ceiling \TrapPhaseHi{} per cent of
+its orbital phase would lie out of reach, and the widened grid used on its
+star matches its maximum acceleration only to within the $\pm\TrpAmaxPct$ per
+cent to which its host's mass and orbit are known.
+
+Searching over drift also only helps if the largest searched drift moves a
+carrier across about one channel while the star is observed,
+$\eta_{\rm drift}=|\dot\nu_{\max}|\tau_{\rm on}/\Delta\nu_{\rm ch}\gtrsim1$,
+where $\tau_{\rm on}$ is the time on source. \EtaDriftAOk{} of the \NWinA{}
+Class~A windows satisfy it. The other \EtaDriftALo{} fall below it because
+their tracks are short, and the per-window catalogue carries
+$\eta_{\rm drift}$ for every window.
+
+\subsection{From a crossing to a recurrent feature}
+\label{sec:summary}
+
+Every window passes through three steps in the same order: the trigger, the
+line attribution and the recurrence tests. They yield in turn a
+\emph{crossing}, an \emph{unattributed crossing} and, had one been found
+again, a \emph{recurrent feature}, each defined once in
+Table~\ref{tab:quantities}. A recurrent feature would not yet be an
+artificial signal, since a line or interference can return as well.
+Every count below is read from the ledger of every crossing the search
+produced, and is of primary crossings, one to a window.
+
+\emph{The trigger.} The level set on $T_\star$ carries no tail probability.
+$T$ has not been shown to follow any standard distribution under the null
+hypothesis, and a window holds between \TuCellsLo{} and $\TuCellsHi$
+channel$\times$drift cells, so one level buys very different protection in
+different windows. Every cell that reaches the trigger is recorded, and not
+only the largest, because a carrier can be hidden as effectively by a noise
+excursion as by a line.
+
+\emph{The background.} With no tail probability attached, a fixed threshold
+is not a fixed false-alarm rate either. The number of crossings expected by chance is instead computed window
+by window, from the rate at which that window's own control positions exceed
+the trigger. This assumes that a star behaves like a control position in its
+own field, which the reserved hold-out blocks test (\S\ref{sec:trigunif}).
+The census's \CsNCrossQp{} crossings, all of them Class~A, are the baseline
+every expectation is set against. Of these, \BkFlagNCrossOtherWord{} lies in a
+window whose control ensemble fails to behave like noise
+(Appendix~\ref{sec:blockquality}), and it is counted but withheld from the
+amplitude-dependent tests (Appendix~\ref{app:falsealarm}).
+
+\emph{The line attribution.} At these frequencies many crossings will be
+molecular lines, so each one is compared with a line catalogue. The
+comparison is a single database query, made on \MkListDate{} and repeatable
+as it stands. A crossing within $\pm\MaskHalfKms$\,km\,s$^{-1}$ of a
+catalogued transition in the star's rest frame is \emph{attributed}. The
+half-width follows the Keplerian line-of-sight velocities of gas surviving
+beyond \EcKepRAu\,au, with a margin for the systemic velocity. One fixed list of
+\FrNSpec{} species is searched, whatever a window was tuned to. It was
+completed at that query, after the crossings had been examined
+(Appendix~\ref{app:linemask}), and the chance comparison of
+\S\ref{sec:trigunif} is therefore conditional on the mask as adopted. Of the
+\CnCross{} crossings of the census and the archival tail, the query attributes
+\FrAttrWFifty{} and leaves \FrUnattrWFifty. Halving the half-width to
+$\pm25$\,km\,s$^{-1}$ gives \FrAttrWTwentyFive{} and \FrUnattrWTwentyFive{}
+respectively.
+An attribution is a coincidence with a catalogue, not an identification or a
+disposal, so every crossing goes on to the recurrence tests whichever side of
+the mask it falls. The price of the mask is that the survey constrains
+nothing inside it.
+
+\emph{The recurrence tests.} A repeat counts only if it comes from a
+\emph{separated} block, which here means a block of another observing session
+and more than \EpSep{} day from the discovery. The session matters as much as
+the interval, because blocks of one session share calibrators, atmosphere,
+correlator setup and interference. Two different tests are then made, and
+they answer different questions. The \emph{line-recurrence check} is a
+same-frequency test. It reads the predicted cell, $\pm\RqDvLo$ to
+$\pm\RqDvHi$\,km\,s$^{-1}$ wide, in a separated block, and so it can find
+again only an emitter that holds its frequency in the star's frame. The
+\emph{trajectory comparison} asks instead whether one bounded trajectory
+inside the drift grid joins two crossings. It is the only test here that a
+drifting carrier could meet, and while it can separate two crossings it
+cannot show that they are one carrier. Table~\ref{tab:quantities} states what
+each test can establish, and Fig.~\ref{fig:waterfall}(b) shows the frequencies
+at which a separated block exists at all.
+
+Whether the chain finds what it is meant to find is tested with the injected
+carriers of \S\ref{sec:pninetysel}, and with $\beta$~Pictoris CO, a real
+feature at a known stellar position, which is recovered and localised in two
+transitions and \CsBpCoBlocks{} execution blocks (\S\ref{sec:bpicval}).
+
+
+\begin{table*}
+\centering
+\caption{Operational definitions, used in this sense throughout. A crossing is
+a single-epoch event; a recurrent feature needs a second, separated epoch,
+which no sensitivity supplies, and is still not by itself an artificial
+signal.}
+\label{tab:quantities}
+\small
+\begin{tabular}{@{}p{0.145\textwidth}p{0.825\textwidth}@{}}
+\hline
+Term & Definition \\
+\hline
+Crossing &
+A channel\,$\times$\,drift cell at the stellar position reaching
+$T_\star\geq\StageNullTrig$ in one execution block; neighbouring channels
+above the trigger belong to one crossing. The largest in a window is its
+\emph{primary} crossing, any other a \emph{secondary} one. An event requiring
+investigation; no claimed significance. \\
+Unattributed crossing &
+A crossing more than $\MaskHalfKms$\,km\,s$^{-1}$ in the star's frame from
+every transition of the line catalogue. A target for follow-up; not a
+detection. \\
+Recurrent feature &
+The same event found again in a separated block (\S\ref{sec:summary}),
+either at the cell the discovery predicts in the star's frame (the
+\emph{line-recurrence check}) or in an additional separated epoch at the
+frequency an independently specified trajectory predicts, with adequate
+sensitivity there. Recurrence is necessary for an artificial origin but not
+sufficient, since line identity, interference and the behaviour of the
+frequency in the star's frame must also be checked and set aside. The check recovers only an emitter at rest in the star's
+frame, as a line is, so a null there says nothing about a drifting or
+re-tuned carrier. A pair of crossings that one bounded trajectory inside the drift
+grid joins is \emph{open}, not recurrent: the joining test can reject a pair
+and cannot accept one (Table~\ref{tab:pairs}). For \ZcNoRepSys{} Class~A
+systems this archive holds no separated block at the frequency, so the
+line-recurrence check can confirm nothing there, whatever the sensitivity. \\
+$P_{\rm trig}$ &
+$4\pi d^{2}S\,\Delta\nu$, the power at distance $d$ of a carrier that makes
+$T_\star$ reach $T_{\rm trig}=\StageNullTrig$ in one native channel of width
+$\Delta\nu$: an internal pipeline level, not a sensitivity. \\
+$\mathrm{EIRP}_{90}$ &
+The power at which nine injected carriers in ten produce a crossing at the
+star (in a window holding an unattributed crossing, nine in ten reach that
+crossing's own statistic; \S\ref{sec:pninetysel}), before the spatial rank against the control positions is applied. This
+is what the paper means by a carrier limit. The Class~B limits of
+\S\ref{sec:stack} bound an unresolved excess and carry their own injection
+factor. $\mathrm{EIRP}_{90}$ is thus a measured single-epoch
+trigger completeness, neither a detection probability nor a deterministic
+exclusion. One class factor, calibrated by injection in \SensNInj{}
+Class~A windows and multiplied by the measured response ratio of each
+window's averaging mode, sets every Class~A limit. It is interpolated within
+the injected configurations for \NgNInterpWin{} windows and extrapolated
+beyond them for \NgNExtrapWin{} (\S\ref{sec:pninetysel}); each injected window's own point
+($\times\SensIndivFacLo$--$\times\SensIndivFacHi$) is in the data archive.
+It does not include atmospheric decorrelation (Table~\ref{tab:p90budget}). \\
+Class~A &
+The primary experiment, defined by channel width: \NWinA{} fine-channel
+windows, median \ChanAMedKHz\,kHz, toward \NSysA{} systems over
+\UnionClassA\,GHz of union bandwidth, \EtaDriftAOk{} of which satisfy
+$\eta_{\rm drift}\gtrsim1$ (\S\ref{sec:statistic}). \\
+Class~B &
+The secondary experiment: \NWinB{} coarse-channel windows, mode
+\ChanBModeMHz\,MHz, constraining an unresolved narrowband spectral excess.
+Never a carrier search: in \ScCoarseNoDrift{} of them no searched drift leaves
+one channel, and in the other \EtaDriftBHi{} the whole searched range moves a
+carrier \ScBhEtaLo--\ScBhEtaHi{} channels, which registers one but does not
+discriminate it. \\
+\hline
+\end{tabular}
+\end{table*}

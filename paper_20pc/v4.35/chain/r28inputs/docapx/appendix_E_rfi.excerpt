@@ -1,0 +1,67 @@
+% EXCERPT SOURCE for documentation/appendix_E_rfi.md -- row 37, r27-cut-apx.
+%% Each block is the FULL paragraph as it stood before the cut (pristine v4.27
+%% plus the Phase-1 / r27-cut-results records it depends on). Macros must be
+%% expanded by zdeposit.py from the SAME build's macro files; \ref/\S\ref must be
+%% rendered as words (CODE.md rule 1: no section/table numbers in the deposit).
+
+%% ---- X-E1 (sections/app_N_rfi.tex); printed text kept in the paper: see CUT_APX.md
+Interference is the first alternative explanation for an unattributed
+crossing, so the screening this survey has and the coverage it lacks are both
+set out here. Millimetre interferometry is an unusually poor environment for
+terrestrial interference, though not an empty one: ITU Radio Regulations
+Article~5 \citep{ITU2024} carries active allocations across the searched
+bands, while an interferometer is not a total-power detector, so a signal not
+in the far field at the phase centre acquires a rapidly varying geometric
+phase across the array and is suppressed in the correlation rather than
+imaged. The documented hazard is spaceborne cloud radar in the
+\RadarLo--\RadarHi\,GHz Earth exploration-satellite allocation
+\citep{CloudSat2002,EarthCARE2023,ALMAMemo504}: \RadarNWin{} of the
+\RadarNTot{} census windows overlap it, carrying \RadarNCross{} threshold
+crossings and \RadarNStage{} rank-passing events, so no result here rests on
+it. \emph{The five tests of Table~\ref{tab:rfitests} carry none of the signatures
+interference leaves, and their coverage is uneven.} Each is computed for every
+searched window of the census, as is the \NCtrl-position rank screen, while
+recurrence reaches only the crossings with a covering repeat block; and
+because the observatory's own correlator flagging was not retained window by
+window, \emph{no per-channel interference flag of our own exists, and none can
+be recovered} -- which is also why the five populations differ, each test
+needing a different quantity to have been recorded. The clustering the
+crossings do show is the attribution seen from the other side: the one
+concentration a reader will notice, \TlBandAll{} crossings between
+\TlBandLo{} and \TlBandHi\,GHz, is the carbon monoxide tuning, \TlBandObs{} of
+the \TlBandNSub{} unattributed crossings the census and the reserved hold-out
+together place in a searched window (row 2.4 of
+\texttt{catalogues/count\_accounting.csv}) against
+\TlBandNull$\,\pm\,$\TlBandNullSd{} expected from where the spectral windows
+were tuned, and that interval holds \TlBandNLine{} telluric transitions. The
+mask must precede the occupancy screen, because \RfiOccMaskN{} of the
+\RfiOccSigN{} above-trigger windows sit on a masked transition and a carbon
+monoxide line falls at nearly the same sky frequency toward every nearby star,
+which is the coincidence that screen is looking for; applied, it reads
+\RfiOccMskObs{} against \RfiOccMskNull$\,\pm\,$\RfiOccMskNullSd. No
+crossing lies inside the atmospheric screen's radius; the same radius is
+taken off the control side as one pooled surviving fraction, so the residual asymmetry runs against the null of
+Appendix~\ref{app:falsealarm} and not for it. The fifth test bounds the one
+mechanism that could put a crossing where no line is catalogued: the first
+local oscillator is not delivered, but each block's own spectral windows pin
+$\nu_{\rm LO1}$ to a median \ImLoWidthBlkGHz\,GHz and so place every
+crossing's image \ImGapLoGHz--\ImGapHiGHz\,GHz away, never inside its own
+window, while \ImNNoParentWide{} of the \ImNScreen{} survive on frequency
+alone with the interval taken \ImWideGHz\,GHz wider at each end, so it is a
+bound and not a clearance, and \ImNDsb{} crossings lie where the receivers are
+double-sideband and no such bound could be drawn. Where a carbon monoxide
+isotopologue does fall in the image band, \ScImNHitCross{} crossings lie at
+the image position against \ScImExp{} expected, and the parent of the
+unattributed one among them, toward \ScImUnStarA, does not attribute it: it was
+observed at its own frequency in the same block with nothing at the trigger,
+the largest amplitude \ScImUnRatioA{} times the crossing's own where a leak at
+the \ImIrrDb\,dB image rejection ALMA specifies would need \ImIrrFac{} times
+as much.
+
+%% ---- X-E2 (sections/app_N_rfi.tex); printed text kept in the paper: see CUT_APX.md
+\emph{None of this substitutes for the ON/OFF cadence a dedicated search
+uses}: allocation tables cannot exclude harmonics, intermodulation products,
+unconventional emitters or near-field sources, and archival data without a
+simultaneous off-source strategy cannot do better. These are statements about
+the population and not a clearance of any one crossing.
+

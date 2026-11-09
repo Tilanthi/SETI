@@ -1,0 +1,94 @@
+{
+ "released": {
+  "windows": 1651,
+  "stars": 89,
+  "systems": 82,
+  "crossings": 56,
+  "classA": 402,
+  "classB": 1249,
+  "hours": 1094.2067027777766
+ },
+ "sequence": [
+  {
+   "state": "<= v4.06  right counts, WRONG content",
+   "windows": 1655,
+   "stars": 90,
+   "crossings": 56
+  },
+  {
+   "state": "v4.07-v4.08  honest interim",
+   "windows": 1651,
+   "stars": 89,
+   "crossings": 56
+  },
+  {
+   "state": "v4.09 step 1  companion restored",
+   "windows": 1655,
+   "stars": 90,
+   "crossings": 57
+  },
+  {
+   "state": "v4.09 step 2  44-unit repair",
+   "windows": 1655,
+   "stars": 90,
+   "crossings": 54
+  },
+  {
+   "state": "v4.09 step 3  tail",
+   "windows": 1687,
+   "stars": 90,
+   "crossings": 56
+  }
+ ],
+ "final": {
+  "windows": 1687,
+  "stars": 90,
+  "crossings": 56,
+  "systems": 82,
+  "classA": 417,
+  "classB": 1270,
+  "hours": 1185.4911671010386
+ },
+ "dh_repair_h": 68.597464323262,
+ "h_tail": 22.687,
+ "fell": [
+  [
+   "eta Crv",
+   "A002_X75bfbf_X1430",
+   345.540374,
+   5.012601852416992,
+   4.902572154998779
+  ],
+  [
+   "HR 1010 Gaia DR3 4722135642226902656",
+   "A002_Xc66ce1_X1345",
+   345.62056,
+   5.582047939300537,
+   4.577319145202637
+  ],
+  [
+   "HR 1010 Gaia DR3 4722135642226902656",
+   "A002_Xc6a3db_X7b5b",
+   345.478187,
+   5.054224967956543,
+   4.479077339172363
+  ],
+  [
+   "tau Cet",
+   "A002_Xba460f_X7e6",
+   231.033401,
+   5.198010444641113,
+   4.906414031982422
+  ]
+ ],
+ "rose": [
+  [
+   "HR 1010 Gaia DR3 4722135642226902656",
+   "A002_Xc6fa08_X1053",
+   3.7673392295837402,
+   5.409688472747803
+  ]
+ ],
+ "n_unjoined": 8,
+ "fail": []
+}

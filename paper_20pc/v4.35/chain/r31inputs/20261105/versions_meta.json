@@ -1,0 +1,77 @@
+[
+ {
+  "tag": "E1",
+  "stage": "extraction",
+  "file": "seti_extract_generic.py.pre-aca-20260923",
+  "deposit": "E1_pre_aca/seti_extract_generic.py",
+  "in_production": "2026-08-30 to 2026-09-23 10:13 UTC",
+  "differs": "control annulus from a 12 m dish for every window; barycentric (no parallax) phase centre; one FIELD row kept",
+  "fingerprint": "srcspec without dish_m",
+  "sha256": "43a1d9ab6eca745d745f3d85f16cde3194f47921543a5ae5cce27f01e9985d8d"
+ },
+ {
+  "tag": "E2",
+  "stage": "extraction",
+  "file": "seti_extract_generic.py.bak.20261002T060313Z",
+  "deposit": "E2_aca_geometry/seti_extract_generic.py",
+  "in_production": "2026-09-23 10:13 to 2026-10-02 06:03 UTC",
+  "differs": "own-dish annulus floored at two synthesised beams; otherwise E1",
+  "fingerprint": "srcspec with dish_m, no extract_version",
+  "sha256": "802ffb74cfb25fcdcf3acf248652b34ed82ef6f5f8200ddbd5eb2e0b54dfd7cc"
+ },
+ {
+  "tag": "E3",
+  "stage": "extraction",
+  "file": "seti_extract_generic.py",
+  "deposit": "(the deposited extractor)",
+  "in_production": "2026-09-26 (round-8 campaign); production from 2026-10-02",
+  "differs": "apparent (parallax-displaced) phase centre; every in-beam FIELD row; EXPOSURE on-source time",
+  "fingerprint": "extract_version r8-multifield-parallax-20260926",
+  "sha256": "dd1300e028bc8985df2dfd374ea2757b79553cf0b8b8dad3c621a460397dbe48"
+ },
+ {
+  "tag": "S0830",
+  "stage": "search",
+  "file": "seti_drift_search_generic.py.bak_pre_far_20260909_123154",
+  "deposit": "S0830/seti_drift_search_generic.py",
+  "in_production": "2026-08-30 12:01 to 2026-09-09 12:31",
+  "fingerprint": "result.json 43 keys",
+  "sha256": "1b5506a08243805301bea8e95ddf4439e9a2f475017d1ad05aae667991f2938d"
+ },
+ {
+  "tag": "S0909",
+  "stage": "search",
+  "file": "seti_drift_search_generic.py.bak_pre_msreclaim",
+  "deposit": "S0909/seti_drift_search_generic.py",
+  "in_production": "2026-09-09 (after the FAR p-values were added, before the split-MS reclaim)",
+  "fingerprint": "result.json 51 keys",
+  "sha256": "d60ece66529e50b906e32a2d6d92584de88be583b46018f515df83b3c5ef1be2"
+ },
+ {
+  "tag": "S0911",
+  "stage": "search",
+  "file": "seti_drift_search_generic.py.bak-20260913",
+  "deposit": "S0911/seti_drift_search_generic.py",
+  "in_production": "2026-09-09 to 2026-09-13 20:43 (with the split-MS reclaim)",
+  "fingerprint": "result.json 51 keys",
+  "sha256": "d72c13684801dd3eda15db94de58c2a5bd95a1e7ea439af74c96bcad02bd4719"
+ },
+ {
+  "tag": "S0913",
+  "stage": "search",
+  "file": "seti_drift_search_generic.py.bak.20261002T060313Z",
+  "deposit": "S0913/seti_drift_search_generic.py",
+  "in_production": "2026-09-13 20:43 to 2026-10-02 06:03",
+  "fingerprint": "result.json 52 keys (ctrl_all)",
+  "sha256": "0e5708cd6061ba5f4485bf6703992131de760dc745dda35a8af4aeb617a273b5"
+ },
+ {
+  "tag": "final",
+  "stage": "search",
+  "file": "seti_drift_search_generic.py",
+  "deposit": "(the deposited search)",
+  "in_production": "2026-09-26 (round 8); production from 2026-10-02",
+  "fingerprint": "result.json extract_version",
+  "sha256": "ccca9bd86ae45dc4407905b3ca2223b4ff7cc121bcf1e109e5a9796aaf03ea5c"
+ }
+]

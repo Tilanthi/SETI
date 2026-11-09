@@ -1,0 +1,25 @@
+{
+ "CWTFM_survey_median_eirp": 12766.713960537405,
+ "CWTFM_survey_worst_eirp": 379467.9645908707,
+ "CWTFM_sys_median_eirp": 331183.9462461477,
+ "TR_survey": 0.17230411763502387,
+ "TR_sys": 4.469776467869229,
+ "dnu_survey_GHz": 47.74043000000026,
+ "dnu_sys_median_GHz": 1.8403319999999894,
+ "eirp_psel_best_W": 86964312120000.0,
+ "eirp_psel_median_W": 1481881470480000.0,
+ "eirp_psel_worst_W": 4.404630252594e+16,
+ "f_upper_95": 0.05,
+ "f_upper_naive": 0.016666666666666666,
+ "literature_CWTFM": {
+  "Enriquez2017": 0.85,
+  "Phoenix": 49.0,
+  "Price2020_GBT": 0.11,
+  "Price2020_Parkes": 8.21
+ },
+ "n_systems_A": 60,
+ "nu_mid_GHz": 493.55236,
+ "nu_rel_survey": 0.09672819718661715,
+ "nu_rel_sys": 0.0037287472397052046,
+ "zeta_AO": 5e-11
+}

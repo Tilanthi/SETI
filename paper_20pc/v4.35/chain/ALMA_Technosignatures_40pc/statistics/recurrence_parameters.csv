@@ -1,0 +1,12 @@
+parameter,value
+seed,992
+n_sim,200000
+numpy_version,2.2.6
+trigger,5
+first_star,ALMA J153702653-33192492
+second_star,HD14055
+first_object,HD 14055
+second_object,ALMA J153702653-33192492
+p_obs_call_1,1
+p_obs_call_2,0.012656455912126051
+p_obs_call_3,0.018825968612515284
