@@ -1,0 +1,53 @@
+eb,status,reason
+A002_X1064920_X691c,re-extracted,
+A002_X107376c_X4442,not re-extracted,"ALMA's final flags restore only on the non-lazy import, whose working set exceeds the disk available; the imports that fit were tried and did not restore them"
+A002_X107fa96_X1300f,not re-extracted,the calibration failed on the import that fits the disk available (not the flag restore)
+A002_X1119e64_X27e3,re-extracted,
+A002_X1171dca_X5df0,re-extracted,
+A002_X1178b24_X1cc8,re-extracted,
+A002_X11d9ce7_X5257,re-extracted,
+A002_X11e10bc_X12662,not re-extracted,"ALMA's final flags restore only on the non-lazy import, whose working set exceeds the disk available; the imports that fit were tried and did not restore them"
+A002_X1207c39_X9417,re-extracted,
+A002_X12235df_X7876,re-extracted,
+A002_X12235df_X8337,re-extracted,
+A002_X12277ed_X22e53,re-extracted,
+A002_X122b6ff_X18e15,re-extracted,
+A002_X126787e_X1170,re-extracted,
+A002_X13df097_X3ba9,re-extracted,
+A002_X7c5411_X1b70,re-extracted,
+A002_X835491_Xcb0,re-extracted,
+A002_X97db9c_X2eb1,not re-extracted,calibration must be replayed in full; the replay needs more disk than was available
+A002_X987623_X354b,not re-extracted,calibration must be replayed in full; the replay needs more disk than was available
+A002_X9db5ce_X224b,not re-extracted,calibration must be replayed in full; the replay needs more disk than was available
+A002_Xa66f35_X1dee,not re-extracted,calibration must be replayed in full; the replay needs more disk than was available
+A002_Xa7a216_X23e4,not re-extracted,calibration must be replayed in full; the replay needs more disk than was available
+A002_Xa7c533_Xefd,re-extracted,
+A002_Xb25e1a_Xed74,not re-extracted,calibration must be replayed in full; the replay needs more disk than was available
+A002_Xb77b17_X3940,not re-extracted,calibration must be replayed in full; the replay needs more disk than was available
+A002_Xb999fd_X148,re-extracted,
+A002_Xbb9cd7_X40d5,re-extracted,
+A002_Xbbadbe_X3846,re-extracted,
+A002_Xbbcb1f_X7dd5,re-extracted,
+A002_Xc296d2_X148c,re-extracted,
+A002_Xcbb583_Xb78,re-extracted,
+A002_Xcbc47c_Xd4,re-extracted,
+A002_Xce574d_X123f,re-extracted,
+A002_Xcf749a_X36e0,re-extracted,
+A002_Xcfae6a_X6b77,re-extracted,
+A002_Xd09670_X1d79,re-extracted,
+A002_Xd09670_X23c5,re-extracted,
+A002_Xd0e450_X1e19,re-extracted,
+A002_Xd0e450_X259b,re-extracted,
+A002_Xd10f82_X7829,not re-extracted,ALMA's final flag version is not row-conformant on any import
+A002_Xd271e2_X8fbe,re-extracted,
+A002_Xd3607d_X6487,re-extracted,
+A002_Xd9668b_X3a90,re-extracted,
+A002_Xd9668b_Xa9df,re-extracted,
+A002_Xd9d7c7_Xbb64,re-extracted,
+A002_Xdb3eb4_X899,re-extracted,
+A002_Xe5808e_X68ec,re-extracted,
+A002_Xff0235_X4a6d,re-extracted,
+A002_Xff0235_X502d,re-extracted,
+A002_Xff45a6_X1fc3,re-extracted,
+A002_Xff99e1_X1daae,re-extracted,
+A002_Xff99e1_X2b9a6,re-extracted,

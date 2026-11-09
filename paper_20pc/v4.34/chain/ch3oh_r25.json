@@ -1,0 +1,9 @@
+{
+ "rows": [],
+ "pair": 1,
+ "macros": [
+  "\\newcommand{\\ZmNPair}{1}"
+ ],
+ "failed": [],
+ "note": "no beta Pictoris pair after the extractor fold (v4.33)"
+}

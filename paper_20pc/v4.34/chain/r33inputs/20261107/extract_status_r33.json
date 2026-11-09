@@ -1,0 +1,385 @@
+{
+ "_doc": "mk_xstatus33.py DECLARE_FINAL OUT -- the frozen record of the round-29 priority re-extraction, as it ended (v4.33).\n\nEvery block r29-extract planned to re-extract with the final extractor on ALMA's flags (a crossing, a best limit, or a\nstatistic near the threshold, in any set) and what became of it, read from the lanes that ran them\n(/data/paper_build/r29_extract/lanes/{F,S,B,B2}/state.json; the reproduction lanes N/N2 are not re-extractions) and from\nr29-extract's declaration of the blocks it never queued (results/declare_final.json, kind 'infeasible').  A block is\n`re-extracted` if any flagged lane finished it; otherwise its measured reason is recorded:\n  legacy_replay        a pre-Cycle-3 block whose calibration must be replayed in full (x13 the raw size, measured)\n  flags_need_nonlazy   ALMA's final flag version restores only on the non-lazy import, whose working set (x4.0-4.7 of\n                       the raw data, measured) exceeds the volume; the two routes that fit were tried and failed\n  flags_unrestorable   the final flag version is not row-conformant on any import\n  disk_abort           every route tried exceeded the disk watchdog\n  calibration_failed   a route that fits the disk ran and the calibration itself failed (not the flag restore)\n  not_reached          (--freeze TIME) still being recalibrated when the fold was frozen\nRefuses if a planned block is still queued or running (the record is made after the lanes drain) unless --interim.",
+ "blocks": [
+  {
+   "eb": "A002_X1064920_X691c",
+   "lanes": [
+    "B"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_X107376c_X4442",
+   "measured_by": "r31-lanes conductor",
+   "peak_gb": 221.03,
+   "reason_class": "flags_need_nonlazy",
+   "routes": [
+    "lazy",
+    "casa5"
+   ],
+   "status": "not_re_extracted",
+   "why": "no route restored Pipeline_Final: tried ['lazy', 'casa5']"
+  },
+  {
+   "eb": "A002_X107fa96_X1300f",
+   "measured_by": "r31-lanes conductor",
+   "reason_class": "calibration_failed",
+   "routes": [
+    "casa5"
+   ],
+   "status": "not_re_extracted",
+   "why": "route casa5 rc=1 (not a Pipeline_Final restore failure; see /data/paper_build/r29_extract/stage/targets_B/GaiaDR3_6438274350302427776_B7_EB_X1300f/logs)"
+  },
+  {
+   "eb": "A002_X1119e64_X27e3",
+   "lanes": [
+    "B"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_X1171dca_X5df0",
+   "lanes": [
+    "B"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_X1178b24_X1cc8",
+   "lanes": [
+    "B"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_X11d9ce7_X5257",
+   "lanes": [
+    "B"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_X11e10bc_X12662",
+   "measured_by": "r31-lanes conductor",
+   "peak_gb": 219.88,
+   "reason_class": "flags_need_nonlazy",
+   "routes": [
+    "casa5",
+    "lazy",
+    "lazy"
+   ],
+   "status": "not_re_extracted",
+   "why": "no route restored Pipeline_Final: tried ['casa5', 'lazy']"
+  },
+  {
+   "eb": "A002_X1207c39_X9417",
+   "lanes": [
+    "S"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_X12235df_X7876",
+   "lanes": [
+    "S"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_X12235df_X8337",
+   "lanes": [
+    "S"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_X12277ed_X22e53",
+   "lanes": [
+    "F"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_X122b6ff_X18e15",
+   "lanes": [
+    "F"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_X126787e_X1170",
+   "lanes": [
+    "F"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_X13df097_X3ba9",
+   "lanes": [
+    "B"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_X7c5411_X1b70",
+   "lanes": [
+    "B"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_X835491_Xcb0",
+   "lanes": [
+    "B"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_X97db9c_X2eb1",
+   "measured_by": "r29-extract",
+   "reason_class": "legacy_replay",
+   "status": "not_re_extracted",
+   "why": "estimated peak 293 GB (x13.00 legacy replay) > 190 GB usable on /data [r27-reflag measured: legacy (2012.1.00385.S, same MOUS as X354b/X1728); 22.5 GB x13 >> any volume]"
+  },
+  {
+   "eb": "A002_X987623_X354b",
+   "measured_by": "r29-extract",
+   "reason_class": "legacy_replay",
+   "status": "not_re_extracted",
+   "why": "estimated peak 251 GB (x13.00 legacy replay) > 190 GB usable on /data [r27-reflag measured: legacy (2012.1.00385.S); r27-fieldtrunc S1 aborted at >=112 GB on 19.3 GB]"
+  },
+  {
+   "eb": "A002_X9db5ce_X224b",
+   "measured_by": "r29-extract",
+   "reason_class": "legacy_replay",
+   "status": "not_re_extracted",
+   "why": "estimated peak 243 GB (x13.00 legacy replay) > 190 GB usable on /data"
+  },
+  {
+   "eb": "A002_Xa66f35_X1dee",
+   "measured_by": "r29-extract",
+   "reason_class": "legacy_replay",
+   "status": "not_re_extracted",
+   "why": "estimated peak 229 GB (x13.00 legacy replay) > 190 GB usable on /data [r27-reflag measured: Cycle-2 MOUS (legacy scriptForCalibration path suspected, like X835491_Xcb0 measured >=117.5 GB at abort on 11.6 GB); 17.6 GB x13 >> any volume]"
+  },
+  {
+   "eb": "A002_Xa7a216_X23e4",
+   "measured_by": "r29-extract",
+   "reason_class": "legacy_replay",
+   "status": "not_re_extracted",
+   "why": "estimated peak 384 GB (x13.00 legacy replay) > 190 GB usable on /data"
+  },
+  {
+   "eb": "A002_Xa7c533_Xefd",
+   "lanes": [
+    "B"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_Xb25e1a_Xed74",
+   "measured_by": "r29-extract",
+   "reason_class": "legacy_replay",
+   "status": "not_re_extracted",
+   "why": "estimated peak 341 GB (x13.00 legacy replay) > 190 GB usable on /data"
+  },
+  {
+   "eb": "A002_Xb77b17_X3940",
+   "measured_by": "r29-extract",
+   "reason_class": "legacy_replay",
+   "status": "not_re_extracted",
+   "why": "estimated peak 364 GB (x13.00 legacy replay) > 190 GB usable on /data"
+  },
+  {
+   "eb": "A002_Xb999fd_X148",
+   "lanes": [
+    "F"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_Xbb9cd7_X40d5",
+   "lanes": [
+    "B"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_Xbbadbe_X3846",
+   "lanes": [
+    "B"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_Xbbcb1f_X7dd5",
+   "lanes": [
+    "B"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_Xc296d2_X148c",
+   "lanes": [
+    "F"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_Xcbb583_Xb78",
+   "lanes": [
+    "B"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_Xcbc47c_Xd4",
+   "lanes": [
+    "B"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_Xce574d_X123f",
+   "lanes": [
+    "B2"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_Xcf749a_X36e0",
+   "lanes": [
+    "B2"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_Xcfae6a_X6b77",
+   "lanes": [
+    "B2"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_Xd09670_X1d79",
+   "lanes": [
+    "B"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_Xd09670_X23c5",
+   "lanes": [
+    "B2"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_Xd0e450_X1e19",
+   "lanes": [
+    "B"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_Xd0e450_X259b",
+   "lanes": [
+    "B"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_Xd10f82_X7829",
+   "measured_by": "r29-extract",
+   "reason_class": "flags_unrestorable",
+   "status": "not_re_extracted",
+   "why": "pf_unrestorable (r27-reflag): Pipeline_Final not row-conformant on CASA 6 lazy, nor on the CASA 5.1.1 import (2 attempts 2026-10-30 21:27, 21:54; same MOUS family as X2635, which CASA 5.1.1 restored) -- the pipeline's CASA version for this EB is not 5.1.1"
+  },
+  {
+   "eb": "A002_Xd271e2_X8fbe",
+   "lanes": [
+    "B"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_Xd3607d_X6487",
+   "lanes": [
+    "B2"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_Xd9668b_X3a90",
+   "lanes": [
+    "B"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_Xd9668b_Xa9df",
+   "lanes": [
+    "B"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_Xd9d7c7_Xbb64",
+   "lanes": [
+    "B"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_Xdb3eb4_X899",
+   "lanes": [
+    "F"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_Xe5808e_X68ec",
+   "lanes": [
+    "B"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_Xff0235_X4a6d",
+   "lanes": [
+    "B"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_Xff0235_X502d",
+   "lanes": [
+    "B"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_Xff45a6_X1fc3",
+   "lanes": [
+    "B"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_Xff99e1_X1daae",
+   "lanes": [
+    "B"
+   ],
+   "status": "re-extracted"
+  },
+  {
+   "eb": "A002_Xff99e1_X2b9a6",
+   "lanes": [
+    "B"
+   ],
+   "status": "re-extracted"
+  }
+ ],
+ "interim": false,
+ "pending": []
+}

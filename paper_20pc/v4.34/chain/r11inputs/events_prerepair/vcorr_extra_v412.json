@@ -1,0 +1,4 @@
+{
+ "_note": "The barycentric correction of the one hold-out crossing with no repeat coverage. Every other crossing carries its own v_corr in recur_holdout.json; this one was never measured there because the recurrence worker loads only crossings that have a repeat, so it is computed by the same function (r8_window.bary_kms) on the same product's own times and position.",
+ "H04": {"v_corr_kms": 9.195594565764262, "t_start_mjdsec": 5192489173.248, "t_end_mjdsec": 5192493610.896, "stem": "/data/SETI/targets/GaiaDR3_6438274350302427776_B7_EB_X1300f/products/A002_X107fa96_X1300f_spw1"}
+}

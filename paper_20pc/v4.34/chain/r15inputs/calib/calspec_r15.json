@@ -1,0 +1,29 @@
+{
+ "_doc": "EXTERNAL SPECIFICATIONS for the channel-dependent calibration terms. Nothing here is measured in this work. Every entry names a SECTION, CHAPTER, TABLE, FIGURE or PAGE of its source, per the rule p90_budget_v409.py's B14 enforces: a source nobody can follow to a page is not a citation.",
+
+ "bandpass_amp_accuracy": 0.002,
+ "bandpass_amp_accuracy_source": "ALMA Knowledgebase, 'What is the tested capability of ALMA for bandpass calibration precision?' (General ALMA Queries), quoting the 2013-2014 bandpass-stability campaign of ALMA Technical Note 15 over Bands 3, 4, 6, 7, 8, 9 and 10 with 21-35 antennas: 'The nominal bandpass accuracy is <0.2% and <0.5 deg over the spectral resolution requested.' Amplitude variation <0.1 per cent for Bands 3, 4 and 6 and <1 per cent for the others.",
+
+ "bandpass_amp_worst_band": 0.01,
+ "bandpass_amp_worst_band_source": "Same article: 'The amplitude variation is estimated to be <0.1% for Bands 3, 4, and 6, and <1% for the other Bands.' The 1 per cent figure is adopted for Bands 7 and above.",
+
+ "tsys_residual_frac_lo": 0.05,
+ "tsys_residual_frac_hi": 0.20,
+ "tsys_residual_source": "Hunter, Phillips, Broguiere & Gonzalez, 'Improving the calibration of atmospheric spectral features in ALMA data', NA ALMA 2016 Development Study Final Report, 2018 March 2, Sec. 'Outline of the problem' and Fig. 1: ozone lines are calibrated in the coarse (TDM) spectral mode, so 'after this Tsys calibration is applied, the subsequent antenna-based bandpass calibration solutions for the FDM spws still show significant features at the frequencies of the ozone lines' -- 'narrow residual dips (~5-20%)', with a worked Band 7 example showing a 20 per cent drop at the centre of the 364.45 GHz ozone line (Fig. 1, top right panel).",
+
+ "tsys_resolution_MHz": 31.25,
+ "tsys_resolution_source": "Same report, Fig. 1 caption: 'TDM Tsys spectra recorded with the standard 31 MHz resolution'; the TDM correlator mode is 128 channels of 15.625 MHz across a 2 GHz baseband (ALMA Technical Handbook, Ch. 5, 'The Correlators'), and the Hann-windowed effective resolution is twice the channel spacing.",
+
+ "zp_Ks_Jy": 666.7,
+ "zp_Ks_source": "Cohen, Wheaton & Megeath 2003, AJ 126, 1090, Table 2: the 2MASS Ks isophotal zero-magnitude flux density, 666.7 Jy at an isophotal wavelength of 2.159 micron.",
+ "lambda_Ks_um": 2.159,
+
+ "zp_V_Jy": 3636.0,
+ "zp_V_source": "Bessell, Castelli & Plez 1998, A&A 333, 231, Table A2: the Johnson V zero-magnitude flux density, 3636 Jy at 545 nm.",
+ "lambda_V_um": 0.545,
+
+ "jpl_catalogue_source": "Pickett et al. 1998, JQSRT 60, 883 -- the JPL Submillimeter, Millimeter and Microwave Spectral Line Catalog. Entries 048004 (O3), 018003 (H2O) and 032001 (O2) and the partition-function table catdir.cat are frozen verbatim in this directory as jpl_c0*.cat and jpl_catdir.cat, retrieved 2026-10-08 from https://spec.jpl.nasa.gov/ftp/pub/catalog/ . Intensities are scaled from the catalogue's 300 K reference to 220 K with the catalogue's own partition functions, by the standard catalogue relation given in Sec. 3 of that paper.",
+
+ "t_atmosphere_K": 220.0,
+ "t_atmosphere_source": "A single representative temperature for the ozone layer and the lower troposphere, used only to rank the catalogued transitions; the selection is insensitive to it over 200-260 K (verified by the generator's D7 clause)."
+}

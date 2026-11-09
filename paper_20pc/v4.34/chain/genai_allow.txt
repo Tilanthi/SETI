@@ -1,0 +1,106 @@
+# genai_sweep allow file -- DECLARED exemptions, pinned to the sentence.
+#
+# Each line: <12-hex pin> <reason>.  The pin is sha1 of (pattern family, sentence)
+# with case, spacing, hyphenation and markup removed, so the three renderings pin
+# identically and REWORDING THE SENTENCE LAPSES THE PIN and the gate re-fires on it.
+# A pin that matches nothing is a FAILURE, so a dead exemption cannot sit here
+# covering prose that has gone.  Nothing here is a word-level whitelist: the word
+# stays swept everywhere else in the paper, including inside figures, because the
+# sweep reads the PDF text layer.
+#
+# Regenerate a lapsed pin with:  python3 genai_sweep.py PAPER.pdf --pins
+# and read the sentence before you paste the number.
+#
+# ★ v4.27, r26-integrate: TWO PINS LAPSED AND BOTH LAPSED CORRECTLY.  The
+# round-26 length cuts reworded the two sentences these exemptions cover --
+# the data-quality criterion's "the one that prompted it" and Sec. 4.7's
+# post-hoc disclosure "Neither form was fixed in advance" -- so the pins
+# stopped matching, the gate re-fired on the reworded sentences AND reported
+# the two dead entries, which is exactly the design.  Each sentence was
+# re-read before the new pin was pasted: both still say what the old reason
+# says they say, and neither is a claim about how the analysis was conducted.
+#   3b3f9372f554 -> af41494b37ac   ("prompted")
+#   e95018293b87 -> 16e56c7f32d8   ("was fixed")
+
+# 1. "the one that prompted it" -- the BLOCK that prompted a data-quality criterion.
+#    Ordinary English; nothing to do with a prompt given to a model.
+
+# 2. "...cannot be re-run" -- the reproducibility statement: a reader cannot re-run
+#    this execution of the pipeline.  Not a re-run after a referee.
+#    ★ RE-PINNED AGAIN (v4.27).  Data Availability is six sentences now, which
+#    joined "cannot be re-run" to the two claims that used to follow it in
+#    their own paragraph.  The pin lapsed exactly as designed.
+
+# 2b. "...is an assertion of ours and not something a reader can check." -- the
+#    LABEL on the hold-out's independence, added because it cannot be verified
+#    from what is released and saying so is the honest form.  The build-word
+#    family lands on "assertion"; here the word is used against our own
+#    interest, which is the opposite of build narration.
+
+# 4. "Use of generative artificial intelligence." -- the disclosure heading the
+#    journal REQUIRES.  Swept by the llm-word family by construction.
+9f581e010498  08_backmatter: the required generative-AI disclosure heading
+7b8688dd7a26  08_backmatter: the generative-AI declaration's first sentence, the author's own words verbatim ("Large language model assistance (Anthropic Claude) was used in manuscript preparation of this complex paper.") -- read; it is the disclosure the journal requires, not a claim about the analysis
+
+# 5-6. "assertion" in the two sentences that describe how the analysis was checked.
+#    Both are about the analysis code's internal assertions, which is a method
+#    statement a reader is entitled to; neither is build narration.
+#    ★ BOTH RE-PINNED (v4.27): the AI-use statement is three sentences and
+#    "Testing and validation" is two, so both sentences were rewritten.
+
+# 7. "Neither criterion was fixed in advance." -- the DISCLOSURE that the criterion
+#    is post hoc, which is the opposite of a pre-specification claim and is the
+#    sentence R2-6(iv) leaves standing deliberately.  The notebook-voice family
+#    lands on "was fixed"; the sentence is the one place the paper talks about
+#    chronology and it talks about it against our own interest.
+
+# 8. "the control-position generator" -- the NAME of one of the four reference
+#    implementations Referee 1's A5 asks the deposit to carry (the statistic of
+#    Eq. 1, the control-position generator, the injection--recovery harness and
+#    the line mask).  The build-word family lands on "generator" because in this
+#    paper's prose that word is almost always machine narration; here it is a
+#    noun naming a program the referee asked for by description, and the
+#    sentence is in Data Availability, where naming programs is the point.
+
+# 9. "Supplementary Data for an Archival ALMA Search ..." -- the TITLE of the
+#    deposited archive, in its own bibliography entry.  The online-only family
+#    is there to catch a paper promising material it does not ship; this is the
+#    citation of material it does ship, under the title it is deposited with,
+#    and `doigate` separately requires that the promise and the deposit agree.
+bf7732d8ca90  bibliography: "Supplementary Data" = the deposit's own title in \bibitem{SIdeposit}
+
+
+# ★ r27 merge: the length pass reworded or cut the sentences five pins above were taken on
+# (deleted, not re-hashed blindly) and moved material to the data archive with ONE-LINE
+# POINTERS (Ruling 4: "nothing is deleted -- it is moved", with a pointer in the paper).
+# A file name in such a pointer is the pointer, not a build word.  Each is pinned to its
+# sentence, so rewording lapses it.
+0f12c9aa13ac  app B.1: "assertion" = the unverifiable claim labelled as such (re-pinned on the shortened sentence; r30-deai: re-pinned after the sentence was split)
+003ad1a04238  app D.4: deposit pointer, candidates/drift_pair_accounting.csv (r28 apx: sentence rewritten -- read; LAYOUT-DEPENDENT only if a float splits it)
+a5dbe9117149  app F (r30-deai: re-pinned after the sentence was split): deposit pointer, sensitivity/system_limits.csv (r28-sens T3: each system's limit at both ends of the calibration interval and its probability of reaching 1e15 W are in the data archive) -- read, a one-line deposit pointer of the kind Ruling 4 requires
+73fea40419d3  Sec. 4.5: deposit pointer, candidates/repeat_epoch_readings.csv (Table 7 sub-rows moved; r28 text phase shortened the sentence to its pointer -- read, a one-line deposit pointer)
+# ★ round 30 (R2 M14): the six pins on pointers to documentation/appendix_{A..F}_*.md are
+# withdrawn with the pointers -- each sentence now carries its result or was cut, and the
+# archive holds no narrative file (zverify V10b/V12).
+a088a17ea15c  Sec. 1: deposit pointer, figures/figure_data.csv (the rescaled-threshold values behind Fig. 1; r30-deai: re-pinned, own sentence now)
+a7f114dc1dec Data Availability names code/reproduce.py, the one program that rebuilds the principal results (DA paragraph, sentence read)
+
+# v4.33 (round-32 points R1-1, R1-2, R1-4): four deposit-pointer sentences of App. D.1, each naming a table that
+# zdeposit.py writes into the data archive (zverify V10 requires every cited path to be a member of the zip).
+# Each sentence was read before its pin was pasted: they point at data, and say nothing about how the work was done.
+5e134f2b1b4e  D.1 "Both tails are tabulated against k in statistics/chance_allowance_table.csv" -- the allowance table (R1-1)
+1a7906569d4f  D.1 "Which statistic every crossing enters is listed in statistics/event_membership.csv" -- membership (R1-2)
+
+# v4.34 (round 34): deposit/code pointers added or reflowed by the R2-9/R2-10/R2-15/R2-16 text, and the D.1/A.3/DA
+# sentences re-pinned after rewording (the four stale v4.33 entries 05143bb75775, 1c59771122d3, 3e04fb6b757c, 9e51470ae8c7
+# withdrawn).  Each sentence was read on the int2 build before pinning: they point at data or code and say nothing about
+# how the work was done.
+4b8081d81517  Sec. 5.3: "All of them are listed in candidates/above_all_controls.csv" -- the crossings above every control (R2-15)
+5e3cd2be7270  App A.3: "The data archive repeats the table row for row in catalogues/block_ledger.csv, and ..." -- Table A1 (R2-9)
+060cb6db499d  App A.3: the same sentence, catalogues/count_accounting.csv "itemises each of its rows ... the sum of" (R2-9)
+53f5dd38d5da  D.1 "The correlogram is given in statistics/control_correlation.csv" (R1-4, reworded)
+b781cd6de9e6  Data Availability "The windows of all these blocks keep the products of the first forms of the extractor (catalogues/re_extraction_status.csv), and Table A2 ..." (R2-10)
+a18b95131f8d  App A.1: the sigma of Eq. A1, named at its lines of code/pipeline/search/seti_drift_search_generic.py (R2-16)
+5d03bfa51514  Table A2 note: "The table is catalogues/recalibration_reconciled.csv in the data archive" (R2-10; replaces the caption pin b37acd8b0ff0)
+c6f81d35327c  App A.3 "The table also sets out the 52 blocks of the Data Availability statement ... (catalogues/recalibration_reconciled.csv)" (R2-10; replaces 6ca171f53f9c)
+cc3186b4d8fc  D.1 "Each window's effective number of positions is given in statistics/control_correlation_windows.csv" (R1-4; the hash follows the page's sentence split, re-pinned on rec2)

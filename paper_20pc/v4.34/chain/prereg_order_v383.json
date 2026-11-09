@@ -1,0 +1,13 @@
+{
+ "_doc": "Repository timestamps establishing that nothing about the analysis was decided after the calibration hold-out was fixed. Dates are commit dates in the analysis repository; the last entry is the first search of a reserved block, from the processing ledger.",
+ "statistic": {"date": "2026-09-09", "commit": "0c465f2661bd",
+               "what": "the symmetric single-position detection statistic of Eq. (tstar) adopted"},
+ "criteria": {"date": "2026-09-11", "commit": "119a68a6ab50",
+              "what": "promote/retire candidate criteria fixed"},
+ "holdout": {"date": "2026-09-14", "commit": "c75069040eab",
+             "what": "the calibration hold-out rule fixed",
+             "days_after_statistic": 5,
+             "days_before_first_reserved": 3},
+ "first_reserved_block_searched": {"date": "2026-09-17",
+                                   "what": "first execution block on the reserved side of the rule processed"}
+}

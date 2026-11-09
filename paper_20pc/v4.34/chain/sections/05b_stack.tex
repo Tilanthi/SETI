@@ -1,0 +1,45 @@
+\subsection{A stellar-frame stacked search}
+\label{sec:stack}
+
+Combining a star's epochs in its own rest frame deepens the limit, provided
+the emitter holds still in that frame. A frequency fixed in the stellar
+frame does not stay fixed at the telescope, since the barycentric term
+alone swings by a median \StkVcorrSwingMed\,km\,s$^{-1}$ between the epochs
+of one star, many channels at the \StkRefChanKHz\,kHz Class~A width. Each
+epoch is therefore
+transformed to the stellar rest frame, divided by its own primary-beam
+response and combined with the others by inverse variance over the channels
+of common coverage. The transform is checked on \StkPersistLineStar's line,
+which \StkRegNEpoch{} epochs observe \StkRegTopoKms\,km\,s$^{-1}$ apart and
+place at one stellar-frame frequency to \FrEpochStelKms\,km\,s$^{-1}$. The
+criterion is applied in the same way at the stacked control positions, and
+every stacked limit is measured by injection into the stack.
+
+Of the surveyed stars, \SxStkStarCensus{} can be stacked, \SttNStkOneEb{} of
+them with blocks beyond the census, and over \SyStkNGroup{} stacked groups
+the flux-density limit improves on each star's best single epoch by a median
+factor \SyStkGainMed{} and by \SyStkGainMax{} at most. A further
+\SxStkStarOutside{} stars, all control stars beyond 40\,pc, are stacked and left
+out of those figures. The gain is \StkGainVsN{} of what $\sqrt{N}$ equal
+epochs would give, the shortfall being unequal epoch depth.
+In the stack, \StkNSurvive{} groups pass the full criterion and both are
+known lines, the $\beta$~Pictoris carbon monoxide of \S\ref{sec:bpicval} in two
+transitions, so the positive control passes in the stack as well, and the
+survey's own $\pm\StkAttrKms$\,km\,s$^{-1}$ mask leaves \StkUnattrClause.
+
+Every stacked limit holds only for an emitter steady in the stellar frame to
+within one of its own channels. No crossing of \S\ref{sec:etacrv} drifts
+slowly enough to survive a fine-channel stack, which admits far less
+stellar-frame excursion than a coarse one, so the single-epoch limits of
+\S\ref{sec:pninetysel} are the ones that apply generally. The deepest
+stacked limit is Proxima Centauri's, $\SzProxEirpCensus$\,W from
+\SxProxEbCensus{} census blocks of coarse \ChanBModeMHz\,MHz channels, and
+like every Class~B value it is a limit on an unresolved narrowband spectral
+excess. It also needs a qualification of its own. A transmitter on
+\PxPlanet{} would swing over \PxPPKms\,$\sin i$\,km\,s$^{-1}$ in its orbit
+\citep{AngladaEscude2016,Kervella2017,NEA2013}, some \PxNChanWalk{} channels
+at $\sin i=1$. The stack would cancel such a signal unless the orbit is seen
+nearly face-on, with $\sin i\le\PxSiniMax$, which holds for \PxIsoPct{} per
+cent of random orientations. Within one block, by contrast, the planet moves at most
+\PxBlockPct{} per cent of a channel, so the host's best census single-epoch
+limit, $\PxEirpCensB$\,W in a Class~B window, is the one that applies to it.

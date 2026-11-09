@@ -1,0 +1,156 @@
+%% APPENDIX A -- spectral response, primary-beam and positional retention,
+%% and the survey ledger.  Carries the label app:conventions (04_method.tex,
+%% 05_results.tex, app_C), app:pbresp (03_sample.tex, 04_method.tex),
+%% eq:eirp90, tab:blockledger and tab:projcodes.
+%% r30 (write-apx): the round-29 structure (factorisation and averaged-channel
+%% response one paragraph each, one ledger float) written out in full
+%% sentences, with the retention prescription as one displayed equation.
+%% The broad-feature scaling lives in Sec. 5, the frequency frame in Sec. 3.
+%% Register row 3: the three stars with disturbed astrometry are stated in
+%% A.2 and pointed to their exclusion from the summaries (r30-num regenerates
+%% the median, the 10^15 W count and Fig. 5 without them).
+%% r34 (W3, R2-16): which sigma Eq. A1 uses, from the code (N3, ledger_r34 L366-370).
+%% r34 (W3, R2-9/R2-10): deposit sentence for Table A1; tab:recalrecon float.
+\section{Spectral response, retention and the survey ledger}
+\label{app:conventions}
+
+\subsection{The response of a channel to a carrier}
+
+A carrier seldom falls at the centre of a channel. ALMA's online Hanning
+smoothing \citep{ALMAHandbook} leaves \HanBest{} of an unresolved carrier's
+flux in the peak channel at a channel centre and \HanWorst{} on a boundary,
+and this loss enters the limits once, through the injections. Each synthetic
+carrier is deposited at a sub-channel phase drawn afresh and recovered
+through the unmodified trigger, so the measured completeness already
+contains it. The Class~A factor separates into two parts,
+$\EirpNinetyMultA\simeq\RpRespFac\times\RpMarginNinety$. The first is
+$1/\InjDepMean$, from the phase-averaged share of a carrier's flux that the
+$0.25/0.5/0.25$ kernel places in the peak channel. The second is the margin
+that a peak channel needs above the nominal trigger for nine carriers in ten
+to return. $P_{\rm trig}$ and $S_{\min}$ therefore stay nominal, comparable
+with other programmes' thresholds, and the sensitivity carries the
+correction,
+\begin{equation}
+\mathrm{EIRP}_{90}=\frac{\kappa\,\rho_N}{R_{\rm px}\,\eta_{\rm smear}}\,
+4\pi d^{2}S_{\min}\,\Delta\nu,\qquad S_{\min}=\frac{5\sigma}{A},
+\label{eq:eirp90}
+\end{equation}
+where $4\pi d^{2}S_{\min}\Delta\nu$ is $P_{\rm trig}$, $\kappa$ is the class
+factor, $\rho_N$ the response ratio of the window's averaging mode, and $A$, $R_{\rm px}$ and $\eta_{\rm smear}$ are the
+primary-beam, parallax and smearing retentions. The noise $\sigma$ is that of the
+time-stacked spectrum at the star, in each native channel. In every
+integration and channel it is the median absolute deviation over the control
+positions, scaled to a Gaussian standard deviation, and the integrations are
+then combined by inverse variance (\texttt{\LrSigFile}, lines
+\LrSigLineMad--\LrSigLineSig{} and \LrSigLineComb).
+
+The kernel is an approximation. A delivered channel is the mean of $N$
+Hann-windowed raw channels ($N=1$ in \SvNWinNOne{} Class~A windows, online
+averaging in \SvNWinNAvg), so carriers were also injected with each window's
+own response, carrier for carrier against the kernel, into \IjNWin{} windows
+of every averaging mode. The ratio $\rho_N$ of the two ninety-per-cent points
+is $\IjRatioNOne$, $\IjRatioNTwo$ and $\IjRatioNFour$ at $N=1$, 2 and 4 in
+Class~A, and $\IjRatioBNOne$ and $\IjRatioBNTwo$ at $N=1$ and 2 in Class~B.
+Smearing within one integration, which the injections do not model, is
+divided out as $\eta_{\rm smear}$, the mean channel response over the sweep,
+and is never worse than $\times\SmcFacWorst$.
+
+\subsection{Primary-beam and positional retention}
+\label{app:pbresp}
+
+The response applied, $A$ in Eq.~\ref{eq:eirp90}, is a Gaussian primary beam
+of the documented full width $\RingPbCoef\,\lambda/D$ \citep{ALMAHandbook}
+at each window's own dish diameter. Archival fields are pointed at catalogue
+J2000 positions, so these nearby, fast-moving stars sit off axis by a median
+of \PbOffMed$''$ and at most \BmOffMax$''$. At the furthest census offset the
+Gaussian agrees with the blocked-aperture response of \textsc{casa}
+\citep{CASA2022} to \BmCensusWorstPct{} per cent. The statistic, ranks and
+attribution are ratios within one window, so $A$ enters only $S_{\min}$.
+$R_{\rm px}$ is the modelled share of a carrier's amplitude that survives the
+annual parallax where the extraction omitted it, and the model errs on the
+safe side, since carriers injected at the full apparent position of the
+\SensNReextWin{} furthest-out windows retain \SensPxSmallMeas{} and
+\SensPxLargeMeas{} where it predicts \SensPxSmallPred{} and
+\SensPxLargePred. $\epsilon$\,Eridani has no parallax record, and its limit
+may be optimistic by up to \BmEpsPxBoundPct{} per cent.
+
+Propagating a position also assumes straight-line motion. Of the
+\OmNStar{} searched positions, the \OmNCensusStar{} census stars and
+\OmXStar, \OmNComponent{} have a companion within
+\OmRadius\,arcsec \citep{wds,orb6}. The displacement, from a visual orbit,
+from the separation with masses from \citet{pecaut2013}, or from the
+proper-motion anomaly \citep{kervella2022}, moves no system's limit by more
+than \OmSysMovedMaxPct{} per cent. \OmFlagStars{} are different. Their
+astrometric solutions are disturbed, yet they have no known companion and no
+Hipparcos epoch, so the positional loss in their \OmNWinFlag{} windows has no
+bound and their limits hold only at the adopted positions. They are marked
+in Table~\ref{tab:persys} and left out of the median, the count at
+$10^{15}$\,W and Fig.~\ref{fig:classasens} (\S\ref{sec:pninetysel}).
+
+\subsection{The survey ledger}
+
+Every headline count is read from Table~\ref{tab:blockledger}. The data
+archive repeats the table row for row in \texttt{catalogues/\allowbreak
+block\_ledger.csv}, and \texttt{catalogues/\allowbreak count\_accounting.csv}
+itemises each of its rows under the same number and says which rows it is
+the sum of. The planet counts are
+from the \SfHostCatalogue{} \SfHostTable{} table \citep{NEA2013}, accessed
+\SfHostDate, and Table~\ref{tab:projcodes} lists the ALMA proposals the
+searched blocks belong to. 
+
+Two counts of reprocessed blocks appear in the paper, and they are not of
+the same blocks. The recalibration with ALMA's final flags, described in
+\S\ref{sec:method}, was planned on the blocks that then set a quoted limit or held a crossing.
+The fresh extraction with the final extractor was planned later, on the
+blocks that held a crossing, a best limit or a statistic close to the
+threshold in any set, as the Data availability statement describes. Table~\ref{tab:recalrecon} sets
+the two side by side, block by block, and adds every block that holds a
+crossing or a system's best limit now.
+
+%% THE LEDGER: the two v4.30 tables in one float with one label
+%% (labelcheck F1).  tab:counts is retired: 03_sample.tex, 08_backmatter.tex
+%% and doigate.py must point at tab:blockledger (round-29 records L1-L4).
+%% Which rows the panels print is the generators' (blockledger_v411.py,
+%% counts_r15.py; round-29 records BL1-BL5, CT1-CT2), so the caption names
+%% no row.
+\begin{table*}
+\centering
+\scriptsize
+\caption{\textbf{The survey ledger}: (a)~execution blocks and windows, hours
+being window-hours, so the classes partition the hours as they partition the
+windows; (b)~events, dispositions and confirmation. Each sub-row is a subset of the row its number extends. Note~d gives the
+rule by which the counts of panel (a) sum.}
+\label{tab:blockledger}
+\textit{(a) Execution blocks and windows}\par\smallskip
+\input{tab_blockledger}
+\par\medskip
+\textit{(b) Events, dispositions and confirmation}\par\smallskip
+\input{tab_counts}
+\end{table*}
+
+%% r34 (W3, R2-10): N3's reconciliation table (ledger_r34.py, round 3440).  One column at scriptsize with narrow column
+%% gaps (at footnotesize it ran 53 pt past a column; as a table* it stood alone on a float page).
+\begin{table}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\caption{\textbf{Recalibration and extractor} of the blocks counted in
+\S\ref{sec:method} or the Data availability statement, or holding a
+crossing or a best limit now.}
+\label{tab:recalrecon}
+\input{tab_recalrecon_r34}
+\end{table}
+
+%% THE ALMA PROJECT CODES, AS A TABLE.  ALMA's data-use policy expects the
+%% codes to be traceable from the publication; the fragment is generated by
+%% projcodes_v400.py and is the same list that resolves every block in
+%% Table~\ref{tab:blockledger}.
+\begin{table}
+\centering
+\scriptsize
+\caption{\textbf{The \NProjCodes{} ALMA proposals the searched blocks belong
+to}, as \mbox{ADS/JAO.ALMA\#\textit{code}}. Every census block belongs to
+one.\ProjCodeUnresClause}
+\label{tab:projcodes}
+\input{tab_projcodes_v400}
+\end{table}

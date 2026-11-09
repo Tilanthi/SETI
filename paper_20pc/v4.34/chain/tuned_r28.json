@@ -1,0 +1,55 @@
+{
+ "per_species": {
+  "CO": {
+   "windows": 225,
+   "tuned": 192
+  },
+  "SO": {
+   "windows": 100,
+   "tuned": 0
+  },
+  "H": {
+   "windows": 15,
+   "tuned": 0
+  },
+  "SiO": {
+   "windows": 17,
+   "tuned": 2
+  },
+  "CN": {
+   "windows": 17,
+   "tuned": 17
+  },
+  "13CO": {
+   "windows": 46,
+   "tuned": 44
+  },
+  "CS": {
+   "windows": 2,
+   "tuned": 2
+  },
+  "HCN": {
+   "windows": 9,
+   "tuned": 2
+  },
+  "HCO+": {
+   "windows": 2,
+   "tuned": 2
+  },
+  "CI": {
+   "windows": 4,
+   "tuned": 4
+  },
+  "H2CO": {
+   "windows": 15,
+   "tuned": 2
+  },
+  "C18O": {
+   "windows": 12,
+   "tuned": 3
+  }
+ },
+ "n_pairs": 464,
+ "n_tuned": 270,
+ "failed": []
+}

@@ -1,0 +1,7900 @@
+{
+ "_doc": "THE INJECTION-CAMPAIGN SAMPLE, DRAWN AND WRITTEN DOWN BEFORE ANY DATA WERE\nFETCHED.\n\nThe published completeness was measured by injecting carriers into 21 Class A\nwindows and transferring the result to the remaining 381.  This file draws the\nextension of that campaign.  It is deliberately a separate, small, readable\nscript that writes its output once, because the one thing a reader must be able\nto check is that the sample was fixed BEFORE the measurement -- not chosen\nafterwards from the windows that gave a convenient answer.\n\nDESIGN.\n\n  * POPULATION: the 402 Class A (fine-channel, drift-searched) windows of the\n    released catalogue `per_target_results_v3.99.csv`.  21 are already injected\n    and are carried forward; the frame for the new draw is the other 381.\n\n  * SAMPLING UNIT IS THE EXECUTION BLOCK, not the window.  The cost of this\n    campaign is dominated by re-fetching and re-calibrating an execution\n    block from the archive; once a block's calibrated measurement set exists,\n    injecting every one of its Class A windows is nearly free.  So the draw is\n    a stratified random sample of blocks, and EVERY Class A window of a drawn\n    block enters the campaign.  This is an ordinary cluster sample and it is\n    stated as one.\n\n  * STRATA: band x array (12 m against the 7 m compact array), which are the\n    two variables that are properties of the block and so can be controlled in\n    a block-level draw.  Allocation is proportional to the number of Class A\n    WINDOWS each stratum holds, so the campaign's window count, not its block\n    count, is representative.\n\n  * CHANNEL WIDTH, CONTROL-RING STATISTIC AND INTEGRATION LENGTH are window\n    properties that vary inside a block and cannot be controlled by a\n    block-level draw.  They are not controlled: they are MEASURED on the\n    achieved sample and compared with the population, and that comparison is\n    published.  Saying which variables were controlled and which were only\n    checked is the honest version of \"stratified\".\n\n  * THE ORDER IS A PRIORITY LIST OVER THE WHOLE FRAME, not a fixed set of n\n    blocks.  Each block gets the key (i + 0.5) / N_s, where i is its random\n    rank inside stratum s and N_s is that stratum's block count.  Any prefix of\n    that list is then approximately proportionally allocated across strata, so\n    attrition -- a block the archive will not deliver, a calibration that\n    fails, a disk ceiling -- walks down the list without unbalancing it.  How\n    far down the list we reached is reported; it is not chosen.\n\n  * NOTHING IN THE KEY LOOKS AT THE SCIENCE.  The key is a function of the\n    seed and the stratum only.  `crossing`, `disposition`, `star_snr`,\n    `ctrl_max_snr`, `p_rank_*` and the line columns are not read when the\n    order is built, and this file asserts that the achieved sample's crossing\n    rate is consistent with the population's rather than claiming it by\n    construction.\n\n  * SEED: 180011, fixed here, never searched over.\n\nWrites `campaign_plan_r11.json` (the priority list, with every block's\nstratum, key, size and window list) and `SELECTION.md` (the same thing for a\nreader).  Run once; it refuses to overwrite.\n",
+ "seed": 180011,
+ "generated_by": "select_windows.py",
+ "sha256_of_this_file": "2aee62198a886bf462892205b6abff0a715ff6065c6e630a390097727ccd24e9",
+ "n_classa": 402,
+ "n_already_injected_units": 21,
+ "already_injected_tags": [
+  "A002_X10a341d_Xdc45_spw2",
+  "A002_X12209f7_X16edb_spw1",
+  "A002_X12209f7_X16edb_spw2",
+  "A002_X12209f7_X16edb_spw3",
+  "A002_X128b034_X11ca9_spw3",
+  "A002_X7116f1_X1785_spw0",
+  "A002_X7116f1_X1785_spw3",
+  "A002_X74c92c_X6d5_spw0",
+  "A002_X75bfbf_X1430_spw2",
+  "A002_X75bfbf_Xace_spw0",
+  "A002_X75bfbf_Xace_spw3",
+  "A002_Xb999fd_X148_spw16",
+  "A002_Xb999fd_X148_spw20",
+  "A002_Xc26103_X155a_spw16",
+  "A002_Xc26103_X155a_spw22",
+  "A002_Xc6a3db_X7b5b_spw0",
+  "A002_Xd40be0_X749c_spw2",
+  "A002_Xd40be0_X749c_spw3",
+  "A002_Xe48598_Xff51_spw3",
+  "A002_Xe4f0a6_X3658_spw3",
+  "A002_Xf05a48_X269c_spw0"
+ ],
+ "already_injected_blocks": [
+  "A002_X10a341d_Xdc45",
+  "A002_X12209f7_X16edb",
+  "A002_X128b034_X11ca9",
+  "A002_X7116f1_X1785",
+  "A002_X74c92c_X6d5",
+  "A002_X75bfbf_X1430",
+  "A002_X75bfbf_Xace",
+  "A002_Xb999fd_X148",
+  "A002_Xc26103_X155a",
+  "A002_Xc6a3db_X7b5b",
+  "A002_Xd40be0_X749c",
+  "A002_Xe48598_Xff51",
+  "A002_Xe4f0a6_X3658",
+  "A002_Xf05a48_X269c"
+ ],
+ "n_frame_windows": 381,
+ "n_frame_blocks": 238,
+ "population_window_strata": {
+  "10|12m": 8,
+  "3|12m": 15,
+  "6|12m": 72,
+  "6|7m": 131,
+  "7|12m": 92,
+  "7|7m": 78,
+  "8|12m": 1,
+  "8|7m": 5
+ },
+ "frame_window_strata": {
+  "10|12m": 8,
+  "3|12m": 15,
+  "6|12m": 66,
+  "6|7m": 126,
+  "7|12m": 88,
+  "7|7m": 75,
+  "8|7m": 3
+ },
+ "plan": [
+  {
+   "priority": 1,
+   "key": 0.005435,
+   "eb": "A002_Xda1250_X72ef",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X133d/X36ab",
+   "n_ant": 12,
+   "star": "LHS 1140",
+   "dist_pc": 14.9636,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.39,
+   "windows": [
+    {
+     "flo": 229.080002,
+     "fhi": 230.920334,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2600.64,
+     "rms_mJy": 19.56221,
+     "ctrl_max_snr": 5.9345
+    }
+   ],
+   "cum_win": 1
+  },
+  {
+   "priority": 2,
+   "key": 0.01,
+   "eb": "A002_Xccea8d_X2ff5",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X1289/X3dc",
+   "n_ant": 44,
+   "star": "HD 155555C",
+   "dist_pc": 30.4116,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 345.152317,
+     "fhi": 346.877415,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1270.08,
+     "rms_mJy": 2.55671,
+     "ctrl_max_snr": 5.7123
+    }
+   ],
+   "cum_win": 2
+  },
+  {
+   "priority": 3,
+   "key": 0.011905,
+   "eb": "A002_Xff99e1_X2b2ee",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e71",
+   "n_ant": 12,
+   "star": "HD14055",
+   "dist_pc": 35.7405,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 3.36,
+   "windows": [
+    {
+     "flo": 330.387234,
+     "fhi": 332.227566,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 31.01795,
+     "ctrl_max_snr": 6.509
+    },
+    {
+     "flo": 344.22023,
+     "fhi": 346.060562,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 27.31361,
+     "ctrl_max_snr": 5.9214
+    }
+   ],
+   "cum_win": 4
+  },
+  {
+   "priority": 4,
+   "key": 0.014286,
+   "eb": "A002_Xa42f75_X319",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A002/X609170/X170",
+   "n_ant": 37,
+   "star": "AU Mic",
+   "dist_pc": 9.7141,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 14.0,
+   "windows": [
+    {
+     "flo": 229.695158,
+     "fhi": 231.420255,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1905.12,
+     "rms_mJy": 1.3683,
+     "ctrl_max_snr": 6.0731
+    }
+   ],
+   "cum_win": 5
+  },
+  {
+   "priority": 5,
+   "key": 0.016304,
+   "eb": "A002_Xd95042_X5feb",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X133d/X36ae",
+   "n_ant": 12,
+   "star": "GJ 849",
+   "dist_pc": 8.8149,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.18,
+   "windows": [
+    {
+     "flo": 229.097516,
+     "fhi": 230.937848,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2661.12,
+     "rms_mJy": 12.21622,
+     "ctrl_max_snr": 5.7028
+    }
+   ],
+   "cum_win": 6
+  },
+  {
+   "priority": 6,
+   "key": 0.027174,
+   "eb": "A002_Xdd0d37_X18197",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X133d/X36a5",
+   "n_ant": 12,
+   "star": "GL 3379 Gaia DR3 3316364602541746048",
+   "dist_pc": 5.208,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.39,
+   "windows": [
+    {
+     "flo": 229.051775,
+     "fhi": 230.892107,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2751.84,
+     "rms_mJy": 9.82481,
+     "ctrl_max_snr": 5.8194
+    }
+   ],
+   "cum_win": 7
+  },
+  {
+   "priority": 7,
+   "key": 0.03,
+   "eb": "A002_Xcdd033_X85ff",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X1289/X3ee",
+   "n_ant": 51,
+   "star": "UCAC2 20312880",
+   "dist_pc": 33.766,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 345.101337,
+     "fhi": 346.826435,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 876.96,
+     "rms_mJy": 3.18038,
+     "ctrl_max_snr": 5.4153
+    }
+   ],
+   "cum_win": 8
+  },
+  {
+   "priority": 8,
+   "key": 0.033333,
+   "eb": "A002_X1240efd_X13b03",
+   "band": "3",
+   "array": "12m",
+   "mous": "uid://A001/X3788/X9d8e",
+   "n_ant": 44,
+   "star": "AU Mic",
+   "dist_pc": 9.7141,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 114.015139,
+     "fhi": 115.740725,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2419.2,
+     "rms_mJy": 1.25335,
+     "ctrl_max_snr": 5.4575
+    }
+   ],
+   "cum_win": 9
+  },
+  {
+   "priority": 9,
+   "key": 0.035714,
+   "eb": "A002_Xff294f_X812c",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e3d",
+   "n_ant": 11,
+   "star": "HD161868",
+   "dist_pc": 29.7465,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 3.11,
+   "windows": [
+    {
+     "flo": 330.367843,
+     "fhi": 332.208175,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2751.84,
+     "rms_mJy": 23.98614,
+     "ctrl_max_snr": 5.7365
+    },
+    {
+     "flo": 344.200839,
+     "fhi": 346.041171,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2751.84,
+     "rms_mJy": 20.91565,
+     "ctrl_max_snr": 5.86
+    }
+   ],
+   "cum_win": 11
+  },
+  {
+   "priority": 10,
+   "key": 0.038043,
+   "eb": "A002_Xc694dd_X41ca",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X1273/Xa0a",
+   "n_ant": 12,
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "dist_pc": 12.0394,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.92,
+   "windows": [
+    {
+     "flo": 229.610626,
+     "fhi": 231.451446,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2842.56,
+     "rms_mJy": 11.64848,
+     "ctrl_max_snr": 5.5392
+    }
+   ],
+   "cum_win": 12
+  },
+  {
+   "priority": 11,
+   "key": 0.042857,
+   "eb": "A002_Xb2f730_X9e28",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X2fa/X22c",
+   "n_ant": 41,
+   "star": "Wolf 219",
+   "dist_pc": 18.883,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 229.269395,
+     "fhi": 230.994493,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 60.48,
+     "rms_mJy": 10.04007,
+     "ctrl_max_snr": 5.1334
+    }
+   ],
+   "cum_win": 13
+  },
+  {
+   "priority": 12,
+   "key": 0.048913,
+   "eb": "A002_Xb9cc97_X1734",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X879/X29b",
+   "n_ant": 12,
+   "star": "tau Cet",
+   "dist_pc": 3.6522,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.48,
+   "windows": [
+    {
+     "flo": 229.63364,
+     "fhi": 231.473972,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1391.04,
+     "rms_mJy": 12.83042,
+     "ctrl_max_snr": 5.4153
+    }
+   ],
+   "cum_win": 14
+  },
+  {
+   "priority": 13,
+   "key": 0.05,
+   "eb": "A002_Xbb9cd7_X40d5",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X879/X1be",
+   "n_ant": 42,
+   "star": "hd107146",
+   "dist_pc": 27.4697,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25,
+    976562.5
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 344.16714,
+     "fhi": 345.892726,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2963.52,
+     "rms_mJy": 1.64333,
+     "ctrl_max_snr": 5.7366
+    },
+    {
+     "flo": 354.274082,
+     "fhi": 355.99918,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2963.52,
+     "rms_mJy": 2.05974,
+     "ctrl_max_snr": 5.7063
+    }
+   ],
+   "cum_win": 16
+  },
+  {
+   "priority": 14,
+   "key": 0.059524,
+   "eb": "A002_Xfff3d8_Xd46",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e71",
+   "n_ant": 12,
+   "star": "HD14055",
+   "dist_pc": 35.7405,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 3.34,
+   "windows": [
+    {
+     "flo": 330.386622,
+     "fhi": 332.226954,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 22.31333,
+     "ctrl_max_snr": 5.9882
+    },
+    {
+     "flo": 344.219618,
+     "fhi": 346.05995,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 20.48207,
+     "ctrl_max_snr": 6.0005
+    }
+   ],
+   "cum_win": 18
+  },
+  {
+   "priority": 15,
+   "key": 0.059783,
+   "eb": "A002_Xdcad18_X305b",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X133d/X36a2",
+   "n_ant": 11,
+   "star": "HN Lib",
+   "dist_pc": 6.253,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.53,
+   "windows": [
+    {
+     "flo": 229.072114,
+     "fhi": 230.912446,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2600.64,
+     "rms_mJy": 11.56991,
+     "ctrl_max_snr": 5.756
+    }
+   ],
+   "cum_win": 19
+  },
+  {
+   "priority": 16,
+   "key": 0.07,
+   "eb": "A002_X9db5ce_X224b",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X147/X1f1",
+   "n_ant": 44,
+   "star": "61 Vir",
+   "dist_pc": 8.5344,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 344.932017,
+     "fhi": 346.657115,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2751.84,
+     "rms_mJy": 1.95031,
+     "ctrl_max_snr": 6.2212
+    }
+   ],
+   "cum_win": 20
+  },
+  {
+   "priority": 17,
+   "key": 0.070652,
+   "eb": "A002_Xc694dd_X3e5f",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X1273/Xa0a",
+   "n_ant": 12,
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "dist_pc": 12.0394,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.92,
+   "windows": [
+    {
+     "flo": 229.610685,
+     "fhi": 231.451506,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2842.56,
+     "rms_mJy": 9.60817,
+     "ctrl_max_snr": 5.7542
+    }
+   ],
+   "cum_win": 21
+  },
+  {
+   "priority": 18,
+   "key": 0.071429,
+   "eb": "A002_Xb28642_Xcff3",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X2d6/X15f",
+   "n_ant": 43,
+   "star": "HD 207129 Gaia DR3 6564091190988411520",
+   "dist_pc": 15.559,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 229.708703,
+     "fhi": 231.4338,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 362.88,
+     "rms_mJy": 2.88616,
+     "ctrl_max_snr": 5.7096
+    }
+   ],
+   "cum_win": 22
+  },
+  {
+   "priority": 19,
+   "key": 0.081522,
+   "eb": "A002_Xda1250_X6f6b",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X133d/X36ab",
+   "n_ant": 10,
+   "star": "LHS 1140",
+   "dist_pc": 14.9636,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.39,
+   "windows": [
+    {
+     "flo": 229.080093,
+     "fhi": 230.920425,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2600.64,
+     "rms_mJy": 12.88099,
+     "ctrl_max_snr": 5.793
+    }
+   ],
+   "cum_win": 23
+  },
+  {
+   "priority": 20,
+   "key": 0.083333,
+   "eb": "A002_X1003af4_X3a2c",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e71",
+   "n_ant": 12,
+   "star": "HD14055",
+   "dist_pc": 35.7405,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 2.74,
+   "windows": [
+    {
+     "flo": 330.383423,
+     "fhi": 332.223755,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2358.72,
+     "rms_mJy": 23.74367,
+     "ctrl_max_snr": 5.89
+    },
+    {
+     "flo": 344.216419,
+     "fhi": 346.056751,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2358.72,
+     "rms_mJy": 24.62156,
+     "ctrl_max_snr": 5.6793
+    }
+   ],
+   "cum_win": 25
+  },
+  {
+   "priority": 21,
+   "key": 0.09,
+   "eb": "A002_X12235df_X7876",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X3788/Xb8a2",
+   "n_ant": 57,
+   "star": "HD 69830",
+   "dist_pc": 12.5692,
+   "n_classa_win": 3,
+   "chanw_Hz": [
+    244140.625
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 321.159833,
+     "fhi": 321.267499,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 2903.04,
+     "rms_mJy": 3.34418,
+     "ctrl_max_snr": 5.9246
+    },
+    {
+     "flo": 322.399266,
+     "fhi": 322.506932,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 2903.04,
+     "rms_mJy": 4.63963,
+     "ctrl_max_snr": 5.839
+    },
+    {
+     "flo": 335.329114,
+     "fhi": 335.43678,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 2903.04,
+     "rms_mJy": 2.37679,
+     "ctrl_max_snr": 6.1135
+    }
+   ],
+   "cum_win": 28
+  },
+  {
+   "priority": 22,
+   "key": 0.092391,
+   "eb": "A002_X126787e_X227e",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X3788/X9171",
+   "n_ant": 10,
+   "star": "HD 89452",
+   "dist_pc": 36.227,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.96,
+   "windows": [
+    {
+     "flo": 229.664778,
+     "fhi": 231.390364,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2872.8,
+     "rms_mJy": 12.06382,
+     "ctrl_max_snr": 5.6236
+    }
+   ],
+   "cum_win": 29
+  },
+  {
+   "priority": 23,
+   "key": 0.1,
+   "eb": "A002_X1240efd_X14140",
+   "band": "3",
+   "array": "12m",
+   "mous": "uid://A001/X3788/X9d8e",
+   "n_ant": 45,
+   "star": "AU Mic",
+   "dist_pc": 9.7141,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 114.015115,
+     "fhi": 115.740701,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2419.2,
+     "rms_mJy": 1.18872,
+     "ctrl_max_snr": 5.5241
+    }
+   ],
+   "cum_win": 30
+  },
+  {
+   "priority": 24,
+   "key": 0.1,
+   "eb": "A002_Xd9668b_Xa9df",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X133d/Xbb5",
+   "n_ant": 46,
+   "star": "bet Pic",
+   "dist_pc": 19.6345,
+   "n_classa_win": 6,
+   "chanw_Hz": [
+    15258.7891,
+    122070.3125
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 48.93,
+   "windows": [
+    {
+     "flo": 225.622661,
+     "fhi": 225.73045,
+     "chanw_Hz": 122070.3125,
+     "on_source_s": 2328.48,
+     "rms_mJy": 2.0276,
+     "ctrl_max_snr": 5.4512
+    },
+    {
+     "flo": 226.239391,
+     "fhi": 226.347179,
+     "chanw_Hz": 122070.3125,
+     "on_source_s": 2328.48,
+     "rms_mJy": 2.00203,
+     "ctrl_max_snr": 5.61
+    },
+    {
+     "flo": 226.584392,
+     "fhi": 226.69218,
+     "chanw_Hz": 122070.3125,
+     "on_source_s": 2328.48,
+     "rms_mJy": 2.00223,
+     "ctrl_max_snr": 5.8299
+    },
+    {
+     "flo": 226.799602,
+     "fhi": 226.90739,
+     "chanw_Hz": 122070.3125,
+     "on_source_s": 2328.48,
+     "rms_mJy": 1.98685,
+     "ctrl_max_snr": 6.0399
+    },
+    {
+     "flo": 230.489384,
+     "fhi": 230.543293,
+     "chanw_Hz": 15258.7891,
+     "on_source_s": 2328.48,
+     "rms_mJy": 6.34601,
+     "ctrl_max_snr": 8.4072
+    },
+    {
+     "flo": 241.553089,
+     "fhi": 241.984364,
+     "chanw_Hz": 122070.3125,
+     "on_source_s": 2328.48,
+     "rms_mJy": 2.08947,
+     "ctrl_max_snr": 5.9903
+    }
+   ],
+   "cum_win": 36
+  },
+  {
+   "priority": 25,
+   "key": 0.103261,
+   "eb": "A002_X12694b3_Xab7",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X3788/X9171",
+   "n_ant": 11,
+   "star": "HD 89452",
+   "dist_pc": 36.227,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.11,
+   "windows": [
+    {
+     "flo": 229.664145,
+     "fhi": 231.38973,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2872.8,
+     "rms_mJy": 12.15677,
+     "ctrl_max_snr": 5.4017
+    }
+   ],
+   "cum_win": 37
+  },
+  {
+   "priority": 26,
+   "key": 0.107143,
+   "eb": "A002_Xc074d4_X2e6",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X1234/X334",
+   "n_ant": 11,
+   "star": "61 Vir",
+   "dist_pc": 8.5344,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.97,
+   "windows": [
+    {
+     "flo": 344.872899,
+     "fhi": 346.713231,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2268.0,
+     "rms_mJy": 18.96467,
+     "ctrl_max_snr": 5.8599
+    }
+   ],
+   "cum_win": 38
+  },
+  {
+   "priority": 27,
+   "key": 0.11,
+   "eb": "A002_X1207c39_X9417",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X3788/Xb8a2",
+   "n_ant": 57,
+   "star": "HD 69830",
+   "dist_pc": 12.5692,
+   "n_classa_win": 3,
+   "chanw_Hz": [
+    244140.625
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 321.166506,
+     "fhi": 321.274172,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 2903.04,
+     "rms_mJy": 3.7483,
+     "ctrl_max_snr": 5.687
+    },
+    {
+     "flo": 322.406,
+     "fhi": 322.513666,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 2903.04,
+     "rms_mJy": 5.07662,
+     "ctrl_max_snr": 5.7406
+    },
+    {
+     "flo": 335.336092,
+     "fhi": 335.443758,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 2903.04,
+     "rms_mJy": 2.55445,
+     "ctrl_max_snr": 5.8762
+    }
+   ],
+   "cum_win": 41
+  },
+  {
+   "priority": 28,
+   "key": 0.11413,
+   "eb": "A002_Xdaef5a_X7167",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X133d/X36a5",
+   "n_ant": 11,
+   "star": "GL 3379 Gaia DR3 3316364602541746048",
+   "dist_pc": 5.208,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.91,
+   "windows": [
+    {
+     "flo": 229.038339,
+     "fhi": 230.878671,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1451.52,
+     "rms_mJy": 12.94311,
+     "ctrl_max_snr": 5.405
+    }
+   ],
+   "cum_win": 42
+  },
+  {
+   "priority": 29,
+   "key": 0.125,
+   "eb": "A002_Xdcbe57_X2dd3",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X133d/X36a2",
+   "n_ant": 11,
+   "star": "HN Lib",
+   "dist_pc": 6.253,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.56,
+   "windows": [
+    {
+     "flo": 229.071779,
+     "fhi": 230.912111,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2600.64,
+     "rms_mJy": 11.15927,
+     "ctrl_max_snr": 5.64
+    }
+   ],
+   "cum_win": 43
+  },
+  {
+   "priority": 30,
+   "key": 0.128571,
+   "eb": "A002_Xd3607d_X6487",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X133d/X328b",
+   "n_ant": 52,
+   "star": "TWA 3A 696000",
+   "dist_pc": 37.0547,
+   "n_classa_win": 4,
+   "chanw_Hz": [
+    122070.3125
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 220.288446,
+     "fhi": 220.504144,
+     "chanw_Hz": 122070.3125,
+     "on_source_s": 2872.8,
+     "rms_mJy": 3.30262,
+     "ctrl_max_snr": 5.7414
+    },
+    {
+     "flo": 230.427679,
+     "fhi": 230.643377,
+     "chanw_Hz": 122070.3125,
+     "on_source_s": 2872.8,
+     "rms_mJy": 3.11522,
+     "ctrl_max_snr": 6.066
+    },
+    {
+     "flo": 220.288446,
+     "fhi": 220.504144,
+     "chanw_Hz": 122070.3125,
+     "on_source_s": 2872.8,
+     "rms_mJy": 3.30321,
+     "ctrl_max_snr": 5.9294
+    },
+    {
+     "flo": 230.427679,
+     "fhi": 230.643377,
+     "chanw_Hz": 122070.3125,
+     "on_source_s": 2872.8,
+     "rms_mJy": 3.11585,
+     "ctrl_max_snr": 5.8204
+    }
+   ],
+   "cum_win": 47
+  },
+  {
+   "priority": 31,
+   "key": 0.13,
+   "eb": "A002_X10228b9_X423",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X2d20/X2e2b",
+   "n_ant": 47,
+   "star": "HD170773",
+   "dist_pc": 36.9345,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 330.474324,
+     "fhi": 332.199422,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1844.64,
+     "rms_mJy": 3.08335,
+     "ctrl_max_snr": 5.6452
+    },
+    {
+     "flo": 344.307324,
+     "fhi": 346.032422,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1844.64,
+     "rms_mJy": 2.82039,
+     "ctrl_max_snr": 5.8961
+    }
+   ],
+   "cum_win": 49
+  },
+  {
+   "priority": 32,
+   "key": 0.130952,
+   "eb": "A002_Xff45a6_X107fe",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e3d",
+   "n_ant": 11,
+   "star": "HD161868",
+   "dist_pc": 29.7465,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 2.67,
+   "windows": [
+    {
+     "flo": 330.368411,
+     "fhi": 332.208743,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2751.84,
+     "rms_mJy": 19.21533,
+     "ctrl_max_snr": 5.6981
+    },
+    {
+     "flo": 344.201408,
+     "fhi": 346.04174,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2751.84,
+     "rms_mJy": 18.55399,
+     "ctrl_max_snr": 5.7631
+    }
+   ],
+   "cum_win": 51
+  },
+  {
+   "priority": 33,
+   "key": 0.13587,
+   "eb": "A002_X1018459_X73b0",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X15aa/X152",
+   "n_ant": 12,
+   "star": "ALMA J153702653-33192492",
+   "dist_pc": 35.0098,
+   "n_classa_win": 5,
+   "chanw_Hz": [
+    244140.625,
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 4.26,
+   "windows": [
+    {
+     "flo": 216.102688,
+     "fhi": 217.94302,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 211.68,
+     "rms_mJy": 33.54048,
+     "ctrl_max_snr": 5.7182
+    },
+    {
+     "flo": 218.352688,
+     "fhi": 220.19302,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 211.68,
+     "rms_mJy": 34.34252,
+     "ctrl_max_snr": 5.7144
+    },
+    {
+     "flo": 230.32692,
+     "fhi": 230.787125,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 211.68,
+     "rms_mJy": 57.29063,
+     "ctrl_max_snr": 13.2484
+    },
+    {
+     "flo": 230.809341,
+     "fhi": 231.269546,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 211.68,
+     "rms_mJy": 48.65244,
+     "ctrl_max_snr": 5.515
+    },
+    {
+     "flo": 232.602684,
+     "fhi": 234.443016,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 211.68,
+     "rms_mJy": 35.83861,
+     "ctrl_max_snr": 5.9961
+    }
+   ],
+   "cum_win": 56
+  },
+  {
+   "priority": 34,
+   "key": 0.146739,
+   "eb": "A002_Xc6d2f9_X7060",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X1273/Xa0a",
+   "n_ant": 12,
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "dist_pc": 12.0394,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.03,
+   "windows": [
+    {
+     "flo": 229.610174,
+     "fhi": 231.450995,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2842.56,
+     "rms_mJy": 11.03064,
+     "ctrl_max_snr": 5.4611
+    }
+   ],
+   "cum_win": 57
+  },
+  {
+   "priority": 35,
+   "key": 0.15,
+   "eb": "A002_Xce574d_X8706",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X1273/X391",
+   "n_ant": 50,
+   "star": "lp 876-10 Gaia DR3 6623351805412369024",
+   "dist_pc": 7.6763,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 344.970549,
+     "fhi": 346.695647,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2026.08,
+     "rms_mJy": 1.56965,
+     "ctrl_max_snr": 5.726
+    }
+   ],
+   "cum_win": 58
+  },
+  {
+   "priority": 36,
+   "key": 0.154762,
+   "eb": "A002_Xc7111c_X61dc",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X1273/Xa0e",
+   "n_ant": 11,
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "dist_pc": 12.0394,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.31,
+   "windows": [
+    {
+     "flo": 345.313596,
+     "fhi": 346.234006,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1360.8,
+     "rms_mJy": 32.17039,
+     "ctrl_max_snr": 5.8178
+    }
+   ],
+   "cum_win": 59
+  },
+  {
+   "priority": 37,
+   "key": 0.157143,
+   "eb": "A002_Xcf196f_Xabc5",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X1289/X480",
+   "n_ant": 54,
+   "star": "GJ14 Gaia DR3 383426372059603712",
+   "dist_pc": 14.6876,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 226.361799,
+     "fhi": 228.086896,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2812.32,
+     "rms_mJy": 2.12555,
+     "ctrl_max_snr": 5.6599
+    },
+    {
+     "flo": 229.252975,
+     "fhi": 230.978073,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2812.32,
+     "rms_mJy": 1.91477,
+     "ctrl_max_snr": 6.0627
+    }
+   ],
+   "cum_win": 61
+  },
+  {
+   "priority": 38,
+   "key": 0.157609,
+   "eb": "A002_Xb9cc97_X150a",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X879/X29b",
+   "n_ant": 12,
+   "star": "tau Cet",
+   "dist_pc": 3.6522,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.48,
+   "windows": [
+    {
+     "flo": 229.633788,
+     "fhi": 231.474121,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2963.52,
+     "rms_mJy": 14.14669,
+     "ctrl_max_snr": 5.5546
+    }
+   ],
+   "cum_win": 62
+  },
+  {
+   "priority": 39,
+   "key": 0.166667,
+   "eb": "A002_X12925a3_Xa4b1",
+   "band": "3",
+   "array": "12m",
+   "mous": "uid://A001/X3788/X9d8c",
+   "n_ant": 50,
+   "star": "AU Mic",
+   "dist_pc": 9.7141,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 114.0265,
+     "fhi": 115.752086,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2884.9,
+     "rms_mJy": 1.05564,
+     "ctrl_max_snr": 5.614
+    }
+   ],
+   "cum_win": 63
+  },
+  {
+   "priority": 40,
+   "key": 0.166667,
+   "eb": "A002_X12277ed_X22e53",
+   "band": "8",
+   "array": "7m",
+   "mous": "uid://A001/X37b0/X339",
+   "n_ant": 14,
+   "star": "eta Crv",
+   "dist_pc": 18.2437,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    61035.1562
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.73,
+   "windows": [
+    {
+     "flo": 492.185959,
+     "fhi": 492.239853,
+     "chanw_Hz": 61035.1562,
+     "on_source_s": 2056.32,
+     "rms_mJy": 261.77609,
+     "ctrl_max_snr": 5.9671
+    }
+   ],
+   "cum_win": 64
+  },
+  {
+   "priority": 41,
+   "key": 0.168478,
+   "eb": "A002_Xc20718_X2fcf",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X1234/X330",
+   "n_ant": 8,
+   "star": "HD 38858 Gaia DR3 3023711269067191296",
+   "dist_pc": 15.2104,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.21,
+   "windows": [
+    {
+     "flo": 229.609322,
+     "fhi": 231.449654,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2782.08,
+     "rms_mJy": 13.76975,
+     "ctrl_max_snr": 6.3137
+    }
+   ],
+   "cum_win": 65
+  },
+  {
+   "priority": 42,
+   "key": 0.17,
+   "eb": "A002_X12209f7_X163ba",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X3788/Xb8a2",
+   "n_ant": 57,
+   "star": "HD 69830",
+   "dist_pc": 12.5692,
+   "n_classa_win": 3,
+   "chanw_Hz": [
+    244140.625
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 321.160299,
+     "fhi": 321.267965,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 2903.04,
+     "rms_mJy": 2.86267,
+     "ctrl_max_snr": 6.4681
+    },
+    {
+     "flo": 322.399732,
+     "fhi": 322.507398,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 2903.04,
+     "rms_mJy": 3.87075,
+     "ctrl_max_snr": 5.6721
+    },
+    {
+     "flo": 335.32958,
+     "fhi": 335.437246,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 2903.04,
+     "rms_mJy": 2.20706,
+     "ctrl_max_snr": 5.7995
+    }
+   ],
+   "cum_win": 68
+  },
+  {
+   "priority": 43,
+   "key": 0.178571,
+   "eb": "A002_Xff699e_X7543",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e3d",
+   "n_ant": 11,
+   "star": "HD161868",
+   "dist_pc": 29.7465,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 3.11,
+   "windows": [
+    {
+     "flo": 330.368406,
+     "fhi": 332.208738,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2751.84,
+     "rms_mJy": 33.87503,
+     "ctrl_max_snr": 5.667
+    },
+    {
+     "flo": 344.201402,
+     "fhi": 346.041734,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2751.84,
+     "rms_mJy": 29.69526,
+     "ctrl_max_snr": 5.8443
+    }
+   ],
+   "cum_win": 70
+  },
+  {
+   "priority": 44,
+   "key": 0.179348,
+   "eb": "A002_Xba460f_X7e6",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X879/X29b",
+   "n_ant": 12,
+   "star": "tau Cet",
+   "dist_pc": 3.6522,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.69,
+   "windows": [
+    {
+     "flo": 229.629104,
+     "fhi": 231.469436,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1572.48,
+     "rms_mJy": 12.84357,
+     "ctrl_max_snr": 5.833
+    }
+   ],
+   "cum_win": 71
+  },
+  {
+   "priority": 45,
+   "key": 0.185714,
+   "eb": "A002_Xce574d_X123f",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X1289/X444",
+   "n_ant": 50,
+   "star": "HD170773",
+   "dist_pc": 36.9345,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 226.374448,
+     "fhi": 228.099546,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 846.72,
+     "rms_mJy": 1.40517,
+     "ctrl_max_snr": 5.6115
+    },
+    {
+     "flo": 229.265289,
+     "fhi": 230.990386,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 846.72,
+     "rms_mJy": 1.37327,
+     "ctrl_max_snr": 5.8783
+    }
+   ],
+   "cum_win": 73
+  },
+  {
+   "priority": 46,
+   "key": 0.19,
+   "eb": "A002_X1171dca_X5df0",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X2d20/X2e5f",
+   "n_ant": 50,
+   "star": "HD 10647",
+   "dist_pc": 17.3488,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 330.429839,
+     "fhi": 332.154936,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2207.52,
+     "rms_mJy": 3.15821,
+     "ctrl_max_snr": 5.633
+    },
+    {
+     "flo": 344.262839,
+     "fhi": 345.987936,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2207.52,
+     "rms_mJy": 2.62994,
+     "ctrl_max_snr": 6.0896
+    }
+   ],
+   "cum_win": 75
+  },
+  {
+   "priority": 47,
+   "key": 0.190217,
+   "eb": "A002_Xd95042_X67d7",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X133d/X36ae",
+   "n_ant": 12,
+   "star": "GJ 849",
+   "dist_pc": 8.8149,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.77,
+   "windows": [
+    {
+     "flo": 229.097428,
+     "fhi": 230.93776,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1451.52,
+     "rms_mJy": 19.0024,
+     "ctrl_max_snr": 5.5472
+    }
+   ],
+   "cum_win": 76
+  },
+  {
+   "priority": 48,
+   "key": 0.201087,
+   "eb": "A002_X1239f8e_Xa43b",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X3788/X916a",
+   "n_ant": 11,
+   "star": "HD377",
+   "dist_pc": 38.4045,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.87,
+   "windows": [
+    {
+     "flo": 229.653766,
+     "fhi": 231.379352,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2237.76,
+     "rms_mJy": 17.36072,
+     "ctrl_max_snr": 5.669
+    }
+   ],
+   "cum_win": 77
+  },
+  {
+   "priority": 49,
+   "key": 0.202381,
+   "eb": "A002_Xfffde1_X3835",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e71",
+   "n_ant": 12,
+   "star": "HD14055",
+   "dist_pc": 35.7405,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 2.9,
+   "windows": [
+    {
+     "flo": 330.385894,
+     "fhi": 332.226226,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 26.5185,
+     "ctrl_max_snr": 5.8185
+    },
+    {
+     "flo": 344.21889,
+     "fhi": 346.059222,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 24.92703,
+     "ctrl_max_snr": 6.5608
+    }
+   ],
+   "cum_win": 79
+  },
+  {
+   "priority": 50,
+   "key": 0.21,
+   "eb": "A002_Xd9d7c7_Xbb64",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X133d/X715",
+   "n_ant": 45,
+   "star": "ALMA J153702653-33192492",
+   "dist_pc": 35.0098,
+   "n_classa_win": 4,
+   "chanw_Hz": [
+    488281.25,
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 54.55,
+   "windows": [
+    {
+     "flo": 333.166882,
+     "fhi": 334.892468,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 151.2,
+     "rms_mJy": 6.75412,
+     "ctrl_max_snr": 5.4257
+    },
+    {
+     "flo": 335.058996,
+     "fhi": 336.784582,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 151.2,
+     "rms_mJy": 6.05274,
+     "ctrl_max_snr": 5.6036
+    },
+    {
+     "flo": 345.118188,
+     "fhi": 346.843286,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 151.2,
+     "rms_mJy": 6.58911,
+     "ctrl_max_snr": 5.8839
+    },
+    {
+     "flo": 346.976241,
+     "fhi": 348.701338,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 151.2,
+     "rms_mJy": 7.37187,
+     "ctrl_max_snr": 5.6821
+    }
+   ],
+   "cum_win": 83
+  },
+  {
+   "priority": 51,
+   "key": 0.211957,
+   "eb": "A002_Xb9cc97_X193f",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X879/X29b",
+   "n_ant": 12,
+   "star": "tau Cet",
+   "dist_pc": 3.6522,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.48,
+   "windows": [
+    {
+     "flo": 229.633486,
+     "fhi": 231.473818,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1391.04,
+     "rms_mJy": 15.14449,
+     "ctrl_max_snr": 6.2729
+    }
+   ],
+   "cum_win": 84
+  },
+  {
+   "priority": 52,
+   "key": 0.214286,
+   "eb": "A002_Xd659d4_X211",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X133d/Xb95",
+   "n_ant": 49,
+   "star": "HD202628",
+   "dist_pc": 23.794,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 230.080939,
+     "fhi": 230.943732,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2933.28,
+     "rms_mJy": 1.33529,
+     "ctrl_max_snr": 5.6416
+    }
+   ],
+   "cum_win": 85
+  },
+  {
+   "priority": 53,
+   "key": 0.222826,
+   "eb": "A002_X10a513c_X389e",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X2d1f/X9fe",
+   "n_ant": 11,
+   "star": "HD53143 Gaia DR3 5479222240596469632",
+   "dist_pc": 18.3401,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.85,
+   "windows": [
+    {
+     "flo": 229.601374,
+     "fhi": 231.442195,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2509.92,
+     "rms_mJy": 13.64322,
+     "ctrl_max_snr": 5.3308
+    }
+   ],
+   "cum_win": 86
+  },
+  {
+   "priority": 54,
+   "key": 0.22619,
+   "eb": "A002_Xbe2ed7_X7c91",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X879/X1c0",
+   "n_ant": 12,
+   "star": "hd107146",
+   "dist_pc": 27.4697,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25,
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.99,
+   "windows": [
+    {
+     "flo": 344.074232,
+     "fhi": 345.915052,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2086.56,
+     "rms_mJy": 24.02042,
+     "ctrl_max_snr": 5.6318
+    },
+    {
+     "flo": 354.180664,
+     "fhi": 356.020996,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2086.56,
+     "rms_mJy": 31.08429,
+     "ctrl_max_snr": 5.9548
+    }
+   ],
+   "cum_win": 88
+  },
+  {
+   "priority": 55,
+   "key": 0.23,
+   "eb": "A002_Xbbadbe_X3846",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X879/X1b8",
+   "n_ant": 51,
+   "star": "hd92945",
+   "dist_pc": 21.5085,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25,
+    976562.5
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 344.139024,
+     "fhi": 345.86461,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2812.32,
+     "rms_mJy": 1.48687,
+     "ctrl_max_snr": 5.5884
+    },
+    {
+     "flo": 354.245561,
+     "fhi": 355.970658,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2812.32,
+     "rms_mJy": 1.95977,
+     "ctrl_max_snr": 6.0484
+    }
+   ],
+   "cum_win": 90
+  },
+  {
+   "priority": 56,
+   "key": 0.233333,
+   "eb": "A002_Xf5d76d_Xe19",
+   "band": "3",
+   "array": "12m",
+   "mous": "uid://A001/X158f/X7c5",
+   "n_ant": 42,
+   "star": "bet Pic",
+   "dist_pc": 19.6345,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    244140.625
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 114.829193,
+     "fhi": 115.691742,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 2026.08,
+     "rms_mJy": 2.64896,
+     "ctrl_max_snr": 6.4803
+    }
+   ],
+   "cum_win": 91
+  },
+  {
+   "priority": 57,
+   "key": 0.233696,
+   "eb": "A002_Xc6e968_X1339",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X1273/Xa0a",
+   "n_ant": 12,
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "dist_pc": 12.0394,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.03,
+   "windows": [
+    {
+     "flo": 229.610125,
+     "fhi": 231.450945,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2842.56,
+     "rms_mJy": 7.37656,
+     "ctrl_max_snr": 5.497
+    }
+   ],
+   "cum_win": 92
+  },
+  {
+   "priority": 58,
+   "key": 0.242857,
+   "eb": "A002_Xa68906_X1590",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X13b/X1bc",
+   "n_ant": 44,
+   "star": "HD172555",
+   "dist_pc": 28.789,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    15258.7891
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 220.363563,
+     "fhi": 220.417472,
+     "chanw_Hz": 15258.7891,
+     "on_source_s": 453.6,
+     "rms_mJy": 17.43013,
+     "ctrl_max_snr": 6.1808
+    },
+    {
+     "flo": 230.50248,
+     "fhi": 230.556389,
+     "chanw_Hz": 15258.7891,
+     "on_source_s": 453.6,
+     "rms_mJy": 16.05292,
+     "ctrl_max_snr": 5.8462
+    }
+   ],
+   "cum_win": 94
+  },
+  {
+   "priority": 59,
+   "key": 0.244565,
+   "eb": "A002_Xdb4b9a_X108f",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X133d/X36a8",
+   "n_ant": 12,
+   "star": "HD 285968",
+   "dist_pc": 9.4852,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.23,
+   "windows": [
+    {
+     "flo": 229.045178,
+     "fhi": 230.88551,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2812.32,
+     "rms_mJy": 13.50335,
+     "ctrl_max_snr": 7.9438
+    }
+   ],
+   "cum_win": 95
+  },
+  {
+   "priority": 60,
+   "key": 0.25,
+   "eb": "A002_Xcd64ec_X21c9",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X1289/X3d0",
+   "n_ant": 46,
+   "star": "L 836-122",
+   "dist_pc": 28.6967,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 345.137454,
+     "fhi": 346.862552,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 876.96,
+     "rms_mJy": 2.95345,
+     "ctrl_max_snr": 5.5547
+    }
+   ],
+   "cum_win": 96
+  },
+  {
+   "priority": 61,
+   "key": 0.25,
+   "eb": "A002_Xc6141c_X3af0",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X1273/Xa0e",
+   "n_ant": 11,
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "dist_pc": 12.0394,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.31,
+   "windows": [
+    {
+     "flo": 345.316593,
+     "fhi": 346.237003,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1360.8,
+     "rms_mJy": 29.98473,
+     "ctrl_max_snr": 6.3462
+    }
+   ],
+   "cum_win": 97
+  },
+  {
+   "priority": 62,
+   "key": 0.255435,
+   "eb": "A002_X10b0d7d_X323f",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X2d1f/X9fa",
+   "n_ant": 11,
+   "star": "HD 23484 Gaia DR3 4856592239127350400",
+   "dist_pc": 16.1696,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.9,
+   "windows": [
+    {
+     "flo": 229.609863,
+     "fhi": 231.450683,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2751.84,
+     "rms_mJy": 11.20884,
+     "ctrl_max_snr": 5.7195
+    }
+   ],
+   "cum_win": 98
+  },
+  {
+   "priority": 63,
+   "key": 0.266304,
+   "eb": "A002_Xc23361_Xb5c9",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X1234/X330",
+   "n_ant": 9,
+   "star": "HD 38858 Gaia DR3 3023711269067191296",
+   "dist_pc": 15.2104,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.36,
+   "windows": [
+    {
+     "flo": 229.611241,
+     "fhi": 231.451573,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2782.08,
+     "rms_mJy": 10.90464,
+     "ctrl_max_snr": 7.155
+    }
+   ],
+   "cum_win": 99
+  },
+  {
+   "priority": 64,
+   "key": 0.27,
+   "eb": "A002_Xcf525f_X5aa4",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X1289/X3d9",
+   "n_ant": 54,
+   "star": "CD-57 1054",
+   "dist_pc": 26.8732,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 23.05,
+   "windows": [
+    {
+     "flo": 345.123177,
+     "fhi": 346.848275,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1028.16,
+     "rms_mJy": 3.61603,
+     "ctrl_max_snr": 5.7106
+    }
+   ],
+   "cum_win": 100
+  },
+  {
+   "priority": 65,
+   "key": 0.271429,
+   "eb": "A002_X899169_X1838",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A002/X609170/X170",
+   "n_ant": 35,
+   "star": "AU Mic",
+   "dist_pc": 9.7141,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 10.97,
+   "windows": [
+    {
+     "flo": 229.675816,
+     "fhi": 231.400913,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1505.95,
+     "rms_mJy": 1.90704,
+     "ctrl_max_snr": 5.8455
+    }
+   ],
+   "cum_win": 101
+  },
+  {
+   "priority": 66,
+   "key": 0.27381,
+   "eb": "A002_Xc067f7_X822",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X1234/X334",
+   "n_ant": 10,
+   "star": "61 Vir",
+   "dist_pc": 8.5344,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.73,
+   "windows": [
+    {
+     "flo": 344.873837,
+     "fhi": 346.714169,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2268.0,
+     "rms_mJy": 21.42891,
+     "ctrl_max_snr": 5.788
+    }
+   ],
+   "cum_win": 102
+  },
+  {
+   "priority": 67,
+   "key": 0.277174,
+   "eb": "A002_X10b22d7_X2445",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X2d1f/X9fa",
+   "n_ant": 11,
+   "star": "HD 23484 Gaia DR3 4856592239127350400",
+   "dist_pc": 16.1696,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.9,
+   "windows": [
+    {
+     "flo": 229.609717,
+     "fhi": 231.450537,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2751.84,
+     "rms_mJy": 8.57171,
+     "ctrl_max_snr": 5.5517
+    }
+   ],
+   "cum_win": 103
+  },
+  {
+   "priority": 68,
+   "key": 0.288043,
+   "eb": "A002_Xc66ce1_Xaa9",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X1273/Xa0a",
+   "n_ant": 12,
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "dist_pc": 12.0394,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.03,
+   "windows": [
+    {
+     "flo": 229.611119,
+     "fhi": 231.451939,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 3265.92,
+     "rms_mJy": 7.74954,
+     "ctrl_max_snr": 5.7192
+    }
+   ],
+   "cum_win": 104
+  },
+  {
+   "priority": 69,
+   "key": 0.29,
+   "eb": "A002_Xcda49e_Xdebb",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X1273/X391",
+   "n_ant": 51,
+   "star": "lp 876-10 Gaia DR3 6623351805412369024",
+   "dist_pc": 7.6763,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 344.9711,
+     "fhi": 346.696198,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2026.08,
+     "rms_mJy": 1.57025,
+     "ctrl_max_snr": 5.8031
+    }
+   ],
+   "cum_win": 105
+  },
+  {
+   "priority": 70,
+   "key": 0.297619,
+   "eb": "A002_Xff699e_Xd7",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e3d",
+   "n_ant": 11,
+   "star": "HD161868",
+   "dist_pc": 29.7465,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 2.7,
+   "windows": [
+    {
+     "flo": 330.36839,
+     "fhi": 332.208722,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2751.84,
+     "rms_mJy": 20.64579,
+     "ctrl_max_snr": 5.8174
+    },
+    {
+     "flo": 344.201386,
+     "fhi": 346.041718,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2751.84,
+     "rms_mJy": 19.51611,
+     "ctrl_max_snr": 6.3211
+    }
+   ],
+   "cum_win": 107
+  },
+  {
+   "priority": 71,
+   "key": 0.298913,
+   "eb": "A002_Xdd0d37_X17f99",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X133d/X36a5",
+   "n_ant": 12,
+   "star": "GL 3379 Gaia DR3 3316364602541746048",
+   "dist_pc": 5.208,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.39,
+   "windows": [
+    {
+     "flo": 229.051853,
+     "fhi": 230.892185,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2751.84,
+     "rms_mJy": 10.03989,
+     "ctrl_max_snr": 5.6947
+    }
+   ],
+   "cum_win": 108
+  },
+  {
+   "priority": 72,
+   "key": 0.3,
+   "eb": "A002_X129754b_X2b51b",
+   "band": "3",
+   "array": "12m",
+   "mous": "uid://A001/X3788/X9d8c",
+   "n_ant": 57,
+   "star": "AU Mic",
+   "dist_pc": 9.7141,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 114.025596,
+     "fhi": 115.751182,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2884.9,
+     "rms_mJy": 1.02182,
+     "ctrl_max_snr": 6.0038
+    }
+   ],
+   "cum_win": 109
+  },
+  {
+   "priority": 73,
+   "key": 0.3,
+   "eb": "A002_Xcbb583_Xb78",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X1284/X436",
+   "n_ant": 43,
+   "star": "HD 69830",
+   "dist_pc": 12.5692,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 226.302308,
+     "fhi": 228.027406,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2388.96,
+     "rms_mJy": 0.87625,
+     "ctrl_max_snr": 6.0574
+    },
+    {
+     "flo": 229.195064,
+     "fhi": 230.920162,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2388.96,
+     "rms_mJy": 0.84705,
+     "ctrl_max_snr": 5.6553
+    }
+   ],
+   "cum_win": 111
+  },
+  {
+   "priority": 74,
+   "key": 0.309783,
+   "eb": "A002_Xc68b3e_X107b",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X1273/Xa0a",
+   "n_ant": 12,
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "dist_pc": 12.0394,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.92,
+   "windows": [
+    {
+     "flo": 229.610807,
+     "fhi": 231.451627,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2842.56,
+     "rms_mJy": 10.79059,
+     "ctrl_max_snr": 5.4599
+    }
+   ],
+   "cum_win": 112
+  },
+  {
+   "priority": 75,
+   "key": 0.31,
+   "eb": "A002_Xbbcb1f_X7dd5",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X879/X1b8",
+   "n_ant": 47,
+   "star": "hd92945",
+   "dist_pc": 21.5085,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25,
+    976562.5
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 344.138865,
+     "fhi": 345.864451,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2812.32,
+     "rms_mJy": 1.82482,
+     "ctrl_max_snr": 5.6568
+    },
+    {
+     "flo": 354.245399,
+     "fhi": 355.970497,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2812.32,
+     "rms_mJy": 2.27709,
+     "ctrl_max_snr": 5.5142
+    }
+   ],
+   "cum_win": 114
+  },
+  {
+   "priority": 76,
+   "key": 0.320652,
+   "eb": "A002_Xbaa732_X1627",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X879/X29b",
+   "n_ant": 12,
+   "star": "tau Cet",
+   "dist_pc": 3.6522,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.48,
+   "windows": [
+    {
+     "flo": 229.626443,
+     "fhi": 231.466775,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1572.48,
+     "rms_mJy": 13.50608,
+     "ctrl_max_snr": 5.5242
+    }
+   ],
+   "cum_win": 115
+  },
+  {
+   "priority": 77,
+   "key": 0.321429,
+   "eb": "A002_X1003af4_X14e08",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e71",
+   "n_ant": 12,
+   "star": "HD14055",
+   "dist_pc": 35.7405,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 3.35,
+   "windows": [
+    {
+     "flo": 330.382391,
+     "fhi": 332.222723,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 24.04486,
+     "ctrl_max_snr": 5.7974
+    },
+    {
+     "flo": 344.215387,
+     "fhi": 346.055719,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 22.29685,
+     "ctrl_max_snr": 6.1428
+    }
+   ],
+   "cum_win": 117
+  },
+  {
+   "priority": 78,
+   "key": 0.328571,
+   "eb": "A002_Xe3da01_X4265",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X1465/X9ff",
+   "n_ant": 49,
+   "star": "HD110411",
+   "dist_pc": 38.9225,
+   "n_classa_win": 4,
+   "chanw_Hz": [
+    244140.625
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 219.367908,
+     "fhi": 219.799305,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 1542.24,
+     "rms_mJy": 1.85613,
+     "ctrl_max_snr": 5.7793
+    },
+    {
+     "flo": 220.206257,
+     "fhi": 220.637653,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 1542.24,
+     "rms_mJy": 2.41029,
+     "ctrl_max_snr": 5.5688
+    },
+    {
+     "flo": 230.346699,
+     "fhi": 230.778095,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 1542.24,
+     "rms_mJy": 2.30403,
+     "ctrl_max_snr": 5.5673
+    },
+    {
+     "flo": 231.205982,
+     "fhi": 231.637379,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 1542.24,
+     "rms_mJy": 1.92948,
+     "ctrl_max_snr": 5.9751
+    }
+   ],
+   "cum_win": 121
+  },
+  {
+   "priority": 79,
+   "key": 0.33,
+   "eb": "A002_Xb54d65_X727",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X2fa/X10d",
+   "n_ant": 32,
+   "star": "HD 10647",
+   "dist_pc": 17.3488,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 344.954509,
+     "fhi": 346.679606,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 393.12,
+     "rms_mJy": 6.24391,
+     "ctrl_max_snr": 5.7628
+    }
+   ],
+   "cum_win": 122
+  },
+  {
+   "priority": 80,
+   "key": 0.331522,
+   "eb": "A002_X12771d5_X10e06",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X3788/X917a",
+   "n_ant": 10,
+   "star": "HD 45184",
+   "dist_pc": 21.8923,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.18,
+   "windows": [
+    {
+     "flo": 229.666447,
+     "fhi": 231.392033,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2933.28,
+     "rms_mJy": 13.91934,
+     "ctrl_max_snr": 5.422
+    }
+   ],
+   "cum_win": 123
+  },
+  {
+   "priority": 81,
+   "key": 0.342391,
+   "eb": "A002_Xdc621b_X2bb0",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X133d/X36a2",
+   "n_ant": 11,
+   "star": "HN Lib",
+   "dist_pc": 6.253,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.11,
+   "windows": [
+    {
+     "flo": 229.074003,
+     "fhi": 230.914335,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1451.52,
+     "rms_mJy": 13.17659,
+     "ctrl_max_snr": 5.9787
+    }
+   ],
+   "cum_win": 124
+  },
+  {
+   "priority": 82,
+   "key": 0.345238,
+   "eb": "A002_Xff45a6_X10ca8",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e3d",
+   "n_ant": 11,
+   "star": "HD161868",
+   "dist_pc": 29.7465,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 2.7,
+   "windows": [
+    {
+     "flo": 330.368222,
+     "fhi": 332.208554,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2751.84,
+     "rms_mJy": 20.43041,
+     "ctrl_max_snr": 5.8671
+    },
+    {
+     "flo": 344.201219,
+     "fhi": 346.041551,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2751.84,
+     "rms_mJy": 19.41433,
+     "ctrl_max_snr": 6.158
+    }
+   ],
+   "cum_win": 126
+  },
+  {
+   "priority": 83,
+   "key": 0.35,
+   "eb": "A002_Xd10f82_X2635",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X1289/X3e8",
+   "n_ant": 44,
+   "star": "LP 476-207 783296",
+   "dist_pc": 23.7525,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 345.154398,
+     "fhi": 346.879496,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1028.16,
+     "rms_mJy": 2.85096,
+     "ctrl_max_snr": 5.8578
+    },
+    {
+     "flo": 345.154398,
+     "fhi": 346.879496,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1028.16,
+     "rms_mJy": 2.85145,
+     "ctrl_max_snr": 5.7657
+    }
+   ],
+   "cum_win": 128
+  },
+  {
+   "priority": 84,
+   "key": 0.353261,
+   "eb": "A002_Xff0235_X8392",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X15aa/X152",
+   "n_ant": 12,
+   "star": "ALMA J153702653-33192492",
+   "dist_pc": 35.0098,
+   "n_classa_win": 5,
+   "chanw_Hz": [
+    244140.625,
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 4.95,
+   "windows": [
+    {
+     "flo": 216.071602,
+     "fhi": 217.911934,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 211.68,
+     "rms_mJy": 34.80511,
+     "ctrl_max_snr": 5.9009
+    },
+    {
+     "flo": 218.321602,
+     "fhi": 220.161934,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 211.68,
+     "rms_mJy": 35.83109,
+     "ctrl_max_snr": 6.0451
+    },
+    {
+     "flo": 230.295833,
+     "fhi": 230.756038,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 211.68,
+     "rms_mJy": 59.35597,
+     "ctrl_max_snr": 13.4122
+    },
+    {
+     "flo": 230.778255,
+     "fhi": 231.23846,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 211.68,
+     "rms_mJy": 50.92075,
+     "ctrl_max_snr": 5.6118
+    },
+    {
+     "flo": 232.571598,
+     "fhi": 234.41193,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 211.68,
+     "rms_mJy": 37.84202,
+     "ctrl_max_snr": 5.8587
+    }
+   ],
+   "cum_win": 133
+  },
+  {
+   "priority": 85,
+   "key": 0.357143,
+   "eb": "A002_Xb25e1a_Xed74",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X2fa/X22c",
+   "n_ant": 41,
+   "star": "Wolf 219",
+   "dist_pc": 18.883,
+   "n_classa_win": 3,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 229.264212,
+     "fhi": 230.98931,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 60.48,
+     "rms_mJy": 8.0397,
+     "ctrl_max_snr": 5.7618
+    },
+    {
+     "flo": 229.264212,
+     "fhi": 230.98931,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 60.48,
+     "rms_mJy": 7.99285,
+     "ctrl_max_snr": 4.8944
+    },
+    {
+     "flo": 229.264212,
+     "fhi": 230.98931,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 60.48,
+     "rms_mJy": 8.10674,
+     "ctrl_max_snr": 5.2529
+    }
+   ],
+   "cum_win": 136
+  },
+  {
+   "priority": 86,
+   "key": 0.36413,
+   "eb": "A002_X10b22d7_X1d34",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X2d1f/X9fa",
+   "n_ant": 11,
+   "star": "HD 23484 Gaia DR3 4856592239127350400",
+   "dist_pc": 16.1696,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.95,
+   "windows": [
+    {
+     "flo": 229.609862,
+     "fhi": 231.450683,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2751.84,
+     "rms_mJy": 9.58233,
+     "ctrl_max_snr": 5.2521
+    }
+   ],
+   "cum_win": 137
+  },
+  {
+   "priority": 87,
+   "key": 0.366667,
+   "eb": "A002_X1237e23_Xdb0",
+   "band": "3",
+   "array": "12m",
+   "mous": "uid://A001/X3788/X9d8e",
+   "n_ant": 51,
+   "star": "AU Mic",
+   "dist_pc": 9.7141,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 114.012927,
+     "fhi": 115.738512,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2419.2,
+     "rms_mJy": 2.80875,
+     "ctrl_max_snr": 5.5459
+    }
+   ],
+   "cum_win": 138
+  },
+  {
+   "priority": 88,
+   "key": 0.369048,
+   "eb": "A002_Xc079b5_X82f",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X1234/X334",
+   "n_ant": 11,
+   "star": "61 Vir",
+   "dist_pc": 8.5344,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.97,
+   "windows": [
+    {
+     "flo": 344.872405,
+     "fhi": 346.712737,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2268.0,
+     "rms_mJy": 19.47754,
+     "ctrl_max_snr": 5.6475
+    }
+   ],
+   "cum_win": 139
+  },
+  {
+   "priority": 89,
+   "key": 0.37,
+   "eb": "A002_Xce0587_Xe4d0",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X1273/X391",
+   "n_ant": 44,
+   "star": "lp 876-10 Gaia DR3 6623351805412369024",
+   "dist_pc": 7.6763,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 344.971034,
+     "fhi": 346.696132,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2026.08,
+     "rms_mJy": 1.89446,
+     "ctrl_max_snr": 5.6518
+    }
+   ],
+   "cum_win": 140
+  },
+  {
+   "priority": 90,
+   "key": 0.375,
+   "eb": "A002_X126787e_X1c15",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X3788/X9171",
+   "n_ant": 11,
+   "star": "HD 89452",
+   "dist_pc": 36.227,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.97,
+   "windows": [
+    {
+     "flo": 229.664906,
+     "fhi": 231.390492,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2872.8,
+     "rms_mJy": 12.19605,
+     "ctrl_max_snr": 5.5985
+    }
+   ],
+   "cum_win": 141
+  },
+  {
+   "priority": 91,
+   "key": 0.385714,
+   "eb": "A002_Xd09670_X1d79",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X1289/X480",
+   "n_ant": 52,
+   "star": "GJ14 Gaia DR3 383426372059603712",
+   "dist_pc": 14.6876,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 226.360464,
+     "fhi": 228.085562,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2812.32,
+     "rms_mJy": 1.61979,
+     "ctrl_max_snr": 5.9963
+    },
+    {
+     "flo": 229.251676,
+     "fhi": 230.976774,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2812.32,
+     "rms_mJy": 1.66704,
+     "ctrl_max_snr": 5.8315
+    }
+   ],
+   "cum_win": 143
+  },
+  {
+   "priority": 92,
+   "key": 0.38587,
+   "eb": "A002_Xc19d6f_X19ce",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X1234/X32c",
+   "n_ant": 10,
+   "star": "HD 207129 Gaia DR3 6564091190988411520",
+   "dist_pc": 15.559,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.59,
+   "windows": [
+    {
+     "flo": 229.641448,
+     "fhi": 231.48178,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2872.8,
+     "rms_mJy": 10.86619,
+     "ctrl_max_snr": 5.8558
+    }
+   ],
+   "cum_win": 144
+  },
+  {
+   "priority": 93,
+   "key": 0.39,
+   "eb": "A002_Xce1e34_X1fb8",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X1289/X3df",
+   "n_ant": 46,
+   "star": "Barta 161 12",
+   "dist_pc": 37.2812,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 345.157358,
+     "fhi": 346.882455,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 876.96,
+     "rms_mJy": 2.77612,
+     "ctrl_max_snr": 5.5545
+    }
+   ],
+   "cum_win": 145
+  },
+  {
+   "priority": 94,
+   "key": 0.392857,
+   "eb": "A002_Xc66ce1_X1345",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X1273/Xa0e",
+   "n_ant": 11,
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "dist_pc": 12.0394,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.31,
+   "windows": [
+    {
+     "flo": 345.315385,
+     "fhi": 346.235795,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1360.8,
+     "rms_mJy": 24.72427,
+     "ctrl_max_snr": 5.8224
+    }
+   ],
+   "cum_win": 146
+  },
+  {
+   "priority": 95,
+   "key": 0.396739,
+   "eb": "A002_Xcd97a1_X2b1e",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X1289/X44c",
+   "n_ant": 12,
+   "star": "HD161868",
+   "dist_pc": 29.7465,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 2.26,
+   "windows": [
+    {
+     "flo": 226.304572,
+     "fhi": 228.144904,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2177.28,
+     "rms_mJy": 8.02517,
+     "ctrl_max_snr": 5.7381
+    },
+    {
+     "flo": 229.195739,
+     "fhi": 231.036071,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2177.28,
+     "rms_mJy": 7.14349,
+     "ctrl_max_snr": 5.5037
+    }
+   ],
+   "cum_win": 148
+  },
+  {
+   "priority": 96,
+   "key": 0.407609,
+   "eb": "A002_X6f1341_X1484",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A002/X5a9a13/X58b",
+   "n_ant": 9,
+   "star": "bet Pic",
+   "dist_pc": 19.6345,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    244140.625,
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.72,
+   "windows": [
+    {
+     "flo": 215.680975,
+     "fhi": 217.406073,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1834.56,
+     "rms_mJy": 24.71467,
+     "ctrl_max_snr": 5.67
+    },
+    {
+     "flo": 230.083798,
+     "fhi": 231.003964,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 1824.48,
+     "rms_mJy": 35.90756,
+     "ctrl_max_snr": 8.1957
+    }
+   ],
+   "cum_win": 150
+  },
+  {
+   "priority": 97,
+   "key": 0.41,
+   "eb": "A002_Xd12f5c_Xd7c6",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X12d0/X1d6",
+   "n_ant": 43,
+   "star": "UCAC3 176-23654",
+   "dist_pc": 34.3459,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 345.152801,
+     "fhi": 346.877898,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 725.76,
+     "rms_mJy": 2.73334,
+     "ctrl_max_snr": 5.7033
+    }
+   ],
+   "cum_win": 151
+  },
+  {
+   "priority": 98,
+   "key": 0.414286,
+   "eb": "A002_Xb2f730_X5b37",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X2d6/X15b",
+   "n_ant": 42,
+   "star": "HD 139664",
+   "dist_pc": 17.3986,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 229.691625,
+     "fhi": 231.416722,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 393.12,
+     "rms_mJy": 3.41391,
+     "ctrl_max_snr": 5.808
+    }
+   ],
+   "cum_win": 152
+  },
+  {
+   "priority": 99,
+   "key": 0.416667,
+   "eb": "A002_Xff294f_Xaf70",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e63",
+   "n_ant": 11,
+   "star": "HD 10647",
+   "dist_pc": 17.3488,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 3.07,
+   "windows": [
+    {
+     "flo": 330.350395,
+     "fhi": 332.190727,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2630.88,
+     "rms_mJy": 24.86678,
+     "ctrl_max_snr": 5.9096
+    },
+    {
+     "flo": 344.183392,
+     "fhi": 346.023724,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2630.88,
+     "rms_mJy": 23.01789,
+     "ctrl_max_snr": 6.1218
+    }
+   ],
+   "cum_win": 154
+  },
+  {
+   "priority": 100,
+   "key": 0.418478,
+   "eb": "A002_Xc6fa08_X1053",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X1273/Xa0a",
+   "n_ant": 10,
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "dist_pc": 12.0394,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.96,
+   "windows": [
+    {
+     "flo": 229.609959,
+     "fhi": 231.45078,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 60.48,
+     "rms_mJy": 81.88858,
+     "ctrl_max_snr": 4.8161
+    }
+   ],
+   "cum_win": 155
+  },
+  {
+   "priority": 101,
+   "key": 0.429348,
+   "eb": "A002_Xdb3eb4_X899",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X133d/X36a5",
+   "n_ant": 12,
+   "star": "GL 3379 Gaia DR3 3316364602541746048",
+   "dist_pc": 5.208,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.26,
+   "windows": [
+    {
+     "flo": 229.039303,
+     "fhi": 230.879635,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2751.84,
+     "rms_mJy": 15.0393,
+     "ctrl_max_snr": 6.0842
+    }
+   ],
+   "cum_win": 156
+  },
+  {
+   "priority": 102,
+   "key": 0.43,
+   "eb": "A002_Xd0e450_X1e19",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X1273/X6bf",
+   "n_ant": 46,
+   "star": "TRAPPIST-1",
+   "dist_pc": 12.4669,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 345.715295,
+     "fhi": 347.440393,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2782.08,
+     "rms_mJy": 1.18157,
+     "ctrl_max_snr": 5.9101
+    }
+   ],
+   "cum_win": 157
+  },
+  {
+   "priority": 103,
+   "key": 0.433333,
+   "eb": "A002_X12a079b_Xf640",
+   "band": "3",
+   "array": "12m",
+   "mous": "uid://A001/X3788/X9d8c",
+   "n_ant": 57,
+   "star": "AU Mic",
+   "dist_pc": 9.7141,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 114.024952,
+     "fhi": 115.750538,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2884.9,
+     "rms_mJy": 1.02251,
+     "ctrl_max_snr": 5.7622
+    }
+   ],
+   "cum_win": 158
+  },
+  {
+   "priority": 104,
+   "key": 0.440217,
+   "eb": "A002_X1263402_X856c",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X3788/X9171",
+   "n_ant": 11,
+   "star": "HD 89452",
+   "dist_pc": 36.227,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.21,
+   "windows": [
+    {
+     "flo": 229.666276,
+     "fhi": 231.391862,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2872.8,
+     "rms_mJy": 11.07585,
+     "ctrl_max_snr": 5.7023
+    }
+   ],
+   "cum_win": 159
+  },
+  {
+   "priority": 105,
+   "key": 0.440476,
+   "eb": "A002_X107fa96_X9a88",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e71",
+   "n_ant": 12,
+   "star": "HD14055",
+   "dist_pc": 35.7405,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 2.92,
+   "windows": [
+    {
+     "flo": 330.391113,
+     "fhi": 332.231445,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 41.38583,
+     "ctrl_max_snr": 6.2065
+    },
+    {
+     "flo": 344.22411,
+     "fhi": 346.064442,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 37.4722,
+     "ctrl_max_snr": 5.9282
+    }
+   ],
+   "cum_win": 161
+  },
+  {
+   "priority": 106,
+   "key": 0.442857,
+   "eb": "A002_Xb0ebd1_X1855",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X2d6/X163",
+   "n_ant": 39,
+   "star": "HD 38858 Gaia DR3 3023711269067191296",
+   "dist_pc": 15.2104,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 229.637305,
+     "fhi": 231.362403,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 90.72,
+     "rms_mJy": 6.01683,
+     "ctrl_max_snr": 5.3817
+    }
+   ],
+   "cum_win": 162
+  },
+  {
+   "priority": 107,
+   "key": 0.45,
+   "eb": "A002_X1066403_Xbbde",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X2d20/X2e53",
+   "n_ant": 47,
+   "star": "HD61005",
+   "dist_pc": 36.4506,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 330.400026,
+     "fhi": 332.125123,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2086.56,
+     "rms_mJy": 2.54278,
+     "ctrl_max_snr": 5.8895
+    },
+    {
+     "flo": 344.233026,
+     "fhi": 345.958123,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2086.56,
+     "rms_mJy": 2.21756,
+     "ctrl_max_snr": 6.1281
+    }
+   ],
+   "cum_win": 164
+  },
+  {
+   "priority": 108,
+   "key": 0.451087,
+   "eb": "A002_X1264cde_X258b",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X3788/X9171",
+   "n_ant": 9,
+   "star": "HD 89452",
+   "dist_pc": 36.227,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.95,
+   "windows": [
+    {
+     "flo": 229.666066,
+     "fhi": 231.391652,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2872.8,
+     "rms_mJy": 11.79434,
+     "ctrl_max_snr": 5.5773
+    }
+   ],
+   "cum_win": 165
+  },
+  {
+   "priority": 109,
+   "key": 0.461957,
+   "eb": "A002_X1263402_X816f",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X3788/X9171",
+   "n_ant": 11,
+   "star": "HD 89452",
+   "dist_pc": 36.227,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.21,
+   "windows": [
+    {
+     "flo": 229.666403,
+     "fhi": 231.391989,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2872.8,
+     "rms_mJy": 11.24073,
+     "ctrl_max_snr": 5.5209
+    }
+   ],
+   "cum_win": 166
+  },
+  {
+   "priority": 110,
+   "key": 0.464286,
+   "eb": "A002_Xff45a6_X8474",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e3d",
+   "n_ant": 11,
+   "star": "HD161868",
+   "dist_pc": 29.7465,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 2.7,
+   "windows": [
+    {
+     "flo": 330.367943,
+     "fhi": 332.208275,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2751.84,
+     "rms_mJy": 42.47375,
+     "ctrl_max_snr": 5.7487
+    },
+    {
+     "flo": 344.200939,
+     "fhi": 346.041271,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2751.84,
+     "rms_mJy": 35.82088,
+     "ctrl_max_snr": 5.9917
+    }
+   ],
+   "cum_win": 168
+  },
+  {
+   "priority": 111,
+   "key": 0.47,
+   "eb": "A002_Xfffde1_Xffdf",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X2d20/X2e61",
+   "n_ant": 45,
+   "star": "HD 10647",
+   "dist_pc": 17.3488,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 330.403386,
+     "fhi": 332.128483,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2298.24,
+     "rms_mJy": 1.88715,
+     "ctrl_max_snr": 5.7216
+    },
+    {
+     "flo": 344.236386,
+     "fhi": 345.961483,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2298.24,
+     "rms_mJy": 1.81853,
+     "ctrl_max_snr": 5.7595
+    }
+   ],
+   "cum_win": 170
+  },
+  {
+   "priority": 112,
+   "key": 0.471429,
+   "eb": "A002_Xb95160_X3e24",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X886/X194",
+   "n_ant": 44,
+   "star": "51 Eri",
+   "dist_pc": 29.9052,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    1953125.0
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 229.662803,
+     "fhi": 231.387413,
+     "chanw_Hz": 1953125.0,
+     "on_source_s": 1028.16,
+     "rms_mJy": 1.04724,
+     "ctrl_max_snr": 4.9706
+    }
+   ],
+   "cum_win": 171
+  },
+  {
+   "priority": 113,
+   "key": 0.472826,
+   "eb": "A002_Xd9668b_X7c83",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X133d/X36ae",
+   "n_ant": 12,
+   "star": "GJ 849",
+   "dist_pc": 8.8149,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.36,
+   "windows": [
+    {
+     "flo": 229.098674,
+     "fhi": 230.939006,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2661.12,
+     "rms_mJy": 9.87704,
+     "ctrl_max_snr": 5.8601
+    }
+   ],
+   "cum_win": 172
+  },
+  {
+   "priority": 114,
+   "key": 0.483696,
+   "eb": "A002_X1009c59_X1ba4d",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X15aa/X152",
+   "n_ant": 12,
+   "star": "ALMA J153702653-33192492",
+   "dist_pc": 35.0098,
+   "n_classa_win": 5,
+   "chanw_Hz": [
+    244140.625,
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 3.57,
+   "windows": [
+    {
+     "flo": 216.098099,
+     "fhi": 217.938431,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 211.68,
+     "rms_mJy": 44.11948,
+     "ctrl_max_snr": 5.8088
+    },
+    {
+     "flo": 218.348099,
+     "fhi": 220.188431,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 211.68,
+     "rms_mJy": 45.44371,
+     "ctrl_max_snr": 6.0964
+    },
+    {
+     "flo": 230.322331,
+     "fhi": 230.782536,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 211.68,
+     "rms_mJy": 74.55853,
+     "ctrl_max_snr": 11.8818
+    },
+    {
+     "flo": 230.804753,
+     "fhi": 231.264958,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 211.68,
+     "rms_mJy": 63.77567,
+     "ctrl_max_snr": 5.6289
+    },
+    {
+     "flo": 232.598096,
+     "fhi": 234.438428,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 211.68,
+     "rms_mJy": 47.22377,
+     "ctrl_max_snr": 5.7166
+    }
+   ],
+   "cum_win": 177
+  },
+  {
+   "priority": 115,
+   "key": 0.488095,
+   "eb": "A002_Xff0235_X8c42",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e2d",
+   "n_ant": 11,
+   "star": "HD170773",
+   "dist_pc": 36.9345,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 3.29,
+   "windows": [
+    {
+     "flo": 330.374882,
+     "fhi": 332.215214,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2963.52,
+     "rms_mJy": 23.09921,
+     "ctrl_max_snr": 5.75
+    },
+    {
+     "flo": 344.207878,
+     "fhi": 346.04821,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2963.52,
+     "rms_mJy": 20.79717,
+     "ctrl_max_snr": 6.0843
+    }
+   ],
+   "cum_win": 179
+  },
+  {
+   "priority": 116,
+   "key": 0.49,
+   "eb": "A002_Xff0235_X26e3",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X2d20/X2e55",
+   "n_ant": 39,
+   "star": "HD61005",
+   "dist_pc": 36.4506,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 330.438712,
+     "fhi": 332.16381,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1058.4,
+     "rms_mJy": 2.41118,
+     "ctrl_max_snr": 5.3947
+    },
+    {
+     "flo": 344.271712,
+     "fhi": 345.99681,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1058.4,
+     "rms_mJy": 2.39101,
+     "ctrl_max_snr": 6.0766
+    }
+   ],
+   "cum_win": 181
+  },
+  {
+   "priority": 117,
+   "key": 0.494565,
+   "eb": "A002_Xba4d35_Xb3a3",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X879/X29b",
+   "n_ant": 12,
+   "star": "tau Cet",
+   "dist_pc": 3.6522,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.69,
+   "windows": [
+    {
+     "flo": 229.62838,
+     "fhi": 231.468712,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1572.48,
+     "rms_mJy": 10.13704,
+     "ctrl_max_snr": 5.8838
+    }
+   ],
+   "cum_win": 182
+  },
+  {
+   "priority": 118,
+   "key": 0.5,
+   "eb": "A002_X11d9ce7_X5257",
+   "band": "10",
+   "array": "12m",
+   "mous": null,
+   "n_ant": 44,
+   "star": "HD61005",
+   "dist_pc": 36.4506,
+   "n_classa_win": 8,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 849.408207,
+     "fhi": 851.133793,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2211.84,
+     "rms_mJy": 35.83812,
+     "ctrl_max_snr": 5.8935
+    },
+    {
+     "flo": 851.408207,
+     "fhi": 853.133793,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2211.84,
+     "rms_mJy": 33.3024,
+     "ctrl_max_snr": 5.6402
+    },
+    {
+     "flo": 853.366207,
+     "fhi": 855.091793,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2211.84,
+     "rms_mJy": 32.53891,
+     "ctrl_max_snr": 5.8092
+    },
+    {
+     "flo": 855.366207,
+     "fhi": 857.091793,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2211.84,
+     "rms_mJy": 34.91997,
+     "ctrl_max_snr": 5.7271
+    },
+    {
+     "flo": 865.408207,
+     "fhi": 867.133793,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2211.84,
+     "rms_mJy": 35.74907,
+     "ctrl_max_snr": 5.9931
+    },
+    {
+     "flo": 867.408207,
+     "fhi": 869.133793,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2211.84,
+     "rms_mJy": 33.75601,
+     "ctrl_max_snr": 5.6511
+    },
+    {
+     "flo": 869.366207,
+     "fhi": 871.091793,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2211.84,
+     "rms_mJy": 35.86671,
+     "ctrl_max_snr": 5.7486
+    },
+    {
+     "flo": 871.366207,
+     "fhi": 873.091793,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2211.84,
+     "rms_mJy": 38.6318,
+     "ctrl_max_snr": 5.9323
+    }
+   ],
+   "cum_win": 190
+  },
+  {
+   "priority": 119,
+   "key": 0.5,
+   "eb": "A002_Xf5d76d_Xcc5",
+   "band": "3",
+   "array": "12m",
+   "mous": "uid://A001/X158f/X7c5",
+   "n_ant": 42,
+   "star": "bet Pic",
+   "dist_pc": 19.6345,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    244140.625
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 114.82922,
+     "fhi": 115.691769,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 2026.08,
+     "rms_mJy": 4.67764,
+     "ctrl_max_snr": 5.5197
+    }
+   ],
+   "cum_win": 191
+  },
+  {
+   "priority": 120,
+   "key": 0.5,
+   "eb": "A002_Xd9668b_X3a90",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X133d/Xbb5",
+   "n_ant": 49,
+   "star": "bet Pic",
+   "dist_pc": 19.6345,
+   "n_classa_win": 6,
+   "chanw_Hz": [
+    15258.7891,
+    122070.3125
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 45.18,
+   "windows": [
+    {
+     "flo": 225.622688,
+     "fhi": 225.730476,
+     "chanw_Hz": 122070.3125,
+     "on_source_s": 2328.48,
+     "rms_mJy": 2.13151,
+     "ctrl_max_snr": 5.8559
+    },
+    {
+     "flo": 226.239417,
+     "fhi": 226.347206,
+     "chanw_Hz": 122070.3125,
+     "on_source_s": 2328.48,
+     "rms_mJy": 2.09694,
+     "ctrl_max_snr": 6.117
+    },
+    {
+     "flo": 226.584419,
+     "fhi": 226.692207,
+     "chanw_Hz": 122070.3125,
+     "on_source_s": 2328.48,
+     "rms_mJy": 2.10376,
+     "ctrl_max_snr": 5.6747
+    },
+    {
+     "flo": 226.799629,
+     "fhi": 226.907417,
+     "chanw_Hz": 122070.3125,
+     "on_source_s": 2328.48,
+     "rms_mJy": 2.08549,
+     "ctrl_max_snr": 5.7508
+    },
+    {
+     "flo": 230.48941,
+     "fhi": 230.543319,
+     "chanw_Hz": 15258.7891,
+     "on_source_s": 2328.48,
+     "rms_mJy": 6.66045,
+     "ctrl_max_snr": 9.1167
+    },
+    {
+     "flo": 241.553115,
+     "fhi": 241.98439,
+     "chanw_Hz": 122070.3125,
+     "on_source_s": 2328.48,
+     "rms_mJy": 2.19152,
+     "ctrl_max_snr": 5.8117
+    }
+   ],
+   "cum_win": 197
+  },
+  {
+   "priority": 121,
+   "key": 0.5,
+   "eb": "A002_X122b6ff_X18e15",
+   "band": "8",
+   "array": "7m",
+   "mous": "uid://A001/X37b0/X339",
+   "n_ant": 11,
+   "star": "eta Crv",
+   "dist_pc": 18.2437,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    61035.1562
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.66,
+   "windows": [
+    {
+     "flo": 492.186016,
+     "fhi": 492.23991,
+     "chanw_Hz": 61035.1562,
+     "on_source_s": 2056.32,
+     "rms_mJy": 229.02015,
+     "ctrl_max_snr": 6.1316
+    }
+   ],
+   "cum_win": 198
+  },
+  {
+   "priority": 122,
+   "key": 0.505435,
+   "eb": "A002_X12771d5_X9f13",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X3788/X917a",
+   "n_ant": 10,
+   "star": "HD 45184",
+   "dist_pc": 21.8923,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.2,
+   "windows": [
+    {
+     "flo": 229.666312,
+     "fhi": 231.391898,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2933.28,
+     "rms_mJy": 12.39819,
+     "ctrl_max_snr": 5.6188
+    }
+   ],
+   "cum_win": 199
+  },
+  {
+   "priority": 123,
+   "key": 0.51,
+   "eb": "A002_Xcccc19_X4dfa",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X1273/X6bf",
+   "n_ant": 55,
+   "star": "TRAPPIST-1",
+   "dist_pc": 12.4669,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 345.732152,
+     "fhi": 347.457249,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2782.08,
+     "rms_mJy": 1.4588,
+     "ctrl_max_snr": 5.9214
+    }
+   ],
+   "cum_win": 200
+  },
+  {
+   "priority": 124,
+   "key": 0.511905,
+   "eb": "A002_X101088d_Xbf80",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e71",
+   "n_ant": 12,
+   "star": "HD14055",
+   "dist_pc": 35.7405,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 3.37,
+   "windows": [
+    {
+     "flo": 330.353206,
+     "fhi": 332.193538,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 35.1865,
+     "ctrl_max_snr": 6.5805
+    },
+    {
+     "flo": 344.186202,
+     "fhi": 346.026534,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 28.99734,
+     "ctrl_max_snr": 6.481
+    }
+   ],
+   "cum_win": 202
+  },
+  {
+   "priority": 125,
+   "key": 0.516304,
+   "eb": "A002_X129754b_X6946",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X3788/X917d",
+   "n_ant": 12,
+   "star": "HD 31392",
+   "dist_pc": 25.7602,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.0,
+   "windows": [
+    {
+     "flo": 229.653946,
+     "fhi": 231.379532,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2963.52,
+     "rms_mJy": 13.30727,
+     "ctrl_max_snr": 5.811
+    }
+   ],
+   "cum_win": 203
+  },
+  {
+   "priority": 126,
+   "key": 0.527174,
+   "eb": "A002_X126c7ed_Xe9d",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X3788/X917a",
+   "n_ant": 10,
+   "star": "HD 45184",
+   "dist_pc": 21.8923,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.94,
+   "windows": [
+    {
+     "flo": 229.665871,
+     "fhi": 231.391457,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2933.28,
+     "rms_mJy": 10.91588,
+     "ctrl_max_snr": 5.3596
+    }
+   ],
+   "cum_win": 204
+  },
+  {
+   "priority": 127,
+   "key": 0.528571,
+   "eb": "A002_X7d194b_X58f",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A002/X5ce05d/X148",
+   "n_ant": 31,
+   "star": "HD61005",
+   "dist_pc": 36.4506,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    244140.625
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 230.087999,
+     "fhi": 230.950548,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 1360.8,
+     "rms_mJy": 3.14387,
+     "ctrl_max_snr": 5.8577
+    }
+   ],
+   "cum_win": 205
+  },
+  {
+   "priority": 128,
+   "key": 0.53,
+   "eb": "A002_Xd0e450_Xc7a1",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X1273/X6bf",
+   "n_ant": 55,
+   "star": "TRAPPIST-1",
+   "dist_pc": 12.4669,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 345.714486,
+     "fhi": 347.439584,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2782.08,
+     "rms_mJy": 1.41169,
+     "ctrl_max_snr": 5.9575
+    }
+   ],
+   "cum_win": 206
+  },
+  {
+   "priority": 129,
+   "key": 0.535714,
+   "eb": "A002_X1086384_X10bc1",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e71",
+   "n_ant": 12,
+   "star": "HD14055",
+   "dist_pc": 35.7405,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 4.01,
+   "windows": [
+    {
+     "flo": 330.395189,
+     "fhi": 332.235521,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 14.06612,
+     "ctrl_max_snr": 5.908
+    },
+    {
+     "flo": 344.228185,
+     "fhi": 346.068517,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 13.88891,
+     "ctrl_max_snr": 5.7267
+    }
+   ],
+   "cum_win": 208
+  },
+  {
+   "priority": 130,
+   "key": 0.538043,
+   "eb": "A002_X129691d_X6985",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X3788/X917d",
+   "n_ant": 12,
+   "star": "HD 31392",
+   "dist_pc": 25.7602,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.86,
+   "windows": [
+    {
+     "flo": 229.653731,
+     "fhi": 231.379317,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2963.52,
+     "rms_mJy": 13.72342,
+     "ctrl_max_snr": 5.7794
+    }
+   ],
+   "cum_win": 209
+  },
+  {
+   "priority": 131,
+   "key": 0.548913,
+   "eb": "A002_Xfe62c1_X398",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X15aa/X152",
+   "n_ant": 12,
+   "star": "ALMA J153702653-33192492",
+   "dist_pc": 35.0098,
+   "n_classa_win": 5,
+   "chanw_Hz": [
+    244140.625,
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 4.21,
+   "windows": [
+    {
+     "flo": 216.068221,
+     "fhi": 217.908553,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 211.68,
+     "rms_mJy": 29.34179,
+     "ctrl_max_snr": 6.0229
+    },
+    {
+     "flo": 218.318221,
+     "fhi": 220.158553,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 211.68,
+     "rms_mJy": 30.63299,
+     "ctrl_max_snr": 5.5634
+    },
+    {
+     "flo": 230.292452,
+     "fhi": 230.752657,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 211.68,
+     "rms_mJy": 51.59258,
+     "ctrl_max_snr": 10.9211
+    },
+    {
+     "flo": 230.774874,
+     "fhi": 231.235079,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 211.68,
+     "rms_mJy": 42.42256,
+     "ctrl_max_snr": 5.5931
+    },
+    {
+     "flo": 232.568217,
+     "fhi": 234.408549,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 211.68,
+     "rms_mJy": 30.99682,
+     "ctrl_max_snr": 5.8486
+    }
+   ],
+   "cum_win": 214
+  },
+  {
+   "priority": 132,
+   "key": 0.55,
+   "eb": "A002_Xff0235_X4a6d",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X2d20/X2e25",
+   "n_ant": 47,
+   "star": "CP-72 2713",
+   "dist_pc": 36.7222,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 330.419656,
+     "fhi": 332.144754,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 2.33239,
+     "ctrl_max_snr": 5.6726
+    },
+    {
+     "flo": 344.252656,
+     "fhi": 345.977754,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 2.09705,
+     "ctrl_max_snr": 5.6832
+    }
+   ],
+   "cum_win": 216
+  },
+  {
+   "priority": 133,
+   "key": 0.557143,
+   "eb": "A002_Xb2e94e_X361a",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X2d6/X15b",
+   "n_ant": 42,
+   "star": "HD 139664",
+   "dist_pc": 17.3986,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 229.692208,
+     "fhi": 231.417306,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 393.12,
+     "rms_mJy": 2.8811,
+     "ctrl_max_snr": 5.5608
+    }
+   ],
+   "cum_win": 217
+  },
+  {
+   "priority": 134,
+   "key": 0.559524,
+   "eb": "A002_X1001fdc_X2085",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e71",
+   "n_ant": 11,
+   "star": "HD14055",
+   "dist_pc": 35.7405,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 3.35,
+   "windows": [
+    {
+     "flo": 330.384586,
+     "fhi": 332.224918,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 20.33971,
+     "ctrl_max_snr": 5.7649
+    },
+    {
+     "flo": 344.217582,
+     "fhi": 346.057914,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 19.10649,
+     "ctrl_max_snr": 6.6714
+    }
+   ],
+   "cum_win": 219
+  },
+  {
+   "priority": 135,
+   "key": 0.559783,
+   "eb": "A002_X1294347_X1af7f",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X3788/X917d",
+   "n_ant": 12,
+   "star": "HD 31392",
+   "dist_pc": 25.7602,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.09,
+   "windows": [
+    {
+     "flo": 229.653576,
+     "fhi": 231.379162,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2963.52,
+     "rms_mJy": 12.00825,
+     "ctrl_max_snr": 5.352
+    }
+   ],
+   "cum_win": 220
+  },
+  {
+   "priority": 136,
+   "key": 0.566667,
+   "eb": "A002_X129754b_X2363e",
+   "band": "3",
+   "array": "12m",
+   "mous": "uid://A001/X3788/X9d8c",
+   "n_ant": 57,
+   "star": "AU Mic",
+   "dist_pc": 9.7141,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 114.025714,
+     "fhi": 115.7513,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2884.9,
+     "rms_mJy": 0.98995,
+     "ctrl_max_snr": 5.7864
+    }
+   ],
+   "cum_win": 221
+  },
+  {
+   "priority": 137,
+   "key": 0.57,
+   "eb": "A002_Xd9d7c7_Xb3d2",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X133d/X715",
+   "n_ant": 45,
+   "star": "ALMA J153702653-33192492",
+   "dist_pc": 35.0098,
+   "n_classa_win": 4,
+   "chanw_Hz": [
+    488281.25,
+    976562.5
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 333.16701,
+     "fhi": 334.892596,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 151.2,
+     "rms_mJy": 6.98362,
+     "ctrl_max_snr": 5.7881
+    },
+    {
+     "flo": 335.059127,
+     "fhi": 336.784712,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 151.2,
+     "rms_mJy": 6.23653,
+     "ctrl_max_snr": 5.6548
+    },
+    {
+     "flo": 345.11832,
+     "fhi": 346.843418,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 151.2,
+     "rms_mJy": 6.80021,
+     "ctrl_max_snr": 5.835
+    },
+    {
+     "flo": 346.976371,
+     "fhi": 348.701468,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 151.2,
+     "rms_mJy": 7.59836,
+     "ctrl_max_snr": 5.7398
+    }
+   ],
+   "cum_win": 225
+  },
+  {
+   "priority": 138,
+   "key": 0.570652,
+   "eb": "A002_Xda2c82_X7136",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X133d/X36a8",
+   "n_ant": 12,
+   "star": "HD 285968",
+   "dist_pc": 9.4852,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.41,
+   "windows": [
+    {
+     "flo": 229.038992,
+     "fhi": 230.879324,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2812.32,
+     "rms_mJy": 25.08295,
+     "ctrl_max_snr": 6.4001
+    }
+   ],
+   "cum_win": 226
+  },
+  {
+   "priority": 139,
+   "key": 0.581522,
+   "eb": "A002_Xd9668b_X841a",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X133d/X36ae",
+   "n_ant": 12,
+   "star": "GJ 849",
+   "dist_pc": 8.8149,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.36,
+   "windows": [
+    {
+     "flo": 229.09859,
+     "fhi": 230.938922,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2661.12,
+     "rms_mJy": 11.16303,
+     "ctrl_max_snr": 5.8291
+    }
+   ],
+   "cum_win": 227
+  },
+  {
+   "priority": 140,
+   "key": 0.583333,
+   "eb": "A002_Xff99e1_X2c3bb",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e71",
+   "n_ant": 12,
+   "star": "HD14055",
+   "dist_pc": 35.7405,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 3.34,
+   "windows": [
+    {
+     "flo": 330.386951,
+     "fhi": 332.227283,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 23.73887,
+     "ctrl_max_snr": 6.2858
+    },
+    {
+     "flo": 344.219947,
+     "fhi": 346.060279,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 22.36003,
+     "ctrl_max_snr": 5.6573
+    }
+   ],
+   "cum_win": 229
+  },
+  {
+   "priority": 141,
+   "key": 0.585714,
+   "eb": "A002_X7d80c7_X15c6",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A002/X609170/X174",
+   "n_ant": 30,
+   "star": "AU Mic",
+   "dist_pc": 9.7141,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 229.702047,
+     "fhi": 231.427144,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1632.96,
+     "rms_mJy": 1.40349,
+     "ctrl_max_snr": 5.4678
+    }
+   ],
+   "cum_win": 230
+  },
+  {
+   "priority": 142,
+   "key": 0.59,
+   "eb": "A002_Xd10f82_X7829",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X1289/X3e5",
+   "n_ant": 44,
+   "star": "LP 353-51",
+   "dist_pc": 27.0991,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 345.158988,
+     "fhi": 346.884086,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 756.0,
+     "rms_mJy": 4.99188,
+     "ctrl_max_snr": 5.9079
+    }
+   ],
+   "cum_win": 231
+  },
+  {
+   "priority": 143,
+   "key": 0.592391,
+   "eb": "A002_X129754b_X70a9",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X3788/X917d",
+   "n_ant": 12,
+   "star": "HD 31392",
+   "dist_pc": 25.7602,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.0,
+   "windows": [
+    {
+     "flo": 229.653877,
+     "fhi": 231.379462,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2963.52,
+     "rms_mJy": 14.45769,
+     "ctrl_max_snr": 5.2923
+    }
+   ],
+   "cum_win": 232
+  },
+  {
+   "priority": 144,
+   "key": 0.603261,
+   "eb": "A002_X1275eb2_Xe05",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X3788/X917a",
+   "n_ant": 10,
+   "star": "HD 45184",
+   "dist_pc": 21.8923,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.12,
+   "windows": [
+    {
+     "flo": 229.666141,
+     "fhi": 231.391727,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2933.28,
+     "rms_mJy": 11.62109,
+     "ctrl_max_snr": 5.2894
+    }
+   ],
+   "cum_win": 233
+  },
+  {
+   "priority": 145,
+   "key": 0.607143,
+   "eb": "A002_Xff294f_X7bf4",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e3d",
+   "n_ant": 11,
+   "star": "HD161868",
+   "dist_pc": 29.7465,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 3.08,
+   "windows": [
+    {
+     "flo": 330.368031,
+     "fhi": 332.208363,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2751.84,
+     "rms_mJy": 23.57966,
+     "ctrl_max_snr": 5.8116
+    },
+    {
+     "flo": 344.201027,
+     "fhi": 346.041359,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2751.84,
+     "rms_mJy": 20.7583,
+     "ctrl_max_snr": 5.8674
+    }
+   ],
+   "cum_win": 235
+  },
+  {
+   "priority": 146,
+   "key": 0.61,
+   "eb": "A002_X107376c_X4442",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X2d20/X20c7",
+   "n_ant": 51,
+   "star": "HD172555",
+   "dist_pc": 28.789,
+   "n_classa_win": 3,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 328.032897,
+     "fhi": 329.757994,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2721.6,
+     "rms_mJy": 4.20513,
+     "ctrl_max_snr": 5.803
+    },
+    {
+     "flo": 330.032897,
+     "fhi": 331.757994,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2721.6,
+     "rms_mJy": 2.57143,
+     "ctrl_max_snr": 5.8581
+    },
+    {
+     "flo": 340.074897,
+     "fhi": 341.799994,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2721.6,
+     "rms_mJy": 1.99524,
+     "ctrl_max_snr": 6.0733
+    }
+   ],
+   "cum_win": 238
+  },
+  {
+   "priority": 147,
+   "key": 0.61413,
+   "eb": "A002_X10a341d_X82d2",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X2d1f/X9fe",
+   "n_ant": 11,
+   "star": "HD53143 Gaia DR3 5479222240596469632",
+   "dist_pc": 18.3401,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.64,
+   "windows": [
+    {
+     "flo": 229.601226,
+     "fhi": 231.442047,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2509.92,
+     "rms_mJy": 14.62183,
+     "ctrl_max_snr": 5.5741
+    }
+   ],
+   "cum_win": 239
+  },
+  {
+   "priority": 148,
+   "key": 0.614286,
+   "eb": "A002_Xd64dca_X410",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X133d/Xb95",
+   "n_ant": 49,
+   "star": "HD202628",
+   "dist_pc": 23.794,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 230.080755,
+     "fhi": 230.943548,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2933.28,
+     "rms_mJy": 1.06798,
+     "ctrl_max_snr": 5.6891
+    }
+   ],
+   "cum_win": 240
+  },
+  {
+   "priority": 149,
+   "key": 0.625,
+   "eb": "A002_Xc296d2_X148c",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X1262/X13c",
+   "n_ant": 9,
+   "star": "CP-72 2713",
+   "dist_pc": 36.7222,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    122070.3125,
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.59,
+   "windows": [
+    {
+     "flo": 218.565445,
+     "fhi": 220.405777,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1905.12,
+     "rms_mJy": 16.14329,
+     "ctrl_max_snr": 5.5476
+    },
+    {
+     "flo": 230.506541,
+     "fhi": 230.966624,
+     "chanw_Hz": 122070.3125,
+     "on_source_s": 1905.12,
+     "rms_mJy": 35.60596,
+     "ctrl_max_snr": 5.8255
+    }
+   ],
+   "cum_win": 242
+  },
+  {
+   "priority": 150,
+   "key": 0.63,
+   "eb": "A002_Xcf0c6b_X6513",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X1273/X9ee",
+   "n_ant": 49,
+   "star": "HD 10647",
+   "dist_pc": 17.3488,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 344.925059,
+     "fhi": 346.650157,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2388.96,
+     "rms_mJy": 1.69399,
+     "ctrl_max_snr": 5.9759
+    }
+   ],
+   "cum_win": 243
+  },
+  {
+   "priority": 151,
+   "key": 0.630952,
+   "eb": "A002_Xff99e1_X24be0",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e71",
+   "n_ant": 12,
+   "star": "HD14055",
+   "dist_pc": 35.7405,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 3.34,
+   "windows": [
+    {
+     "flo": 330.387449,
+     "fhi": 332.227781,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 34.95363,
+     "ctrl_max_snr": 5.6916
+    },
+    {
+     "flo": 344.220445,
+     "fhi": 346.060777,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 29.80284,
+     "ctrl_max_snr": 6.0399
+    }
+   ],
+   "cum_win": 245
+  },
+  {
+   "priority": 152,
+   "key": 0.633333,
+   "eb": "A002_Xf5d76d_Xeb8",
+   "band": "3",
+   "array": "12m",
+   "mous": "uid://A001/X158f/X7c5",
+   "n_ant": 42,
+   "star": "bet Pic",
+   "dist_pc": 19.6345,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    244140.625
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 114.829173,
+     "fhi": 115.691722,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 2026.08,
+     "rms_mJy": 2.45785,
+     "ctrl_max_snr": 7.3409
+    }
+   ],
+   "cum_win": 246
+  },
+  {
+   "priority": 153,
+   "key": 0.63587,
+   "eb": "A002_X10b6f7c_X850c",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X2d1f/Xa06",
+   "n_ant": 11,
+   "star": "HD110411",
+   "dist_pc": 38.9225,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.8,
+   "windows": [
+    {
+     "flo": 216.561857,
+     "fhi": 218.402678,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2540.16,
+     "rms_mJy": 14.35529,
+     "ctrl_max_snr": 5.5955
+    },
+    {
+     "flo": 229.603853,
+     "fhi": 231.444674,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2540.16,
+     "rms_mJy": 15.21949,
+     "ctrl_max_snr": 5.5001
+    }
+   ],
+   "cum_win": 248
+  },
+  {
+   "priority": 154,
+   "key": 0.642857,
+   "eb": "A002_X74fea5_Xd70",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A002/X5ce05d/X148",
+   "n_ant": 27,
+   "star": "HD61005",
+   "dist_pc": 36.4506,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    244140.625
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 230.108722,
+     "fhi": 230.971271,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 2419.2,
+     "rms_mJy": 3.91781,
+     "ctrl_max_snr": 6.0081
+    }
+   ],
+   "cum_win": 249
+  },
+  {
+   "priority": 155,
+   "key": 0.646739,
+   "eb": "A002_X12b3da5_X4411",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X3788/X917d",
+   "n_ant": 9,
+   "star": "HD 31392",
+   "dist_pc": 25.7602,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.99,
+   "windows": [
+    {
+     "flo": 229.661666,
+     "fhi": 231.387252,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2963.52,
+     "rms_mJy": 13.26414,
+     "ctrl_max_snr": 5.5591
+    }
+   ],
+   "cum_win": 250
+  },
+  {
+   "priority": 156,
+   "key": 0.65,
+   "eb": "A002_Xd189ef_X867b",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X12d0/X1df",
+   "n_ant": 46,
+   "star": "TYC 2211-1309-1",
+   "dist_pc": 35.4239,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 345.140648,
+     "fhi": 346.865745,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1391.04,
+     "rms_mJy": 2.48676,
+     "ctrl_max_snr": 6.1006
+    }
+   ],
+   "cum_win": 251
+  },
+  {
+   "priority": 157,
+   "key": 0.654762,
+   "eb": "A002_Xfffde1_X9bd6",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e71",
+   "n_ant": 12,
+   "star": "HD14055",
+   "dist_pc": 35.7405,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 4.84,
+   "windows": [
+    {
+     "flo": 330.385469,
+     "fhi": 332.225801,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 9.75372,
+     "ctrl_max_snr": 5.734
+    },
+    {
+     "flo": 344.218465,
+     "fhi": 346.058797,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 9.88233,
+     "ctrl_max_snr": 5.8705
+    }
+   ],
+   "cum_win": 253
+  },
+  {
+   "priority": 158,
+   "key": 0.657609,
+   "eb": "A002_Xc67b7e_X1f16",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X1273/Xa0a",
+   "n_ant": 12,
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "dist_pc": 12.0394,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.92,
+   "windows": [
+    {
+     "flo": 229.61088,
+     "fhi": 231.4517,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2842.56,
+     "rms_mJy": 10.84028,
+     "ctrl_max_snr": 5.5739
+    }
+   ],
+   "cum_win": 254
+  },
+  {
+   "priority": 159,
+   "key": 0.668478,
+   "eb": "A002_Xd9668b_X88ad",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X133d/X36ae",
+   "n_ant": 12,
+   "star": "GJ 849",
+   "dist_pc": 8.8149,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.36,
+   "windows": [
+    {
+     "flo": 229.098494,
+     "fhi": 230.938826,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2661.12,
+     "rms_mJy": 12.22331,
+     "ctrl_max_snr": 6.0751
+    }
+   ],
+   "cum_win": 255
+  },
+  {
+   "priority": 160,
+   "key": 0.67,
+   "eb": "A002_Xcccc19_X5564",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X1273/X6bf",
+   "n_ant": 56,
+   "star": "TRAPPIST-1",
+   "dist_pc": 12.4669,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 345.732016,
+     "fhi": 347.457114,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2782.08,
+     "rms_mJy": 1.26733,
+     "ctrl_max_snr": 5.7201
+    }
+   ],
+   "cum_win": 256
+  },
+  {
+   "priority": 161,
+   "key": 0.671429,
+   "eb": "A002_Xb39557_X3789",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X2d6/X157",
+   "n_ant": 41,
+   "star": "HD 10647",
+   "dist_pc": 17.3488,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 229.673192,
+     "fhi": 231.39829,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 393.12,
+     "rms_mJy": 4.10657,
+     "ctrl_max_snr": 5.2538
+    }
+   ],
+   "cum_win": 257
+  },
+  {
+   "priority": 162,
+   "key": 0.678571,
+   "eb": "A002_X107fa96_X150f6",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e71",
+   "n_ant": 12,
+   "star": "HD14055",
+   "dist_pc": 35.7405,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 3.36,
+   "windows": [
+    {
+     "flo": 330.392117,
+     "fhi": 332.232449,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 36.50565,
+     "ctrl_max_snr": 6.174
+    },
+    {
+     "flo": 344.225113,
+     "fhi": 346.065445,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 30.83085,
+     "ctrl_max_snr": 5.8103
+    }
+   ],
+   "cum_win": 259
+  },
+  {
+   "priority": 163,
+   "key": 0.679348,
+   "eb": "A002_Xcd97a1_X2377",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X1289/X44c",
+   "n_ant": 12,
+   "star": "HD161868",
+   "dist_pc": 29.7465,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 2.25,
+   "windows": [
+    {
+     "flo": 226.304678,
+     "fhi": 228.145011,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2177.28,
+     "rms_mJy": 7.73203,
+     "ctrl_max_snr": 5.756
+    },
+    {
+     "flo": 229.195842,
+     "fhi": 231.036174,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2177.28,
+     "rms_mJy": 7.34318,
+     "ctrl_max_snr": 5.511
+    }
+   ],
+   "cum_win": 261
+  },
+  {
+   "priority": 164,
+   "key": 0.69,
+   "eb": "A002_Xd9398d_X37e8",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X133d/X179f",
+   "n_ant": 45,
+   "star": "LP 736-15",
+   "dist_pc": 21.1536,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 344.955202,
+     "fhi": 346.680788,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2177.28,
+     "rms_mJy": 1.87512,
+     "ctrl_max_snr": 5.2545
+    }
+   ],
+   "cum_win": 262
+  },
+  {
+   "priority": 165,
+   "key": 0.690217,
+   "eb": "A002_X10a513c_X3b99",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X2d1f/X9fe",
+   "n_ant": 11,
+   "star": "HD53143 Gaia DR3 5479222240596469632",
+   "dist_pc": 18.3401,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.91,
+   "windows": [
+    {
+     "flo": 229.601331,
+     "fhi": 231.442151,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2509.92,
+     "rms_mJy": 16.34038,
+     "ctrl_max_snr": 5.2859
+    }
+   ],
+   "cum_win": 263
+  },
+  {
+   "priority": 166,
+   "key": 0.7,
+   "eb": "A002_X1240efd_X14e83",
+   "band": "3",
+   "array": "12m",
+   "mous": "uid://A001/X3788/X9d8e",
+   "n_ant": 52,
+   "star": "AU Mic",
+   "dist_pc": 9.7141,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 114.015065,
+     "fhi": 115.740651,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2419.2,
+     "rms_mJy": 1.15789,
+     "ctrl_max_snr": 5.4117
+    }
+   ],
+   "cum_win": 264
+  },
+  {
+   "priority": 167,
+   "key": 0.7,
+   "eb": "A002_Xa7a216_X23e4",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A002/X5a9a13/X58d",
+   "n_ant": 43,
+   "star": "bet Pic",
+   "dist_pc": 19.6345,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    244140.625,
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 215.680155,
+     "fhi": 217.405253,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2220.0,
+     "rms_mJy": 1.30409,
+     "ctrl_max_snr": 6.3863
+    },
+    {
+     "flo": 230.111734,
+     "fhi": 230.974283,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 2220.0,
+     "rms_mJy": 1.91254,
+     "ctrl_max_snr": 6.0292
+    }
+   ],
+   "cum_win": 266
+  },
+  {
+   "priority": 168,
+   "key": 0.701087,
+   "eb": "A002_Xf8f6a9_X10359",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X15aa/X152",
+   "n_ant": 12,
+   "star": "ALMA J153702653-33192492",
+   "dist_pc": 35.0098,
+   "n_classa_win": 5,
+   "chanw_Hz": [
+    244140.625,
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 4.26,
+   "windows": [
+    {
+     "flo": 216.091061,
+     "fhi": 217.931393,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 211.68,
+     "rms_mJy": 31.86418,
+     "ctrl_max_snr": 5.4064
+    },
+    {
+     "flo": 218.341061,
+     "fhi": 220.181393,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 211.68,
+     "rms_mJy": 33.35963,
+     "ctrl_max_snr": 5.7708
+    },
+    {
+     "flo": 230.315292,
+     "fhi": 230.775497,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 211.68,
+     "rms_mJy": 56.58751,
+     "ctrl_max_snr": 13.5994
+    },
+    {
+     "flo": 230.797714,
+     "fhi": 231.257919,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 211.68,
+     "rms_mJy": 46.34573,
+     "ctrl_max_snr": 5.7094
+    },
+    {
+     "flo": 232.591057,
+     "fhi": 234.431389,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 211.68,
+     "rms_mJy": 33.9612,
+     "ctrl_max_snr": 5.8115
+    }
+   ],
+   "cum_win": 271
+  },
+  {
+   "priority": 169,
+   "key": 0.702381,
+   "eb": "A002_Xb9c01c_X41a2",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X879/X1ba",
+   "n_ant": 10,
+   "star": "hd92945",
+   "dist_pc": 21.5085,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25,
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 2.56,
+   "windows": [
+    {
+     "flo": 344.069784,
+     "fhi": 345.910604,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2933.28,
+     "rms_mJy": 18.03561,
+     "ctrl_max_snr": 5.7713
+    },
+    {
+     "flo": 354.176153,
+     "fhi": 356.016485,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2933.28,
+     "rms_mJy": 22.81773,
+     "ctrl_max_snr": 6.1838
+    }
+   ],
+   "cum_win": 273
+  },
+  {
+   "priority": 170,
+   "key": 0.71,
+   "eb": "A002_X12235df_X8337",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X3788/Xb8a2",
+   "n_ant": 49,
+   "star": "HD 69830",
+   "dist_pc": 12.5692,
+   "n_classa_win": 3,
+   "chanw_Hz": [
+    244140.625
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 321.159626,
+     "fhi": 321.267292,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 2903.04,
+     "rms_mJy": 3.90561,
+     "ctrl_max_snr": 5.3037
+    },
+    {
+     "flo": 322.399059,
+     "fhi": 322.506725,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 2903.04,
+     "rms_mJy": 5.88577,
+     "ctrl_max_snr": 5.7074
+    },
+    {
+     "flo": 335.328876,
+     "fhi": 335.436542,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 2903.04,
+     "rms_mJy": 2.65557,
+     "ctrl_max_snr": 5.3229
+    }
+   ],
+   "cum_win": 276
+  },
+  {
+   "priority": 171,
+   "key": 0.711957,
+   "eb": "A002_X126787e_X1170",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X3788/X9171",
+   "n_ant": 11,
+   "star": "HD 89452",
+   "dist_pc": 36.227,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.13,
+   "windows": [
+    {
+     "flo": 229.665051,
+     "fhi": 231.390637,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2872.8,
+     "rms_mJy": 14.25941,
+     "ctrl_max_snr": 5.6569
+    }
+   ],
+   "cum_win": 277
+  },
+  {
+   "priority": 172,
+   "key": 0.722826,
+   "eb": "A002_Xc19d6f_X1c16",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X1234/X32c",
+   "n_ant": 10,
+   "star": "HD 207129 Gaia DR3 6564091190988411520",
+   "dist_pc": 15.559,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.64,
+   "windows": [
+    {
+     "flo": 229.641337,
+     "fhi": 231.481669,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2872.8,
+     "rms_mJy": 12.1374,
+     "ctrl_max_snr": 5.7277
+    }
+   ],
+   "cum_win": 278
+  },
+  {
+   "priority": 173,
+   "key": 0.72619,
+   "eb": "A002_Xba0af7_X8a66",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X879/X1c0",
+   "n_ant": 12,
+   "star": "hd107146",
+   "dist_pc": 27.4697,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25,
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 2.16,
+   "windows": [
+    {
+     "flo": 344.099097,
+     "fhi": 345.939917,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2086.56,
+     "rms_mJy": 24.09467,
+     "ctrl_max_snr": 5.3768
+    },
+    {
+     "flo": 354.205889,
+     "fhi": 356.046221,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2086.56,
+     "rms_mJy": 31.73372,
+     "ctrl_max_snr": 5.8128
+    }
+   ],
+   "cum_win": 280
+  },
+  {
+   "priority": 174,
+   "key": 0.728571,
+   "eb": "A002_Xcbc47c_Xd4",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X1284/X436",
+   "n_ant": 41,
+   "star": "HD 69830",
+   "dist_pc": 12.5692,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 226.302271,
+     "fhi": 228.027368,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2388.96,
+     "rms_mJy": 1.03037,
+     "ctrl_max_snr": 5.9225
+    },
+    {
+     "flo": 229.195027,
+     "fhi": 230.920125,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2388.96,
+     "rms_mJy": 1.02591,
+     "ctrl_max_snr": 6.07
+    }
+   ],
+   "cum_win": 282
+  },
+  {
+   "priority": 175,
+   "key": 0.73,
+   "eb": "A002_Xff0235_X502d",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X2d20/X2e25",
+   "n_ant": 43,
+   "star": "CP-72 2713",
+   "dist_pc": 36.7224,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 330.419569,
+     "fhi": 332.144666,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 2.1395,
+     "ctrl_max_snr": 6.2669
+    },
+    {
+     "flo": 344.252569,
+     "fhi": 345.977666,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 1.96402,
+     "ctrl_max_snr": 5.933
+    }
+   ],
+   "cum_win": 284
+  },
+  {
+   "priority": 176,
+   "key": 0.733696,
+   "eb": "A002_X126fc6d_Xc894",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X3788/X917a",
+   "n_ant": 10,
+   "star": "HD 45184",
+   "dist_pc": 21.8923,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.9,
+   "windows": [
+    {
+     "flo": 229.665836,
+     "fhi": 231.391422,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2933.28,
+     "rms_mJy": 17.29778,
+     "ctrl_max_snr": 5.5098
+    }
+   ],
+   "cum_win": 285
+  },
+  {
+   "priority": 177,
+   "key": 0.744565,
+   "eb": "A002_Xda2c82_X765d",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X133d/X36a5",
+   "n_ant": 12,
+   "star": "GL 3379 Gaia DR3 3316364602541746048",
+   "dist_pc": 5.208,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.39,
+   "windows": [
+    {
+     "flo": 229.036592,
+     "fhi": 230.876925,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2751.84,
+     "rms_mJy": 14.20205,
+     "ctrl_max_snr": 5.5696
+    }
+   ],
+   "cum_win": 286
+  },
+  {
+   "priority": 178,
+   "key": 0.75,
+   "eb": "A002_X11e10bc_X12662",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X362b/Xc1d",
+   "n_ant": 52,
+   "star": "eta Crv",
+   "dist_pc": 18.2437,
+   "n_classa_win": 4,
+   "chanw_Hz": [
+    61035.1562,
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 342.482582,
+     "fhi": 344.20768,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2842.56,
+     "rms_mJy": 1.51385,
+     "ctrl_max_snr": 5.5627
+    },
+    {
+     "flo": 345.768158,
+     "fhi": 345.822052,
+     "chanw_Hz": 61035.1562,
+     "on_source_s": 2842.56,
+     "rms_mJy": 3.58969,
+     "ctrl_max_snr": 6.1402
+    },
+    {
+     "flo": 354.315582,
+     "fhi": 356.04068,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2842.56,
+     "rms_mJy": 1.64562,
+     "ctrl_max_snr": 5.8356
+    },
+    {
+     "flo": 356.190582,
+     "fhi": 357.91568,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2842.56,
+     "rms_mJy": 1.85301,
+     "ctrl_max_snr": 5.8427
+    }
+   ],
+   "cum_win": 290
+  },
+  {
+   "priority": 179,
+   "key": 0.75,
+   "eb": "A002_X1006d51_X228e",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e71",
+   "n_ant": 12,
+   "star": "HD14055",
+   "dist_pc": 35.7405,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 2.91,
+   "windows": [
+    {
+     "flo": 330.381315,
+     "fhi": 332.221647,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 22.66292,
+     "ctrl_max_snr": 5.8198
+    },
+    {
+     "flo": 344.214311,
+     "fhi": 346.054643,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 20.8425,
+     "ctrl_max_snr": 5.9201
+    }
+   ],
+   "cum_win": 292
+  },
+  {
+   "priority": 180,
+   "key": 0.755435,
+   "eb": "A002_Xd86f11_X584b",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X133d/X36ae",
+   "n_ant": 12,
+   "star": "GJ 849",
+   "dist_pc": 8.8149,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.36,
+   "windows": [
+    {
+     "flo": 229.079042,
+     "fhi": 230.919374,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2661.12,
+     "rms_mJy": 36.94632,
+     "ctrl_max_snr": 6.1987
+    }
+   ],
+   "cum_win": 293
+  },
+  {
+   "priority": 181,
+   "key": 0.757143,
+   "eb": "A002_Xbf1cbb_X6176",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X886/X149",
+   "n_ant": 47,
+   "star": "HD202628",
+   "dist_pc": 23.794,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 229.694521,
+     "fhi": 231.419618,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2812.32,
+     "rms_mJy": 1.09089,
+     "ctrl_max_snr": 6.1495
+    }
+   ],
+   "cum_win": 294
+  },
+  {
+   "priority": 182,
+   "key": 0.766304,
+   "eb": "A002_Xcca365_X3822",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X1289/X446",
+   "n_ant": 12,
+   "star": "HD170773",
+   "dist_pc": 36.9345,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.78,
+   "windows": [
+    {
+     "flo": 226.326975,
+     "fhi": 228.167307,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2086.56,
+     "rms_mJy": 17.14892,
+     "ctrl_max_snr": 6.3903
+    },
+    {
+     "flo": 229.217546,
+     "fhi": 231.057878,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2086.56,
+     "rms_mJy": 19.86608,
+     "ctrl_max_snr": 5.997
+    }
+   ],
+   "cum_win": 296
+  },
+  {
+   "priority": 183,
+   "key": 0.766667,
+   "eb": "A002_Xf4df6f_Xc7",
+   "band": "3",
+   "array": "12m",
+   "mous": "uid://A001/X158f/X7c3",
+   "n_ant": 42,
+   "star": "bet Pic",
+   "dist_pc": 19.6345,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    244140.625
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 114.830886,
+     "fhi": 115.693435,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 2963.52,
+     "rms_mJy": 1.76989,
+     "ctrl_max_snr": 5.7648
+    }
+   ],
+   "cum_win": 297
+  },
+  {
+   "priority": 184,
+   "key": 0.77,
+   "eb": "A002_Xcd8029_Xb6b0",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X1289/X3c9",
+   "n_ant": 48,
+   "star": "HD 139084",
+   "dist_pc": 38.7162,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 25.07,
+   "windows": [
+    {
+     "flo": 345.144857,
+     "fhi": 346.869955,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1028.16,
+     "rms_mJy": 3.11783,
+     "ctrl_max_snr": 18.3885
+    }
+   ],
+   "cum_win": 298
+  },
+  {
+   "priority": 185,
+   "key": 0.77381,
+   "eb": "A002_X1001fdc_X29ae",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e71",
+   "n_ant": 12,
+   "star": "HD14055",
+   "dist_pc": 35.7405,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 3.36,
+   "windows": [
+    {
+     "flo": 330.384371,
+     "fhi": 332.224703,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 23.20046,
+     "ctrl_max_snr": 6.2623
+    },
+    {
+     "flo": 344.217367,
+     "fhi": 346.057699,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 21.5387,
+     "ctrl_max_snr": 5.7744
+    }
+   ],
+   "cum_win": 300
+  },
+  {
+   "priority": 186,
+   "key": 0.777174,
+   "eb": "A002_Xdc946c_X226",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X133d/X36a2",
+   "n_ant": 11,
+   "star": "HN Lib",
+   "dist_pc": 6.253,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.59,
+   "windows": [
+    {
+     "flo": 229.072732,
+     "fhi": 230.913064,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2600.64,
+     "rms_mJy": 15.05899,
+     "ctrl_max_snr": 5.6942
+    }
+   ],
+   "cum_win": 301
+  },
+  {
+   "priority": 187,
+   "key": 0.785714,
+   "eb": "A002_Xb3d48f_X26f7",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X2d6/X157",
+   "n_ant": 41,
+   "star": "HD 10647",
+   "dist_pc": 17.3488,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 229.673509,
+     "fhi": 231.398606,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 393.12,
+     "rms_mJy": 4.05867,
+     "ctrl_max_snr": 5.4323
+    }
+   ],
+   "cum_win": 302
+  },
+  {
+   "priority": 188,
+   "key": 0.788043,
+   "eb": "A002_X1294347_X1b730",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X3788/X917d",
+   "n_ant": 12,
+   "star": "HD 31392",
+   "dist_pc": 25.7602,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.09,
+   "windows": [
+    {
+     "flo": 229.653524,
+     "fhi": 231.37911,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2963.52,
+     "rms_mJy": 12.27321,
+     "ctrl_max_snr": 5.5082
+    }
+   ],
+   "cum_win": 303
+  },
+  {
+   "priority": 189,
+   "key": 0.79,
+   "eb": "A002_Xcd2acd_X6125",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X1289/X3d6",
+   "n_ant": 46,
+   "star": "V star TX PsA",
+   "dist_pc": 20.835,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 345.167948,
+     "fhi": 346.893045,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 876.96,
+     "rms_mJy": 2.16265,
+     "ctrl_max_snr": 5.945
+    },
+    {
+     "flo": 345.167948,
+     "fhi": 346.893045,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 876.96,
+     "rms_mJy": 2.16752,
+     "ctrl_max_snr": 5.674
+    }
+   ],
+   "cum_win": 305
+  },
+  {
+   "priority": 190,
+   "key": 0.797619,
+   "eb": "A002_X1001fdc_Xc06e",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e71",
+   "n_ant": 12,
+   "star": "HD14055",
+   "dist_pc": 35.7405,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 2.92,
+   "windows": [
+    {
+     "flo": 330.384098,
+     "fhi": 332.22443,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 20.02572,
+     "ctrl_max_snr": 5.8503
+    },
+    {
+     "flo": 344.217094,
+     "fhi": 346.057426,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 19.5062,
+     "ctrl_max_snr": 5.8729
+    }
+   ],
+   "cum_win": 307
+  },
+  {
+   "priority": 191,
+   "key": 0.798913,
+   "eb": "A002_Xc19d6f_X5706",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X1234/X32c",
+   "n_ant": 10,
+   "star": "HD 207129 Gaia DR3 6564091190988411520",
+   "dist_pc": 15.559,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.6,
+   "windows": [
+    {
+     "flo": 229.641368,
+     "fhi": 231.4817,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2872.8,
+     "rms_mJy": 8.43422,
+     "ctrl_max_snr": 5.5248
+    }
+   ],
+   "cum_win": 308
+  },
+  {
+   "priority": 192,
+   "key": 0.809783,
+   "eb": "A002_X10b33b1_Xf94",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X2d1f/X9fa",
+   "n_ant": 11,
+   "star": "HD 23484 Gaia DR3 4856592239127350400",
+   "dist_pc": 16.1696,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.95,
+   "windows": [
+    {
+     "flo": 229.609831,
+     "fhi": 231.450652,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2751.84,
+     "rms_mJy": 8.10371,
+     "ctrl_max_snr": 5.4748
+    }
+   ],
+   "cum_win": 309
+  },
+  {
+   "priority": 193,
+   "key": 0.81,
+   "eb": "A002_X122b6ff_X1041e",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X362b/Xc1d",
+   "n_ant": 44,
+   "star": "eta Crv",
+   "dist_pc": 18.2437,
+   "n_classa_win": 4,
+   "chanw_Hz": [
+    61035.1562,
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 19.25,
+   "windows": [
+    {
+     "flo": 342.47413,
+     "fhi": 344.199228,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 423.36,
+     "rms_mJy": 3.40408,
+     "ctrl_max_snr": 5.3381
+    },
+    {
+     "flo": 345.80594,
+     "fhi": 345.859834,
+     "chanw_Hz": 61035.1562,
+     "on_source_s": 423.36,
+     "rms_mJy": 8.21088,
+     "ctrl_max_snr": 5.7408
+    },
+    {
+     "flo": 354.395914,
+     "fhi": 356.121012,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 423.36,
+     "rms_mJy": 3.62129,
+     "ctrl_max_snr": 5.3545
+    },
+    {
+     "flo": 356.275605,
+     "fhi": 358.000702,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 423.36,
+     "rms_mJy": 4.09743,
+     "ctrl_max_snr": 5.4991
+    }
+   ],
+   "cum_win": 313
+  },
+  {
+   "priority": 194,
+   "key": 0.814286,
+   "eb": "A002_Xa95c04_X14cd",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X13b/X1b8",
+   "n_ant": 35,
+   "star": "HIP10679",
+   "dist_pc": 39.6344,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    15258.7891
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 13.38,
+   "windows": [
+    {
+     "flo": 220.386514,
+     "fhi": 220.440423,
+     "chanw_Hz": 15258.7891,
+     "on_source_s": 514.08,
+     "rms_mJy": 22.95083,
+     "ctrl_max_snr": 6.7583
+    },
+    {
+     "flo": 230.526503,
+     "fhi": 230.580412,
+     "chanw_Hz": 15258.7891,
+     "on_source_s": 514.08,
+     "rms_mJy": 20.47569,
+     "ctrl_max_snr": 6.0836
+    }
+   ],
+   "cum_win": 315
+  },
+  {
+   "priority": 195,
+   "key": 0.820652,
+   "eb": "A002_X1015532_X20dc8",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X15aa/X152",
+   "n_ant": 12,
+   "star": "ALMA J153702653-33192492",
+   "dist_pc": 35.0098,
+   "n_classa_win": 5,
+   "chanw_Hz": [
+    244140.625,
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 2.96,
+   "windows": [
+    {
+     "flo": 216.102295,
+     "fhi": 217.942627,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 211.68,
+     "rms_mJy": 40.11194,
+     "ctrl_max_snr": 5.6835
+    },
+    {
+     "flo": 218.352295,
+     "fhi": 220.192627,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 211.68,
+     "rms_mJy": 40.75798,
+     "ctrl_max_snr": 5.5728
+    },
+    {
+     "flo": 230.326526,
+     "fhi": 230.786731,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 201.6,
+     "rms_mJy": 69.571,
+     "ctrl_max_snr": 12.2155
+    },
+    {
+     "flo": 230.808948,
+     "fhi": 231.269153,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 201.6,
+     "rms_mJy": 58.68367,
+     "ctrl_max_snr": 5.6997
+    },
+    {
+     "flo": 232.602291,
+     "fhi": 234.442623,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 211.68,
+     "rms_mJy": 43.27456,
+     "ctrl_max_snr": 5.9702
+    }
+   ],
+   "cum_win": 320
+  },
+  {
+   "priority": 196,
+   "key": 0.821429,
+   "eb": "A002_Xff294f_X2db6",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e63",
+   "n_ant": 11,
+   "star": "HD 10647",
+   "dist_pc": 17.3488,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 3.04,
+   "windows": [
+    {
+     "flo": 330.350741,
+     "fhi": 332.191073,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2630.88,
+     "rms_mJy": 22.68516,
+     "ctrl_max_snr": 6.0347
+    }
+   ],
+   "cum_win": 321
+  },
+  {
+   "priority": 197,
+   "key": 0.83,
+   "eb": "A002_Xd9398d_X322a",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X133d/X179f",
+   "n_ant": 45,
+   "star": "LP 736-15",
+   "dist_pc": 21.1536,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 344.955354,
+     "fhi": 346.68094,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2177.28,
+     "rms_mJy": 1.82838,
+     "ctrl_max_snr": 5.4833
+    }
+   ],
+   "cum_win": 322
+  },
+  {
+   "priority": 198,
+   "key": 0.831522,
+   "eb": "A002_X1020da2_X78cd",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X15aa/X152",
+   "n_ant": 12,
+   "star": "ALMA J153702653-33192492",
+   "dist_pc": 35.0098,
+   "n_classa_win": 5,
+   "chanw_Hz": [
+    244140.625,
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 4.24,
+   "windows": [
+    {
+     "flo": 216.105778,
+     "fhi": 217.94611,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 181.44,
+     "rms_mJy": 33.05562,
+     "ctrl_max_snr": 5.5848
+    },
+    {
+     "flo": 218.355778,
+     "fhi": 220.19611,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 181.44,
+     "rms_mJy": 33.96678,
+     "ctrl_max_snr": 5.7407
+    },
+    {
+     "flo": 230.33001,
+     "fhi": 230.790215,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 181.44,
+     "rms_mJy": 56.49026,
+     "ctrl_max_snr": 13.764
+    },
+    {
+     "flo": 230.812432,
+     "fhi": 231.272637,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 181.44,
+     "rms_mJy": 47.79115,
+     "ctrl_max_snr": 5.9489
+    },
+    {
+     "flo": 232.605775,
+     "fhi": 234.446107,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 181.44,
+     "rms_mJy": 35.06366,
+     "ctrl_max_snr": 5.5655
+    }
+   ],
+   "cum_win": 327
+  },
+  {
+   "priority": 199,
+   "key": 0.833333,
+   "eb": "A002_Xf5d76d_X32f1",
+   "band": "3",
+   "array": "12m",
+   "mous": "uid://A001/X158f/X7c5",
+   "n_ant": 43,
+   "star": "bet Pic",
+   "dist_pc": 19.6345,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    244140.625
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 114.829247,
+     "fhi": 115.691796,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 1209.6,
+     "rms_mJy": 3.69571,
+     "ctrl_max_snr": 7.266
+    }
+   ],
+   "cum_win": 328
+  },
+  {
+   "priority": 200,
+   "key": 0.833333,
+   "eb": "A002_Xe64b7b_X1704c",
+   "band": "8",
+   "array": "7m",
+   "mous": "uid://A001/X14c3/X10ed",
+   "n_ant": 10,
+   "star": "HD 48370",
+   "dist_pc": 35.9519,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.29,
+   "windows": [
+    {
+     "flo": 491.657082,
+     "fhi": 492.577492,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2600.64,
+     "rms_mJy": 182.12387,
+     "ctrl_max_snr": 5.7925
+    }
+   ],
+   "cum_win": 329
+  },
+  {
+   "priority": 201,
+   "key": 0.842391,
+   "eb": "A002_Xdaef5a_X6873",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X133d/X36a5",
+   "n_ant": 12,
+   "star": "GL 3379 Gaia DR3 3316364602541746048",
+   "dist_pc": 5.208,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.39,
+   "windows": [
+    {
+     "flo": 229.03845,
+     "fhi": 230.878782,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2751.84,
+     "rms_mJy": 9.30814,
+     "ctrl_max_snr": 5.6283
+    }
+   ],
+   "cum_win": 330
+  },
+  {
+   "priority": 202,
+   "key": 0.842857,
+   "eb": "A002_Xb0be8b_X785f",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X2d6/X163",
+   "n_ant": 41,
+   "star": "HD 38858 Gaia DR3 3023711269067191296",
+   "dist_pc": 15.2104,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 229.637299,
+     "fhi": 231.362397,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 90.72,
+     "rms_mJy": 10.30222,
+     "ctrl_max_snr": 5.0868
+    }
+   ],
+   "cum_win": 331
+  },
+  {
+   "priority": 203,
+   "key": 0.845238,
+   "eb": "A002_Xc079b5_X1ae",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X1234/X334",
+   "n_ant": 11,
+   "star": "61 Vir",
+   "dist_pc": 8.5344,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.97,
+   "windows": [
+    {
+     "flo": 344.872653,
+     "fhi": 346.712986,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2268.0,
+     "rms_mJy": 22.25224,
+     "ctrl_max_snr": 5.8228
+    }
+   ],
+   "cum_win": 332
+  },
+  {
+   "priority": 204,
+   "key": 0.85,
+   "eb": "A002_Xb77b17_X3940",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X2fb/X806",
+   "n_ant": 46,
+   "star": "TWA 7",
+   "dist_pc": 34.0975,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    244140.625
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 345.547794,
+     "fhi": 346.410343,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 2388.96,
+     "rms_mJy": 3.26187,
+     "ctrl_max_snr": 5.9033
+    }
+   ],
+   "cum_win": 333
+  },
+  {
+   "priority": 205,
+   "key": 0.853261,
+   "eb": "A002_X1264cde_X2d40",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X3788/X9171",
+   "n_ant": 11,
+   "star": "HD 89452",
+   "dist_pc": 36.227,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.97,
+   "windows": [
+    {
+     "flo": 229.665932,
+     "fhi": 231.391518,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2872.8,
+     "rms_mJy": 12.35483,
+     "ctrl_max_snr": 5.3561
+    }
+   ],
+   "cum_win": 334
+  },
+  {
+   "priority": 206,
+   "key": 0.86413,
+   "eb": "A002_X128b034_X187cc",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X3788/X917d",
+   "n_ant": 12,
+   "star": "HD 31392",
+   "dist_pc": 25.7602,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.0,
+   "windows": [
+    {
+     "flo": 229.651114,
+     "fhi": 231.3767,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2963.52,
+     "rms_mJy": 12.597,
+     "ctrl_max_snr": 5.3197
+    }
+   ],
+   "cum_win": 335
+  },
+  {
+   "priority": 207,
+   "key": 0.869048,
+   "eb": "A002_Xff99e1_X1b0c4",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e71",
+   "n_ant": 12,
+   "star": "HD14055",
+   "dist_pc": 35.7405,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 3.36,
+   "windows": [
+    {
+     "flo": 330.388286,
+     "fhi": 332.228618,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 23.18691,
+     "ctrl_max_snr": 5.9686
+    },
+    {
+     "flo": 344.221282,
+     "fhi": 346.061614,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 22.10375,
+     "ctrl_max_snr": 5.7783
+    }
+   ],
+   "cum_win": 337
+  },
+  {
+   "priority": 208,
+   "key": 0.87,
+   "eb": "A002_Xb825df_X2265",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X2fb/X806",
+   "n_ant": 43,
+   "star": "TWA 7",
+   "dist_pc": 34.0975,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    244140.625
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 345.554038,
+     "fhi": 346.416587,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 2388.96,
+     "rms_mJy": 3.13774,
+     "ctrl_max_snr": 6.142
+    }
+   ],
+   "cum_win": 338
+  },
+  {
+   "priority": 209,
+   "key": 0.871429,
+   "eb": "A002_Xd09670_X23c5",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X1289/X460",
+   "n_ant": 43,
+   "star": "HD14055",
+   "dist_pc": 35.7405,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 226.35992,
+     "fhi": 228.085018,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1300.32,
+     "rms_mJy": 2.11697,
+     "ctrl_max_snr": 5.5617
+    },
+    {
+     "flo": 229.251147,
+     "fhi": 230.976245,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1300.32,
+     "rms_mJy": 2.10325,
+     "ctrl_max_snr": 5.4306
+    }
+   ],
+   "cum_win": 340
+  },
+  {
+   "priority": 210,
+   "key": 0.875,
+   "eb": "A002_Xdb7ab7_X5b4e",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X133d/X36a8",
+   "n_ant": 12,
+   "star": "HD 285968",
+   "dist_pc": 9.4852,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.06,
+   "windows": [
+    {
+     "flo": 229.046726,
+     "fhi": 230.887058,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2812.32,
+     "rms_mJy": 11.40786,
+     "ctrl_max_snr": 7.2235
+    }
+   ],
+   "cum_win": 341
+  },
+  {
+   "priority": 211,
+   "key": 0.88587,
+   "eb": "A002_Xb99071_X3ca",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X886/X14b",
+   "n_ant": 11,
+   "star": "HD202628",
+   "dist_pc": 23.794,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.8,
+   "windows": [
+    {
+     "flo": 229.59518,
+     "fhi": 231.435512,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 786.24,
+     "rms_mJy": 18.56576,
+     "ctrl_max_snr": 5.405
+    }
+   ],
+   "cum_win": 342
+  },
+  {
+   "priority": 212,
+   "key": 0.89,
+   "eb": "A002_X12277ed_X178c6",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X3788/Xb8a2",
+   "n_ant": 57,
+   "star": "HD 69830",
+   "dist_pc": 12.5692,
+   "n_classa_win": 3,
+   "chanw_Hz": [
+    244140.625
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 15.91,
+   "windows": [
+    {
+     "flo": 321.157558,
+     "fhi": 321.265224,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 2903.04,
+     "rms_mJy": 2.87961,
+     "ctrl_max_snr": 6.1342
+    },
+    {
+     "flo": 322.396991,
+     "fhi": 322.504657,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 2903.04,
+     "rms_mJy": 3.95307,
+     "ctrl_max_snr": 5.4558
+    },
+    {
+     "flo": 335.326748,
+     "fhi": 335.434414,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 2903.04,
+     "rms_mJy": 2.20609,
+     "ctrl_max_snr": 5.6501
+    }
+   ],
+   "cum_win": 345
+  },
+  {
+   "priority": 213,
+   "key": 0.892857,
+   "eb": "A002_X1088045_X3c7b",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e71",
+   "n_ant": 12,
+   "star": "HD14055",
+   "dist_pc": 35.7405,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 2.91,
+   "windows": [
+    {
+     "flo": 330.39577,
+     "fhi": 332.236103,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 26.87554,
+     "ctrl_max_snr": 5.901
+    },
+    {
+     "flo": 344.228767,
+     "fhi": 346.069099,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2993.76,
+     "rms_mJy": 24.89096,
+     "ctrl_max_snr": 6.4141
+    }
+   ],
+   "cum_win": 347
+  },
+  {
+   "priority": 214,
+   "key": 0.896739,
+   "eb": "A002_X12771d5_X3b63",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X3788/X917a",
+   "n_ant": 10,
+   "star": "HD 45184",
+   "dist_pc": 21.8923,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.18,
+   "windows": [
+    {
+     "flo": 229.666331,
+     "fhi": 231.391917,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2933.28,
+     "rms_mJy": 14.93612,
+     "ctrl_max_snr": 5.6234
+    }
+   ],
+   "cum_win": 348
+  },
+  {
+   "priority": 215,
+   "key": 0.9,
+   "eb": "A002_X129754b_X23b68",
+   "band": "3",
+   "array": "12m",
+   "mous": "uid://A001/X3788/X9d8c",
+   "n_ant": 57,
+   "star": "AU Mic",
+   "dist_pc": 9.7141,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 114.025647,
+     "fhi": 115.751233,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2884.9,
+     "rms_mJy": 1.19354,
+     "ctrl_max_snr": 5.5182
+    }
+   ],
+   "cum_win": 349
+  },
+  {
+   "priority": 216,
+   "key": 0.9,
+   "eb": "A002_Xce1e34_X7be",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X1289/X44a",
+   "n_ant": 47,
+   "star": "HD161868",
+   "dist_pc": 29.7465,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 226.358202,
+     "fhi": 228.083299,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 876.96,
+     "rms_mJy": 1.26575,
+     "ctrl_max_snr": 6.115
+    },
+    {
+     "flo": 229.249474,
+     "fhi": 230.974572,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 876.96,
+     "rms_mJy": 1.26638,
+     "ctrl_max_snr": 6.3909
+    }
+   ],
+   "cum_win": 351
+  },
+  {
+   "priority": 217,
+   "key": 0.907609,
+   "eb": "A002_X12754c1_X9b5",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X3788/X917a",
+   "n_ant": 10,
+   "star": "HD 45184",
+   "dist_pc": 21.8923,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.2,
+   "windows": [
+    {
+     "flo": 229.666036,
+     "fhi": 231.391622,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2933.28,
+     "rms_mJy": 15.44289,
+     "ctrl_max_snr": 5.4772
+    }
+   ],
+   "cum_win": 352
+  },
+  {
+   "priority": 218,
+   "key": 0.91,
+   "eb": "A002_Xd10f82_X706f",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X1289/X3e5",
+   "n_ant": 44,
+   "star": "LP 353-51",
+   "dist_pc": 27.0991,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 345.15911,
+     "fhi": 346.884208,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 756.0,
+     "rms_mJy": 5.75494,
+     "ctrl_max_snr": 5.6766
+    }
+   ],
+   "cum_win": 353
+  },
+  {
+   "priority": 219,
+   "key": 0.916667,
+   "eb": "A002_Xff81e8_X734e",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e3d",
+   "n_ant": 11,
+   "star": "HD161868",
+   "dist_pc": 29.7465,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.52,
+   "windows": [
+    {
+     "flo": 330.368964,
+     "fhi": 332.209296,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 786.24,
+     "rms_mJy": 40.51266,
+     "ctrl_max_snr": 5.8355
+    },
+    {
+     "flo": 344.201961,
+     "fhi": 346.042293,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 786.24,
+     "rms_mJy": 37.06032,
+     "ctrl_max_snr": 5.4388
+    }
+   ],
+   "cum_win": 355
+  },
+  {
+   "priority": 220,
+   "key": 0.918478,
+   "eb": "A002_Xd9d7c7_X6fd2",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X133d/X36ab",
+   "n_ant": 12,
+   "star": "LHS 1140",
+   "dist_pc": 14.9636,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.34,
+   "windows": [
+    {
+     "flo": 229.078335,
+     "fhi": 230.918668,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2600.64,
+     "rms_mJy": 9.61326,
+     "ctrl_max_snr": 5.6804
+    }
+   ],
+   "cum_win": 356
+  },
+  {
+   "priority": 221,
+   "key": 0.928571,
+   "eb": "A002_Xe45e29_Xb7d4",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X1465/X9ff",
+   "n_ant": 49,
+   "star": "HD110411",
+   "dist_pc": 38.9225,
+   "n_classa_win": 4,
+   "chanw_Hz": [
+    244140.625
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 19.04,
+   "windows": [
+    {
+     "flo": 219.369801,
+     "fhi": 219.801197,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 1542.24,
+     "rms_mJy": 2.29102,
+     "ctrl_max_snr": 5.8547
+    },
+    {
+     "flo": 220.208149,
+     "fhi": 220.639545,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 1542.24,
+     "rms_mJy": 2.91833,
+     "ctrl_max_snr": 6.0298
+    },
+    {
+     "flo": 230.348682,
+     "fhi": 230.780079,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 1542.24,
+     "rms_mJy": 2.80007,
+     "ctrl_max_snr": 5.666
+    },
+    {
+     "flo": 231.207966,
+     "fhi": 231.639362,
+     "chanw_Hz": 244140.625,
+     "on_source_s": 1542.24,
+     "rms_mJy": 2.36279,
+     "ctrl_max_snr": 5.7535
+    }
+   ],
+   "cum_win": 360
+  },
+  {
+   "priority": 222,
+   "key": 0.929348,
+   "eb": "A002_X1294347_X5c2e",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X3788/X917d",
+   "n_ant": 12,
+   "star": "HD 31392",
+   "dist_pc": 25.7602,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.25,
+   "windows": [
+    {
+     "flo": 229.653127,
+     "fhi": 231.378713,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2963.52,
+     "rms_mJy": 11.08244,
+     "ctrl_max_snr": 5.5484
+    }
+   ],
+   "cum_win": 361
+  },
+  {
+   "priority": 223,
+   "key": 0.93,
+   "eb": "A002_Xcdb7b8_Xfb16",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X1289/X3d3",
+   "n_ant": 45,
+   "star": "GJ 2006B",
+   "dist_pc": 34.9764,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 345.155605,
+     "fhi": 346.880703,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 876.96,
+     "rms_mJy": 2.21096,
+     "ctrl_max_snr": 5.4654
+    },
+    {
+     "flo": 345.155605,
+     "fhi": 346.880703,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 876.96,
+     "rms_mJy": 2.21555,
+     "ctrl_max_snr": 5.7815
+    }
+   ],
+   "cum_win": 363
+  },
+  {
+   "priority": 224,
+   "key": 0.940217,
+   "eb": "A002_Xd98580_X3bf6",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X133d/X36a8",
+   "n_ant": 12,
+   "star": "HD 285968",
+   "dist_pc": 9.4852,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.41,
+   "windows": [
+    {
+     "flo": 229.037235,
+     "fhi": 230.877567,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2812.32,
+     "rms_mJy": 13.29272,
+     "ctrl_max_snr": 8.1167
+    }
+   ],
+   "cum_win": 364
+  },
+  {
+   "priority": 225,
+   "key": 0.940476,
+   "eb": "A002_Xff294f_Xc10b",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e63",
+   "n_ant": 11,
+   "star": "HD 10647",
+   "dist_pc": 17.3488,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 3.03,
+   "windows": [
+    {
+     "flo": 330.350193,
+     "fhi": 332.190525,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2630.88,
+     "rms_mJy": 30.07945,
+     "ctrl_max_snr": 5.6648
+    },
+    {
+     "flo": 344.18319,
+     "fhi": 346.023522,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2630.88,
+     "rms_mJy": 26.09924,
+     "ctrl_max_snr": 6.0975
+    }
+   ],
+   "cum_win": 366
+  },
+  {
+   "priority": 226,
+   "key": 0.95,
+   "eb": "A002_Xd0e450_Xc008",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X1273/X6bf",
+   "n_ant": 55,
+   "star": "TRAPPIST-1",
+   "dist_pc": 12.4669,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 345.714667,
+     "fhi": 347.439764,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2782.08,
+     "rms_mJy": 1.41882,
+     "ctrl_max_snr": 5.7524
+    }
+   ],
+   "cum_win": 367
+  },
+  {
+   "priority": 227,
+   "key": 0.951087,
+   "eb": "A002_Xdcf222_X4da7",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X133d/X36a2",
+   "n_ant": 10,
+   "star": "HN Lib",
+   "dist_pc": 6.253,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.34,
+   "windows": [
+    {
+     "flo": 229.07042,
+     "fhi": 230.910752,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2600.64,
+     "rms_mJy": 11.69759,
+     "ctrl_max_snr": 6.041
+    }
+   ],
+   "cum_win": 368
+  },
+  {
+   "priority": 228,
+   "key": 0.957143,
+   "eb": "A002_Xd64dca_X820",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X133d/Xb95",
+   "n_ant": 49,
+   "star": "HD202628",
+   "dist_pc": 23.794,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 230.080684,
+     "fhi": 230.943477,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2933.28,
+     "rms_mJy": 1.11476,
+     "ctrl_max_snr": 5.4659
+    }
+   ],
+   "cum_win": 369
+  },
+  {
+   "priority": 229,
+   "key": 0.961957,
+   "eb": "A002_X10b33b1_X1ca0",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X2d1f/X9fe",
+   "n_ant": 11,
+   "star": "HD53143 Gaia DR3 5479222240596469632",
+   "dist_pc": 18.3401,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.9,
+   "windows": [
+    {
+     "flo": 229.60246,
+     "fhi": 231.443281,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2509.92,
+     "rms_mJy": 8.83238,
+     "ctrl_max_snr": 5.446
+    }
+   ],
+   "cum_win": 370
+  },
+  {
+   "priority": 230,
+   "key": 0.964286,
+   "eb": "A002_Xff45a6_X111c3",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X2d20/X2e3d",
+   "n_ant": 11,
+   "star": "HD161868",
+   "dist_pc": 29.7465,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 2.7,
+   "windows": [
+    {
+     "flo": 330.368047,
+     "fhi": 332.208379,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2751.84,
+     "rms_mJy": 45.31203,
+     "ctrl_max_snr": 6.0862
+    },
+    {
+     "flo": 344.201044,
+     "fhi": 346.041376,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2751.84,
+     "rms_mJy": 41.70071,
+     "ctrl_max_snr": 5.9698
+    }
+   ],
+   "cum_win": 372
+  },
+  {
+   "priority": 231,
+   "key": 0.966667,
+   "eb": "A002_X129754b_X1a931",
+   "band": "3",
+   "array": "12m",
+   "mous": "uid://A001/X3788/X9d8c",
+   "n_ant": 54,
+   "star": "AU Mic",
+   "dist_pc": 9.7141,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 114.025776,
+     "fhi": 115.751362,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2884.9,
+     "rms_mJy": 0.92611,
+     "ctrl_max_snr": 5.8044
+    }
+   ],
+   "cum_win": 373
+  },
+  {
+   "priority": 232,
+   "key": 0.97,
+   "eb": "A002_Xcd97a1_X3f1e",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X1289/X3c3",
+   "n_ant": 47,
+   "star": "V AT Mic B",
+   "dist_pc": 9.8066,
+   "n_classa_win": 2,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 345.175825,
+     "fhi": 346.900923,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 876.96,
+     "rms_mJy": 1.98831,
+     "ctrl_max_snr": 5.5718
+    },
+    {
+     "flo": 345.175825,
+     "fhi": 346.900923,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 876.96,
+     "rms_mJy": 1.98814,
+     "ctrl_max_snr": 5.5542
+    }
+   ],
+   "cum_win": 375
+  },
+  {
+   "priority": 233,
+   "key": 0.972826,
+   "eb": "A002_Xda2c82_X62d7",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X133d/X36ab",
+   "n_ant": 12,
+   "star": "LHS 1140",
+   "dist_pc": 14.9636,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.59,
+   "windows": [
+    {
+     "flo": 229.080855,
+     "fhi": 230.921187,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2600.64,
+     "rms_mJy": 11.48074,
+     "ctrl_max_snr": 5.5468
+    }
+   ],
+   "cum_win": 376
+  },
+  {
+   "priority": 234,
+   "key": 0.983696,
+   "eb": "A002_X1263402_Xb082",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X3788/X916a",
+   "n_ant": 11,
+   "star": "HD377",
+   "dist_pc": 38.4045,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.97,
+   "windows": [
+    {
+     "flo": 229.67413,
+     "fhi": 231.399716,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2086.56,
+     "rms_mJy": 14.01559,
+     "ctrl_max_snr": 5.3511
+    }
+   ],
+   "cum_win": 377
+  },
+  {
+   "priority": 235,
+   "key": 0.985714,
+   "eb": "A002_Xd9668b_X3f6e",
+   "band": "6",
+   "array": "12m",
+   "mous": "uid://A001/X136d/X1b3",
+   "n_ant": 48,
+   "star": "HD53143 Gaia DR3 5479222240596469632",
+   "dist_pc": 18.3401,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 229.664382,
+     "fhi": 231.389968,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2963.52,
+     "rms_mJy": 0.9072,
+     "ctrl_max_snr": 6.2183
+    }
+   ],
+   "cum_win": 378
+  },
+  {
+   "priority": 236,
+   "key": 0.988095,
+   "eb": "A002_Xc6c0d5_X121e",
+   "band": "7",
+   "array": "7m",
+   "mous": "uid://A001/X1273/Xa0e",
+   "n_ant": 11,
+   "star": "HR 1010 Gaia DR3 4722135642226902656",
+   "dist_pc": 12.0394,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 1.16,
+   "windows": [
+    {
+     "flo": 345.314486,
+     "fhi": 346.234896,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 1360.8,
+     "rms_mJy": 36.21927,
+     "ctrl_max_snr": 5.9169
+    }
+   ],
+   "cum_win": 379
+  },
+  {
+   "priority": 237,
+   "key": 0.99,
+   "eb": "A002_Xcf749a_X36e0",
+   "band": "7",
+   "array": "12m",
+   "mous": "uid://A001/X1273/X9ee",
+   "n_ant": 43,
+   "star": "HD 10647",
+   "dist_pc": 17.3488,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    488281.25
+   ],
+   "has_astrometry": false,
+   "asdm_GB": 0.0,
+   "windows": [
+    {
+     "flo": 344.923839,
+     "fhi": 346.648937,
+     "chanw_Hz": 488281.25,
+     "on_source_s": 2388.96,
+     "rms_mJy": 1.62157,
+     "ctrl_max_snr": 5.8552
+    }
+   ],
+   "cum_win": 380
+  },
+  {
+   "priority": 238,
+   "key": 0.994565,
+   "eb": "A002_X12b3da5_X2f34",
+   "band": "6",
+   "array": "7m",
+   "mous": "uid://A001/X3788/X917d",
+   "n_ant": 9,
+   "star": "HD 31392",
+   "dist_pc": 25.7602,
+   "n_classa_win": 1,
+   "chanw_Hz": [
+    976562.5
+   ],
+   "has_astrometry": true,
+   "asdm_GB": 0.98,
+   "windows": [
+    {
+     "flo": 229.661899,
+     "fhi": 231.387485,
+     "chanw_Hz": 976562.5,
+     "on_source_s": 2963.52,
+     "rms_mJy": 13.31628,
+     "ctrl_max_snr": 5.369
+    }
+   ],
+   "cum_win": 381
+  }
+ ]
+}

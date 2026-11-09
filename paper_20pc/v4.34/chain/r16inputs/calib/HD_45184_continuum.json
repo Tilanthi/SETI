@@ -1,0 +1,10 @@
+{
+ "star_name": "HD_45184",
+ "image_rms_mJy": 0.1194822762045078,
+ "image_peak_mJy": 0.4158494994044304,
+ "peak_snr": 3.480428333091476,
+ "peak_offset_arcsec": 3.605551275463989,
+ "continuum_source_detected": false,
+ "sig_threshold": 5.0,
+ "pos_tol_arcsec": 3.0
+}

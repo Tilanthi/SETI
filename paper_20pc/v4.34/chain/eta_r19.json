@@ -1,0 +1,98 @@
+{
+ "a_below": [
+  {
+   "chanw_Hz": 488281.25,
+   "eb": "A002_Xb25e1a_Xed74",
+   "eta": 0.3421,
+   "flo": 229.264212,
+   "on_source_s": 60.48,
+   "star": "Wolf 219"
+  },
+  {
+   "chanw_Hz": 488281.25,
+   "eb": "A002_Xb25e1a_Xed74",
+   "eta": 0.3421,
+   "flo": 229.264212,
+   "on_source_s": 60.48,
+   "star": "PM J03433+1958"
+  },
+  {
+   "chanw_Hz": 488281.25,
+   "eb": "A002_Xb25e1a_Xed74",
+   "eta": 0.3421,
+   "flo": 229.264212,
+   "on_source_s": 60.48,
+   "star": "WD 0407+179"
+  },
+  {
+   "chanw_Hz": 488281.25,
+   "eb": "A002_X1020da2_X78cd",
+   "eta": 0.9677,
+   "flo": 216.105778,
+   "on_source_s": 181.44,
+   "star": "ALMA J153702653-33192492"
+  },
+  {
+   "chanw_Hz": 488281.25,
+   "eb": "A002_X1020da2_X78cd",
+   "eta": 0.9778,
+   "flo": 218.355778,
+   "on_source_s": 181.44,
+   "star": "ALMA J153702653-33192492"
+  },
+  {
+   "chanw_Hz": 976562.5,
+   "eb": "A002_Xd9d7c7_Xbb64",
+   "eta": 0.6206,
+   "flo": 333.166882,
+   "on_source_s": 151.2,
+   "star": "ALMA J153702653-33192492"
+  },
+  {
+   "chanw_Hz": 976562.5,
+   "eb": "A002_Xd9d7c7_Xb3d2",
+   "eta": 0.6206,
+   "flo": 333.16701,
+   "on_source_s": 151.2,
+   "star": "ALMA J153702653-33192492"
+  },
+  {
+   "chanw_Hz": 976562.5,
+   "eb": "A002_Xd9d7c7_Xbb64",
+   "eta": 0.6241,
+   "flo": 335.058996,
+   "on_source_s": 151.2,
+   "star": "ALMA J153702653-33192492"
+  },
+  {
+   "chanw_Hz": 976562.5,
+   "eb": "A002_Xd9d7c7_Xb3d2",
+   "eta": 0.6241,
+   "flo": 335.059127,
+   "on_source_s": 151.2,
+   "star": "ALMA J153702653-33192492"
+  }
+ ],
+ "eta_min": 1.0,
+ "fails": [],
+ "median_system_W": {
+  "all": 1245135845948277.8,
+  "passing": 1197029854195466.2
+ },
+ "n_a": 405,
+ "n_a_below": 9,
+ "n_b": 1258,
+ "n_b_above": 40,
+ "n_systems": {
+  "all": 61,
+  "passing": 59
+ },
+ "systems_lost": [
+  "PM J034331958",
+  "WD 0407179"
+ ],
+ "union_GHz": {
+  "all": 47.74043000000026,
+  "passing": 44.40601000000018
+ }
+}

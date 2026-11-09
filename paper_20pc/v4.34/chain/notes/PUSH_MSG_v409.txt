@@ -1,0 +1,28 @@
+paper v4.09: the repaired extraction becomes the search statistic; referee 2's
+345.5 GHz cluster dissolves as an artefact of our own field truncation; eta Crv
+gains a recurrence test at 11.57 sigma; the block ledger closes on a block ALMA
+never calibrated
+
+- the repaired T* adopted (D35): 157 windows / 39 blocks re-extracted, on-source
+  40.05 -> 111.74 h, noise x0.692.  4 released crossings fall below the trigger,
+  1 appears, 1 is restored, 2 arrive with the archival tail: 56 - 4 + 1 + 1 + 2
+  = 56, a DIFFERENT 56, published crossing by crossing.  All eight fail the
+  frozen 512-control rank screen; no disposition reverses, zero candidates.
+- legitimacy as three measurements: committed in writing 2026-09-27 before any
+  product existed, trigger unchanged, applied uniformly, unbiased in the median
+  (+0.072), a no-op where nothing was lost (0.057), not a no-op on the crossings.
+- referee 2's 345.48-345.64 GHz group: 3 of its 6 members fall, 2 of them
+  HR 1010, one of the two worst field-truncated stars.  Corrected: fixed band
+  p = 0.019 (shipped 3.6e-4), scan 0.82, ladder 0.78, stellar 0.33/0.89/0.88.
+  The build asserts the post-hoc band can never be printed as the result.
+- eta Crv excluded as a persistent source at 11.57 sigma by the one other
+  covering epoch, 2.19x deeper, at the stellar-frame-matched channel (80 channels
+  from a naive sky match).  N_eff = 4.79 from one block.  One crossing, not two.
+- the block ledger closes: A002_X11e10bc_X23333 is eta Crv B7 and ALMA shipped
+  67.24 GB of raw ASDM it never pipeline-calibrated.  never_started = 0.
+  144 searched / 18 no-cal / 11 cal-fail / 1 infeasible / 3 unattempted = 177.
+- both withdrawn results survive the corrected analysis key; the aggregate
+  exceedance contrast strengthens 6.400 -> 6.596 and Class B is unchanged.
+- Table 11 rebuilt: the transfer row referee 1 asked about reaches the table for
+  the first time, and the gate now requires the manuscript to reference it.
+- 60 pp, main 22.07 pp.  cleanregen 144/144 byte-identical; selftest_v409 48/48.

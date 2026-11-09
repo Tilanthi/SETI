@@ -1,0 +1,238 @@
+{
+ "generated_by": "tobs_r34.py --freeze",
+ "n_primary": 28,
+ "rows": [
+  {
+   "eb": "A002_Xdaef5a_X6873",
+   "freq_GHz": 229.8885479,
+   "role": "primary",
+   "t_obs": 5.0472
+  },
+  {
+   "eb": "A002_Xc079b5_X82f",
+   "freq_GHz": 346.3138115,
+   "role": "primary",
+   "t_obs": 5.9466
+  },
+  {
+   "eb": "A002_Xc067f7_X822",
+   "freq_GHz": 345.5598724,
+   "role": "primary",
+   "t_obs": 5.0407
+  },
+  {
+   "eb": "A002_Xd9668b_X841a",
+   "freq_GHz": 230.8769103,
+   "role": "primary",
+   "t_obs": 5.0838
+  },
+  {
+   "eb": "A002_Xa42f75_X319",
+   "freq_GHz": 230.6863687,
+   "role": "primary",
+   "t_obs": 5.2915
+  },
+  {
+   "eb": "A002_Xc66ce1_Xaa9",
+   "freq_GHz": 230.834752,
+   "role": "primary",
+   "t_obs": 5.0555
+  },
+  {
+   "eb": "A002_X12209f7_X16edb",
+   "freq_GHz": 322.4324914,
+   "role": "primary",
+   "t_obs": 5.0775
+  },
+  {
+   "eb": "A002_Xd9d7c7_X6fd2",
+   "freq_GHz": 230.6354644,
+   "role": "primary",
+   "t_obs": 5.1876
+  },
+  {
+   "eb": "A002_Xc19d6f_X5706",
+   "freq_GHz": 230.4226176,
+   "role": "primary",
+   "t_obs": 5.4474
+  },
+  {
+   "eb": "A002_X10b22d7_X2445",
+   "freq_GHz": 230.7903809,
+   "role": "primary",
+   "t_obs": 5.4923
+  },
+  {
+   "eb": "A002_Xff294f_Xaf70",
+   "freq_GHz": 331.657036,
+   "role": "primary",
+   "t_obs": 5.198
+  },
+  {
+   "eb": "A002_X1171dca_X5df0",
+   "freq_GHz": 344.5040496,
+   "role": "primary",
+   "t_obs": 5.4932
+  },
+  {
+   "eb": "A002_Xd9668b_X3a90",
+   "freq_GHz": 241.7512355,
+   "role": "primary",
+   "t_obs": 5.5492
+  },
+  {
+   "eb": "A002_X129754b_X6946",
+   "freq_GHz": 231.1998448,
+   "role": "primary",
+   "t_obs": 5.2502
+  },
+  {
+   "eb": "A002_Xff699e_Xd7",
+   "freq_GHz": 344.5739449,
+   "role": "primary",
+   "t_obs": 5.2023
+  },
+  {
+   "eb": "A002_Xfe62c1_X398",
+   "freq_GHz": 216.1844318,
+   "role": "primary",
+   "t_obs": 5.2535
+  },
+  {
+   "eb": "A002_Xf8f6a9_X10359",
+   "freq_GHz": 217.7292444,
+   "role": "primary",
+   "t_obs": 5.0901
+  },
+  {
+   "eb": "A002_Xfe62c1_X398",
+   "freq_GHz": 218.8729083,
+   "role": "primary",
+   "t_obs": 5.1092
+  },
+  {
+   "eb": "A002_Xf8f6a9_X10359",
+   "freq_GHz": 218.6711389,
+   "role": "primary",
+   "t_obs": 5.047
+  },
+  {
+   "eb": "A002_Xfff3d8_Xd46",
+   "freq_GHz": 331.7699224,
+   "role": "primary",
+   "t_obs": 5.5739
+  },
+  {
+   "eb": "A002_Xff99e1_X24be0",
+   "freq_GHz": 331.2580546,
+   "role": "primary",
+   "t_obs": 5.098
+  },
+  {
+   "eb": "A002_Xfffde1_X3835",
+   "freq_GHz": 345.0948663,
+   "role": "primary",
+   "t_obs": 5.1695
+  },
+  {
+   "eb": "A002_Xff99e1_X2b2ee",
+   "freq_GHz": 344.7006991,
+   "role": "primary",
+   "t_obs": 5.1798
+  },
+  {
+   "eb": "A002_X11d9ce7_X5257",
+   "freq_GHz": 856.7675742,
+   "role": "primary",
+   "t_obs": 5.0227
+  },
+  {
+   "eb": "A002_X11d9ce7_X5257",
+   "freq_GHz": 871.0673789,
+   "role": "primary",
+   "t_obs": 5.3032
+  },
+  {
+   "eb": "A002_Xff0235_X502d",
+   "freq_GHz": 344.7652639,
+   "role": "primary",
+   "t_obs": 5.0517
+  },
+  {
+   "eb": "A002_Xff0235_X8c42",
+   "freq_GHz": 331.0101355,
+   "role": "primary",
+   "t_obs": 5.0532
+  },
+  {
+   "eb": "A002_Xe45e29_Xb7d4",
+   "freq_GHz": 219.4537849,
+   "role": "primary",
+   "t_obs": 5.3922
+  },
+  {
+   "eb": "A002_Xc079b5_X82f",
+   "freq_GHz": 346.2293388,
+   "role": "secondary",
+   "star": "61 Vir",
+   "t_obs": 5.1034,
+   "window_max": 5.9466
+  },
+  {
+   "eb": "A002_Xff294f_Xaf70",
+   "freq_GHz": 331.4988329,
+   "role": "secondary",
+   "star": "HD 10647",
+   "t_obs": 5.0318,
+   "window_max": 5.198
+  },
+  {
+   "eb": "A002_Xf5d76d_X32f1",
+   "freq_GHz": 115.6200187,
+   "role": "secondary",
+   "star": "bet Pic",
+   "t_obs": 5.0464,
+   "window_max": 14.6175
+  },
+  {
+   "eb": "A002_Xff45a6_X10ca8",
+   "freq_GHz": 345.8662576,
+   "role": "secondary",
+   "star": "HD161868",
+   "t_obs": 5.0518,
+   "window_max": 5.2727
+  },
+  {
+   "eb": "A002_Xfff3d8_Xd46",
+   "freq_GHz": 330.5008794,
+   "role": "secondary",
+   "star": "HD14055",
+   "t_obs": 5.2312,
+   "window_max": 5.5739
+  },
+  {
+   "eb": "A002_Xfffde1_X3835",
+   "freq_GHz": 345.0094171,
+   "role": "secondary",
+   "star": "HD14055",
+   "t_obs": 5.072,
+   "window_max": 5.1695
+  },
+  {
+   "eb": "A002_X1190de8_Xd526",
+   "freq_GHz": 344.467647,
+   "role": "tail",
+   "t_obs": null
+  },
+  {
+   "eb": "A002_X11adad7_X25c5e",
+   "freq_GHz": 345.456382,
+   "role": "tail",
+   "t_obs": null
+  }
+ ],
+ "sources": [
+  "chance_v414.json observed_rows/observed_tail",
+  "cells_v416.json secondary (in_mask False)"
+ ]
+}
