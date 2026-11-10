@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.10.23)  1 JAN 2020 00:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.10.20)  10 NOV 2026 11:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -768,10 +768,10 @@ LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
 (./tab_projcodes_v400.tex)) (./sections/app_C_spatialnorm.tex)
 (./sections/app_I_linemask.tex [19] [20]
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 20.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 15.
 
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 20.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 15.
 
 
 Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
@@ -790,10 +790,10 @@ nged.
 (rerunfilecheck)             Checksum: 615EFC16543FC628D61745AF45A661DC;7301.
  ) 
 Here is how much of TeX's memory you used:
- 21771 strings out of 480171
- 333451 string characters out of 5894488
- 616778 words of memory out of 5000000
- 38618 multiletter control sequences out of 15000+600000
+ 21770 strings out of 480171
+ 333440 string characters out of 5894488
+ 617778 words of memory out of 5000000
+ 38617 multiletter control sequences out of 15000+600000
  492356 words of font info for 87 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  70i,11n,76p,1727b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -831,10 +831,10 @@ ype1/public/cm-super/sfti0900.pfb></usr/share/texmf/fonts/type1/public/cm-super
 /sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt0800.pfb></usr/
 share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texmf/fonts/ty
 pe1/public/cm-super/sfxc0800.pfb>
-Output written on technosignatures_40pc_v4.36.pdf (26 pages, 1287990 bytes).
+Output written on technosignatures_40pc_v4.36.pdf (26 pages, 1288174 bytes).
 PDF statistics:
- 1098 PDF objects out of 1200 (max. 8388607)
- 928 compressed objects within 10 object streams
+ 1099 PDF objects out of 1200 (max. 8388607)
+ 929 compressed objects within 10 object streams
  153 named destinations out of 1000 (max. 500000)
  322 words of extra memory for PDF output out of 10000 (max. 10000000)
 
