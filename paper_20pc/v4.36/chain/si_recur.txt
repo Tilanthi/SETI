@@ -1,0 +1,49 @@
+# The recurrence depths of the ALMA 40 pc technosignature search read two further ways: over covering blocks separated from the discovery block alone, and over a cell tolerance matched to the measured stellar-frame registration of +-0.45 km/s.
+# One row per threshold crossing carrying a quoted exclusion, in the order of the crossing ledger.  Accompanies the arXiv submission as an ancillary file (anc/), and joins si_ledger.txt on (star, eb, nu_topo_GHz).
+# Tab-separated; an empty field is a value withheld, not a zero.
+#
+# Columns:
+#   1  star                         star name as in the paper, the same string si_ledger.txt is keyed on
+#   2  eb                           ALMA execution block (asdm) identifier of the discovery block
+#   3  nu_topo_GHz                  crossing frequency as delivered by the correlator
+#   4  nu_star_GHz                  the same frequency in the star's rest frame
+#   5  n_rep                        covering repeat execution blocks the published depth combines
+#   6  n_rep_sep                    of those, blocks separated from the discovery block: a different observing session AND more than one day away
+#   7  T_pers_sep                   statistic a carrier persisting at the discovery flux would give at the predicted cell over those blocks alone (empty where there are none)
+#   8  T_rep_sep                    statistic measured there, at the carried drift
+#   9  f5_sep                       fraction of the discovery amplitude still excluded at the trigger over separated blocks alone, (T_rep+5)/T_pers
+#  10  p_trig_sep                   recovery probability at the trigger amplitude over those blocks alone
+#  11  k_tol                        half-width in channels of the matched registration tolerance, in channels of the finest covering block
+#  12  n_cell_tol                   cells read over that tolerance
+#  13  thr_tol                      threshold at which those cells carry the single cell's own false-alarm probability
+#  14  f5_tol                       fraction of the discovery amplitude still excluded at the trigger when the reading is the worst cell of that tolerance, (T_rep+thr)/T_pers
+#  15  p_trig_tol                   recovery probability at the trigger amplitude at that threshold
+#
+star	eb	nu_topo_GHz	nu_star_GHz	n_rep	n_rep_sep	T_pers_sep	T_rep_sep	f5_sep	p_trig_sep	k_tol	n_cell_tol	thr_tol	f5_tol	p_trig_tol
+61 Vir	A002_Xc067f7_X822	345.559872	345.567825	7	7	110.66	-1.0491	0.0357	1.0000	1	3	5.208	0.0393	1.0000
+61 Vir	A002_Xc079b5_X82f	346.313811	346.323236	6	6	117.70	+2.0514	0.0599	1.0000	1	3	5.208	0.0620	1.0000
+ALMA J153702653-33192492	A002_Xfe62c1_X398	216.184432	216.203564	7	7	10.98	+1.0696	0.5526	1.0000	1	3	5.208	0.5844	1.0000
+ALMA J153702653-33192492	A002_Xf8f6a9_X10359	217.729244	217.726868	7	7	11.43	+0.4022	0.4726	1.0000	1	3	5.208	0.5826	1.0000
+ALMA J153702653-33192492	A002_Xf8f6a9_X10359	218.671139	218.668752	7	7	11.51	-0.3804	0.4013	1.0000	1	3	5.208	0.5082	1.0000
+ALMA J153702653-33192492	A002_Xfe62c1_X398	218.872908	218.892278	7	7	10.36	-0.9208	0.3937	1.0000	1	3	5.208	0.5151	1.0000
+AU Mic	A002_Xa42f75_X319	230.686369	230.670469	2	2	6.37	-0.2076	0.7518	0.8470	1	3	5.208	0.7844	0.7994
+CP-72 2713	A002_Xff0235_X502d	344.765264	344.792104	1	1	0.42	+3.7847	20.8688	0.0000	1	3	5.208	21.3624	0.0000
+GJ 3379	A002_Xdaef5a_X6873	229.888548	229.931146	5	5	8.87	-1.4360	0.4019	0.9999	1	3	5.208	0.5446	0.9998
+GJ 849	A002_Xd9668b_X841a	230.876910	230.858104	3	3	5.62	-1.4987	0.6228	0.7015	1	3	5.208	0.8960	0.6179
+HD 10647	A002_Xff294f_Xaf70	331.657036	331.694327	6	6	127.24	+0.2682	0.0414	1.0000	1	3	5.208	0.0430	1.0000
+HD 10647	A002_X1171dca_X5df0	344.504050	344.520500	9	9	13.30	-0.0603	0.3715	1.0000	1	3	5.208	0.4178	1.0000
+HD 110411	A002_Xe45e29_Xb7d4	219.453785	219.435679	1	1	6.68	+0.5974	0.8381	0.8835	1	3	5.208	0.8692	0.8425
+HD 14055	A002_Xff99e1_X24be0	331.258055	331.253749	28	28	257.85	-0.7910	0.0163	1.0000	1	3	5.208	0.0217	1.0000
+HD 14055	A002_Xfff3d8_Xd46	331.769922	331.766431	29	29	169.83	+0.0453	0.0297	1.0000	1	3	5.208	0.0309	1.0000
+HD 14055	A002_X1190de8_Xd526	344.467647	344.451541	31	31	11.55	-0.8227	0.3617	1.0000	1	3	5.208	0.5047	1.0000
+HD 14055	A002_Xff99e1_X2b2ee	344.700699	344.696451	28	28	210.19	+0.0301	0.0239	1.0000	1	3	5.208	0.0249	1.0000
+HD 14055	A002_Xfffde1_X3835	345.094866	345.091971	29	29	206.79	+1.1052	0.0295	1.0000	1	3	5.208	0.0305	1.0000
+HD 14055	A002_X11adad7_X25c5e	345.456382	345.430291	28	28	11.00	+0.0644	0.4603	1.0000	1	3	5.208	0.5042	1.0000
+HD 161868	A002_Xff699e_Xd7	344.573945	344.588966	9	9	74.87	+0.6100	0.0749	1.0000	1	3	5.208	0.0861	1.0000
+HD 170773	A002_Xff0235_X8c42	331.010135	331.023389	2	2	74.82	+1.3355	0.0847	1.0000	1	3	5.208	0.0875	1.0000
+HD 207129	A002_Xc19d6f_X5706	230.422618	230.407028	2	2	69.69	-0.9870	0.0576	1.0000	1	3	5.208	0.0791	1.0000
+HD 23484	A002_X10b22d7_X2445	230.790381	230.800606	1	1	4.17	+1.4814	1.5534	0.1148	1	3	5.208	1.6032	0.0831
+HD 31392	A002_X129754b_X6946	231.199845	231.223086	6	6	13.90	+0.5156	0.3968	1.0000	1	3	5.208	0.4117	1.0000
+HD 69830	A002_X12209f7_X16edb	322.432491	322.444417	3	3	6.35	+0.7091	0.8990	0.8950	1	3	5.208	0.9588	0.8631
+HR 1010	A002_Xc66ce1_Xaa9	230.834752	230.849103	7	7	10.26	-1.6030	0.3310	1.0000	1	3	5.208	0.3513	1.0000
+LHS 1140	A002_Xd9d7c7_X6fd2	230.635464	230.626810	4	4	7.30	+0.1983	0.7125	0.9789	1	3	5.208	0.8336	0.9662

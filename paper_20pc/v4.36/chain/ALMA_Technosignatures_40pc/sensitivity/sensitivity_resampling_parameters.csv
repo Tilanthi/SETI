@@ -1,0 +1,8 @@
+parameter,value
+class_factor,2.9923811324321772
+factor_lo,0.88856121841752311
+factor_hi,1.1123906942475699
+level_W,1000000000000000
+seed,1300028
+n_trial,64000
+numpy_version,2.2.6

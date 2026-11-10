@@ -1,0 +1,14 @@
+quantity,star,value
+"as delivered, topocentric",61 Vir,346.313811
+of them in the primary census,61 Vir,3
+"further census repeats, no spectrum",61 Vir,1
+covering epochs more than a day away,61 Vir,6
+Longest baseline (d),61 Vir,772
+largest single epoch,61 Vir,+1.81
+maximised over every drift,61 Vir,2.85
+"Nearest block alone, T_pers",61 Vir,6.07
+T_rep,61 Vir,+1.54
+from the nearest block alone,61 Vir,1.08 S
+from separated blocks alone,61 Vir,0.06 S (n=6)
+over the matched registration tolerance,61 Vir,0.06 S
+Displacement permitted (km s^-1),61 Vir,±0.211

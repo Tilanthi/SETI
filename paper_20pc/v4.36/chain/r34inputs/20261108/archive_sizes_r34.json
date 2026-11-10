@@ -1,0 +1,5 @@
+{
+ "_doc": "Archive sizes (bytes) of execution blocks that archive_meta_v381.json cannot size (member_ous unresolved in the 2026-09 harvest), as MEASURED by the r29-extract re-extraction lane when it downloaded the block (lanes/B/state.json size_bytes, ALMA archive tar files). Read by visextend_v399.py; never overrides an archive_meta value.",
+ "sizes": {"A002_X11d9ce7_X5257": 75936135168},
+ "source": {"A002_X11d9ce7_X5257": "/data/paper_build/r29_extract/lanes/B/state.json (finished 2026-11-07T17:12:02Z, size_known true)"}
+}

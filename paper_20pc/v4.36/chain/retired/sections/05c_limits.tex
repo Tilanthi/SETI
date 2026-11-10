@@ -1,0 +1,98 @@
+\subsection{What this experiment excludes, and what it does not}
+\label{sec:excludes}
+
+\noindent\emph{Excluded.} A continuously transmitting, unresolved carrier
+lying outside the molecular-line mask, inside the searched frequency range
+and inside the linear-drift grid, and present during one of the archival
+epochs, would have been found nine times in ten above the
+$\mathrm{EIRP}_{90}$ of \S\ref{sec:pninetysel} --- a median of
+$\EirpNinetySysMedA$\,W per system on its best window. No such carrier is
+present toward any of the \NSystems{} systems searched.
+
+\noindent\emph{Not excluded.} A transmitter absent during the archival
+observation, or on for less than about a tenth of the time: at a duty cycle
+of one tenth, recovery falls to \DwellFineT{} per cent for the fine class
+and \DwellCoarseT{} per cent for the coarse
+(Appendix~\ref{app:dwelldetail}), and those trials are undrifted, so the
+joint drifting-and-intermittent case is not measured at all. Emission inside
+the $\pm\MaskHalfKms$\,km\,s$^{-1}$ molecular-line mask, at any strength.
+Drift outside the searched grid, or drift curved enough to leave a channel
+within the track. Signals broad enough to be removed with the continuum
+baseline. Anything below a window's own completeness. And any emission from
+the \NGaiaCensus{} stars within 40\,pc that ALMA has not observed, which is
+almost all of them.
+
+\subsubsection{The survey's on-source time, in both directions}
+\label{sec:exposure}
+
+Two bookkeeping biases of opposite sign affect the exposure, and neither may
+be quoted without the other. The extractor retained a single \texttt{FIELD}
+row per execution block, so in \TruncNBlocks{} of the \ExpNBlocks{} released
+blocks --- \TruncNWin{} windows toward \TruncNStars{} stars --- further
+in-beam pointings on the same star were discarded, \TruncHoursLost\,h of
+real on-source time, \TruncPctSurvey{} per cent of the survey. Nothing
+published is thereby wrong, because every noise level was measured from the
+data actually used; but the \emph{achievable} sensitivity in those windows
+is understated by a median factor \TruncGainMed{} in flux density, and those
+blocks were re-extracted and re-searched. In the opposite direction, the
+released on-source time is the number of integrations times the median dump
+length rather than a sum of dump lengths, so short sub-scan boundary dumps
+are over-counted; the exact computation moves the survey total from
+\OcOldMax{} to \OcNewMax\,h. \emph{The first bias costs the survey time it
+had and the second credits it with time it never had}, and they offset to
+within \ExpNetLo--\ExpNetHi\,h.
+
+\subsubsection{The omitted annual parallax} \label{sec:parallax}
+
+The extraction phase-rotates the visibilities to each star's
+\emph{barycentric} direction while the visibilities see the apparent one, so
+annual parallax is omitted from the assumed phase centre. The resulting
+amplitude loss is the normalised dirty beam evaluated at the parallax
+displacement in units of the synthesised beam: parameter-free,
+multiplicative and shape-preserving. Over the \PxNWin{} windows carrying the
+astrometric keys it is \PxLossMedPct{} per cent in the median window and
+\PxLossMaxPct{} per cent at worst, with \PxNGtTen{} windows losing more than
+ten per cent. It is negligible throughout the ACA data that dominate this
+survey and matters only for nearby stars observed in long-baseline 12\,m
+configurations. \emph{We state it and do not apply it.} The sign is
+optimistic --- every limit quoted here is too deep by $1/(1-{\rm loss})$ in
+its own window --- and the completeness campaign cannot see the term,
+because its carriers are deposited at the same assumed position the
+estimator evaluates. Correcting it would leave the number of systems
+reaching $10^{15}$\,W unchanged at \PxNSysCorr, because a long-baseline
+block is never a system's most sensitive window.
+
+\subsubsection{Two blind spots}
+
+The search is Stokes~$I$ only. A fully polarised carrier is not missed, but
+the discrimination that polarisation would offer against unpolarised
+astrophysical emission is unavailable. ALMA's feeds are linear, so a
+per-hand search would help only a carrier aligned with one feed; a
+circularly polarised signal divides equally between XX and YY, and its
+circularity is in the cross-hands, which this analysis does not extract.
+The frequency coverage, finally, is the archive's and not a choice. None of
+the ``magic frequency'' arguments that have guided centimetre-band searches
+--- the 1420\,MHz line, its multiples, the water hole, or $\pi$ and $e$
+times them --- falls in an ALMA band, so a transmitter deliberately placed
+on one lies outside this experiment by construction and its absence here is
+not evidence against it.
+
+%% ---------------------------------------------------------------------
+%% REQUEST (results owner -> numbers owner).  This file uses
+%% \EirpNinetySysMedA, requested in 05_results.tex.
+%%
+%% REQUEST (results owner -> integrator).  Changes made here that touch
+%% other files:
+%%   - The sensitivity material (P90, the injection campaign, the budget
+%%     discussion) has moved to section 5.1 in 05_results.tex, which now
+%%     carries \label{sec:pninetysel}.  This file keeps only
+%%     \label{sec:excludes}.  The two labels were previously on one
+%%     subsection, which made every \ref to one of them resolve to the
+%%     other.
+%%   - fig:dwellsel is deleted here; the float belongs with the injection
+%%     material in Appendix app:inject / app:dwelldetail, which is where
+%%     the numbers now point.  Nothing outside this file cited it.
+%%   - sec:exposure and sec:parallax are now numbered subsubsections
+%%     rather than starred paragraphs, so \ref to them prints their own
+%%     number instead of the enclosing subsection's.
+%% ---------------------------------------------------------------------

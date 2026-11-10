@@ -1,0 +1,62 @@
+{
+ "_doc": "Proxima Cen stellar-frame stack and best single epoch, nominal 5-sigma EIRP (before the ninety-per-cent completeness factor), from stack2.py run verbatim twice: as used by the paper, and with the windows of re-calibrated blocks reading their re-flagged, field-recombined products (r27-reflag fold, src/pxstack_measure.py, cluster reflag_r27/fold/pxstack/pxstack_measure.json).  NOT wired into the paper (FOLD_DECISIONS E4): the completeness of recombined products has not been re-verified.  Deposit only.",
+ "n_windows_substituted": 104,
+ "groups": [
+  {
+   "star": "Proxima Cen",
+   "band": "B6",
+   "chanw_Hz": 15625000.0,
+   "nu_lo_GHz": 223.016849,
+   "nu_hi_GHz": 224.969917,
+   "n_epochs": 66,
+   "on_source_h": 21.108,
+   "on_source_h_recombined": 26.555,
+   "eirp_stack_nominal_W": 4497733507070.246,
+   "eirp_stack_nominal_recombined_W": 2580835641542.8315,
+   "eirp_single_nominal_W": 14339324051023.63,
+   "eirp_single_nominal_recombined_W": 2612342458402.1294
+  },
+  {
+   "star": "Proxima Cen",
+   "band": "B6",
+   "chanw_Hz": 15625000.0,
+   "nu_lo_GHz": 225.01679,
+   "nu_hi_GHz": 226.969857,
+   "n_epochs": 66,
+   "on_source_h": 21.108,
+   "on_source_h_recombined": 26.552,
+   "eirp_stack_nominal_W": 5223987763223.678,
+   "eirp_stack_nominal_recombined_W": 1713149566919.8596,
+   "eirp_single_nominal_W": 18357535849032.85,
+   "eirp_single_nominal_recombined_W": 1777481739753.947
+  },
+  {
+   "star": "Proxima Cen",
+   "band": "B6",
+   "chanw_Hz": 15625000.0,
+   "nu_lo_GHz": 239.016377,
+   "nu_hi_GHz": 240.969444,
+   "n_epochs": 66,
+   "on_source_h": 21.108,
+   "on_source_h_recombined": 26.548,
+   "eirp_stack_nominal_W": 5974510206424.483,
+   "eirp_stack_nominal_recombined_W": 1828319555701.9905,
+   "eirp_single_nominal_W": 19814367388418.1,
+   "eirp_single_nominal_recombined_W": 2469769494936.1055
+  },
+  {
+   "star": "Proxima Cen",
+   "band": "B6",
+   "chanw_Hz": 15625000.0,
+   "nu_lo_GHz": 241.016318,
+   "nu_hi_GHz": 242.969385,
+   "n_epochs": 66,
+   "on_source_h": 21.108,
+   "on_source_h_recombined": 26.559,
+   "eirp_stack_nominal_W": 7692317449515.112,
+   "eirp_stack_nominal_recombined_W": 3158472552933.769,
+   "eirp_single_nominal_W": 18820899046798.746,
+   "eirp_single_nominal_recombined_W": 3587957406331.721
+  }
+ ]
+}

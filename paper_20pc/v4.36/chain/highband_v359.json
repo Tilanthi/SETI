@@ -1,0 +1,9 @@
+{
+ "description": "Windows searched by the frozen pipeline in ALMA Bands 9 and 10 that the released catalogue omits. The export step recognised only the directory tags _B3 to _B8, so every Band 9 and Band 10 window was dropped before the catalogue was written. The omission is in the export, not the search: these windows were searched by the same frozen pipeline and their products exist. The bug is fixed at source; the next release folds them into the catalogue.",
+ "n_windows": 12, "n_stars": 2, "n_blocks": 2,
+ "stars": ["AU Mic [B9]", "HD 61005 [B10]"],
+ "freq_lo_GHz": 675.1, "freq_hi_GHz": 873.1,
+ "chanw_kHz": [976.6, 15625.0],
+ "eirp_lo_W": 4.13e15, "eirp_hi_W": 3.00e16,
+ "max_star_peak_snr": 4.91, "n_detections": 0, "n_stage1": 0
+}

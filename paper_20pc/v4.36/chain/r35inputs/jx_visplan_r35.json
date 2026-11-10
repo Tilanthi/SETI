@@ -1,0 +1,353 @@
+{
+"harvester": "harvest_visplan_r35.py",
+"root": "/data/SETI/visfit_r7",
+"plan_sha256": "75c9d39bc997b5acbb020318c6c99d1dc03a1324cb62186422862ecd0b48acbd",
+"plan_ebs": [
+"A002_X1001fdc_X29ae",
+"A002_X10b22d7_X2445",
+"A002_X12209f7_X16edb",
+"A002_X12277ed_X178c6",
+"A002_X122b6ff_X1041e",
+"A002_X129754b_X6946",
+"A002_X6f1341_X1484",
+"A002_X7116f1_X1785",
+"A002_X75bfbf_X1430",
+"A002_X899169_X1838",
+"A002_Xa42f75_X319",
+"A002_Xa7a216_X23e4",
+"A002_Xa95c04_X14cd",
+"A002_Xba460f_X7e6",
+"A002_Xc067f7_X822",
+"A002_Xc079b5_X82f",
+"A002_Xc19d6f_X5706",
+"A002_Xc26103_X155a",
+"A002_Xc66ce1_X1345",
+"A002_Xc66ce1_Xaa9",
+"A002_Xc6a3db_X7b5b",
+"A002_Xc7fa6f_X28a8",
+"A002_Xcf525f_X5aa4",
+"A002_Xd9668b_X3a90",
+"A002_Xd9668b_X841a",
+"A002_Xd9668b_Xa9df",
+"A002_Xd98580_X3bf6",
+"A002_Xd9d7c7_X6fd2",
+"A002_Xd9d7c7_Xbb64",
+"A002_Xdb4b9a_X108f",
+"A002_Xdb7ab7_X5b4e",
+"A002_Xe45e29_Xb7d4",
+"A002_Xf4df6f_Xc7",
+"A002_Xf5d76d_X32f1",
+"A002_Xf5d76d_Xcc5",
+"A002_Xf5d76d_Xe19",
+"A002_Xf5d76d_Xeb8",
+"A002_Xf8f6a9_X10359",
+"A002_Xfe62c1_X398",
+"A002_Xff0235_X4a6d",
+"A002_Xff0235_X8392",
+"A002_Xff0235_X8c42",
+"A002_Xff294f_Xaf70",
+"A002_Xff45a6_X10ca8",
+"A002_Xff99e1_X24be0",
+"A002_Xff99e1_X2b2ee",
+"A002_Xff99e1_X2c3bb",
+"A002_Xfff3d8_Xd46",
+"A002_Xfffde1_X3835"
+],
+"outcome": {
+"A002_X1001fdc_X29ae": {
+"status": "ok",
+"cells": [
+"HD14055|A002_X1001fdc_X29ae"
+]
+},
+"A002_X10b22d7_X2445": {
+"status": "ok",
+"cells": [
+"HD 23484 Gaia DR3 4856592239127350400|A002_X10b22d7_X2445"
+]
+},
+"A002_X12209f7_X16edb": {
+"status": "ok",
+"cells": [
+"HD 69830|A002_X12209f7_X16edb"
+]
+},
+"A002_X12277ed_X178c6": {
+"status": "ok",
+"cells": [
+"HD 69830|A002_X12277ed_X178c6"
+]
+},
+"A002_X122b6ff_X1041e": {
+"status": "ok",
+"cells": [
+"eta Crv|A002_X122b6ff_X1041e"
+]
+},
+"A002_X129754b_X6946": {
+"status": "ok",
+"cells": [
+"HD 31392|A002_X129754b_X6946"
+]
+},
+"A002_X6f1341_X1484": {
+"status": "ok",
+"cells": [
+"bet Pic|A002_X6f1341_X1484"
+]
+},
+"A002_X7116f1_X1785": {
+"status": "ok",
+"cells": [
+"bet Pic|A002_X7116f1_X1785"
+]
+},
+"A002_X75bfbf_X1430": {
+"status": "ok",
+"cells": [
+"eta Crv|A002_X75bfbf_X1430"
+]
+},
+"A002_X899169_X1838": {
+"status": "ok",
+"cells": [
+"AU Mic|A002_X899169_X1838"
+]
+},
+"A002_Xa42f75_X319": {
+"status": "ok",
+"cells": [
+"AU Mic|A002_Xa42f75_X319"
+]
+},
+"A002_Xa7a216_X23e4": {
+"status": "no_measurement_set",
+"cells": []
+},
+"A002_Xa95c04_X14cd": {
+"status": "ok",
+"cells": [
+"HIP10679|A002_Xa95c04_X14cd"
+]
+},
+"A002_Xba460f_X7e6": {
+"status": "ok",
+"cells": [
+"tau Cet|A002_Xba460f_X7e6"
+]
+},
+"A002_Xc067f7_X822": {
+"status": "ok",
+"cells": [
+"61 Vir|A002_Xc067f7_X822"
+]
+},
+"A002_Xc079b5_X82f": {
+"status": "ok",
+"cells": [
+"61 Vir|A002_Xc079b5_X82f"
+]
+},
+"A002_Xc19d6f_X5706": {
+"status": "ok",
+"cells": [
+"HD 207129 Gaia DR3 6564091190988411520|A002_Xc19d6f_X5706"
+]
+},
+"A002_Xc26103_X155a": {
+"status": "ok",
+"cells": [
+"HD 48370|A002_Xc26103_X155a"
+]
+},
+"A002_Xc66ce1_X1345": {
+"status": "ok",
+"cells": [
+"HR 1010 Gaia DR3 4722135642226902656|A002_Xc66ce1_X1345"
+]
+},
+"A002_Xc66ce1_Xaa9": {
+"status": "ok",
+"cells": [
+"HR 1010 Gaia DR3 4722135642226902656|A002_Xc66ce1_Xaa9"
+]
+},
+"A002_Xc6a3db_X7b5b": {
+"status": "ok",
+"cells": [
+"HR 1010 Gaia DR3 4722135642226902656|A002_Xc6a3db_X7b5b"
+]
+},
+"A002_Xc7fa6f_X28a8": {
+"status": "ok",
+"cells": [
+"BD05 1668|A002_Xc7fa6f_X28a8|223.133-224.867",
+"BD05 1668|A002_Xc7fa6f_X28a8|225.133-226.867",
+"BD05 1668|A002_Xc7fa6f_X28a8|239.133-240.867",
+"BD05 1668|A002_Xc7fa6f_X28a8|241.133-242.867"
+]
+},
+"A002_Xcf525f_X5aa4": {
+"status": "ok",
+"cells": [
+"CD-57 1054|A002_Xcf525f_X5aa4"
+]
+},
+"A002_Xd9668b_X3a90": {
+"status": "ok",
+"cells": [
+"bet Pic|A002_Xd9668b_X3a90|230.489-230.543"
+]
+},
+"A002_Xd9668b_X841a": {
+"status": "ok",
+"cells": [
+"GJ 849|A002_Xd9668b_X841a"
+]
+},
+"A002_Xd9668b_Xa9df": {
+"status": "no_measurement_set",
+"cells": []
+},
+"A002_Xd98580_X3bf6": {
+"status": "ok",
+"cells": [
+"HD 285968|A002_Xd98580_X3bf6"
+]
+},
+"A002_Xd9d7c7_X6fd2": {
+"status": "ok",
+"cells": [
+"LHS 1140|A002_Xd9d7c7_X6fd2"
+]
+},
+"A002_Xd9d7c7_Xbb64": {
+"status": "ok",
+"cells": [
+"ALMA J153702653-33192492|A002_Xd9d7c7_Xbb64|346.976-348.701"
+]
+},
+"A002_Xdb4b9a_X108f": {
+"status": "ok",
+"cells": [
+"HD 285968|A002_Xdb4b9a_X108f"
+]
+},
+"A002_Xdb7ab7_X5b4e": {
+"status": "ok",
+"cells": [
+"HD 285968|A002_Xdb7ab7_X5b4e"
+]
+},
+"A002_Xe45e29_Xb7d4": {
+"status": "ok",
+"cells": [
+"HD110411|A002_Xe45e29_Xb7d4"
+]
+},
+"A002_Xf4df6f_Xc7": {
+"status": "ok",
+"cells": [
+"bet Pic|A002_Xf4df6f_Xc7"
+]
+},
+"A002_Xf5d76d_X32f1": {
+"status": "ok",
+"cells": [
+"bet Pic|A002_Xf5d76d_X32f1"
+]
+},
+"A002_Xf5d76d_Xcc5": {
+"status": "ok",
+"cells": [
+"bet Pic|A002_Xf5d76d_Xcc5"
+]
+},
+"A002_Xf5d76d_Xe19": {
+"status": "ok",
+"cells": [
+"bet Pic|A002_Xf5d76d_Xe19"
+]
+},
+"A002_Xf5d76d_Xeb8": {
+"status": "ok",
+"cells": [
+"bet Pic|A002_Xf5d76d_Xeb8"
+]
+},
+"A002_Xf8f6a9_X10359": {
+"status": "ok",
+"cells": [
+"ALMA J153702653-33192492|A002_Xf8f6a9_X10359|216.091-217.931",
+"ALMA J153702653-33192492|A002_Xf8f6a9_X10359|218.341-220.181"
+]
+},
+"A002_Xfe62c1_X398": {
+"status": "ok",
+"cells": [
+"ALMA J153702653-33192492|A002_Xfe62c1_X398|216.068-217.909",
+"ALMA J153702653-33192492|A002_Xfe62c1_X398|218.318-220.159"
+]
+},
+"A002_Xff0235_X4a6d": {
+"status": "ok",
+"cells": [
+"CP-72 2713|A002_Xff0235_X4a6d|344.253-345.978"
+]
+},
+"A002_Xff0235_X8392": {
+"status": "ok",
+"cells": [
+"ALMA J153702653-33192492|A002_Xff0235_X8392"
+]
+},
+"A002_Xff0235_X8c42": {
+"status": "ok",
+"cells": [
+"HD170773|A002_Xff0235_X8c42"
+]
+},
+"A002_Xff294f_Xaf70": {
+"status": "ok",
+"cells": [
+"HD 10647|A002_Xff294f_Xaf70"
+]
+},
+"A002_Xff45a6_X10ca8": {
+"status": "ok",
+"cells": [
+"HD161868|A002_Xff45a6_X10ca8"
+]
+},
+"A002_Xff99e1_X24be0": {
+"status": "ok",
+"cells": [
+"HD14055|A002_Xff99e1_X24be0"
+]
+},
+"A002_Xff99e1_X2b2ee": {
+"status": "ok",
+"cells": [
+"HD14055|A002_Xff99e1_X2b2ee"
+]
+},
+"A002_Xff99e1_X2c3bb": {
+"status": "ok",
+"cells": [
+"HD14055|A002_Xff99e1_X2c3bb"
+]
+},
+"A002_Xfff3d8_Xd46": {
+"status": "ok",
+"cells": [
+"HD14055|A002_Xfff3d8_Xd46"
+]
+},
+"A002_Xfffde1_X3835": {
+"status": "ok",
+"cells": [
+"HD14055|A002_Xfffde1_X3835"
+]
+}
+}
+}

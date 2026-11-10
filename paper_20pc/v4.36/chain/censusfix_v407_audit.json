@@ -1,0 +1,100 @@
+{
+ "renamed": 8,
+ "dropped": 4,
+ "rows_out": 1721,
+ "k_first_principles": 119649518.28635064,
+ "k_export_median": 119649518.28635064,
+ "groups": [
+  {
+   "eb": "A002_Xcd8029_Xb6b0",
+   "flo": 333.140219,
+   "chanw": 15625000.0,
+   "names": [
+    "HD 139084",
+    "HD 139084B"
+   ],
+   "kept": "HD 139084",
+   "implied_distance_pc": 38.71618767167228,
+   "why": "the A component (Gaia ...921024, pb offset 5.208\") is the extraction the released rows carry; the B component (...805632, 5.092\") was extracted separately on the host and is not in this release"
+  },
+  {
+   "eb": "A002_Xcd8029_Xb6b0",
+   "flo": 335.035719,
+   "chanw": 15625000.0,
+   "names": [
+    "HD 139084",
+    "HD 139084B"
+   ],
+   "kept": "HD 139084",
+   "implied_distance_pc": 38.71618767167229,
+   "why": "the A component (Gaia ...921024, pb offset 5.208\") is the extraction the released rows carry; the B component (...805632, 5.092\") was extracted separately on the host and is not in this release"
+  },
+  {
+   "eb": "A002_Xcd8029_Xb6b0",
+   "flo": 345.144857,
+   "chanw": 488281.25,
+   "names": [
+    "HD 139084",
+    "HD 139084B"
+   ],
+   "kept": "HD 139084",
+   "implied_distance_pc": 38.71618767167229,
+   "why": "the A component (Gaia ...921024, pb offset 5.208\") is the extraction the released rows carry; the B component (...805632, 5.092\") was extracted separately on the host and is not in this release"
+  },
+  {
+   "eb": "A002_Xcd8029_Xb6b0",
+   "flo": 347.035719,
+   "chanw": 15625000.0,
+   "names": [
+    "HD 139084",
+    "HD 139084B"
+   ],
+   "kept": "HD 139084",
+   "implied_distance_pc": 38.71618767167229,
+   "why": "the A component (Gaia ...921024, pb offset 5.208\") is the extraction the released rows carry; the B component (...805632, 5.092\") was extracted separately on the host and is not in this release"
+  }
+ ],
+ "dropped_rows": [
+  {
+   "star_name": "HD 139084B",
+   "eb": "A002_Xcd8029_Xb6b0",
+   "flo": 334.87459358738266,
+   "chanw": 15625000.0,
+   "dist_pc": 39.307605808821975,
+   "star_snr": 2.3299195766448975,
+   "eirp": 1.0066615834717512e+16,
+   "reason": "one extraction emitted under two names; measured star is HD 139084 (EIRP implies d = 38.7162 pc)"
+  },
+  {
+   "star_name": "HD 139084B",
+   "eb": "A002_Xcd8029_Xb6b0",
+   "flo": 336.7700935873827,
+   "chanw": 15625000.0,
+   "dist_pc": 39.307605808821975,
+   "star_snr": 2.4914348125457764,
+   "eirp": 8726022915381761.0,
+   "reason": "one extraction emitted under two names; measured star is HD 139084 (EIRP implies d = 38.7162 pc)"
+  },
+  {
+   "star_name": "HD 139084B",
+   "eb": "A002_Xcd8029_Xb6b0",
+   "flo": 345.14485725925766,
+   "chanw": 488281.25,
+   "dist_pc": 39.307605808821975,
+   "star_snr": 4.1525750160217285,
+   "eirp": 1714474232828747.8,
+   "reason": "one extraction emitted under two names; measured star is HD 139084 (EIRP implies d = 38.7162 pc)"
+  },
+  {
+   "star_name": "HD 139084B",
+   "eb": "A002_Xcd8029_Xb6b0",
+   "flo": 347.0357185873827,
+   "chanw": 15625000.0,
+   "dist_pc": 39.307605808821975,
+   "star_snr": 2.405233860015869,
+   "eirp": 1.0230511144332502e+16,
+   "reason": "one extraction emitted under two names; measured star is HD 139084 (EIRP implies d = 38.7162 pc)"
+  }
+ ],
+ "note": "the dropped rows are NOT a second measurement: they are the retained extraction written out under a second census name.  The star they were labelled with has an extraction of its own on the processing host which is not in this release; see BUILD_NOTES_V407.md."
+}

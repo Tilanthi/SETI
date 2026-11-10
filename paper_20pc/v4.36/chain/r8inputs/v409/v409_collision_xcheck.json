@@ -1,0 +1,173 @@
+{
+ "n_groups": 8,
+ "rows": [
+  {
+   "base": "A002_Xb25e1a_Xed74_spw3",
+   "stars": [
+    "PM J03433+1958",
+    "WD 0407+179",
+    "Wolf 219"
+   ],
+   "skeys": [
+    "pmj03433+1958",
+    "wd0407+179",
+    "wolf219"
+   ],
+   "identities": [
+    "PM J03433+1958",
+    "WD 0407+179",
+    "Wolf 219"
+   ],
+   "plx": [
+    48.17731638628853,
+    29.316745473424742,
+    52.957734715870096
+   ],
+   "worst_frac_dplx": 0.4464123960226861
+  },
+  {
+   "base": "A002_Xcd2acd_X6125_spw3",
+   "stars": [
+    "V star TX PsA",
+    "V star WW PsA"
+   ],
+   "skeys": [
+    "vstartxpsa",
+    "vstarwwpsa"
+   ],
+   "identities": [
+    "V star TX PsA",
+    "V star WW PsA"
+   ],
+   "plx": [
+    47.99616934587578,
+    47.92184273110373
+   ],
+   "worst_frac_dplx": 0.001548594727142206
+  },
+  {
+   "base": "A002_Xcd8029_Xb6b0_spw3",
+   "stars": [
+    "HD 139084 B",
+    "HD 139084B 921024"
+   ],
+   "skeys": [
+    null,
+    "hd139084b921024"
+   ],
+   "identities": [
+    null,
+    "HD 139084"
+   ],
+   "plx": [
+    null,
+    25.828989374686707
+   ],
+   "worst_frac_dplx": null
+  },
+  {
+   "base": "A002_Xcd97a1_X3f1e_spw3",
+   "stars": [
+    "NAME AT Mic AB Gaia DR3 6792436799475128960",
+    "V AT Mic B"
+   ],
+   "skeys": [
+    "nameatmicab",
+    "vatmicb"
+   ],
+   "identities": [
+    "NAME AT Mic AB Gaia DR3 6792436799475128960",
+    "V AT Mic B"
+   ],
+   "plx": [
+    100.79210677742213,
+    101.97239029860124
+   ],
+   "worst_frac_dplx": 0.011574540105639715
+  },
+  {
+   "base": "A002_Xcdb7b8_Xfb16_spw3",
+   "stars": [
+    "GJ 2006A",
+    "GJ 2006B"
+   ],
+   "skeys": [
+    "gj2006a",
+    "gj2006b"
+   ],
+   "identities": [
+    "GJ 2006A",
+    "GJ 2006B"
+   ],
+   "plx": [
+    28.54764582026202,
+    28.590687724876755
+   ],
+   "worst_frac_dplx": 0.0015054518810082667
+  },
+  {
+   "base": "A002_Xd10f82_X2635_spw3",
+   "stars": [
+    "LP 476-207 384128",
+    "LP 476-207 783296"
+   ],
+   "skeys": [
+    "lp476-207384128",
+    "lp476-207783296"
+   ],
+   "identities": [
+    "LP 476-207 384128",
+    "LP 476-207 783296"
+   ],
+   "plx": [
+    42.03882255030138,
+    42.10082724059061
+   ],
+   "worst_frac_dplx": 0.0014727665547970017
+  },
+  {
+   "base": "A002_Xd3607d_X6487_spw2",
+   "stars": [
+    "TWA 3A 696000",
+    "TWA 3A [576064]"
+   ],
+   "skeys": [
+    "twa3a696000",
+    "twa3a576064"
+   ],
+   "identities": [
+    "TWA 3A 696000",
+    "TWA 3A [576064]"
+   ],
+   "plx": [
+    26.987126300721485,
+    26.93233658152493
+   ],
+   "worst_frac_dplx": 0.002030216874002301
+  },
+  {
+   "base": "A002_Xd3607d_X6487_spw3",
+   "stars": [
+    "TWA 3A 696000",
+    "TWA 3A [576064]"
+   ],
+   "skeys": [
+    "twa3a696000",
+    "twa3a576064"
+   ],
+   "identities": [
+    "TWA 3A 696000",
+    "TWA 3A [576064]"
+   ],
+   "plx": [
+    26.987126300721485,
+    26.93233658152493
+   ],
+   "worst_frac_dplx": 0.002030216874002301
+  }
+ ],
+ "n_merged_identities": 23,
+ "n_touching_pinned": 6,
+ "plx_tol": 0.001,
+ "fail": []
+}

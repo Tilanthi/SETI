@@ -1,0 +1,319 @@
+{
+ "best_cannot_meet_rank": [
+  {
+   "eb": "A002_Xcd8029_Xb6b0",
+   "injected": false,
+   "limit": 5037989137095318.0,
+   "name": "HD~139084",
+   "next_best": null,
+   "nu_GHz": 346.007406,
+   "ring": 18.4519,
+   "system": "HD 139084"
+  },
+  {
+   "eb": "A002_Xc26103_X155a",
+   "injected": true,
+   "limit": 7968576056279315.0,
+   "name": "HD~48370",
+   "next_best": 3.1897115832967708e+16,
+   "nu_GHz": 230.7304845,
+   "ring": 18.3764,
+   "system": "HD 48370"
+  }
+ ],
+ "cost_like_for_like": 1.2680080195106198,
+ "drive": null,
+ "failures": [],
+ "generated_by": "rankcharge_r33.py",
+ "macros": {
+  "NgNExtrapSysBnd": "6",
+  "NgNExtrapSysEfifteen": "0",
+  "NgNInterpEstSysBnd": "45",
+  "NgNSysEfifteenInterp": "25",
+  "NgNSysInterpSum": "51",
+  "NgSysMedInterp": "1.2\\times10^{15}",
+  "RcNSysEfifteenPool": "22",
+  "RcNSysEfifteenStrat": "23",
+  "RcNSysEfifteenStratUnb": "23",
+  "RcNSysNoRank": "2",
+  "RcNWinCost": "46",
+  "RcNWinNoRankCat": "4",
+  "RcNoRankFreqHi": "230.7",
+  "RcNoRankFreqLo": "230.5",
+  "RcNoRankRing": "14",
+  "RcNoRankSys": "HD~139084 and HD~48370",
+  "RcNoRankSysClause": "The best windows of \\RcNoRankSys{} have a ring as bright, so the rank cannot be charged on either. HD~48370\\textquoteright s is one of those three windows, while HD~139084\\textquoteright s was not injected. Counting each at its next-best window that can be charged, or as having no limit where it has none (HD~139084), leaves the median and the count just given unchanged",
+  "RcNoRankWins": "two toward $\\beta$~Pic and one toward HD~48370",
+  "RcStratCostHi": "2.34",
+  "RcStratCostLo": "1.16",
+  "RcSysMedStrat": "1.5\\times10^{15}",
+  "RcSysMedStratUnb": "1.5\\times10^{15}",
+  "RcWinCostHi": "2.40",
+  "RcWinCostLo": "1.00",
+  "RcWinCostMed": "1.16",
+  "RcWinCostPninety": "1.51",
+  "RcWinCostPten": "1.05"
+ },
+ "n_resolved": 46,
+ "never_meets_rank": [
+  {
+   "eb": "A002_X7116f1_X1785",
+   "name": "$\\beta$~Pic",
+   "nu_GHz": 230.5422,
+   "ring": 14.138361930847168,
+   "ring_cat": 14.1092,
+   "spw": "0",
+   "star": "bet Pic",
+   "system": "bet Pic",
+   "tag": "A002_X7116f1_X1785_spw0"
+  },
+  {
+   "eb": "A002_X75bfbf_Xace",
+   "name": "$\\beta$~Pic",
+   "nu_GHz": 230.5379495,
+   "ring": 18.317731857299805,
+   "ring_cat": 18.3104,
+   "spw": "0",
+   "star": "bet Pic",
+   "system": "bet Pic",
+   "tag": "A002_X75bfbf_Xace_spw0"
+  },
+  {
+   "eb": "A002_Xc26103_X155a",
+   "name": "HD~48370",
+   "nu_GHz": 230.7304845,
+   "ring": 18.357208251953125,
+   "ring_cat": 18.3764,
+   "spw": "16",
+   "star": "HD 48370",
+   "system": "HD 48370",
+   "tag": "A002_Xc26103_X155a_spw16"
+  }
+ ],
+ "per_window_cost": {
+  "A002_X1003af4_X3a2c_spw0": 1.0406015037593985,
+  "A002_X1003af4_X3a2c_spw3": 1.417989417989418,
+  "A002_X1018459_X73b0_spw0": 1.1587301587301586,
+  "A002_X1018459_X73b0_spw1": 1.017857142857143,
+  "A002_X1018459_X73b0_spw2": 2.4035346097201766,
+  "A002_X1018459_X73b0_spw3": 1.0774193548387097,
+  "A002_X1018459_X73b0_spw4": 1.1407407407407408,
+  "A002_X10a341d_Xdc45_spw2": 1.0,
+  "A002_X12209f7_X16edb_spw1": 1.0793650793650793,
+  "A002_X12209f7_X16edb_spw2": 1.3254437869822484,
+  "A002_X12209f7_X16edb_spw3": 1.189655172413793,
+  "A002_X12277ed_X22e53_spw3": 1.2352941176470589,
+  "A002_X126787e_X227e_spw3": 1.1612903225806452,
+  "A002_X12694b3_Xab7_spw3": 1.043010752688172,
+  "A002_X128b034_X11ca9_spw3": 1.1293532338308456,
+  "A002_X7116f1_X1785_spw0": null,
+  "A002_X7116f1_X1785_spw3": 2.061261261261261,
+  "A002_X74c92c_X6d5_spw0": 1.1083815028901733,
+  "A002_X75bfbf_X1430_spw2": 1.0534322820037105,
+  "A002_X75bfbf_Xace_spw0": null,
+  "A002_X75bfbf_Xace_spw3": 1.151315789473684,
+  "A002_Xb999fd_X148_spw16": 1.696969696969697,
+  "A002_Xb999fd_X148_spw20": 1.6071428571428572,
+  "A002_Xb9cc97_X1734_spw20": 1.3216374269005848,
+  "A002_Xc074d4_X2e6_spw16": 1.1587301587301586,
+  "A002_Xc26103_X155a_spw16": null,
+  "A002_Xc26103_X155a_spw22": 2.225563909774436,
+  "A002_Xc694dd_X3e5f_spw0": 1.175898931000972,
+  "A002_Xc694dd_X41ca_spw0": 1.2387096774193547,
+  "A002_Xc6a3db_X7b5b_spw0": 1.0940170940170941,
+  "A002_Xc6d2f9_X7060_spw0": 1.1481481481481481,
+  "A002_Xc7111c_X61dc_spw0": 1.1394557823129252,
+  "A002_Xccea8d_X2ff5_spw3": 1.0775862068965518,
+  "A002_Xd40be0_X749c_spw2": 1.150997150997151,
+  "A002_Xd40be0_X749c_spw3": 1.2857142857142858,
+  "A002_Xd95042_X5feb_spw3": 1.0956521739130436,
+  "A002_Xda1250_X6f6b_spw3": 1.1578947368421053,
+  "A002_Xda1250_X72ef_spw3": 1.0952380952380951,
+  "A002_Xdaef5a_X7167_spw3": 1.3811802232854864,
+  "A002_Xdcbe57_X2dd3_spw3": 1.029106029106029,
+  "A002_Xdd0d37_X18197_spw3": 1.1414141414141412,
+  "A002_Xe48598_Xff51_spw3": 1.353658536585366,
+  "A002_Xe4f0a6_X3658_spw3": 1.1149425287356323,
+  "A002_Xf05a48_X269c_spw0": 1.2073170731707317,
+  "A002_Xff294f_X812c_spw0": 1.3216374269005848,
+  "A002_Xff294f_X812c_spw3": 1.3647388059701493,
+  "A002_Xff99e1_X2b2ee_spw0": 1.3020576131687243,
+  "A002_Xff99e1_X2b2ee_spw3": 1.1461988304093567,
+  "A002_Xfff3d8_Xd46_spw3": 1.2391975308641978
+ },
+ "per_window_quantiles": {
+  "0.0": 1.0,
+  "0.1": 1.0482215173459413,
+  "0.25": 1.098834506157326,
+  "0.5": 1.158312447786132,
+  "0.75": 1.3167424734676196,
+  "0.9": 1.5125661375661377,
+  "1.0": 2.4035346097201766
+ },
+ "r1_5": {
+  "extrap_systems": [
+   {
+    "chanw_kHz": 1953.125,
+    "eb": "A002_Xb95160_X3e24",
+    "in_summaries": true,
+    "limit_W": 2820620411967340.0,
+    "name": "51~Eri",
+    "nu_GHz": 230.525108,
+    "outside": [
+     "channel width",
+     "configuration"
+    ],
+    "system": "51 Eri"
+   },
+   {
+    "chanw_kHz": 488.28125,
+    "eb": "A002_Xd9d7c7_Xbb64",
+    "in_summaries": true,
+    "limit_W": 9327992964964290.0,
+    "name": "ALMA~J153702653-33192492",
+    "nu_GHz": 345.980737,
+    "outside": [
+     "integration time",
+     "block duration"
+    ],
+    "system": "ALMA J153702653-33192492"
+   },
+   {
+    "chanw_kHz": 488.28125,
+    "eb": "A002_X107376c_X4442",
+    "in_summaries": true,
+    "limit_W": 5694522969907320.0,
+    "name": "HD~172555",
+    "nu_GHz": 340.9374455,
+    "outside": [
+     "configuration"
+    ],
+    "system": "HD172555"
+   },
+   {
+    "chanw_kHz": 488.28125,
+    "eb": "A002_Xb25e1a_Xed74",
+    "in_summaries": true,
+    "limit_W": 2816441883767431.5,
+    "name": "PM~J03433+1958",
+    "nu_GHz": 230.126761,
+    "outside": [
+     "integration time",
+     "block duration"
+    ],
+    "system": "PM J034331958"
+   },
+   {
+    "chanw_kHz": 244.140625,
+    "eb": "A002_Xb825df_X2265",
+    "in_summaries": true,
+    "limit_W": 2571071004684717.0,
+    "name": "TWA~7",
+    "nu_GHz": 345.98531249999996,
+    "outside": [
+     "configuration"
+    ],
+    "system": "TWA 7"
+   },
+   {
+    "chanw_kHz": 488.28125,
+    "eb": "A002_Xb25e1a_Xed74",
+    "in_summaries": true,
+    "limit_W": 7715135073376545.0,
+    "name": "WD~0407+179",
+    "nu_GHz": 230.126761,
+    "outside": [
+     "integration time",
+     "block duration"
+    ],
+    "system": "WD 0407179"
+   }
+  ],
+  "interp_only": {
+   "median": 1151974705526019.5,
+   "n": 51,
+   "n_1e15": 25
+  },
+  "n_interp_transferred": 45,
+  "n_measured": 6
+ },
+ "ringjoin_diff": [
+  {
+   "injected_flo": "344.219618",
+   "ring_join_flo": "330.386622",
+   "tag": "A002_Xfff3d8_Xd46_spw3"
+  }
+ ],
+ "round": 3340,
+ "strata": [
+  {
+   "cost": 1.158129708856624,
+   "hi": 6.0,
+   "lo": 0.0,
+   "n_cat": 316,
+   "n_inj": 34,
+   "rank90": 3.4485320768394345,
+   "trig90": 2.9776734423331863,
+   "unres": []
+  },
+  {
+   "cost": 1.2706516259040423,
+   "hi": 10.0,
+   "lo": 6.0,
+   "n_cat": 77,
+   "n_inj": 10,
+   "rank90": 3.7379050489826677,
+   "trig90": 2.9417229496898694,
+   "unres": []
+  },
+  {
+   "cost": 2.3354691075514875,
+   "hi": 14.0,
+   "lo": 10.0,
+   "n_cat": 8,
+   "n_inj": 2,
+   "rank90": 7.673684210526316,
+   "trig90": 3.2857142857142856,
+   "unres": []
+  },
+  {
+   "cost": null,
+   "hi": 1000000000.0,
+   "lo": 14.0,
+   "n_cat": 4,
+   "n_inj": 3,
+   "rank90": null,
+   "trig90": 3.263430420711974,
+   "unres": [
+    "A002_X7116f1_X1785_spw0",
+    "A002_X75bfbf_Xace_spw0",
+    "A002_Xc26103_X155a_spw16"
+   ]
+  }
+ ],
+ "summaries": {
+  "n": 57,
+  "own_window_variant": {
+   "median": 1501932070836136.5,
+   "n_1e15": 23
+  },
+  "pooled": {
+   "median": 1644428854571578.0,
+   "n_1e15": 22
+  },
+  "stratified_next_best": {
+   "median": 1522099916361191.2,
+   "n_1e15": 23,
+   "n_unbounded": 1
+  },
+  "stratified_unbounded": {
+   "median": 1522099916361191.2,
+   "n_1e15": 23,
+   "n_unbounded": 2
+  },
+  "uncharged": {
+   "median": 1296859979802206.2,
+   "n_1e15": 25
+  }
+ }
+}

@@ -1,0 +1,986 @@
+{
+ "_alias_note": "Where the catalogue spelling is not a SIMBAD identifier the query string is substituted BY NAME ONLY and recorded per row in \"query\".  AT Mic B resolves only as the unresolved pair AT Mic.",
+ "_provenance": "SIMBAD (CDS) queried live through astroquery 0.4.11 on 2026-10-08T07:20Z UTC, one query per distinct star name appearing in per_target_results_v3.99.csv or holdout_export_v381.json.  V and K are SIMBAD flux measurements (Johnson V and 2MASS Ks); sp_type, plx_mas and otype are recorded for context and enter no published quantity.  Rows the name resolver did not return were re-queried through the SIMBAD TAP service against ident/basic/flux.  Frozen here so the generator runs without a network.",
+ "stars": {
+  "2MASS J05241914-1601153 551040": {
+   "K": 7.807000160217285,
+   "V": 13.569999694824219,
+   "main_id": "PM J05243-1601",
+   "otype": "**",
+   "plx_mas": null,
+   "query": "2MASS J05241914-1601153",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M4.5"
+  },
+  "2MASS J05241914-1601153 717696": {
+   "K": 7.807000160217285,
+   "V": 13.569999694824219,
+   "main_id": "PM J05243-1601",
+   "otype": "**",
+   "plx_mas": null,
+   "query": "2MASS J05241914-1601153",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M4.5"
+  },
+  "51 Eri": {
+   "K": 4.5370001792907715,
+   "V": 5.209000110626221,
+   "main_id": "*  51 Eri",
+   "otype": "PM*",
+   "plx_mas": 33.439,
+   "query": "51 Eri",
+   "source": "SIMBAD name resolver",
+   "sp_type": "F0IV"
+  },
+  "61 Vir": {
+   "K": 2.9560000896453857,
+   "V": 4.739999771118164,
+   "main_id": "*  61 Vir",
+   "otype": "PM*",
+   "plx_mas": 117.1726,
+   "query": "61 Vir",
+   "source": "SIMBAD name resolver",
+   "sp_type": "G6.5V"
+  },
+  "ALMA J153702653-33192492": {
+   "K": null,
+   "V": null,
+   "main_id": null,
+   "otype": null,
+   "plx_mas": null,
+   "query": "ALMA J153702653-33192492",
+   "source": "SIMBAD name resolver",
+   "sp_type": null
+  },
+  "AU Mic": {
+   "K": 4.5289998054504395,
+   "V": 8.626999855041504,
+   "main_id": "HD 197481",
+   "otype": "BY*",
+   "plx_mas": 102.9432,
+   "query": "AU Mic",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M1VeBa1"
+  },
+  "BD05  1668": {
+   "K": 4.85699987411499,
+   "V": 9.871999740600586,
+   "main_id": "BD+05  1668",
+   "otype": "PM*",
+   "plx_mas": 264.1269,
+   "query": "BD+05 1668",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M3.5V"
+  },
+  "BD05 1668": {
+   "K": 4.85699987411499,
+   "V": 9.871999740600586,
+   "main_id": "BD+05  1668",
+   "otype": "PM*",
+   "plx_mas": 264.1269,
+   "query": "BD+05 1668",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M3.5V"
+  },
+  "Barta 161 12": {
+   "K": 8.07800006866455,
+   "V": 13.430000305175781,
+   "main_id": "Barta 161 12",
+   "otype": "SB*",
+   "plx_mas": 26.8232,
+   "query": "Barta 161 12",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M4.3V"
+  },
+  "CD-23 14742": {
+   "K": 5.369999885559082,
+   "V": 10.430000305175781,
+   "main_id": "CD-23 14742",
+   "otype": "PM*",
+   "plx_mas": 336.0266,
+   "query": "CD-23 14742",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M3.5Ve"
+  },
+  "CD-38 10980": {
+   "K": 11.767999649047852,
+   "V": 11.029000282287598,
+   "main_id": "CD-38 10980",
+   "otype": "WD*",
+   "plx_mas": 77.4545,
+   "query": "CD-38 10980",
+   "source": "SIMBAD name resolver",
+   "sp_type": "DA2"
+  },
+  "CD-57 1054": {
+   "K": 6.24399995803833,
+   "V": 9.97700023651123,
+   "main_id": "CD-57  1054",
+   "otype": "PM*",
+   "plx_mas": 37.2119,
+   "query": "CD-57 1054",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M0Ve"
+  },
+  "CP-72 2713": {
+   "K": 6.894000053405762,
+   "V": 10.5649995803833,
+   "main_id": "CPD-72  2713",
+   "otype": "PM*",
+   "plx_mas": 27.2315,
+   "query": "CP-72 2713",
+   "source": "SIMBAD name resolver",
+   "sp_type": "K7Ve"
+  },
+  "G 272-61A": {
+   "K": null,
+   "V": null,
+   "main_id": "G 272-61A",
+   "otype": "PM*",
+   "plx_mas": 367.7119,
+   "query": "G 272-61A",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M5.5V"
+  },
+  "G 272-61B": {
+   "K": null,
+   "V": null,
+   "main_id": "G 272-61B",
+   "otype": "Em*",
+   "plx_mas": 373.8443,
+   "query": "G 272-61B",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M6V"
+  },
+  "GJ 2006A": {
+   "K": 8.010000228881836,
+   "V": 12.949999809265137,
+   "main_id": "GJ 2006 A",
+   "otype": "PM*",
+   "plx_mas": 28.5476,
+   "query": "GJ 2006A",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M3.5Ve"
+  },
+  "GJ 2006B": {
+   "K": 8.116000175476074,
+   "V": 13.25,
+   "main_id": "GJ 2006 B",
+   "otype": "PM*",
+   "plx_mas": 28.5907,
+   "query": "GJ 2006B",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M3.5Ve"
+  },
+  "GJ 581": {
+   "K": 5.836999893188477,
+   "V": 10.5600004196167,
+   "main_id": "BD-07  4003",
+   "otype": "BY*",
+   "plx_mas": 158.7183,
+   "query": "GJ 581",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M3V"
+  },
+  "GJ 674": {
+   "K": 4.855000019073486,
+   "V": 9.406999588012695,
+   "main_id": "CD-46 11540",
+   "otype": "LM*",
+   "plx_mas": 219.6463,
+   "query": "GJ 674",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M3V"
+  },
+  "GJ 849": {
+   "K": 5.593999862670898,
+   "V": 10.366000175476074,
+   "main_id": "BD-05  5715",
+   "otype": "PM*",
+   "plx_mas": 113.4447,
+   "query": "GJ 849",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M3.5V"
+  },
+  "GJ14 Gaia DR3 383426372059603712": {
+   "K": 5.577000141143799,
+   "V": null,
+   "main_id": "BD+40    45",
+   "otype": "PM*",
+   "plx_mas": 68.0846,
+   "query": "GJ14",
+   "source": "SIMBAD name resolver",
+   "sp_type": "K7V"
+  },
+  "GL 3379  Gaia DR3 3316364602541746048": {
+   "K": 6.041999816894531,
+   "V": 11.3100004196167,
+   "main_id": "G  99-49",
+   "otype": "PM*",
+   "plx_mas": 192.0135,
+   "query": "GL 3379",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M3.5Ve"
+  },
+  "GL 3379 Gaia DR3 3316364602541746048": {
+   "K": 6.041999816894531,
+   "V": 11.3100004196167,
+   "main_id": "G  99-49",
+   "otype": "PM*",
+   "plx_mas": 192.0135,
+   "query": "GL 3379",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M3.5Ve"
+  },
+  "HD  33793": {
+   "K": 5.048999786376953,
+   "V": 8.852999687194824,
+   "main_id": "HD  33793",
+   "otype": "PM*",
+   "plx_mas": 254.1986,
+   "query": "HD 33793",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M1VIp"
+  },
+  "HD 10647": {
+   "K": 4.340000152587891,
+   "V": 5.519999980926514,
+   "main_id": "* q01 Eri",
+   "otype": "PM*",
+   "plx_mas": 57.6409,
+   "query": "HD 10647",
+   "source": "SIMBAD name resolver",
+   "sp_type": "F9V"
+  },
+  "HD 139084": {
+   "K": 5.8520002365112305,
+   "V": 7.9770002365112305,
+   "main_id": "HD 139084",
+   "otype": "SB*",
+   "plx_mas": 25.829,
+   "query": "HD 139084",
+   "source": "SIMBAD name resolver",
+   "sp_type": "K0V"
+  },
+  "HD 139664": {
+   "K": 3.802000045776367,
+   "V": 4.632999897003174,
+   "main_id": "* g Lup",
+   "otype": "PM*",
+   "plx_mas": 57.4759,
+   "query": "HD 139664",
+   "source": "SIMBAD name resolver",
+   "sp_type": "F4V"
+  },
+  "HD 155555C": {
+   "K": 7.629000186920166,
+   "V": 12.819999694824219,
+   "main_id": "HD 155555C",
+   "otype": "Y*?",
+   "plx_mas": 32.8822,
+   "query": "HD 155555C",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M3Ve"
+  },
+  "HD 207129 Gaia DR3 6564091190988411520": {
+   "K": 4.236000061035156,
+   "V": 5.579999923706055,
+   "main_id": "HD 207129",
+   "otype": "PM*",
+   "plx_mas": 64.2717,
+   "query": "HD 207129",
+   "source": "SIMBAD name resolver",
+   "sp_type": "G2V"
+  },
+  "HD 23484  Gaia DR3 4856592239127350400": {
+   "K": 4.934000015258789,
+   "V": 6.995999813079834,
+   "main_id": "HD  23484",
+   "otype": "PM*",
+   "plx_mas": 61.8444,
+   "query": "HD 23484",
+   "source": "SIMBAD name resolver",
+   "sp_type": "K2V"
+  },
+  "HD 23484 Gaia DR3 4856592239127350400": {
+   "K": 4.934000015258789,
+   "V": 6.995999813079834,
+   "main_id": "HD  23484",
+   "otype": "PM*",
+   "plx_mas": 61.8444,
+   "query": "HD 23484",
+   "source": "SIMBAD name resolver",
+   "sp_type": "K2V"
+  },
+  "HD 285968": {
+   "K": 5.60699987411499,
+   "V": 9.951000213623047,
+   "main_id": "HD 285968",
+   "otype": "PM*",
+   "plx_mas": 105.4275,
+   "query": "HD 285968",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M2.5V"
+  },
+  "HD 31392": {
+   "K": 5.769999980926514,
+   "V": 7.610000133514404,
+   "main_id": "HD  31392",
+   "otype": "PM*",
+   "plx_mas": 38.8196,
+   "query": "HD 31392",
+   "source": "SIMBAD name resolver",
+   "sp_type": "G9V"
+  },
+  "HD 33793": {
+   "K": 5.048999786376953,
+   "V": 8.852999687194824,
+   "main_id": "HD  33793",
+   "otype": "PM*",
+   "plx_mas": 254.1986,
+   "query": "HD 33793",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M1VIp"
+  },
+  "HD 38858  Gaia DR3 3023711269067191296": {
+   "K": 4.40500020980835,
+   "V": 5.96999979019165,
+   "main_id": "HD  38858",
+   "otype": "PM*",
+   "plx_mas": 65.7446,
+   "query": "HD 38858",
+   "source": "SIMBAD name resolver",
+   "sp_type": "G2V"
+  },
+  "HD 38858 Gaia DR3 3023711269067191296": {
+   "K": 4.40500020980835,
+   "V": 5.96999979019165,
+   "main_id": "HD  38858",
+   "otype": "PM*",
+   "plx_mas": 65.7446,
+   "query": "HD 38858",
+   "source": "SIMBAD name resolver",
+   "sp_type": "G2V"
+  },
+  "HD 45184": {
+   "K": 4.870999813079834,
+   "V": 6.389999866485596,
+   "main_id": "HD  45184",
+   "otype": "PM*",
+   "plx_mas": 45.6782,
+   "query": "HD 45184",
+   "source": "SIMBAD name resolver",
+   "sp_type": "G2Va"
+  },
+  "HD 48370": {
+   "K": 6.26800012588501,
+   "V": 7.909999847412109,
+   "main_id": "HD  48370",
+   "otype": "PM*",
+   "plx_mas": 27.815,
+   "query": "HD 48370",
+   "source": "SIMBAD name resolver",
+   "sp_type": "K0V(+G)"
+  },
+  "HD 69830": {
+   "K": 4.164999961853027,
+   "V": 5.949999809265137,
+   "main_id": "HD  69830",
+   "otype": "PM*",
+   "plx_mas": 79.4953,
+   "query": "HD 69830",
+   "source": "SIMBAD name resolver",
+   "sp_type": "G8:V"
+  },
+  "HD 89452": {
+   "K": 6.834000110626221,
+   "V": 9.020000457763672,
+   "main_id": "HD  89452",
+   "otype": "PM*",
+   "plx_mas": 27.6037,
+   "query": "HD 89452",
+   "source": "SIMBAD name resolver",
+   "sp_type": "K0"
+  },
+  "HD110411": {
+   "K": 4.677999973297119,
+   "V": 4.880000114440918,
+   "main_id": "* rho Vir",
+   "otype": "dS*",
+   "plx_mas": 25.6921,
+   "query": "HD110411",
+   "source": "SIMBAD name resolver",
+   "sp_type": "A0Va_lB"
+  },
+  "HD14055": {
+   "K": 3.9579999446868896,
+   "V": 4.0,
+   "main_id": "* gam Tri",
+   "otype": "PM*",
+   "plx_mas": 27.9795,
+   "query": "HD14055",
+   "source": "SIMBAD name resolver",
+   "sp_type": "A1Vnn"
+  },
+  "HD161868": {
+   "K": 3.6500000953674316,
+   "V": 3.75,
+   "main_id": "* gam Oph",
+   "otype": "PM*",
+   "plx_mas": 33.6174,
+   "query": "HD161868",
+   "source": "SIMBAD name resolver",
+   "sp_type": "A1VnkA0mA0"
+  },
+  "HD170773": {
+   "K": 5.195000171661377,
+   "V": 6.2170000076293945,
+   "main_id": "HD 170773",
+   "otype": "PM*",
+   "plx_mas": 27.0749,
+   "query": "HD170773",
+   "source": "SIMBAD name resolver",
+   "sp_type": "F5V"
+  },
+  "HD172555": {
+   "K": 4.297999858856201,
+   "V": 4.767000198364258,
+   "main_id": "HD 172555",
+   "otype": "PM*",
+   "plx_mas": 34.7355,
+   "query": "HD172555",
+   "source": "SIMBAD name resolver",
+   "sp_type": "A7V"
+  },
+  "HD202628": {
+   "K": 5.260000228881836,
+   "V": 6.742000102996826,
+   "main_id": "HD 202628",
+   "otype": "PM*",
+   "plx_mas": 42.0274,
+   "query": "HD202628",
+   "source": "SIMBAD name resolver",
+   "sp_type": "G5V"
+  },
+  "HD377": {
+   "K": 6.116000175476074,
+   "V": 7.590000152587891,
+   "main_id": "HD    377",
+   "otype": "PM*",
+   "plx_mas": 26.0386,
+   "query": "HD377",
+   "source": "SIMBAD name resolver",
+   "sp_type": "G2V"
+  },
+  "HD53143  Gaia DR3 5479222240596469632": {
+   "K": 4.986999988555908,
+   "V": 6.802999973297119,
+   "main_id": "HD  53143",
+   "otype": "PM*",
+   "plx_mas": 54.5252,
+   "query": "HD53143",
+   "source": "SIMBAD name resolver",
+   "sp_type": "G9V"
+  },
+  "HD53143 Gaia DR3 5479222240596469632": {
+   "K": 4.986999988555908,
+   "V": 6.802999973297119,
+   "main_id": "HD  53143",
+   "otype": "PM*",
+   "plx_mas": 54.5252,
+   "query": "HD53143",
+   "source": "SIMBAD name resolver",
+   "sp_type": "G9V"
+  },
+  "HD61005": {
+   "K": 6.458000183105469,
+   "V": 8.220000267028809,
+   "main_id": "HD  61005",
+   "otype": "PM*",
+   "plx_mas": 27.4344,
+   "query": "HD61005",
+   "source": "SIMBAD name resolver",
+   "sp_type": "G8Vk"
+  },
+  "HIP 490": {
+   "K": 6.117000102996826,
+   "V": 7.53000020980835,
+   "main_id": "HD    105",
+   "otype": "PM*",
+   "plx_mas": 25.7534,
+   "query": "HIP 490",
+   "source": "SIMBAD name resolver",
+   "sp_type": "G0V"
+  },
+  "HIP10679": {
+   "K": 6.26200008392334,
+   "V": 7.739999771118164,
+   "main_id": "HD  14082B",
+   "otype": "BY*",
+   "plx_mas": 25.2306,
+   "query": "HIP10679",
+   "source": "SIMBAD name resolver",
+   "sp_type": "G3"
+  },
+  "HN Lib": {
+   "K": 5.939000129699707,
+   "V": 11.317000389099121,
+   "main_id": "BD-11  3759",
+   "otype": "BY*",
+   "plx_mas": 159.9225,
+   "query": "HN Lib",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M3.5V"
+  },
+  "HR 1010  Gaia DR3 4722135642226902656": {
+   "K": 3.859999895095825,
+   "V": 5.228000164031982,
+   "main_id": "* zet02 Ret",
+   "otype": "**",
+   "plx_mas": 83.0606,
+   "query": "HR 1010",
+   "source": "SIMBAD name resolver",
+   "sp_type": "G1V"
+  },
+  "HR 1010 Gaia DR3 4722135642226902656": {
+   "K": 3.859999895095825,
+   "V": 5.228000164031982,
+   "main_id": "* zet02 Ret",
+   "otype": "**",
+   "plx_mas": 83.0606,
+   "query": "HR 1010",
+   "source": "SIMBAD name resolver",
+   "sp_type": "G1V"
+  },
+  "HR 2562": {
+   "K": 5.019999980926514,
+   "V": 6.0980000495910645,
+   "main_id": "HD  50571",
+   "otype": "PM*",
+   "plx_mas": 29.4738,
+   "query": "HR 2562",
+   "source": "SIMBAD name resolver",
+   "sp_type": "F5VFe+0.4"
+  },
+  "L 836-122": {
+   "K": 8.824999809265137,
+   "V": 13.9399995803833,
+   "main_id": "L  836-122",
+   "otype": "PM*",
+   "plx_mas": 34.8473,
+   "query": "L 836-122",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M3.5V"
+  },
+  "LHS 1140": {
+   "K": 8.821000099182129,
+   "V": 14.149999618530273,
+   "main_id": "G 268-38",
+   "otype": "PM*",
+   "plx_mas": 66.8287,
+   "query": "LHS 1140",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M4.5V"
+  },
+  "LP  349-25": {
+   "K": 9.569000244140625,
+   "V": null,
+   "main_id": "LP  349-25",
+   "otype": "SB*",
+   "plx_mas": 70.781,
+   "query": "LP 349-25",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M8Ve"
+  },
+  "LP 349-25": {
+   "K": 9.569000244140625,
+   "V": null,
+   "main_id": "LP  349-25",
+   "otype": "SB*",
+   "plx_mas": 70.781,
+   "query": "LP 349-25",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M8Ve"
+  },
+  "LP 353-51": {
+   "K": 7.3460001945495605,
+   "V": 11.25,
+   "main_id": "LP  353-51",
+   "otype": "PM*",
+   "plx_mas": 36.9016,
+   "query": "LP 353-51",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M1V"
+  },
+  "LP 476-207 384128": {
+   "K": 6.369999885559082,
+   "V": 11.529999732971191,
+   "main_id": "LP  476-207",
+   "otype": "SB*",
+   "plx_mas": 30.12,
+   "query": "LP 476-207",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M3.5V"
+  },
+  "LP 476-207 783296": {
+   "K": 6.369999885559082,
+   "V": 11.529999732971191,
+   "main_id": "LP  476-207",
+   "otype": "SB*",
+   "plx_mas": 30.12,
+   "query": "LP 476-207",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M3.5V"
+  },
+  "LP 736-15": {
+   "K": 10.043999671936035,
+   "V": 17.759000778198242,
+   "main_id": "LP  736-15",
+   "otype": "LM*",
+   "plx_mas": 47.2733,
+   "query": "LP 736-15",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M7.0"
+  },
+  "LSR J1835+3259": {
+   "K": 9.170999526977539,
+   "V": null,
+   "main_id": "LSR J1835+3259",
+   "otype": "PM*",
+   "plx_mas": 175.793,
+   "query": "LSR J1835+3259",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M8.5V"
+  },
+  "NAME AT Mic AB Gaia DR3 6792436799475128960": {
+   "K": 4.943999767303467,
+   "V": 10.343000411987305,
+   "main_id": "V* AT Mic",
+   "otype": "**",
+   "plx_mas": 93.5,
+   "query": "AT Mic",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M4.5Ve+M4.5Ve"
+  },
+  "NAME Barnards star": {
+   "K": 4.52400016784668,
+   "V": 9.51099967956543,
+   "main_id": "NAME Barnard's star",
+   "otype": "BY*",
+   "plx_mas": 546.9759,
+   "query": "Barnard's star",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M4V"
+  },
+  "PM J03433+1958": {
+   "K": 15.038000106811523,
+   "V": null,
+   "main_id": "LSPM J0343+1958",
+   "otype": "WD*",
+   "plx_mas": 48.1773,
+   "query": "PM J03433+1958",
+   "source": "SIMBAD name resolver",
+   "sp_type": "DA"
+  },
+  "Proxima Cen": {
+   "K": 4.383999824523926,
+   "V": 11.130000114440918,
+   "main_id": "NAME Proxima Centauri",
+   "otype": "PM*",
+   "plx_mas": 768.0665,
+   "query": "Proxima Cen",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M5.5Ve"
+  },
+  "TRAPPIST-1": {
+   "K": 10.295999526977539,
+   "V": 18.79800033569336,
+   "main_id": "TRAPPIST-1",
+   "otype": "LM*",
+   "plx_mas": 80.2123,
+   "query": "TRAPPIST-1",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M7.5e"
+  },
+  "TWA 3A 696000": {
+   "K": null,
+   "V": 12.569999694824219,
+   "main_id": "TWA 3A",
+   "otype": "TT*",
+   "plx_mas": 26.9871,
+   "query": "TWA 3A",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M4Ve"
+  },
+  "TWA 3A [576064]": {
+   "K": null,
+   "V": 12.569999694824219,
+   "main_id": "TWA 3A",
+   "otype": "TT*",
+   "plx_mas": 26.9871,
+   "query": "TWA 3A",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M4Ve"
+  },
+  "TWA 7": {
+   "K": 6.89900016784668,
+   "V": 10.90999984741211,
+   "main_id": "V* CE Ant",
+   "otype": "TT*",
+   "plx_mas": 29.3277,
+   "query": "TWA 7",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M2Ve"
+  },
+  "TYC 2211-1309-1": {
+   "K": 7.723999977111816,
+   "V": 11.366000175476074,
+   "main_id": "RX J2200.7+2715",
+   "otype": "BY*",
+   "plx_mas": 28.2295,
+   "query": "TYC 2211-1309-1",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M0.0Ve"
+  },
+  "UCAC2 20312880": {
+   "K": 7.144999980926514,
+   "V": 12.300000190734863,
+   "main_id": "RX J0613.2-2742",
+   "otype": "**",
+   "plx_mas": 29.6156,
+   "query": "UCAC2 20312880",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M2.5Ve"
+  },
+  "UCAC3 176-23654": {
+   "K": 7.695000171661377,
+   "V": 12.420000076293945,
+   "main_id": "RX J0534.0-0221",
+   "otype": "PM*",
+   "plx_mas": 29.1155,
+   "query": "UCAC3 176-23654",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M3"
+  },
+  "V AT Mic B": {
+   "K": 4.943999767303467,
+   "V": 10.343000411987305,
+   "main_id": "V* AT Mic",
+   "otype": "**",
+   "plx_mas": 93.5,
+   "query": "AT Mic",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M4.5Ve+M4.5Ve"
+  },
+  "V star TX PsA": {
+   "K": 7.793000221252441,
+   "V": 13.359999656677246,
+   "main_id": "V* TX PsA",
+   "otype": "PM*",
+   "plx_mas": 47.9962,
+   "query": "TX PsA",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M5IVe"
+  },
+  "V star WW PsA": {
+   "K": 6.932000160217285,
+   "V": 12.111000061035156,
+   "main_id": "V* WW PsA",
+   "otype": "BY*",
+   "plx_mas": 47.9218,
+   "query": "WW PsA",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M4IVe"
+  },
+  "WD 0407+179": {
+   "K": 14.458999633789062,
+   "V": 14.140000343322754,
+   "main_id": "HZ 10",
+   "otype": "WD*",
+   "plx_mas": 29.3167,
+   "query": "WD 0407+179",
+   "source": "SIMBAD name resolver",
+   "sp_type": "DA3.5"
+  },
+  "WD0346-011": {
+   "K": 15.119999885559082,
+   "V": 14.062999725341797,
+   "main_id": "GD 50",
+   "otype": "WD*",
+   "plx_mas": 32.2169,
+   "query": "WD0346-011",
+   "source": "SIMBAD name resolver",
+   "sp_type": "DA1.2"
+  },
+  "WD2039-202": {
+   "K": 13.003999710083008,
+   "V": 12.395999908447266,
+   "main_id": "EGGR 141",
+   "otype": "WD*",
+   "plx_mas": 45.933,
+   "query": "WD2039-202",
+   "source": "SIMBAD name resolver",
+   "sp_type": "DA2.5"
+  },
+  "Wolf  359": {
+   "K": 6.084000110626221,
+   "V": 13.506999969482422,
+   "main_id": "Wolf  359",
+   "otype": "PM*",
+   "plx_mas": 415.1794,
+   "query": "Wolf 359",
+   "source": "SIMBAD name resolver",
+   "sp_type": "dM6"
+  },
+  "Wolf 219": {
+   "K": 14.229999542236328,
+   "V": null,
+   "main_id": "Wolf  219",
+   "otype": "WD*",
+   "plx_mas": 52.9577,
+   "query": "Wolf 219",
+   "source": "SIMBAD name resolver",
+   "sp_type": "DQ8"
+  },
+  "Wolf 28": {
+   "K": 11.498000144958496,
+   "V": 12.37399959564209,
+   "main_id": "Wolf   28",
+   "otype": "WD*",
+   "plx_mas": 231.78,
+   "query": "Wolf 28",
+   "source": "SIMBAD name resolver",
+   "sp_type": "DZ7.5"
+  },
+  "Wolf 359": {
+   "K": 6.084000110626221,
+   "V": 13.506999969482422,
+   "main_id": "Wolf  359",
+   "otype": "PM*",
+   "plx_mas": 415.1794,
+   "query": "Wolf 359",
+   "source": "SIMBAD name resolver",
+   "sp_type": "dM6"
+  },
+  "alf CMa B": {
+   "K": null,
+   "V": 8.4399995803833,
+   "main_id": "* alf CMa B",
+   "otype": "WD*",
+   "plx_mas": 374.4896,
+   "query": "alf CMa B",
+   "source": "SIMBAD name resolver",
+   "sp_type": "DA1.9"
+  },
+  "bet Pic": {
+   "K": 3.4800000190734863,
+   "V": 3.859999895095825,
+   "main_id": "* bet Pic",
+   "otype": "PM*",
+   "plx_mas": 50.9307,
+   "query": "bet Pic",
+   "source": "SIMBAD name resolver",
+   "sp_type": "A6V"
+  },
+  "chi01 Ori": {
+   "K": 2.996000051498413,
+   "V": 4.400000095367432,
+   "main_id": "* chi01 Ori",
+   "otype": "SB*",
+   "plx_mas": 115.43,
+   "query": "chi01 Ori",
+   "source": "SIMBAD name resolver",
+   "sp_type": "G0V"
+  },
+  "eta Cru": {
+   "K": 3.197000026702881,
+   "V": 4.136000156402588,
+   "main_id": "* eta Cru",
+   "otype": "SB*",
+   "plx_mas": 50.7919,
+   "query": "eta Cru",
+   "source": "SIMBAD name resolver",
+   "sp_type": "F2V"
+  },
+  "eta Crv": {
+   "K": 3.371999979019165,
+   "V": 4.294000148773193,
+   "main_id": "* eta Crv",
+   "otype": "PM*",
+   "plx_mas": 54.8135,
+   "query": "eta Crv",
+   "source": "SIMBAD name resolver",
+   "sp_type": "F2V"
+  },
+  "gam Lep": {
+   "K": 2.4100000858306885,
+   "V": 3.5999999046325684,
+   "main_id": "* gam Lep",
+   "otype": "PM*",
+   "plx_mas": 112.296,
+   "query": "gam Lep",
+   "source": "SIMBAD name resolver",
+   "sp_type": "F6V"
+  },
+  "gam Vir": {
+   "K": 1.8799999952316284,
+   "V": 2.740000009536743,
+   "main_id": "* gam Vir",
+   "otype": "PM*",
+   "plx_mas": 83.1935,
+   "query": "gam Vir",
+   "source": "SIMBAD name resolver",
+   "sp_type": "F1-F2V"
+  },
+  "hd107146": {
+   "K": 5.539999961853027,
+   "V": null,
+   "main_id": "HD 107146",
+   "otype": "PM*",
+   "plx_mas": 36.4038,
+   "query": "hd107146",
+   "source": "SIMBAD name resolver",
+   "sp_type": "G2V"
+  },
+  "hd92945": {
+   "K": 5.659999847412109,
+   "V": 7.718999862670898,
+   "main_id": "V* V419 Hya",
+   "otype": "BY*",
+   "plx_mas": 46.4931,
+   "query": "hd92945",
+   "source": "SIMBAD name resolver",
+   "sp_type": "K1V"
+  },
+  "kap CrB": {
+   "K": 2.490000009536743,
+   "V": 4.820000171661377,
+   "main_id": "* kap CrB",
+   "otype": "PM*",
+   "plx_mas": 33.3433,
+   "query": "kap CrB",
+   "source": "SIMBAD name resolver",
+   "sp_type": "K1IVa"
+  },
+  "lp 876-10 Gaia DR3 6623351805412369024": {
+   "K": 7.205999851226807,
+   "V": 12.62399959564209,
+   "main_id": "* alf PsA C",
+   "otype": "**",
+   "plx_mas": 130.2707,
+   "query": "lp 876-10",
+   "source": "SIMBAD name resolver",
+   "sp_type": "M4.0Ve"
+  },
+  "tau Cet": {
+   "K": 1.6799999475479126,
+   "V": 3.5,
+   "main_id": "* tau Cet",
+   "otype": "PM*",
+   "plx_mas": 273.8097,
+   "query": "tau Cet",
+   "source": "SIMBAD name resolver",
+   "sp_type": "G8V"
+  }
+ }
+}

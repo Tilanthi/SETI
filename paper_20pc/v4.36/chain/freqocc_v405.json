@@ -1,0 +1,285 @@
+{
+ "seed": 20260926,
+ "n_windows": 3027,
+ "n_target_dirs": 749,
+ "n_base_keys": 137,
+ "n_stars": 133,
+ "n_naive_keys": 80,
+ "n_dirs_with_eb": 2529,
+ "n_coarse": 2294,
+ "n_fine": 719,
+ "n_medium": 5,
+ "n_unlabelled_rescls": 9,
+ "median_peak_snr": 2.91,
+ "grid_worst_channel": 1.2079226507921703e-12,
+ "tol_MHz": 5.0,
+ "n_draws": 4000,
+ "sig_threshold": 5.0,
+ "mask_half_kms": 50.0,
+ "stale_report": {
+  "n_windows": 144,
+  "n_clusters": 0,
+  "date": "2026-09-01"
+ },
+ "shipped_dirkey": {
+  "observed": 680,
+  "null_mean": 630.6,
+  "null_sd": 14.3,
+  "z": 3.5
+ },
+ "n_sig": 109,
+ "n_sig_line_masked": 35,
+ "sig_line_species": {
+  "CO(2-1)": 17,
+  "CO(3-2)": 4,
+  "CO(1-0)": 10,
+  "13CO(2-1)": 3,
+  "SiO(5-4)": 1
+ },
+ "subsets": {
+  "all_windows": {
+   "n": 3027,
+   "key": "star",
+   "continuous_null": {
+    "greedy_mean": 577.0,
+    "greedy_sd": 13.7,
+    "greedy_z": -0.59,
+    "coincident_mean": 1426.1,
+    "coincident_sd": 28.7,
+    "coincident_z": 3.07
+   },
+   "greedy": {
+    "observed": 569,
+    "null_mean": 554.2,
+    "null_sd": 13.1,
+    "z": 1.13,
+    "p_ge_obs": 0.13825,
+    "excess_pct": 2.7
+   },
+   "coincident": {
+    "observed": 1514,
+    "null_mean": 1424.5,
+    "null_sd": 27.4,
+    "z": 3.27,
+    "p_ge_obs": 0.0005,
+    "excess_pct": 6.3
+   }
+  },
+  "peak_gt_5sigma": {
+   "n": 109,
+   "key": "star",
+   "continuous_null": {
+    "greedy_mean": 5.0,
+    "greedy_sd": 1.9,
+    "greedy_z": -0.5,
+    "coincident_mean": 10.7,
+    "coincident_sd": 4.1,
+    "coincident_z": 3.48
+   },
+   "greedy": {
+    "observed": 4,
+    "null_mean": 5.0,
+    "null_sd": 1.9,
+    "z": -0.55,
+    "p_ge_obs": 0.788,
+    "excess_pct": -20.5
+   },
+   "coincident": {
+    "observed": 25,
+    "null_mean": 10.8,
+    "null_sd": 4.0,
+    "z": 3.55,
+    "p_ge_obs": 0.001,
+    "excess_pct": 131.0
+   }
+  },
+  "peak_gt_5sigma_line_removed": {
+   "n": 74,
+   "key": "star",
+   "continuous_null": {
+    "greedy_mean": 2.2,
+    "greedy_sd": 1.3,
+    "greedy_z": -0.86,
+    "coincident_mean": 4.4,
+    "coincident_sd": 2.8,
+    "coincident_z": -0.88
+   },
+   "greedy": {
+    "observed": 1,
+    "null_mean": 2.1,
+    "null_sd": 1.3,
+    "z": -0.83,
+    "p_ge_obs": 0.894,
+    "excess_pct": -52.6
+   },
+   "coincident": {
+    "observed": 2,
+    "null_mean": 4.3,
+    "null_sd": 2.8,
+    "z": -0.85,
+    "p_ge_obs": 0.89525,
+    "excess_pct": -53.8
+   }
+  },
+  "all_windows_line_removed": {
+   "n": 2947,
+   "key": "star",
+   "continuous_null": {
+    "greedy_mean": 554.9,
+    "greedy_sd": 13.7,
+    "greedy_z": -0.21,
+    "coincident_mean": 1363.2,
+    "coincident_sd": 28.9,
+    "coincident_z": 2.93
+   },
+   "greedy": {
+    "observed": 552,
+    "null_mean": 532.1,
+    "null_sd": 12.9,
+    "z": 1.54,
+    "p_ge_obs": 0.064,
+    "excess_pct": 3.7
+   },
+   "coincident": {
+    "observed": 1448,
+    "null_mean": 1362.2,
+    "null_sd": 27.3,
+    "z": 3.15,
+    "p_ge_obs": 0.00025,
+    "excess_pct": 6.3
+   }
+  },
+  "all_windows_dirkey": {
+   "n": 3027,
+   "key": "dir",
+   "continuous_null": {
+    "greedy_mean": 629.9,
+    "greedy_sd": 13.5,
+    "greedy_z": 3.71,
+    "coincident_mean": 1526.5,
+    "coincident_sd": 28.0,
+    "coincident_z": 7.52
+   },
+   "greedy": {
+    "observed": 680,
+    "null_mean": 625.3,
+    "null_sd": 13.2,
+    "z": 4.13,
+    "p_ge_obs": 0.0,
+    "excess_pct": 8.8
+   },
+   "coincident": {
+    "observed": 1737,
+    "null_mean": 1572.3,
+    "null_sd": 26.5,
+    "z": 6.23,
+    "p_ge_obs": 0.0,
+    "excess_pct": 10.5
+   }
+  }
+ },
+ "mc_edge_r30": {
+  "RfiOccNull": {
+   "p": 554.22575,
+   "se": 0.20714233448132954,
+   "dp_requested": 0,
+   "dp_printed": -1,
+   "printed": "550",
+   "stable": true
+  },
+  "RfiOccNullSd": {
+   "p": 13.100831536108691,
+   "se": 0.16388958327736144,
+   "dp_requested": 0,
+   "dp_printed": 0,
+   "printed": "13",
+   "stable": true
+  },
+  "RfiOccP": {
+   "p": 0.13825,
+   "se": 0.005457493415021222,
+   "dp_requested": 2,
+   "dp_printed": 1,
+   "printed": "0.1",
+   "stable": true
+  },
+  "RfiOccSigNull": {
+   "p": 5.034,
+   "se": 0.029558602808657925,
+   "dp_requested": 1,
+   "dp_printed": 0,
+   "printed": "5",
+   "stable": true
+  },
+  "RfiOccSigNullSd": {
+   "p": 1.8694501865521853,
+   "se": 0.020680625443014185,
+   "dp_requested": 1,
+   "dp_printed": 0,
+   "printed": "2",
+   "stable": true
+  }
+ },
+ "macros": {
+  "RfiOccCoNull": "1424",
+  "RfiOccCoNullSd": "27",
+  "RfiOccCoObs": "1514",
+  "RfiOccCoZ": "3.3",
+  "RfiOccDirCoObs": "1737",
+  "RfiOccDirCoZ": "6.2",
+  "RfiOccDirNull": "625.3",
+  "RfiOccDirNullSd": "13.2",
+  "RfiOccDirObs": "680",
+  "RfiOccDirZ": "4.1",
+  "RfiOccExcessPct": "2.7",
+  "RfiOccFineMaxMHz": "1",
+  "RfiOccMaskHalf": "50",
+  "RfiOccMaskN": "35",
+  "RfiOccMedSnr": "2.9",
+  "RfiOccMskCoNull": "4.3",
+  "RfiOccMskCoNullSd": "2.8",
+  "RfiOccMskCoObs": "2",
+  "RfiOccMskCoZ": "$-0.8$",
+  "RfiOccMskN": "74",
+  "RfiOccMskNull": "2.1",
+  "RfiOccMskNullSd": "1.3",
+  "RfiOccMskObs": "1",
+  "RfiOccMskZ": "$-0.8$",
+  "RfiOccNCoarse": "2294",
+  "RfiOccNCoarseDerived": "2301",
+  "RfiOccNDirs": "749",
+  "RfiOccNDraw": "4000",
+  "RfiOccNEbDirs": "2529",
+  "RfiOccNFine": "719",
+  "RfiOccNFineDerived": "726",
+  "RfiOccNFineLabel": "719",
+  "RfiOccNMedium": "5",
+  "RfiOccNRelabelled": "7",
+  "RfiOccNStars": "133",
+  "RfiOccNUnlabelled": "9",
+  "RfiOccNWin": "3027",
+  "RfiOccNaiveStars": "80",
+  "RfiOccNull": "550",
+  "RfiOccNullSd": "13",
+  "RfiOccObs": "569",
+  "RfiOccP": "0.1",
+  "RfiOccPriorZ": "3.5",
+  "RfiOccSigCoNull": "10.8",
+  "RfiOccSigCoNullSd": "4.0",
+  "RfiOccSigCoObs": "25",
+  "RfiOccSigCoZ": "3.5",
+  "RfiOccSigN": "109",
+  "RfiOccSigNull": "5",
+  "RfiOccSigNullSd": "2",
+  "RfiOccSigObs": "4",
+  "RfiOccSigP": "0.79",
+  "RfiOccSigZ": "$-0.6$",
+  "RfiOccSpeciesList": "CO(2--1) $\\times$17, CO(1--0) $\\times$10, CO(3--2) $\\times$4, $^{13}$CO(2--1) $\\times$3, SiO(5--4) $\\times$1",
+  "RfiOccStaleClusters": "0",
+  "RfiOccStaleDate": "2026-09-01",
+  "RfiOccStaleN": "144",
+  "RfiOccTol": "5",
+  "RfiOccZ": "1.1"
+ },
+ "verdict": "Corrected, the cross-target frequency-occupancy screen supports NO interference claim and the prior z = 3.5 is withdrawn. The directory key reproduces it (680 vs 625.3 +- 13.2, z = 4.13); the STAR key, over the same 3027 windows toward 133 stars with the same grid null, gives 569 vs 554.2 +- 13.1 (z = 1.13). Among the 109 windows with a peak above 5 sigma the corrected count is 4 against 5.0 +- 1.9 (z = -0.55), below the null; 35 of those sit on a masked transition, and with the mask applied the order-independent count is 2 against 4.3 +- 2.8 (z = -0.85). The residual 2.7 per cent over all windows is not significant and those peaks are noise (median peak SNR 2.9)."
+}

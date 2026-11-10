@@ -1,0 +1,2387 @@
+{
+ "generated_by": "ledger_r34.py",
+ "round": 3440,
+ "blocks": [
+  {
+   "eb": "A002_X1001fdc_X29ae",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 14055"
+  },
+  {
+   "eb": "A002_X1064920_X691c",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "GaiaDR3 2517397846786452224"
+  },
+  {
+   "eb": "A002_X106a1f1_X6a0c",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Proxima Cen"
+  },
+  {
+   "eb": "A002_X106b646_X1295",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Proxima Cen"
+  },
+  {
+   "eb": "A002_X106b646_X19c5",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Proxima Cen"
+  },
+  {
+   "eb": "A002_X106ccd1_X1a38",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Proxima Cen"
+  },
+  {
+   "eb": "A002_X106ccd1_Xbe52",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Proxima Cen"
+  },
+  {
+   "eb": "A002_X106ccd1_Xc4a6",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Proxima Cen"
+  },
+  {
+   "eb": "A002_X106f040_X13932",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Proxima Cen"
+  },
+  {
+   "eb": "A002_X106f040_X148f3",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Proxima Cen"
+  },
+  {
+   "eb": "A002_X106f040_X26c7",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Proxima Cen"
+  },
+  {
+   "eb": "A002_X106f040_X2b06",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Proxima Cen"
+  },
+  {
+   "eb": "A002_X106f040_X2e59",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Proxima Cen"
+  },
+  {
+   "eb": "A002_X107376c_X12b9",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Proxima Cen"
+  },
+  {
+   "eb": "A002_X107376c_X4442",
+   "role": "sets a system's best limit",
+   "calibration": "delivered",
+   "extractor": "older",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 1,
+   "reextracted": 0,
+   "stars": "HD 172555"
+  },
+  {
+   "eb": "A002_X107376c_X6126",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 14055"
+  },
+  {
+   "eb": "A002_X1074d99_X167",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Proxima Cen"
+  },
+  {
+   "eb": "A002_X1074d99_X74e",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Proxima Cen"
+  },
+  {
+   "eb": "A002_X1076174_X11cc",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Proxima Cen"
+  },
+  {
+   "eb": "A002_X107649f_X868f",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Proxima Cen"
+  },
+  {
+   "eb": "A002_X107649f_X8f30",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Proxima Cen"
+  },
+  {
+   "eb": "A002_X1077d5b_X9976",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Proxima Cen"
+  },
+  {
+   "eb": "A002_X1077d5b_Xa63d",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Proxima Cen"
+  },
+  {
+   "eb": "A002_X107fa96_X1300f",
+   "role": "none of these now",
+   "calibration": "delivered",
+   "extractor": "older",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 1,
+   "reextracted": 0,
+   "stars": "HD 172555"
+  },
+  {
+   "eb": "A002_X108c378_X26b3",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "GJ 674"
+  },
+  {
+   "eb": "A002_X10b22d7_X2445",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 23484"
+  },
+  {
+   "eb": "A002_X10b33b1_Xf94",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 23484"
+  },
+  {
+   "eb": "A002_X1119e64_X27e3",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "HD 14055"
+  },
+  {
+   "eb": "A002_X1171dca_X5df0",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "HD 10647"
+  },
+  {
+   "eb": "A002_X1178b24_X1cc8",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "HD 10647"
+  },
+  {
+   "eb": "A002_X1190de8_Xd526",
+   "role": "holds a crossing",
+   "calibration": "delivered",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 14055 [B7]"
+  },
+  {
+   "eb": "A002_X11adad7_X25c5e",
+   "role": "holds a crossing",
+   "calibration": "delivered",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 14055 [B7]"
+  },
+  {
+   "eb": "A002_X11d9ce7_X5257",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "HD 61005"
+  },
+  {
+   "eb": "A002_X11e10bc_X12662",
+   "role": "sets a system's best limit",
+   "calibration": "delivered",
+   "extractor": "older",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 1,
+   "reextracted": 0,
+   "stars": "eta Crv"
+  },
+  {
+   "eb": "A002_X1207c39_X9417",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "HD 69830"
+  },
+  {
+   "eb": "A002_X12209f7_X16edb",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 69830"
+  },
+  {
+   "eb": "A002_X12235df_X7876",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "HD 69830"
+  },
+  {
+   "eb": "A002_X12235df_X8337",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "HD 69830"
+  },
+  {
+   "eb": "A002_X12277ed_X178c6",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 69830"
+  },
+  {
+   "eb": "A002_X12277ed_X22e53",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "eta Crv"
+  },
+  {
+   "eb": "A002_X122b6ff_X1041e",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "eta Crv"
+  },
+  {
+   "eb": "A002_X122b6ff_X18e15",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "eta Crv"
+  },
+  {
+   "eb": "A002_X1239f8e_Xa43b",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 377"
+  },
+  {
+   "eb": "A002_X1240efd_X14e83",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "AU Mic"
+  },
+  {
+   "eb": "A002_X1263402_X856c",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 89452"
+  },
+  {
+   "eb": "A002_X1263402_Xb082",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 377"
+  },
+  {
+   "eb": "A002_X126787e_X1170",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "HD 89452"
+  },
+  {
+   "eb": "A002_X126c7ed_Xe9d",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 45184"
+  },
+  {
+   "eb": "A002_X1294347_X5c2e",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 31392"
+  },
+  {
+   "eb": "A002_X129754b_X6946",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 31392"
+  },
+  {
+   "eb": "A002_X13df097_X3ba9",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "GaiaDR3 3534414590303807232"
+  },
+  {
+   "eb": "A002_X6f1341_X1484",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "beta Pic"
+  },
+  {
+   "eb": "A002_X7116f1_X1785",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "beta Pic"
+  },
+  {
+   "eb": "A002_X74c92c_X6d5",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HIP 490"
+  },
+  {
+   "eb": "A002_X74deb6_Xff1",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "chi01 Ori"
+  },
+  {
+   "eb": "A002_X75bfbf_X1430",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "eta Crv"
+  },
+  {
+   "eb": "A002_X7c5411_X1b70",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "GaiaDR3 6643589352010758400"
+  },
+  {
+   "eb": "A002_X7d194b_X58f",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 61005"
+  },
+  {
+   "eb": "A002_X7d80c7_X15c6",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "AU Mic"
+  },
+  {
+   "eb": "A002_X835491_Xcb0",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "GaiaDR3 6643589352010758400"
+  },
+  {
+   "eb": "A002_X877e41_X14c1",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "G 272-61A;G 272-61B"
+  },
+  {
+   "eb": "A002_X899169_X1838",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "AU Mic"
+  },
+  {
+   "eb": "A002_X9707f1_Xa89",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "tau Cet"
+  },
+  {
+   "eb": "A002_X97db9c_X2eb1",
+   "role": "none of these now",
+   "calibration": "delivered",
+   "extractor": "older",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 1,
+   "reextracted": 0,
+   "stars": "* eta Crv"
+  },
+  {
+   "eb": "A002_X987623_X354b",
+   "role": "none of these now",
+   "calibration": "delivered",
+   "extractor": "older",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 1,
+   "reextracted": 0,
+   "stars": "* eta Crv"
+  },
+  {
+   "eb": "A002_X9db5ce_X224b",
+   "role": "sets a system's best limit",
+   "calibration": "delivered",
+   "extractor": "older",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 1,
+   "reextracted": 0,
+   "stars": "61 Vir"
+  },
+  {
+   "eb": "A002_X9f2ff8_X25b0",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Wolf 28"
+  },
+  {
+   "eb": "A002_Xa42f75_X319",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "AU Mic"
+  },
+  {
+   "eb": "A002_Xa66f35_X1dee",
+   "role": "none of these now",
+   "calibration": "delivered",
+   "extractor": "older",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 1,
+   "reextracted": 0,
+   "stars": "GaiaDR3 6643602576214115584"
+  },
+  {
+   "eb": "A002_Xa68906_X1590",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 172555"
+  },
+  {
+   "eb": "A002_Xa7a216_X23e4",
+   "role": "holds a crossing",
+   "calibration": "delivered",
+   "extractor": "older",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 1,
+   "reextracted": 0,
+   "stars": "beta Pic"
+  },
+  {
+   "eb": "A002_Xa7c533_Xefd",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "GaiaDR3 6702775135228913280"
+  },
+  {
+   "eb": "A002_Xa95c04_X14cd",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HIP 10679"
+  },
+  {
+   "eb": "A002_Xb0ebd1_X1855",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 38858"
+  },
+  {
+   "eb": "A002_Xb20b6d_Xc4c",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "TWA 7"
+  },
+  {
+   "eb": "A002_Xb25e1a_Xed74",
+   "role": "sets a system's best limit",
+   "calibration": "delivered",
+   "extractor": "older",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 1,
+   "reextracted": 0,
+   "stars": "PM J03433+1958;WD 0407+179;Wolf 219"
+  },
+  {
+   "eb": "A002_Xb28642_Xcff3",
+   "role": "sets a system's best limit",
+   "calibration": "delivered",
+   "extractor": "older",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 207129"
+  },
+  {
+   "eb": "A002_Xb2e94e_X361a",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 139664"
+  },
+  {
+   "eb": "A002_Xb2f730_X9e28",
+   "role": "sets a system's best limit",
+   "calibration": "delivered",
+   "extractor": "older",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Wolf 219"
+  },
+  {
+   "eb": "A002_Xb3d48f_X26f7",
+   "role": "sets a system's best limit",
+   "calibration": "delivered",
+   "extractor": "older",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 10647"
+  },
+  {
+   "eb": "A002_Xb47876_X3918",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 61005"
+  },
+  {
+   "eb": "A002_Xb77b17_X3940",
+   "role": "none of these now",
+   "calibration": "delivered",
+   "extractor": "older",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 1,
+   "reextracted": 0,
+   "stars": "TWA 7"
+  },
+  {
+   "eb": "A002_Xb825df_X2265",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "TWA 7"
+  },
+  {
+   "eb": "A002_Xb95160_X3e24",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "51 Eri"
+  },
+  {
+   "eb": "A002_Xb999fd_X148",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "HD 107146"
+  },
+  {
+   "eb": "A002_Xb9b1b9_X971",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "LP 349-25"
+  },
+  {
+   "eb": "A002_Xb9cc97_X6b4d",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "GaiaDR3 2832463659640297472"
+  },
+  {
+   "eb": "A002_Xb9fa0c_Xbbf",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 202628"
+  },
+  {
+   "eb": "A002_Xba0af7_X9e4",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 202628"
+  },
+  {
+   "eb": "A002_Xba3ea7_X2ab4",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "LSR J1835+3259"
+  },
+  {
+   "eb": "A002_Xba4d35_Xb3a3",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "tau Cet"
+  },
+  {
+   "eb": "A002_Xbb9cd7_X40d5",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "HD 107146"
+  },
+  {
+   "eb": "A002_Xbbadbe_X3846",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "HD 92945"
+  },
+  {
+   "eb": "A002_Xbbcb1f_X7dd5",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "HD 92945"
+  },
+  {
+   "eb": "A002_Xbcef34_X2720",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Proxima Cen"
+  },
+  {
+   "eb": "A002_Xbe7502_X2047",
+   "role": "sets another quoted limit",
+   "calibration": "delivered",
+   "extractor": "older",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "eta Cru"
+  },
+  {
+   "eb": "A002_Xbf9c0a_X1d95",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Proxima Cen"
+  },
+  {
+   "eb": "A002_Xc067f7_X822",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "61 Vir"
+  },
+  {
+   "eb": "A002_Xc079b5_X82f",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "61 Vir"
+  },
+  {
+   "eb": "A002_Xc19d6f_X5706",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 207129"
+  },
+  {
+   "eb": "A002_Xc26103_X155a",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 48370"
+  },
+  {
+   "eb": "A002_Xc296d2_X148c",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "CP-72 2713"
+  },
+  {
+   "eb": "A002_Xc66ce1_Xaa9",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HR 1010"
+  },
+  {
+   "eb": "A002_Xc6e968_X1339",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HR 1010"
+  },
+  {
+   "eb": "A002_Xc6fa08_X1053",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HR 1010"
+  },
+  {
+   "eb": "A002_Xc7fa6f_X28a8",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "BD+05 1668"
+  },
+  {
+   "eb": "A002_Xc9831a_X13c7",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "BD+05 1668"
+  },
+  {
+   "eb": "A002_Xc9831a_X443",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "TRAPPIST-1"
+  },
+  {
+   "eb": "A002_Xcbb583_Xb78",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "HD 69830"
+  },
+  {
+   "eb": "A002_Xcbc47c_Xd4",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "HD 69830"
+  },
+  {
+   "eb": "A002_Xcc626d_X579",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "alpha CMa B"
+  },
+  {
+   "eb": "A002_Xccea8d_X2ff5",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 155555C"
+  },
+  {
+   "eb": "A002_Xcd2acd_X6125",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "V star TX PsA;V star WW PsA"
+  },
+  {
+   "eb": "A002_Xcd4e14_X2b17",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "GaiaDR3 2832463659640297472"
+  },
+  {
+   "eb": "A002_Xcd64ec_X21c9",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "L 836-122"
+  },
+  {
+   "eb": "A002_Xcd64ec_X9149",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HR 2562"
+  },
+  {
+   "eb": "A002_Xcd8029_Xb6b0",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 139084"
+  },
+  {
+   "eb": "A002_Xcd97a1_X3f1e",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "AT Mic AB;V AT Mic B"
+  },
+  {
+   "eb": "A002_Xcdb7b8_Xfb16",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "GJ 2006A;GJ 2006B"
+  },
+  {
+   "eb": "A002_Xcdd033_X85ff",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "UCAC2 20312880"
+  },
+  {
+   "eb": "A002_Xce1e34_X1fb8",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Barta 161 12"
+  },
+  {
+   "eb": "A002_Xce1e34_X7be",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 161868"
+  },
+  {
+   "eb": "A002_Xce574d_X123f",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "HD 170773"
+  },
+  {
+   "eb": "A002_Xce574d_X8706",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "LP 876-10"
+  },
+  {
+   "eb": "A002_Xcf525f_X5aa4",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "CD-57 1054"
+  },
+  {
+   "eb": "A002_Xcf749a_X36e0",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "HD 10647"
+  },
+  {
+   "eb": "A002_Xcf749a_X4871",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "2MASS J05241914-1601153"
+  },
+  {
+   "eb": "A002_Xcfae6a_X6b77",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "GaiaDR3 610549499710989440"
+  },
+  {
+   "eb": "A002_Xd09670_X1d79",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "GJ 14"
+  },
+  {
+   "eb": "A002_Xd09670_X23c5",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "HD 14055"
+  },
+  {
+   "eb": "A002_Xd0e450_X1e19",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "TRAPPIST-1"
+  },
+  {
+   "eb": "A002_Xd0e450_X259b",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "TRAPPIST-1"
+  },
+  {
+   "eb": "A002_Xd10f82_X2635",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "LP 476-207"
+  },
+  {
+   "eb": "A002_Xd10f82_X7829",
+   "role": "sets a system's best limit",
+   "calibration": "delivered",
+   "extractor": "older",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 1,
+   "reextracted": 0,
+   "stars": "LP 353-51"
+  },
+  {
+   "eb": "A002_Xd12f5c_X5deb",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 33793"
+  },
+  {
+   "eb": "A002_Xd12f5c_Xd7c6",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "UCAC3 176-23654"
+  },
+  {
+   "eb": "A002_Xd189ef_X867b",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "TYC 2211-1309-1"
+  },
+  {
+   "eb": "A002_Xd21a3a_X8a5a",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "GJ 581"
+  },
+  {
+   "eb": "A002_Xd271e2_X8fbe",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "GaiaDR3 6843672087120107264"
+  },
+  {
+   "eb": "A002_Xd28a9e_Xbcdf",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "gamma Lep"
+  },
+  {
+   "eb": "A002_Xd3607d_X6487",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "TWA 3A"
+  },
+  {
+   "eb": "A002_Xd40be0_X749c",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "TWA 3A"
+  },
+  {
+   "eb": "A002_Xd64dca_X410",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 202628"
+  },
+  {
+   "eb": "A002_Xd9398d_X322a",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "LP 736-15"
+  },
+  {
+   "eb": "A002_Xd95042_X2d99",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "gamma Vir"
+  },
+  {
+   "eb": "A002_Xd9668b_X3a90",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "beta Pic"
+  },
+  {
+   "eb": "A002_Xd9668b_X3f6e",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 53143"
+  },
+  {
+   "eb": "A002_Xd9668b_X7c83",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "GJ 849"
+  },
+  {
+   "eb": "A002_Xd9668b_X841a",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "GJ 849"
+  },
+  {
+   "eb": "A002_Xd9668b_Xa9df",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "beta Pic"
+  },
+  {
+   "eb": "A002_Xd98580_X3bf6",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 285968"
+  },
+  {
+   "eb": "A002_Xd9d7c7_X6fd2",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "LHS 1140"
+  },
+  {
+   "eb": "A002_Xd9d7c7_Xbb64",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "ALMA J153702653-33192492"
+  },
+  {
+   "eb": "A002_Xdaef5a_X6873",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "GJ 3379"
+  },
+  {
+   "eb": "A002_Xdaef5a_Xdd9b",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 285968"
+  },
+  {
+   "eb": "A002_Xdb3eb4_X899",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "GJ 3379"
+  },
+  {
+   "eb": "A002_Xdb4b9a_X108f",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 285968"
+  },
+  {
+   "eb": "A002_Xdb7ab7_X140ee",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Proxima Cen"
+  },
+  {
+   "eb": "A002_Xdb7ab7_X5b4e",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 285968"
+  },
+  {
+   "eb": "A002_Xdb7ab7_X8bda",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Proxima Cen"
+  },
+  {
+   "eb": "A002_Xdbc154_X138c",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Proxima Cen"
+  },
+  {
+   "eb": "A002_Xdc0d09_X1938",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Proxima Cen"
+  },
+  {
+   "eb": "A002_Xdc21b9_X252f",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Proxima Cen"
+  },
+  {
+   "eb": "A002_Xdcbe57_X2dd3",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HN Lib"
+  },
+  {
+   "eb": "A002_Xe3da01_X4265",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 110411"
+  },
+  {
+   "eb": "A002_Xe45e29_Xb7d4",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 110411"
+  },
+  {
+   "eb": "A002_Xe48598_Xff51",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "kappa CrB"
+  },
+  {
+   "eb": "A002_Xe50c9e_X17ab",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "WD0346-011"
+  },
+  {
+   "eb": "A002_Xe539c7_X113b1",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "WD2039-202"
+  },
+  {
+   "eb": "A002_Xe539c7_X12189",
+   "role": "sets a system's best limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "epsilon Eri"
+  },
+  {
+   "eb": "A002_Xe5808e_X68ec",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "kappa CrB"
+  },
+  {
+   "eb": "A002_Xe5808e_X80a1",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "CD-38 10980"
+  },
+  {
+   "eb": "A002_Xeba1ac_Xbc74",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 107146"
+  },
+  {
+   "eb": "A002_Xf4df6f_Xc7",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "beta Pic"
+  },
+  {
+   "eb": "A002_Xf5d76d_X32f1",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "beta Pic"
+  },
+  {
+   "eb": "A002_Xf5d76d_Xcc5",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "beta Pic"
+  },
+  {
+   "eb": "A002_Xf5d76d_Xe19",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "beta Pic"
+  },
+  {
+   "eb": "A002_Xf5d76d_Xeb8",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "beta Pic"
+  },
+  {
+   "eb": "A002_Xf8d29c_X173e",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "ALMA J153702653-33192492"
+  },
+  {
+   "eb": "A002_Xf8f6a9_X10359",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "ALMA J153702653-33192492"
+  },
+  {
+   "eb": "A002_Xf934b1_X65fd",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "beta Pic"
+  },
+  {
+   "eb": "A002_Xf934b1_X7e7d",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "beta Pic"
+  },
+  {
+   "eb": "A002_Xf934b1_Xeeec",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "beta Pic"
+  },
+  {
+   "eb": "A002_Xfdc8ec_X4cec",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Wolf 359"
+  },
+  {
+   "eb": "A002_Xfddca6_Xcf25",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Wolf 359"
+  },
+  {
+   "eb": "A002_Xfdf45f_X478e",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Barnard's Star"
+  },
+  {
+   "eb": "A002_Xfe3986_X5c7e",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "Barnard's Star"
+  },
+  {
+   "eb": "A002_Xfe62c1_X398",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "ALMA J153702653-33192492"
+  },
+  {
+   "eb": "A002_Xfec857_X6b2",
+   "role": "sets another quoted limit",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "CD-23 14742"
+  },
+  {
+   "eb": "A002_Xff0235_X4a6d",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "CP-72 2713"
+  },
+  {
+   "eb": "A002_Xff0235_X502d",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "CP-72 2713"
+  },
+  {
+   "eb": "A002_Xff0235_X8392",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "ALMA J153702653-33192492"
+  },
+  {
+   "eb": "A002_Xff0235_X8c42",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 170773"
+  },
+  {
+   "eb": "A002_Xff0235_X99ed",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "CP-72 2713"
+  },
+  {
+   "eb": "A002_Xff0235_Xa6a3",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "CP-72 2713"
+  },
+  {
+   "eb": "A002_Xff294f_X1e10",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "CP-72 2713"
+  },
+  {
+   "eb": "A002_Xff294f_Xaf70",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 10647"
+  },
+  {
+   "eb": "A002_Xff45a6_X10ca8",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 161868"
+  },
+  {
+   "eb": "A002_Xff45a6_X1fc3",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "GaiaDR3 2517397846786452224"
+  },
+  {
+   "eb": "A002_Xff699e_Xd7",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 161868"
+  },
+  {
+   "eb": "A002_Xff99e1_X1daae",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "GaiaDR3 610549499710989440"
+  },
+  {
+   "eb": "A002_Xff99e1_X24be0",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 14055"
+  },
+  {
+   "eb": "A002_Xff99e1_X2b2ee",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 14055"
+  },
+  {
+   "eb": "A002_Xff99e1_X2b9a6",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 0,
+   "in_reextraction_plan": 1,
+   "reextracted": 1,
+   "stars": "GaiaDR3 131471770725205632"
+  },
+  {
+   "eb": "A002_Xff99e1_X2c3bb",
+   "role": "none of these now",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 14055"
+  },
+  {
+   "eb": "A002_Xfff3d8_Xd46",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 14055"
+  },
+  {
+   "eb": "A002_Xfffde1_X3835",
+   "role": "holds a crossing",
+   "calibration": "recalibrated",
+   "extractor": "final",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 14055"
+  },
+  {
+   "eb": "A002_Xfffde1_Xffdf",
+   "role": "sets another quoted limit",
+   "calibration": "delivered",
+   "extractor": "older",
+   "in_calibration_record": 1,
+   "in_reextraction_plan": 0,
+   "reextracted": "",
+   "stars": "HD 10647"
+  }
+ ],
+ "not_reextracted": [
+  {
+   "eb": "A002_X107376c_X4442",
+   "role": "b",
+   "stars": [
+    "HD~172555"
+   ],
+   "systems_best": [
+    "HD~172555"
+   ],
+   "crossing_stars": [],
+   "reason": "flags_need_nonlazy",
+   "in_core_record": true
+  },
+  {
+   "eb": "A002_X107fa96_X1300f",
+   "role": "o",
+   "stars": [
+    "HD~172555"
+   ],
+   "systems_best": [],
+   "crossing_stars": [],
+   "reason": "calibration_failed",
+   "in_core_record": true
+  },
+  {
+   "eb": "A002_X11e10bc_X12662",
+   "role": "b",
+   "stars": [
+    "$\\eta$~Crv"
+   ],
+   "systems_best": [
+    "$\\eta$~Crv"
+   ],
+   "crossing_stars": [],
+   "reason": "flags_need_nonlazy",
+   "in_core_record": true
+  },
+  {
+   "eb": "A002_X97db9c_X2eb1",
+   "role": "o",
+   "stars": [
+    "$\\eta$~Crv"
+   ],
+   "systems_best": [],
+   "crossing_stars": [],
+   "reason": "legacy_replay",
+   "in_core_record": true
+  },
+  {
+   "eb": "A002_X987623_X354b",
+   "role": "o",
+   "stars": [
+    "$\\eta$~Crv"
+   ],
+   "systems_best": [],
+   "crossing_stars": [],
+   "reason": "legacy_replay",
+   "in_core_record": true
+  },
+  {
+   "eb": "A002_X9db5ce_X224b",
+   "role": "b",
+   "stars": [
+    "61~Vir"
+   ],
+   "systems_best": [
+    "61~Vir"
+   ],
+   "crossing_stars": [],
+   "reason": "legacy_replay",
+   "in_core_record": true
+  },
+  {
+   "eb": "A002_Xa66f35_X1dee",
+   "role": "o",
+   "stars": [
+    "GaiaDR3~6643602576214115584"
+   ],
+   "systems_best": [],
+   "crossing_stars": [],
+   "reason": "legacy_replay",
+   "in_core_record": true
+  },
+  {
+   "eb": "A002_Xa7a216_X23e4",
+   "role": "x",
+   "stars": [
+    "$\\beta$~Pic"
+   ],
+   "systems_best": [],
+   "crossing_stars": [
+    "$\\beta$~Pic"
+   ],
+   "reason": "legacy_replay",
+   "in_core_record": true
+  },
+  {
+   "eb": "A002_Xb25e1a_Xed74",
+   "role": "b",
+   "stars": [
+    "PM~J03433+1958",
+    "WD~0407+179",
+    "Wolf~219"
+   ],
+   "systems_best": [
+    "PM~J03433+1958",
+    "WD~0407+179"
+   ],
+   "crossing_stars": [],
+   "reason": "legacy_replay",
+   "in_core_record": true
+  },
+  {
+   "eb": "A002_Xb77b17_X3940",
+   "role": "o",
+   "stars": [
+    "TWA~7"
+   ],
+   "systems_best": [],
+   "crossing_stars": [],
+   "reason": "legacy_replay",
+   "in_core_record": false
+  },
+  {
+   "eb": "A002_Xd10f82_X7829",
+   "role": "b",
+   "stars": [
+    "LP~353-51"
+   ],
+   "systems_best": [
+    "LP~353-51"
+   ],
+   "crossing_stars": [],
+   "reason": "flags_unrestorable",
+   "in_core_record": true
+  }
+ ],
+ "above_all_controls": [
+  {
+   "star": "61 Vir",
+   "eb": "A002_Xc079b5_X82f",
+   "band": "7",
+   "nu_lo_GHz": "344.872405",
+   "nu_hi_GHz": "346.712737",
+   "search_class": "A",
+   "T_star": "5.9466",
+   "T_ctrl_max": "5.5850",
+   "n_ctrl": "512",
+   "disposition": "unattributed"
+  },
+  {
+   "star": "beta Pic",
+   "eb": "A002_Xf5d76d_Xeb8",
+   "band": "3",
+   "nu_lo_GHz": "114.829173",
+   "nu_hi_GHz": "115.691722",
+   "search_class": "A",
+   "T_star": "30.7654",
+   "T_ctrl_max": "6.9971",
+   "n_ctrl": "512",
+   "disposition": "circumstellar CO"
+  },
+  {
+   "star": "beta Pic",
+   "eb": "A002_Xf5d76d_Xe19",
+   "band": "3",
+   "nu_lo_GHz": "114.829193",
+   "nu_hi_GHz": "115.691742",
+   "search_class": "A",
+   "T_star": "27.8008",
+   "T_ctrl_max": "6.1972",
+   "n_ctrl": "512",
+   "disposition": "circumstellar CO"
+  },
+  {
+   "star": "beta Pic",
+   "eb": "A002_Xf5d76d_Xcc5",
+   "band": "3",
+   "nu_lo_GHz": "114.829220",
+   "nu_hi_GHz": "115.691769",
+   "search_class": "A",
+   "T_star": "17.3462",
+   "T_ctrl_max": "5.5206",
+   "n_ctrl": "512",
+   "disposition": "circumstellar CO"
+  },
+  {
+   "star": "beta Pic",
+   "eb": "A002_Xf5d76d_X32f1",
+   "band": "3",
+   "nu_lo_GHz": "114.829247",
+   "nu_hi_GHz": "115.691796",
+   "search_class": "A",
+   "T_star": "14.6175",
+   "T_ctrl_max": "7.0705",
+   "n_ctrl": "512",
+   "disposition": "circumstellar CO"
+  },
+  {
+   "star": "beta Pic",
+   "eb": "A002_Xf4df6f_Xc7",
+   "band": "3",
+   "nu_lo_GHz": "114.830886",
+   "nu_hi_GHz": "115.693435",
+   "search_class": "A",
+   "T_star": "17.7259",
+   "T_ctrl_max": "5.8011",
+   "n_ctrl": "512",
+   "disposition": "circumstellar CO"
+  },
+  {
+   "star": "beta Pic",
+   "eb": "A002_X6f1341_X1484",
+   "band": "6",
+   "nu_lo_GHz": "230.083798",
+   "nu_hi_GHz": "231.003964",
+   "search_class": "A",
+   "T_star": "9.7231",
+   "T_ctrl_max": "8.2388",
+   "n_ctrl": "512",
+   "disposition": "circumstellar CO"
+  },
+  {
+   "star": "beta Pic",
+   "eb": "A002_Xa7a216_X23e4",
+   "band": "6",
+   "nu_lo_GHz": "230.111734",
+   "nu_hi_GHz": "230.974283",
+   "search_class": "A",
+   "T_star": "7.9879",
+   "T_ctrl_max": "6.0292",
+   "n_ctrl": "512",
+   "disposition": "circumstellar CO"
+  },
+  {
+   "star": "beta Pic",
+   "eb": "A002_Xd9668b_Xa9df",
+   "band": "6",
+   "nu_lo_GHz": "230.489384",
+   "nu_hi_GHz": "230.543293",
+   "search_class": "A",
+   "T_star": "8.3908",
+   "T_ctrl_max": "8.1234",
+   "n_ctrl": "512",
+   "disposition": "circumstellar CO"
+  },
+  {
+   "star": "beta Pic",
+   "eb": "A002_Xd9668b_X3a90",
+   "band": "6",
+   "nu_lo_GHz": "230.489410",
+   "nu_hi_GHz": "230.543319",
+   "search_class": "A",
+   "T_star": "11.5928",
+   "T_ctrl_max": "8.9052",
+   "n_ctrl": "512",
+   "disposition": "circumstellar CO"
+  },
+  {
+   "star": "HD 48370",
+   "eb": "A002_Xc26103_X155a",
+   "band": "6",
+   "nu_lo_GHz": "230.500443",
+   "nu_hi_GHz": "230.960526",
+   "search_class": "A",
+   "T_star": "26.8584",
+   "T_ctrl_max": "18.3764",
+   "n_ctrl": "512",
+   "disposition": "foreground CO"
+  }
+ ],
+ "sigma_code": {
+  "file": "code/pipeline/search/seti_drift_search_generic.py",
+  "lines": {
+   "mad": [
+    436
+   ],
+   "sigma": [
+    437
+   ],
+   "comb": [
+    574
+   ],
+   "smin": [
+    575
+   ]
+  }
+ },
+ "bpic_dv_kms": [
+  -0.4489079318551351,
+  -0.44378183643516816,
+  -0.2873895105706008,
+  -0.24668899133583075,
+  -0.24345393877970084,
+  -0.24266686954149053,
+  -0.23102158970795084,
+  -0.10965290612050087,
+  0.3726188504681111,
+  0.5287434109323069
+ ]
+}

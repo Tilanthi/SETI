@@ -1,0 +1,2963 @@
+{
+ "generated_by": "collect.py (r35 J-recal, cluster /data/paper_build/r35/jrecal)",
+ "utc": "2026-11-09T04:45Z",
+ "procedure": {
+  "calib": "reflag lane copy calib_one_eb.py md5 c1310f87fcbf42691a4dd3f707255b45 (= reflag_r27/code/reflag_calib_one_eb_v5.py, lanes D1/D2), REFLAG_LEGACY_FLAGCMD=1, SETI_ONLY_EB, Pipeline_Final flags restored; select_finest_spw.py, seti_extract_generic.py md5 5b116fc82db7cc602eca7d70a00bdd1e, seti_drift_search_generic.py md5 a5df5c2abde2af94e1e38939f0e307ba",
+  "leak": "code/leak.py md5 22d69ede74fe3dffc48fc90eb8fd60a1: extractor DFT at the star and the phase centre per integration and channel; normalised dirty beam B=sum w cos/sum w; two-point solution S_star=(I_star-B I_pc)/(1-B^2); leak = B S_pc; statistic = search statistic re-implemented (jstat.py md5 a8acb2cc0ea97d410e7adb2d4b24c655) at the census cell",
+  "cube": "code/img1.py md5 3f5f7c08f8df1205fc696b3deebdd205: tclean cube, niter=0 (DIRTY, no cleaning), natural weighting, 0.75 arcsec cells, 96 px, track +-10 channels"
+ },
+ "crossings": [
+  {
+   "eb": "A002_Xfe62c1_X398",
+   "spw": 0,
+   "freq_GHz": 216.184432,
+   "chan": 3531,
+   "drift_Hz_s": -2198.18,
+   "repro": {
+    "T_archived": 5.2535,
+    "T_recal": 5.2535,
+    "cell_same": 1,
+    "max_abs_dI_star_Jy": 0.0,
+    "max_abs_dT_star_grid": 0.0,
+    "max_abs_dctrl_max": 0.0,
+    "n_ctrl_ge_star": [
+     11,
+     11
+    ],
+    "products_md5_archived": {
+     "_srcspec.npz": "2aa5e2caa253366a0d988cb7cca750a6",
+     "_search.npz": "acfd2f7e0c8180158a272ee15591426d",
+     "_result.json": "f87abc800e03c5c5278c0c8c506fe682"
+    }
+   },
+   "beam_at_star": {
+    "per_int": [
+     -0.0928,
+     -0.0928,
+     -0.0928,
+     -0.0923,
+     -0.0923,
+     -0.0924,
+     -0.0933,
+     -0.0933,
+     -0.0933,
+     -0.094,
+     -0.094,
+     -0.094,
+     -0.0941,
+     -0.094,
+     -0.094,
+     -0.0942,
+     -0.0943,
+     -0.0943,
+     -0.0953,
+     -0.0953,
+     -0.0953
+    ],
+    "min": -0.0953,
+    "max": -0.0923,
+    "mean": -0.0937,
+    "psf_tclean": -0.0963,
+    "star_offset_arcsec": [
+     3.719,
+     -4.35
+    ],
+    "beam_tclean_arcsec": [
+     7.21,
+     4.52
+    ]
+   },
+   "series_T": {
+    "star_waterfall": 5.2535,
+    "star_mine": 5.2535,
+    "star_archived": 5.2535,
+    "phase_centre": -1.9217,
+    "star_deleaked": 5.0755,
+    "pc_deleaked": -1.4365,
+    "leak_pred": 0.1347
+   },
+   "amp_track_mJy": {
+    "star_mine": [
+     107.23,
+     129.34,
+     320.79,
+     347.44,
+     -1.33,
+     91.97,
+     346.24,
+     191.88,
+     39.04,
+     -81.54,
+     85.46,
+     492.77,
+     130.72,
+     330.17,
+     23.15,
+     104.18,
+     38.54,
+     -203.99,
+     327.79,
+     66.74,
+     10.19
+    ],
+    "phase_centre": [
+     -63.65,
+     -187.85,
+     -12.9,
+     -26.71,
+     37.04,
+     -219.26,
+     136.07,
+     125.74,
+     -137.21,
+     121.81,
+     -97.95,
+     -281.99,
+     -294.13,
+     38.78,
+     -69.02,
+     -134.46,
+     73.47,
+     -312.34,
+     -58.78,
+     -60.09,
+     49.92
+    ],
+    "leak_pred": [
+     5.2,
+     16.81,
+     -1.44,
+     0.21,
+     -3.49,
+     19.89,
+     -16.19,
+     -13.88,
+     12.05,
+     -11.29,
+     7.45,
+     22.29,
+     27.5,
+     -5.94,
+     5.7,
+     11.49,
+     -7.55,
+     31.64,
+     2.74,
+     5.55,
+     -4.97
+    ],
+    "star_deleaked": [
+     103.27,
+     106.75,
+     314.21,
+     341.84,
+     -4.16,
+     59.85,
+     365.55,
+     208.58,
+     22.78,
+     -64.79,
+     83.67,
+     473.7,
+     99.34,
+     329.81,
+     16.56,
+     101.15,
+     42.61,
+     -226.71,
+     321.27,
+     66.96,
+     4.86
+    ]
+   },
+   "sigma_track_mJy": [
+    112.72,
+    139.74,
+    129.84,
+    133.26,
+    118.67,
+    125.36,
+    123.2,
+    104.31,
+    150.94,
+    180.14,
+    123.97,
+    139.63,
+    145.32,
+    122.63,
+    157.53,
+    136.89,
+    135.01,
+    154.13,
+    132.92,
+    132.11,
+    163.94
+   ],
+   "times_s": [
+    0.0,
+    10.08,
+    20.16,
+    535.1,
+    545.18,
+    555.26,
+    1153.68,
+    1163.76,
+    1173.84,
+    1739.33,
+    1749.41,
+    1759.49,
+    2361.7,
+    2371.78,
+    2381.86,
+    2957.86,
+    2967.94,
+    2978.02,
+    3590.69,
+    3600.77,
+    3610.85
+   ],
+   "pc_any_drift": {
+    "T": 3.2313,
+    "chan": 3557,
+    "drift": -1522.05
+   },
+   "pc_zero_drift": {
+    "max": 1.652,
+    "min": -3.04,
+    "n": 37
+   },
+   "track_image": {
+    "peak": 5.121,
+    "peak_lm_arcsec": [
+     3.5,
+     -4.5
+    ],
+    "peak_offset_from_star_arcsec": 0.27,
+    "at_star": 5.121,
+    "at_pc": -2.05
+   },
+   "cube": {
+    "cleaning": "none (niter=0, dirty cube)",
+    "weighting": "natural",
+    "chans": [
+     3684,
+     3720
+    ],
+    "nchan": 37,
+    "max_peak7_over_rms": 2.96,
+    "max_abs_pc_over_rms": 2.83,
+    "max_abs_ap_over_rms": 1.89,
+    "median_rms_mJy": 30.88,
+    "rows": [
+     {
+      "chan": 3684,
+      "freq_GHz": 216.189315,
+      "pc_mJy": 18.63,
+      "peak7_mJy": 52.87,
+      "peak7_lm": [
+       -2.25,
+       -6.0
+      ],
+      "ap_flux_mJy": 5.48,
+      "star_mJy": -0.95,
+      "rms_mJy": 27.92
+     },
+     {
+      "chan": 3685,
+      "freq_GHz": 216.188826,
+      "pc_mJy": 8.76,
+      "peak7_mJy": 44.04,
+      "peak7_lm": [
+       0.75,
+       3.75
+      ],
+      "ap_flux_mJy": 0.57,
+      "star_mJy": -17.76,
+      "rms_mJy": 31.75
+     },
+     {
+      "chan": 3686,
+      "freq_GHz": 216.188338,
+      "pc_mJy": -5.3,
+      "peak7_mJy": 59.68,
+      "peak7_lm": [
+       -0.75,
+       5.25
+      ],
+      "ap_flux_mJy": -4.68,
+      "star_mJy": 20.32,
+      "rms_mJy": 29.44
+     },
+     {
+      "chan": 3687,
+      "freq_GHz": 216.18785,
+      "pc_mJy": -26.98,
+      "peak7_mJy": 69.43,
+      "peak7_lm": [
+       -0.0,
+       6.0
+      ],
+      "ap_flux_mJy": -11.92,
+      "star_mJy": 27.58,
+      "rms_mJy": 28.25
+     },
+     {
+      "chan": 3688,
+      "freq_GHz": 216.187361,
+      "pc_mJy": 11.41,
+      "peak7_mJy": 55.92,
+      "peak7_lm": [
+       -2.25,
+       -3.0
+      ],
+      "ap_flux_mJy": 16.41,
+      "star_mJy": 20.82,
+      "rms_mJy": 32.31
+     },
+     {
+      "chan": 3689,
+      "freq_GHz": 216.186873,
+      "pc_mJy": 37.19,
+      "peak7_mJy": 46.94,
+      "peak7_lm": [
+       -1.5,
+       -3.75
+      ],
+      "ap_flux_mJy": 29.56,
+      "star_mJy": 32.89,
+      "rms_mJy": 30.86
+     },
+     {
+      "chan": 3690,
+      "freq_GHz": 216.186385,
+      "pc_mJy": -20.85,
+      "peak7_mJy": 36.57,
+      "peak7_lm": [
+       3.0,
+       -6.0
+      ],
+      "ap_flux_mJy": -15.97,
+      "star_mJy": 22.58,
+      "rms_mJy": 30.09
+     },
+     {
+      "chan": 3691,
+      "freq_GHz": 216.185897,
+      "pc_mJy": -82.87,
+      "peak7_mJy": 27.61,
+      "peak7_lm": [
+       5.25,
+       4.5
+      ],
+      "ap_flux_mJy": -57.31,
+      "star_mJy": 0.68,
+      "rms_mJy": 32.04
+     },
+     {
+      "chan": 3692,
+      "freq_GHz": 216.185408,
+      "pc_mJy": -87.51,
+      "peak7_mJy": 50.86,
+      "peak7_lm": [
+       6.0,
+       3.0
+      ],
+      "ap_flux_mJy": -58.44,
+      "star_mJy": -1.62,
+      "rms_mJy": 30.91
+     },
+     {
+      "chan": 3693,
+      "freq_GHz": 216.18492,
+      "pc_mJy": -51.91,
+      "peak7_mJy": 51.58,
+      "peak7_lm": [
+       1.5,
+       -6.75
+      ],
+      "ap_flux_mJy": -41.23,
+      "star_mJy": 4.98,
+      "rms_mJy": 32.59
+     },
+     {
+      "chan": 3694,
+      "freq_GHz": 216.184432,
+      "pc_mJy": -40.1,
+      "peak7_mJy": 36.06,
+      "peak7_lm": [
+       -4.5,
+       5.25
+      ],
+      "ap_flux_mJy": -33.84,
+      "star_mJy": 1.42,
+      "rms_mJy": 32.46
+     },
+     {
+      "chan": 3695,
+      "freq_GHz": 216.183943,
+      "pc_mJy": -46.55,
+      "peak7_mJy": 40.29,
+      "peak7_lm": [
+       -5.25,
+       4.5
+      ],
+      "ap_flux_mJy": -28.0,
+      "star_mJy": -3.26,
+      "rms_mJy": 33.41
+     },
+     {
+      "chan": 3696,
+      "freq_GHz": 216.183455,
+      "pc_mJy": -24.3,
+      "peak7_mJy": 61.76,
+      "peak7_lm": [
+       -2.25,
+       5.25
+      ],
+      "ap_flux_mJy": -13.24,
+      "star_mJy": -12.43,
+      "rms_mJy": 26.97
+     },
+     {
+      "chan": 3697,
+      "freq_GHz": 216.182967,
+      "pc_mJy": 5.65,
+      "peak7_mJy": 91.35,
+      "peak7_lm": [
+       -3.0,
+       6.0
+      ],
+      "ap_flux_mJy": 1.04,
+      "star_mJy": -20.21,
+      "rms_mJy": 30.88
+     },
+     {
+      "chan": 3698,
+      "freq_GHz": 216.182479,
+      "pc_mJy": -7.25,
+      "peak7_mJy": 76.52,
+      "peak7_lm": [
+       -3.75,
+       5.25
+      ],
+      "ap_flux_mJy": -1.49,
+      "star_mJy": 10.28,
+      "rms_mJy": 32.91
+     },
+     {
+      "chan": 3699,
+      "freq_GHz": 216.18199,
+      "pc_mJy": -16.25,
+      "peak7_mJy": 66.41,
+      "peak7_lm": [
+       -4.5,
+       5.25
+      ],
+      "ap_flux_mJy": -6.64,
+      "star_mJy": 42.67,
+      "rms_mJy": 30.2
+     },
+     {
+      "chan": 3700,
+      "freq_GHz": 216.181502,
+      "pc_mJy": 6.9,
+      "peak7_mJy": 81.11,
+      "peak7_lm": [
+       -4.5,
+       5.25
+      ],
+      "ap_flux_mJy": 1.29,
+      "star_mJy": 45.61,
+      "rms_mJy": 27.48
+     },
+     {
+      "chan": 3701,
+      "freq_GHz": 216.181014,
+      "pc_mJy": 5.19,
+      "peak7_mJy": 50.88,
+      "peak7_lm": [
+       4.5,
+       -4.5
+      ],
+      "ap_flux_mJy": -4.05,
+      "star_mJy": 50.87,
+      "rms_mJy": 28.81
+     },
+     {
+      "chan": 3702,
+      "freq_GHz": 216.180526,
+      "pc_mJy": 7.01,
+      "peak7_mJy": 42.33,
+      "peak7_lm": [
+       6.0,
+       -3.0
+      ],
+      "ap_flux_mJy": -7.67,
+      "star_mJy": 33.09,
+      "rms_mJy": 32.45
+     },
+     {
+      "chan": 3703,
+      "freq_GHz": 216.180037,
+      "pc_mJy": 38.21,
+      "peak7_mJy": 83.4,
+      "peak7_lm": [
+       6.0,
+       3.0
+      ],
+      "ap_flux_mJy": 8.94,
+      "star_mJy": -23.23,
+      "rms_mJy": 28.75
+     },
+     {
+      "chan": 3704,
+      "freq_GHz": 216.179549,
+      "pc_mJy": 32.97,
+      "peak7_mJy": 60.71,
+      "peak7_lm": [
+       5.25,
+       2.25
+      ],
+      "ap_flux_mJy": 8.14,
+      "star_mJy": -34.32,
+      "rms_mJy": 29.66
+     },
+     {
+      "chan": 3705,
+      "freq_GHz": 216.179061,
+      "pc_mJy": -0.59,
+      "peak7_mJy": 63.77,
+      "peak7_lm": [
+       -5.25,
+       4.5
+      ],
+      "ap_flux_mJy": -4.49,
+      "star_mJy": -6.18,
+      "rms_mJy": 28.47
+     },
+     {
+      "chan": 3706,
+      "freq_GHz": 216.178572,
+      "pc_mJy": 8.5,
+      "peak7_mJy": 81.12,
+      "peak7_lm": [
+       -2.25,
+       -3.0
+      ],
+      "ap_flux_mJy": 8.84,
+      "star_mJy": -10.74,
+      "rms_mJy": 27.71
+     },
+     {
+      "chan": 3707,
+      "freq_GHz": 216.178084,
+      "pc_mJy": 35.35,
+      "peak7_mJy": 61.81,
+      "peak7_lm": [
+       -2.25,
+       -3.0
+      ],
+      "ap_flux_mJy": 27.8,
+      "star_mJy": -39.66,
+      "rms_mJy": 29.63
+     },
+     {
+      "chan": 3708,
+      "freq_GHz": 216.177596,
+      "pc_mJy": 44.86,
+      "peak7_mJy": 97.78,
+      "peak7_lm": [
+       2.25,
+       2.25
+      ],
+      "ap_flux_mJy": 24.91,
+      "star_mJy": -34.73,
+      "rms_mJy": 34.77
+     },
+     {
+      "chan": 3709,
+      "freq_GHz": 216.177108,
+      "pc_mJy": 21.37,
+      "peak7_mJy": 60.03,
+      "peak7_lm": [
+       2.25,
+       0.75
+      ],
+      "ap_flux_mJy": 1.41,
+      "star_mJy": -1.11,
+      "rms_mJy": 35.81
+     },
+     {
+      "chan": 3710,
+      "freq_GHz": 216.176619,
+      "pc_mJy": -17.06,
+      "peak7_mJy": 59.1,
+      "peak7_lm": [
+       0.75,
+       -6.75
+      ],
+      "ap_flux_mJy": -20.43,
+      "star_mJy": 4.08,
+      "rms_mJy": 30.69
+     },
+     {
+      "chan": 3711,
+      "freq_GHz": 216.176131,
+      "pc_mJy": -13.69,
+      "peak7_mJy": 58.44,
+      "peak7_lm": [
+       6.75,
+       1.5
+      ],
+      "ap_flux_mJy": -12.5,
+      "star_mJy": -12.12,
+      "rms_mJy": 31.11
+     },
+     {
+      "chan": 3712,
+      "freq_GHz": 216.175643,
+      "pc_mJy": -19.09,
+      "peak7_mJy": 42.2,
+      "peak7_lm": [
+       6.75,
+       1.5
+      ],
+      "ap_flux_mJy": -14.77,
+      "star_mJy": -24.92,
+      "rms_mJy": 29.34
+     },
+     {
+      "chan": 3713,
+      "freq_GHz": 216.175154,
+      "pc_mJy": -28.51,
+      "peak7_mJy": 70.31,
+      "peak7_lm": [
+       -1.5,
+       -6.75
+      ],
+      "ap_flux_mJy": -21.98,
+      "star_mJy": -31.29,
+      "rms_mJy": 29.21
+     },
+     {
+      "chan": 3714,
+      "freq_GHz": 216.174666,
+      "pc_mJy": -13.04,
+      "peak7_mJy": 62.5,
+      "peak7_lm": [
+       3.75,
+       4.5
+      ],
+      "ap_flux_mJy": -6.77,
+      "star_mJy": -34.87,
+      "rms_mJy": 31.1
+     },
+     {
+      "chan": 3715,
+      "freq_GHz": 216.174178,
+      "pc_mJy": -5.77,
+      "peak7_mJy": 63.89,
+      "peak7_lm": [
+       3.0,
+       4.5
+      ],
+      "ap_flux_mJy": 0.21,
+      "star_mJy": -39.86,
+      "rms_mJy": 33.34
+     },
+     {
+      "chan": 3716,
+      "freq_GHz": 216.17369,
+      "pc_mJy": -25.27,
+      "peak7_mJy": 28.0,
+      "peak7_lm": [
+       -1.5,
+       -3.75
+      ],
+      "ap_flux_mJy": -13.17,
+      "star_mJy": -10.66,
+      "rms_mJy": 33.01
+     },
+     {
+      "chan": 3717,
+      "freq_GHz": 216.173201,
+      "pc_mJy": -21.43,
+      "peak7_mJy": 48.38,
+      "peak7_lm": [
+       1.5,
+       -5.25
+      ],
+      "ap_flux_mJy": -11.69,
+      "star_mJy": 35.02,
+      "rms_mJy": 33.7
+     },
+     {
+      "chan": 3718,
+      "freq_GHz": 216.172713,
+      "pc_mJy": 34.41,
+      "peak7_mJy": 75.06,
+      "peak7_lm": [
+       2.25,
+       -6.0
+      ],
+      "ap_flux_mJy": 22.41,
+      "star_mJy": 58.64,
+      "rms_mJy": 31.26
+     },
+     {
+      "chan": 3719,
+      "freq_GHz": 216.172225,
+      "pc_mJy": 50.47,
+      "peak7_mJy": 66.37,
+      "peak7_lm": [
+       2.25,
+       -6.0
+      ],
+      "ap_flux_mJy": 36.47,
+      "star_mJy": 44.61,
+      "rms_mJy": 31.97
+     },
+     {
+      "chan": 3720,
+      "freq_GHz": 216.171736,
+      "pc_mJy": -15.46,
+      "peak7_mJy": 61.21,
+      "peak7_lm": [
+       -0.0,
+       -6.0
+      ],
+      "ap_flux_mJy": -5.02,
+      "star_mJy": 12.11,
+      "rms_mJy": 29.85
+     }
+    ]
+   },
+   "controls": {
+    "n": 512,
+    "r_from_star_arcsec": [
+     14.52,
+     38.72
+    ],
+    "r_from_pc_arcsec": [
+     10.84,
+     44.01
+    ],
+    "beam_mean_track_max": 0.3434,
+    "beam_mean_track_median_abs": 0.0617,
+    "n_beam_gt_0p1": 72,
+    "beam_at_star_mean": -0.0937
+   },
+   "dft_vs_waterfall_maxabs_mJy": 0.10510992938805863,
+   "visfit": {
+    "script": "/data/SETI/bin/visfit_r7y.py (unmodified)",
+    "md5": "8374ae2de6128f6ad970c90d5da1925c",
+    "epoch": "first",
+    "own": {
+     "drift": -2198.18212890625,
+     "re": 4.1229,
+     "im": -0.887,
+     "ring_max": 0.675,
+     "freq_max": 1.7866,
+     "n_vis": 945,
+     "offset_arcsec": 5.7463
+    },
+    "archived": {
+     "file": "/data/SETI/visfit_r7/out/A002_Xfe62c1_X398.fit.json",
+     "event_drift": -2198.18212890625,
+     "drift_used": 2372.5087890625,
+     "re": -0.5607,
+     "im": -0.1479,
+     "ring_max": 1.5883
+    }
+   }
+  },
+  {
+   "eb": "A002_Xfe62c1_X398",
+   "spw": 1,
+   "freq_GHz": 218.872908,
+   "chan": 2633,
+   "drift_Hz_s": 2372.51,
+   "repro": {
+    "T_archived": 5.1092,
+    "T_recal": 5.1092,
+    "cell_same": 1,
+    "max_abs_dI_star_Jy": 0.0,
+    "max_abs_dT_star_grid": 0.0,
+    "max_abs_dctrl_max": 0.0,
+    "n_ctrl_ge_star": [
+     17,
+     17
+    ],
+    "products_md5_archived": {
+     "_srcspec.npz": "c03ecd2333a3e36e0ab4b76e0c7b2041",
+     "_search.npz": "94a83c375fba426a81db8d65c94e11db",
+     "_result.json": "e5af9de9d44eeeac3dc9e510c19c25cd"
+    }
+   },
+   "beam_at_star": {
+    "per_int": [
+     -0.0939,
+     -0.0939,
+     -0.0939,
+     -0.0946,
+     -0.0946,
+     -0.0946,
+     -0.0943,
+     -0.0943,
+     -0.0943,
+     -0.0946,
+     -0.0947,
+     -0.0948,
+     -0.0964,
+     -0.0964,
+     -0.0963,
+     -0.0949,
+     -0.0949,
+     -0.0949,
+     -0.0961,
+     -0.0962,
+     -0.0962
+    ],
+    "min": -0.0964,
+    "max": -0.0939,
+    "mean": -0.095,
+    "psf_tclean": -0.0977,
+    "star_offset_arcsec": [
+     3.719,
+     -4.35
+    ],
+    "beam_tclean_arcsec": [
+     7.19,
+     4.51
+    ]
+   },
+   "series_T": {
+    "star_waterfall": 5.1092,
+    "star_mine": 5.1094,
+    "star_archived": 5.1092,
+    "phase_centre": -0.1435,
+    "star_deleaked": 5.1437,
+    "pc_deleaked": 0.3196,
+    "leak_pred": -0.031
+   },
+   "amp_track_mJy": {
+    "star_mine": [
+     301.09,
+     145.94,
+     -77.92,
+     85.67,
+     159.37,
+     211.12,
+     -52.0,
+     214.57,
+     -30.39,
+     125.72,
+     94.56,
+     199.29,
+     -67.5,
+     252.69,
+     306.63,
+     195.47,
+     -96.02,
+     134.93,
+     255.53,
+     266.93,
+     196.9
+    ],
+    "phase_centre": [
+     54.56,
+     -0.12,
+     -56.42,
+     -55.41,
+     149.41,
+     -31.98,
+     -177.05,
+     211.93,
+     -20.7,
+     -100.73,
+     -122.86,
+     -13.73,
+     -143.4,
+     46.88,
+     -5.26,
+     60.74,
+     -74.23,
+     -188.51,
+     299.78,
+     45.1,
+     1.94
+    ],
+    "leak_pred": [
+     -8.02,
+     -1.08,
+     6.27,
+     4.57,
+     -15.55,
+     1.97,
+     16.79,
+     -21.88,
+     1.82,
+     9.45,
+     10.32,
+     0.09,
+     14.36,
+     -7.17,
+     -1.89,
+     -7.56,
+     8.26,
+     15.89,
+     -31.87,
+     -6.88,
+     -2.05
+    ],
+    "star_deleaked": [
+     305.69,
+     150.65,
+     -72.23,
+     76.28,
+     172.68,
+     196.7,
+     -62.66,
+     239.49,
+     -20.79,
+     116.04,
+     86.82,
+     196.76,
+     -81.67,
+     263.94,
+     298.31,
+     206.12,
+     -94.74,
+     130.52,
+     282.97,
+     268.23,
+     196.87
+    ]
+   },
+   "sigma_track_mJy": [
+    120.73,
+    117.09,
+    139.26,
+    114.49,
+    123.53,
+    105.49,
+    119.75,
+    130.67,
+    124.19,
+    120.37,
+    154.41,
+    127.37,
+    141.14,
+    130.43,
+    122.83,
+    136.03,
+    169.96,
+    154.4,
+    145.68,
+    115.92,
+    137.44
+   ],
+   "times_s": [
+    0.0,
+    10.08,
+    20.16,
+    535.1,
+    545.18,
+    555.26,
+    1153.68,
+    1163.76,
+    1173.84,
+    1739.33,
+    1749.41,
+    1759.49,
+    2361.7,
+    2371.78,
+    2381.86,
+    2957.86,
+    2967.94,
+    2978.02,
+    3590.69,
+    3600.77,
+    3610.85
+   ],
+   "pc_any_drift": {
+    "T": 2.6551,
+    "chan": 2639,
+    "drift": 73.66
+   },
+   "pc_zero_drift": {
+    "max": 2.32,
+    "min": -1.684,
+    "n": 39
+   },
+   "track_image": {
+    "peak": 5.609,
+    "peak_lm_arcsec": [
+     3.0,
+     -3.5
+    ],
+    "peak_offset_from_star_arcsec": 1.11,
+    "at_star": 5.161,
+    "at_pc": -0.411
+   },
+   "cube": {
+    "cleaning": "none (niter=0, dirty cube)",
+    "weighting": "natural",
+    "chans": [
+     2768,
+     2806
+    ],
+    "nchan": 39,
+    "max_peak7_over_rms": 3.15,
+    "max_abs_pc_over_rms": 2.21,
+    "max_abs_ap_over_rms": 1.46,
+    "median_rms_mJy": 29.14,
+    "rows": [
+     {
+      "chan": 2768,
+      "freq_GHz": 218.88658,
+      "pc_mJy": -29.64,
+      "peak7_mJy": 84.16,
+      "peak7_lm": [
+       -3.75,
+       3.75
+      ],
+      "ap_flux_mJy": -14.82,
+      "star_mJy": -11.81,
+      "rms_mJy": 32.41
+     },
+     {
+      "chan": 2769,
+      "freq_GHz": 218.886092,
+      "pc_mJy": -18.32,
+      "peak7_mJy": 72.49,
+      "peak7_lm": [
+       -3.75,
+       3.75
+      ],
+      "ap_flux_mJy": -8.72,
+      "star_mJy": -27.18,
+      "rms_mJy": 32.53
+     },
+     {
+      "chan": 2770,
+      "freq_GHz": 218.885604,
+      "pc_mJy": -23.38,
+      "peak7_mJy": 57.2,
+      "peak7_lm": [
+       -4.5,
+       -3.0
+      ],
+      "ap_flux_mJy": -16.79,
+      "star_mJy": -17.58,
+      "rms_mJy": 31.52
+     },
+     {
+      "chan": 2771,
+      "freq_GHz": 218.885115,
+      "pc_mJy": -25.98,
+      "peak7_mJy": 91.9,
+      "peak7_lm": [
+       6.0,
+       -1.5
+      ],
+      "ap_flux_mJy": -7.53,
+      "star_mJy": 11.74,
+      "rms_mJy": 29.2
+     },
+     {
+      "chan": 2772,
+      "freq_GHz": 218.884627,
+      "pc_mJy": -18.3,
+      "peak7_mJy": 77.91,
+      "peak7_lm": [
+       4.5,
+       -2.25
+      ],
+      "ap_flux_mJy": 3.09,
+      "star_mJy": 14.88,
+      "rms_mJy": 27.24
+     },
+     {
+      "chan": 2773,
+      "freq_GHz": 218.884139,
+      "pc_mJy": 3.45,
+      "peak7_mJy": 39.82,
+      "peak7_lm": [
+       -4.5,
+       1.5
+      ],
+      "ap_flux_mJy": 11.41,
+      "star_mJy": -22.25,
+      "rms_mJy": 27.84
+     },
+     {
+      "chan": 2774,
+      "freq_GHz": 218.883651,
+      "pc_mJy": 5.18,
+      "peak7_mJy": 38.87,
+      "peak7_lm": [
+       -3.0,
+       1.5
+      ],
+      "ap_flux_mJy": 8.09,
+      "star_mJy": -68.85,
+      "rms_mJy": 30.35
+     },
+     {
+      "chan": 2775,
+      "freq_GHz": 218.883162,
+      "pc_mJy": -14.94,
+      "peak7_mJy": 55.2,
+      "peak7_lm": [
+       -2.25,
+       2.25
+      ],
+      "ap_flux_mJy": -7.04,
+      "star_mJy": -89.23,
+      "rms_mJy": 28.28
+     },
+     {
+      "chan": 2776,
+      "freq_GHz": 218.882674,
+      "pc_mJy": -29.11,
+      "peak7_mJy": 48.54,
+      "peak7_lm": [
+       -3.0,
+       2.25
+      ],
+      "ap_flux_mJy": -15.0,
+      "star_mJy": -60.0,
+      "rms_mJy": 26.77
+     },
+     {
+      "chan": 2777,
+      "freq_GHz": 218.882186,
+      "pc_mJy": -29.72,
+      "peak7_mJy": 56.94,
+      "peak7_lm": [
+       -3.0,
+       -6.0
+      ],
+      "ap_flux_mJy": -17.72,
+      "star_mJy": -19.39,
+      "rms_mJy": 30.25
+     },
+     {
+      "chan": 2778,
+      "freq_GHz": 218.881697,
+      "pc_mJy": 14.23,
+      "peak7_mJy": 30.09,
+      "peak7_lm": [
+       2.25,
+       1.5
+      ],
+      "ap_flux_mJy": 7.1,
+      "star_mJy": -15.08,
+      "rms_mJy": 32.33
+     },
+     {
+      "chan": 2779,
+      "freq_GHz": 218.881209,
+      "pc_mJy": 48.25,
+      "peak7_mJy": 50.99,
+      "peak7_lm": [
+       -0.75,
+       0.0
+      ],
+      "ap_flux_mJy": 30.2,
+      "star_mJy": 7.37,
+      "rms_mJy": 28.68
+     },
+     {
+      "chan": 2780,
+      "freq_GHz": 218.880721,
+      "pc_mJy": 26.13,
+      "peak7_mJy": 46.85,
+      "peak7_lm": [
+       -2.25,
+       -0.75
+      ],
+      "ap_flux_mJy": 11.03,
+      "star_mJy": 15.92,
+      "rms_mJy": 28.13
+     },
+     {
+      "chan": 2781,
+      "freq_GHz": 218.880233,
+      "pc_mJy": -3.74,
+      "peak7_mJy": 61.56,
+      "peak7_lm": [
+       -6.75,
+       0.0
+      ],
+      "ap_flux_mJy": -16.21,
+      "star_mJy": -11.5,
+      "rms_mJy": 28.18
+     },
+     {
+      "chan": 2782,
+      "freq_GHz": 218.879744,
+      "pc_mJy": -37.82,
+      "peak7_mJy": 66.08,
+      "peak7_lm": [
+       -4.5,
+       5.25
+      ],
+      "ap_flux_mJy": -30.86,
+      "star_mJy": 13.66,
+      "rms_mJy": 27.85
+     },
+     {
+      "chan": 2783,
+      "freq_GHz": 218.879256,
+      "pc_mJy": -34.96,
+      "peak7_mJy": 76.78,
+      "peak7_lm": [
+       6.0,
+       -3.0
+      ],
+      "ap_flux_mJy": -18.97,
+      "star_mJy": 32.75,
+      "rms_mJy": 28.34
+     },
+     {
+      "chan": 2784,
+      "freq_GHz": 218.878768,
+      "pc_mJy": -2.83,
+      "peak7_mJy": 66.33,
+      "peak7_lm": [
+       -3.0,
+       2.25
+      ],
+      "ap_flux_mJy": 4.1,
+      "star_mJy": 43.25,
+      "rms_mJy": 30.35
+     },
+     {
+      "chan": 2785,
+      "freq_GHz": 218.878279,
+      "pc_mJy": -26.03,
+      "peak7_mJy": 81.53,
+      "peak7_lm": [
+       5.25,
+       -3.75
+      ],
+      "ap_flux_mJy": -10.24,
+      "star_mJy": 81.04,
+      "rms_mJy": 30.66
+     },
+     {
+      "chan": 2786,
+      "freq_GHz": 218.877791,
+      "pc_mJy": -48.07,
+      "peak7_mJy": 72.35,
+      "peak7_lm": [
+       5.25,
+       -3.75
+      ],
+      "ap_flux_mJy": -30.14,
+      "star_mJy": 68.05,
+      "rms_mJy": 30.4
+     },
+     {
+      "chan": 2787,
+      "freq_GHz": 218.877303,
+      "pc_mJy": -5.4,
+      "peak7_mJy": 62.27,
+      "peak7_lm": [
+       4.5,
+       -5.25
+      ],
+      "ap_flux_mJy": -8.5,
+      "star_mJy": 46.07,
+      "rms_mJy": 30.01
+     },
+     {
+      "chan": 2788,
+      "freq_GHz": 218.876815,
+      "pc_mJy": 20.26,
+      "peak7_mJy": 63.15,
+      "peak7_lm": [
+       4.5,
+       -5.25
+      ],
+      "ap_flux_mJy": 13.83,
+      "star_mJy": 35.99,
+      "rms_mJy": 29.16
+     },
+     {
+      "chan": 2789,
+      "freq_GHz": 218.876326,
+      "pc_mJy": 15.57,
+      "peak7_mJy": 71.72,
+      "peak7_lm": [
+       -6.0,
+       2.25
+      ],
+      "ap_flux_mJy": 14.71,
+      "star_mJy": 8.13,
+      "rms_mJy": 29.53
+     },
+     {
+      "chan": 2790,
+      "freq_GHz": 218.875838,
+      "pc_mJy": 9.36,
+      "peak7_mJy": 66.07,
+      "peak7_lm": [
+       1.5,
+       6.0
+      ],
+      "ap_flux_mJy": 14.54,
+      "star_mJy": 6.16,
+      "rms_mJy": 29.14
+     },
+     {
+      "chan": 2791,
+      "freq_GHz": 218.87535,
+      "pc_mJy": 1.79,
+      "peak7_mJy": 77.03,
+      "peak7_lm": [
+       1.5,
+       6.0
+      ],
+      "ap_flux_mJy": 11.23,
+      "star_mJy": 13.01,
+      "rms_mJy": 28.82
+     },
+     {
+      "chan": 2792,
+      "freq_GHz": 218.874861,
+      "pc_mJy": 12.58,
+      "peak7_mJy": 70.68,
+      "peak7_lm": [
+       2.25,
+       6.0
+      ],
+      "ap_flux_mJy": 13.63,
+      "star_mJy": -12.53,
+      "rms_mJy": 30.68
+     },
+     {
+      "chan": 2793,
+      "freq_GHz": 218.874373,
+      "pc_mJy": 22.28,
+      "peak7_mJy": 63.58,
+      "peak7_lm": [
+       -6.75,
+       1.5
+      ],
+      "ap_flux_mJy": 15.61,
+      "star_mJy": -24.82,
+      "rms_mJy": 30.19
+     },
+     {
+      "chan": 2794,
+      "freq_GHz": 218.873885,
+      "pc_mJy": 11.01,
+      "peak7_mJy": 45.54,
+      "peak7_lm": [
+       -6.0,
+       2.25
+      ],
+      "ap_flux_mJy": 9.37,
+      "star_mJy": 1.51,
+      "rms_mJy": 27.87
+     },
+     {
+      "chan": 2795,
+      "freq_GHz": 218.873397,
+      "pc_mJy": -23.2,
+      "peak7_mJy": 58.68,
+      "peak7_lm": [
+       0.75,
+       -3.75
+      ],
+      "ap_flux_mJy": -4.35,
+      "star_mJy": 19.01,
+      "rms_mJy": 28.17
+     },
+     {
+      "chan": 2796,
+      "freq_GHz": 218.872908,
+      "pc_mJy": -39.02,
+      "peak7_mJy": 76.85,
+      "peak7_lm": [
+       -1.5,
+       -3.75
+      ],
+      "ap_flux_mJy": -12.23,
+      "star_mJy": 17.02,
+      "rms_mJy": 28.66
+     },
+     {
+      "chan": 2797,
+      "freq_GHz": 218.87242,
+      "pc_mJy": -15.27,
+      "peak7_mJy": 56.89,
+      "peak7_lm": [
+       -2.25,
+       -4.5
+      ],
+      "ap_flux_mJy": -2.31,
+      "star_mJy": -2.83,
+      "rms_mJy": 24.43
+     },
+     {
+      "chan": 2798,
+      "freq_GHz": 218.871932,
+      "pc_mJy": -8.28,
+      "peak7_mJy": 43.75,
+      "peak7_lm": [
+       -3.0,
+       2.25
+      ],
+      "ap_flux_mJy": -2.95,
+      "star_mJy": -30.09,
+      "rms_mJy": 26.34
+     },
+     {
+      "chan": 2799,
+      "freq_GHz": 218.871443,
+      "pc_mJy": -26.92,
+      "peak7_mJy": 42.48,
+      "peak7_lm": [
+       -2.25,
+       3.0
+      ],
+      "ap_flux_mJy": -16.17,
+      "star_mJy": -27.28,
+      "rms_mJy": 28.61
+     },
+     {
+      "chan": 2800,
+      "freq_GHz": 218.870955,
+      "pc_mJy": -32.05,
+      "peak7_mJy": 46.96,
+      "peak7_lm": [
+       -5.25,
+       -4.5
+      ],
+      "ap_flux_mJy": -18.38,
+      "star_mJy": -1.74,
+      "rms_mJy": 26.13
+     },
+     {
+      "chan": 2801,
+      "freq_GHz": 218.870467,
+      "pc_mJy": 6.24,
+      "peak7_mJy": 57.67,
+      "peak7_lm": [
+       4.5,
+       -3.0
+      ],
+      "ap_flux_mJy": 1.63,
+      "star_mJy": 42.86,
+      "rms_mJy": 27.71
+     },
+     {
+      "chan": 2802,
+      "freq_GHz": 218.869979,
+      "pc_mJy": 53.46,
+      "peak7_mJy": 79.9,
+      "peak7_lm": [
+       4.5,
+       -2.25
+      ],
+      "ap_flux_mJy": 31.94,
+      "star_mJy": 41.19,
+      "rms_mJy": 30.06
+     },
+     {
+      "chan": 2803,
+      "freq_GHz": 218.86949,
+      "pc_mJy": 37.53,
+      "peak7_mJy": 60.86,
+      "peak7_lm": [
+       4.5,
+       -1.5
+      ],
+      "ap_flux_mJy": 28.67,
+      "star_mJy": -6.66,
+      "rms_mJy": 31.32
+     },
+     {
+      "chan": 2804,
+      "freq_GHz": 218.869002,
+      "pc_mJy": -2.74,
+      "peak7_mJy": 47.02,
+      "peak7_lm": [
+       6.75,
+       -0.75
+      ],
+      "ap_flux_mJy": -0.07,
+      "star_mJy": 0.54,
+      "rms_mJy": 33.09
+     },
+     {
+      "chan": 2805,
+      "freq_GHz": 218.868514,
+      "pc_mJy": -47.24,
+      "peak7_mJy": 63.88,
+      "peak7_lm": [
+       6.75,
+       -0.75
+      ],
+      "ap_flux_mJy": -34.76,
+      "star_mJy": 29.64,
+      "rms_mJy": 31.41
+     },
+     {
+      "chan": 2806,
+      "freq_GHz": 218.868026,
+      "pc_mJy": -62.15,
+      "peak7_mJy": 69.8,
+      "peak7_lm": [
+       6.0,
+       -1.5
+      ],
+      "ap_flux_mJy": -41.18,
+      "star_mJy": 26.55,
+      "rms_mJy": 28.15
+     }
+    ]
+   },
+   "controls": {
+    "n": 512,
+    "r_from_star_arcsec": [
+     14.37,
+     38.32
+    ],
+    "r_from_pc_arcsec": [
+     10.7,
+     43.61
+    ],
+    "beam_mean_track_max": 0.3404,
+    "beam_mean_track_median_abs": 0.06,
+    "n_beam_gt_0p1": 68,
+    "beam_at_star_mean": -0.095
+   },
+   "dft_vs_waterfall_maxabs_mJy": 0.14487112669170354,
+   "visfit": {
+    "script": "/data/SETI/bin/visfit_r7y.py (unmodified)",
+    "md5": "8374ae2de6128f6ad970c90d5da1925c",
+    "epoch": "first",
+    "own": {
+     "drift": 2372.5087890625,
+     "re": 4.686,
+     "im": 0.0854,
+     "ring_max": 0.6386,
+     "freq_max": 1.0506,
+     "n_vis": 945,
+     "offset_arcsec": 5.7463
+    },
+    "archived": {
+     "file": "/data/SETI/visfit_r7/out/A002_Xfe62c1_X398.fit.json",
+     "event_drift": 2372.5087890625,
+     "drift_used": 2372.5087890625,
+     "re": 4.686,
+     "im": 0.0854,
+     "ring_max": 0.6386
+    }
+   }
+  },
+  {
+   "eb": "A002_Xf8f6a9_X10359",
+   "spw": 0,
+   "freq_GHz": 217.729244,
+   "chan": 414,
+   "drift_Hz_s": -983.45,
+   "repro": {
+    "T_archived": 5.0901,
+    "T_recal": 5.0901,
+    "cell_same": 1,
+    "max_abs_dI_star_Jy": 0.0,
+    "max_abs_dT_star_grid": 0.0,
+    "max_abs_dctrl_max": 0.0,
+    "n_ctrl_ge_star": [
+     25,
+     25
+    ],
+    "products_md5_archived": {
+     "_srcspec.npz": "ce8ddf5e6cca2a7cb8749952ff5507ff",
+     "_search.npz": "5cbf2c4defaad8c6247ba9a3d0174ed7",
+     "_result.json": "58ec6ed9780d73952015a3c0f65b3764"
+    }
+   },
+   "beam_at_star": {
+    "per_int": [
+     -0.0355,
+     -0.0355,
+     -0.0354,
+     -0.0317,
+     -0.0316,
+     -0.0315,
+     -0.0274,
+     -0.0274,
+     -0.0274,
+     -0.0249,
+     -0.0248,
+     -0.0247,
+     -0.0214,
+     -0.0214,
+     -0.0214,
+     -0.0186,
+     -0.0185,
+     -0.0184,
+     -0.0106,
+     -0.0104,
+     -0.0103
+    ],
+    "min": -0.0355,
+    "max": -0.0103,
+    "mean": -0.0242,
+    "psf_tclean": -0.0386,
+    "star_offset_arcsec": [
+     3.784,
+     -4.338
+    ],
+    "beam_tclean_arcsec": [
+     7.55,
+     4.75
+    ]
+   },
+   "series_T": {
+    "star_waterfall": 5.0901,
+    "star_mine": 5.0901,
+    "star_archived": 5.0901,
+    "phase_centre": 0.4872,
+    "star_deleaked": 5.1514,
+    "pc_deleaked": 0.6298,
+    "leak_pred": -0.0192
+   },
+   "amp_track_mJy": {
+    "star_mine": [
+     83.16,
+     -40.37,
+     333.0,
+     25.02,
+     124.35,
+     152.77,
+     139.82,
+     249.65,
+     -11.97,
+     229.21,
+     322.22,
+     104.7,
+     -50.23,
+     -1.9,
+     97.31,
+     58.02,
+     61.03,
+     226.12,
+     304.6,
+     244.6,
+     244.1
+    ],
+    "phase_centre": [
+     -219.43,
+     144.89,
+     429.9,
+     -32.07,
+     81.34,
+     19.17,
+     121.0,
+     247.96,
+     -296.81,
+     -12.2,
+     -220.5,
+     147.5,
+     -12.48,
+     66.7,
+     4.51,
+     188.89,
+     -195.7,
+     -50.43,
+     28.13,
+     199.2,
+     16.57
+    ],
+    "leak_pred": [
+     7.6,
+     -5.33,
+     -15.45,
+     0.99,
+     -2.72,
+     -0.78,
+     -3.4,
+     -7.04,
+     8.09,
+     0.05,
+     5.21,
+     -3.74,
+     0.42,
+     -1.44,
+     -0.1,
+     -3.58,
+     3.58,
+     0.85,
+     -0.32,
+     -2.12,
+     -0.21
+    ],
+    "star_deleaked": [
+     76.32,
+     -35.99,
+     345.87,
+     28.95,
+     122.72,
+     157.37,
+     150.2,
+     259.36,
+     -16.7,
+     232.51,
+     317.81,
+     106.94,
+     -48.21,
+     0.86,
+     96.97,
+     61.25,
+     53.91,
+     228.06,
+     307.37,
+     248.29,
+     243.27
+    ]
+   },
+   "sigma_track_mJy": [
+    127.16,
+    148.19,
+    125.93,
+    137.07,
+    158.49,
+    131.5,
+    118.95,
+    127.35,
+    117.5,
+    137.53,
+    97.35,
+    136.75,
+    137.98,
+    138.14,
+    137.19,
+    152.05,
+    137.75,
+    128.12,
+    156.98,
+    161.65,
+    118.72
+   ],
+   "times_s": [
+    0.0,
+    10.08,
+    20.16,
+    535.58,
+    545.66,
+    555.74,
+    1155.41,
+    1165.49,
+    1175.57,
+    1741.49,
+    1751.57,
+    1761.65,
+    2364.62,
+    2374.7,
+    2384.78,
+    2961.74,
+    2971.82,
+    2981.9,
+    3595.2,
+    3605.28,
+    3615.36
+   ],
+   "pc_any_drift": {
+    "T": 2.9462,
+    "chan": 415,
+    "drift": 2595.58
+   },
+   "pc_zero_drift": {
+    "max": 1.438,
+    "min": -1.316,
+    "n": 28
+   },
+   "track_image": {
+    "peak": 5.052,
+    "peak_lm_arcsec": [
+     4.0,
+     -5.0
+    ],
+    "peak_offset_from_star_arcsec": 0.7,
+    "at_star": 5.034,
+    "at_pc": 1.03
+   },
+   "cube": {
+    "cleaning": "none (niter=0, dirty cube)",
+    "weighting": "natural",
+    "chans": [
+     567,
+     594
+    ],
+    "nchan": 28,
+    "max_peak7_over_rms": 3.07,
+    "max_abs_pc_over_rms": 1.62,
+    "max_abs_ap_over_rms": 1.46,
+    "median_rms_mJy": 30.75,
+    "rows": [
+     {
+      "chan": 567,
+      "freq_GHz": 217.734127,
+      "pc_mJy": 22.62,
+      "peak7_mJy": 66.7,
+      "peak7_lm": [
+       -3.75,
+       0.0
+      ],
+      "ap_flux_mJy": -3.07,
+      "star_mJy": -17.09,
+      "rms_mJy": 32.23
+     },
+     {
+      "chan": 568,
+      "freq_GHz": 217.733639,
+      "pc_mJy": 0.85,
+      "peak7_mJy": 58.89,
+      "peak7_lm": [
+       -4.5,
+       0.0
+      ],
+      "ap_flux_mJy": -15.23,
+      "star_mJy": -25.65,
+      "rms_mJy": 33.1
+     },
+     {
+      "chan": 569,
+      "freq_GHz": 217.733151,
+      "pc_mJy": 3.32,
+      "peak7_mJy": 53.69,
+      "peak7_lm": [
+       -0.75,
+       -2.25
+      ],
+      "ap_flux_mJy": 0.2,
+      "star_mJy": -6.43,
+      "rms_mJy": 27.75
+     },
+     {
+      "chan": 570,
+      "freq_GHz": 217.732662,
+      "pc_mJy": 21.87,
+      "peak7_mJy": 61.93,
+      "peak7_lm": [
+       -0.75,
+       -2.25
+      ],
+      "ap_flux_mJy": 28.97,
+      "star_mJy": 15.73,
+      "rms_mJy": 29.28
+     },
+     {
+      "chan": 571,
+      "freq_GHz": 217.732174,
+      "pc_mJy": 31.6,
+      "peak7_mJy": 34.04,
+      "peak7_lm": [
+       3.0,
+       6.0
+      ],
+      "ap_flux_mJy": 27.35,
+      "star_mJy": -35.19,
+      "rms_mJy": 31.08
+     },
+     {
+      "chan": 572,
+      "freq_GHz": 217.731686,
+      "pc_mJy": 48.89,
+      "peak7_mJy": 52.99,
+      "peak7_lm": [
+       1.5,
+       6.75
+      ],
+      "ap_flux_mJy": 20.96,
+      "star_mJy": -60.93,
+      "rms_mJy": 30.72
+     },
+     {
+      "chan": 573,
+      "freq_GHz": 217.731198,
+      "pc_mJy": 40.92,
+      "peak7_mJy": 61.3,
+      "peak7_lm": [
+       1.5,
+       6.75
+      ],
+      "ap_flux_mJy": 14.6,
+      "star_mJy": -22.6,
+      "rms_mJy": 29.95
+     },
+     {
+      "chan": 574,
+      "freq_GHz": 217.730709,
+      "pc_mJy": 12.28,
+      "peak7_mJy": 56.54,
+      "peak7_lm": [
+       3.75,
+       -0.75
+      ],
+      "ap_flux_mJy": 5.3,
+      "star_mJy": -3.62,
+      "rms_mJy": 32.25
+     },
+     {
+      "chan": 575,
+      "freq_GHz": 217.730221,
+      "pc_mJy": 20.44,
+      "peak7_mJy": 63.63,
+      "peak7_lm": [
+       4.5,
+       5.25
+      ],
+      "ap_flux_mJy": 14.29,
+      "star_mJy": -6.19,
+      "rms_mJy": 33.69
+     },
+     {
+      "chan": 576,
+      "freq_GHz": 217.729733,
+      "pc_mJy": 30.34,
+      "peak7_mJy": 60.4,
+      "peak7_lm": [
+       -2.25,
+       5.25
+      ],
+      "ap_flux_mJy": 19.4,
+      "star_mJy": -11.24,
+      "rms_mJy": 33.05
+     },
+     {
+      "chan": 577,
+      "freq_GHz": 217.729244,
+      "pc_mJy": 19.1,
+      "peak7_mJy": 86.99,
+      "peak7_lm": [
+       -3.75,
+       4.5
+      ],
+      "ap_flux_mJy": 7.21,
+      "star_mJy": -30.69,
+      "rms_mJy": 30.78
+     },
+     {
+      "chan": 578,
+      "freq_GHz": 217.728756,
+      "pc_mJy": 11.64,
+      "peak7_mJy": 89.42,
+      "peak7_lm": [
+       -5.25,
+       3.75
+      ],
+      "ap_flux_mJy": 1.11,
+      "star_mJy": -26.44,
+      "rms_mJy": 31.11
+     },
+     {
+      "chan": 579,
+      "freq_GHz": 217.728268,
+      "pc_mJy": -12.92,
+      "peak7_mJy": 72.38,
+      "peak7_lm": [
+       -5.25,
+       4.5
+      ],
+      "ap_flux_mJy": -11.62,
+      "star_mJy": 9.55,
+      "rms_mJy": 30.24
+     },
+     {
+      "chan": 580,
+      "freq_GHz": 217.72778,
+      "pc_mJy": -25.3,
+      "peak7_mJy": 61.06,
+      "peak7_lm": [
+       -0.0,
+       6.75
+      ],
+      "ap_flux_mJy": -14.37,
+      "star_mJy": 17.85,
+      "rms_mJy": 29.19
+     },
+     {
+      "chan": 581,
+      "freq_GHz": 217.727291,
+      "pc_mJy": -7.57,
+      "peak7_mJy": 91.32,
+      "peak7_lm": [
+       -0.0,
+       6.75
+      ],
+      "ap_flux_mJy": -3.21,
+      "star_mJy": -8.7,
+      "rms_mJy": 34.42
+     },
+     {
+      "chan": 582,
+      "freq_GHz": 217.726803,
+      "pc_mJy": -0.11,
+      "peak7_mJy": 90.9,
+      "peak7_lm": [
+       -0.75,
+       6.0
+      ],
+      "ap_flux_mJy": -14.85,
+      "star_mJy": -36.14,
+      "rms_mJy": 33.44
+     },
+     {
+      "chan": 583,
+      "freq_GHz": 217.726315,
+      "pc_mJy": 11.95,
+      "peak7_mJy": 43.75,
+      "peak7_lm": [
+       -5.25,
+       4.5
+      ],
+      "ap_flux_mJy": -15.22,
+      "star_mJy": -35.78,
+      "rms_mJy": 30.2
+     },
+     {
+      "chan": 584,
+      "freq_GHz": 217.725826,
+      "pc_mJy": 33.18,
+      "peak7_mJy": 65.82,
+      "peak7_lm": [
+       -6.0,
+       3.0
+      ],
+      "ap_flux_mJy": 4.75,
+      "star_mJy": -49.13,
+      "rms_mJy": 27.24
+     },
+     {
+      "chan": 585,
+      "freq_GHz": 217.725338,
+      "pc_mJy": 30.88,
+      "peak7_mJy": 65.3,
+      "peak7_lm": [
+       -6.0,
+       3.0
+      ],
+      "ap_flux_mJy": 5.04,
+      "star_mJy": -51.39,
+      "rms_mJy": 29.17
+     },
+     {
+      "chan": 586,
+      "freq_GHz": 217.72485,
+      "pc_mJy": 1.21,
+      "peak7_mJy": 41.71,
+      "peak7_lm": [
+       0.75,
+       -6.75
+      ],
+      "ap_flux_mJy": -18.71,
+      "star_mJy": -25.99,
+      "rms_mJy": 31.77
+     },
+     {
+      "chan": 587,
+      "freq_GHz": 217.724362,
+      "pc_mJy": -17.12,
+      "peak7_mJy": 38.48,
+      "peak7_lm": [
+       -6.75,
+       0.0
+      ],
+      "ap_flux_mJy": -26.81,
+      "star_mJy": -41.57,
+      "rms_mJy": 31.23
+     },
+     {
+      "chan": 588,
+      "freq_GHz": 217.723873,
+      "pc_mJy": -10.71,
+      "peak7_mJy": 61.83,
+      "peak7_lm": [
+       -5.25,
+       -3.75
+      ],
+      "ap_flux_mJy": -11.79,
+      "star_mJy": -26.88,
+      "rms_mJy": 29.38
+     },
+     {
+      "chan": 589,
+      "freq_GHz": 217.723385,
+      "pc_mJy": -3.5,
+      "peak7_mJy": 64.85,
+      "peak7_lm": [
+       -5.25,
+       -4.5
+      ],
+      "ap_flux_mJy": -6.23,
+      "star_mJy": 2.13,
+      "rms_mJy": 33.05
+     },
+     {
+      "chan": 590,
+      "freq_GHz": 217.722897,
+      "pc_mJy": 6.63,
+      "peak7_mJy": 52.52,
+      "peak7_lm": [
+       -4.5,
+       -5.25
+      ],
+      "ap_flux_mJy": 2.21,
+      "star_mJy": -27.03,
+      "rms_mJy": 33.89
+     },
+     {
+      "chan": 591,
+      "freq_GHz": 217.722408,
+      "pc_mJy": 10.6,
+      "peak7_mJy": 41.8,
+      "peak7_lm": [
+       -4.5,
+       -4.5
+      ],
+      "ap_flux_mJy": 9.07,
+      "star_mJy": -42.97,
+      "rms_mJy": 27.58
+     },
+     {
+      "chan": 592,
+      "freq_GHz": 217.72192,
+      "pc_mJy": -5.89,
+      "peak7_mJy": 47.31,
+      "peak7_lm": [
+       -2.25,
+       -3.0
+      ],
+      "ap_flux_mJy": -0.19,
+      "star_mJy": -19.73,
+      "rms_mJy": 28.97
+     },
+     {
+      "chan": 593,
+      "freq_GHz": 217.721432,
+      "pc_mJy": 4.4,
+      "peak7_mJy": 65.05,
+      "peak7_lm": [
+       -2.25,
+       -2.25
+      ],
+      "ap_flux_mJy": 13.08,
+      "star_mJy": -0.35,
+      "rms_mJy": 26.78
+     },
+     {
+      "chan": 594,
+      "freq_GHz": 217.720944,
+      "pc_mJy": 42.77,
+      "peak7_mJy": 81.18,
+      "peak7_lm": [
+       -1.5,
+       -2.25
+      ],
+      "ap_flux_mJy": 38.52,
+      "star_mJy": 27.24,
+      "rms_mJy": 26.47
+     }
+    ]
+   },
+   "controls": {
+    "n": 512,
+    "r_from_star_arcsec": [
+     15.78,
+     38.71
+    ],
+    "r_from_pc_arcsec": [
+     11.92,
+     44.04
+    ],
+    "beam_mean_track_max": 0.3102,
+    "beam_mean_track_median_abs": 0.0545,
+    "n_beam_gt_0p1": 76,
+    "beam_at_star_mean": -0.0242
+   },
+   "dft_vs_waterfall_maxabs_mJy": 0.08514697739398988,
+   "visfit": {
+    "script": "/data/SETI/bin/visfit_r7y.py (unmodified)",
+    "md5": "8374ae2de6128f6ad970c90d5da1925c",
+    "epoch": "first",
+    "own": {
+     "drift": -983.4454956054688,
+     "re": 4.3438,
+     "im": 0.3523,
+     "ring_max": 0.8067,
+     "freq_max": 0.0633,
+     "n_vis": 945,
+     "offset_arcsec": 5.7501
+    },
+    "archived": {
+     "file": "/data/SETI/visfit_r7/out/A002_Xf8f6a9_X10359.fit.json",
+     "event_drift": -983.4454956054688,
+     "drift_used": -2023.376220703125,
+     "re": 1.7894,
+     "im": -0.8081,
+     "ring_max": 0.5303
+    }
+   }
+  },
+  {
+   "eb": "A002_Xf8f6a9_X10359",
+   "spw": 1,
+   "freq_GHz": 218.671139,
+   "chan": 3093,
+   "drift_Hz_s": -2023.38,
+   "repro": {
+    "T_archived": 5.047,
+    "T_recal": 5.047,
+    "cell_same": 1,
+    "max_abs_dI_star_Jy": 0.0,
+    "max_abs_dT_star_grid": 0.0,
+    "max_abs_dctrl_max": 0.0,
+    "n_ctrl_ge_star": [
+     35,
+     35
+    ],
+    "products_md5_archived": {
+     "_srcspec.npz": "37c788d9092f3886ceaac231f12ea2ac",
+     "_search.npz": "76b09fc4ac2521058ce4fd599972a43b",
+     "_result.json": "044afb596a8ecff53fa86374cd47e372"
+    }
+   },
+   "beam_at_star": {
+    "per_int": [
+     -0.0252,
+     -0.0251,
+     -0.0251,
+     -0.0229,
+     -0.0229,
+     -0.0229,
+     -0.0199,
+     -0.0198,
+     -0.0197,
+     -0.0139,
+     -0.0138,
+     -0.0138,
+     -0.0112,
+     -0.0111,
+     -0.0111,
+     -0.0055,
+     -0.0053,
+     -0.0051,
+     0.0026,
+     0.0027,
+     0.0027
+    ],
+    "min": -0.0252,
+    "max": 0.0027,
+    "mean": -0.0136,
+    "psf_tclean": -0.0285,
+    "star_offset_arcsec": [
+     3.784,
+     -4.338
+    ],
+    "beam_tclean_arcsec": [
+     7.59,
+     4.81
+    ]
+   },
+   "series_T": {
+    "star_waterfall": 5.047,
+    "star_mine": 5.0468,
+    "star_archived": 5.047,
+    "phase_centre": 0.0514,
+    "star_deleaked": 5.0573,
+    "pc_deleaked": 0.1255,
+    "leak_pred": -0.0063
+   },
+   "amp_track_mJy": {
+    "star_mine": [
+     113.81,
+     388.41,
+     187.3,
+     47.11,
+     -150.98,
+     187.02,
+     303.49,
+     192.66,
+     67.18,
+     181.21,
+     177.58,
+     133.59,
+     8.25,
+     303.11,
+     113.58,
+     197.87,
+     -104.97,
+     229.47,
+     200.71,
+     160.68,
+     146.79
+    ],
+    "phase_centre": [
+     177.97,
+     6.54,
+     72.13,
+     10.2,
+     -107.78,
+     -163.22,
+     324.38,
+     -224.94,
+     -12.76,
+     123.74,
+     -243.15,
+     143.69,
+     -42.32,
+     -135.21,
+     127.2,
+     133.37,
+     -205.63,
+     -22.49,
+     -91.22,
+     156.06,
+     -124.26
+    ],
+    "leak_pred": [
+     -4.54,
+     -0.52,
+     -1.93,
+     -0.25,
+     2.59,
+     3.67,
+     -6.63,
+     4.38,
+     0.28,
+     -1.76,
+     3.33,
+     -2.02,
+     0.45,
+     1.47,
+     -1.42,
+     -0.74,
+     1.09,
+     0.11,
+     -0.24,
+     0.41,
+     -0.34
+    ],
+    "star_deleaked": [
+     120.5,
+     385.61,
+     189.02,
+     43.59,
+     -153.78,
+     183.01,
+     311.51,
+     186.21,
+     65.87,
+     188.73,
+     174.51,
+     137.28,
+     8.79,
+     303.57,
+     116.0,
+     198.97,
+     -106.47,
+     228.86,
+     201.5,
+     159.98,
+     147.26
+    ]
+   },
+   "sigma_track_mJy": [
+    134.47,
+    114.17,
+    133.56,
+    131.38,
+    134.93,
+    142.18,
+    156.41,
+    153.51,
+    121.34,
+    132.81,
+    131.09,
+    109.9,
+    166.81,
+    156.68,
+    137.67,
+    150.53,
+    150.09,
+    132.34,
+    130.81,
+    135.1,
+    153.93
+   ],
+   "times_s": [
+    0.0,
+    10.08,
+    20.16,
+    535.58,
+    545.66,
+    555.74,
+    1155.41,
+    1165.49,
+    1175.57,
+    1741.49,
+    1751.57,
+    1761.65,
+    2364.62,
+    2374.7,
+    2384.78,
+    2961.74,
+    2971.82,
+    2981.9,
+    3595.2,
+    3605.28,
+    3615.36
+   ],
+   "pc_any_drift": {
+    "T": 2.8034,
+    "chan": 3093,
+    "drift": 1758.23
+   },
+   "pc_zero_drift": {
+    "max": 1.905,
+    "min": -2.379,
+    "n": 36
+   },
+   "track_image": {
+    "peak": 5.035,
+    "peak_lm_arcsec": [
+     3.5,
+     -4.5
+    ],
+    "peak_offset_from_star_arcsec": 0.33,
+    "at_star": 4.981,
+    "at_pc": 0.108
+   },
+   "cube": {
+    "cleaning": "none (niter=0, dirty cube)",
+    "weighting": "natural",
+    "chans": [
+     3246,
+     3281
+    ],
+    "nchan": 36,
+    "max_peak7_over_rms": 2.85,
+    "max_abs_pc_over_rms": 2.04,
+    "max_abs_ap_over_rms": 1.55,
+    "median_rms_mJy": 31.93,
+    "rows": [
+     {
+      "chan": 3246,
+      "freq_GHz": 218.676022,
+      "pc_mJy": -27.23,
+      "peak7_mJy": 79.7,
+      "peak7_lm": [
+       6.0,
+       -2.25
+      ],
+      "ap_flux_mJy": -8.67,
+      "star_mJy": 63.37,
+      "rms_mJy": 34.49
+     },
+     {
+      "chan": 3247,
+      "freq_GHz": 218.675533,
+      "pc_mJy": -6.09,
+      "peak7_mJy": 59.62,
+      "peak7_lm": [
+       5.25,
+       -2.25
+      ],
+      "ap_flux_mJy": -2.43,
+      "star_mJy": 12.02,
+      "rms_mJy": 32.52
+     },
+     {
+      "chan": 3248,
+      "freq_GHz": 218.675045,
+      "pc_mJy": 17.09,
+      "peak7_mJy": 27.14,
+      "peak7_lm": [
+       3.0,
+       -2.25
+      ],
+      "ap_flux_mJy": -0.83,
+      "star_mJy": -10.51,
+      "rms_mJy": 29.8
+     },
+     {
+      "chan": 3249,
+      "freq_GHz": 218.674557,
+      "pc_mJy": 13.19,
+      "peak7_mJy": 32.65,
+      "peak7_lm": [
+       4.5,
+       4.5
+      ],
+      "ap_flux_mJy": -3.57,
+      "star_mJy": 13.07,
+      "rms_mJy": 30.12
+     },
+     {
+      "chan": 3250,
+      "freq_GHz": 218.674069,
+      "pc_mJy": -15.15,
+      "peak7_mJy": 61.86,
+      "peak7_lm": [
+       5.25,
+       -4.5
+      ],
+      "ap_flux_mJy": -13.9,
+      "star_mJy": 54.31,
+      "rms_mJy": 30.2
+     },
+     {
+      "chan": 3251,
+      "freq_GHz": 218.67358,
+      "pc_mJy": -31.07,
+      "peak7_mJy": 72.77,
+      "peak7_lm": [
+       3.75,
+       -4.5
+      ],
+      "ap_flux_mJy": -23.77,
+      "star_mJy": 72.77,
+      "rms_mJy": 30.51
+     },
+     {
+      "chan": 3252,
+      "freq_GHz": 218.673092,
+      "pc_mJy": -53.3,
+      "peak7_mJy": 63.08,
+      "peak7_lm": [
+       1.5,
+       -6.0
+      ],
+      "ap_flux_mJy": -42.6,
+      "star_mJy": 41.73,
+      "rms_mJy": 31.21
+     },
+     {
+      "chan": 3253,
+      "freq_GHz": 218.672604,
+      "pc_mJy": -67.02,
+      "peak7_mJy": 69.71,
+      "peak7_lm": [
+       -1.5,
+       6.75
+      ],
+      "ap_flux_mJy": -50.92,
+      "star_mJy": -4.62,
+      "rms_mJy": 32.93
+     },
+     {
+      "chan": 3254,
+      "freq_GHz": 218.672116,
+      "pc_mJy": -58.84,
+      "peak7_mJy": 52.22,
+      "peak7_lm": [
+       -6.0,
+       -3.0
+      ],
+      "ap_flux_mJy": -47.0,
+      "star_mJy": -10.59,
+      "rms_mJy": 37.95
+     },
+     {
+      "chan": 3255,
+      "freq_GHz": 218.671627,
+      "pc_mJy": -49.16,
+      "peak7_mJy": 55.98,
+      "peak7_lm": [
+       -4.5,
+       0.0
+      ],
+      "ap_flux_mJy": -42.2,
+      "star_mJy": 23.54,
+      "rms_mJy": 34.18
+     },
+     {
+      "chan": 3256,
+      "freq_GHz": 218.671139,
+      "pc_mJy": -30.47,
+      "peak7_mJy": 63.38,
+      "peak7_lm": [
+       -3.75,
+       4.5
+      ],
+      "ap_flux_mJy": -24.19,
+      "star_mJy": 13.24,
+      "rms_mJy": 31.24
+     },
+     {
+      "chan": 3257,
+      "freq_GHz": 218.670651,
+      "pc_mJy": -4.22,
+      "peak7_mJy": 18.81,
+      "peak7_lm": [
+       -1.5,
+       -1.5
+      ],
+      "ap_flux_mJy": -7.02,
+      "star_mJy": -28.01,
+      "rms_mJy": 33.39
+     },
+     {
+      "chan": 3258,
+      "freq_GHz": 218.670162,
+      "pc_mJy": -10.19,
+      "peak7_mJy": 42.23,
+      "peak7_lm": [
+       -6.0,
+       -3.0
+      ],
+      "ap_flux_mJy": -18.7,
+      "star_mJy": -26.33,
+      "rms_mJy": 32.38
+     },
+     {
+      "chan": 3259,
+      "freq_GHz": 218.669674,
+      "pc_mJy": -12.43,
+      "peak7_mJy": 51.6,
+      "peak7_lm": [
+       3.0,
+       6.0
+      ],
+      "ap_flux_mJy": -21.28,
+      "star_mJy": -5.93,
+      "rms_mJy": 29.44
+     },
+     {
+      "chan": 3260,
+      "freq_GHz": 218.669186,
+      "pc_mJy": 3.33,
+      "peak7_mJy": 62.89,
+      "peak7_lm": [
+       4.5,
+       5.25
+      ],
+      "ap_flux_mJy": -1.22,
+      "star_mJy": -13.17,
+      "rms_mJy": 31.08
+     },
+     {
+      "chan": 3261,
+      "freq_GHz": 218.668698,
+      "pc_mJy": -11.95,
+      "peak7_mJy": 68.82,
+      "peak7_lm": [
+       4.5,
+       5.25
+      ],
+      "ap_flux_mJy": -0.16,
+      "star_mJy": -25.77,
+      "rms_mJy": 33.26
+     },
+     {
+      "chan": 3262,
+      "freq_GHz": 218.668209,
+      "pc_mJy": -27.99,
+      "peak7_mJy": 47.52,
+      "peak7_lm": [
+       4.5,
+       4.5
+      ],
+      "ap_flux_mJy": -11.8,
+      "star_mJy": -31.44,
+      "rms_mJy": 30.1
+     },
+     {
+      "chan": 3263,
+      "freq_GHz": 218.667721,
+      "pc_mJy": -10.13,
+      "peak7_mJy": 40.66,
+      "peak7_lm": [
+       -3.0,
+       6.0
+      ],
+      "ap_flux_mJy": -14.45,
+      "star_mJy": -41.49,
+      "rms_mJy": 29.74
+     },
+     {
+      "chan": 3264,
+      "freq_GHz": 218.667233,
+      "pc_mJy": 10.76,
+      "peak7_mJy": 39.89,
+      "peak7_lm": [
+       3.0,
+       -1.5
+      ],
+      "ap_flux_mJy": -4.22,
+      "star_mJy": -11.24,
+      "rms_mJy": 31.71
+     },
+     {
+      "chan": 3265,
+      "freq_GHz": 218.666744,
+      "pc_mJy": -13.78,
+      "peak7_mJy": 46.86,
+      "peak7_lm": [
+       -4.5,
+       5.25
+      ],
+      "ap_flux_mJy": -5.67,
+      "star_mJy": 31.8,
+      "rms_mJy": 31.61
+     },
+     {
+      "chan": 3266,
+      "freq_GHz": 218.666256,
+      "pc_mJy": -25.33,
+      "peak7_mJy": 64.75,
+      "peak7_lm": [
+       -3.0,
+       4.5
+      ],
+      "ap_flux_mJy": -6.38,
+      "star_mJy": 48.22,
+      "rms_mJy": 32.01
+     },
+     {
+      "chan": 3267,
+      "freq_GHz": 218.665768,
+      "pc_mJy": 20.69,
+      "peak7_mJy": 82.47,
+      "peak7_lm": [
+       4.5,
+       -4.5
+      ],
+      "ap_flux_mJy": 18.19,
+      "star_mJy": 78.12,
+      "rms_mJy": 34.81
+     },
+     {
+      "chan": 3268,
+      "freq_GHz": 218.66528,
+      "pc_mJy": 18.23,
+      "peak7_mJy": 81.42,
+      "peak7_lm": [
+       1.5,
+       -5.25
+      ],
+      "ap_flux_mJy": 13.22,
+      "star_mJy": 60.12,
+      "rms_mJy": 34.3
+     },
+     {
+      "chan": 3269,
+      "freq_GHz": 218.664791,
+      "pc_mJy": -19.95,
+      "peak7_mJy": 51.48,
+      "peak7_lm": [
+       0.75,
+       -5.25
+      ],
+      "ap_flux_mJy": -5.33,
+      "star_mJy": 5.71,
+      "rms_mJy": 37.9
+     },
+     {
+      "chan": 3270,
+      "freq_GHz": 218.664303,
+      "pc_mJy": -4.7,
+      "peak7_mJy": 52.35,
+      "peak7_lm": [
+       -1.5,
+       -3.0
+      ],
+      "ap_flux_mJy": 7.07,
+      "star_mJy": -14.86,
+      "rms_mJy": 34.67
+     },
+     {
+      "chan": 3271,
+      "freq_GHz": 218.663815,
+      "pc_mJy": 2.2,
+      "peak7_mJy": 60.09,
+      "peak7_lm": [
+       -6.75,
+       1.5
+      ],
+      "ap_flux_mJy": 4.25,
+      "star_mJy": -26.39,
+      "rms_mJy": 28.98
+     },
+     {
+      "chan": 3272,
+      "freq_GHz": 218.663326,
+      "pc_mJy": -19.97,
+      "peak7_mJy": 49.07,
+      "peak7_lm": [
+       3.0,
+       6.0
+      ],
+      "ap_flux_mJy": -11.88,
+      "star_mJy": -22.11,
+      "rms_mJy": 31.28
+     },
+     {
+      "chan": 3273,
+      "freq_GHz": 218.662838,
+      "pc_mJy": -4.83,
+      "peak7_mJy": 53.63,
+      "peak7_lm": [
+       -0.0,
+       6.0
+      ],
+      "ap_flux_mJy": -1.02,
+      "star_mJy": -20.01,
+      "rms_mJy": 33.83
+     },
+     {
+      "chan": 3274,
+      "freq_GHz": 218.66235,
+      "pc_mJy": 14.5,
+      "peak7_mJy": 50.07,
+      "peak7_lm": [
+       -2.25,
+       -0.75
+      ],
+      "ap_flux_mJy": 9.71,
+      "star_mJy": -28.52,
+      "rms_mJy": 33.36
+     },
+     {
+      "chan": 3275,
+      "freq_GHz": 218.661862,
+      "pc_mJy": 19.25,
+      "peak7_mJy": 61.39,
+      "peak7_lm": [
+       -3.0,
+       -2.25
+      ],
+      "ap_flux_mJy": 16.39,
+      "star_mJy": -15.23,
+      "rms_mJy": 33.04
+     },
+     {
+      "chan": 3276,
+      "freq_GHz": 218.661373,
+      "pc_mJy": 43.47,
+      "peak7_mJy": 58.73,
+      "peak7_lm": [
+       -3.0,
+       -6.0
+      ],
+      "ap_flux_mJy": 35.41,
+      "star_mJy": 6.09,
+      "rms_mJy": 32.7
+     },
+     {
+      "chan": 3277,
+      "freq_GHz": 218.660885,
+      "pc_mJy": 62.12,
+      "peak7_mJy": 67.7,
+      "peak7_lm": [
+       -1.5,
+       0.0
+      ],
+      "ap_flux_mJy": 44.42,
+      "star_mJy": 20.58,
+      "rms_mJy": 31.86
+     },
+     {
+      "chan": 3278,
+      "freq_GHz": 218.660397,
+      "pc_mJy": 35.51,
+      "peak7_mJy": 49.94,
+      "peak7_lm": [
+       -6.75,
+       -1.5
+      ],
+      "ap_flux_mJy": 18.1,
+      "star_mJy": 5.1,
+      "rms_mJy": 28.55
+     },
+     {
+      "chan": 3279,
+      "freq_GHz": 218.659908,
+      "pc_mJy": -6.66,
+      "peak7_mJy": 51.06,
+      "peak7_lm": [
+       -6.0,
+       -2.25
+      ],
+      "ap_flux_mJy": -13.58,
+      "star_mJy": -20.77,
+      "rms_mJy": 25.31
+     },
+     {
+      "chan": 3280,
+      "freq_GHz": 218.65942,
+      "pc_mJy": -5.13,
+      "peak7_mJy": 65.01,
+      "peak7_lm": [
+       -6.0,
+       -1.5
+      ],
+      "ap_flux_mJy": 6.56,
+      "star_mJy": -11.36,
+      "rms_mJy": 26.98
+     },
+     {
+      "chan": 3281,
+      "freq_GHz": 218.658932,
+      "pc_mJy": 30.03,
+      "peak7_mJy": 100.75,
+      "peak7_lm": [
+       -0.75,
+       -3.0
+      ],
+      "ap_flux_mJy": 54.03,
+      "star_mJy": 12.24,
+      "rms_mJy": 35.35
+     }
+    ]
+   },
+   "controls": {
+    "n": 512,
+    "r_from_star_arcsec": [
+     15.61,
+     38.32
+    ],
+    "r_from_pc_arcsec": [
+     11.76,
+     43.65
+    ],
+    "beam_mean_track_max": 0.3138,
+    "beam_mean_track_median_abs": 0.0571,
+    "n_beam_gt_0p1": 78,
+    "beam_at_star_mean": -0.0136
+   },
+   "dft_vs_waterfall_maxabs_mJy": 0.1361496775375906,
+   "visfit": {
+    "script": "/data/SETI/bin/visfit_r7y.py (unmodified)",
+    "md5": "8374ae2de6128f6ad970c90d5da1925c",
+    "epoch": "first",
+    "own": {
+     "drift": -2023.376220703125,
+     "re": 4.4915,
+     "im": 0.5161,
+     "ring_max": 0.4462,
+     "freq_max": 1.4938,
+     "n_vis": 945,
+     "offset_arcsec": 5.7501
+    },
+    "archived": {
+     "file": "/data/SETI/visfit_r7/out/A002_Xf8f6a9_X10359.fit.json",
+     "event_drift": -2023.376220703125,
+     "drift_used": -2023.376220703125,
+     "re": 4.4915,
+     "im": 0.5161,
+     "ring_max": 0.4462
+    }
+   }
+  }
+ ]
+}

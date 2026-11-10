@@ -1,0 +1,42 @@
+{
+ "star_name": "hd92945 (Gaia DR3 5455707157211784832) [B7]",
+ "image_rms_mJy": 0.3394029336050153,
+ "image_peak_mJy": 2.2007590159773827,
+ "peak_snr": 6.484207630157471,
+ "peak_offset_arcsec": 0.0,
+ "continuum_source_detected": true,
+ "sig_threshold": 5.0,
+ "pos_tol_arcsec": 3.0,
+ "variability": {
+  "n_epochs": 3,
+  "epochs": [
+   {
+    "eb": "A002_Xb9c01c_X41a2_target.ms",
+    "mjd": 57685.47584277778,
+    "flux_mJy": 1.8563593039289117,
+    "err_mJy": 0.2758898779803578,
+    "n_chan": 5942
+   },
+   {
+    "eb": "A002_Xb9cc97_X26b3_target.ms",
+    "mjd": 57686.49429722222,
+    "flux_mJy": 2.956976881250739,
+    "err_mJy": 0.24102133539007994,
+    "n_chan": 5960
+   },
+   {
+    "eb": "A002_Xb9cc97_X8560_target.ms",
+    "mjd": 57687.6106938889,
+    "flux_mJy": 2.1349790040403605,
+    "err_mJy": 0.19255690055832864,
+    "n_chan": 5972
+   }
+  ],
+  "weighted_mean_flux_mJy": 2.3179724425661377,
+  "chi2": 10.731715492311181,
+  "dof": 2,
+  "chi2_reduced": 5.365857746155591,
+  "time_span_days": 2.13485111111844,
+  "flagged_variable": true
+ }
+}

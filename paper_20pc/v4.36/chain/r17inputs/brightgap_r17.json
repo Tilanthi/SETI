@@ -1,0 +1,291 @@
+{
+ "plx_min_mas": 25.0,
+ "plx_frac": 0.2,
+ "match_tol_arcsec": 3.0,
+ "n_volume": 4227,
+ "n_missing": 257,
+ "bins": [
+  {
+   "lo": -2,
+   "hi": 2,
+   "n_volume": 22,
+   "n_missing": 22
+  },
+  {
+   "lo": 2,
+   "hi": 3,
+   "n_volume": 43,
+   "n_missing": 23
+  },
+  {
+   "lo": 3,
+   "hi": 4,
+   "n_volume": 100,
+   "n_missing": 14
+  },
+  {
+   "lo": 4,
+   "hi": 5,
+   "n_volume": 164,
+   "n_missing": 11
+  },
+  {
+   "lo": 5,
+   "hi": 6,
+   "n_volume": 301,
+   "n_missing": 21
+  },
+  {
+   "lo": 6,
+   "hi": 7,
+   "n_volume": 476,
+   "n_missing": 24
+  },
+  {
+   "lo": 7,
+   "hi": 8,
+   "n_volume": 641,
+   "n_missing": 29
+  },
+  {
+   "lo": 8,
+   "hi": 10,
+   "n_volume": 1295,
+   "n_missing": 54
+  },
+  {
+   "lo": 10,
+   "hi": 20,
+   "n_volume": 1185,
+   "n_missing": 59
+  }
+ ],
+ "faint_pct": 4.9,
+ "colour": {
+  "bv_cut": 0.3,
+  "n_early_volume": 196,
+  "n_early_missing": 39,
+  "early_pct": 19.9,
+  "other_pct": 5.4
+ },
+ "n_covered": 7,
+ "stars": [
+  {
+   "hip": 32349,
+   "name": "alf CMa",
+   "sp_type": "A0mA1Va",
+   "v_mag": -1.4600000381469727,
+   "hp_mag": -1.0875999927520752,
+   "plx_hip": 379.2099914550781,
+   "dist_pc": 2.64,
+   "n_mous": 3,
+   "n_eb": 3,
+   "n_win_a": 0,
+   "n_win_b": 12,
+   "raw_gb": 12.4,
+   "bands": [
+    3,
+    4,
+    5
+   ],
+   "projects": [
+    "2017.1.00698.S"
+   ],
+   "eb_already_searched": [
+    "A002_Xc99ad7_X348",
+    "A002_Xcc626d_X579",
+    "A002_Xd0fb35_X90dc"
+   ],
+   "sep_min_arcsec": 0.0,
+   "sep_max_arcsec": 0.37,
+   "pb_min": 1.0
+  },
+  {
+   "hip": 71683,
+   "name": "alf Cen A",
+   "sp_type": "G2V",
+   "v_mag": 0.009999999776482582,
+   "hp_mag": 0.13729999959468842,
+   "plx_hip": 754.8099975585938,
+   "dist_pc": 1.32,
+   "n_mous": 20,
+   "n_eb": 28,
+   "n_win_a": 0,
+   "n_win_b": 112,
+   "raw_gb": 210.8,
+   "bands": [
+    3,
+    4,
+    6,
+    7,
+    8,
+    9
+   ],
+   "projects": [
+    "2013.1.00170.S",
+    "2016.1.00441.S",
+    "2018.1.00557.S",
+    "2022.A.00017.S"
+   ],
+   "eb_already_searched": [],
+   "sep_min_arcsec": 0.03,
+   "sep_max_arcsec": 8.06,
+   "pb_min": 0.609
+  },
+  {
+   "hip": 91262,
+   "name": "alf Lyr",
+   "sp_type": "A0V",
+   "v_mag": 0.029999999329447746,
+   "hp_mag": 0.0868000015616417,
+   "plx_hip": 130.22999572753906,
+   "dist_pc": 7.68,
+   "n_mous": 4,
+   "n_eb": 19,
+   "n_win_a": 15,
+   "n_win_b": 61,
+   "raw_gb": 140.6,
+   "bands": [
+    6
+   ],
+   "projects": [
+    "2015.1.00182.S",
+    "2018.1.00332.S",
+    "2019.1.01637.S"
+   ],
+   "eb_already_searched": [],
+   "sep_min_arcsec": 0.12,
+   "sep_max_arcsec": 0.13,
+   "pb_min": 1.0
+  },
+  {
+   "hip": 113368,
+   "name": "alf PsA",
+   "sp_type": "A4V",
+   "v_mag": 1.159999966621399,
+   "hp_mag": 1.180799961090088,
+   "plx_hip": 129.80999755859375,
+   "dist_pc": 7.7,
+   "n_mous": 5,
+   "n_eb": 25,
+   "n_win_a": 15,
+   "n_win_b": 85,
+   "raw_gb": 396.2,
+   "bands": [
+    4,
+    6,
+    7
+   ],
+   "projects": [
+    "2012.1.00238.S",
+    "2013.1.00486.S",
+    "2015.1.00966.S",
+    "2018.1.01149.S",
+    "2021.1.00403.S"
+   ],
+   "eb_already_searched": [],
+   "sep_min_arcsec": 0.01,
+   "sep_max_arcsec": 0.23,
+   "pb_min": 1.0
+  },
+  {
+   "hip": 71681,
+   "name": "alf Cen B",
+   "sp_type": "K1V",
+   "v_mag": 1.3300000429153442,
+   "hp_mag": 1.242900013923645,
+   "plx_hip": 796.9199829101562,
+   "dist_pc": 1.25,
+   "n_mous": 14,
+   "n_eb": 20,
+   "n_win_a": 0,
+   "n_win_b": 80,
+   "raw_gb": 166.9,
+   "bands": [
+    3,
+    4,
+    6,
+    7
+   ],
+   "projects": [
+    "2013.1.00170.S",
+    "2016.1.00441.S",
+    "2018.1.00557.S",
+    "2022.A.00017.S"
+   ],
+   "eb_already_searched": [],
+   "sep_min_arcsec": 4.54,
+   "sep_max_arcsec": 12.38,
+   "pb_min": 0.505
+  },
+  {
+   "hip": 57632,
+   "name": "bet Leo",
+   "sp_type": "A3Va",
+   "v_mag": 2.130000114440918,
+   "hp_mag": 2.1605000495910645,
+   "plx_hip": 90.91000366210938,
+   "dist_pc": 11.0,
+   "n_mous": 1,
+   "n_eb": 7,
+   "n_win_a": 7,
+   "n_win_b": 21,
+   "raw_gb": 214.9,
+   "bands": [
+    6
+   ],
+   "projects": [
+    "2015.1.00676.S"
+   ],
+   "eb_already_searched": [],
+   "sep_min_arcsec": 0.08,
+   "sep_max_arcsec": 0.08,
+   "pb_min": 1.0
+  },
+  {
+   "hip": 50156,
+   "name": "MCC 124",
+   "sp_type": "M0.7V",
+   "v_mag": 10.083000183105469,
+   "hp_mag": 10.135100364685059,
+   "plx_hip": 43.31999969482422,
+   "dist_pc": 23.08,
+   "n_mous": 1,
+   "n_eb": 1,
+   "n_win_a": 1,
+   "n_win_b": 3,
+   "raw_gb": 25.0,
+   "bands": [
+    7
+   ],
+   "projects": [
+    "2017.1.01583.S"
+   ],
+   "eb_already_searched": [],
+   "sep_min_arcsec": 0.02,
+   "sep_max_arcsec": 0.02,
+   "pb_min": 1.0
+  }
+ ],
+ "sirius": {
+  "n_eb": 3,
+  "a_sep_min": 0.0,
+  "a_sep_max": 0.37,
+  "b_off_min": 7.43,
+  "b_off_max": 7.98,
+  "b_pb_min": 0.843,
+  "b_pb_max": 0.965,
+  "b_n_win": 12
+ },
+ "tot_eb": 83,
+ "tot_raw_gb": 1000.0,
+ "tot_win_a": 38,
+ "tot_win_b": 374,
+ "n_a_type": 4,
+ "n_class_a_star": 4,
+ "eb_already_searched": [
+  "A002_Xc99ad7_X348",
+  "A002_Xcc626d_X579",
+  "A002_Xd0fb35_X90dc"
+ ]
+}

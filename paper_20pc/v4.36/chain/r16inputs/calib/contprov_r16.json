@@ -1,0 +1,20 @@
+{
+ "_doc": "PROVENANCE of the measured continuum at the extraction position. The seven *_continuum.json files beside this one are verbatim copies of the per-target products written by bin/continuum_map_generic.py during the epoch-extension campaign (retrieved 2026-10-09 from ext2030/, pipeline run 2026-09-04). Nothing in them is recomputed here.",
+ "quantity": "image_peak_mJy is the maximum of a naturally weighted, line-excluded DIRTY image (tclean specmode='mfs', niter=0, pbcor=False, imsize=256, cell=0.5 arcsec) of the full available bandwidth, in mJy/beam. peak_offset_arcsec is the offset of that maximum from the image centre, i.e. from the FIELD::PHASE_DIR of the observation.",
+ "why_this_is_the_right_quantity": "The search extracts a spectrum by a direct discrete Fourier transform of the phase-rotated visibilities at a single sky position, in apparent flux, with no primary-beam correction. A dirty-map amplitude at that position is therefore the same estimator, and it includes any dust emission inside the synthesised beam. A photospheric extrapolation is not that quantity and for a disc host it is a lower bound on it by orders of magnitude.",
+ "how_it_is_used": "The map maximum is adopted as the continuum at the extraction position wherever the maximum lies within one pixel of the image centre AND the star's own offset from the pointing centre (pb_offset_arcsec, from the catalogue) is below the same pixel, so that the star and the maximum occupy the same pixel. Taking the MAXIMUM of the map is deliberately generous: it is an upper bound on the amplitude at any single position, so it makes the calibration mechanism as easy to admit as these data allow. Where the map yields no detection the five-sigma upper limit of the map is used instead, which is generous in the same direction.",
+ "band_rule": "A map is used only on windows of its own ALMA band, so no frequency extrapolation and no assumed dust spectral index enters anywhere. The band is read from the '[Bn]' tag the pipeline writes into star_name; a file without one is matched by band only if exactly one band is present among that star's windows.",
+ "known_defects_in_the_source_products": [
+  "peak_offset_arcsec is measured from the IMAGE CENTRE (the phase centre), not from the propagated stellar position, so it is the star's offset only when the star is at the phase centre. This is why the star's own pb_offset_arcsec is required here as well.",
+  "The per-epoch 'variability' block of these files is computed from a single-position DFT whose phase factor carries the sign exp(+2i.pi.(ul+vm)) rather than exp(-2i.pi.(ul+vm)), so it samples the mirror position -l,-m. For a star at the phase centre the two coincide; for L 836-122, 0.257 arcsec off centre in an extended configuration, that block reports 0.032 +/- 0.042 mJy against a 66-sigma map maximum of 63.07 mJy at the centre pixel. The variability block is therefore NOT used here, and the defect is reported to the integrator.",
+  "HD 107146 is not a star of this survey and is read only to be counted and discarded."
+ ],
+ "aumic_january": {
+  "note": "AU Mic's Band 3 continuum at its own extraction position, measured by this paper's own extractor and already deposited in r8inputs/aumic_scale_v408.json ('january'). It is read from that file, not restated here. The epoch is not one of the census blocks, so it bounds what the continuum at that position can be rather than giving its value in those windows."
+ },
+ "noise_used": {
+  "name": "the noise of the de-drifted, execution-block-combined spectrum",
+  "definition": "sigma_comb = median over channels of (sum_t 1/sigma_t^2)^(-1/2), the inverse-variance combination over integrations that the search statistic itself divides by; the per-integration channel noise is larger by roughly the square root of the number of integrations and is NOT the quantity used.",
+  "where_it_is_published": "rms_mJy of per_target_results_v3.99.csv and rms of holdout_export_v381.json, both of which satisfy smin = 5 sigma_comb -- asserted in the generator, in the units each file uses."
+ }
+}

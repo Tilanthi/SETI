@@ -1,0 +1,24 @@
+{
+ "generated_by": "tobs_r34.py --summary",
+ "median_after": 1296859979802206.2,
+ "median_before": 1296859979802206.2,
+ "moved": {
+  "GL 3379 Gaia DR3 3316364602541746048": {
+   "after": 203011499187347.75,
+   "before": 202606601583453.3,
+   "eb_after": "A002_Xdaef5a_X6873",
+   "eb_before": "A002_Xdaef5a_X6873",
+   "position_conditional": false
+  },
+  "LHS 1140": {
+   "after": 1800514421207109.0,
+   "before": 1728086677613826.8,
+   "eb_after": "A002_Xd9d7c7_X6fd2",
+   "eb_before": "A002_Xd9d7c7_X6fd2",
+   "position_conditional": true
+  }
+ },
+ "n1e15_after": 25,
+ "n1e15_before": 25,
+ "round": 3400
+}
