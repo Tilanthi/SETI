@@ -1,0 +1,248 @@
+%% APPENDIX D -- the false-alarm expectation and its resampling, block
+%% quality, registration, the pairs and the drift grid's edges.  Carries
+%% app:falsealarm (04_method.tex, 05_results.tex, 08_backmatter.tex,
+%% app_C, app_I), eq:expect, eq:pnull,
+%% sec:blockquality (04_method.tex, 05_results.tex),
+%% sec:regbudget (05_results.tex), sec:pairacct (cited by v4.30 Sec. 4; kept
+%% so the label resolves either way) and sec:edge (04_method.tex, 05_results.tex,
+%% pairs_v415.py).
+%% r30 (write-apx): D.1 about half its v4.30 length with the estimator and
+%% the resampling as two displayed equations; D.2 and D.3 short; the pair
+%% accounting kept short here because Sec. 4 cites it; Table D1 (tab:edge) is
+%% one sentence of D.5 (r34: D.5 folded into D.4; sec:pairacct kept as a phantom label).  r34 (W3): D.1 split one idea per paragraph; the
+%% rule that chose the retained control positions and the stratified share
+%% (R2-5); new D.2 sec:choicegrid + tab:choicegrid (R2-2, 8-cell grid).
+%% r35 (W3, A1): the per-window attributed share, drawn towards the pooled
+%% share (beta-binomial, strength by maximum likelihood), is the ADOPTED
+%% estimator (\CeExp, \CeProbNull); the pooled share (\CeExpPool,
+%% \CeProbNullPool) and the median-split strata are the two checks, in D.1
+%% paragraph 3; \CeMaskPct is the share of the expectation removed with the
+%% per-window shares (no longer 89/286 = \CeAwPool).  \CgAwShr* are retired.
+%% The control assumption is stated once, in
+%% Appendix B.  The band-edge sentence is REQUIRED on the page (v409 V7c).
+%% r36 (W3, R2-3): D.1 names the counting rule (largest cell on both sides; secondaries enter neither)
+%% and carries the other-rule comparison (N3 H-R23b, round 3640 \Ac*; whole-beam only, narrow field not computable).  (R1-2) D.2 says what the Bonferroni factor does and does
+%% not do; the corrected value stays a phrase (\CgBonfPhrase), so 4 x the printed 0.014 never reads as a
+%% printed 0.054.
+\section{The false-alarm expectation and the control ensemble}
+\label{app:falsealarm}
+
+\subsection{The expectation and its resampling}
+
+The comparison with chance asks whether the stars cross the trigger more
+often than empty sky in their own fields. Each window supplies
+its own answer to how often empty sky does so, from its control positions,
+and one attribution set serves both sides, the mask of
+Appendix~\ref{app:linemask} being applied to a control maximum exactly as to
+a crossing. Over the \CeNWin{} Class~A windows $w$ of the primary census the
+expected number of unattributed crossings is
+\begin{equation*}
+\bar N=\tau\sum_{w}r_w\,(1-a_w),\qquad r_w=\frac{n_w}{N_{\rm ctrl}},
+\end{equation*}
+where $n_w$ of the window's $N_{\rm ctrl}=\NCtrl$ control positions reach the
+trigger, $a_w$ is the window's share of control exceedances that land
+inside the mask, and $\tau$ is the share the atmospheric screen leaves. The rates alone
+give \CeExpTrig{} expected crossings.
+
+Both sides are counted by one rule, \AcRulePrimary. A star's window
+enters through its primary crossing, the largest cell at the star, and a
+control position through its own largest cell, which is the one tested
+against the trigger and the mask. A weaker cell that also reaches the
+trigger enters neither side.
+
+The two other counting rules compared in \S\ref{sec:trigunif} are computed
+in the same way on both sides, from the channel profiles retained for the
+star and its control positions in every Class~A window. Read with the
+adopted mask and telluric screen, those profiles give back the adopted
+count exactly, so the comparison changes the rule and nothing else. Under
+the every-cell rule the excess lies wholly in the weaker cells,
+\AcStarSecNWord{} at the stars against \AcSecExp{} predicted
+($P=\AcProbSec$). These readings can be made only for the whole primary
+beam. The nearest-field reading of \S\ref{sec:choicegrid} comes from each
+window's flag of a crossing, and no channel profile of that field was kept.
+
+The attributed share has to be measured where control maxima actually fall
+in frequency, and that needs their spectra. The extractor kept a dynamic
+spectrum for only \RcNRetCtrl{} of the control positions in each window, to
+save storage, and it chose them when the products were written, as entries
+spaced evenly through its list of control positions. That list is in the
+order of the seeded random draw that placed the positions, so the choice
+depends on nothing in the data. Of the \CeNExc{} exceedances at these
+positions, \CeNExcAttr{} lie inside the mask.
+
+That share is not the same in every window. Windows differ in how much of
+their band the mask covers, and a window crowded with listed lines loses
+more of its control maxima to the mask than one that is not. Each window's
+$a_w$ is therefore measured from its own exceedances. Most windows have only
+a few, so each window's share is drawn towards the pooled share, the more
+strongly the fewer exceedances it has, and the strength of that pull is the
+one that best fits the scatter between windows (a beta-binomial model).
+Taken window by window in this way, attribution removes \CeMaskPct{} per
+cent of the expectation, and this is the expectation used throughout.
+
+Control spectra were kept in \CeNExcWin{} of the \CeNWin{} windows. The
+rest carry the share of their own channels that the mask covers, whichever
+reading is used.
+
+Two simpler readings are kept as checks. One pooled share, \CeAwPool, for
+every window whose control spectra were kept gives \CeExpPool{} expected,
+with $P=\CeProbNullPool$. Shares measured
+separately for the windows above and below the median masked fraction,
+\CgAwHi{} and \CgAwLo{} from \CgAwNExcHi{} and \CgAwNExcLo{} exceedances,
+give \CgAwStratExp, with $P=\CgAwStratProb$, \CgAwStratClause. Both checks
+leave the count consistent with chance.
+
+The screen (Appendix~\ref{app:rfi}) then removes \CeTlCtrlCut{} of the
+\CeTlCtrlSurv{} exceedances that remain at these positions, leaving $\bar N=\CeExp$ against
+\CeObs{} observed.
+
+Over all windows together, the exceedance rate near a band edge is
+$\times\VnEdgeRatio$ the interior rate, but one window, toward HD~48370, holds \VnEdgeDomPct{} per
+cent of the near-edge exceedances. Without it the ratio is
+$\times\VnEdgeNoDomRatio$ ($\times\VnEdgeHalfCleanRatio$ on a held-out half,
+$\pv{\VnEdgeHalfCleanP}$), so no edge correction is applied.
+
+Some data enter neither side of the comparison. The \CeNWinTail{} Class~A
+windows of the archival tail are left out, and so is the crossing toward
+\CtUncatStar. That crossing is \MbUncatAttrWord{} and is one of the \CsNCross{}
+census crossings, but its position has no catalogue row. It therefore has no
+control positions of its own on the expected side, and so it is not counted
+on the observed side either. The window it lies in is still summed once,
+through the control positions about \MbUncatHost. Which statistic every
+crossing enters is listed in \texttt{statistics/\allowbreak
+event\_membership.csv} of the data archive.
+
+Windows share execution blocks, so the count is compared through block
+resampling. In each of $B=\CeNBoot$ resamplings the blocks are drawn with
+replacement, each window's rate is redrawn binomially from its own probes,
+and the attributed shares and the screen are redrawn from their own counts,
+giving $\bar N_b$; then
+\begin{equation*}
+P=\frac{1}{B}\sum_{b=1}^{B}\Pr\!\left(N\ge N_{\rm obs}\mid\bar N_b\right),
+\end{equation*}
+with $N$ a Poisson count and $N_{\rm obs}=\CeObs$, gives $P=\CeProbNull$,
+conditional on the control-position model (Appendix~\ref{app:radius}). As
+a check, a pseudo-star read at one control position in every window of
+a block is no more dispersed than one read window by window (variance ratio
+\BgDisp) and reaches \CeObs{} with probability \BgPseudoP. The widened recurrence window
+of \S\ref{sec:etacrv} is read in the same way over its \WuNWin{} distinct
+windows.
+
+The bound quoted in \S\ref{sec:trigunif} reads the lower tail of the same
+average over resamplings. With $k$ added to the mean $\bar N_b$ of every resampling,
+\begin{equation*}
+P_{\le}(k)=\frac{1}{B}\sum_{b=1}^{B}\Pr\!\left(N\le N_{\rm obs}\mid\bar N_b+k\right)
+\end{equation*}
+is the probability, on the same control positions, of a count as low as the
+one observed, and it falls as $k$ grows while $P$ rises. It is
+\CeProbAtLim{} at $k=\CeAddLim$ and drops to \CeProbAboveLim{} for one more.
+So \CeAddLim{} is the largest additional mean number of primary crossings
+compatible with the observed count at the one-sided \CeAlphaPct{} per cent
+level, conditional on the mask and on the control-position model. It is not
+a confidence bound on a realised number of crossings. Both tails are
+tabulated against $k$ in
+\texttt{statistics/\allowbreak chance\_allowance\_table.csv}.
+
+The control positions of one window are not independent draws, since
+neighbouring positions see much the same noise. Their layout can be rebuilt
+exactly from the extractor's seeded random positions, and two positions
+less than a tenth of a synthesised beam apart are then found to be
+correlated at \CcRhoNear. The correlation falls to half that by
+\CcHalfBeam\,$\theta_{\rm syn}$, and beyond half a beam no binned value
+exceeds \CcRhoHalfBeamOut. The correlogram is given in
+\texttt{statistics/\allowbreak control\_correlation.csv}.
+
+To see what this correlation does to the comparison, each window's positions
+were also grouped into blocks, either square cells from half a beam to a few
+beams across or arcs of the annulus. The \CcNLead{} windows that carry
+\CcLeadPct{} per cent of $\bar N$ then keep a median of \CcNeffLeadMed{}
+effective positions out of \NCtrl, and never fewer than \CcNeffLeadMin.
+Drawing each window's rate from its own blocks instead of binomially raises
+the part of the scatter in $\bar N$ due to the window rates from
+\CcSdBinom{} to \CcSdCorr. That is small beside the \CcSdTotal{} of the block
+resampling as a whole. With the correlation between control positions kept,
+$P$ is about \CcProbRange{} and the bound \CcAddLimRange, close to the \CeProbNull{}
+and \CeAddLim{} of the binomial redraw, which is therefore kept.
+Each window's effective number of positions is given in
+\texttt{statistics/\allowbreak control\_correlation\_windows.csv}.
+
+\subsection{The choices made after the crossings were seen}
+\label{sec:choicegrid}
+
+Two choices behind the comparison were settled after the crossings had been
+examined, and each could have been made the other way. The control field
+can be the whole primary beam or only the positions nearest the star, and
+the mask can include SO or leave it out. The comparison was repeated for
+each of the \CgNTrialWord{} combinations of field and mask, with the same
+resampling. Each combination was also read with the expected rate raised by
+the star's excess just below the trigger (Appendix~\ref{app:radius}). That
+excess is a measured factor and was not chosen, so it is a check on the
+background. Table~\ref{tab:choicegrid}
+gives all \CgNCellWord{} readings.
+
+The smallest probability in the table is \CgMinProb, for \CgMinCell.
+Multiplied by \CgNTrialWord, a Bonferroni factor that allows for its having
+been picked out of the table, it is \CgBonfPhrase, \CgVerdictClause.
+The factor corrects for one thing only, the choice of the smallest of the
+\CgNTrialWord{} combinations examined. It does not make every choice made
+after the crossings were seen safe, and the probability, corrected or not,
+still holds only so far as the control positions represent the background
+at the star.
+
+Only the field and the mask count towards that factor. The stellar rate
+is one measured factor, \CeNear, the same in every combination, and raising
+the expected count can only raise the probability. The smallest value therefore always lies among the
+\CgNTrialWord{} combinations read at the control rate.
+
+\begin{table}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\caption{Unattributed crossings observed and expected, with the chance
+probability, for each control field and line mask.}
+\label{tab:choicegrid}
+\input{tab_chancegrid_r34}
+\end{table}
+
+\subsection{Execution-block quality}
+\label{sec:blockquality}
+
+The comparison assumes that each block's control ensemble behaves like
+noise, and in one block all \NCtrl{} probes exceed the trigger. Every block
+is therefore judged on the median of its windows' control ensembles over its
+class median. The same measure, applied window by window, also flags
+\DqNWin{} of the \NWindows{} windows at \BqFactor{} the survey median. That is
+a flag on single windows inside blocks that pass, and it is why the crossing
+toward \BkFlagOtherStar{} is in quality-passing data and yet is withheld from
+the tests that depend on amplitude (\S\ref{sec:technosearch}). The criterion was written after the condition
+had been seen, but the choice is not a delicate one. The failing block sits
+at \BqFailQ{} and the next at \BqNextQ, and its \BqFailNWin{} coarse-channel
+windows hold no census crossing once ALMA's final flags are restored
+(\S\ref{sec:method}).
+
+\subsection{Registration}
+\label{sec:regbudget}
+
+Between epochs, the predicted cell is registered to \RgBudgetChMed{} of a
+channel in every window. Widening each reading to the worst cell within
+\RgTolKms\,km\,s$^{-1}$, re-anchoring it along the discovery track, or
+raising the bar to \ZtTrialThr{} changes no disposition, although
+registration to a single channel is tested only on the unresolved line of
+\RgRegStar, which registers to \RgRegMaxCh{} of a channel.
+
+\phantomsection\label{sec:pairacct}%
+Where the epochs of a pair of crossings (\S\ref{sec:etacrv}) are close
+enough for the predicted offset to be tighter than the searched window, all
+\TjNPower{} such pairs miss a drift changing at a constant rate by at least
+\TjSigMin{} times the resolution.
+
+\subsection{The drift grid's edges}
+\label{sec:edge}
+
+The drift trials run from $-\dot\nu_{\max}$ in half-channel steps to the
+first trial at or beyond $+\dot\nu_{\max}$, so the searched interval is
+asymmetric by up to one step. Of the \EgNPop{} crossings of \EgDriftPop,
+\EgNDrift{} have a fitted drift, and of these the \EgNEdge{} toward
+\EgEdgeStars{} lie on an outermost trial of their own window's grid. Their
+drift rates, in the observatory frame, and the accelerations they imply are
+lower bounds, and \EgEdgeOutClause.

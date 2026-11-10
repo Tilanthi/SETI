@@ -1,0 +1,193 @@
+\section{Conclusions}
+\label{sec:conclusions}
+
+This paper asked whether any of the nearby stars that ALMA has observed shows
+a narrowband, drifting radio carrier of the kind an artificial transmitter
+would produce at millimetre and submillimetre wavelengths. Because the
+observations were taken for other purposes, it also asked how deep and how
+complete a search of the archive for such a carrier can be. To answer both
+we searched the archival ALMA spectra of \NSysClassA{} star systems within
+40\,pc. The fine-channel windows cover \CvUnionA\,GHz of sky frequency, in
+\CovNIslands{} separate intervals between \SurvFreqLoA{} and
+\SurvFreqHiA\,GHz. That union is \SbPriorRatio{} times the \SbPriorBandMHz\,MHz of the
+wider of the two millimetre searches of nearby stars that preceded it, and
+the coverage of the median system alone is still \SbPriorRatioSysMed{}
+times larger. We removed the drift from each spectrum and compared it with
+control positions in the same field, so that the background at the star
+could be judged from the observation itself.
+
+No transmitter was found. In \CsNCross{} windows the stellar statistic reaches
+the threshold $T_\star\geq\StageNullTrig$. Of these, \MkNCoinc{} coincide with
+catalogued molecular lines, \LnAttrSupp{} of them with further evidence of
+line emission, and none was identified as interference by the available
+diagnostics. Counted by the adopted rule, each window by its largest cell, the
+other \CeObs{} are consistent with chance. The expected number, built
+window by window from the control positions beside each star, is \CeExp, with
+$P=\CeProbNull$. Built instead from the control positions of all the windows
+pooled together, as a check, it is \CeExpPool, with $P=\CeProbNullPool$. The extraction field and the line
+mask could each have been chosen in two ways. Corrected for having been
+picked out of those \CgNTrialWord{} combinations, the smallest of their
+probabilities is \CgBonfPhrase, \CgVerdictClause. That correction allows only
+for the choice among those combinations, and it does not make good every
+decision taken after the data had been seen. All of these probabilities are
+conditional on the line mask as adopted, which was completed
+after the crossings had been examined, and on the control positions being a
+fair model of the background at the star. They also depend on the counting
+rule, which is applied at the star and at the control positions alike.
+Counting every unattributed cell instead gives
+\AcObsCell{} against \AcExpCell{} expected, with $P=\AcProbCell$, or
+\AcProbCellTwoPhrase{} when doubled for the choice between the two ways of
+counting cells and \AcProbCellThree{} when trebled for the three rules
+compared. The excess lies in \AcStarSecNWord{} weaker cells behind the largest ones,
+where the control positions predict about \AcSecExp, and none of them is
+found again in another block.
+
+None of the unattributed crossings became a recurrent feature, although
+the molecular lines did, as they should. Wherever an unattributed
+crossing was observed again in a separated session and the repeat could be
+read, nothing was found at its own frequency in the star's frame. That shows
+only that none of them returns in the way a line would. A drifting carrier
+would by then have moved, and the archive can test one only by asking
+whether a single trajectory joins two crossings, which can tell crossings
+apart but can never confirm them. Recurrence is in any case necessary for an
+artificial origin but not sufficient: a feature found again would still need
+its line identity, interference and the behaviour of its frequency in the
+star's frame to be checked. For the crossings themselves, therefore,
+this is a non-detection, not an exclusion.
+
+Because nothing was confirmed, what the search delivers is a set of
+single-epoch upper limits. In the \XwNWin{} windows where an unattributed
+crossing, or a weaker unattributed cell, is already present, a carrier
+reaching only the threshold would not have stood out, so there the limit is
+quoted at the statistic actually observed, which errs on the conservative
+side. That moves the limits of \XwNSysWord{} systems, marked in
+Table~\ref{tab:persys}, and \XwHeadlineClause. The limits apply to a
+carrier narrower than one channel, lying outside the molecular-line mask,
+radiating while ALMA observed and drifting at a constant rate of no more
+than \DriftCeilLo--\DriftCeilHi\,nHz, the drift ceiling discussed in
+\S\ref{sec:excludes}. The injected carriers that calibrate them drift
+linearly, so a track that curves during the integration is not covered.
+To reach the threshold nine times in ten in a single epoch, such a carrier needs an equivalent isotropic radiated power, or EIRP,
+with a median, over the \NSysALimSum{} systems with a bounded limit, of
+$\EirpNinetySysMedA$\,W in each system's most sensitive window. These limits
+are corrected for the atmospheric decorrelation wherever the phase rms was
+measured in the block, and elsewhere by a value imputed from blocks matched in
+baseline length, which are marked in Table~\ref{tab:persys}. The phase rms is
+measured on the calibrator and not along the line of sight to the star, so
+the correction is itself a floor, and the limits remain optimistic by any
+loss it misses. This is a single-epoch trigger completeness, not the
+chance of confirming a signal, since a crossing would still have to be found
+again. The limit is not the same at every frequency a system was observed
+at, and Fig.~\ref{fig:waterfall}c shows how much of the covered band each
+power reaches. At $\CovEirpRefTex$\,W it is \CovUnionAtRef\,GHz of the
+\CvUnionA\,GHz searched. The deepest limit, $\EirpNinetySysLoA$\,W, is reached toward
+$\epsilon$~Eridani, and \NSysEfifteen{} of the \NSysALimSum{} systems with a
+limit that does not depend on an unchecked position reach
+$\CovEirpRefTex$\,W. $\epsilon$~Eridani, however, lies
+\EdDeepOffLo--\EdDeepOffHi$''$ from the phase centre, where the primary-beam
+response is below \OffAcut, and no carrier was injected further out than
+\OffInjMaxArcsec$''$, so its limit rests on the model of the beam alone. The deepest limit that does rest on injected
+configurations is $\PtDeepInjEirp$\,W, toward \PtDeepInjStar. Nor is
+$\epsilon$~Eridani's limit corrected for decorrelation, since neither its block
+nor any block matched to it records the phase rms. Its spectrum was extracted at
+the star's apparent position, so the parallax is allowed for.
+
+It helps to set these numbers against something we have built ourselves.
+The Arecibo planetary radar, one of the most powerful transmitters ever
+operated on the Earth, had an EIRP of about $\AroEirp$\,W at
+\AroFreqGHz\,GHz. The median limit found here is about \AroMedMult{} times
+that, and even the deepest is \AroDeepMult{} times it, so
+\AroNSysBelowWord{} system reaches an Arecibo-like transmitter, although
+\AroNSysTen{} come within a factor of ten of it (counted on the unrounded
+limits, \S\ref{sec:mmdifferent}). The same comparison can be
+put as a distance. Because the received flux falls as the square of the
+distance, an Arecibo-like transmitter placed at a star of this survey would
+be detected only if the system were much closer to us than it is. For the
+median system it would have to be within \AroDistMedPc\,pc, and even in the
+most favourable case, \AroDistMaxStar, whose limit is deep for its distance,
+within \AroDistMaxPc\,pc, a value whose decorrelation correction is
+\AroDistMaxBasis. A \BenchDiam\,m dish radiating \BenchPowerMW\,MW is
+a more natural transmitter at these frequencies. Tuned to the lower edge of
+each system's most sensitive window, between \BenchTunedFreqLo{} and
+\BenchTunedFreqHi\,GHz, its EIRP lies above the single-epoch limit of
+\BenchNSysTuned{} of the \NSysALimSum{} systems. It could only be seen, of
+course, if its beam happened to point at us, as discussed in
+\S\ref{sec:mmdifferent}.
+
+These limits come from the single-epoch carrier search, and they are not the
+deepest number in the paper. Toward Proxima Centauri the Class~B spectra,
+stacked in the star's own frame, reach $\SzProxEirpCensus$\,W in
+\ChanBModeMHz\,MHz channels (\S\ref{sec:stack}). That is a limit of a
+different kind. It applies to an unresolved spectral excess that holds its
+frequency in the stellar frame to within one of those wide channels over all
+the epochs combined, it carries its own injection calibration, and it cannot
+tell a carrier from a line. A transmitter on \PxPlanet{} would move across
+many channels in its orbit, and unless the orbit is seen nearly face-on the
+stack would dilute it by roughly the number of channels crossed, about
+\PxNChanWalk{} at $\sin i=1$. For a drifting carrier the single-epoch
+limits therefore remain the ones that apply.
+
+Confirmation is limited by repeat coverage, by the depth of
+the repeats that do exist and, for a drifting carrier, by a repeat
+frequency that is uncertain by a median of \ZtRegChanMed{} channels. A
+crossing can be put to the test only if its star is observed again in a
+separated session, at the frequency the crossing predicts. Of the
+\NSysClassA{} systems, \ZcNoRepNoSep{} were never observed in two separated
+sessions at all, so that nothing found toward them could have been confirmed
+at any power. For \ZcNoRepNoFreqWord{} more, separated sessions exist but
+share no covered frequency, so the same-frequency recurrence test cannot be
+applied there. Where a repeat exists it may still be too shallow, as it was
+for \HjNPowerLo{} of the \RcNExcl{} crossings read at their predicted cell.
+A drifting carrier, finally, would have to be looked for again at a
+frequency carried forward from its own fitted drift, and one block does not
+measure the drift well enough to say where that will be. A programme designed for the purpose, on the same telescope,
+would use fine channels throughout, tune away from the bright molecular
+lines and schedule its repeat observations deliberately, so that any
+crossing it found could be looked for again at the frequency it predicts
+(\S\ref{sec:future}).
+
+What, then, can be said about transmitters? Take a continuous carrier
+narrower than a channel at one of these stars, outside the line mask and
+drifting at a constant rate within the ceiling. At or above the system's limit, and within the
+frequency range of its most sensitive window, which lies between
+\NtBestNuLo{} and \NtBestNuHi\,GHz across the systems, it would have
+produced a threshold crossing in nine trials in ten. That is a completeness and not a
+deterministic exclusion. Of \NSysALimSum{} carriers, one sitting exactly at
+each system's limit, about \NtMissAtLimWord{} would have been missed, and
+more if the correction for decorrelation falls short.
+
+A great deal remains possible. A transmitter below these limits would not have been seen,
+and neither would one that was switched off, or whose beam was not pointed
+at the Earth, while ALMA was looking. Signals at frequencies between the
+covered intervals or inside the line mask, or drifting faster than the
+ceiling, are not constrained at all, and signals broader than a channel only
+weakly. Nor is anything said
+about the nearby stars that ALMA has not observed, which are almost all of
+those within 40\,pc.
+
+%% ====================================================================
+%% HOW THIS SECTION IS BUILT (2026-11-09).  It runs as the abstract does:
+%% the question (para 1), what was found (paras 2-3: crossings, chance as
+%% conditional on the adopted mask and the control-position background,
+%% expected count built window by window; the trials factor for the four
+%% field/mask combinations, which covers that one choice and no other
+%% post-hoc decision; no recurrence; a non-detection, not an exclusion),
+%% the single-epoch limits (paras 4-6: ninety per cent trigger completeness
+%% for a CONSTANT-DRIFT carrier (the injections drift linearly), the median
+%% over the systems with a bounded limit, the limits CORRECTED for
+%% decorrelation where the phase rms was measured, that correction a floor
+%% so the limits stay optimistic by any residual; how the limit varies with
+%% frequency, Fig. 2c; the deepest value, epsilon Eri, beyond the injected
+%% offsets, with the deepest limit resting on injected configurations
+%% beside it; Arecibo and the 12 m benchmark on the corrected limits; the
+%% Class B stack, which DILUTES a drifting carrier by the channels
+%% crossed), what limits confirmation (para 7: ONE sentence names all
+%% three -- repeat coverage, the depth of the repeats, and for a drifting
+%% carrier a repeat frequency uncertain by ZtRegChanMed channels -- then
+%% each in turn; the old "coverage, not depth" is withdrawn),
+%% and what the survey would have caught and what remains possible (paras
+%% 8-9).  NEVER "excluded" for transmitters: the survey would have produced
+%% a crossing in nine trials in ten, which is a completeness, not a
+%% deterministic exclusion.  No citations.  Macro names are written here
+%% without backslashes on purpose.
+%% ====================================================================

@@ -1,0 +1,60 @@
+%% APPENDIX E -- radio-frequency interference screening.  Carries
+%% app:rfi (05_results.tex, 06_discussion.tex, app_J, counts_r15.py).
+%% r30 (write-apx): Table E1 (tab:rfitests) is one paragraph giving each test
+%% with its outcome; every value is a macro the table printed.  The rows'
+%% populations are named where the reader needs them.  \AppMTubeP carries
+%% its own relation sign ($<3\times10^{-4}$), hence "$p$\,\AppMTubeP"; r35: the same holds
+%% for \NtTubeCenP, the census-only tube count (N3 misc_r35 S4) that replaces it here.
+%% r34 (W3): readability only, one idea per paragraph; no wording of a test changed.
+%% r35 (W3, m1): each population is named as a set the paper defines (census,
+%% archival tail, hold-out); the frequency-tube test now runs over the census's
+%% \CsNCross crossings (\NtTubeCen*); \AppMTube*/\AppMNCrossF (released catalogue rows) no longer cited.
+\section{Radio-frequency interference screening}
+\label{app:rfi}
+
+Interference is the first alternative explanation for an unattributed
+crossing, although an interferometer is a poor receiver of it, since a
+signal not in the far field at the phase centre is suppressed by its rapidly
+varying geometric phase. Allocations exist across the searched bands
+\citep{ITU2024}, and the one documented hazard, spaceborne cloud radar at
+\RadarLo--\RadarHi\,GHz \citep{CloudSat2002,EarthCARE2023,ALMAMemo504},
+overlaps \RadarNWin{} of the \RadarNTot{} census windows, with \RadarNCross{}
+crossings.
+
+The correlator flagging was not retained, so no per-channel interference
+flag exists, and interference can be looked for only in the way the
+crossings are distributed. The tests below therefore describe the
+population. They clear no single crossing, and they do not substitute for
+the ON/OFF cadence of a dedicated search. Each test could have failed, and
+none did.
+
+Each $p$ value is computed against the same peaks redrawn on their own
+channel grids. Crossings cluster in sky frequency only on the survey's own
+lines. \NtTubeCenObs{} of the \CsNCross{} census crossings lie within
+$\pm\DispoHalfKms$\,km\,s$^{-1}$, in sky frequency, of one of the bright
+lines the pipeline searched for from the start, those of CO and its
+isotopologues, HCN, HCO$^{+}$, CS, CN, SiO and H$_2$CO, against
+\NtTubeCenNull{} expected ($p$\,\NtTubeCenP). That is a coarser test than attribution, which uses the
+full list of Appendix~\ref{app:linemask} in the star's own frame, so the
+two counts differ.
+
+The \QcNQP{} unattributed quality-passing crossings of the \NtSetUnName{} do not crowd on one
+another between \QcTolLo{} and \QcTolHi\,MHz ($p=\QcPQPCorr$), whereas the
+attributed ones do. None of the
+\TlNCross{} crossings of \TlCrossPop{} lies within \ScRadMHz\,MHz of a
+telluric line. Peaks are spread uniformly within their windows (median
+\RfiFracMed), which a fixed intermediate frequency would not allow.
+
+Interference reaching several stars would make them cross at the same
+frequency. Coincidences between different stars within \RfiOccTol\,MHz number
+\RfiOccObs{} against \RfiOccNull{} expected ($p=\RfiOccP$). Of the
+\ImNScreen{} unattributed crossings in catalogued blocks, \ImNNoParent{} have
+no catalogued transition in the image band and \ImNParentAbsent{} have one that
+their own block saw too faint to leak; for \ImNLeft{} the image frequency was not
+observed.
+
+The one evident concentration is at the carbon monoxide
+tunings. The \TlBandAll{} crossings between \TlBandLo{} and \TlBandHi\,GHz
+include \TlBandObs{} of the \TlBandNSub{} unattributed crossings of the
+census and the hold-out, against \TlBandNull{} expected from where the
+windows were tuned.
