@@ -292,3 +292,12 @@ The GitHub commit and UTC push time are appended below that line after the push 
 * **E4** T2 parts (a) SPE and (c) GOLD run outside the selection runner (need the `spe` ingest group / the grism pipeline on release day).
 
 END OF FROZEN TEXT
+
+---
+**§13.1 PUSH RECORD (appended after hashing; not part of the frozen text).** Frozen text = this file up to and including the line
+`END OF FROZEN TEXT`; verify with `sed '/^END OF FROZEN TEXT$/q' EUCLID_DR1_LRD_SELECTION_SPEC_v1.0.md | sha256sum` =
+`cc0208c95c4c50f61053084840f245d1acb6543f308b56da0eb240e598969905` (line 3 of `EUCLID_DR1_LRD_SPEC_HASHES_v1.0.txt`).
+Freeze commit: **Tilanthi/SETI `b06d23dc531e91bc2bf68c4318ea32365eccb21f`**, pushed **2026-11-11T11:40:13Z**
+(`paper/EUCLID_DR1_LRD_SELECTION_SPEC_v1.0.md` blob 2124e0d96aa1199e13ad3f46e819cb600b795189, `paper/EUCLID_DR1_LRD_SPEC_HASHES_v1.0.txt` blob
+2bb216895de585eaf55560ade4bca41273956091; both verified against the GitHub contents API). SPEC_HASHES written 2026-11-11T11:37:36Z on the cluster;
+Q1 check on the frozen code 11:37:46Z: `frozen True`, all 14 finals = reference. DR1 opens 2026-11-12T11:00Z.
