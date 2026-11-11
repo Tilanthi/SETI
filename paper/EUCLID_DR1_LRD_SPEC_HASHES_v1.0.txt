@@ -1,0 +1,6 @@
+ce7ff7d4ef695300199caf768f9d1d3e8ec2b25e4dc8f6734483ddcb163644bf  code/lrdlib+code/wp4+code/dr1  (tar --sort=name --mtime=@0 --exclude=__pycache__ --exclude=*.pyc -cf - code/lrdlib code/wp4 code/dr1; cwd /srv/LRD)
+9364e7d234fdcbdc9447ab6c09863cff6e985ce894c72f64455c54edf11e1baa  runner (selrun.py + chain.py + fits_fallback.py + hooks/selection_dr1.sh + resolved config /srv/LRD/code/release/selection_config_dr1.json)
+cc0208c95c4c50f61053084840f245d1acb6543f308b56da0eb240e598969905  release/SELECTION_SPEC_v1.0.md
+cf9e9ec74d3cd7f3394e9073f3e8f3616b83a1ce65c96ae1c0595576a8d07e8a  analysis code/grism (recorded, not enforced; cwd /srv/LRD)
+1cf9aead2798ef6fe0e8159a7b5f9773e924dd6c8a8302acf01279bb08504be7  analysis smh/code (recorded, not enforced; cwd /srv/LRD/smh)
+# spec v1.0 frozen 2026-11-11T11:37:36Z; runner refuses on code/runner mismatch (selrun.spec_check)
