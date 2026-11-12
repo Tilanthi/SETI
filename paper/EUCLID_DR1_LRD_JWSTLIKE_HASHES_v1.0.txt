@@ -1,0 +1,11 @@
+# JWST-like LRD subsample pre-registration v1.0 — written 2026-11-12T22:59:00Z
+1f5d4afe0581382c835a1694d39579fc74bed216b130d9e6a3d1cfa4194d1d9d  JWSTLIKE_SPEC_v1.0 frozen text (sed '/^END OF FROZEN TEXT$/q' | sha256sum)
+1f5d4afe0581382c835a1694d39579fc74bed216b130d9e6a3d1cfa4194d1d9d  EUCLID_DR1_LRD_JWSTLIKE_SPEC_v1.0.md
+422d920edf706f7eb1e9cd643ea55d6ab4adcebb7c9162c53c06be0cda9ffc1c  jl_define.py (= EUCLID_DR1_LRD_JWSTLIKE_jl_define_v1.0.py; cluster /srv/LRD/code/jwstlike/jl_define.py)
+2f7755851576812d3cd0dc6fa57e414c26d4f4d124d4b04562bda61289c4d436  EUCLID_DR1_LRD_JWSTLIKE_ac_models_v1.0.csv
+53397cf20cad3988868df07249b82ba5cfa153c4f5363dc05d5392d56791dbc2  /srv/LRD/release/SPEC_HASHES.txt (frozen selection v1.0.1)
+2a934b55b059b8740edd21735bf4d454cfe6e7b70462029011ac9b5bc6f8c498  /srv/LRD/code/core tree (sorted sha256sum of *.py,*.sh | sha256sum)
+cc9c2bdfb97389d0bf66c584f2c546bdf56b47819c2b258dace132e6a17faa88  /srv/LRD/code/bl tree (same method)
+aa87c7aa556ff96c868b7e06ac7cc967690a50c05328f3ffeb0d1cc1f7b8b3c2  /srv/LRD/code/px1/atlas_make.py
+1a06e2aa0273673536b61cfb39d44e82d22fafe71cab2035ff7730fb919faf23  /srv/LRD/code/px1/atlas_select.py
+25762fd70d7f2677781ae6973d64ff301d0aabd22e1ddb01851701718c4a3d20  /workspace/LRD/code/px1/templib/*.py (cat | sha256sum)
